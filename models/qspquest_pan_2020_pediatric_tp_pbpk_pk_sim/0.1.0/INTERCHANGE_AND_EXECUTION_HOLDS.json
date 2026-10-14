@@ -1,0 +1,16 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "bevacizumab-15mgkg-13y-growth-table4-smoke",
+    "main-paper-table-scalar-checks",
+    "palivizumab-15mgkg-nominal-growth-table3-smoke"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "main-paper-table-scalar-checks",
+    "palivizumab-15mgkg-nominal-growth-table3-smoke",
+    "bevacizumab-15mgkg-13y-growth-table4-smoke"
+  ],
+  "unavailable_scenario_ids": []
+}

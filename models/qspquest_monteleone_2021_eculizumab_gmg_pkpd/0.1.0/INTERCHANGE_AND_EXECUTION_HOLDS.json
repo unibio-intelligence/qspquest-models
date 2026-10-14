@@ -1,0 +1,24 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "baseline-checks",
+    "exploratory-calibrated-fig1-median-clearance-pkpd-context",
+    "pkpd-result-checks",
+    "regain-900-1200mg-iv-pkpd-context",
+    "source-status-checks",
+    "study-design-assay-checks",
+    "table1-pk-summary-checks"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "study-design-assay-checks",
+    "baseline-checks",
+    "table1-pk-summary-checks",
+    "pkpd-result-checks",
+    "source-status-checks",
+    "regain-900-1200mg-iv-pkpd-context",
+    "exploratory-calibrated-fig1-median-clearance-pkpd-context"
+  ],
+  "unavailable_scenario_ids": []
+}

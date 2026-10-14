@@ -1,0 +1,26 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "low-albumin-high-bsa-dynamic-probe",
+    "source-status-checks",
+    "study-design-and-clearance-response-checks",
+    "supplement-s1-and-appendix-checks",
+    "supplement-s2-response-toxicity-checks",
+    "supplement-s3-quartile-checks",
+    "table2-final-parameter-checks",
+    "typical-male-3mgkg-q2w-dynamic-probe"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "source-status-checks",
+    "study-design-and-clearance-response-checks",
+    "table2-final-parameter-checks",
+    "supplement-s1-and-appendix-checks",
+    "supplement-s2-response-toxicity-checks",
+    "supplement-s3-quartile-checks",
+    "typical-male-3mgkg-q2w-dynamic-probe",
+    "low-albumin-high-bsa-dynamic-probe"
+  ],
+  "unavailable_scenario_ids": []
+}

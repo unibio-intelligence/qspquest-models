@@ -1,0 +1,26 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "median-14w-dashboard-interval-ode"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "figure3-16w-dashboard-interval-ode"
+    }
+  ],
+  "qualified_scenario_ids": [
+    "dashboard-exact-replay"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "dashboard-exact-replay",
+    "median-14w-dashboard-interval-ode",
+    "figure3-16w-dashboard-interval-ode"
+  ],
+  "unavailable_scenario_ids": [
+    "figure3-16w-dashboard-interval-ode",
+    "median-14w-dashboard-interval-ode"
+  ]
+}

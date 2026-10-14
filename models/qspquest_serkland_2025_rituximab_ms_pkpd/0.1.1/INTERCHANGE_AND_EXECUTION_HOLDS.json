@@ -1,0 +1,13 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "source_scenarios": [
+    "exact-monolix-archive-anchor",
+    "population-typical-1000mg-full-ode",
+    "subject1-saem-full-ode-overlay"
+  ],
+  "qualified_scenario_ids": [],
+  "unavailable_scenario_ids": [],
+  "parser_or_preparation_holds": [],
+  "current_engine_qualification": "not_assessed",
+  "scope": "Preset requests are supplied for exploratory execution; no numerical qualification is recorded for this archive version."
+}

@@ -1,0 +1,28 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "induction-10w-q4w-no-prior-anti-tnf",
+    "induction-10w-q4w-prior-anti-tnf",
+    "induction-10w-q8w-no-prior-anti-tnf",
+    "induction-10w-q8w-prior-anti-tnf",
+    "induction-14w-q6w-no-prior-anti-tnf",
+    "induction-14w-q6w-prior-anti-tnf",
+    "induction-q8w-no-prior-anti-tnf",
+    "induction-q8w-prior-anti-tnf",
+    "table2-table4-exact-anchors"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "table2-table4-exact-anchors",
+    "induction-10w-q4w-no-prior-anti-tnf",
+    "induction-10w-q4w-prior-anti-tnf",
+    "induction-14w-q6w-no-prior-anti-tnf",
+    "induction-14w-q6w-prior-anti-tnf",
+    "induction-q8w-no-prior-anti-tnf",
+    "induction-q8w-prior-anti-tnf",
+    "induction-10w-q8w-no-prior-anti-tnf",
+    "induction-10w-q8w-prior-anti-tnf"
+  ],
+  "unavailable_scenario_ids": []
+}

@@ -1,0 +1,32 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "ada-and-safety-checks",
+    "baseline-population-checks",
+    "ge30-high-300mg-week14-probe",
+    "ge30-low-150mg-week14-probe",
+    "lt30-high-200mg-week14-probe",
+    "lt30-low-100mg-week14-probe",
+    "source-status-and-identity-checks",
+    "study-design-and-dosing-checks",
+    "supplement-referenced-range-checks",
+    "table3-adult-measure-response-checks",
+    "week14-ctrough-checks"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "source-status-and-identity-checks",
+    "study-design-and-dosing-checks",
+    "baseline-population-checks",
+    "week14-ctrough-checks",
+    "table3-adult-measure-response-checks",
+    "supplement-referenced-range-checks",
+    "ada-and-safety-checks",
+    "ge30-high-300mg-week14-probe",
+    "ge30-low-150mg-week14-probe",
+    "lt30-high-200mg-week14-probe",
+    "lt30-low-100mg-week14-probe"
+  ],
+  "unavailable_scenario_ids": []
+}

@@ -1,0 +1,38 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "q8w-no-pregnancy-effects"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "q8w-albumin-only"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "q8w-full-pregnancy-effects"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "q8w-late-optimized-5p6w"
+    }
+  ],
+  "qualified_scenario_ids": [
+    "exact-table-code-and-text-anchor"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-table-code-and-text-anchor",
+    "q8w-no-pregnancy-effects",
+    "q8w-albumin-only",
+    "q8w-full-pregnancy-effects",
+    "q8w-late-optimized-5p6w"
+  ],
+  "unavailable_scenario_ids": [
+    "q8w-albumin-only",
+    "q8w-full-pregnancy-effects",
+    "q8w-late-optimized-5p6w",
+    "q8w-no-pregnancy-effects"
+  ]
+}

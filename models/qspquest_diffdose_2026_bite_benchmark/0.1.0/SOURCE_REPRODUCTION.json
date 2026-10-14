@@ -1,0 +1,22 @@
+{
+  "model_kind": "permissive_source_code_adaptation",
+  "reproduced": "Forward BiTE example equations and explicit infusion timing from separately BSD-licensed DiffDose code; three Ubi-selected exploratory regimens.",
+  "not_reproduced": [
+    "paper optimal regimens",
+    "clinical doses",
+    "population fitting"
+  ],
+  "unit_scope": "Normalized benchmark coordinates; no clinical mass/concentration conversion is established.",
+  "source_card_sha256": "e426f9ad5227c421fae3e04d9453bef0b03dbb514135711342f9e39d184b8302",
+  "historical_evidence_identity_boundary": "Historical source-card evidence is distinct from current OMEX/rxode2 evidence; no automatic qualification transfer.",
+  "rights": {
+    "executable_source": "DiffDose code BSD-3-Clause at f6c39363bdd127282a555121cbe072c49dd5f276",
+    "OptiDose_article": "CC BY 4.0",
+    "DiffDose_article": "CC BY-NC 4.0; context only, protected article assets excluded"
+  },
+  "source_attribution": {
+    "paper_year": 2021,
+    "paper_doi": "10.1007/s10957-021-01819-w"
+  },
+  "modification_notice": "Ubi-authored implementation and curated scenarios; public identity and distribution metadata differ from source. See reproduction/omission record. Native numeric coordinates preserved; no new physical-dimensional qualification."
+}

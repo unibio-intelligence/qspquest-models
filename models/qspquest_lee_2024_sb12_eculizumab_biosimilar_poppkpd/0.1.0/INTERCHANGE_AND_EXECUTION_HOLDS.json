@@ -1,0 +1,20 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "exact-source-table-anchor",
+    "healthy-300mg-iv-single-dose-dynamic-overlay",
+    "healthy-82-4kg-phase1",
+    "pnh-63kg-phase3",
+    "pnh-labeled-regimen-dynamic-overlay"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-source-table-anchor",
+    "healthy-300mg-iv-single-dose-dynamic-overlay",
+    "pnh-labeled-regimen-dynamic-overlay",
+    "healthy-82-4kg-phase1",
+    "pnh-63kg-phase3"
+  ],
+  "unavailable_scenario_ids": []
+}

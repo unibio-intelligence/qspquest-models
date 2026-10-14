@@ -1,0 +1,22 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "drug-free",
+    "high-driver",
+    "low-driver",
+    "moderate-driver",
+    "qss-half-occupancy",
+    "washout-recovery"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "drug-free",
+    "low-driver",
+    "qss-half-occupancy",
+    "moderate-driver",
+    "high-driver",
+    "washout-recovery"
+  ],
+  "unavailable_scenario_ids": []
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+<title id="title">Target-gated cargo: compartment and pool groups</title>
+<desc id="desc">Unbound closed and open construct exchanges between central plasma, peripheral tissue and tumor. Gate binding and gate-assisted opening in tumor promote cargo-receptor binding. Central and tumor complexes contribute occupancy. Explicit clearance, internalization and gate-bound loss remove construct.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" fill="#475569"/></marker></defs>
+<rect width="1200" height="460" rx="16" fill="#f8fafc"/>
+<g font-family="sans-serif" font-size="17" fill="#0f172a">
+<text x="30" y="40" font-size="24" font-weight="bold">Target-gated cargo: 11 construct pools</text>
+<rect x="30" y="165" width="320" height="185" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="50" y="198" font-size="21" font-weight="bold">Central plasma · 3 pools</text>
+<text x="50" y="235">Closed &lt;-&gt; open construct</text>
+<text x="50" y="271">Open + receptor &lt;-&gt; complex</text>
+<text x="50" y="312">Central receptor occupancy</text>
+<rect x="415" y="70" width="340" height="120" rx="12" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="435" y="106" font-size="21" font-weight="bold">Peripheral tissue · 2 pools</text>
+<text x="435" y="150">Closed &lt;-&gt; open construct</text>
+<rect x="810" y="165" width="360" height="245" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="830" y="198" font-size="21" font-weight="bold">Tumor · 6 pools</text>
+<text x="830" y="235">Free closed &lt;-&gt; free open</text>
+<text x="830" y="269">Gate-bound closed &lt;-&gt; open</text>
+<text x="830" y="305">Free/gate-bound open construct</text>
+<text x="830" y="333">+ receptor &lt;-&gt; two complexes</text>
+<text x="830" y="376">Tumor receptor occupancy</text>
+<g fill="none" stroke="#475569" stroke-width="2.5" marker-start="url(#arrow)" marker-end="url(#arrow)">
+<path d="M350 200 L385 200 L385 130 L415 130"/>
+<path d="M350 295 L810 295"/>
+</g>
+<text x="455" y="270">Unbound closed/open exchange</text>
+<text x="420" y="218" font-size="15">Exchange with peripheral tissue</text>
+<text x="30" y="438" font-size="16">Opening exposes cargo. Gate binding favors local opening. Clearance and complex loss reduce total construct.</text>
+</g></svg>

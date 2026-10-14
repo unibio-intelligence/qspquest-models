@@ -1,0 +1,73 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "mm3-12-32-76-switch-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "dose-response-76-qw-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "dose-response-152-qw-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "dose-response-16-qw-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "dose-response-28-qw-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "dose-response-44-qw-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "dose-response-76-q2w-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "mm1-44-76-qw-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "mm1-44-76-q2w-nominal"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "mm3-12-32-76-qw-nominal"
+    }
+  ],
+  "qualified_scenario_ids": [],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-public-source-anchor",
+    "mm3-12-32-76-switch-nominal",
+    "dose-response-76-qw-nominal",
+    "dose-response-152-qw-nominal",
+    "dose-response-16-qw-nominal",
+    "dose-response-28-qw-nominal",
+    "dose-response-44-qw-nominal",
+    "dose-response-76-q2w-nominal",
+    "mm1-44-76-qw-nominal",
+    "mm1-44-76-q2w-nominal",
+    "mm3-12-32-76-qw-nominal"
+  ],
+  "unavailable_scenario_ids": [
+    "dose-response-152-qw-nominal",
+    "dose-response-16-qw-nominal",
+    "dose-response-28-qw-nominal",
+    "dose-response-44-qw-nominal",
+    "dose-response-76-q2w-nominal",
+    "dose-response-76-qw-nominal",
+    "exact-public-source-anchor",
+    "mm1-44-76-q2w-nominal",
+    "mm1-44-76-qw-nominal",
+    "mm3-12-32-76-qw-nominal",
+    "mm3-12-32-76-switch-nominal"
+  ]
+}

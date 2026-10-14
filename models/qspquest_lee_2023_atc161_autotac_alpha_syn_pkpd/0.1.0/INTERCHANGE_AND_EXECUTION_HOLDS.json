@@ -1,0 +1,16 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "atc161-pk-pd-anchor-exact-replay",
+    "po20mgkg-first-order-pk-degradation-probe",
+    "source-availability-exact-replay"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "source-availability-exact-replay",
+    "atc161-pk-pd-anchor-exact-replay",
+    "po20mgkg-first-order-pk-degradation-probe"
+  ],
+  "unavailable_scenario_ids": []
+}

@@ -1,0 +1,41 @@
+{
+  "interchange": "scientific_json_omex",
+  "parser_or_preparation_holds": [
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "msmp1"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "msmp2"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "msmp3"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "msmp2-1"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "msmp2-2"
+    }
+  ],
+  "qualified_scenario_ids": [],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "msmp1",
+    "msmp2",
+    "msmp3",
+    "msmp2-1",
+    "msmp2-2"
+  ],
+  "unavailable_scenario_ids": [
+    "msmp1",
+    "msmp2",
+    "msmp2-1",
+    "msmp2-2",
+    "msmp3"
+  ]
+}

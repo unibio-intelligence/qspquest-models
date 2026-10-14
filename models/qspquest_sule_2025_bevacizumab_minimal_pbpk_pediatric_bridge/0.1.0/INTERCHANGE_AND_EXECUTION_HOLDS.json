@@ -1,0 +1,36 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "adult-female-ge18-10mgkg-q2w-ode-endpoint-overlay",
+    "adult-male-ge18-10mgkg-q2w-ode-endpoint-overlay",
+    "female-0p5-2y-10mgkg-q2w-ode-endpoint-overlay",
+    "female-12-18y-10mgkg-q2w-ode-endpoint-overlay",
+    "female-2-6y-10mgkg-q2w-ode-endpoint-overlay",
+    "female-6-12y-10mgkg-q2w-ode-endpoint-overlay",
+    "figure2-pbpk-poppk-ratio-digitized",
+    "figure4-pediatric-pk-digitized",
+    "male-0p5-2y-10mgkg-q2w-ode-endpoint-overlay",
+    "male-12-18y-10mgkg-q2w-ode-endpoint-overlay",
+    "male-2-6y-10mgkg-q2w-ode-endpoint-overlay",
+    "male-6-12y-10mgkg-q2w-ode-endpoint-overlay",
+    "source-tables-exact-replay"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "source-tables-exact-replay",
+    "figure2-pbpk-poppk-ratio-digitized",
+    "adult-female-ge18-10mgkg-q2w-ode-endpoint-overlay",
+    "adult-male-ge18-10mgkg-q2w-ode-endpoint-overlay",
+    "female-0p5-2y-10mgkg-q2w-ode-endpoint-overlay",
+    "female-2-6y-10mgkg-q2w-ode-endpoint-overlay",
+    "female-6-12y-10mgkg-q2w-ode-endpoint-overlay",
+    "female-12-18y-10mgkg-q2w-ode-endpoint-overlay",
+    "male-0p5-2y-10mgkg-q2w-ode-endpoint-overlay",
+    "male-2-6y-10mgkg-q2w-ode-endpoint-overlay",
+    "male-6-12y-10mgkg-q2w-ode-endpoint-overlay",
+    "male-12-18y-10mgkg-q2w-ode-endpoint-overlay",
+    "figure4-pediatric-pk-digitized"
+  ],
+  "unavailable_scenario_ids": []
+}

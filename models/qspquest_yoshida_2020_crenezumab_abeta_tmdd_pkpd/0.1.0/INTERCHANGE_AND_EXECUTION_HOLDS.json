@@ -1,0 +1,18 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "fig8-120mgkg-q4w-iv-source-limited",
+    "fig8-15mgkg-q4w-iv-source-limited",
+    "fig8-60mgkg-q4w-iv-source-limited",
+    "table1-table2-exact-anchor"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "table1-table2-exact-anchor",
+    "fig8-15mgkg-q4w-iv-source-limited",
+    "fig8-60mgkg-q4w-iv-source-limited",
+    "fig8-120mgkg-q4w-iv-source-limited"
+  ],
+  "unavailable_scenario_ids": []
+}

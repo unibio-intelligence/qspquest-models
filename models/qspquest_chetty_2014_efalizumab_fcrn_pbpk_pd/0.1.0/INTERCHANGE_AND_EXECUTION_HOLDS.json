@@ -1,0 +1,18 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "exploratory-calibrated-gordon-digitized-pasi-probe",
+    "exploratory-calibrated-gottlieb-digitized-pasi-probe",
+    "gordon-1mgkg-pasi-progression-probe",
+    "gottlieb-escalating-pasi-progression-probe"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "gottlieb-escalating-pasi-progression-probe",
+    "gordon-1mgkg-pasi-progression-probe",
+    "exploratory-calibrated-gottlieb-digitized-pasi-probe",
+    "exploratory-calibrated-gordon-digitized-pasi-probe"
+  ],
+  "unavailable_scenario_ids": []
+}

@@ -1,0 +1,14 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "exact-source-inventory-and-trial-design",
+    "neoadjuvant-two-dose-resection-endpoint"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-source-inventory-and-trial-design",
+    "neoadjuvant-two-dose-resection-endpoint"
+  ],
+  "unavailable_scenario_ids": []
+}

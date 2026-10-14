@@ -1,0 +1,18 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "exact-si-model-anchor",
+    "placebo-week12-endpoint-turnover",
+    "stage1-600mg-q4w-cdasi-tis",
+    "stage2-150mg-q4w-cdasi"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-si-model-anchor",
+    "stage1-600mg-q4w-cdasi-tis",
+    "stage2-150mg-q4w-cdasi",
+    "placebo-week12-endpoint-turnover"
+  ],
+  "unavailable_scenario_ids": []
+}

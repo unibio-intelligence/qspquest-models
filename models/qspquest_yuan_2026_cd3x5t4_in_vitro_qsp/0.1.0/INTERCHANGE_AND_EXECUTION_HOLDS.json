@@ -1,0 +1,32 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "mda-mb-468-untreated-et4",
+    "mda-mb-468-duobody-6-86nm-et4",
+    "mda-mb-468-duobody-6-86nm-et1",
+    "mda-mb-468-duobody-6-86nm-et8",
+    "mda-mb-468-duobody-6-86nm-et2",
+    "mda-mb-231-duobody-6-86nm-et4",
+    "mda-mb-468-high-affinity-6-86nm-et8",
+    "mda-mb-231-high-affinity-6-86nm-et8",
+    "bxpc-3-duobody-6-86nm-et4",
+    "eplc-272h-duobody-6-86nm-et4",
+    "sk-gt-4-duobody-6-86nm-et4"
+  ],
+  "unavailable_scenario_ids": [
+    "bxpc-3-duobody-6-86nm-et4",
+    "eplc-272h-duobody-6-86nm-et4",
+    "mda-mb-231-duobody-6-86nm-et4",
+    "mda-mb-231-high-affinity-6-86nm-et8",
+    "mda-mb-468-duobody-6-86nm-et1",
+    "mda-mb-468-duobody-6-86nm-et2",
+    "mda-mb-468-duobody-6-86nm-et4",
+    "mda-mb-468-duobody-6-86nm-et8",
+    "mda-mb-468-high-affinity-6-86nm-et8",
+    "mda-mb-468-untreated-et4",
+    "sk-gt-4-duobody-6-86nm-et4"
+  ]
+}

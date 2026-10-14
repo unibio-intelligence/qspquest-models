@@ -1,0 +1,45 @@
+---
+title: "Run and plot a model in R"
+output: html_document
+---
+
+This tutorial uses the standalone QSPQuest engine through the local Python
+loader. Complete the [README setup](../README.md#setup), install `jsonlite`
+with `install.packages("jsonlite")`, then render this file with its tutorials
+directory as the working directory. Set
+`QSPQUEST_PYTHON` if R uses a different Python environment. Source numeric coordinates are preserved.
+
+```{r setup}
+source('qspquest-models.R')
+models <- qspquest_library(normalizePath('..'))
+model <- 'qspquest_serkland_2025_rituximab_ms_pkpd'
+models$scenarios(model, version = '0.3.0')
+```
+
+```{r simulate}
+result <- models$run(model, 'population-typical-1000mg-full-ode', csv = 'rituximab-rmarkdown.csv', version = '0.3.0')
+data <- qspquest_data_frame(result)
+stopifnot(nrow(data) == 201L)
+head(data)
+```
+
+```{r plot}
+plot(data$time, data$cd19_cells_mm3, type = 'l', xlab = result$time_unit,
+     ylab = 'CD19+ B cells (source scale)')
+saved <- qspquest_read_table('rituximab-rmarkdown.csv')
+stopifnot(nrow(saved) == nrow(data))
+```
+
+The B-cell readout starts at 199.57 and ends near 8.70521 at day 200.
+This curve uses fixed parameters; it does not show population variability.
+Read [output interpretation](understand-results.md) for the numerical scale, and
+[choose another model](../MODEL_CATALOG.md) to explore a different mechanism.
+
+```{r additional-source}
+source_model <- "qspquest_diffdose_2026_idr_benchmark"
+source_scenarios <- models$scenarios(source_model)
+source_result <- models$run(source_model, 'lower_exposure')
+stopifnot(length(source_result$times) > 0)
+```
+
+This example requires the matching QSPQuest engine with `[cell]` count-unit support. The selected model uses `mg/L` rituximab concentration and `[cell]/mm3` CD19-positive cell density; its dimensional and numerical qualification remain pending. An `unknown_unit` error means the engine build lacks count-unit support: install the matching engine rather than substituting unit `1`.

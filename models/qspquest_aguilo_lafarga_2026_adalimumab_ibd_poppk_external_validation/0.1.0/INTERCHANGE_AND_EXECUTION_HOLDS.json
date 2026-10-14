@@ -1,0 +1,36 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "berends-adalimumab-induction-q2w-ode",
+    "cohort-and-sampling-replay",
+    "fda-adalimumab-induction-q2w-ode",
+    "figure1-gof-digitized-scatter",
+    "figure2-pcvpc-digitized-observed-markers",
+    "marquez-adalimumab-induction-q2w-ode",
+    "sanchez-adalimumab-induction-q2w-ode",
+    "supplement-model-parameter-replay",
+    "supplementary-figures-1-3-metric-distribution-anchors",
+    "table2-clearance-comparison-replay",
+    "table3-metric-replay",
+    "ternant-adalimumab-induction-q2w-ode",
+    "vande-adalimumab-induction-q2w-ode"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "cohort-and-sampling-replay",
+    "supplement-model-parameter-replay",
+    "table2-clearance-comparison-replay",
+    "table3-metric-replay",
+    "berends-adalimumab-induction-q2w-ode",
+    "fda-adalimumab-induction-q2w-ode",
+    "marquez-adalimumab-induction-q2w-ode",
+    "sanchez-adalimumab-induction-q2w-ode",
+    "ternant-adalimumab-induction-q2w-ode",
+    "vande-adalimumab-induction-q2w-ode",
+    "figure1-gof-digitized-scatter",
+    "figure2-pcvpc-digitized-observed-markers",
+    "supplementary-figures-1-3-metric-distribution-anchors"
+  ],
+  "unavailable_scenario_ids": []
+}

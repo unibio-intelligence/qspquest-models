@@ -1,0 +1,26 @@
+{
+  "model_kind": "final_fixed_effect_source_reconstruction",
+  "reproduced": "Final 17-state in-vitro ODE system, disclosed population parameter profile and source-aligned mechanistic scenarios; no systemic PK.",
+  "historical_evidence_summary": "Retained report compares 1,762 points: 389 observed-marker and 1,373 sampled published-curve points. Coverage inventory: 27 source items; seven exact tables, 15 digitized figure entries, four qualitative entries, one grouped non-reconstructable S7\u2013S8 entry. Digitization is approximate, with 30 unresolved candidates.",
+  "not_reproduced": [
+    "historical base/intermediate executable models",
+    "Monolix project",
+    "individual culture/donor effects",
+    "S7\u2013S8 residual diagnostics",
+    "donor-weighted pooled population replay"
+  ],
+  "source_interpretation": "Crossed CD3/5T4 degradation symbols are preserved literally; default rates are equal. Unequal-rate exploration is outside curated scope.",
+  "source_card_sha256": "fecacc4ac676bcbf81ef8ad7eb58afcad680d6a188b59540ebf6f02dd8e29193",
+  "historical_evidence_identity_boundary": "Historical source-card evidence is distinct from current OMEX/rxode2 evidence; no automatic qualification transfer.",
+  "historical_report_hashes": {
+    "figure_table_coverage.json": "08ec9929664de0699fdf669d3fe9cefb42d03cd924079245bdd021c5d58f2ae5",
+    "paper_figure_reproduction.json": "d44ba333fd10d9a3c1bcdcb02c0a5f77a605102a4f22dd598c54168dc6e91b7c",
+    "validation_summary.json": "34d2e4d377ca74656cb70e1b8dc062625048580cbaecee442331271241f3f14f"
+  },
+  "source_attribution": {
+    "citation": "Yuan X, Thalhauser CJ, Afzal N, Kemper K, An G, Li T. An In Vitro Quantitative Systems Pharmacology Platform for Characterizing CD3-Bispecific Antibody-Mediated T-Cell Activation and Tumor Cell Cytotoxicity. AAPS J. 2026;28(5):123.",
+    "paper_year": 2026,
+    "doi": "10.1208/s12248-026-01259-2"
+  },
+  "modification_notice": "Ubi-authored implementation and curated scenarios; public identity and distribution metadata differ from source. See reproduction/omission record. Native numeric coordinates preserved; no new physical-dimensional qualification."
+}

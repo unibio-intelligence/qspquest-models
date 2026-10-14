@@ -1,0 +1,24 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "dose-selection-checks",
+    "exposure-response-checks",
+    "historical-reference-840-420-q3w-4cycles",
+    "neosphere-design-baseline-checks",
+    "poppk-model-ddi-checks",
+    "source-status-checks",
+    "typical-neosphere-840-420-q3w-4cycles"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "source-status-checks",
+    "neosphere-design-baseline-checks",
+    "poppk-model-ddi-checks",
+    "exposure-response-checks",
+    "dose-selection-checks",
+    "typical-neosphere-840-420-q3w-4cycles",
+    "historical-reference-840-420-q3w-4cycles"
+  ],
+  "unavailable_scenario_ids": []
+}

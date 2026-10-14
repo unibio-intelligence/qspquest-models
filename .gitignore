@@ -1,0 +1,15 @@
+/.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+/lower_exposure.csv
+/replay-*/
+
+/rituximab.csv
+
+/qsp-output/
+/tutorials/qsp-gated-cargo.html
+/tutorials/qsp-gated-cargo_files/
+
+/research-output/
+/trajectory.csv

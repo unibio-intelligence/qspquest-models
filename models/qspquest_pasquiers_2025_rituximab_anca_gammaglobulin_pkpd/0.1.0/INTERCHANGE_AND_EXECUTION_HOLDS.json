@@ -1,0 +1,20 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "exact-article-supplement-table-anchor",
+    "induction-1000mg-d0-d14-6mo-pr3",
+    "induction-375mgm2-q1w-6mo-mpo",
+    "maintenance-1000mg-q4m-24mo-pr3",
+    "maintenance-500mg-q6m-24mo-mpo"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-article-supplement-table-anchor",
+    "induction-375mgm2-q1w-6mo-mpo",
+    "induction-1000mg-d0-d14-6mo-pr3",
+    "maintenance-500mg-q6m-24mo-mpo",
+    "maintenance-1000mg-q4m-24mo-pr3"
+  ],
+  "unavailable_scenario_ids": []
+}

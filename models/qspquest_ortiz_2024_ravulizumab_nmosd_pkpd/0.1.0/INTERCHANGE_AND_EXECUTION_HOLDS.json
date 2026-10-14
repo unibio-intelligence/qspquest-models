@@ -1,0 +1,18 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "article-ema-exact-anchor",
+    "week50-40-60-pk-free-c5-ode",
+    "week50-60-100-pk-free-c5-ode",
+    "week50-ge100-pk-free-c5-ode"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "article-ema-exact-anchor",
+    "week50-40-60-pk-free-c5-ode",
+    "week50-60-100-pk-free-c5-ode",
+    "week50-ge100-pk-free-c5-ode"
+  ],
+  "unavailable_scenario_ids": []
+}

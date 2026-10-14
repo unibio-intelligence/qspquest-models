@@ -1,0 +1,41 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "figure1-cyno-100mgkg-vpc-digitized-source-limited",
+    "figure1-cyno-10mgkg-vpc-digitized-source-limited",
+    "figure1-cyno-30mgkg-vpc-digitized-source-limited",
+    "human-360mg-q3wk-ro-probe",
+    "mouse-vehicle-fig4-population-probe",
+    "source-status-and-identity",
+    "study-design-and-methods",
+    "table1-pk-parameters",
+    "table2-tumor-pd-parameters",
+    "table3-human-dose-predictions"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "source-status-and-identity",
+    "study-design-and-methods",
+    "table1-pk-parameters",
+    "table2-tumor-pd-parameters",
+    "table3-human-dose-predictions",
+    "human-360mg-q3wk-ro-probe",
+    "figure1-cyno-10mgkg-vpc-digitized-source-limited",
+    "figure1-cyno-30mgkg-vpc-digitized-source-limited",
+    "figure1-cyno-100mgkg-vpc-digitized-source-limited",
+    "mouse-vehicle-fig4-population-probe",
+    "mouse-2p5mgkg-q1wk-tumor-probe",
+    "mouse-25mgkg-q1wk-tumor-probe",
+    "mouse-9p5mgkg-q1wk-tumor-probe",
+    "mouse-20mgkg-q1wk-tumor-probe",
+    "mouse-24mgkg-q1wk-tumor-probe"
+  ],
+  "unavailable_scenario_ids": [
+    "mouse-20mgkg-q1wk-tumor-probe",
+    "mouse-24mgkg-q1wk-tumor-probe",
+    "mouse-25mgkg-q1wk-tumor-probe",
+    "mouse-2p5mgkg-q1wk-tumor-probe",
+    "mouse-9p5mgkg-q1wk-tumor-probe"
+  ]
+}

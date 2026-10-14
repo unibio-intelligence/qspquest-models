@@ -1,0 +1,26 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "adult-390mg-iv-90mg-sc-q8w-reduced",
+    "adult-390mg-iv-induction-adedokun2018",
+    "exact-main-and-supplement-table-anchor",
+    "pediatric-130mg-iv-90mg-sc-q8w-reduced",
+    "pediatric-130mg-iv-induction-rosh2021",
+    "pediatric-390mg-iv-90mg-sc-q8w-reduced",
+    "pediatric-390mg-iv-induction-rosh2021",
+    "pediatric-9mgkg-iv-induction-rosh2021"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-main-and-supplement-table-anchor",
+    "adult-390mg-iv-induction-adedokun2018",
+    "pediatric-130mg-iv-induction-rosh2021",
+    "pediatric-390mg-iv-induction-rosh2021",
+    "pediatric-9mgkg-iv-induction-rosh2021",
+    "adult-390mg-iv-90mg-sc-q8w-reduced",
+    "pediatric-130mg-iv-90mg-sc-q8w-reduced",
+    "pediatric-390mg-iv-90mg-sc-q8w-reduced"
+  ],
+  "unavailable_scenario_ids": []
+}

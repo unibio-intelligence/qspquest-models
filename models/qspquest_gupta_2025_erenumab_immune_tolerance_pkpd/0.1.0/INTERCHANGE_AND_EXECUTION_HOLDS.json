@@ -1,0 +1,59 @@
+{
+  "interchange": "scientific_json_omex",
+  "parser_or_preparation_holds": [
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "source-tables-exact-anchor"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "group-1-1-monomer-no-immunosuppression"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "group-1-2-monomer-mtx-weekly"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "group-1-3-monomer-mtx-three-day"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "group-1-4-monomer-tac-sirolimus"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "group-2-1-aggregate-no-immunosuppression"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "group-2-2-aggregate-tac-sirolimus"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "chronic-monomer-tac-sirolimus-rechallenge-6mo"
+    }
+  ],
+  "qualified_scenario_ids": [],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "source-tables-exact-anchor",
+    "group-1-1-monomer-no-immunosuppression",
+    "group-1-2-monomer-mtx-weekly",
+    "group-1-3-monomer-mtx-three-day",
+    "group-1-4-monomer-tac-sirolimus",
+    "group-2-1-aggregate-no-immunosuppression",
+    "group-2-2-aggregate-tac-sirolimus",
+    "chronic-monomer-tac-sirolimus-rechallenge-6mo"
+  ],
+  "unavailable_scenario_ids": [
+    "chronic-monomer-tac-sirolimus-rechallenge-6mo",
+    "group-1-1-monomer-no-immunosuppression",
+    "group-1-2-monomer-mtx-weekly",
+    "group-1-3-monomer-mtx-three-day",
+    "group-1-4-monomer-tac-sirolimus",
+    "group-2-1-aggregate-no-immunosuppression",
+    "group-2-2-aggregate-tac-sirolimus",
+    "source-tables-exact-anchor"
+  ]
+}

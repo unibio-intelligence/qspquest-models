@@ -1,0 +1,12 @@
+{
+  "SBML_SEDML_archives": 77,
+  "additional_source_versions": 65,
+  "runnable_model_ids": 67,
+  "runnable_presets": 644,
+  "scientific_JSON_only_archives": 3,
+  "unique_model_ids": 72,
+  "versioned_archives": 80,
+  "stored_preset_evidence_cases": 647,
+  "selected_stored_preset_evidence_cases": 620,
+  "current_engine_qualification": "not_assessed"
+}

@@ -1,0 +1,38 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "figure5-54kg-undetectable-cd19-response"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "figure-s3-122kg-double-hit-high-cd19-nonresponse"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "figure-s4-66kg-hypoalbuminemia-low-cd19-reduced-exposure"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "figure4-threshold-1000-molecules-scan"
+    }
+  ],
+  "qualified_scenario_ids": [
+    "caimi-2024-exact-article-si-anchors"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "caimi-2024-exact-article-si-anchors",
+    "figure5-54kg-undetectable-cd19-response",
+    "figure-s3-122kg-double-hit-high-cd19-nonresponse",
+    "figure-s4-66kg-hypoalbuminemia-low-cd19-reduced-exposure",
+    "figure4-threshold-1000-molecules-scan"
+  ],
+  "unavailable_scenario_ids": [
+    "figure-s3-122kg-double-hit-high-cd19-nonresponse",
+    "figure-s4-66kg-hypoalbuminemia-low-cd19-reduced-exposure",
+    "figure4-threshold-1000-molecules-scan",
+    "figure5-54kg-undetectable-cd19-response"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "exact-table1-cui-source-anchor",
+    "tdm1-0p3mgkg-cycle1-fixed-effect-ode",
+    "tdm1-0p6mgkg-cycle1-fixed-effect-ode",
+    "tdm1-1p2mgkg-cycle1-fixed-effect-ode",
+    "tdm1-1p8mgkg-cycle1-fixed-effect-ode",
+    "tdm1-2p4mgkg-cycle1-fixed-effect-ode",
+    "tdm1-3p6mgkg-cycle1-fixed-effect-ode",
+    "tdm1-4p8mgkg-cycle1-fixed-effect-ode",
+    "tdxd-0p8mgkg-cycle1-fixed-effect-ode",
+    "tdxd-1p6mgkg-cycle1-fixed-effect-ode",
+    "tdxd-3p2mgkg-cycle1-fixed-effect-ode",
+    "tdxd-5p4mgkg-cycle1-fixed-effect-ode",
+    "tdxd-6p4mgkg-cycle1-fixed-effect-ode",
+    "tdxd-7p4mgkg-cycle1-fixed-effect-ode",
+    "tdxd-8p0mgkg-cycle1-fixed-effect-ode"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-table1-cui-source-anchor",
+    "tdm1-0p3mgkg-cycle1-fixed-effect-ode",
+    "tdm1-0p6mgkg-cycle1-fixed-effect-ode",
+    "tdm1-1p2mgkg-cycle1-fixed-effect-ode",
+    "tdm1-1p8mgkg-cycle1-fixed-effect-ode",
+    "tdm1-2p4mgkg-cycle1-fixed-effect-ode",
+    "tdm1-3p6mgkg-cycle1-fixed-effect-ode",
+    "tdm1-4p8mgkg-cycle1-fixed-effect-ode",
+    "tdxd-0p8mgkg-cycle1-fixed-effect-ode",
+    "tdxd-1p6mgkg-cycle1-fixed-effect-ode",
+    "tdxd-3p2mgkg-cycle1-fixed-effect-ode",
+    "tdxd-5p4mgkg-cycle1-fixed-effect-ode",
+    "tdxd-6p4mgkg-cycle1-fixed-effect-ode",
+    "tdxd-7p4mgkg-cycle1-fixed-effect-ode",
+    "tdxd-8p0mgkg-cycle1-fixed-effect-ode"
+  ],
+  "unavailable_scenario_ids": []
+}

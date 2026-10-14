@@ -1,0 +1,32 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "den-60mg-q6mo-three-doses-table5-overlay",
+    "figure6-7-hv-64kg-caucasian-typical",
+    "figure6-7-pmo-45kg-caucasian-typical",
+    "figure6-7-pmo-64kg-asian-typical",
+    "figure6-7-pmo-64kg-black-typical",
+    "figure6-7-pmo-64kg-caucasian-typical",
+    "figure6-7-pmo-90kg-caucasian-typical",
+    "phase1-hv-single-60mg-typical",
+    "sb16-60mg-q6mo-three-doses-table5-overlay",
+    "untreated-hv-baseline",
+    "untreated-pmo-baseline"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "sb16-60mg-q6mo-three-doses-table5-overlay",
+    "den-60mg-q6mo-three-doses-table5-overlay",
+    "figure6-7-pmo-64kg-caucasian-typical",
+    "figure6-7-hv-64kg-caucasian-typical",
+    "figure6-7-pmo-45kg-caucasian-typical",
+    "figure6-7-pmo-90kg-caucasian-typical",
+    "figure6-7-pmo-64kg-black-typical",
+    "figure6-7-pmo-64kg-asian-typical",
+    "untreated-pmo-baseline",
+    "untreated-hv-baseline",
+    "phase1-hv-single-60mg-typical"
+  ],
+  "unavailable_scenario_ids": []
+}

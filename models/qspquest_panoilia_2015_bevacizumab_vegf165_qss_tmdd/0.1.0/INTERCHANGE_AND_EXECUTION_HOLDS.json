@@ -1,0 +1,38 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "fig3-5mgkg-q2w-70kg-dynamic",
+    "fig3-7p5mgkg-q3w-70kg-dynamic",
+    "fig3-text-and-source-status-checks",
+    "methods-covariate-and-evaluation-checks",
+    "source-review-10mgkg-q2w",
+    "source-review-5mgkg-q2w-50kg",
+    "source-review-5mgkg-q2w-90-then-30min",
+    "source-review-5mgkg-q2w-90-then-60min",
+    "source-review-5mgkg-q2w-94kg",
+    "source-review-doubled-baseline-vegf",
+    "source-review-untreated-baseline",
+    "table1-patient-study-characteristics",
+    "table2-in-vitro-free-vegf-assay",
+    "table3-pk-and-tmdd-parameter-estimates"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "table1-patient-study-characteristics",
+    "table2-in-vitro-free-vegf-assay",
+    "table3-pk-and-tmdd-parameter-estimates",
+    "methods-covariate-and-evaluation-checks",
+    "fig3-text-and-source-status-checks",
+    "fig3-5mgkg-q2w-70kg-dynamic",
+    "fig3-7p5mgkg-q3w-70kg-dynamic",
+    "source-review-5mgkg-q2w-90-then-60min",
+    "source-review-5mgkg-q2w-90-then-30min",
+    "source-review-10mgkg-q2w",
+    "source-review-5mgkg-q2w-50kg",
+    "source-review-5mgkg-q2w-94kg",
+    "source-review-untreated-baseline",
+    "source-review-doubled-baseline-vegf"
+  ],
+  "unavailable_scenario_ids": []
+}

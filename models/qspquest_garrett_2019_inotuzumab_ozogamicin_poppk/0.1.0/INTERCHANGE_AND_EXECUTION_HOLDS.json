@@ -1,0 +1,32 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "all-reference-day78-formula-checks",
+    "bbsa-covariate-formula-checks",
+    "fractionated-all-three-cycle-dynamic-smoke",
+    "source-review-all-high-joint-covariates",
+    "source-review-all-low-joint-covariates",
+    "source-review-all-median-joint-covariates",
+    "source-review-nhl-with-rituximab",
+    "source-review-nhl-without-rituximab",
+    "source-status-checks",
+    "study-design-and-simulation-text-checks",
+    "table2-final-parameter-estimate-checks"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "table2-final-parameter-estimate-checks",
+    "study-design-and-simulation-text-checks",
+    "source-status-checks",
+    "all-reference-day78-formula-checks",
+    "bbsa-covariate-formula-checks",
+    "fractionated-all-three-cycle-dynamic-smoke",
+    "source-review-all-low-joint-covariates",
+    "source-review-all-median-joint-covariates",
+    "source-review-all-high-joint-covariates",
+    "source-review-nhl-without-rituximab",
+    "source-review-nhl-with-rituximab"
+  ],
+  "unavailable_scenario_ids": []
+}

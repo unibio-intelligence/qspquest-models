@@ -1,0 +1,14 @@
+{
+  "model_kind": "independent_synthetic_mechanism",
+  "reproduced": "No paper-specific model. Independently authored five-state binding kinetics with synthetic parameters and conserved site ledgers.",
+  "not_reproduced": [
+    "Bellout 2026 equilibrium model",
+    "paper geometry/parameters/figures",
+    "named molecules or cell lines"
+  ],
+  "parameter_provenance": "Ubi-authored synthetic assumptions; passive-cycle detailed balance is enforced.",
+  "source_card_sha256": "585eb664f03c2ad2f027cc68df6c9d8e15e121d5c35ef49fd18f14a0a5e51d0b",
+  "historical_evidence_identity_boundary": "Historical source-card evidence is distinct from current OMEX/rxode2 evidence; no automatic qualification transfer.",
+  "source_attribution": {},
+  "modification_notice": "Ubi-authored implementation and curated scenarios; public identity and distribution metadata differ from source. See reproduction/omission record. Native numeric coordinates preserved; no new physical-dimensional qualification."
+}

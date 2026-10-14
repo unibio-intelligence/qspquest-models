@@ -1,0 +1,53 @@
+{
+  "interchange": "scientific_json_omex",
+  "parser_or_preparation_holds": [
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "table1-pk-parameter-exact-replay"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "table2-km-deviation-exact-replay"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "table3-pd-parameter-exact-replay"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "clinical-regimen-endpoint-exact-replay"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "standard-regimen-nominal-ode"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "adaptive-regimen1-nominal-ode"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "adaptive-regimen2-nominal-ode"
+    }
+  ],
+  "qualified_scenario_ids": [],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "table1-pk-parameter-exact-replay",
+    "table2-km-deviation-exact-replay",
+    "table3-pd-parameter-exact-replay",
+    "clinical-regimen-endpoint-exact-replay",
+    "standard-regimen-nominal-ode",
+    "adaptive-regimen1-nominal-ode",
+    "adaptive-regimen2-nominal-ode"
+  ],
+  "unavailable_scenario_ids": [
+    "adaptive-regimen1-nominal-ode",
+    "adaptive-regimen2-nominal-ode",
+    "clinical-regimen-endpoint-exact-replay",
+    "standard-regimen-nominal-ode",
+    "table1-pk-parameter-exact-replay",
+    "table2-km-deviation-exact-replay",
+    "table3-pd-parameter-exact-replay"
+  ]
+}

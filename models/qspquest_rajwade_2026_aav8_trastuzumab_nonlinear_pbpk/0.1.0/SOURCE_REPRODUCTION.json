@@ -1,0 +1,26 @@
+{
+  "model_kind": "full_forward_source_reconstruction",
+  "reproduced": "545-state AAV expression and nonlinear antibody PBPK topology, disclosed source parameter anchors and curated source-reconstruction readouts.",
+  "historical_evidence_summary": "Source card records dimensional, conservation/finite-trajectory and coupled-dose checks. Figure 5 is a 21-day exposure summary; no pointwise sponsor-data parity is claimed.",
+  "not_reproduced": [
+    "sponsor control stream",
+    "animal-level observations/fitting",
+    "error model/covariance",
+    "clinical dose selection"
+  ],
+  "source_card_sha256": "7abe4fd099df41984a4b16ffc13d0c8a3f73333c49a338383922310bf2fa5cdb",
+  "historical_evidence_identity_boundary": "Historical source-card evidence is distinct from current OMEX/rxode2 evidence; no automatic qualification transfer.",
+  "source_attribution": {
+    "authors": [
+      "Aneesh Rajwade",
+      "Shufang Liu",
+      "Mokshada Kumar",
+      "Dhaval K. Shah"
+    ],
+    "paper_title": "Decoding Nonlinearities in AAV-Based Gene Therapy Using PBPK Modelling",
+    "paper_year": 2026,
+    "paper_doi": "10.1208/s12248-026-01285-0",
+    "license": "CC BY 4.0"
+  },
+  "modification_notice": "Ubi-authored implementation and curated scenarios; public identity and distribution metadata differ from source. See reproduction/omission record. Native numeric coordinates preserved; no new physical-dimensional qualification."
+}

@@ -1,0 +1,140 @@
+---
+title: "QSP: target-gated cargo in R"
+output: html_document
+---
+
+Run the same fixed presets as the [Python walkthrough](qsp-gated-cargo.md).
+Complete the [library setup](../README.md#setup), install
+`jsonlite` and `rmarkdown`, and use a Pandoc installation (RStudio provides one).
+From the library root, render with:
+
+```r
+rmarkdown::render("tutorials/qsp-gated-cargo.Rmd")
+```
+
+The render uses the tutorials directory for code execution. Set
+`QSPQUEST_PYTHON` to the absolute path of the environment's Python if needed;
+`QSPQUEST_EXECUTABLE` selects the built CLI. Outputs go to `qsp-rmarkdown-output/` in the
+library root. The model is independently authored with synthetic parameters.
+This is simulation and amount accounting; physical dimensions, fitting,
+efficacy and clinical use are not qualified.
+
+![Compartment and pool groups](qsp-mechanism.svg)
+
+There are three central, two peripheral and six tumor construct pools. Only
+unbound closed/open construct exchanges between compartments. Gate binding
+favors tumor opening and exposed cargo can bind receptors; clearance and
+complex loss remove construct. See the Python walkthrough for the full
+mechanism and interpretation.
+
+```{r setup}
+source("qspquest-models.R")
+root <- normalizePath("..")
+models <- qspquest_library(root)
+model_id <- "qspquest_ubi_2026_target_gated_cargo_qsp"
+output <- file.path(root, "qsp-rmarkdown-output")
+dir.create(output, showWarnings = FALSE)
+scenarios <- c(
+  "Balanced gate" = "balanced_gate_30nmol_iv",
+  "No tumor gate" = "no_tumor_gate_30nmol_iv",
+  "Systemic leakage" = "leaky_systemic_gate_30nmol_iv",
+  "No dose" = "no_dose_homeostasis"
+)
+models$scenarios(model_id)
+```
+
+The three dosed conditions share a single 30-unit bolus and a 0–336 h sampling
+grid (57 rows). Removing the gate changes its capacity from 0.15 to zero;
+leakage changes background opening from 0.004 to 0.04. The zero-dose control
+runs to 24 h (25 rows). Named source coordinates call the dose nmol.
+
+```{r simulate}
+results <- lapply(scenarios, function(scenario) models$run(model_id, scenario,
+  csv = file.path(output, paste0(scenario, "-R.csv"))))
+trajectories <- lapply(results, qspquest_data_frame)
+for (label in names(results)) {
+  expected_rows <- if (label == "No dose") 25L else 57L
+  stopifnot(nrow(trajectories[[label]]) == expected_rows)
+}
+```
+
+```{r occupancy, fig.width=11, fig.height=4}
+columns <- c("tumor_receptor_occupancy_percent", "central_receptor_occupancy_percent")
+colors <- c("#0284c7", "#ea580c", "#16a34a", "#64748b")
+line_styles <- c(1, 2, 3, 4)
+plot_occupancy <- function() {
+  previous <- par(mfrow = c(1, 2))
+  on.exit(par(previous))
+  for (column in columns) {
+    first <- trajectories[[1]]
+    plot(first$time, first[[column]], type = "n", xlim = c(0, 336), ylim = c(0, 100),
+         xlab = "Time (h)", ylab = "Occupancy (%; source scale)",
+         main = if (column == columns[1]) "Tumor receptor" else "Central receptor")
+    for (i in seq_along(trajectories)) {
+      lines(trajectories[[i]]$time, trajectories[[i]][[column]], col = colors[i], lty = line_styles[i])
+    }
+    legend("topright", names(trajectories), col = colors, lty = line_styles, cex = 0.8)
+  }
+}
+plot_occupancy()
+png(file.path(output, "receptor-occupancy-R.png"), width = 1650, height = 600, res = 150)
+plot_occupancy()
+dev.off()
+snapshot <- do.call(rbind, lapply(names(trajectories), function(label) {
+  data <- trajectories[[label]]
+  i <- match(24, data$time)
+  data.frame(condition = label, tumor = data[[columns[1]]][i], central = data[[columns[2]]][i])
+}))
+snapshot
+```
+
+Expected at 24 h: balanced **37.65% tumor / 13.48% central**, no gate
+**1.37% / 13.48%**, leakage **38.33% / 57.70%**, no dose **0% / 0%**.
+These outcomes describe the fixed synthetic mechanism; they do not establish a
+biological or clinical effect.
+
+```{r amount-accounting}
+checks <- list()
+for (label in names(results)) {
+  result <- results[[label]]
+  data <- trajectories[[label]]
+  pools <- do.call(cbind, lapply(result$states, function(column) unlist(column$values)))
+  total <- data$total_construct_nmol
+  ledger_error <- max(abs(rowSums(pools) - total))
+  expected_dose <- if (label == "No dose") 0 else 30
+  stopifnot(ncol(pools) == 11L, ledger_error <= 1e-8, min(pools) >= -1e-8,
+            all(diff(total) <= 1e-8), abs(total[1] - expected_dose) <= 1e-8)
+  for (column in columns) {
+    stopifnot(all(data[[column]] >= -1e-8), all(data[[column]] <= 100 + 1e-8))
+  }
+  if (label == "No dose") stopifnot(max(abs(pools)) <= 1e-8)
+  checks[[label]] <- list(max_amount_reconciliation_error = ledger_error,
+                         initial_total = total[1], final_total = tail(total, 1))
+}
+checks
+```
+
+All 11 pools sum to the total readout. Internal transfers cancel from that sum;
+explicit elimination reduces it after dosing. The `1e-8` numerical allowance is
+in source coordinates. This sampled reconciliation does not estimate continuous
+clearance or prove biological validity.
+
+```{r export}
+for (label in names(results)) {
+  scenario <- scenarios[[label]]
+  saved <- qspquest_read_table(file.path(output, paste0(scenario, "-R.csv")))
+  stopifnot(nrow(saved) == nrow(trajectories[[label]]))
+  jsonlite::write_json(results[[label]], file.path(output, paste0(scenario, "-R.json")),
+                       auto_unbox = TRUE, pretty = TRUE, digits = NA)
+}
+jsonlite::write_json(checks, file.path(output, "checks-R.json"),
+                     auto_unbox = TRUE, pretty = TRUE, digits = NA)
+output
+```
+
+The R CSVs contain named outputs; JSON retains all 11 states, sampling, archive
+hash and engine identity. Rendering also creates this HTML walkthrough with
+plots and check results. [Independent validation](https://github.com/unibio-intelligence/qspquest-validation)
+records the tested numerical contracts separately.
+
+[Change an input](change-inputs.md) · [Choose another model](../MODEL_CATALOG.md) · [Technical reference](model-format.md)

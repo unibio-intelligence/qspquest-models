@@ -1,0 +1,19 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "patient18-90mg-q8w-intensified-probe",
+    "si-patient1-parameter-anchor",
+    "table2-population-pd-anchor"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "table2-population-pd-anchor",
+    "si-patient1-parameter-anchor",
+    "patient1-45mg-q12w-10cycle-probe",
+    "patient18-90mg-q8w-intensified-probe"
+  ],
+  "unavailable_scenario_ids": [
+    "patient1-45mg-q12w-10cycle-probe"
+  ]
+}

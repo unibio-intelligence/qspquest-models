@@ -1,0 +1,14 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "cpb-idarucizumab-reversal-overlay",
+    "exact-source-anchor"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-source-anchor",
+    "cpb-idarucizumab-reversal-overlay"
+  ],
+  "unavailable_scenario_ids": []
+}

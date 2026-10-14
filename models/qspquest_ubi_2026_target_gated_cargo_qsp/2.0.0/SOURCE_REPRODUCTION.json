@@ -1,0 +1,15 @@
+{
+  "model_kind": "independent_synthetic_mechanism",
+  "reproduced": "No paper-specific model. Independently authored 11-state gated-cargo mechanism with synthetic parameters and six curated controls.",
+  "historical_evidence_summary": "Source card reports 12/12 internal checks; zero dose, mass ledger, finite trajectories and qualitative mechanism/dose-direction checks.",
+  "not_reproduced": [
+    "Kahn 2026 equations/parameters/figures",
+    "named target/cargo efficacy",
+    "immune signaling/tumor killing/toxicity"
+  ],
+  "parameter_provenance": "Ubi-authored synthetic assumptions.",
+  "source_card_sha256": "3172b5c12a624875f2b611014e990c4c5d5df2b11571de98fb53e68143a8ba02",
+  "historical_evidence_identity_boundary": "Historical source-card evidence is distinct from current OMEX/rxode2 evidence; no automatic qualification transfer.",
+  "source_attribution": {},
+  "modification_notice": "Ubi-authored implementation and curated scenarios; public identity and distribution metadata differ from source. See reproduction/omission record. Native numeric coordinates preserved; no new physical-dimensional qualification."
+}

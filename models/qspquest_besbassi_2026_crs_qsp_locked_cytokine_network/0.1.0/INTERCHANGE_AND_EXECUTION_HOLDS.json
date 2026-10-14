@@ -1,0 +1,20 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "blinatumomab-28ug-day-28day-full-ode-overlay",
+    "okt3-5mg-full-ode-overlay",
+    "source-tables-exact-anchor",
+    "tgn1412-0p1mgkg-full-ode-overlay",
+    "tgn1412-tocilizumab-6h-rescue-overlay"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "source-tables-exact-anchor",
+    "blinatumomab-28ug-day-28day-full-ode-overlay",
+    "tgn1412-0p1mgkg-full-ode-overlay",
+    "okt3-5mg-full-ode-overlay",
+    "tgn1412-tocilizumab-6h-rescue-overlay"
+  ],
+  "unavailable_scenario_ids": []
+}

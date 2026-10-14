@@ -1,0 +1,32 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "typical-q8w-90mg-sc"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "median-trough-calibrated-q8w-90mg-sc"
+    },
+    {
+      "error": "No source-SBML archive: retained source parser/preparation hold",
+      "scenario_id": "typical-q4w-90mg-sc"
+    }
+  ],
+  "qualified_scenario_ids": [
+    "exact-article-table-anchor"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "exact-article-table-anchor",
+    "typical-q8w-90mg-sc",
+    "median-trough-calibrated-q8w-90mg-sc",
+    "typical-q4w-90mg-sc"
+  ],
+  "unavailable_scenario_ids": [
+    "median-trough-calibrated-q8w-90mg-sc",
+    "typical-q4w-90mg-sc",
+    "typical-q8w-90mg-sc"
+  ]
+}

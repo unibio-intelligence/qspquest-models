@@ -1,0 +1,22 @@
+{
+  "model_kind": "permissive_source_code_adaptation",
+  "reproduced": "Forward turnover equations in equivalent amount coordinates A=V*C, with source-duration infusions and three exploratory regimens.",
+  "not_reproduced": [
+    "paper optimal regimens",
+    "clinical doses",
+    "population fitting"
+  ],
+  "unit_scope": "Normalized benchmark coordinates; V is a benchmark volume ratio and doses must not be called mg.",
+  "source_card_sha256": "5b78608c1436e1839cf638123cbc544d99887fa0cd693e0f30080b6b1cdda911",
+  "historical_evidence_identity_boundary": "Historical source-card evidence is distinct from current OMEX/rxode2 evidence; no automatic qualification transfer.",
+  "rights": {
+    "executable_source": "DiffDose code BSD-3-Clause at f6c39363bdd127282a555121cbe072c49dd5f276",
+    "OptiDose_article": "CC BY 4.0",
+    "DiffDose_article": "CC BY-NC 4.0; context only, protected article assets excluded"
+  },
+  "source_attribution": {
+    "paper_year": 2021,
+    "paper_doi": "10.1007/s10957-021-01819-w"
+  },
+  "modification_notice": "Ubi-authored implementation and curated scenarios; public identity and distribution metadata differ from source. See reproduction/omission record. Native numeric coordinates preserved; no new physical-dimensional qualification."
+}

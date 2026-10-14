@@ -1,0 +1,26 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "source_scenarios": [
+    "adolescent-ge45kg-15mgkg-q3w-source-limited",
+    "child-lt30kg-15mgkg-q3w-source-limited",
+    "infant-lt2-15mgkg-q3w-figure2-source-limited",
+    "source-review-at-cap",
+    "source-review-below-cap",
+    "source-review-child-ada-positive",
+    "source-review-high-albumin",
+    "source-review-high-tumor-burden",
+    "source-review-high-weight-pediatric",
+    "source-review-high-weight-young-adult",
+    "source-review-infant-low-weight",
+    "source-review-low-albumin",
+    "source-review-low-tumor-burden",
+    "source-review-reference-covariates",
+    "source-review-young-adult-ada-positive",
+    "young-adult-57to65kg-1200mg-q3w-source-limited"
+  ],
+  "qualified_scenario_ids": [],
+  "unavailable_scenario_ids": [],
+  "parser_or_preparation_holds": [],
+  "current_engine_qualification": "not_assessed",
+  "scope": "Preset requests are supplied for exploratory execution; no numerical qualification is recorded for this archive version."
+}

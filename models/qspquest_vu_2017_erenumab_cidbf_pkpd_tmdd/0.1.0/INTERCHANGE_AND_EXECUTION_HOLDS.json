@@ -1,0 +1,36 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "parser_or_preparation_holds": [],
+  "qualified_scenario_ids": [
+    "iv-140mg-single-infusion-dynamic",
+    "paper-population-and-threshold-checks",
+    "sc-21mg-q4w-68kg-s8-dynamic",
+    "sc-21mg-q4w-75kg-dynamic",
+    "sc-21mg-q4w-75kg-s8-dynamic",
+    "sc-21mg-q4w-84kg-s8-dynamic",
+    "sc-70mg-q4w-68kg-s8-dynamic",
+    "sc-70mg-q4w-75kg-dynamic",
+    "sc-70mg-q4w-75kg-s8-dynamic",
+    "sc-70mg-q4w-84kg-s8-dynamic",
+    "sc-7mg-q4w-75kg-dynamic",
+    "table3-pk-parameter-estimates",
+    "table4-pd-parameter-estimates"
+  ],
+  "scope": "A source-only or held preset is inspectable scientific material, not a qualified simulation or fitting route.",
+  "source_scenarios": [
+    "table3-pk-parameter-estimates",
+    "table4-pd-parameter-estimates",
+    "paper-population-and-threshold-checks",
+    "sc-7mg-q4w-75kg-dynamic",
+    "sc-21mg-q4w-75kg-dynamic",
+    "sc-70mg-q4w-75kg-dynamic",
+    "sc-21mg-q4w-68kg-s8-dynamic",
+    "sc-21mg-q4w-84kg-s8-dynamic",
+    "sc-70mg-q4w-68kg-s8-dynamic",
+    "sc-70mg-q4w-84kg-s8-dynamic",
+    "iv-140mg-single-infusion-dynamic",
+    "sc-21mg-q4w-75kg-s8-dynamic",
+    "sc-70mg-q4w-75kg-s8-dynamic"
+  ],
+  "unavailable_scenario_ids": []
+}
