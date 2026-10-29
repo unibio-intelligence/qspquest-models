@@ -102,23 +102,6 @@ Physical units have not been independently checked for this execution profile.
 
 **3 experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `source_replay`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:58b3a7b220d7a3818ea428f007bdfcdd765d0848c274bc5e19e9bd7cbd50d9e5`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-SC two-compartment ustekinumab PK model from Yarur et al. 2025 Table 1 Bayesian priors with exact replay of public PK/outcome scalar anchors.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

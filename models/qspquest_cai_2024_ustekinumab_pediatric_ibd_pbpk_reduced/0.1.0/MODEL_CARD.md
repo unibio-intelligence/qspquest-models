@@ -107,23 +107,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:206d743483212700a0f8b2552b92ac48c632856d732851cac1a4942628464a7f`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Source-limited mechanistic reduction of the Cai et al. PK-Sim/MoBi model. It represents SC lymphatic input, central/peripheral distribution, endosomal uptake, FcRn binding/recycling, and catabolism; exactly replays public model constants and endpoint tables; and runs paper-constrained adult/pediatric induction and maintenance ODE scenarios. It is not the unavailable native 15-organ PK-Sim project.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

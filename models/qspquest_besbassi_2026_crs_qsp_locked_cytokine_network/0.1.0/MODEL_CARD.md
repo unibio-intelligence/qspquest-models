@@ -111,23 +111,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:f2e0c99aff6b7e5b7123b03d39f5ff91b43d2f83bcef132dcbc1de8a8f53e4f2`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Full public 11-state ODE reconstruction of the bioRxiv CRS QSP model linking drug PK, T-cell activation, macrophage-gated STAT3 IL-6 feedback, and cytokine dynamics across blinatumomab, TGN1412, OKT3, and tocilizumab rescue.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

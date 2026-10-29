@@ -275,23 +275,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:cf45229f15ff5d9da46fe2949bb5c457f61d839e564719f00e501dc9f7679aa6`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Source-limited pediatric vedolizumab HUBBLE phase 2 PK/NCA and exposure-response intake model. Exact scenarios reproduce main-text dosing, sampling, Ctrough, response, ADA, and safety values. The dynamic runtime is a reduced one-compartment IV shell for dose/smoke testing and must not be treated as the unpublished compartmental/NCA analysis until the DOCX supplement is available.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

@@ -175,19 +175,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
-
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:34f6bbbb648eac0479252818812a214f190efcad71d83c4859e2912855df039b`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
 ## Related representations
 
 Declared representation: `reduced`. Source family: `liu-2026-aav-mab-targetx-rat-brain`; paper: `10.1007/s10928-026-10051-w`.
@@ -195,10 +182,6 @@ Canonical full representation: [qspquest_liu_2026_aav_mab_targetx_rat_brain_full
 Related representations: [qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp](../../../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.1.2/MODEL_CARD.md) (`full`, `2.1.2`), [qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp](../../../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp/0.1.0/MODEL_CARD.md) (`reduced`, `0.1.0`).
 This relationship does not establish physical units, publication reproduction or current-engine qualification.
 
-## What you can explore
+## Reference
 
-Source-limited 18-state reduced QSP reconstruction of Liu et al. 2026. It links effective transient/durable AAV transduction, delayed anti-TargetX mAb expression, and the published TargetX binding and turnover constants in plasma, brain ISF, and CSF. It is not the authors' full 136-equation, 14-tissue PBPK/QSP model.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

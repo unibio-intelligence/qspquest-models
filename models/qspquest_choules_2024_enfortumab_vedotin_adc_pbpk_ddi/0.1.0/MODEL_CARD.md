@@ -497,23 +497,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:42a97014e5c697944aa9bf4c316633e81a10bdca05374bd15fb718b54792234d`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Exploratory one-compartment antibody decay coupled to one-compartment MMAE formation and elimination. This historical reduction lacks the DAR/FcRn, organ, transporter and enzyme structure of the Choules Simcyp PBPK model. Table constants and DDI proxy ratios are not simulation validation; calibrated curves do not reproduce the original mechanism.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

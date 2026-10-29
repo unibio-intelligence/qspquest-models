@@ -192,23 +192,6 @@ Physical units have not been independently checked for this execution profile.
 
 **4 experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `source_replay`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:0e23a8154bf269c7ad7cc4891810da66d09b2e649dd143c07323af3874b0047e`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Source-limited dynamic reconstruction of the Caimi 2024 loncastuximab CD19 QSP analysis: public Lonca two-compartment PK, SI Table 3 CD19/CD21 ADC trafficking and payload tumor-kill states, and the paper response rule based on tumor-volume AUC versus stable disease. Full Jones 2019 PBPK code is preserved as upstream source; the hidden Caimi SimBiology virtual-patient implementation is not public.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

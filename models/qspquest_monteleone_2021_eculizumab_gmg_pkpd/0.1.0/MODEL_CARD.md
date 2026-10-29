@@ -278,23 +278,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:c95baceca1f52e6478c8252ed725ad7a13fc6b3937c5ef5b1174eedc7d63defb`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Source-limited Monteleone 2021 eculizumab gMG PK/PD model. The paper fixed-effect scenario uses public Table 1 Bayesian mean PK parameters and a reduced free-C5 sigmoid constrained by Figures 2-3. A separate exploratory calibrated scenario uses the reported Table 1 median clearance to better match public Figure 1 peak/trough concentrations.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

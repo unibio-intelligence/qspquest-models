@@ -870,23 +870,6 @@ Outside this version’s scope:
 - residual model/covariance
 - bit-for-bit sponsor predictions
 
-<details>
-<summary>Availability and qualification</summary>
-
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:28f144300edd88b3321dc300056e7310cd5448e842790c3861701b3ea7dd250d`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Mechanistic rat QSP linking IV, intracisterna-magna, or intrastriatal AAV delivery to whole-body vector disposition, transgene-derived anti-TargetX antibody, FcRn-aware protein distribution, and free TargetX in plasma, brain ISF, and CSF.
-
 ## Serotype initialization
 
 The AAV5 preset couples its declared receptor-total parameters with all 65 nonzero free receptor starting coordinates. The retained -1000 h equilibration precedes the bolus at 0 h. Blood-cell and tissue receptor coordinates use their respective declared totals.
@@ -920,49 +903,9 @@ All four coefficients use unit 1, values from 0 through 1 and the retained sourc
 
 Version 2.1.0 uses four explicit modality names. The ambiguous sigma_bbb and sigma_bcsfb inputs and their prior native source_symbol_872/source_symbol_873 names are unavailable. To reproduce a shared barrier perturbation, set both sigma_vector_bbb and sigma_protein_bbb, and both sigma_vector_bcsfb and sigma_protein_bcsfb. For a historical calculation use its exact pinned archive and request.
 
-<details>
-<summary>Output identities</summary>
+## Reference
 
-Analyte and compartment identities of the archived source readout expressions. Aggregate labels describe only the states included by those expressions. CSF aliases denote cisterna magna, not all CSF compartments.
-
-Returned native units remain 1. Friendly name suffixes and semantic identities do not establish physical units, conserved mass or complete source reproduction.
-
-Liu 2026, DOI 10.1007/s10928-026-10051-w, Figure 2 and Table 1, pages 5–10.
-
-| Readout | Analyte identifier | Compartment identifier | Returned native unit | Archive source label |
-| --- | --- | --- | --- | --- |
-| `aav_blood_Vg_mL` | `aav_vector` | `central_blood` | `1` | `1` |
-| `aav_brain_Vg_mL` | `aav_vector` | `brain_tissue_aggregate` | `1` | `1` |
-| `aav_heart_Vg_mL` | `aav_vector` | `heart_tissue_aggregate` | `1` | `1` |
-| `aav_liver_Vg_mL` | `aav_vector` | `liver_tissue_aggregate` | `1` | `1` |
-| `aav_lung_Vg_mL` | `aav_vector` | `lung_tissue_aggregate` | `1` | `1` |
-| `blood_aav_Vg_uL` | `aav_vector` | `central_blood` | `1` | `1` |
-| `mab_brain_nM` | `anti_targetx_mab` | `brain_tissue_aggregate` | `1` | `1` |
-| `mab_csf_nM` | `anti_targetx_mab` | `cisterna_magna_csf` | `1` | `1` |
-| `mab_csf_ug_mL` | `anti_targetx_mab` | `cisterna_magna_csf` | `1` | `1` |
-| `mab_heart_nM` | `anti_targetx_mab` | `heart_tissue_aggregate` | `1` | `1` |
-| `mab_isf_nM` | `anti_targetx_mab` | `brain_interstitial_fluid` | `1` | `1` |
-| `mab_isf_ug_mL` | `anti_targetx_mab` | `brain_interstitial_fluid` | `1` | `1` |
-| `mab_liver_nM` | `anti_targetx_mab` | `liver_tissue_aggregate` | `1` | `1` |
-| `mab_lung_nM` | `anti_targetx_mab` | `lung_tissue_aggregate` | `1` | `1` |
-| `mab_plasma_nM` | `anti_targetx_mab` | `central_plasma` | `1` | `1` |
-| `mab_plasma_ug_mL` | `anti_targetx_mab` | `central_plasma` | `1` | `1` |
-| `target_csf_pM` | `targetx` | `cisterna_magna_csf` | `1` | `1` |
-| `target_csf_pct_baseline` | `targetx` | `cisterna_magna_csf` | `1` | `1` |
-| `target_isf_pM` | `targetx` | `brain_interstitial_fluid` | `1` | `1` |
-| `target_isf_pct_baseline` | `targetx` | `brain_interstitial_fluid` | `1` | `1` |
-| `target_lv_pM` | `targetx` | `brain_lateral_ventricle_csf` | `1` | `1` |
-| `target_lv_pct_reported_baseline` | `targetx` | `brain_lateral_ventricle_csf` | `1` | `1` |
-| `target_plasma_pM` | `targetx` | `central_plasma` | `1` | `1` |
-| `target_plasma_pct_baseline` | `targetx` | `central_plasma` | `1` | `1` |
-
-Inspect the same declarations using `model.output_semantics`. An undeclared identity is `None`; it is not inferred from the readout name.
-
-</details>
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)
 
 ## Initialization and percentage denominators
 

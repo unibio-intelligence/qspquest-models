@@ -1,12 +1,16 @@
 [build-system]
-requires = ["setuptools>=69"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "qspquest-models"
-version = "0.1.0"
+version = "0.1.0rc1"
 description = "Curated OMEX models for standalone QSPQuest simulation"
 requires-python = ">=3.10"
-license = {text = "Apache-2.0"}
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "SOURCE_NOTICE.md"]
+readme = "PACKAGE_README.md"
+[project.scripts]
+qspquest-models = "qspquest_models.cli:main"
 [tool.setuptools]
 packages = ["qspquest_models"]
 [tool.setuptools.package-data]

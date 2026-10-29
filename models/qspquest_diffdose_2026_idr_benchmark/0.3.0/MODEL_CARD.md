@@ -106,19 +106,6 @@ Outside this version’s scope:
 - clinical doses
 - population fitting
 
-<details>
-<summary>Availability and qualification</summary>
-
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation, fit.
-Fitting supported: `true`; fit ready: `true`.
-Evidence identity: `sha256:15d79cb03f9116b5270cf2f2563178e8f9b1a5c453873c4cb2201ca152d084c2`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
 ## Synthetic parameter recovery
 
 Complete the [fitting prerequisites](../../../tutorials/library-fitting.md#prerequisites-and-discovery) with the matching QSPQuest Python binding. The archive fixes synthetic observations, residual errors, parameter bounds, solver and convergence controls for each workflow.
@@ -136,10 +123,6 @@ A successful fixture reports converged parameter recovery within its declared ab
 
 The six workflows cover three parameter starters under BDF and Rodas5P. Their scope is the exact archived synthetic recovery case. Source population reproduction, uncertainty coverage and clinical qualification require separate evidence.
 
-## What you can explore
+## Reference
 
-How does repeated exposure accelerate biomarker removal?
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

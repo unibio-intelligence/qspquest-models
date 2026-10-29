@@ -9,7 +9,7 @@ from .tables import read_table
 from .input_bindings import (InputBindingError, build as _input_bindings,
                              check as _check_input_bindings, resolve as _resolve_input_alias)
 
-__version__ = "0.1.0"
+__version__ = "0.1.0rc1"
 
 
 def _json(data):
@@ -494,6 +494,8 @@ class ModelArchive:
             raise RuntimeError(
                 "Install QSPQuest (Python package or CLI); see the quickstart. The library has no alternate solver."
             )
+        if shutil.which(str(exe)) is None:
+            raise FileNotFoundError(f"QSPQuest executable is unavailable: {exe}")
         with tempfile.TemporaryDirectory(prefix="qspquest-model-") as tmp:
             m = Path(tmp) / "model.json"
             r = Path(tmp) / "request.json"
@@ -725,7 +727,9 @@ def load_archive(path, *, expected_sha256, executable=None, availability_record=
 
 class Library:
     def __init__(self, root=None, *, executable=None):
-        self.root = Path(root) if root else Path(__file__).resolve().parents[1]
+        bundled = Path(__file__).resolve().parent / '_library'
+        self.root = Path(root) if root else (bundled if (bundled / 'catalog.json').is_file()
+                                           else Path(__file__).resolve().parents[1])
         self.catalog = _json((self.root / "catalog.json").read_bytes())
         self.executable = executable
         for row in self.catalog['models']:
@@ -734,7 +738,9 @@ class Library:
         if 'availability_schema' in self.catalog:
             if self.catalog['availability_schema'] != SCHEMA:
                 raise ValueError('Unsupported catalog availability schema')
-            self.availability_records = load_records(self.root / 'qspquest_models/availability.json')
+            registry = (Path(__file__).with_name('availability.json') if self.root == bundled
+                        else self.root / 'qspquest_models/availability.json')
+            self.availability_records = load_records(registry)
             verify_catalog(self.catalog, self.availability_records)
             source_catalog = self.root / 'source-catalog.json'
             if source_catalog.is_file():

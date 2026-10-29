@@ -227,23 +227,6 @@ Physical units have not been independently checked for this execution profile.
 
 **4 experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `source_replay`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:9021509dd68e75a9c890d4b4cb977b82501f037c9bc78fd8e237d8d5e8baaa86`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Public-source ODE reconstruction of the Chen 2025 trastuzumab-PE24 anti-idiotypic distribution-enhancer model, using the recovered 2022 sphere PK/PD equations and 2025 PE24 endpoints.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

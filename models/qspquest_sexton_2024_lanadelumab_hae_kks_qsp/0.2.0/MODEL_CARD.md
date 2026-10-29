@@ -168,42 +168,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Only the PK dose and concentration coordinates described above carry explicit physical units. Other coordinates and complete model dimensions remain unqualified.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:83fd13ea949eaae58ee806789ab754f72f700eb4ade14b5b5bcce57d65151a0a`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Full runtime translation of the Sexton 2024 hereditary angioedema plasma kallikrein-kinin system model for lanadelumab. The model uses the public supplementary R/C source code: 61 states, 82 base biochemical parameters, sampled virtual-patient PK and acute-attack forcing, and SC 150 mg q2w dosing.
-
-<details>
-<summary>Output identities</summary>
-
-Lanadelumab depot amount and central plasma mass and molar concentrations.
-
-Depot amount uses mg; central mass concentration uses ug/mL (numerically mg/L); the molar output uses nmol/L (nM) and the source molecular mass. Other contact-system coordinates retain unqualified source numerical values.
-
-Retained source PK amount, central concentration and molecular-mass definitions.
-
-| Readout | Analyte identifier | Compartment identifier | Returned native unit | Archive source label |
-| --- | --- | --- | --- | --- |
-| `PK_Amount_SC` | `lanadelumab` | `subcutaneous_depot` | `mg` | `mg` |
-| `PK_Conc_Central_in_nM` | `lanadelumab` | `central_plasma` | `nmol/L` | `nmol/L` |
-| `PK_Conc_Central_in_ugml` | `lanadelumab` | `central_plasma` | `ug/mL` | `ug/mL` |
-
-Inspect the same declarations using `model.output_semantics`. An undeclared identity is `None`; it is not inferred from the readout name.
-
-</details>
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

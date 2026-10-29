@@ -179,23 +179,6 @@ Physical units have not been independently checked for this execution profile.
 - Healthy-volunteer LDH is outside the patient-only efficacy relation.
 - Static source anchors are archival observations, not independent numerical simulation validation.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:78c1c8121f98863a09aa99bb4cacafdc24f82a057b366ba81e71533ca0daa2d4`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-- How does exposure relate to terminal complement inhibition under this fixed-effect regimen?
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

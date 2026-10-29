@@ -146,26 +146,9 @@ Outside this version’s scope:
 - S7–S8 residual diagnostics
 - donor-weighted pooled population replay
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:5f5bc66430a82d7cea07d98b478e372826dfa03de77ae380e76eb164ad6cb1f3`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Links per-cell CD3×5T4 trimer formation to resting-to-activated-to-effector T-cell dynamics and three-stage apoptotic tumor-cell loss across drug affinity, concentration, antigen density, and effector-to-target ratio.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)
 
 ## Source precision profiles
 

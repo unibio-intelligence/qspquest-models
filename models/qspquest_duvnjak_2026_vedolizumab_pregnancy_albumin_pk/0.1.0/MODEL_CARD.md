@@ -99,23 +99,6 @@ Physical units have not been independently checked for this execution profile.
 
 **4 experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `source_replay`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:8a650b58f6699ac7894e17467e8b062213504e6d5c87cd2fd6731eb22ea4c2b4`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Full deterministic ODE reconstruction of the Duvnjak et al. 2026 vedolizumab pregnancy PopPK model: albumin polynomial, two-compartment disposition, linear plus Michaelis-Menten clearance, albumin-mediated pregnancy effects on CL/Vc, and third-trimester gestational-age clearance effect.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

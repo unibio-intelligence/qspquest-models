@@ -110,28 +110,6 @@ Physical units have not been independently checked for this execution profile.
 - This configuration demonstrates individual-parameter behavior; it is not a prospective patient-specific dosing workflow.
 - Do not infer clinical benefit or an optimal redosing time from CD19+ cell count alone.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:4750e345138eaeaba24445fe59bebe884229421cdabcdb5ea797902b4738e56e`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-- How long does circulating rituximab persist after the starting 1000 mg administration?
-- How rapidly and deeply are CD19+ B cells depleted?
-- Which clearance, drug–cell coupling, and turnover parameters shift B-cell recovery timing?
-- How does this individualized parameter set change rituximab persistence relative to the typical configuration?
-- How do the individualized depletion and turnover terms shift the depth and duration of B-cell depletion?
-- Which differences are driven by exposure and which are driven by B-cell dynamics?
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

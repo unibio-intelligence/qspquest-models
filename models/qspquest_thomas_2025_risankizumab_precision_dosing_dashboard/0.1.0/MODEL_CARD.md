@@ -103,23 +103,6 @@ Physical units have not been independently checked for this execution profile.
 
 **2 experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `source_replay`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:7719bd9400ee5fb0e3fda29a88c1371dedb86ec59781d43303a895e5ff159cc0`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Dashboard-layer ODE/exact replay for Thomas et al. 2025 risankizumab model-informed precision dosing in psoriasis. The executable PK uses the Suleiman 2019 two-compartment risankizumab PopPK model selected by Thomas, and the dashboard interval rule is replayed from the Thomas paper.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

@@ -1,18 +1,7 @@
 # Ortiz 2024 ravulizumab NMOSD PK/PD
 
-Source-complete endpoint-constrained IV ravulizumab PK/free-C5 ODE reconstruction for the Ortiz 2024 CHAMPION-NMOSD PK/PD paper. The public article reports week-50 Cmax/Ctrough and free-C5 inhibition but not the NONMEM control stream or patient-level data, so this model reproduces public table and endpoint results while marking hidden PopPK covariate analysis source-limited.
+Source: https://doi.org/10.3389/fneur.2024.1332890.
+
+UniBio Intelligence authored the QSPQuest representation and execution presets.
 
 Source scientific documents and source terms are included in this OMEX archive. Ubi contributions are Apache-2.0; attributed source content retains CC BY 4.0.
-
-4 of 4 source presets are independently matched with the current engine and exposed for standalone simulation. Others remain source-only with explicit holds. This is not population-fitting or clinical qualification.
-
-DOIs: 10.3389/fneur.2024.1332890
-
-## Changes from source
-
-UniBio Intelligence authored the QSPQuest representation, explicit native
-execution requests, OMEX packaging, scenario selection and runnable/held status
-from the cited scientific source. These additions preserve the declared source
-numerical values in the source-coordinate execution profile. They do not
-establish physical-unit, population-fitting or complete paper reproduction.
-The archive identifies the retained source terms and per-scenario limitations.

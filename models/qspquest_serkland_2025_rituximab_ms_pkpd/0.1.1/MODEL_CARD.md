@@ -85,10 +85,7 @@ The names retain the source conventions. A unit label of `1` means this executio
 uses numerical source values; a unit-looking column name alone does not establish physical units.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Result qualification
-
-No numerical reference is recorded for this archive version. The complete JSON retains its archive digest, model/request identity, time/side grid, output units and qualification scope.
-Inspect those fields before interpreting a result; reproducible execution availability does not establish physical, biological, fitting or clinical qualification.
+This version has no independent numerical reference.
 
 ## Interpretation and limits
 
@@ -103,50 +100,6 @@ Physical units have not been independently checked for this execution profile.
 
 Source-backed output identities. Returned native units and source display labels remain distinct; an undeclared compartment is not inferred.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:a71be0d6a266abad1002c038bf6baca004b7dc4d4b085481ade36598b4adc59b`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-- How long does circulating rituximab persist after the starting 1000 mg administration?
-- How rapidly and deeply are CD19+ B cells depleted?
-- Which clearance, drug–cell coupling, and turnover parameters shift B-cell recovery timing?
-- How does this individualized parameter set change rituximab persistence relative to the typical configuration?
-- How do the individualized depletion and turnover terms shift the depth and duration of B-cell depletion?
-- Which differences are driven by exposure and which are driven by B-cell dynamics?
-
-<details>
-<summary>Output identities</summary>
-
-Explicit source-backed output identities; null compartments remain undeclared. These labels do not establish complete publication fidelity, fitting, clinical validation or current-engine qualification.
-
-Returned quantities retain actual native units; source display labels do not convert numerical values or establish physical dimensions.
-
-Packaged scientific/model.json state descriptions and scientific/equations.json derived outputs; exact source hashes and JSON pointers are bound in output_semantic_curation.
-
-| Readout | Analyte identifier | Compartment identifier | Returned native unit | Archive source label |
-| --- | --- | --- | --- | --- |
-| `bcell_production_cells_mm3_day` | `cd19_positive_b_cells` | `circulating` | `1` | `1` |
-| `cd19_cells_mm3` | `cd19_positive_b_cells` | `circulating` | `1` | `1` |
-| `initial_concentration_mg_l` | `rituximab` | `circulating` | `1` | `1` |
-| `linear_clearance_component_mg_l_day` | `rituximab` | `circulating` | `1` | `1` |
-| `rituximab_concentration_mg_l` | `rituximab` | `circulating` | `1` | `1` |
-| `tmdd_clearance_component_mg_l_day` | `rituximab` | `circulating` | `1` | `1` |
-
-Inspect the same declarations using `model.output_semantics`. An undeclared identity is `None`; it is not inferred from the readout name.
-
-</details>
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Archive qualification record](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)
