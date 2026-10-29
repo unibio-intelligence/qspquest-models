@@ -254,23 +254,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:9f43417863ba529e4b497bc5092e50c886469ef4846ddf5c972cdaf71a9a9760`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Paper-derived fixed-effect implementation of the Garrett et al. 2019 inotuzumab ozogamicin population PK model in relapsed/refractory B-cell ALL and NHL. The runtime implements the two-compartment structural PK model with linear plus exponentially declining time-dependent clearance, BBSA/BLSTPB/disease/rituximab covariate equations, and exact scalar checks from Table 1, Table 2, the supplement NONMEM control stream, and simulation text. It does not reproduce NONMEM M3 censored-data likelihood, interindividual effects, covariance, BLQ handling, or VPC envelopes.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

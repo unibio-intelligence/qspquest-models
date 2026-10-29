@@ -39,7 +39,7 @@ def _parser(argv, prog):
                      description='Browse pharmacology models and run experiments')
     verify_table = any(arg == '--verify-table' or arg.startswith('--verify-table=') for arg in argv)
     parser.add_argument('--library', default=None if verify_table else os.environ.get('QSPQUEST_LIBRARY_DIR'),
-                        help='Library directory (default: QSPQUEST_LIBRARY_DIR, then package checkout)')
+                        help='Library directory (default: QSPQUEST_LIBRARY_DIR, then bundled library or source checkout)')
     parser.add_argument('--executable', help='Path to the QSPQuest executable')
     parser.add_argument('--search', help='Find models by name, ID, browsing summary or description')
     parser.add_argument('--runnable', action='store_true', help='Show only models with runnable experiments, including source replays')

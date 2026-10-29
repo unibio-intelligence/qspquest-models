@@ -115,23 +115,6 @@ Outside this version’s scope:
 - paper geometry/parameters/figures
 - named molecules or cell lines
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:05955b89248690dbae9560d9394c50fe2887da64ab51b3e5f3d2faee59f5c473`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Explores how an open ligand reservoir, asymmetric binary affinities, membrane site densities, and two crosslink routes produce binary occupancy, ternary bridging, and a high-ligand hook regime.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

@@ -259,23 +259,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:8bab25510c1bde9b8a07b058a3ba6dc5b9c654a5129c4fc9d0f0d6a0c4da0dab`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Source-complete exact-replay and source-limited dynamic model for Quartino et al. 2017 pertuzumab PK and exposure-response in NeoSphere HER2-positive early breast cancer. The runtime preserves the published two-compartment pertuzumab PopPK structure, the logit pCR exposure-response equation context, NeoSphere arm/covariate/pCR counts, target-attainment values, ANOVA/DDI p-values, and dose-selection thresholds.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

@@ -313,23 +313,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:c5adb6c2d0e29424318d75788fb7447a0974f9f503a27ddaaca46019546c9166`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Reduced empirical ODE and exact endpoint replay model for Chang et al. 2025, which compared wild-type trastuzumab-vc-MMAE ADC with a +5 positively charged variant in mouse plasma, NCI-N87 and MCF-7 tumors, liver, spleen, and N87 efficacy studies. The article reports WinNonlin NCA summaries rather than a mechanistic structural PK/PD ODE; this implementation preserves every public Table 1-6 scalar as exact anchors and provides first-order exposure ODE scenarios calibrated to reported Cmax/AUC endpoints for paper-overlay validation.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

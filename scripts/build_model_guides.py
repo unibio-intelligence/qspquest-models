@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build browsable guides from released metadata without rewriting any archive.
 
-SOURCE_REFERENCE.md preserves the previous card. Edit scientific metadata at its
+SOURCE_REFERENCE.md contains concise source and reuse notices. Edit scientific metadata at its
 source; edit presentation here. Run from any directory after updating a release.
 """
 from pathlib import Path
@@ -41,7 +41,7 @@ def output_identity_rows(native, model):
     return result
 
 
-SOURCE_FOOTER = '[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)'
+SOURCE_FOOTER = '[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)'
 
 
 def curated_footer(card):
@@ -91,6 +91,16 @@ def reader_order(lines):
         else:
             introduction += section
     return introduction
+
+
+def minimal_card(text):
+    text = re.sub(r'<details>\s*<summary>Availability and qualification</summary>.*?</details>\s*', '', text, flags=re.S)
+    text = re.sub(r'<details>\s*<summary>Output identities</summary>.*?</details>\s*', '', text, flags=re.S)
+    text = re.sub(r'## What you can explore\n.*?(?=\n## |\Z)', '', text, flags=re.S)
+    text = re.sub(r'### Result qualification\n.*?(?=\n## |\Z)', 'This version has no independent numerical reference.\n', text, flags=re.S)
+    text = re.sub(r'## Sources and technical reference\n\s*\[[^\n]+\n',
+                  '## Reference\n\n[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)\n', text, flags=re.S)
+    return re.sub(r'\n{3,}', '\n\n', text).rstrip() + '\n'
 
 
 def topic(ident):
@@ -328,10 +338,10 @@ def build():
         if held:
             lines += ['', f'**{len(held)} experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).']
         footer = SOURCE_FOOTER.replace('Stored result evidence', 'Archive qualification record') if source_only else SOURCE_FOOTER
-        lines += ['', '## Sources and technical reference', '', footer, '']
+        lines += ['', '## Reference', '', footer, '']
         if preserved:
             lines += [preserved, '']
-        (folder / 'MODEL_CARD.md').write_text(re.sub(r'\n{3,}', '\n\n', '\n'.join(reader_order(lines))))
+        (folder / 'MODEL_CARD.md').write_text(minimal_card(re.sub(r'\n{3,}', '\n\n', '\n'.join(reader_order(lines)))))
         if current:
             listing.append((topic(ident), title, folder.relative_to(ROOT).as_posix(), summaries[ident], status))
     lines = ['# Choose a model', '', '[Start here](README.md) · [Python](tutorials/python-quickstart.md) · [R](tutorials/r-quickstart.md) · [Understand results](tutorials/understand-results.md)', '', f"Browse {cohort['selected_model_identities']} selected model identities below, grouped by topic. Use your browser’s Find command to search for a drug,", 'disease or mechanism. Each model guide lists its experiments, outputs and runnable status.', f"{cohort['selected_availability'].get('dynamic', 0)} selected identities offer dynamic starters; {cohort['selected_availability'].get('source_replay', 0)} offer source replays; {cohort['selected_availability'].get('inspection_only', 0)} are inspection only.", f"The archive inventory contains {cohort['versioned_archives']} versions; selected versions provide {cohort['selected_preset_requests']} preset requests and {cohort['selected_fit_ready']} fit-ready models.", '', '## Good places to start', '', '| Your question | Start with |', '| --- | --- |', f'| How do I run and plot a published PK/PD model? | [Rituximab and B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/{selected["qspquest_serkland_2025_rituximab_ms_pkpd"]["version"]}/MODEL_CARD.md) |', '| How does local gating affect tumor versus systemic occupancy? | [Target-gated cargo walkthrough](tutorials/qsp-gated-cargo.md) |', '| How does exposure change biomarker turnover? | [Small turnover benchmark](models/qspquest_diffdose_2026_idr_benchmark/0.1.0/MODEL_CARD.md) |', '', 'PK describes drug exposure, PD describes drug effects, PBPK describes distribution through', 'physiological compartments, and QSP describes interacting biological mechanisms.', 'PopPK in a model name describes its source; these library examples run fixed parameters, not population fits.', '', '## Browse by topic', '']

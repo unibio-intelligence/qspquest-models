@@ -112,20 +112,16 @@ python scripts/verify_library.py
 ```
 
 The verifier checks archive/member hashes, scientific-source snapshots and stored
-trajectories. The snapshot contains 76 archives for 72 model identities. The 73
-original archives retain 644 stored trajectories; three additional versions have
-source-preparation records and no numerical reference. The verifier requires
-stored comparison coverage for every scenario in each selected archive and
-rejects those source-only selections until qualification evidence is recorded.
-Seventy-three archives contain SBML/SED-ML; three are JSON-only containers with
-execution holds. Results use lossless `.csv.gz` compression with
+trajectories. The library contains 81 archive versions for 72 model identities and 647
+stored trajectories. Selected versions expose 644 preset requests. Archives
+without a numerical reference retain an explicit unqualified execution status.
+Some archives use native JSON profiles rather than SBML/SED-ML. Results use lossless `.csv.gz` compression with
 compressed and uncompressed checksums. [Read a stored result](understand-results.md#read-a-stored-result)
 without installing the engine.
 
-Each model guide links to `SOURCE_REFERENCE.md`, `SOURCE_REPRODUCTION.json`,
-`evidence.json` and any unavailable-experiment details. The guide outside the
-archive is the current user documentation; original embedded scientific records
-remain unchanged.
+Model guides describe the available experiments and source reuse terms.
+`evidence.json` binds stored results to their exact archive;
+`SOURCE_REPRODUCTION.json` records the execution scope and unavailable experiments.
 
 ## Machine-readable discovery
 
@@ -159,27 +155,6 @@ qualify the current engine, physical units or source reconstruction.
 reports simulation and fitting comparisons with their tested scope. A successful
 archive check establishes file consistency; it does not establish full publication
 reproduction, physical-unit correctness or clinical applicability.
-
-## Maintain the user guides
-
-After changing release metadata, run `python scripts/build_model_guides.py` to refresh
-the catalog and model guides. Short browsing descriptions live in
-`scripts/model_summaries.json`; the generator reads experiment details from the
-released inputs. `qspquest_models/user_guides.json` explicitly selects each
-starter, availability and primary readout meanings, bound to the archive checksum.
-There is no first-experiment or first-column fallback. After editing those choices,
-run `python scripts/validate_starters.py --write-previews --check-interfaces` to
-execute all starters, compare retained outputs with original evidence and verify
-Python, CLI and R exports. Each stored comparison checks the complete retained
-output table, time and event-side rows; preview checks also cover units and extrema
-coordinates. Source-only selected versions still run and export, but appear in
-`reference_unavailable` and are excluded from `reference_compared`. They do not
-gain reference data or previews from this command. Historical tables containing
-only time and event side appear in `reference_coordinates_only`; their selected
-state values are checked against the starter preview instead. The compact `starter-preview.json` records include
-states missing from the original evidence without rewriting that evidence.
-`SOURCE_REFERENCE.md` preserves each original scientific card.
-Run `Rscript scripts/render_example_plots.R` to rebuild the stored-result previews.
 
 ## Availability and qualification
 

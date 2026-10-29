@@ -99,23 +99,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:abf62ff507153810659113e4bcda12d20e6f260ae79e88a607c634ec0f86de1c`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Source-complete endpoint-constrained IV ravulizumab PK/free-C5 ODE reconstruction for the Ortiz 2024 CHAMPION-NMOSD PK/PD paper. The public article reports week-50 Cmax/Ctrough and free-C5 inhibition but not the NONMEM control stream or patient-level data, so this model reproduces public table and endpoint results while marking hidden PopPK covariate analysis source-limited.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

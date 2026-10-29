@@ -30,8 +30,9 @@ export QSPQUEST_EXECUTABLE="$(cd ../qspquest && pwd)/target/release/qspquest"
 ```
 
 The first engine build can take several minutes. Keep this environment active and
-run the examples from `qspquest-models/`. Retain this library checkout: installing
-the loader alone does not install its catalog or model archives.
+run the examples from `qspquest-models/`. The Python distribution also bundles the
+catalog and model archives; an installed wheel needs no library checkout and uses
+its bundled library when `--library` is omitted.
 An installed matching QSPQuest Python binding also runs simulations without
 `QSPQUEST_EXECUTABLE`. Only [fitting workflows](tutorials/library-fitting.md)
 require that binding; browsing archives and CLI simulation do not.
@@ -99,7 +100,7 @@ codes, JSON errors and R environment selection.
 
 ## Sources and reuse
 
-Model guides explain scientific scope and link source attribution and evidence.
+Model guides describe inputs, outputs and scientific scope.
 [Source notices](SOURCE_NOTICE.md), [NOTICE](NOTICE) and model-specific notices
 describe reuse terms. Ubi-owned contributions use [Apache-2.0](LICENSE); additional
 scientific sources retain their attributed terms.

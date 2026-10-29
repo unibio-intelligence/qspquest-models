@@ -35,7 +35,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
             shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
             path = root / "models/qspquest_diffdose_2026_idr_benchmark/0.3.0/results/untreated/qspquest.csv.gz"
             path.unlink()
-            with self.assertRaisesRegex(AssertionError, "invalid result file"):
+            with self.assertRaisesRegex(ValueError, "invalid result file"):
                 self.verifier().verify(root)
 
     def test_source_archive_index_cannot_hide_a_stale_archive_hash(self):
@@ -46,7 +46,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
             index = json.loads(path.read_text())
             index["models"][0]["omex_sha256"] = "0" * 64
             path.write_text(json.dumps(index))
-            with self.assertRaisesRegex(AssertionError, "source catalog mismatch"):
+            with self.assertRaisesRegex(ValueError, "source catalog mismatch"):
                 self.verifier().verify(root)
 
     def test_recomputed_outer_hash_cannot_hide_changed_native_member(self):

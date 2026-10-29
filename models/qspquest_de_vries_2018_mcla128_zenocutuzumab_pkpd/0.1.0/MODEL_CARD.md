@@ -309,23 +309,6 @@ Physical units have not been independently checked for this execution profile.
 
 **5 experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:f6f639ecfd4a9d4000be00e2c10e184be1709a7073a539ae1c5fe8fded5a409d`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Translational bispecific-antibody PK/PD model for MCLA-128/zenocutuzumab, combining a two-compartment parallel linear/nonlinear PK model, allometric scaling to mice, JIMT-1 xenograft tumor-growth pharmacodynamics, and human q3wk dose/receptor-occupancy predictions.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

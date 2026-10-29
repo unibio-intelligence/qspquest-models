@@ -103,23 +103,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:f05b950404c8943c085bb129eda2f473f245fbcca94d65529a0790dd4b4a3aa9`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Source-complete fixed-effect ODE reconstruction of the Pasquiers et al. 2025 real-world rituximab PK/PD model in ANCA-associated vasculitis. Runtime includes two-compartment rituximab PK, indirect gammaglobulin turnover inhibited by rituximab, and the Bensalem/Friberg ANCA production-blood feedback model. Exact API anchors replay the public article and supplement tables; dynamic regimen scenarios attach paper final-model simulation endpoints as overlays. Exact 1000-virtual-patient Monolix parity is source-limited because random-effect draws, patient data, and source simulation outputs are not public.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

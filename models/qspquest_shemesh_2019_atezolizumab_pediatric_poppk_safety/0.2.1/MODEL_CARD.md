@@ -105,10 +105,7 @@ The names retain the source conventions. A unit label of `1` means this executio
 uses numerical source values; a unit-looking column name alone does not establish physical units.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Result qualification
-
-No numerical reference is recorded for this archive version. The complete JSON retains its archive digest, model/request identity, time/side grid, output units and qualification scope.
-Inspect those fields before interpreting a result; reproducible execution availability does not establish physical, biological, fitting or clinical qualification.
+This version has no independent numerical reference.
 
 ## Interpretation and limits
 
@@ -117,23 +114,6 @@ Physical units have not been independently checked for this execution profile.
 
 Native quantities carry declared source units for parameters, states, definitions, outputs and administrations. Complete model dimensions, numerical equivalence and physical interpretation remain unqualified.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:b1ba9d45d9e999e83b35f0ea3bfa6f8babc8dc1aa6e4e6fe79579fc892868a68`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Deterministic implementation of the published Shemesh 2019 pediatric/young-adult two-compartment IV-infusion PopPK fixed effects and covariate equations, with exact Tables 1-3 anchors, Figure 2 dynamic comparisons, and separate digitized population/safety diagnostics.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Archive qualification record](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

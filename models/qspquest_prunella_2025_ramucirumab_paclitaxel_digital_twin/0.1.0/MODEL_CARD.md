@@ -13,29 +13,6 @@ Physical units have not been independently checked for this execution profile.
 
 **7 experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `inspection_only`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:702d9cc756fe06623d71a9321d7c8d5228e74a85c24014e5a48447873f436698`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Individual-level reconstruction of the published ramucirumab/paclitaxel tumor-angiogenesis ODE model. Population KM parity is source-limited because the article/SI provide survival targets and algorithms but not the author SimBiology project, seeds, or final virtual-patient table.
-
-No experiments in this version can currently run through the library loader.
-The source files are available for inspection, but a simulation command would fail.
-
-[Choose a runnable model](../../../MODEL_CATALOG.md) or inspect the
-[unavailable experiment details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

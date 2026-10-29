@@ -249,23 +249,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:5d680e3b8eadfb4b5fa54ae8738cf713a25358493aefc3712dfc6aaeee64416e`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Fixed-effect ODE reconstruction of the Choi et al. 2025 denosumab SB16 PopPK/PD model: SC first-order absorption, two-compartment QSS target-mediated disposition against RANKL, and indirect-response lumbar spine BMD turnover. Curated scenarios are typical-subject projections. Population distributions, source-figure reproduction and fitting remain incomplete; historical scalar replays are disabled reference records.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

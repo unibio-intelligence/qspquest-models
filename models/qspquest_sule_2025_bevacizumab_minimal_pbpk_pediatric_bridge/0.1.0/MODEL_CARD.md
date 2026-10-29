@@ -113,23 +113,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:56294f7a3fdb2d59a1268be34695aa288e7d91cd0cfbe194b1b007d212b61d0e`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Reduced public-parameter ODE reconstruction of Sule et al.'s Simcyp V22 minimal PBPK bevacizumab adult-to-pediatric bridge. The runtime carries the paper's published physicochemical/FcRn/distribution/clearance parameters and dose-driven central/peripheral drug amounts, while exact validation replays the public Table I, Table II, and SI Table S1-S3 exposure anchors.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

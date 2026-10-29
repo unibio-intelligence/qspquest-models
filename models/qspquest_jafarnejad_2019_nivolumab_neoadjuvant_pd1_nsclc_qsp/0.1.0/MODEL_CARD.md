@@ -143,23 +143,6 @@ The original stored CSV may omit states; the starter reference includes the prim
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
 Physical units have not been independently checked for this execution profile.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:3e24080a2605234ad10a60971f2fa88d32bcebf1bcc480b762275e9724944e09`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Reduced, source-auditable runtime for Jafarnejad et al. 2019 neoadjuvant anti-PD-1 QSP in resectable NSCLC. The source supplement provides the full SBML model inventory with 55 species, 172 parameters, 92 reactions, 53 rules, and 10 event assignment rows. This platform model preserves exact source anchors and a compact nivolumab/checkpoint/tumor-response ODE; it is not a full import of every SBML reaction or event.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

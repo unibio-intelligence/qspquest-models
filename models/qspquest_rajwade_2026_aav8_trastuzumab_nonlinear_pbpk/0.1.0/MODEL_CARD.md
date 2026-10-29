@@ -653,23 +653,6 @@ Outside this version’s scope:
 - error model/covariance
 - clinical dose selection
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:55055efe1971a2bfbda6d23c1b9c496ef322937f5ecbf2f779e8544f85c733d6`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Mouse systems model linking an IV AAV8 dose to tissue vector genomes, intracellular transduction, secreted trastuzumab, whole-body antibody distribution, FcRn salvage, and vector/antibody immunogenicity losses.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

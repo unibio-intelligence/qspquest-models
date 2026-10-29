@@ -134,23 +134,6 @@ Outside this version’s scope:
 - named target/cargo efficacy
 - immune signaling/tumor killing/toxicity
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:1544d154fb20da5535fe0b4a58abea014f45e13bf622f48a8ad111d083f3dce6`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Explores how systemic closure, tumor-gate abundance and affinity, gate-assisted opening, tumor retention, cargo-receptor affinity, and dose combine to create a local-versus-systemic receptor-occupancy window.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)
