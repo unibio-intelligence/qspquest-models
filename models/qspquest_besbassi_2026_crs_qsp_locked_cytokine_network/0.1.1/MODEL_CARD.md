@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -43,7 +43,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `state__Cdrug_nM` | Drug concentration driving immune activation | `nM` |
 | `state__Tact_cells_ul` | Activated T cells | `cells/uL` |
@@ -69,7 +69,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 11 outputs and 11 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `AUC_IL6_pg_h_ml` | `pg*h/mL` |
 | `Cdrug_nM` | `nM` |
@@ -96,66 +96,19 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Result qualification
-
-No numerical reference is recorded for this archive version. The complete JSON retains its archive digest, model/request identity, time/side grid, output units and qualification scope.
-Inspect those fields before interpreting a result; reproducible execution availability does not establish physical, biological, fitting or clinical qualification.
+No reference result is stored for this version.
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
 Source-backed output identities. Returned native units and source display labels remain distinct; an undeclared compartment is not inferred.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:be0bdb9d00f586ccda07015bfe857637e43a7a85b7a645053016bcf5a9555269`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Full public 11-state ODE reconstruction of the bioRxiv CRS QSP model linking drug PK, T-cell activation, macrophage-gated STAT3 IL-6 feedback, and cytokine dynamics across blinatumomab, TGN1412, OKT3, and tocilizumab rescue.
-
-<details>
-<summary>Output identities</summary>
-
-Explicit source-backed output identities; null compartments remain undeclared. These labels do not establish complete publication fidelity, fitting, clinical validation or current-engine qualification.
-
-Returned quantities retain actual native units; source display labels do not convert numerical values or establish physical dimensions.
-
-Packaged scientific/model.json state descriptions and scientific/equations.json derived outputs; exact source hashes and JSON pointers are bound in output_semantic_curation.
-
-| Readout | Analyte identifier | Compartment identifier | Returned native unit | Archive source label |
-| --- | --- | --- | --- | --- |
-| `AUC_IL6_pg_h_ml` | `interleukin_6` | `undeclared` | `1` | `pg*h/mL` |
-| `Cdrug_nM` | `modeled_drug` | `undeclared` | `1` | `nM` |
-| `IFNg_pg_ml` | `interferon_gamma` | `undeclared` | `1` | `pg/mL` |
-| `IL10_pg_ml` | `interleukin_10` | `undeclared` | `1` | `pg/mL` |
-| `IL1b_pg_ml` | `interleukin_1_beta` | `undeclared` | `1` | `pg/mL` |
-| `IL6_pg_ml` | `interleukin_6` | `undeclared` | `1` | `pg/mL` |
-| `TNFa_pg_ml` | `tumor_necrosis_factor_alpha` | `undeclared` | `1` | `pg/mL` |
-| `Tact_cells_ul` | `activated_t_cells` | `undeclared` | `1` | `cells/uL` |
-| `Tcyt_cells_ul` | `cytokine_producing_t_cells` | `undeclared` | `1` | `cells/uL` |
-| `Texh_cells_ul` | `exhausted_t_cells` | `undeclared` | `1` | `cells/uL` |
-| `Trest_cells_ul` | `resting_t_cells` | `undeclared` | `1` | `cells/uL` |
-
-Inspect the same declarations using `model.output_semantics`. An undeclared identity is `None`; it is not inferred from the readout name.
-
-</details>
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Archive qualification record](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

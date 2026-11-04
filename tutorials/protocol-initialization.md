@@ -9,33 +9,27 @@ run the included complete example:
 PYTHONPATH=. python3 tutorials/protocol_initialization.py
 ```
 
-The example uses the supplied model archive and catalog. It does not require an
-engine executable or network access. Expected output is the verified declaration
-followed by `Verified 13 archived initialization clocks and 4 explicit reference
+It needs no engine or network access. It prints the declaration and ends with
+`Verified 13 archived initialization clocks and 4 explicit reference
 denominators; equilibrium and physical qualification are not asserted.`
 
-`model.protocol_initialization` returns a copy of the hash-bound source
-declaration. The catalog pins its file bytes; the SDK checks model/version,
-archive/native-model identity, the exact scenario inventory, original start
-quantities and initial override counts, and each normalization's native readout
-expression. An absent declaration returns `None`; it does not establish a policy
-from output names. A changed checksum or scenario must be resolved before loading.
+`model.protocol_initialization` returns the source's declared start times and
+percentage definitions, after checking that they match the model. If nothing is
+declared it returns `None`; do not guess the policy from output names.
 
-The selected ICM AAV scenario starts at −1000 h and administers its first dose
-at 0 h. Starting parameter changes apply from initialization; a change intended
-only at dosing belongs at that boundary. The declared no-dose target scenario
-starts at −504 h and has `intervention_time: null`. A negative clock or a scenario
-name does not establish equilibrium: convergence needs separate evidence.
+The ICM AAV scenario starts at −1000 h and gives its first dose at 0 h. A
+parameter change made at the start applies from −1000 h; to change something only
+at dosing, apply it at 0 h. The no-dose target scenario starts at −504 h and has
+`intervention_time: null`. Starting early does not guarantee that the system has
+reached steady state; that needs a separate check.
 
-The four TargetX percentage readouts divide 100 times the indicated free-target
-state by a named baseline parameter. Their `declared_reference_input` basis
-uses that input, including explicit overrides. Transport changes alone do not
-automatically redefine the denominator from a trajectory sample. Native unit
-`1` remains a source coordinate; friendly labels do not qualify physical units.
+The four TargetX percentage readouts are 100 × free target ÷ a named baseline
+parameter; this `declared_reference_input` basis follows any override of that
+parameter. Changing transport does not recompute it from the simulation. Unit
+`1` is not a checked physical unit, whatever the label says.
 
-Literal initial states are independently declared inputs. Changing a receptor
-total parameter alone does not recompute the corresponding free-receptor initial
-value. Choose a coupled stored scenario or provide the intended initials
-explicitly. After modifying a protocol, inspect the engine's prepared initial
-values and actual input phases as well as this original source declaration.
-Historical preset evidence does not qualify the modified request.
+Starting states are separate inputs. Changing a receptor-total parameter alone
+does not recompute the free-receptor starting value. Use a stored scenario that
+sets both, or set the starting values yourself. After changing a protocol, check
+the starting values and input timing the engine actually used. Stored results
+for the original preset do not cover your change.

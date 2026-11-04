@@ -18,7 +18,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
     def test_complete_versioned_inventory_preserves_source_only_and_stored_evidence_scope(self):
         result = self.verifier().verify(ROOT)
         self.assertEqual((result["archives"], result["stored_preset_evidence_cases"],
-                          result["selected_stored_preset_evidence_cases"]), (81, 647, 607))
+                          result["selected_stored_preset_evidence_cases"]), (90, 647, 525))
         self.assertEqual(result["current_engine_qualification"], "not_assessed")
         self.assertFalse(result["publication_ready"])
         self.assertEqual(result["fitting_native_identity"], "not_assessed")
@@ -35,7 +35,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
             shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
             path = root / "models/qspquest_diffdose_2026_idr_benchmark/0.3.0/results/untreated/qspquest.csv.gz"
             path.unlink()
-            with self.assertRaisesRegex(AssertionError, "invalid result file"):
+            with self.assertRaisesRegex(ValueError, "invalid result file"):
                 self.verifier().verify(root)
 
     def test_source_archive_index_cannot_hide_a_stale_archive_hash(self):
@@ -46,7 +46,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
             index = json.loads(path.read_text())
             index["models"][0]["omex_sha256"] = "0" * 64
             path.write_text(json.dumps(index))
-            with self.assertRaisesRegex(AssertionError, "source catalog mismatch"):
+            with self.assertRaisesRegex(ValueError, "source catalog mismatch"):
                 self.verifier().verify(root)
 
     def test_recomputed_outer_hash_cannot_hide_changed_native_member(self):
@@ -105,8 +105,8 @@ class ReleaseBoundaryTests(unittest.TestCase):
         library = Library(ROOT)
         rows = library.list_source_executions()
         self.assertEqual(len(rows), 65)
-        selected = {'qspquest_serkland_2025_rituximab_ms_pkpd': ('0.3.0', 3),
-                    'qspquest_besbassi_2026_crs_qsp_locked_cytokine_network': ('0.1.1', 5),
+        selected = {'qspquest_serkland_2025_rituximab_ms_pkpd': ('0.3.1', 3),
+                    'qspquest_besbassi_2026_crs_qsp_locked_cytokine_network': ('0.1.2', 5),
                     'qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety': ('0.2.1', 16)}
         for row in rows:
             self.assertEqual(row['current_engine_qualification'], 'not_assessed')

@@ -1,0 +1,42 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca",
+  "model_version": "0.1.1",
+  "omex_sha256": "c38e8ab0a963070c7dcb61434a8adae2a43e570d01d3748308dbbfd0072ef787",
+  "cases": [],
+  "source_scenarios": [
+    "stathis-dose-0p1-exponential-probe",
+    "stathis-dose-0p2-exponential-probe",
+    "stathis-dose-0p4-exponential-probe",
+    "stathis-dose-0p7-exponential-probe",
+    "stathis-dose-0p8-exponential-probe",
+    "stathis-dose-1p0-exponential-probe",
+    "stathis-dose-1p4-exponential-probe",
+    "stathis-dose-1p8-exponential-probe",
+    "stathis-exploratory-calibrated-dose-0p1-joint-table4",
+    "stathis-exploratory-calibrated-dose-0p2-joint-table4",
+    "stathis-exploratory-calibrated-dose-0p4-joint-table4",
+    "stathis-exploratory-calibrated-dose-0p7-joint-table4",
+    "stathis-exploratory-calibrated-dose-0p8-joint-table4",
+    "stathis-exploratory-calibrated-dose-1p0-joint-table4",
+    "stathis-exploratory-calibrated-dose-1p4-joint-table4",
+    "stathis-exploratory-calibrated-dose-1p8-joint-table4",
+    "stathis-table-exact-anchor"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false,
+  "scope": "Versioned execution inputs; scientific source and native equations are unchanged. Complete release qualification is not assessed.",
+  "archive_source_members_preserved": true,
+  "changed_members": [
+    "index.json",
+    "native/scenarios/stathis-dose-0p1-exponential-probe.json",
+    "native/scenarios/stathis-dose-0p2-exponential-probe.json",
+    "native/scenarios/stathis-dose-0p4-exponential-probe.json",
+    "native/scenarios/stathis-dose-0p7-exponential-probe.json",
+    "native/scenarios/stathis-dose-1p4-exponential-probe.json",
+    "native/scenarios/stathis-exploratory-calibrated-dose-0p1-joint-table4.json",
+    "native/scenarios/stathis-exploratory-calibrated-dose-0p2-joint-table4.json",
+    "native/scenarios/stathis-exploratory-calibrated-dose-0p4-joint-table4.json"
+  ]
+}

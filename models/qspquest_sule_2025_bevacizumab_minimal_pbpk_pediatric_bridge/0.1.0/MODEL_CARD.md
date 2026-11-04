@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 <details>
 <summary>Browse all 13 runnable experiments</summary>
@@ -56,7 +56,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `state__central_mg` | Bevacizumab amount in the central compartment | `mg` |
 | `state__peripheral_mg` | Bevacizumab amount in the peripheral compartment | `mg` |
@@ -81,7 +81,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 0 outputs and 3 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `state__auc_mg_h_l` | `mg*h/L` |
 | `state__central_mg` | `mg` |
@@ -89,8 +89,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -103,33 +103,16 @@ The `female-6-12y-10mgkg-q2w-ode-endpoint-overlay` starter has **766 rows**. Ref
 | `state__peripheral_mg` | 0 | 0 (0 h, post) | 102.357 (2744 h, post) | 23.8565 |
 | `state__auc_mg_h_l` | 0 | 0 (0 h, post) | 153133 (3024 h, pre) | 153133 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:56294f7a3fdb2d59a1268be34695aa288e7d91cd0cfbe194b1b007d212b61d0e`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Reduced public-parameter ODE reconstruction of Sule et al.'s Simcyp V22 minimal PBPK bevacizumab adult-to-pediatric bridge. The runtime carries the paper's published physicochemical/FcRn/distribution/clearance parameters and dose-driven central/peripheral drug amounts, while exact validation replays the public Table I, Table II, and SI Table S1-S3 exposure anchors.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

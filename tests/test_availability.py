@@ -29,10 +29,17 @@ class AvailabilityTests(unittest.TestCase):
             model = load_archive(path, expected_sha256=record.archive_sha256)
             self.assertEqual(model.availability, record.describe())
             card = path.with_name('MODEL_CARD.md').read_text()
-            for field in ('availability', 'publication_review', 'unit_status', 'evidence_id'):
-                self.assertIn('`' + getattr(record, field) + '`', card)
+            self.assertIn('Version ' + record.archive_version, card)
+            self.assertNotIn('Evidence identity:', card)
+            self.assertNotIn('Publication review:', card)
+            if record.availability == 'inspection_only':
+                self.assertIn('Inspection only', card)
+            elif record.availability == 'source_replay':
+                self.assertIn('Source replay available', card)
+            else:
+                self.assertIn('Runnable', card)
         self.assertEqual(self.library.availability_counts['selected_model_identities'], 72)
-        self.assertEqual(self.library.availability_counts['versioned_archives'], 81)
+        self.assertEqual(self.library.availability_counts['versioned_archives'], 90)
         self.assertEqual(self.library.availability_counts['selected_preset_requests'], 644)
 
     def test_rat_serotype_receptor_pools_are_coupled_across_all_execution_surfaces(self):
@@ -249,7 +256,7 @@ class AvailabilityTests(unittest.TestCase):
             self.assertNotEqual(row['availability']['unit_status'], 'physically_qualified')
             card = (ROOT / row['archive']).with_name('MODEL_CARD.md').read_text()
             self.assertIn('Source family: `' + family.family_id + '`', card)
-            self.assertIn('does not establish physical units', card)
+            self.assertIn('the link alone does not check their units or results', card)
         source = json.loads((ROOT / 'source-catalog.json').read_text())
         verify_source_families(source, self.library.catalog)
         reduced = next(r for r in source['models'] if r.get('omex', {}).get('model_id') == family.members[1].model_id)

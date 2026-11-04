@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -39,14 +39,14 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `source__CL_L_day` | Retained reference clearance, constant source value | `L/day` |
 | `source__target_average_concentration_mg_l` | Retained dashboard concentration target, constant source value | `mg/L` |
 | `source__dashboard_dose_mg` | Retained dashboard dose, constant source value | `mg` |
 
-**This starter is a source replay.** Its retained values are constant or short source checks.
-No qualified dynamic simulation is available in this version. Zero drug states do not demonstrate a treatment response.
+**This starter is a source replay.** Its values are stored constants or short checks from the source.
+This version cannot simulate over time. Zero drug states do not show a treatment response.
 
 Python exports this small table by default. To export every output and biological state:
 
@@ -67,7 +67,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 0 outputs and 5 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `state__AUC_mg_day_L` | `mg*day/L` |
 | `state__central_mg` | `mg` |
@@ -77,8 +77,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -91,35 +91,18 @@ The `dashboard-exact-replay` starter has **2 rows**. Reference checkpoints:
 | `source__target_average_concentration_mg_l` | 5.4 | 5.4 (0 d, post) | 5.4 (0 d, post) | 5.4 |
 | `source__dashboard_dose_mg` | 150 | 150 (0 d, post) | 150 (0 d, post) | 150 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
-**2 experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).
+**2 experiments cannot be simulated.** See [why they are unavailable](INTERCHANGE_AND_EXECUTION_HOLDS.json).
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `source_replay`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:7719bd9400ee5fb0e3fda29a88c1371dedb86ec59781d43303a895e5ff159cc0`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Dashboard-layer ODE/exact replay for Thomas et al. 2025 risankizumab model-informed precision dosing in psoriasis. The executable PK uses the Suleiman 2019 two-compartment risankizumab PopPK model selected by Thomas, and the dashboard interval rule is replayed from the Thomas paper.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

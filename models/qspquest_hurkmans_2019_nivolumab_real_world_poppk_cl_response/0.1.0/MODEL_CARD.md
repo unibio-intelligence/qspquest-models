@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -46,7 +46,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `central_conc_mg_L` | Nivolumab concentration in the central compartment | `1` |
 
@@ -69,7 +69,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 215 outputs and 5 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `BSA_m2` | `1` |
 | `BSA_ref_m2` | `1` |
@@ -294,8 +294,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -306,33 +306,16 @@ The `typical-male-3mgkg-q2w-dynamic-probe` starter has **181 rows**. Reference c
 | --- | ---: | --- | --- | ---: |
 | `central_conc_mg_L` | 0 | 0 (0 d, post) | 127.514 (154.042 d, pre) | 58.7931 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:78123a5e3dbff6e36fffd55d4c814f2fe9988ed4ecdbd5c2eeffe899fd6ccc8c`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Two-compartment nivolumab population PK model from Hurkmans et al. 2019 with gender, BSA, and albumin clearance covariates, plus exact replay of the main-text and supplementary tables used to evaluate real-world clearance-response.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

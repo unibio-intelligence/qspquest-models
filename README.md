@@ -6,10 +6,9 @@ fixed experimental conditions.
 **[Choose a model](MODEL_CATALOG.md)** · **[Run the example below](#run-a-rituximab-model)** ·
 **[Preview a stored result](tutorials/understand-results.md#read-a-stored-result)**
 
-The library contains 72 selected model identities: 62 offer dynamic starters, 5 offer source replays and 5 are inspection only.
-Its 81 archived versions provide 644 selected preset requests and 2 fit-ready models.
-Counts describe execution availability. Physical units and current-engine scientific qualification
-remain separate; these examples use fixed parameters and do not support clinical dose selection.
+The library contains 72 models: 62 simulate, 5 replay published results and 5 are for inspection only. Together they offer 644 ready-to-run experiments.
+Examples use fixed parameters, their units have not been independently checked,
+and they are not for choosing clinical doses.
 
 ## Setup
 
@@ -30,21 +29,22 @@ export QSPQUEST_EXECUTABLE="$(cd ../qspquest && pwd)/target/release/qspquest"
 ```
 
 The first engine build can take several minutes. Keep this environment active and
-run the examples from `qspquest-models/`. Retain this library checkout: installing
-the loader alone does not install its catalog or model archives.
-An installed matching QSPQuest Python binding also runs simulations without
-`QSPQUEST_EXECUTABLE`. Only [fitting workflows](tutorials/library-fitting.md)
-require that binding; browsing archives and CLI simulation do not.
+run the examples from `qspquest-models/`. The Python distribution also bundles the
+catalog and model archives; an installed wheel needs no library checkout and uses
+its bundled library when `--library` is omitted.
+[Fitting](tutorials/library-fitting.md) also needs the matching QSPQuest Python
+binding; simulation does not. With the binding installed, `QSPQUEST_EXECUTABLE`
+is optional.
 
 ## Run a rituximab model
 
 Explore circulating rituximab and CD19+ B cells over 200 days with a fixed typical
-parameter set. The starting administration is represented by an initial
-concentration rather than repeat-dose events.
+parameter set. The 1000 mg dose is set as a starting concentration (dose/V);
+repeat doses are not modeled.
 
 ```sh
 python -m qspquest_models --library . \
-  --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.0 \
+  --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.1 \
   --scenario population-typical-1000mg-full-ode --csv rituximab-cli.csv
 python -m qspquest_models --verify-table rituximab-cli.csv
 ```
@@ -54,10 +54,9 @@ contains **201 data rows** with time, event side, rituximab concentration and
 B-cell readouts. CD19+ B cells start at **199.57** and end near **8.70521**.
 Choose a new filename when rerunning: exports never replace existing files.
 
-The selected model returns `mg/L` and `[cell]/mm3`, but its complete dimensional
-and numerical qualification remains pending. An `unknown_unit` error indicates
-an engine without count-unit support; build the matching engine. Read the
-[model guide](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.0/MODEL_CARD.md)
+Outputs are in `mg/L` and `[cell]/mm3`; these units have not yet been independently
+checked. If you see `unknown_unit`, build the matching engine. Read the
+[model guide](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.1/MODEL_CARD.md)
 and [output interpretation](tutorials/understand-results.md) before using values
 quantitatively.
 
@@ -99,9 +98,7 @@ codes, JSON errors and R environment selection.
 
 ## Sources and reuse
 
-Model guides explain scientific scope and link source attribution and evidence.
-[Source notices](SOURCE_NOTICE.md), [NOTICE](NOTICE) and model-specific notices
-describe reuse terms. Ubi-owned contributions use [Apache-2.0](LICENSE); additional
-scientific sources retain their attributed terms.
+Ubi-owned contributions use [Apache-2.0](LICENSE). Published sources keep their own
+terms; see [source notices](SOURCE_NOTICE.md), [NOTICE](NOTICE) and each model's notice.
 [Independent validation](https://github.com/unibio-intelligence/qspquest-validation)
-reports comparisons and their tested scope.
+shows how results from a tested QSPQuest build compare with reference engines.

@@ -21,8 +21,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -39,7 +39,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `aav_blood_vg_per_uL` | Vector genomes in blood | `1` |
 | `mab_plasma_ug_mL` | Expressed antibody concentration in plasma | `1` |
@@ -64,7 +64,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 6 outputs and 545 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `aav_blood_vg_per_uL` | `1` |
 | `liver_vector_genomes_per_ng_dna` | `1` |
@@ -620,8 +620,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -634,15 +634,15 @@ The `figure3_5_iv_aav8_1e11_vg_mouse` starter has **87 rows**. Reference checkpo
 | `mab_plasma_ug_mL` | 0 | 0 (0 h, post) | 166.492 (258 h, post) | 80.3328 |
 | `mab_brain_interstitial_nM` | 0 | 0 (0 h, post) | 2.79443 (270 h, post) | 1.66335 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
 545-state AAV expression and nonlinear antibody PBPK topology, disclosed source parameter anchors and curated source-reconstruction readouts.
 
@@ -653,23 +653,6 @@ Outside this version’s scope:
 - error model/covariance
 - clinical dose selection
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:55055efe1971a2bfbda6d23c1b9c496ef322937f5ecbf2f779e8544f85c733d6`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Mouse systems model linking an IV AAV8 dose to tissue vector genomes, intracellular transduction, secreted trastuzumab, whole-body antibody distribution, FcRn salvage, and vector/antibody immunogenicity losses.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

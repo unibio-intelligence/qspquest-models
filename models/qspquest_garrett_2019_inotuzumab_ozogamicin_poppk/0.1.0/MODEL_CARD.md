@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -49,7 +49,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `central_concentration_ng_mL` | Inotuzumab ozogamicin concentration | `1` |
 | `CL_total_L_h` | Total clearance including its time-dependent component | `1` |
@@ -73,7 +73,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 149 outputs and 4 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `CL1_L_h` | `1` |
 | `CL2_L_h` | `1` |
@@ -231,8 +231,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -244,33 +244,16 @@ The `fractionated-all-three-cycle-dynamic-smoke` starter has **87 rows**. Refere
 | `central_concentration_ng_mL` | 0 | 0 (0 h, post) | 265.806 (1177 h, pre) | 66.9616 |
 | `CL_total_L_h` | 0.402281 | 0.0333416 (1848 h, pre) | 0.402281 (0 h, post) | 0.0333416 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:9f43417863ba529e4b497bc5092e50c886469ef4846ddf5c972cdaf71a9a9760`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Paper-derived fixed-effect implementation of the Garrett et al. 2019 inotuzumab ozogamicin population PK model in relapsed/refractory B-cell ALL and NHL. The runtime implements the two-compartment structural PK model with linear plus exponentially declining time-dependent clearance, BBSA/BLSTPB/disease/rituximab covariate equations, and exact scalar checks from Table 1, Table 2, the supplement NONMEM control stream, and simulation text. It does not reproduce NONMEM M3 censored-data likelihood, interindividual effects, covariance, BLQ handling, or VPC envelopes.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

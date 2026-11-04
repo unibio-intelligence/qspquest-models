@@ -26,8 +26,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 <details>
 <summary>Browse all 13 runnable experiments</summary>
@@ -59,7 +59,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `mab_plasma_ug_mL` | Antibody concentration in plasma | `1` |
 | `mab_isf_nM` | Antibody concentration in brain interstitial fluid | `1` |
@@ -71,7 +71,7 @@ Python exports this small table by default. To export every output and biologica
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 ```
 
-Use the checksum-pinned Python archive command above for this version. The library CLI selects the current default archive.
+Use the checksum-pinned Python command above for this version; the CLI runs only the default version.
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
 Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
@@ -80,7 +80,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 27 outputs and 725 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `aav_blood_Vg_mL` | `1` |
 | `aav_brain_Vg_mL` | `1` |
@@ -837,8 +837,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -851,15 +851,15 @@ The `figure3_mab_iv_100mgkg` starter has **253 rows**. Reference checkpoints:
 | `mab_isf_nM` | 0 | -1.21368e-29 (-154 h, post) | 21.6721 (32 h, post) | 0.762937 |
 | `target_isf_pct_baseline` | 0 | 0 (-1000 h, post) | 99.5489 (-742 h, post) | 90.1056 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
 Generalized source equation templates expanded into 725 ODE states, disclosed fixed/final parameters and route/serotype mechanisms.
 
@@ -869,23 +869,6 @@ Outside this version’s scope:
 - animal-level fits
 - residual model/covariance
 - bit-for-bit sponsor predictions
-
-<details>
-<summary>Availability and qualification</summary>
-
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:28f144300edd88b3321dc300056e7310cd5448e842790c3861701b3ea7dd250d`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Mechanistic rat QSP linking IV, intracisterna-magna, or intrastriatal AAV delivery to whole-body vector disposition, transgene-derived anti-TargetX antibody, FcRn-aware protein distribution, and free TargetX in plasma, brain ISF, and CSF.
 
 ## Serotype initialization
 
@@ -897,7 +880,7 @@ Source numerical coordinates; physical-unit qualification and author-control-str
 
 ## Source equation interpretations
 
-Archive SHA-256: `fdd64ce17b2e6c3e69e2c0c0ca50e6c166a36e39857ac5acbba6aa13e11be5c5`. Coverage: selected disclosed choices; complete source qualification remains open.
+Archive SHA-256: `fdd64ce17b2e6c3e69e2c0c0ca50e6c166a36e39857ac5acbba6aa13e11be5c5`. This lists selected choices only, not a full check against the paper.
 
 DOI 10.1007/s10928-026-10051-w; supplementary equations 134-136, printed page 32.
 
@@ -920,49 +903,9 @@ All four coefficients use unit 1, values from 0 through 1 and the retained sourc
 
 Version 2.1.0 uses four explicit modality names. The ambiguous sigma_bbb and sigma_bcsfb inputs and their prior native source_symbol_872/source_symbol_873 names are unavailable. To reproduce a shared barrier perturbation, set both sigma_vector_bbb and sigma_protein_bbb, and both sigma_vector_bcsfb and sigma_protein_bcsfb. For a historical calculation use its exact pinned archive and request.
 
-<details>
-<summary>Output identities</summary>
+## Reference
 
-Analyte and compartment identities of the archived source readout expressions. Aggregate labels describe only the states included by those expressions. CSF aliases denote cisterna magna, not all CSF compartments.
-
-Returned native units remain 1. Friendly name suffixes and semantic identities do not establish physical units, conserved mass or complete source reproduction.
-
-Liu 2026, DOI 10.1007/s10928-026-10051-w, Figure 2 and Table 1, pages 5–10.
-
-| Readout | Analyte identifier | Compartment identifier | Returned native unit | Archive source label |
-| --- | --- | --- | --- | --- |
-| `aav_blood_Vg_mL` | `aav_vector` | `central_blood` | `1` | `1` |
-| `aav_brain_Vg_mL` | `aav_vector` | `brain_tissue_aggregate` | `1` | `1` |
-| `aav_heart_Vg_mL` | `aav_vector` | `heart_tissue_aggregate` | `1` | `1` |
-| `aav_liver_Vg_mL` | `aav_vector` | `liver_tissue_aggregate` | `1` | `1` |
-| `aav_lung_Vg_mL` | `aav_vector` | `lung_tissue_aggregate` | `1` | `1` |
-| `blood_aav_Vg_uL` | `aav_vector` | `central_blood` | `1` | `1` |
-| `mab_brain_nM` | `anti_targetx_mab` | `brain_tissue_aggregate` | `1` | `1` |
-| `mab_csf_nM` | `anti_targetx_mab` | `cisterna_magna_csf` | `1` | `1` |
-| `mab_csf_ug_mL` | `anti_targetx_mab` | `cisterna_magna_csf` | `1` | `1` |
-| `mab_heart_nM` | `anti_targetx_mab` | `heart_tissue_aggregate` | `1` | `1` |
-| `mab_isf_nM` | `anti_targetx_mab` | `brain_interstitial_fluid` | `1` | `1` |
-| `mab_isf_ug_mL` | `anti_targetx_mab` | `brain_interstitial_fluid` | `1` | `1` |
-| `mab_liver_nM` | `anti_targetx_mab` | `liver_tissue_aggregate` | `1` | `1` |
-| `mab_lung_nM` | `anti_targetx_mab` | `lung_tissue_aggregate` | `1` | `1` |
-| `mab_plasma_nM` | `anti_targetx_mab` | `central_plasma` | `1` | `1` |
-| `mab_plasma_ug_mL` | `anti_targetx_mab` | `central_plasma` | `1` | `1` |
-| `target_csf_pM` | `targetx` | `cisterna_magna_csf` | `1` | `1` |
-| `target_csf_pct_baseline` | `targetx` | `cisterna_magna_csf` | `1` | `1` |
-| `target_isf_pM` | `targetx` | `brain_interstitial_fluid` | `1` | `1` |
-| `target_isf_pct_baseline` | `targetx` | `brain_interstitial_fluid` | `1` | `1` |
-| `target_lv_pM` | `targetx` | `brain_lateral_ventricle_csf` | `1` | `1` |
-| `target_lv_pct_reported_baseline` | `targetx` | `brain_lateral_ventricle_csf` | `1` | `1` |
-| `target_plasma_pM` | `targetx` | `central_plasma` | `1` | `1` |
-| `target_plasma_pct_baseline` | `targetx` | `central_plasma` | `1` | `1` |
-
-Inspect the same declarations using `model.output_semantics`. An undeclared identity is `None`; it is not inferred from the readout name.
-
-</details>
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)
 
 ## Initialization and percentage denominators
 

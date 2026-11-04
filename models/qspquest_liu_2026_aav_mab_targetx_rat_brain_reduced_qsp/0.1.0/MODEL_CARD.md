@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -45,7 +45,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `mab_plasma_nM` | Antibody concentration in plasma | `1` |
 | `mab_isf_nM` | Antibody concentration in brain interstitial fluid | `1` |
@@ -70,7 +70,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 58 outputs and 18 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `aav5_kd_copy_L` | `1` |
 | `aav5_kdeg_h` | `1` |
@@ -151,8 +151,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -165,40 +165,23 @@ The `icm-1e12-aav9` starter has **57 rows**. Reference checkpoints:
 | `mab_isf_nM` | 0 | 0 (0 h, post) | 39.7369 (1344 h, pre) | 39.7369 |
 | `target_isf_pct_baseline` | 100 | 46.751 (1344 h, pre) | 100 (0 h, post) | 46.751 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
-
-<details>
-<summary>Availability and qualification</summary>
-
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:34f6bbbb648eac0479252818812a214f190efcad71d83c4859e2912855df039b`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
+Units have not been independently checked for this version.
 
 ## Related representations
 
 Declared representation: `reduced`. Source family: `liu-2026-aav-mab-targetx-rat-brain`; paper: `10.1007/s10928-026-10051-w`.
 Canonical full representation: [qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp](../../../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.1.2/MODEL_CARD.md), version `2.1.2`.
 Related representations: [qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp](../../../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.1.2/MODEL_CARD.md) (`full`, `2.1.2`), [qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp](../../../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp/0.1.0/MODEL_CARD.md) (`reduced`, `0.1.0`).
-This relationship does not establish physical units, publication reproduction or current-engine qualification.
+Related models represent the same paper; the link alone does not check their units or results.
 
-## What you can explore
+## Reference
 
-Source-limited 18-state reduced QSP reconstruction of Liu et al. 2026. It links effective transient/durable AAV transduction, delayed anti-TargetX mAb expression, and the published TargetX binding and turnover constants in plasma, brain ISF, and CSF. It is not the authors' full 136-equation, 14-tissue PBPK/QSP model.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

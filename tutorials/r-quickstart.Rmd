@@ -42,4 +42,4 @@ source_result <- models$run(source_model, 'lower_exposure')
 stopifnot(length(source_result$times) > 0)
 ```
 
-This example requires the matching QSPQuest engine with `[cell]` count-unit support. The selected model uses `mg/L` rituximab concentration and `[cell]/mm3` CD19-positive cell density; its dimensional and numerical qualification remain pending. An `unknown_unit` error means the engine build lacks count-unit support: install the matching engine rather than substituting unit `1`.
+This example needs the matching QSPQuest engine, which supports the `[cell]` count unit. The model reports rituximab concentration in `mg/L` and CD19+ cell density in `[cell]/mm3`; these units have not yet been independently checked. An `unknown_unit` error means your engine lacks `[cell]` support: install the matching engine instead of changing the unit to `1`.

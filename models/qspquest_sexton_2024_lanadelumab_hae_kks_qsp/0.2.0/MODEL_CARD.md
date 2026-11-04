@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -39,7 +39,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `PK_Conc_Central_in_nM` | Lanadelumab concentration in the central compartment | `nmol/L` |
 | `CS_RO_BDKRB2` | Bradykinin B2 receptor occupancy | `1` |
@@ -64,7 +64,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 14 outputs and 61 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `AA_Fold_profile` | `1` |
 | `CS_FXII_in_plasma_ngml` | `1` |
@@ -144,8 +144,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -158,52 +158,16 @@ The `first-virtual-patient-150mg-q2w-author-replay` starter has **147 rows**. Re
 | `CS_RO_BDKRB2` | 0 | 0 (0 h, post) | 68.4571 (2530.4 h, pre) | 48.888 |
 | `CS_prct_HK2Chain` | 0 | 0 (0 h, post) | 82.2145 (2530.4 h, pre) | 73.0344 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Only the PK dose and concentration coordinates described above carry explicit physical units. Other coordinates and complete model dimensions remain unqualified.
+Only the PK dose and concentrations above declare physical units; no units have been independently checked.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:83fd13ea949eaae58ee806789ab754f72f700eb4ade14b5b5bcce57d65151a0a`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Full runtime translation of the Sexton 2024 hereditary angioedema plasma kallikrein-kinin system model for lanadelumab. The model uses the public supplementary R/C source code: 61 states, 82 base biochemical parameters, sampled virtual-patient PK and acute-attack forcing, and SC 150 mg q2w dosing.
-
-<details>
-<summary>Output identities</summary>
-
-Lanadelumab depot amount and central plasma mass and molar concentrations.
-
-Depot amount uses mg; central mass concentration uses ug/mL (numerically mg/L); the molar output uses nmol/L (nM) and the source molecular mass. Other contact-system coordinates retain unqualified source numerical values.
-
-Retained source PK amount, central concentration and molecular-mass definitions.
-
-| Readout | Analyte identifier | Compartment identifier | Returned native unit | Archive source label |
-| --- | --- | --- | --- | --- |
-| `PK_Amount_SC` | `lanadelumab` | `subcutaneous_depot` | `mg` | `mg` |
-| `PK_Conc_Central_in_nM` | `lanadelumab` | `central_plasma` | `nmol/L` | `nmol/L` |
-| `PK_Conc_Central_in_ugml` | `lanadelumab` | `central_plasma` | `ug/mL` | `ug/mL` |
-
-Inspect the same declarations using `model.output_semantics`. An undeclared identity is `None`; it is not inferred from the readout name.
-
-</details>
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

@@ -28,8 +28,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -48,7 +48,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `state__Cdrug_nM` | Drug concentration driving immune activation | `nM` |
 | `state__Tact_cells_ul` | Activated T cells | `cells/uL` |
@@ -61,7 +61,7 @@ Python exports this small table by default. To export every output and biologica
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 ```
 
-Use the checksum-pinned Python archive command above for this version. The library CLI selects the current default archive.
+Use the checksum-pinned Python command above for this version; the CLI runs only the default version.
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
 Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
@@ -70,7 +70,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 0 outputs and 11 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `state__AUC_IL6_pg_h_ml` | `pg*h/mL` |
 | `state__Cdrug_nM` | `nM` |
@@ -86,8 +86,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -101,33 +101,16 @@ The `blinatumomab-28ug-day-28day-full-ode-overlay` starter has **337 rows**. Ref
 | `state__IL6_pg_ml` | 5 | 0.0891003 (10 h, post) | 111.549 (672 h, pre) | 111.549 |
 | `state__IFNg_pg_ml` | 0 | 0 (0 h, post) | 63.1761 (672 h, pre) | 63.1761 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:f2e0c99aff6b7e5b7123b03d39f5ff91b43d2f83bcef132dcbc1de8a8f53e4f2`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Full public 11-state ODE reconstruction of the bioRxiv CRS QSP model linking drug PK, T-cell activation, macrophage-gated STAT3 IL-6 feedback, and cytokine dynamics across blinatumomab, TGN1412, OKT3, and tocilizumab rescue.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

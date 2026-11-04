@@ -28,8 +28,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -46,7 +46,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `rituximab_concentration_mg_l` | Rituximab concentration | `mg/L` |
 | `cd19_cells_mm3` | CD19-positive B-cell count during depletion and recovery | `[cell]/mm3` |
@@ -57,7 +57,7 @@ Python exports this small table by default. To export every output and biologica
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 ```
 
-Use the checksum-pinned Python archive command above for this version. The library CLI selects the current default archive.
+Use the checksum-pinned Python command above for this version; the CLI runs only the default version.
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
 Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
@@ -66,7 +66,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 7 outputs and 3 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `bcell_production_cells_mm3_day` | `[cell]/(mm3.d)` |
 | `cd19_cells_mm3` | `[cell]/mm3` |
@@ -81,19 +81,16 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Result qualification
-
-No numerical reference is recorded for this archive version. The complete JSON retains its archive digest, model/request identity, time/side grid, output units and qualification scope.
-Inspect those fields before interpreting a result; reproducible execution availability does not establish physical, biological, fitting or clinical qualification.
+No reference result is stored for this version.
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
 - Interpret this as a deterministic typical-parameter trajectory, not a population distribution.
 - The starting administration is encoded as C(0) = dose/V; repeat-dose events are not represented in this released setup.
@@ -103,50 +100,6 @@ Physical units have not been independently checked for this execution profile.
 
 Source-backed output identities. Returned native units and source display labels remain distinct; an undeclared compartment is not inferred.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:06244488e67ec9ddcfdf3af1ba853d21577cacac8c1e5ac8a7384e882cb2c24d`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-- How long does circulating rituximab persist after the starting 1000 mg administration?
-- How rapidly and deeply are CD19+ B cells depleted?
-- Which clearance, drug–cell coupling, and turnover parameters shift B-cell recovery timing?
-- How does this individualized parameter set change rituximab persistence relative to the typical configuration?
-- How do the individualized depletion and turnover terms shift the depth and duration of B-cell depletion?
-- Which differences are driven by exposure and which are driven by B-cell dynamics?
-
-<details>
-<summary>Output identities</summary>
-
-Explicit source-backed output identities; null compartments remain undeclared. These labels do not establish complete publication fidelity, fitting, clinical validation or current-engine qualification.
-
-Candidate physical dimensions from pinned packaged annotations; exact current-engine preparation and independent equivalence remain pending.
-
-Packaged scientific/model.json state descriptions and scientific/equations.json derived outputs; exact source hashes and JSON pointers are bound in output_semantic_curation.
-
-| Readout | Analyte identifier | Compartment identifier | Returned native unit | Archive source label |
-| --- | --- | --- | --- | --- |
-| `bcell_production_cells_mm3_day` | `cd19_positive_b_cells` | `circulating` | `[cell]/(mm3.d)` | `[cell]/(mm3.d)` |
-| `cd19_cells_mm3` | `cd19_positive_b_cells` | `circulating` | `[cell]/mm3` | `[cell]/mm3` |
-| `initial_concentration_mg_l` | `rituximab` | `circulating` | `mg/L` | `mg/L` |
-| `linear_clearance_component_mg_l_day` | `rituximab` | `circulating` | `mg/(L.d)` | `mg/(L.d)` |
-| `rituximab_concentration_mg_l` | `rituximab` | `circulating` | `mg/L` | `mg/L` |
-| `tmdd_clearance_component_mg_l_day` | `rituximab` | `circulating` | `mg/(L.d)` | `mg/(L.d)` |
-
-Inspect the same declarations using `model.output_semantics`. An undeclared identity is `None`; it is not inferred from the readout name.
-
-</details>
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Archive qualification record](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

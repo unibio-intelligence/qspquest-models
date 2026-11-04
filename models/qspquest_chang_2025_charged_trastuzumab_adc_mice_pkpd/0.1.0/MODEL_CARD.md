@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 <details>
 <summary>Browse all 37 runnable experiments</summary>
@@ -80,7 +80,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `C_nM` | Selected analyte concentration in the tissue named by this experiment | `1` |
 | `AUC_h_nM` | Accumulated exposure to the analyte in the tissue named by this experiment | `1` |
@@ -104,7 +104,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 177 outputs and 4 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `AUC_h_nM` | `1` |
 | `C_nM` | `1` |
@@ -290,8 +290,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -303,33 +303,16 @@ The `ode-charged-liver-free-mmae-aucall-h-nm` starter has **169 rows**. Referenc
 | `C_nM` | 221 | 7.45092e-09 (168 h, pre) | 221 (0 h, post) | 7.45092e-09 |
 | `AUC_h_nM` | 0 | 0 (0 h, post) | 1540 (168 h, pre) | 1540 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:c5adb6c2d0e29424318d75788fb7447a0974f9f503a27ddaaca46019546c9166`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Reduced empirical ODE and exact endpoint replay model for Chang et al. 2025, which compared wild-type trastuzumab-vc-MMAE ADC with a +5 positively charged variant in mouse plasma, NCI-N87 and MCF-7 tumors, liver, spleen, and N87 efficacy studies. The article reports WinNonlin NCA summaries rather than a mechanistic structural PK/PD ODE; this implementation preserves every public Table 1-6 scalar as exact anchors and provides first-order exposure ODE scenarios calibrated to reported Cmax/AUC endpoints for paper-overlay validation.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

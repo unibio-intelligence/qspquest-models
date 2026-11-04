@@ -2,14 +2,12 @@
 
 Explore a mechanistic question: can local gate-assisted opening increase tumor
 cargo-receptor occupancy while retaining lower systemic occupancy?
-This independently authored model uses synthetic parameters, 11 state pools and
-existing named simulation presets. No dataset or download is required after
-installing QSPQuest and cloning the library.
+This model uses synthetic parameters, 11 state pools and named presets. No
+dataset or download is needed beyond QSPQuest and the library.
 
 The tutorial uses version **2.0.0** of `qspquest_ubi_2026_target_gated_cargo_qsp`.
-It demonstrates simulation and amount accounting, not efficacy, toxicity or
-population fitting. Numerical values use the archive's source coordinates;
-physical dimensions are not independently certified. See the
+It demonstrates simulation and amount bookkeeping, not efficacy, toxicity or
+population fitting. Units have not been independently checked. See the
 [model card](../models/qspquest_ubi_2026_target_gated_cargo_qsp/2.0.0/MODEL_CARD.md).
 
 ## Start
@@ -77,9 +75,8 @@ coordinates nmol. The zero-dose control covers 0–24 h (25 rows).
 | `leaky_systemic_gate_30nmol_iv` | Background opening rate: 0.004 → 0.04 |
 | `no_dose_homeostasis` | No dose; all construct pools start at zero |
 
-The other two named presets remain available for later exploration. These
-comparisons change mechanisms as specified by the archive, rather than fitting
-unknown parameters.
+Two more presets are available to explore later. Each comparison changes a
+mechanism as defined in the model; nothing is fitted.
 
 ```python
 scenarios = {
@@ -146,8 +143,8 @@ are more interpretable than a ratio when the denominator is zero.
 
 Sum the 11 construct pools and compare them to the archived total
 readout at every sampled time. Check nonnegativity, occupancy bounds, the
-initial dose and absence of unexpected amount increases. A small absolute
-numerical allowance of `1e-8` is used in the archive's numeric coordinates.
+initial dose and absence of unexpected amount increases. The checks allow an
+absolute error of `1e-8`.
 This reconciliation checks mapping and sampled behavior; it does not reconstruct
 a continuous clearance integral or prove the equations are biologically correct.
 
@@ -175,8 +172,8 @@ print(json.dumps(checks, indent=2))
 
 ## Export the analysis
 
-CSV files include outputs and all 11 state pools. JSON retains the archive pin,
-solver identity, exact sampling and selected scenario. Reuse the same inputs to
+CSV files include outputs and all 11 state pools. JSON also records the archive
+checksum, solver, sampling times and scenario. Reuse the same inputs to
 reproduce the figures; changed inputs need new checks.
 
 ```python

@@ -17,7 +17,7 @@ from qspquest_models import Library
 
 library = Library('.')
 print(len(library.list_models()))  # 72 identities
-model = library.load('qspquest_serkland_2025_rituximab_ms_pkpd', version='0.3.0')
+model = library.load('qspquest_serkland_2025_rituximab_ms_pkpd', version='0.3.1')
 print(model.scenario_ids)
 result = model.run('population-typical-1000mg-full-ode')
 assert len(result['times']) == 201
@@ -25,10 +25,10 @@ model.write_csv(result, 'rituximab-python.csv')
 print('Saved rituximab-python.csv and its .manifest.json with', len(result['times']), 'rows')
 ```
 
-`result` contains `times`, event `sides`, named `outputs` and `states`, units,
-archive checksum and engine identity. The CSV has 201 data rows from day 0 to day 200 with `time`, `side`,
-`rituximab_concentration_mg_l`, `cd19_cells_mm3` as the primary readouts. The [model guide](../models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.0/MODEL_CARD.md) explains the available experiments.
-[Output interpretation](understand-results.md) explains the source numerical scale and units.
+`result` contains `times`, event `sides`, and named `outputs` and `states` with
+their units. The CSV has 201 data rows from day 0 to day 200 with `time`, `side`,
+`rituximab_concentration_mg_l`, `cd19_cells_mm3` as the primary readouts. The [model guide](../models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.1/MODEL_CARD.md) explains the available experiments.
+[Understand results](understand-results.md) explains the units.
 
 ## Plot CD19+ B cells (optional)
 
@@ -47,13 +47,11 @@ plt.show()
 
 ![Stored rituximab B-cell trajectory](rituximab-bcells.svg)
 
-This preview uses the retained version 0.1.0 result. Its numerical reference
-applies to that archive and recorded execution; inspect the selected version’s
-`evidence.json` before treating a new run as qualified.
+This preview shows the stored result from version 0.1.0; it is not a check of version 0.3.1.
 
 The B-cell readout starts at 199.57 and ends near 8.70521 at day 200.
-This curve describes a fixed typical parameter set, rather than population variability
-or a recommended redosing time.
+This curve uses one typical parameter set. It does not show patient-to-patient
+variability or recommend a redosing time.
 
 ## Try a synthetic benchmark
 
@@ -76,9 +74,8 @@ for row in matches:
 
 ## Compare declared representations of a source
 
-The rat AAV/mAb source family has full and reduced representations. After setup,
-run this from the library checkout to inspect their identities without running a
-simulation:
+The rat AAV/mAb paper has a full and a reduced model. Run this from the library
+checkout to list both without running a simulation:
 
 ```bash
 python - <<'FAMILY'
@@ -100,22 +97,16 @@ FAMILY
 ```
 
 Expect the full model at version `2.1.2` with 13 presets and the reduced model at
-`0.1.0` with seven. Both point to the full model as the canonical representation.
-The hashes identify the exact archives; the unit status remains
-`source_scale_unqualified`. Read each linked model guide before selecting an
-experiment. A full representation does not establish publication reproduction,
-physical units or qualification for your engine and request.
+`0.1.0` with seven. Both list the full model as canonical, and both have unit
+status `source_scale_unqualified`. Read each model guide before choosing an
+experiment.
 
-An absent `source_family` means no relationship is declared. Do not infer one
-from a shared word in a name. If catalog verification reports a stale family pin,
-verify the package files; a newer version needs an explicitly reviewed family
-record rather than silently inheriting a previous declaration.
+A model without `source_family` has no declared relative, even if its name looks
+similar to another.
 
 Continue with [comparing experiments or changing a dose](change-inputs.md).
 For exact version selection and archive inspection, use the [technical reference](model-format.md).
 
-For reproducible edits, the [input-binding tutorial](input-bindings.md) selects an
-exact version, inspects aliases and native units, retains the binding hash and
-saves a research copy with its input provenance.
+To edit inputs reproducibly, follow the [input-binding tutorial](input-bindings.md).
 
-This example requires the matching QSPQuest engine with `[cell]` count-unit support. The selected model uses `mg/L` rituximab concentration and `[cell]/mm3` CD19-positive cell density; its dimensional and numerical qualification remain pending. An `unknown_unit` error means the engine build lacks count-unit support: install the matching engine rather than substituting unit `1`.
+This example needs the matching QSPQuest engine, which supports the `[cell]` count unit. The model reports rituximab concentration in `mg/L` and CD19+ cell density in `[cell]/mm3`; these units have not yet been independently checked. An `unknown_unit` error means your engine lacks `[cell]` support: install the matching engine instead of changing the unit to `1`.

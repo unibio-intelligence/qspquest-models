@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build browsable guides from released metadata without rewriting any archive.
 
-SOURCE_REFERENCE.md preserves the previous card. Edit scientific metadata at its
+SOURCE_REFERENCE.md contains concise source and reuse notices. Edit scientific metadata at its
 source; edit presentation here. Run from any directory after updating a release.
 """
 from pathlib import Path
@@ -41,7 +41,7 @@ def output_identity_rows(native, model):
     return result
 
 
-SOURCE_FOOTER = '[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)'
+SOURCE_FOOTER = '[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)'
 
 
 def curated_footer(card):
@@ -66,7 +66,7 @@ def source_only_candidate(evidence, index):
 
 def cli_example(current, ident, version, scenario):
     if not current:
-        return ['Use the checksum-pinned Python archive command above for this version. The library CLI selects the current default archive.', '']
+        return ['Use the checksum-pinned Python command above for this version; the CLI runs only the default version.', '']
     return ['The CLI uses the same selection (`--all-readouts` exports the complete table):', '', '```sh',
             f'python -m qspquest_models --library . --model {ident} --model-version {version} --scenario {scenario} --csv model-example-cli.csv', '```', '']
 
@@ -91,6 +91,16 @@ def reader_order(lines):
         else:
             introduction += section
     return introduction
+
+
+def minimal_card(text):
+    text = re.sub(r'<details>\s*<summary>Availability and qualification</summary>.*?</details>\s*', '', text, flags=re.S)
+    text = re.sub(r'<details>\s*<summary>Output identities</summary>.*?</details>\s*', '', text, flags=re.S)
+    text = re.sub(r'## What you can explore\n.*?(?=\n## |\Z)', '', text, flags=re.S)
+    text = re.sub(r'### Result qualification\n.*?(?=\n## |\Z)', 'No reference result is stored for this version.\n', text, flags=re.S)
+    text = re.sub(r'## Sources and technical reference\n\s*\[[^\n]+\n',
+                  '## Reference\n\n[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)\n', text, flags=re.S)
+    return re.sub(r'\n{3,}', '\n\n', text).rstrip() + '\n'
 
 
 def topic(ident):
@@ -209,14 +219,14 @@ def build():
             location = lines.index('## What you can explore')
             lines[location:location] = [
                 '## Synthetic parameter recovery', '',
-                'Complete the [fitting prerequisites](../../../tutorials/library-fitting.md#prerequisites-and-discovery) with the matching QSPQuest Python binding. The archive fixes synthetic observations, residual errors, parameter bounds, solver and convergence controls for each workflow.', '',
+                'Complete the [fitting prerequisites](../../../tutorials/library-fitting.md#prerequisites-and-discovery), including the matching QSPQuest Python binding. Each workflow fits synthetic data stored with the model, with fixed residual errors, parameter bounds and solver settings.', '',
                 '```python', 'from qspquest_models import Library',
                 f"model = Library('.').load('{ident}', version='{version}')",
                 "print([(w['id'], w['operation']) for w in model.fitting_workflows])",
                 f"fit = model.fit_workflow('{workflow}')",
                 "assert fit['checks']['passed'], fit['checks']", "print(fit['checks']['parameters'])", '```', '',
-                'A successful fixture reports converged parameter recovery within its declared absolute limits. Retain the complete native result and diagnostics. A budget-limited or nonconverged result has failed checks; inspect those diagnostics before interpreting estimates.', '',
-                'The six workflows cover three parameter starters under BDF and Rodas5P. Their scope is the exact archived synthetic recovery case. Source population reproduction, uncertainty coverage and clinical qualification require separate evidence.', '',
+                'A successful fit converges and recovers each parameter within its allowed error. If a fit runs out of budget or does not converge, its checks fail; read the diagnostics before using the estimates.', '',
+                f"The {len(fitting['workflows'])} archived workflows test recovery on synthetic data only, not the source population fit, uncertainty or clinical use. Read each workflow's solver and qualification record.", '',
             ]
         if current and row.get('source_family'):
             family = row['source_family']
@@ -227,7 +237,7 @@ def build():
             lines[location:location] = ['## Related representations', '', f"Declared representation: `{row['model_fidelity']}`. Source family: `{family['family_id']}`; paper: `{family['paper_id']}`.",
                 f"Canonical full representation: [{canonical['model_id']}](../../../models/{canonical['model_id']}/{canonical['version']}/MODEL_CARD.md), version `{canonical['version']}`.",
                 f'Related representations: {related}.',
-                'This relationship does not establish physical units, publication reproduction or current-engine qualification.', '']
+                'Related models represent the same paper; the link alone does not check their units or results.', '']
         questions = list(dict.fromkeys(q for sid in scenarios for q in experiments.get(sid, {}).get('scientific_questions', [])))
         if questions:
             lines += [f'- {q}' for q in questions[:6]] + ['']
@@ -238,7 +248,7 @@ def build():
             lines += ['## Serotype initialization', '', contract['description'], '', contract['limitation'], '', contract['scope'], '']
         if reproduction.get('source_interpretations'):
             interpretation = reproduction['source_interpretations']
-            lines += ['## Source equation interpretations', '', f"Archive SHA-256: `{interpretation['archive_sha256']}`. Coverage: selected disclosed choices; complete source qualification remains open.", '']
+            lines += ['## Source equation interpretations', '', f"Archive SHA-256: `{interpretation['archive_sha256']}`. This lists selected choices only, not a full check against the paper.", '']
             for entry in interpretation['entries']:
                 lines += [entry['source_locator'], '', entry['rationale'], '',
                           'Printed coordinates: ' + ', '.join(f'`{n}`' for n in entry['printed_coordinates']) + '.',
@@ -266,7 +276,7 @@ def build():
             else:
                 digest = read(folder / 'evidence.json')['omex_sha256']
                 lines += ['from qspquest_models import load_archive', '', 'model = load_archive(', f"    '{relative}',", f"    expected_sha256='{digest}',", ')']
-            lines += [f"result = model.run('{first}')", "model.write_csv(result, 'model-example-python.csv')", "print(len(result['times']), 'rows')", '```', '', '### Choose an experiment', '', 'A preset is a named experiment with fixed inputs. Summary/table replays expose retained', 'values; they are not new parameter fits or necessarily a changing biological trajectory.', '', '| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |', '| --- | --- | --- | ---: |']
+            lines += [f"result = model.run('{first}')", "model.write_csv(result, 'model-example-python.csv')", "print(len(result['times']), 'rows')", '```', '', '### Choose an experiment', '', 'A preset is a named experiment with fixed inputs. Summary and table replays return stored', 'values; they are not new fits and may not change over time.', '', '| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |', '| --- | --- | --- | ---: |']
             if len(scenarios) > 12:
                 lines[-2:-2] = ['<details>', f'<summary>Browse all {len(scenarios)} runnable experiments</summary>', '']
             for sid, req in requests.items():
@@ -278,7 +288,7 @@ def build():
             if len(scenarios) > 12:
                 lines += ['', '</details>']
             req = requests[first]
-            lines += ['', '## Inputs and outputs', '', 'Each experiment supplies the parameters, initial state, dosing schedule and sampling times.', '[Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.', '', '`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes', 'samples before (`pre`) and after (`post`) a dosing or other discrete event.', 'State columns use `state__`; retained constant source values use `source__`.', '', '| Primary column | Meaning | Archive unit label |', '| --- | --- | --- |']
+            lines += ['', '## Inputs and outputs', '', 'Each experiment supplies the parameters, initial state, dosing schedule and sampling times.', '[Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.', '', '`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes', 'samples before (`pre`) and after (`post`) a dosing or other discrete event.', 'State columns use `state__`; retained constant source values use `source__`.', '', '| Primary column | Meaning | Unit |', '| --- | --- | --- |']
             source_parameters = source_model.get('parameters', {})
             for output in profile['readouts']:
                 kind, name = output['kind'], output['name']
@@ -286,11 +296,11 @@ def build():
                 unit = source_parameters[name]['unit'] if kind == 'source_parameter' else native[{'output': 'outputs', 'state': 'states'}[kind]][name]['unit']
                 lines += [f"| `{prefix}{name}` | {cell(output['meaning'])} | `{unit}` |"]
             if profile['availability'] == 'source_replay':
-                lines += ['', '**This starter is a source replay.** Its retained values are constant or short source checks.', 'No qualified dynamic simulation is available in this version. Zero drug states do not demonstrate a treatment response.']
-            lines += ['', 'Python exports this small table by default. To export every output and biological state:', '', '```python', "model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)", '```', '', *cli_example(current, ident, version, first), 'In R, `qspquest_data_frame(result)` returns the same primary columns.', 'Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.', '[R setup and examples](../../../tutorials/r-quickstart.md).', '', '<details>', f"<summary>Technical inventory: {len(native['outputs'])} outputs and {len(native['states'])} states</summary>", '', '| Technical column | Archive unit label |', '| --- | --- |']
+                lines += ['', '**This starter is a source replay.** Its values are stored constants or short checks from the source.', 'This version cannot simulate over time. Zero drug states do not show a treatment response.']
+            lines += ['', 'Python exports this small table by default. To export every output and biological state:', '', '```python', "model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)", '```', '', *cli_example(current, ident, version, first), 'In R, `qspquest_data_frame(result)` returns the same primary columns.', 'Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.', '[R setup and examples](../../../tutorials/r-quickstart.md).', '', '<details>', f"<summary>Technical inventory: {len(native['outputs'])} outputs and {len(native['states'])} states</summary>", '', '| Technical column | Unit |', '| --- | --- |']
             for kind, prefix in [('outputs', ''), ('states', 'state__')]:
                 lines += [f"| `{prefix}{name}` | `{out['unit']}` |" for name, out in native[kind].items()]
-            lines += ['', '</details>', '', 'The names retain the source conventions. A unit label of `1` means this execution profile', 'uses numerical source values; a unit-looking column name alone does not establish physical units.', '[How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.', '']
+            lines += ['', '</details>', '', 'Column names follow the source paper. A unit of `1` means the engine uses the source\'s number', 'as-is, without a physical unit or conversion; do not infer a unit from the column name.', '[How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.', '']
             preview_path = folder / 'starter-preview.json'
             if source_only:
                 if preview_path.exists():
@@ -308,12 +318,12 @@ def build():
                     low = f"{column['minimum']:.6g} ({column['minimum_time']:g} {preview['time_unit']}, {column['minimum_side']})"
                     high = f"{column['maximum']:.6g} ({column['maximum_time']:g} {preview['time_unit']}, {column['maximum_side']})"
                     lines += [f"| `{column['name']}` | {column['first']:.6g} | {low} | {high} | {column['last']:.6g} |"]
-                lines += ['', 'These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.', '[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.', 'The original stored CSV may omit states; the starter reference includes the primary readouts above.', '[Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).', '']
+                lines += ['', 'These rounded values help you recognize the expected result; they are not pass/fail tolerances.', 'The [full starter reference](starter-preview.json) was produced by running this archive.', 'The original stored CSV may omit states.', '[Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).', '']
             else:
                 raise ValueError(f'Missing starter preview for {ident}; run scripts/validate_starters.py --write-previews')
         else:
-            lines += ['No experiments in this version can currently run through the library loader.', 'The source files are available for inspection, but a simulation command would fail.', '', '[Choose a runnable model](../../../MODEL_CATALOG.md) or inspect the', '[unavailable experiment details](INTERCHANGE_AND_EXECUTION_HOLDS.json).', '']
-        unit_limit = ('Only the PK dose and concentration coordinates described above carry explicit physical units. Other coordinates and complete model dimensions remain unqualified.' if native.get('dose_contracts') else 'Physical units have not been independently checked for this execution profile.')
+            lines += ['This version cannot run simulations.', 'You can inspect its source files, but a simulation command will fail.', '', '[Choose a runnable model](../../../MODEL_CATALOG.md) or inspect the', '[unavailable experiment details](INTERCHANGE_AND_EXECUTION_HOLDS.json).', '']
+        unit_limit = ('Only the PK dose and concentrations above declare physical units; no units have been independently checked.' if native.get('dose_contracts') else 'Units have not been independently checked for this version.')
         lines += ['## Interpretation and limits', '', 'These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.', unit_limit, '']
         guards = list(dict.fromkeys(g for sid in scenarios for g in experiments.get(sid, {}).get('interpretation_guardrails', [])))
         lines += [f'- {g}' for g in guards[:6]]
@@ -326,15 +336,15 @@ def build():
         if omitted:
             lines += ['', 'Outside this version’s scope:', ''] + [f'- {x}' for x in omitted]
         if held:
-            lines += ['', f'**{len(held)} experiments are unavailable for simulation.** See the [hold details](INTERCHANGE_AND_EXECUTION_HOLDS.json).']
+            lines += ['', f'**{len(held)} experiments cannot be simulated.** See [why they are unavailable](INTERCHANGE_AND_EXECUTION_HOLDS.json).']
         footer = SOURCE_FOOTER.replace('Stored result evidence', 'Archive qualification record') if source_only else SOURCE_FOOTER
-        lines += ['', '## Sources and technical reference', '', footer, '']
+        lines += ['', '## Reference', '', footer, '']
         if preserved:
             lines += [preserved, '']
-        (folder / 'MODEL_CARD.md').write_text(re.sub(r'\n{3,}', '\n\n', '\n'.join(reader_order(lines))))
+        (folder / 'MODEL_CARD.md').write_text(minimal_card(re.sub(r'\n{3,}', '\n\n', '\n'.join(reader_order(lines)))))
         if current:
             listing.append((topic(ident), title, folder.relative_to(ROOT).as_posix(), summaries[ident], status))
-    lines = ['# Choose a model', '', '[Start here](README.md) · [Python](tutorials/python-quickstart.md) · [R](tutorials/r-quickstart.md) · [Understand results](tutorials/understand-results.md)', '', f"Browse {cohort['selected_model_identities']} selected model identities below, grouped by topic. Use your browser’s Find command to search for a drug,", 'disease or mechanism. Each model guide lists its experiments, outputs and runnable status.', f"{cohort['selected_availability'].get('dynamic', 0)} selected identities offer dynamic starters; {cohort['selected_availability'].get('source_replay', 0)} offer source replays; {cohort['selected_availability'].get('inspection_only', 0)} are inspection only.", f"The archive inventory contains {cohort['versioned_archives']} versions; selected versions provide {cohort['selected_preset_requests']} preset requests and {cohort['selected_fit_ready']} fit-ready models.", '', '## Good places to start', '', '| Your question | Start with |', '| --- | --- |', f'| How do I run and plot a published PK/PD model? | [Rituximab and B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/{selected["qspquest_serkland_2025_rituximab_ms_pkpd"]["version"]}/MODEL_CARD.md) |', '| How does local gating affect tumor versus systemic occupancy? | [Target-gated cargo walkthrough](tutorials/qsp-gated-cargo.md) |', '| How does exposure change biomarker turnover? | [Small turnover benchmark](models/qspquest_diffdose_2026_idr_benchmark/0.1.0/MODEL_CARD.md) |', '', 'PK describes drug exposure, PD describes drug effects, PBPK describes distribution through', 'physiological compartments, and QSP describes interacting biological mechanisms.', 'PopPK in a model name describes its source; these library examples run fixed parameters, not population fits.', '', '## Browse by topic', '']
+    lines = ['# Choose a model', '', '[Start here](README.md) · [Python](tutorials/python-quickstart.md) · [R](tutorials/r-quickstart.md) · [Understand results](tutorials/understand-results.md)', '', f"Browse {cohort['selected_model_identities']} models below, grouped by topic. Use your browser’s Find command to search for a drug,", 'disease or mechanism. Each model guide lists its experiments and outputs.', f"{cohort['selected_availability'].get('dynamic', 0)} models simulate, {cohort['selected_availability'].get('source_replay', 0)} replay published results and {cohort['selected_availability'].get('inspection_only', 0)} are for inspection only.", '', '## Good places to start', '', '| Your question | Start with |', '| --- | --- |', f'| How do I run and plot a published PK/PD model? | [Rituximab and B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/{selected["qspquest_serkland_2025_rituximab_ms_pkpd"]["version"]}/MODEL_CARD.md) |', '| How does local gating affect tumor versus systemic occupancy? | [Target-gated cargo walkthrough](tutorials/qsp-gated-cargo.md) |', '| How does exposure change biomarker turnover? | [Small turnover benchmark](models/qspquest_diffdose_2026_idr_benchmark/0.1.0/MODEL_CARD.md) |', '', 'PK describes drug exposure, PD describes drug effects, PBPK describes distribution through', 'physiological compartments, and QSP describes interacting biological mechanisms.', 'PopPK in a model name describes its source; these library examples run fixed parameters, not population fits.', '', '## Browse by topic', '']
     categories = sorted({entry[0] for entry in listing})
     for category in categories:
         anchor = re.sub(r'[^\w\s-]', '', category.lower()).replace(' ', '-')
@@ -343,21 +353,19 @@ def build():
         lines += ['', f'## {category}', '', '| Model | What it describes | Availability |', '| --- | --- | --- |']
         for _, title, path, description, status in sorted(x for x in listing if x[0] == category):
             lines += [f'| [{cell(title)}]({path}/MODEL_CARD.md) | {cell(description)} | {status} |']
-    lines += ['', '## Search from the terminal', '', '```sh', 'python -m qspquest_models --library . --search rituximab --runnable', '```', '', 'Use `--format json` for machine-readable discovery. [Technical reference](tutorials/model-format.md)', 'covers version selection and the underlying archive catalogs.', '']
+    lines += ['', '## Search from the terminal', '', '```sh', 'python -m qspquest_models --library . --search rituximab --runnable', '```', '', 'Add `--format json` for machine-readable output. The [technical reference](tutorials/model-format.md)', 'covers version selection and archive details.', '']
     (ROOT / 'MODEL_CATALOG.md').write_text('\n'.join(lines))
     readme = ROOT / 'README.md'
     text = readme.read_text()
     start = text.index('The library contains ')
     end = text.index('\n\n## Setup', start)
-    summary = (f"The library contains {cohort['selected_model_identities']} selected model identities: "
-               f"{cohort['selected_availability'].get('dynamic', 0)} offer dynamic starters, "
-               f"{cohort['selected_availability'].get('source_replay', 0)} offer source replays and "
-               f"{cohort['selected_availability'].get('inspection_only', 0)} are inspection only.\n"
-               f"Its {cohort['versioned_archives']} archived versions provide "
-               f"{cohort['selected_preset_requests']} selected preset requests and "
-               f"{cohort['selected_fit_ready']} fit-ready models.\n"
-               "Counts describe execution availability. Physical units and current-engine scientific qualification\n"
-               "remain separate; these examples use fixed parameters and do not support clinical dose selection.")
+    summary = (f"The library contains {cohort['selected_model_identities']} models: "
+               f"{cohort['selected_availability'].get('dynamic', 0)} simulate, "
+               f"{cohort['selected_availability'].get('source_replay', 0)} replay published results and "
+               f"{cohort['selected_availability'].get('inspection_only', 0)} are for inspection only. "
+               f"Together they offer {cohort['selected_preset_requests']} ready-to-run experiments.\n"
+               "Examples use fixed parameters, their units have not been independently checked,\n"
+               "and they are not for choosing clinical doses.")
     readme.write_text(text[:start] + summary + text[end:])
     print(f'Wrote {len(listing)} catalog entries and {len(library.availability_records)} model guides.')
 

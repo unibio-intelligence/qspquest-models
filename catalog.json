@@ -19,20 +19,20 @@
       "publication_status": "pending"
     },
     {
-      "archive": "models/qspquest_diffdose_2026_idr_benchmark/0.3.0/model.omex",
+      "archive": "models/qspquest_diffdose_2026_idr_benchmark/0.3.1/model.omex",
       "description": "How does repeated exposure accelerate biomarker removal?",
       "fit_ready": true,
       "fitting_supported": true,
       "id": "qspquest_diffdose_2026_idr_benchmark",
       "license": "Apache-2.0",
       "name": "Drug-stimulated biomarker turnover",
-      "omex_sha256": "34dd0d01af9ef951fa84969ce4d008c860ac7abe55ae701b0866b80a8be426c0",
+      "omex_sha256": "e8ecac8677fb6b4685483d9f1063df370869754688d849b30c27aa335d822922",
       "scenario_ids": [
         "untreated",
         "lower_exposure",
         "higher_exposure"
       ],
-      "version": "0.3.0",
+      "version": "0.3.1",
       "publication_status": "pending"
     },
     {
@@ -59,7 +59,7 @@
       "fitting_supported": false,
       "id": "qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp",
       "license": "Apache-2.0",
-      "name": "Whole-body AAV\u2013anti-TargetX rat brain QSP",
+      "name": "Whole-body AAV–anti-TargetX rat brain QSP",
       "omex_sha256": "15d69ba86b5a021f6716b1a5d0ce1735bc0effed5d4d9a6601e9a3742171d8c7",
       "scenario_ids": [
         "source_structure_no_dose_smoke",
@@ -291,12 +291,12 @@
         }
       ],
       "archive": "models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/2.0.1/model.omex",
-      "description": "Links per-cell CD3\u00d75T4 trimer formation to resting-to-activated-to-effector T-cell dynamics and three-stage apoptotic tumor-cell loss across drug affinity, concentration, antigen density, and effector-to-target ratio.",
+      "description": "Links per-cell CD3×5T4 trimer formation to resting-to-activated-to-effector T-cell dynamics and three-stage apoptotic tumor-cell loss across drug affinity, concentration, antigen density, and effector-to-target ratio.",
       "fit_ready": false,
       "fitting_supported": false,
       "id": "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp",
       "license": "Apache-2.0",
-      "name": "CD3\u00d75T4 In Vitro Activation and Cytotoxicity QSP",
+      "name": "CD3×5T4 In Vitro Activation and Cytotoxicity QSP",
       "omex_sha256": "461cca3ff38dcd97abf1fe3ebaf37f50ccb62580a4b200d66473560c491f498a",
       "scenario_ids": [
         "mda_mb_468_untreated_et4",
@@ -411,14 +411,14 @@
       "version": "0.1.0"
     },
     {
-      "archive": "models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.1/model.omex",
+      "archive": "models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.2/model.omex",
       "fit_ready": false,
       "fitting_supported": false,
       "id": "qspquest_besbassi_2026_crs_qsp_locked_cytokine_network",
       "interchange": "sbml_sedml_omex",
       "license": "Apache-2.0 with retained CC-BY-4.0 source terms",
       "name": "Besbassi 2026 CRS QSP locked cytokine network",
-      "omex_sha256": "1327b3c34af54f0a350d0760d2e40a09febfa067e6efb58f75f5c02212d98f81",
+      "omex_sha256": "2e536a1f97b143f6b4077d0c134ddfd02007dbfc5cac3471e2a97c19a3978292",
       "publication_status": "pending",
       "scenario_ids": [
         "source-tables-exact-anchor",
@@ -436,7 +436,7 @@
         "tgn1412-tocilizumab-6h-rescue-overlay"
       ],
       "unavailable_scenario_ids": [],
-      "version": "0.1.1"
+      "version": "0.1.2"
     },
     {
       "archive": "models/qspquest_brekkan_2024_certolizumab_ada_hidden_markov/0.1.0/model.omex",
@@ -550,14 +550,14 @@
       "version": "0.1.0"
     },
     {
-      "archive": "models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.1.0/model.omex",
+      "archive": "models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.1.1/model.omex",
       "fit_ready": false,
       "fitting_supported": false,
       "id": "qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd",
       "interchange": "sbml_sedml_omex",
       "license": "Apache-2.0 with retained CC-BY-4.0 source terms",
       "name": "Chang 2025 Positively Charged Trastuzumab-vc-MMAE ADC Mouse PK/PD",
-      "omex_sha256": "9e49cb643fe356f4ba8e4b3a8323f1de241c210a34d61bb375e2249f8f580dbb",
+      "omex_sha256": "101fb33900c088f0e03392b3cb4a174236345121d961de6ee1484558839a7c4f",
       "publication_status": "pending",
       "scenario_ids": [
         "source-identity-and-design",
@@ -639,7 +639,7 @@
         "ode-wt-spleen-free-mmae-aucall-h-nm"
       ],
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "archive": "models/qspquest_chen_2025_trastuzumab_aide_pe24_sphere_pkpd/0.1.0/model.omex",
@@ -1205,14 +1205,14 @@
       "version": "0.1.0"
     },
     {
-      "archive": "models/qspquest_frank_2023_sutimlimab_cad_pkpd/0.1.0/model.omex",
+      "archive": "models/qspquest_frank_2023_sutimlimab_cad_pkpd/0.1.1/model.omex",
       "fit_ready": false,
       "fitting_supported": false,
       "id": "qspquest_frank_2023_sutimlimab_cad_pkpd",
       "interchange": "sbml_sedml_omex",
       "license": "Apache-2.0 with retained CC-BY-4.0 source terms",
       "name": "Frank 2023 sutimlimab CAD PK/PD",
-      "omex_sha256": "a79f1b654aab748505b496f6e579310548ab27adc7392b80c98a82c2de1904c2",
+      "omex_sha256": "2dbbb0b650b549e693896d0fbadd703ec36b7a3abd9b979a268da79bf396f608",
       "publication_status": "pending",
       "scenario_ids": [
         "article-supplement-source-anchor",
@@ -1228,7 +1228,7 @@
         "approved-all-source-limited-population"
       ],
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "archive": "models/qspquest_garrett_2019_inotuzumab_ozogamicin_poppk/0.1.0/model.omex",
@@ -1271,14 +1271,14 @@
       "version": "0.1.0"
     },
     {
-      "archive": "models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.1.0/model.omex",
+      "archive": "models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.1.1/model.omex",
       "fit_ready": false,
       "fitting_supported": false,
       "id": "qspquest_gu_2017_bay1093884_tfpi_qss_tmdd",
       "interchange": "sbml_sedml_omex",
       "license": "Apache-2.0 with retained CC-BY-4.0 source terms",
       "name": "Gu 2017 BAY 1093884 TFPI QSS-TMDD and Exploratory SC/Human PK/PD",
-      "omex_sha256": "ead0a065a9944f7e54554c26bfc611849e863576ac15ddc8071a02c1bb92ad42",
+      "omex_sha256": "34ad5e17d06c7da8f6c15640117e8accbcedce003ebda2a660a5ce5b695a2c10",
       "publication_status": "pending",
       "scenario_ids": [
         "gu-2017-exact-table-parameter-anchor",
@@ -1298,7 +1298,7 @@
         "gu-2017-exploratory-calibrated-human-0p4mgkg-endpoints"
       ],
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "archive": "models/qspquest_gupta_2025_erenumab_immune_tolerance_pkpd/0.1.0/model.omex",
@@ -1690,14 +1690,14 @@
       "model_fidelity": "reduced"
     },
     {
-      "archive": "models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.1.0/model.omex",
+      "archive": "models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.1.1/model.omex",
       "fit_ready": false,
       "fitting_supported": false,
       "id": "qspquest_lobet_2026_panitumumab_body_composition_poppk",
       "interchange": "sbml_sedml_omex",
       "license": "Apache-2.0 with retained CC-BY-4.0 source terms",
       "name": "Lobet 2026 panitumumab body-composition PopPK",
-      "omex_sha256": "a2d56b907079b5574035d2a2519814835d97295b261fbf54591436023a79800d",
+      "omex_sha256": "48e0781128729f725ab18b6252cf78c57d393dbbb8ee53957fa29d7fc09638a2",
       "publication_status": "pending",
       "scenario_ids": [
         "exact-source-anchor",
@@ -1709,7 +1709,7 @@
         "ffcd0904-typical-3mgkg-q2w-ode-overlay"
       ],
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "archive": "models/qspquest_markovic_2024_vedolizumab_clearance_remission_poppk/0.1.0/model.omex",
@@ -2195,14 +2195,14 @@
       "version": "0.1.0"
     },
     {
-      "archive": "models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.0/model.omex",
+      "archive": "models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.1/model.omex",
       "fit_ready": true,
       "fitting_supported": true,
       "id": "qspquest_serkland_2025_rituximab_ms_pkpd",
       "interchange": "sbml_sedml_omex",
       "license": "Apache-2.0 with retained CC-BY-4.0 source terms",
-      "name": "Rituximab exposure\u2013CD19+ B-cell dynamics",
-      "omex_sha256": "4554f94deaa1d3a8676c9cc4a447994357794b01d1fb934a5f36086382f709da",
+      "name": "Rituximab exposure–CD19+ B-cell dynamics",
+      "omex_sha256": "ac27287c9248dfe61199b0a4a120a42980bb5cd3f53d801fb5cbadbc6bdf55cf",
       "publication_status": "pending",
       "scenario_ids": [
         "exact-monolix-archive-anchor",
@@ -2216,7 +2216,7 @@
         "subject1-saem-full-ode-overlay"
       ],
       "unavailable_scenario_ids": [],
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "archive": "models/qspquest_sexton_2024_lanadelumab_hae_kks_qsp/0.2.0/model.omex",
@@ -2289,14 +2289,14 @@
       "version": "0.2.1"
     },
     {
-      "archive": "models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.1.0/model.omex",
+      "archive": "models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.1.1/model.omex",
       "fit_ready": false,
       "fitting_supported": false,
       "id": "qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca",
       "interchange": "sbml_sedml_omex",
       "license": "Apache-2.0 with retained CC-BY-4.0 source terms",
       "name": "Stathis 2018 IMGN529 NCA Replay and Exploratory Dose-Level PK Surrogate",
-      "omex_sha256": "6cc51e679c77270f4881e1e86747e89ff79b1c555ec807155d23c51721519197",
+      "omex_sha256": "c38e8ab0a963070c7dcb61434a8adae2a43e570d01d3748308dbbfd0072ef787",
       "publication_status": "pending",
       "scenario_ids": [
         "stathis-table-exact-anchor",
@@ -2338,7 +2338,7 @@
         "stathis-exploratory-calibrated-dose-1p8-joint-table4"
       ],
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "archive": "models/qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge/0.1.0/model.omex",
@@ -2410,14 +2410,14 @@
       "version": "0.1.0"
     },
     {
-      "archive": "models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.1.0/model.omex",
+      "archive": "models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.1.1/model.omex",
       "fit_ready": false,
       "fitting_supported": false,
       "id": "qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd",
       "interchange": "sbml_sedml_omex",
       "license": "Apache-2.0 with retained CC-BY-4.0 source terms",
       "name": "Vu 2017 Erenumab QSS TMDD and CIDBF PK/PD Model",
-      "omex_sha256": "d82b41ccfaf1747814251d3d79dec10533683744c5b040d04b048f47f677a4d7",
+      "omex_sha256": "2fb5323c725dc73b25022826afdd676c0dfbbb58fbb163b8897feb4d4a24be44",
       "publication_status": "pending",
       "scenario_ids": [
         "table3-pk-parameter-estimates",
@@ -2451,7 +2451,7 @@
         "sc-70mg-q4w-75kg-s8-dynamic"
       ],
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "archive": "models/qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk/0.1.0/model.omex",

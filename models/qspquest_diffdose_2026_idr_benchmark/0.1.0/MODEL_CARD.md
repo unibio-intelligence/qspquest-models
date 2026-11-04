@@ -26,8 +26,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -44,7 +44,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `drug_exposure` | Drug exposure driving the biomarker effect | `1` |
 | `biomarker` | Biomarker level under indirect turnover | `1` |
@@ -55,7 +55,7 @@ Python exports this small table by default. To export every output and biologica
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 ```
 
-Use the checksum-pinned Python archive command above for this version. The library CLI selects the current default archive.
+Use the checksum-pinned Python command above for this version; the CLI runs only the default version.
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
 Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
@@ -64,7 +64,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 3 outputs and 2 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `C` | `1` |
 | `biomarker` | `1` |
@@ -74,8 +74,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -87,15 +87,15 @@ The `lower_exposure` starter has **421 rows**. Reference checkpoints:
 | `drug_exposure` | 0 | 0 (0 d, post) | 0.839754 (41.1 d, pre) | 0.540291 |
 | `biomarker` | 46 | 9.82515 (41.8 d, post) | 46 (0 d, post) | 9.82737 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
 Normalized benchmark coordinates; V is a benchmark volume ratio and doses must not be called mg.
 
@@ -107,23 +107,6 @@ Outside this version’s scope:
 - clinical doses
 - population fitting
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:35520f8a823f7cfcbbcc2059b99123a8f67b9cfdf6b17128809bbce620a82abc`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-How does repeated exposure accelerate biomarker removal?
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

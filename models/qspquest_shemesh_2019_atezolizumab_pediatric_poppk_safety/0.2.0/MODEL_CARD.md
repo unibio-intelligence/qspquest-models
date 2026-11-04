@@ -28,8 +28,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 <details>
 <summary>Browse all 16 runnable experiments</summary>
@@ -64,7 +64,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `C_central_ug_mL` | Atezolizumab concentration | `ug/mL` |
 | `AUC_ug_day_mL` | Accumulated central drug exposure | `ug*day/mL` |
@@ -75,7 +75,7 @@ Python exports this small table by default. To export every output and biologica
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 ```
 
-Use the checksum-pinned Python archive command above for this version. The library CLI selects the current default archive.
+Use the checksum-pinned Python command above for this version; the CLI runs only the default version.
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
 Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
@@ -84,7 +84,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 9 outputs and 4 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `AUC_ug_day_mL` | `ug*day/mL` |
 | `CL_L_day` | `L/day` |
@@ -102,39 +102,19 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Result qualification
-
-No numerical reference is recorded for this archive version. The complete JSON retains its archive digest, model/request identity, time/side grid, output units and qualification scope.
-Inspect those fields before interpreting a result; reproducible execution availability does not establish physical, biological, fitting or clinical qualification.
+No reference result is stored for this version.
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
 Native quantities carry declared source units for parameters, states, definitions, outputs and administrations. Complete model dimensions, numerical equivalence and physical interpretation remain unqualified.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:242056ecf529d104e1191eaba94bd306db6c4c61815cbb50bd432bca0317cb8d`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Deterministic implementation of the published Shemesh 2019 pediatric/young-adult two-compartment IV-infusion PopPK fixed effects and covariate equations, with exact Tables 1-3 anchors, Figure 2 dynamic comparisons, and separate digitized population/safety diagnostics.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Archive qualification record](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

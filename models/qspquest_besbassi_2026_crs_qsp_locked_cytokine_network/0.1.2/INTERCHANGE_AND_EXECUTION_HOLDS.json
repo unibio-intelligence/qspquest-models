@@ -1,0 +1,15 @@
+{
+  "interchange": "sbml_sedml_omex",
+  "source_scenarios": [
+    "blinatumomab-28ug-day-28day-full-ode-overlay",
+    "okt3-5mg-full-ode-overlay",
+    "source-tables-exact-anchor",
+    "tgn1412-0p1mgkg-full-ode-overlay",
+    "tgn1412-tocilizumab-6h-rescue-overlay"
+  ],
+  "qualified_scenario_ids": [],
+  "unavailable_scenario_ids": [],
+  "parser_or_preparation_holds": [],
+  "current_engine_qualification": "not_assessed",
+  "scope": "Preset requests are supplied for exploratory execution; no numerical qualification is recorded for this archive version."
+}

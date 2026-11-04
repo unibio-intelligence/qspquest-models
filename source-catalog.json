@@ -192,11 +192,11 @@
       "id": "qspquest-besbassi-2026-crs-qsp-locked-cytokine-network",
       "name": "Besbassi 2026 CRS QSP locked cytokine network",
       "omex": {
-        "archive": "models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.1/model.omex",
+        "archive": "models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.2/model.omex",
         "model_id": "qspquest_besbassi_2026_crs_qsp_locked_cytokine_network",
-        "omex_sha256": "1327b3c34af54f0a350d0760d2e40a09febfa067e6efb58f75f5c02212d98f81",
+        "omex_sha256": "2e536a1f97b143f6b4077d0c134ddfd02007dbfc5cac3471e2a97c19a3978292",
         "source_model_id": "qspquest-besbassi-2026-crs-qsp-locked-cytokine-network",
-        "version": "0.1.1"
+        "version": "0.1.2"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -515,51 +515,13 @@
       "id": "qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd",
       "name": "Chang 2025 Positively Charged Trastuzumab-vc-MMAE ADC Mouse PK/PD",
       "omex": {
-        "archive": "models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.1.1/model.omex",
         "model_id": "qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd",
-        "omex_sha256": "9e49cb643fe356f4ba8e4b3a8323f1de241c210a34d61bb375e2249f8f580dbb",
+        "omex_sha256": "101fb33900c088f0e03392b3cb4a174236345121d961de6ee1484558839a7c4f",
         "source_model_id": "qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd",
-        "version": "0.1.0"
+        "version": "0.1.1"
       },
-      "qualified_scenario_ids": [
-        "ode-charged-liver-free-mmae-aucall-h-nm",
-        "ode-charged-liver-total-mab-aucall-h-nm",
-        "ode-charged-liver-total-mmae-aucall-h-nm",
-        "ode-charged-mcf7-tumor-free-mmae-aucall-h-nm",
-        "ode-charged-mcf7-tumor-total-mab-aucall-h-nm",
-        "ode-charged-mcf7-tumor-total-mmae-aucall-h-nm",
-        "ode-charged-n87-tumor-free-mmae-aucall-h-nm",
-        "ode-charged-n87-tumor-total-mab-aucall-h-nm",
-        "ode-charged-n87-tumor-total-mmae-aucall-h-nm",
-        "ode-charged-plasma-free-mmae-aucinf-h-nm",
-        "ode-charged-plasma-total-mab-aucinf-h-nm",
-        "ode-charged-plasma-total-mmae-aucinf-h-nm",
-        "ode-charged-spleen-free-mmae-aucall-h-nm",
-        "ode-charged-spleen-total-mab-aucall-h-nm",
-        "ode-charged-spleen-total-mmae-aucall-h-nm",
-        "ode-wt-liver-free-mmae-aucall-h-nm",
-        "ode-wt-liver-total-mab-aucall-h-nm",
-        "ode-wt-liver-total-mmae-aucall-h-nm",
-        "ode-wt-mcf7-tumor-free-mmae-aucall-h-nm",
-        "ode-wt-mcf7-tumor-total-mab-aucall-h-nm",
-        "ode-wt-mcf7-tumor-total-mmae-aucall-h-nm",
-        "ode-wt-n87-tumor-free-mmae-aucall-h-nm",
-        "ode-wt-n87-tumor-total-mab-aucall-h-nm",
-        "ode-wt-n87-tumor-total-mmae-aucall-h-nm",
-        "ode-wt-plasma-free-mmae-aucinf-h-nm",
-        "ode-wt-plasma-total-mab-aucinf-h-nm",
-        "ode-wt-plasma-total-mmae-aucinf-h-nm",
-        "ode-wt-spleen-free-mmae-aucall-h-nm",
-        "ode-wt-spleen-total-mab-aucall-h-nm",
-        "ode-wt-spleen-total-mmae-aucall-h-nm",
-        "source-identity-and-design",
-        "table-liver-pk",
-        "table-mcf7-tumor-pk",
-        "table-n87-tumor-pk",
-        "table-plasma-pk",
-        "table-spleen-pk",
-        "table6-ratios-and-text-fold-changes"
-      ],
+      "qualified_scenario_ids": [],
       "rights": {
         "audit_checked_at": "2026-07-18T17:03:07.079216+00:00",
         "audit_source": "local_crossref_cache",
@@ -609,7 +571,7 @@
         "ode-wt-spleen-total-mmae-aucall-h-nm",
         "ode-wt-spleen-free-mmae-aucall-h-nm"
       ],
-      "simulation_status": "fixed_presets_qualified",
+      "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd",
         "outputs": 177,
@@ -1702,18 +1664,13 @@
       "id": "qspquest-frank-2023-sutimlimab-cad-pkpd",
       "name": "Frank 2023 sutimlimab CAD PK/PD",
       "omex": {
-        "archive": "models/qspquest_frank_2023_sutimlimab_cad_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_frank_2023_sutimlimab_cad_pkpd/0.1.1/model.omex",
         "model_id": "qspquest_frank_2023_sutimlimab_cad_pkpd",
-        "omex_sha256": "a79f1b654aab748505b496f6e579310548ab27adc7392b80c98a82c2de1904c2",
+        "omex_sha256": "2dbbb0b650b549e693896d0fbadd703ec36b7a3abd9b979a268da79bf396f608",
         "source_model_id": "qspquest-frank-2023-sutimlimab-cad-pkpd",
-        "version": "0.1.0"
+        "version": "0.1.1"
       },
-      "qualified_scenario_ids": [
-        "approved-65kg-6p5g-q2w",
-        "approved-80kg-7p5g-q2w",
-        "approved-all-source-limited-population",
-        "article-supplement-source-anchor"
-      ],
+      "qualified_scenario_ids": [],
       "rights": {
         "audit_checked_at": "2026-07-18T17:03:07.079216+00:00",
         "audit_source": "local_crossref_cache",
@@ -1730,7 +1687,7 @@
         "approved-80kg-7p5g-q2w",
         "approved-all-source-limited-population"
       ],
-      "simulation_status": "fixed_presets_qualified",
+      "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-frank-2023-sutimlimab-cad-pkpd",
         "outputs": 165,
@@ -1844,20 +1801,13 @@
       "id": "qspquest-gu-2017-bay1093884-tfpi-qss-tmdd",
       "name": "Gu 2017 BAY 1093884 TFPI QSS-TMDD and Exploratory SC/Human PK/PD",
       "omex": {
-        "archive": "models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.1.0/model.omex",
+        "archive": "models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.1.1/model.omex",
         "model_id": "qspquest_gu_2017_bay1093884_tfpi_qss_tmdd",
-        "omex_sha256": "ead0a065a9944f7e54554c26bfc611849e863576ac15ddc8071a02c1bb92ad42",
+        "omex_sha256": "34ad5e17d06c7da8f6c15640117e8accbcedce003ebda2a660a5ce5b695a2c10",
         "source_model_id": "qspquest-gu-2017-bay1093884-tfpi-qss-tmdd",
-        "version": "0.1.0"
+        "version": "0.1.1"
       },
-      "qualified_scenario_ids": [
-        "gu-2017-cyno-iv20mgkg-qss-tmdd-probe",
-        "gu-2017-cyno-iv5mgkg-qss-tmdd-probe",
-        "gu-2017-exact-table-parameter-anchor",
-        "gu-2017-exploratory-calibrated-cyno-sc5mgkg-joint-figures2-4-5-6-table2",
-        "gu-2017-exploratory-calibrated-human-0p4mgkg-endpoints",
-        "gu-2017-human-0p4mgkg-iv-source-limited"
-      ],
+      "qualified_scenario_ids": [],
       "rights": {
         "audit_checked_at": "2026-07-18T17:03:07.079216+00:00",
         "audit_source": "local_crossref_cache",
@@ -1876,7 +1826,7 @@
         "gu-2017-exploratory-calibrated-cyno-sc5mgkg-joint-figures2-4-5-6-table2",
         "gu-2017-exploratory-calibrated-human-0p4mgkg-endpoints"
       ],
-      "simulation_status": "fixed_presets_qualified",
+      "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-gu-2017-bay1093884-tfpi-qss-tmdd",
         "outputs": 137,
@@ -2755,16 +2705,13 @@
       "id": "qspquest-lobet-2026-panitumumab-body-composition-poppk",
       "name": "Lobet 2026 panitumumab body-composition PopPK",
       "omex": {
-        "archive": "models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.1.0/model.omex",
+        "archive": "models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.1.1/model.omex",
         "model_id": "qspquest_lobet_2026_panitumumab_body_composition_poppk",
-        "omex_sha256": "a2d56b907079b5574035d2a2519814835d97295b261fbf54591436023a79800d",
+        "omex_sha256": "48e0781128729f725ab18b6252cf78c57d393dbbb8ee53957fa29d7fc09638a2",
         "source_model_id": "qspquest-lobet-2026-panitumumab-body-composition-poppk",
-        "version": "0.1.0"
+        "version": "0.1.1"
       },
-      "qualified_scenario_ids": [
-        "exact-source-anchor",
-        "ffcd0904-typical-3mgkg-q2w-ode-overlay"
-      ],
+      "qualified_scenario_ids": [],
       "rights": {
         "audit_checked_at": "2026-07-18T17:03:07.079216+00:00",
         "audit_source": "local_crossref_cache",
@@ -2779,7 +2726,7 @@
         "exact-source-anchor",
         "ffcd0904-typical-3mgkg-q2w-ode-overlay"
       ],
-      "simulation_status": "fixed_presets_qualified",
+      "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-lobet-2026-panitumumab-body-composition-poppk",
         "outputs": 9,
@@ -3826,13 +3773,13 @@
       },
       "format": "scientific_json",
       "id": "qspquest-serkland-2025-rituximab-ms-pkpd",
-      "name": "Rituximab exposure\u2013CD19+ B-cell dynamics",
+      "name": "Rituximab exposure–CD19+ B-cell dynamics",
       "omex": {
-        "archive": "models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.0/model.omex",
+        "archive": "models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.1/model.omex",
         "model_id": "qspquest_serkland_2025_rituximab_ms_pkpd",
-        "omex_sha256": "4554f94deaa1d3a8676c9cc4a447994357794b01d1fb934a5f36086382f709da",
+        "omex_sha256": "ac27287c9248dfe61199b0a4a120a42980bb5cd3f53d801fb5cbadbc6bdf55cf",
         "source_model_id": "qspquest-serkland-2025-rituximab-ms-pkpd",
-        "version": "0.3.0"
+        "version": "0.3.1"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -4015,31 +3962,13 @@
       "id": "qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca",
       "name": "Stathis 2018 IMGN529 NCA Replay and Exploratory Dose-Level PK Surrogate",
       "omex": {
-        "archive": "models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.1.0/model.omex",
+        "archive": "models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.1.1/model.omex",
         "model_id": "qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca",
-        "omex_sha256": "6cc51e679c77270f4881e1e86747e89ff79b1c555ec807155d23c51721519197",
+        "omex_sha256": "c38e8ab0a963070c7dcb61434a8adae2a43e570d01d3748308dbbfd0072ef787",
         "source_model_id": "qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca",
-        "version": "0.1.0"
+        "version": "0.1.1"
       },
-      "qualified_scenario_ids": [
-        "stathis-dose-0p1-exponential-probe",
-        "stathis-dose-0p2-exponential-probe",
-        "stathis-dose-0p4-exponential-probe",
-        "stathis-dose-0p7-exponential-probe",
-        "stathis-dose-0p8-exponential-probe",
-        "stathis-dose-1p0-exponential-probe",
-        "stathis-dose-1p4-exponential-probe",
-        "stathis-dose-1p8-exponential-probe",
-        "stathis-exploratory-calibrated-dose-0p1-joint-table4",
-        "stathis-exploratory-calibrated-dose-0p2-joint-table4",
-        "stathis-exploratory-calibrated-dose-0p4-joint-table4",
-        "stathis-exploratory-calibrated-dose-0p7-joint-table4",
-        "stathis-exploratory-calibrated-dose-0p8-joint-table4",
-        "stathis-exploratory-calibrated-dose-1p0-joint-table4",
-        "stathis-exploratory-calibrated-dose-1p4-joint-table4",
-        "stathis-exploratory-calibrated-dose-1p8-joint-table4",
-        "stathis-table-exact-anchor"
-      ],
+      "qualified_scenario_ids": [],
       "rights": {
         "audit_checked_at": "2026-07-18T17:03:07.079216+00:00",
         "audit_source": "local_crossref_cache",
@@ -4069,7 +3998,7 @@
         "stathis-exploratory-calibrated-dose-1p4-joint-table4",
         "stathis-exploratory-calibrated-dose-1p8-joint-table4"
       ],
-      "simulation_status": "fixed_presets_qualified",
+      "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca",
         "outputs": 399,
@@ -4250,27 +4179,13 @@
       "id": "qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd",
       "name": "Vu 2017 Erenumab QSS TMDD and CIDBF PK/PD Model",
       "omex": {
-        "archive": "models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.1.0/model.omex",
+        "archive": "models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.1.1/model.omex",
         "model_id": "qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd",
-        "omex_sha256": "d82b41ccfaf1747814251d3d79dec10533683744c5b040d04b048f47f677a4d7",
+        "omex_sha256": "2fb5323c725dc73b25022826afdd676c0dfbbb58fbb163b8897feb4d4a24be44",
         "source_model_id": "qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd",
-        "version": "0.1.0"
+        "version": "0.1.1"
       },
-      "qualified_scenario_ids": [
-        "iv-140mg-single-infusion-dynamic",
-        "paper-population-and-threshold-checks",
-        "sc-21mg-q4w-68kg-s8-dynamic",
-        "sc-21mg-q4w-75kg-dynamic",
-        "sc-21mg-q4w-75kg-s8-dynamic",
-        "sc-21mg-q4w-84kg-s8-dynamic",
-        "sc-70mg-q4w-68kg-s8-dynamic",
-        "sc-70mg-q4w-75kg-dynamic",
-        "sc-70mg-q4w-75kg-s8-dynamic",
-        "sc-70mg-q4w-84kg-s8-dynamic",
-        "sc-7mg-q4w-75kg-dynamic",
-        "table3-pk-parameter-estimates",
-        "table4-pd-parameter-estimates"
-      ],
+      "qualified_scenario_ids": [],
       "rights": {
         "audit_checked_at": "2026-07-18T17:03:07.079216+00:00",
         "audit_source": "existing_model_metadata",
@@ -4296,7 +4211,7 @@
         "sc-21mg-q4w-75kg-s8-dynamic",
         "sc-70mg-q4w-75kg-s8-dynamic"
       ],
-      "simulation_status": "fixed_presets_qualified",
+      "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd",
         "outputs": 65,
@@ -4775,7 +4690,7 @@
       },
       "format": "scientific_json",
       "id": "qspquest-yuan-2026-cd3x5t4-in-vitro-qsp",
-      "name": "CD3\u00d75T4 In Vitro Activation and Cytotoxicity QSP",
+      "name": "CD3×5T4 In Vitro Activation and Cytotoxicity QSP",
       "omex": {
         "archive": "models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/0.1.0/model.omex",
         "model_id": "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp",

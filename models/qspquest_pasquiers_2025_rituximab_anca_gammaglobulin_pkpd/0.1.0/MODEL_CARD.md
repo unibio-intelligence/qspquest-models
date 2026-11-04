@@ -23,8 +23,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -43,7 +43,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `state__rtx_central_mg` | Rituximab amount in the central compartment | `mg` |
 | `state__anca_blood_u_ml` | Circulating ANCA antibody level | `U/mL` |
@@ -68,7 +68,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 0 outputs and 6 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `state__anca_blood_u_ml` | `U/mL` |
 | `state__anca_prod_u_ml` | `U/mL` |
@@ -79,8 +79,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -93,33 +93,16 @@ The `induction-1000mg-d0-d14-6mo-pr3` starter has **183 rows**. Reference checkp
 | `state__anca_blood_u_ml` | 75.6 | 10.5066 (180 d, pre) | 75.6 (0 d, post) | 10.5066 |
 | `state__gg_g_l` | 9.35 | 7.00395 (171 d, post) | 9.35 (0 d, post) | 7.00867 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
-<details>
-<summary>Availability and qualification</summary>
+## Reference
 
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation.
-Fitting supported: `false`; fit ready: `false`.
-Evidence identity: `sha256:f05b950404c8943c085bb129eda2f473f245fbcca94d65529a0790dd4b4a3aa9`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
-## What you can explore
-
-Source-complete fixed-effect ODE reconstruction of the Pasquiers et al. 2025 real-world rituximab PK/PD model in ANCA-associated vasculitis. Runtime includes two-compartment rituximab PK, indirect gammaglobulin turnover inhibited by rituximab, and the Bensalem/Friberg ANCA production-blood feedback model. Exact API anchors replay the public article and supplement tables; dynamic regimen scenarios attach paper final-model simulation endpoints as overlays. Exact 1000-virtual-patient Monolix parity is source-limited because random-effect draws, patient data, and source simulation outputs are not public.
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)

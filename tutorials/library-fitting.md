@@ -1,17 +1,16 @@
 # Inspect and execute an archived fitting workflow
 
-Use this workflow to reproduce an explicitly declared synthetic parameter
-recovery fixture. Simulation availability does not establish fitting support.
-The selected library declares **two fit-ready models**: the turnover benchmark
-and rituximab PK/PD model, both at version `0.3.0`. Their recovery evidence is
-limited to the synthetic observations and exact workflows in each archive.
+Use this workflow to check that a fit recovers known parameters from synthetic
+data stored with the model. Not every runnable model supports fitting. **Two
+models** are fit-ready: the turnover benchmark and the rituximab PK/PD model, both
+at version `0.3.1`. Each fit uses only the synthetic data and settings stored with
+the model.
 
 ## Prerequisites and discovery
 
 Complete the [library setup](../README.md#setup), activate that environment, and
 run commands from the library checkout. Browsing models and running presets
-through the CLI require no native Python binding. Verifying fitting identities
-and executing fits require the matching QSPQuest Python binding. Build and
+need only the CLI. Fitting needs the matching QSPQuest Python binding. Build and
 install it from the engine checkout created during setup:
 
 ```sh
@@ -21,14 +20,13 @@ python tutorials/fitting_workflow.py --library .
 
 Alternatively, install a matching platform wheel as described in
 [engine installation](https://github.com/unibio-intelligence/qspquest/blob/main/docs/installation.md#install-a-wheel).
-The discovery command validates the native identities of archived fitting
-records; it does not run parameter recovery or qualify your installed engine.
+The second command lists the fitting workflows and checks them against your
+binding; it does not run a fit.
 
-Discovery prints a JSON object containing `fit_ready_models`, with two entries
-for this release. An empty array in another library means it declares no passed
-synthetic workflow; it does not mean the simulator is unavailable.
-Each ready entry includes the exact model version, workflow ID, operation,
-parameter units, bounds, starter values, synthetic truths and recovery limits.
+It prints JSON with two entries under `fit_ready_models`. Each gives the model
+version, workflow ID, operation, parameter units, bounds, starting values, true
+values and allowed error. An empty list means no model supports fitting, not that
+simulation is unavailable.
 
 Inspect a verified declaration without running a fit:
 
@@ -36,18 +34,15 @@ Inspect a verified declaration without running a fit:
 python - <<'PY'
 import json
 from qspquest_models import Library
-model = Library('.').load('qspquest_diffdose_2026_idr_benchmark', version='0.3.0')
+model = Library('.').load('qspquest_diffdose_2026_idr_benchmark', version='0.3.1')
 print(json.dumps(model.fitting_contract, indent=2))
 print(model.fitting_workflows)
 PY
 ```
 
-Each model has six declared workflows: three parameter starters under BDF and
-Rodas5P. `fitting_contract` and `fitting_workflows` require full native identity
-verification; they fail with an installation diagnostic when the binding is
-missing. An archive without fitting support returns `{}` and `[]`; calling
-`fit_workflow` on it fails before a native fit. A different solver cannot bypass
-that hold.
+Each model has three BDF workflows with different starting points. Without the Python binding, `fitting_contract` and
+`fitting_workflows` fail with an installation message. A model without fitting
+support returns `{}` and `[]`, and `fit_workflow` fails before fitting.
 
 ## Execute one exact passed fixture
 
@@ -56,7 +51,7 @@ native request are included in the archive; no external dataset is needed.
 
 ```sh
 export MODEL_ID=qspquest_diffdose_2026_idr_benchmark
-export MODEL_VERSION=0.3.0
+export MODEL_VERSION=0.3.1
 export WORKFLOW_ID=diffsol_bdf-start-1
 python tutorials/fitting_workflow.py --library . \
   --model "$MODEL_ID" --version "$MODEL_VERSION" \
@@ -73,12 +68,11 @@ result = model.fit_workflow(os.environ['WORKFLOW_ID'])
 print(result['checks'])
 ```
 
-The command saves the complete native result, effective request, archive/source
-identities, parameter recovery checks and limitations. Exit code zero requires
-native convergence and every declared recovery check. A returned nonconverged
-fit is saved and exits with code one. Compilation or admission errors report the
-native diagnostic and produce no fabricated result. Choose a new output filename
-for each attempt; an existing result is never overwritten.
+The command saves the full result, the inputs used and the recovery checks. It
+exits with code zero only if the fit converged and every check passed. A fit that
+did not converge is still saved and exits with code one. If the model is rejected
+or fails to compile, the error is reported and no result is written. Choose a new
+output filename each time; existing results are never overwritten.
 
 ## Interpret the result
 
@@ -87,18 +81,14 @@ identity. Scalar fits store these at the top level of that native object;
 individual fits store them under `native_result.fit`, including the projected
 gradient norm. `checks.parameters` compares each estimate with its synthetic
 truth using the original absolute limit. Individual fitting also requires its
-projected gradient to meet the declared tolerance. `checks.passed` is the result
-of this attempt, while `current_engine_qualification` remains `not_assessed`.
+projected gradient to meet its tolerance. `checks.passed` reports this attempt
+only; `current_engine_qualification` stays `not_assessed`.
 
-The archive binds the entire request: data, normal residual errors, units,
-initial conditions, regimen, solver, bounds, starters and estimator budgets.
-This interface accepts a workflow ID rather than edited observations or controls.
-Changed data or parameter roles require a separately qualified workflow.
+The model fixes everything in the fit: data, normal residual errors, units,
+initial conditions, regimen, solver, bounds, starting points and optimizer
+budgets. You choose a workflow by ID; you cannot edit its data or settings here.
 
-Synthetic recovery does not establish physical units, clinical prediction,
-uncertainty coverage or reproduction of a source population fit. A numeric unit
-`1` remains the declared source coordinate. Do not relabel it with a physical
-unit or interpret a recovered scalar/individual parameter as population evidence.
-Hash-bound evidence describes its recorded engine; a newer installed engine
-requires its own qualification. Source replays and inspection-only archives
-cannot grant fitting support.
+Recovering synthetic parameters does not validate units, clinical predictions,
+uncertainty or the source paper's population fit. Do not relabel unit `1` with a
+physical unit, or treat a recovered parameter as population evidence. Stored
+results apply to the engine that produced them.

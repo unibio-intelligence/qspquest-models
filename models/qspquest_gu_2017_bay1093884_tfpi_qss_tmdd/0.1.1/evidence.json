@@ -1,0 +1,25 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_gu_2017_bay1093884_tfpi_qss_tmdd",
+  "model_version": "0.1.1",
+  "omex_sha256": "34ad5e17d06c7da8f6c15640117e8accbcedce003ebda2a660a5ce5b695a2c10",
+  "cases": [],
+  "source_scenarios": [
+    "gu-2017-cyno-iv20mgkg-qss-tmdd-probe",
+    "gu-2017-cyno-iv5mgkg-qss-tmdd-probe",
+    "gu-2017-exact-table-parameter-anchor",
+    "gu-2017-exploratory-calibrated-cyno-sc5mgkg-joint-figures2-4-5-6-table2",
+    "gu-2017-exploratory-calibrated-human-0p4mgkg-endpoints",
+    "gu-2017-human-0p4mgkg-iv-source-limited"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false,
+  "scope": "Versioned execution inputs; scientific source and native equations are unchanged. Complete release qualification is not assessed.",
+  "archive_source_members_preserved": true,
+  "changed_members": [
+    "index.json",
+    "native/scenarios/gu-2017-exploratory-calibrated-cyno-sc5mgkg-joint-figures2-4-5-6-table2.json",
+    "native/scenarios/gu-2017-exploratory-calibrated-human-0p4mgkg-endpoints.json"
+  ]
+}

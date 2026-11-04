@@ -21,8 +21,8 @@ print(len(result['times']), 'rows')
 
 ### Choose an experiment
 
-A preset is a named experiment with fixed inputs. Summary/table replays expose retained
-values; they are not new parameter fits or necessarily a changing biological trajectory.
+A preset is a named experiment with fixed inputs. Summary and table replays return stored
+values; they are not new fits and may not change over time.
 
 | Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
@@ -39,7 +39,7 @@ Each experiment supplies the parameters, initial state, dosing schedule and samp
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
-| Primary column | Meaning | Archive unit label |
+| Primary column | Meaning | Unit |
 | --- | --- | --- |
 | `drug_exposure` | Drug exposure driving the biomarker effect | `1` |
 | `biomarker` | Biomarker level under indirect turnover | `1` |
@@ -63,7 +63,7 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 <details>
 <summary>Technical inventory: 3 outputs and 2 states</summary>
 
-| Technical column | Archive unit label |
+| Technical column | Unit |
 | --- | --- |
 | `C` | `1` |
 | `biomarker` | `1` |
@@ -73,8 +73,8 @@ Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
 
 </details>
 
-The names retain the source conventions. A unit label of `1` means this execution profile
-uses numerical source values; a unit-looking column name alone does not establish physical units.
+Column names follow the source paper. A unit of `1` means the engine uses the source's number
+as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
 ### Check your result
@@ -86,15 +86,15 @@ The `lower_exposure` starter has **421 rows**. Reference checkpoints:
 | `drug_exposure` | 0 | 0 (0 d, post) | 0.839754 (41.1 d, pre) | 0.540291 |
 | `biomarker` | 46 | 9.82515 (41.8 d, post) | 46 (0 d, post) | 9.82737 |
 
-These rounded values identify the expected trajectory; they are not numerical acceptance tolerances.
-[Starter reference and engine identity](starter-preview.json) records a fresh execution of the pinned archive.
-The original stored CSV may omit states; the starter reference includes the primary readouts above.
+These rounded values help you recognize the expected result; they are not pass/fail tolerances.
+The [full starter reference](starter-preview.json) was produced by running this archive.
+The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
 ## Interpretation and limits
 
 These examples use fixed inputs. They do not perform population fitting or support clinical dosing decisions.
-Physical units have not been independently checked for this execution profile.
+Units have not been independently checked for this version.
 
 Normalized benchmark coordinates; V is a benchmark volume ratio and doses must not be called mg.
 
@@ -106,22 +106,9 @@ Outside this version’s scope:
 - clinical doses
 - population fitting
 
-<details>
-<summary>Availability and qualification</summary>
-
-Execution: `dynamic`. Publication review: `pending`.
-Units: `source_scale_unqualified`. Current-engine qualification: `not_assessed`.
-Supported operations: inspect, run_preset, exploratory_simulation, fit.
-Fitting supported: `true`; fit ready: `true`.
-Evidence identity: `sha256:15d79cb03f9116b5270cf2f2563178e8f9b1a5c453873c4cb2201ca152d084c2`.
-
-A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.
-
-</details>
-
 ## Synthetic parameter recovery
 
-Complete the [fitting prerequisites](../../../tutorials/library-fitting.md#prerequisites-and-discovery) with the matching QSPQuest Python binding. The archive fixes synthetic observations, residual errors, parameter bounds, solver and convergence controls for each workflow.
+Complete the [fitting prerequisites](../../../tutorials/library-fitting.md#prerequisites-and-discovery), including the matching QSPQuest Python binding. Each workflow fits synthetic data stored with the model, with fixed residual errors, parameter bounds and solver settings.
 
 ```python
 from qspquest_models import Library
@@ -132,14 +119,10 @@ assert fit['checks']['passed'], fit['checks']
 print(fit['checks']['parameters'])
 ```
 
-A successful fixture reports converged parameter recovery within its declared absolute limits. Retain the complete native result and diagnostics. A budget-limited or nonconverged result has failed checks; inspect those diagnostics before interpreting estimates.
+A successful fit converges and recovers each parameter within its allowed error. If a fit runs out of budget or does not converge, its checks fail; read the diagnostics before using the estimates.
 
-The six workflows cover three parameter starters under BDF and Rodas5P. Their scope is the exact archived synthetic recovery case. Source population reproduction, uncertainty coverage and clinical qualification require separate evidence.
+The six workflows use three starting points, each with the BDF and Rodas5P solvers. They test recovery on synthetic data only, not the source population fit, uncertainty or clinical use.
 
-## What you can explore
+## Reference
 
-How does repeated exposure accelerate biomarker removal?
-
-## Sources and technical reference
-
-[Scientific scope and attribution](SOURCE_REFERENCE.md) · [Source details](SOURCE_REPRODUCTION.json) · [Stored result evidence](evidence.json) · [Archive format](../../../tutorials/model-format.md)
+[Source and reuse terms](SOURCE_REFERENCE.md) · [Archive format](../../../tutorials/model-format.md)
