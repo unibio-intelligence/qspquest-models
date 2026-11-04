@@ -1,0 +1,29 @@
+name: Problem with a model
+description: A model that fails to load or run, or gives unexpected results.
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model ID and version
+      placeholder: qspquest_serkland_2025_rituximab_ms_pkpd 0.3.1
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: What you ran
+      description: The scenario and the shortest code or command that shows the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual results
+      description: Paste any error message. Remove confidential data.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Package versions
+      placeholder: qspquest-models 0.1.0, qspquest 0.1.0, Python 3.12

@@ -1,0 +1,30 @@
+name: Propose a model
+description: Suggest a published model to add to the library.
+body:
+  - type: input
+    id: paper
+    attributes:
+      label: Paper
+      description: Title and DOI.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Equations or code
+      description: Where the model is defined (paper, supplement, repository) and its license.
+    validations:
+      required: true
+  - type: textarea
+    id: use
+    attributes:
+      label: Experiment to run
+      description: The dosing, scenario or question you want the model to answer.
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to prepare this model myself after we agree on the approach.

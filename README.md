@@ -96,6 +96,11 @@ and biological state.
 See [command diagnostics](tutorials/model-format.md#command-diagnostics) for exit
 codes, JSON errors and R environment selection.
 
+## Contribute
+
+Contributions are welcome: open an issue first, then follow the
+[contributing guide](CONTRIBUTING.md).
+
 ## Sources and reuse
 
 Ubi-owned contributions use [Apache-2.0](LICENSE). Published sources keep their own
