@@ -39,7 +39,7 @@ class AvailabilityTests(unittest.TestCase):
             else:
                 self.assertIn('Runnable', card)
         self.assertEqual(self.library.availability_counts['selected_model_identities'], 72)
-        self.assertEqual(self.library.availability_counts['versioned_archives'], 90)
+        self.assertEqual(self.library.availability_counts['versioned_archives'], 91)
         self.assertEqual(self.library.availability_counts['selected_preset_requests'], 644)
 
     def test_rat_serotype_receptor_pools_are_coupled_across_all_execution_surfaces(self):

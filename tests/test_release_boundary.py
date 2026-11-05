@@ -18,7 +18,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
     def test_complete_versioned_inventory_preserves_source_only_and_stored_evidence_scope(self):
         result = self.verifier().verify(ROOT)
         self.assertEqual((result["archives"], result["stored_preset_evidence_cases"],
-                          result["selected_stored_preset_evidence_cases"]), (90, 647, 525))
+                          result["selected_stored_preset_evidence_cases"]), (91, 647, 514))
         self.assertEqual(result["current_engine_qualification"], "not_assessed")
         self.assertFalse(result["publication_ready"])
         self.assertEqual(result["fitting_native_identity"], "not_assessed")

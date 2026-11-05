@@ -2,7 +2,7 @@
 
 Purpose: run the Yuan CD3×5T4 model with one consistent set of the paper's
 rounded constants, and record that choice with the result. This uses version
-`2.0.1`. No paper download or data files are needed.
+`2.0.2`. No paper download or data files are needed.
 
 Prerequisites: CPython 3.10+, the library checkout and the QSPQuest engine.
 Complete [setup](../README.md#setup), keep that environment active, and run from
@@ -64,7 +64,7 @@ equations and tables.
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_yuan_2026_cd3x5t4_in_vitro_qsp', version='2.0.1')
+model = Library('.').load('qspquest_yuan_2026_cd3x5t4_in_vitro_qsp', version='2.0.2')
 manifest = model.precision_profiles
 print(manifest['default_profile_id'])
 print([p['id'] for p in manifest['profiles']])

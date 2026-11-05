@@ -13,7 +13,7 @@ def main():
     parser.add_argument('--inspect-only', action='store_true')
     args = parser.parse_args()
     model = Library(args.library_dir, executable=args.engine_cli).load(
-        'qspquest_yuan_2026_cd3x5t4_in_vitro_qsp', version='2.0.1')
+        'qspquest_yuan_2026_cd3x5t4_in_vitro_qsp', version='2.0.2')
     manifest = model.precision_profiles
     print('8 named profiles; 11 scenarios; 33 mutable parameters per condition')
     assert len(manifest['profiles']) == 8 and len(model.scenario_ids) == 11

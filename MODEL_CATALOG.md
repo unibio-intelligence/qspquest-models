@@ -100,7 +100,7 @@ PopPK in a model name describes its source; these library examples run fixed par
 | Model | What it describes | Availability |
 | --- | --- | --- |
 | [Besbassi 2026 CRS QSP locked cytokine network](models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.2/MODEL_CARD.md) | Explore drug exposure, immune activation and cytokine dynamics in a CRS model. | Runnable · 5 experiments |
-| [CD3×5T4 In Vitro Activation and Cytotoxicity QSP](models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/2.0.1/MODEL_CARD.md) | Explore bispecific-driven T-cell activation and tumor-cell killing in vitro. | Runnable · 11 experiments |
+| [CD3×5T4 In Vitro Activation and Cytotoxicity QSP](models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/2.0.2/MODEL_CARD.md) | Explore bispecific-driven T-cell activation and tumor-cell killing in vitro. | Runnable · 11 experiments |
 | [Cui 2024 Envafolimab SC PD-L1 PopPK/MIDD](models/qspquest_cui_2024_envafolimab_sc_pdl1_midd/0.1.0/MODEL_CARD.md) | Explore subcutaneous envafolimab exposure and published development summaries. | Runnable · 4 experiments |
 | [Haid 2023 PROTAC mechanistic pharmacodynamic framework](models/qspquest_haid_2023_protac_mechanistic_pd_framework/0.1.0/MODEL_CARD.md) | Explore a mechanistic framework for PROTAC pharmacodynamics. | Runnable · 3 experiments |
 | [Han 2026 Sim2Real-PK Daratumumab Public TMDD ODE](models/qspquest_han_2026_sim2real_pk_daratumumab_tmdd/0.1.0/MODEL_CARD.md) | Explore daratumumab target-mediated drug disposition. | Runnable · 4 experiments |

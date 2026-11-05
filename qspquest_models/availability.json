@@ -1598,7 +1598,7 @@
     "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/0.1.0": {
       "model_id": "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp",
       "archive_version": "0.1.0",
-      "selected_version": "2.0.1",
+      "selected_version": "2.0.2",
       "archive_sha256": "c4f21f3555aca5b2193e1a04196a7afbcbb3f298552e51c92f586f9af5c34fc1",
       "availability": "inspection_only",
       "publication_review": "unrecorded",
@@ -1612,7 +1612,7 @@
     "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/2.0.1": {
       "model_id": "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp",
       "archive_version": "2.0.1",
-      "selected_version": "2.0.1",
+      "selected_version": "2.0.2",
       "archive_sha256": "461cca3ff38dcd97abf1fe3ebaf37f50ccb62580a4b200d66473560c491f498a",
       "availability": "dynamic",
       "publication_review": "pending",
@@ -2139,6 +2139,32 @@
       "fitting_supported": false,
       "fit_ready": false,
       "evidence_id": "sha256:49b615acbb7223ec2bac47b07b8eb739554fd684ae614a4d97a58d3ee5469f1a",
+      "current_engine_qualification": "not_assessed"
+    },
+    "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/2.0.2": {
+      "model_id": "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp",
+      "archive_version": "2.0.2",
+      "selected_version": "2.0.2",
+      "archive_sha256": "dd53f6655418a0327566cad3d069494995ac4d200e4304e04c543324610b146d",
+      "availability": "dynamic",
+      "publication_review": "pending",
+      "preset_ids": [
+        "bxpc_3_duobody_6_86nm_et4",
+        "eplc_272h_duobody_6_86nm_et4",
+        "mda_mb_231_duobody_6_86nm_et4",
+        "mda_mb_231_high_affinity_6_86nm_et8",
+        "mda_mb_468_duobody_6_86nm_et1",
+        "mda_mb_468_duobody_6_86nm_et2",
+        "mda_mb_468_duobody_6_86nm_et4",
+        "mda_mb_468_duobody_6_86nm_et8",
+        "mda_mb_468_high_affinity_6_86nm_et8",
+        "mda_mb_468_untreated_et4",
+        "sk_gt_4_duobody_6_86nm_et4"
+      ],
+      "unit_status": "source_scale_unqualified",
+      "fitting_supported": false,
+      "fit_ready": false,
+      "evidence_id": "sha256:8939afb26a318c5b792c5fc7b71ee1ed2e87ccf4b8ebcbe774214be42b34410a",
       "current_engine_qualification": "not_assessed"
     }
   }

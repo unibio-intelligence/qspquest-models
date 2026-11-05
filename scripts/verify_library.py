@@ -131,7 +131,7 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
         result["model_identities"],
         library.availability_counts["selected_preset_requests"],
         cases,
-    ) == (90, 72, 644, 647)), "release scope changed")
+    ) == (91, 72, 644, 647)), "release scope changed")
     return result
 
 

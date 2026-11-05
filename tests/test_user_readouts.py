@@ -88,7 +88,7 @@ class ReadoutTests(unittest.TestCase):
                 replays += 1
                 self.assertEqual(model.guide['availability'], 'source_replay')
         self.assertEqual(observed, set(profiles))
-        self.assertEqual((dynamic, replays, candidates), (63, 5, 16))
+        self.assertEqual((dynamic, replays, candidates), (63, 5, 17))
 
     def test_primary_csv_includes_selected_states_and_excludes_provenance(self):
         result = {'times': [0, 1], 'sides': ['post', 'pre'],

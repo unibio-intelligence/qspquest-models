@@ -17,8 +17,8 @@ replacement. Inspect the selected version with:
 from qspquest_models import Library
 
 library = Library('.')
-model = library.load('qspquest_yuan_2026_cd3x5t4_in_vitro_qsp', version='2.0.1')
-print(model.index['model_version'])  # 2.0.1
+model = library.load('qspquest_yuan_2026_cd3x5t4_in_vitro_qsp', version='2.0.2')
+print(model.index['model_version'])  # 2.0.2
 ```
 
 The shared CLI uses the same exact catalog selection. This command lists the
@@ -52,7 +52,7 @@ print(model.scenario_ids)  # () — this alternate version is inspection-only
 ```
 
 Read that version's [model guide](../models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/0.1.0/MODEL_CARD.md)
-for its inspection-only scope. Use the default 2.0.1 version for runnable experiments.
+for its inspection-only scope. Use the default 2.0.2 version for runnable experiments.
 Save the version and checksum with your analysis
 if you need to repeat it exactly. A matching checksum confirms the file is
 unchanged; it does not validate the science.

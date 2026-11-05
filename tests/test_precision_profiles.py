@@ -16,7 +16,7 @@ SCENARIO = 'mda_mb_468_duobody_6_86nm_et8'
 
 class PrecisionProfileTests(unittest.TestCase):
     def setUp(self):
-        self.model = Library(ROOT).load(MODEL, version='2.0.1')
+        self.model = Library(ROOT).load(MODEL, version='2.0.2')
 
     def test_complete_profiles_default_and_group_assignment(self):
         manifest = self.model.precision_profiles
@@ -86,7 +86,7 @@ class PrecisionProfileTests(unittest.TestCase):
         from qspquest_models.precision_profiles import validate_receipt
         research = self.model.research_copy(SCENARIO)
         receipt = research.precision_profile
-        model = {'id': self.model.model_id, 'version': '2.0.1', 'archive_sha256': self.model.archive_sha256}
+        model = {'id': self.model.model_id, 'version': '2.0.2', 'archive_sha256': self.model.archive_sha256}
         inputs = {'scenario_id': SCENARIO, 'effective_request': research.request}
         validate_receipt(receipt, model, inputs)
         changed = copy.deepcopy(receipt)
