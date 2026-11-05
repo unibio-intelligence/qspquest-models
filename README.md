@@ -1,7 +1,8 @@
 # QSPQuest models
 
 Run pharmacology model experiments in Python or R, plot trajectories, and compare
-fixed experimental conditions.
+fixed experimental conditions. To run QSPQuest without installing anything, use
+the hosted service at [biologics.unibiointelligence.com](https://biologics.unibiointelligence.com/).
 
 **[Choose a model](MODEL_CATALOG.md)** · **[Run the example below](#run-a-rituximab-model)** ·
 **[Preview a stored result](tutorials/understand-results.md#read-a-stored-result)**
@@ -107,3 +108,8 @@ Ubi-owned contributions use [Apache-2.0](LICENSE). Published sources keep their 
 terms; see [source notices](SOURCE_NOTICE.md), [NOTICE](NOTICE) and each model's notice.
 [Independent validation](https://github.com/unibio-intelligence/qspquest-validation)
 shows how results from a tested QSPQuest build compare with reference engines.
+
+## Acknowledgements
+
+We gratefully acknowledge support from Anthropic's AI for Science rare disease
+research grants.
