@@ -28,7 +28,7 @@ selected version's experiments without starting the engine:
 python -m qspquest_models --library . --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.1
 ```
 
-`qspquest-library` accepts the same option. An unavailable `--model-version`
+`qspquest-models` accepts the same option. An unavailable `--model-version`
 exits with status 2 and code `model_version_unavailable`; JSON errors list
 `requested_version`, `available_versions` and how to fix it in `details`. The CLI
 never falls back to another version.
@@ -279,10 +279,9 @@ IDs. The codes below are stable within this error schema:
 | `invalid_inputs` | The research copy or an input edit is unavailable or invalid |
 | `engine_unavailable`, `engine_timeout`, `execution_failed` | The engine cannot start, exceeded its limit or rejected the experiment |
 | `output_unavailable` | A CSV, JSON or research-copy destination cannot be written |
-| `loader_unavailable` | `qspquest-library` needs the companion loader from the matching release |
 
 
-`qspquest-library`, installed with the QSPQuest Python binding, accepts the same
+The `qspquest-models` command, installed with this package, accepts the same
 options as `python -m qspquest_models`. Both locate the library using `--library`,
 then `QSPQUEST_LIBRARY_DIR`, then the loader's package checkout. The Python
 `Library(root)` API takes an explicit root or uses the package checkout.
