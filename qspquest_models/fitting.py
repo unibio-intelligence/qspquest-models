@@ -8,6 +8,19 @@ import re
 SCHEMA = 'qspquest.library-fitting/v1'
 
 
+class FittingEngineMismatch(ValueError):
+    """An archived fitting receipt does not bind the installed engine's request."""
+
+    def __init__(self, archived_request_sha256, current_request_sha256):
+        self.archived_request_sha256 = archived_request_sha256
+        self.current_request_sha256 = current_request_sha256
+        super().__init__(
+            'Fitting evidence differs from its complete native workflow identity. '
+            'This archived fitting contract is unavailable with the installed engine; '
+            'preset simulation remains available. Use a compatible workflow listed '
+            'by the fitting tutorial; do not change archived evidence to bypass this hold.')
+
+
 def _object(value, required, optional=()):
     if not isinstance(value, dict) or not set(required) <= set(value) or set(value) - set(required) - set(optional):
         raise ValueError('Fitting declaration has missing or unknown fields')
@@ -255,7 +268,7 @@ def validate(declaration, index, members, availability=None, *, native_identity=
                 raise ValueError('Duplicate normalized fitting workflow request')
             requests.add(normalized_key)
             if evidence['native_request_sha256'] != identity['native_request_sha256']:
-                raise ValueError('Fitting evidence differs from its complete native workflow identity')
+                raise FittingEngineMismatch(evidence['native_request_sha256'], identity['native_request_sha256'])
             if engine['model_content_hash'] != identity['model_content_hash']:
                 raise ValueError('Fitting evidence canonical native model differs')
             result = _native_identity(model, workflow['native_request'], workflow['operation'], result)['native_result']

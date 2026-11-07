@@ -10,12 +10,12 @@ Explore vedolizumab clearance and remission relationships.
 
 Paper dosing-regimen scenario using the Table 2 fixed-effect ODE. Table 3 paper medians and intervals are included as endpoint overlays; exact CI parity is source-limited because population simulation draws and covariance are not public.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_markovic_2024_vedolizumab_clearance_remission_poppk', version='0.1.0')
+model = Library().load('qspquest_markovic_2024_vedolizumab_clearance_remission_poppk', version='0.1.0')
 result = model.run('induction-q8w-no-prior-anti-tnf')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -52,7 +52,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `C_central_ug_mL` | Vedolizumab concentration | `1` |
 | `AUC_central_ug_day_mL` | Accumulated central exposure | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -61,7 +61,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_markovic_2024_vedolizumab_clearance_remission_poppk --model-version 0.1.0 --scenario induction-q8w-no-prior-anti-tnf --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_markovic_2024_vedolizumab_clearance_remission_poppk --model-version 0.1.0 --scenario induction-q8w-no-prior-anti-tnf --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -103,7 +103,7 @@ The `induction-q8w-no-prior-anti-tnf` starter has **1185 rows**. Reference check
 | `AUC_central_ug_day_mL` | 0 | 0 (0 d, post) | 41095.5 (1162 d, pre) | 41095.5 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

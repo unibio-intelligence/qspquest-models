@@ -31,7 +31,7 @@ for scenario in ['balanced_gate_30nmol_iv', 'no_tumor_gate_30nmol_iv']:
     print(scenario, round(column['values'][at_24h], 2))
 ```
 
-Expected values at 24 h are approximately **37.65** with the tumor gate and **1.37**
+Expected simulated values at 24 h are approximately **37.65** with the tumor gate and **1.37**
 without it. The [QSP tutorial](qsp-gated-cargo.md) plots both tumor and central occupancy.
 
 ## Change the dose in a research copy
@@ -89,7 +89,7 @@ python -m qspquest_models --library . --model qspquest_ubi_2026_target_gated_car
   --save-research research-output/cli-dose15
 ```
 
-At 24 h, the 30-unit dose gives about **37.65%** tumor occupancy and the
+At 24 h, the 30-unit dose gives a simulated tumor occupancy of about **37.65%** and the
 15-unit dose about **21.85%**. Occupancy need not scale linearly with dose.
 Experiment names say nmol, but the stored dose has unit `1`: the engine uses the
 source's number as-is and converts nothing, and a physical unit such as `nmol`
@@ -111,8 +111,7 @@ changed = copy.run()
 
 The value uses the same scale as the stored model. In R, pass
 `initial_states = c(C = 175.40808349401845)` to `models$run()`. In the CLI, use
-`--initial C=175.40808349401845`. Summary-only models do not support research
-copies because they replay stored values rather than simulate.
+`--initial C=175.40808349401845`.
 
 Stored reference results cover only the original experiments, not your edits. See
 [archive editing](model-format.md#research-copies) if you plan to contribute a new
@@ -120,7 +119,7 @@ library version.
 
 ## Inspect a lanadelumab dose and its PK units
 
-Purpose: check how the dose is entered and tell a dose amount apart from a plasma
+Purpose: check how the dose is entered in this pharmacokinetic (PK) model and distinguish a dose amount from a plasma
 concentration. Complete the [Python setup](../README.md#setup), including the
 QSPQuest engine, and run from the library root:
 

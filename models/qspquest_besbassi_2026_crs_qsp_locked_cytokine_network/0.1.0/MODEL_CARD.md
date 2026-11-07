@@ -4,34 +4,33 @@
 
 Explore drug exposure, immune activation and cytokine dynamics in a CRS model.
 
-**Runnable · 5 experiments.** Version 0.1.0.
+**Retained alternate archive · source and stored-evidence inspection.** Version 0.1.0.
 
-This is an alternate version. [Open the default version](../0.1.1/MODEL_CARD.md) for the standard quickstart.
+This is an alternate version. [Open the default version](../0.1.2/MODEL_CARD.md) for the standard quickstart.
 
-## Run an experiment
+## Inspect a retained archive
 
-Full ODE scenario for blinatumomab 28 ug/day continuous infusion through day 28; paper comparator status: source_limited_dynamic_peak_parity_pending_author_code.
+This version is retained for source and stored-evidence inspection. Use the linked current version for the supported simulation quickstart.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
-from qspquest_models import load_archive
+from qspquest_models import Library, load_archive
 
 model = load_archive(
-    'models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.0/model.omex',
+    Library().root / 'models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.0/model.omex',
     expected_sha256='0333e521e44b500ca959da3999d329d05c2e9e4b37ef4ac4cff38261cf87392f',
 )
-result = model.run('blinatumomab-28ug-day-28day-full-ode-overlay')
-model.write_csv(result, 'model-example-python.csv')
-print(len(result['times']), 'rows')
+print(model.model_id, model.index['model_version'])
+print(model.scenario_ids)
 ```
 
-### Choose an experiment
+### Archived experiments
 
 A preset is a named experiment with fixed inputs. Summary and table replays return stored
 values; they are not new fits and may not change over time.
 
-| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
+| Archived experiment ID | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
 | `blinatumomab-28ug-day-28day-full-ode-overlay` | Full ODE scenario for blinatumomab 28 ug/day continuous infusion through day 28; paper comparator status: source_limited_dynamic_peak_parity_pending_author_code. | 0–672 h | 337 |
 | `okt3-5mg-full-ode-overlay` | Full ODE scenario for OKT3 5 mg IV bolus; paper comparator status: source_limited_dynamic_peak_parity_pending_author_code. | 0–72 h | 289 |
@@ -44,7 +43,7 @@ values; they are not new fits and may not change over time.
 Each experiment supplies the parameters, initial state, dosing schedule and sampling times.
 [Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.
 
-`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes
+The archived primary table contains `time`, `side` and the readouts below. `side` distinguishes
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
@@ -55,17 +54,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `state__IL6_pg_ml` | IL-6 cytokine concentration | `pg/mL` |
 | `state__IFNg_pg_ml` | Interferon-gamma cytokine concentration | `pg/mL` |
 
-Python exports this small table by default. To export every output and biological state:
-
-```python
-model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
-```
-
-Use the checksum-pinned Python command above for this version; the CLI runs only the default version.
-
-In R, `qspquest_data_frame(result)` returns the same primary columns.
-Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
-[R setup and examples](../../../tutorials/r-quickstart.md).
+The table describes archived primary readouts. Use the current-version guide for supported simulation and CSV or R data-frame export.
 
 <details>
 <summary>Technical inventory: 0 outputs and 11 states</summary>
@@ -90,7 +79,7 @@ Column names follow the source paper. A unit of `1` means the engine uses the so
 as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Check your result
+### Stored reference result
 
 The `blinatumomab-28ug-day-28day-full-ode-overlay` starter has **337 rows**. Reference checkpoints:
 
@@ -102,7 +91,7 @@ The `blinatumomab-28ug-day-28day-full-ode-overlay` starter has **337 rows**. Ref
 | `state__IFNg_pg_ml` | 0 | 0 (0 h, post) | 63.1761 (672 h, pre) | 63.1761 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

@@ -10,12 +10,12 @@ Explore B-cell recovery after rituximab in pediatric nephrotic syndrome.
 
 Full ODE simulation of 375 mg/m2 x2 weekly; paper comparator is Table 3 time to CD19+ B-cell repletion.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic', version='0.1.0')
+model = Library().load('qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic', version='0.1.0')
 result = model.run('standard-375mgm2-x2')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -72,7 +72,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `state__A1_mg` | Rituximab amount driving the kinetic PD model | `mg` |
 | `state__cd19_cells_ul` | CD19-positive B-cell count during depletion and recovery | `cells/uL` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -81,7 +81,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic --model-version 0.1.0 --scenario standard-375mgm2-x2 --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic --model-version 0.1.0 --scenario standard-375mgm2-x2 --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -114,7 +114,7 @@ The `standard-375mgm2-x2` starter has **366 rows**. Reference checkpoints:
 | `state__cd19_cells_ul` | 591.429 | 1.51377 (13 d, post) | 591.429 (0 d, post) | 471.117 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

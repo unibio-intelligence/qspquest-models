@@ -10,12 +10,12 @@ Explore a reduced physiological model for pediatric bevacizumab exposure.
 
 Dose-driven reduced ODE probe for the public Sule exposure endpoints. The native Simcyp physiology/project is unavailable, so this scenario is validated as a source-limited table-endpoint overlay rather than strict Simcyp parity.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge', version='0.1.0')
+model = Library().load('qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge', version='0.1.0')
 result = model.run('female-6-12y-10mgkg-q2w-ode-endpoint-overlay')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -62,7 +62,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `state__peripheral_mg` | Bevacizumab amount in the peripheral compartment | `mg` |
 | `state__auc_mg_h_l` | Accumulated central drug exposure | `mg*h/L` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -71,7 +71,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge --model-version 0.1.0 --scenario female-6-12y-10mgkg-q2w-ode-endpoint-overlay --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge --model-version 0.1.0 --scenario female-6-12y-10mgkg-q2w-ode-endpoint-overlay --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -104,7 +104,7 @@ The `female-6-12y-10mgkg-q2w-ode-endpoint-overlay` starter has **766 rows**. Ref
 | `state__auc_mg_h_l` | 0 | 0 (0 h, post) | 153133 (3024 h, pre) | 153133 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

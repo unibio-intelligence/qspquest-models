@@ -34,13 +34,15 @@ class AvailabilityTests(unittest.TestCase):
             self.assertNotIn('Publication review:', card)
             if record.availability == 'inspection_only':
                 self.assertIn('Inspection only', card)
+            elif not record.selected:
+                self.assertIn('Retained alternate archive', card)
             elif record.availability == 'source_replay':
                 self.assertIn('Source replay available', card)
             else:
                 self.assertIn('Runnable', card)
-        self.assertEqual(self.library.availability_counts['selected_model_identities'], 72)
-        self.assertEqual(self.library.availability_counts['versioned_archives'], 91)
-        self.assertEqual(self.library.availability_counts['selected_preset_requests'], 644)
+        self.assertEqual(self.library.availability_counts['selected_model_identities'], 62)
+        self.assertEqual(self.library.availability_counts['versioned_archives'], 82)
+        self.assertEqual(self.library.availability_counts['selected_preset_requests'], 639)
 
     def test_rat_serotype_receptor_pools_are_coupled_across_all_execution_surfaces(self):
         from xml.etree import ElementTree as ET
@@ -215,7 +217,7 @@ class AvailabilityTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(ValueError): Availability.parse(record)
 
     def test_selected_catalog_disagreements_are_rejected(self):
-        for field, value in [('version', '999'), ('scenario_ids', []), ('publication_status', 'approved'),
+        for field, value in [('version', '999'), ('scenario_ids', []), ('publication_status', 'unrecorded'),
                              ('omex_sha256', '0' * 64), ('fitting_supported', True)]:
             catalog = deepcopy(self.library.catalog)
             catalog['models'][0][field] = value
@@ -313,6 +315,9 @@ class AvailabilityTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'require the versioned availability'): Library(path)
 
     def test_pending_review_prevents_publication_without_preventing_inspection(self):
+        from dataclasses import replace
+        key = next(iter(self.records))
+        self.records[key] = replace(self.records[key], publication_review='pending')
         self.assertTrue(self.library.list_models())
         with self.assertRaisesRegex(ValueError, 'Unresolved publication review'):
             require_publication_review(self.records)

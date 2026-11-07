@@ -10,12 +10,12 @@ Explore daratumumab target-mediated drug disposition.
 
 Early label-like 16 mg/kg IV induction-window schedule using the public ODE and median infusion durations, overlaid with paper Fig. 5A trough/peak constraints.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_han_2026_sim2real_pk_daratumumab_tmdd', version='0.1.0')
+model = Library().load('qspquest_han_2026_sim2real_pk_daratumumab_tmdd', version='0.1.0')
 result = model.run('label-like-16mgkg-window-ode-overlay')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -47,7 +47,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `central_concentration_mg_l` | Daratumumab concentration | `1` |
 | `vmax_t_mg_model_time` | Time-varying maximum saturable elimination rate | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -56,7 +56,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_han_2026_sim2real_pk_daratumumab_tmdd --model-version 0.1.0 --scenario label-like-16mgkg-window-ode-overlay --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_han_2026_sim2real_pk_daratumumab_tmdd --model-version 0.1.0 --scenario label-like-16mgkg-window-ode-overlay --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -100,7 +100,7 @@ The `label-like-16mgkg-window-ode-overlay` starter has **143 rows**. Reference c
 | `vmax_t_mg_model_time` | 49.92 | 32.2533 (14 h, pre) | 49.92 (0 h, post) | 32.2533 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

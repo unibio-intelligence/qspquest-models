@@ -10,12 +10,12 @@ Explore fixed secukinumab exposure and psoriasis-response scenarios.
 
 Full ODE simulation using public individual parameters. Paper comparator contains Figure 5 target band and raster-derived paper scatter; strict individual curve parity is source-limited.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd', version='0.1.0')
+model = Library().load('qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd', version='0.1.0')
 result = model.run('subject1-300mg-q4w-20cycle-ode-probe')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -75,7 +75,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `drug_effect_fraction` | Fractional drug effect on psoriasis response | `1` |
 | `pasi_target_gap` | Difference from the model psoriasis response target | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -84,7 +84,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd --model-version 0.1.0 --scenario subject1-300mg-q4w-20cycle-ode-probe --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd --model-version 0.1.0 --scenario subject1-300mg-q4w-20cycle-ode-probe --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -675,7 +675,7 @@ The `subject1-300mg-q4w-20cycle-ode-probe` starter has **89 rows**. Reference ch
 | `pasi_target_gap` | 6.05 | -1.49535 (42 h, post) | 6.05 (0 h, post) | -0.893571 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

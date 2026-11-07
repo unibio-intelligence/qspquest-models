@@ -10,12 +10,12 @@ Explore fixed tixagevimab/cilgavimab exposure scenarios.
 
 Fixed-effect serum PK. Population medians and prediction intervals require the separately recorded IIV simulation.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk', version='0.1.0')
+model = Library().load('qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk', version='0.1.0')
 result = model.run('fig4-typical-600mg-combination')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -68,7 +68,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `central_conc_ug_ml` | Antibody concentration in the central compartment | `1` |
 | `AUC_ug_day_ml` | Accumulated central antibody exposure | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -77,7 +77,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk --model-version 0.1.0 --scenario fig4-typical-600mg-combination --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk --model-version 0.1.0 --scenario fig4-typical-600mg-combination --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -123,7 +123,7 @@ The `fig4-typical-600mg-combination` starter has **1002 rows**. Reference checkp
 | `AUC_ug_day_ml` | 0 | 0 (0 d, post) | 7185.73 (1000 d, pre) | 7185.73 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

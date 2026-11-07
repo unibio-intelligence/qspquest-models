@@ -27,16 +27,12 @@ class DiscoveryTests(unittest.TestCase):
     def test_machine_readable_listing_and_scenarios(self):
         listing = self.cli('--format', 'json')
         self.assertEqual(listing.returncode, 0, listing.stderr)
-        self.assertEqual(len(json.loads(listing.stdout)), 72)
+        self.assertEqual(len(json.loads(listing.stdout)), 62)
         scenarios = self.cli('--model', 'qspquest_serkland_2025_rituximab_ms_pkpd', '--format', 'json')
         self.assertEqual(scenarios.returncode, 0, scenarios.stderr)
         self.assertIn('population-typical-1000mg-full-ode', json.loads(scenarios.stdout))
 
-    def test_inspection_only_and_empty_search_have_next_steps(self):
-        held = self.cli('--model', 'qspquest_poels_2025_elranatamab_mm_qsp')
-        self.assertEqual(held.returncode, 0, held.stderr)
-        self.assertIn('simulation is unavailable', held.stdout)
-        self.assertIn('--runnable', held.stdout)
+    def test_empty_search_has_next_steps(self):
         empty = self.cli('--search', 'no-such-model-12345')
         self.assertEqual(empty.returncode, 0, empty.stderr)
         self.assertIn('0 models found', empty.stdout)
@@ -61,10 +57,7 @@ class DiscoveryTests(unittest.TestCase):
         self.assertIn('qspquest_serkland_2025_rituximab_ms_pkpd', result.stderr)
         self.assertNotIn('Traceback', result.stderr)
 
-    def test_source_replay_is_distinct_and_inputs_do_not_need_engine(self):
-        result = self.cli('--model', 'qspquest_yarur_2025_ustekinumab_clearance_ibd_pk')
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertIn('Source replay available; dynamic simulation unavailable', result.stdout)
+    def test_inputs_do_not_need_engine(self):
         inputs = self.cli('--model', 'qspquest_ubi_2026_target_gated_cargo_qsp',
                           '--scenario', 'balanced_gate_30nmol_iv', '--inputs')
         self.assertEqual(inputs.returncode, 0, inputs.stderr)
@@ -80,6 +73,10 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(selected.returncode, 0, selected.stderr)
         self.assertIn(row['version'], selected.stdout)
         self.assertIn(row['omex_sha256'], selected.stdout)
+        guide = next(line.removeprefix('Purpose, inputs and outputs: ') for line in selected.stdout.splitlines()
+                     if line.startswith('Purpose, inputs and outputs: '))
+        self.assertTrue(Path(guide).is_file())
+        self.assertEqual(Path(guide), ROOT / 'models' / model_id / row['version'] / 'MODEL_CARD.md')
 
 
 class ErrorContractTests(unittest.TestCase):
@@ -203,7 +200,7 @@ class ErrorContractTests(unittest.TestCase):
         stdout = io.StringIO()
         with patch.dict(os.environ, {'QSPQUEST_LIBRARY_DIR': str(ROOT)}), contextlib.redirect_stdout(stdout):
             main(['--format', 'json'])
-        self.assertEqual(len(json.loads(stdout.getvalue())), 72)
+        self.assertEqual(len(json.loads(stdout.getvalue())), 62)
 
 
 if __name__ == '__main__':

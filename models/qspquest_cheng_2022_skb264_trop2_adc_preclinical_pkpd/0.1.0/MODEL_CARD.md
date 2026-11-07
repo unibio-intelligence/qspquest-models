@@ -10,12 +10,12 @@ Inspect SKB264 preclinical endpoints and exploratory tumor-growth curves.
 
 Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd', version='0.1.0')
+model = Library().load('qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd', version='0.1.0')
 result = model.run('exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-blue')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -94,7 +94,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | --- | --- | --- |
 | `tumor_volume_mm3` | Tumor volume in the exploratory calibrated figure overlay | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -103,7 +103,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd --model-version 0.1.0 --scenario exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-blue --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd --model-version 0.1.0 --scenario exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-blue --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -354,7 +354,7 @@ The `exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-blue` starter has **20 r
 | `tumor_volume_mm3` | 143.966 | 43.1036 (20 h, pre) | 143.966 (1 h, post) | 43.1036 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

@@ -1,7 +1,8 @@
-include PACKAGE_README.md LICENSE NOTICE SOURCE_NOTICE.md
+include MODEL_CATALOG.md PACKAGE_README.md CONTRIBUTING.md LICENSE NOTICE SOURCE_NOTICE.md
 include catalog.json source-catalog.json source-omex-catalog.json
 include scripts/model_summaries.json
 recursive-include qspquest_models *.py *.json
+graft tutorials
 graft models
 graft sources
 global-exclude .DS_Store *.pyc

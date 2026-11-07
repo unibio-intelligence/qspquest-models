@@ -10,12 +10,12 @@ Explore drug exposure, immune activation and cytokine dynamics in a CRS model.
 
 Full ODE scenario for blinatumomab 28 ug/day continuous infusion through day 28; paper comparator status: source_limited_dynamic_peak_parity_pending_author_code.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_besbassi_2026_crs_qsp_locked_cytokine_network', version='0.1.2')
+model = Library().load('qspquest_besbassi_2026_crs_qsp_locked_cytokine_network', version='0.1.2')
 result = model.run('blinatumomab-28ug-day-28day-full-ode-overlay')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -50,7 +50,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `state__IL6_pg_ml` | IL-6 cytokine concentration | `pg/mL` |
 | `state__IFNg_pg_ml` | Interferon-gamma cytokine concentration | `pg/mL` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -59,7 +59,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_besbassi_2026_crs_qsp_locked_cytokine_network --model-version 0.1.2 --scenario blinatumomab-28ug-day-28day-full-ode-overlay --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_besbassi_2026_crs_qsp_locked_cytokine_network --model-version 0.1.2 --scenario blinatumomab-28ug-day-28day-full-ode-overlay --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.

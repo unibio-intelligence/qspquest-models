@@ -13,7 +13,7 @@ python tutorials/precision_profiles.py --library-dir .
 ```
 
 The [complete script](precision_profiles.py) compares two conventions for
-`mda_mb_468_duobody_6_86nm_et8`, using BDF, 72 hours, eleven post-event time points,
+`mda_mb_468_duobody_6_86nm_et8`, using the backward differentiation formula (BDF) solver, 72 hours, eleven post-event time points,
 relative integration tolerance `1e-10` and absolute tolerance `1e-12`. It saves
 the inputs and a receipt (a record of the choice) for each convention, runs both,
 and checks that each CSV manifest keeps its receipt. To select the CLI
@@ -32,7 +32,7 @@ python tutorials/precision_profiles.py --library-dir . --inspect-only \
 Expected output begins with `8 named profiles; 11 scenarios; 33 mutable parameters
 per condition`. A simulation reports `2 runs; 11 time points each` and confirms
 that CSV manifests retain complete profile receipts. Inspection mode saves the
-same inputs without simulating. Both modes check that a later edit is labelled
+same inputs without simulating. Both modes check that a later edit is labeled
 `modified` and that an unknown profile is rejected before running.
 
 Outputs are written below `research-output/precision-profiles/`, one directory per

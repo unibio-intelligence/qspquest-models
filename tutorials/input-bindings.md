@@ -32,7 +32,7 @@ The [runnable script](input_bindings.py) loads version `2.0.0`, reads
 `model.input_bindings` and keeps `context.input_binding_hash`. Each input lists its
 native name and unit, its source label, and either its default, fixed flag and
 bounds (parameters) or its starting expression (states). Some inputs also have a
-description or a friendlier alias. Computed readouts cannot be set as starting
+description or a more descriptive alias. Computed readouts cannot be set as starting
 states.
 
 The script changes `source_symbol_15` (the closing rate while the construct is

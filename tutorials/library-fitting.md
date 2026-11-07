@@ -1,32 +1,45 @@
 # Inspect and execute an archived fitting workflow
 
 Use this workflow to check that a fit recovers known parameters from synthetic
-data stored with the model. Not every runnable model supports fitting. **Two
-models** are fit-ready: the turnover benchmark and the rituximab PK/PD model, both
-at version `0.3.1`. Each fit uses only the synthetic data and settings stored with
-the model.
+data stored with the model. Two archive versions declare fitting contracts: the
+turnover benchmark at version `0.3.1` and the rituximab PK/PD model at version
+`0.3.2`. Archived readiness is separate from compatibility with the installed
+engine.
+
+With the published `qspquest==0.1.0` engine, both workflows are compatible and
+the turnover workflow below passes its recovery checks. The superseded rituximab
+version `0.3.1` records a native-request fingerprint that differs from the
+engine's, so fitting that version is held; its preset simulations remain
+available. Version `0.3.2` reran the same synthetic fits with the engine's
+fingerprint. The integrity check is preserved; changing archived evidence is not
+a way to clear a hold.
 
 ## Prerequisites and discovery
 
-Complete the [library setup](../README.md#setup), activate that environment, and
-run commands from the library checkout. Browsing models and running presets
-need only the CLI. Fitting needs the matching QSPQuest Python binding. Build and
-install it from the engine checkout created during setup:
+Complete the [library setup](../README.md#setup) and activate that environment.
+Installing `qspquest-models==0.1.0` installs the matching Python engine required
+for fitting. The Python API blocks below work from any working directory.
+
+The optional helper-script commands use the complete source distribution.
+Download and extract that same public package, then run from its root:
 
 ```sh
-python -m pip install ../qspquest
+python -m pip download --no-deps --no-binary=qspquest-models qspquest-models==0.1.0
+python -m tarfile -e qspquest_models-0.1.0.tar.gz .
+cd qspquest_models-0.1.0
 python tutorials/fitting_workflow.py --library .
 ```
 
-Alternatively, install a matching platform wheel as described in
-[engine installation](https://github.com/unibio-intelligence/qspquest/blob/main/docs/installation.md#install-a-wheel).
-The second command lists the fitting workflows and checks them against your
-binding; it does not run a fit.
+The last command lists fitting workflows and checks them against the installed
+binding; it does not run a fit. No engine checkout or native build is needed.
 
-It prints JSON with two entries under `fit_ready_models`. Each gives the model
-version, workflow ID, operation, parameter units, bounds, starting values, true
-values and allowed error. An empty list means no model supports fitting, not that
-simulation is unavailable.
+It prints compatible contracts under `fit_ready_models` and any engine-identity
+holds under `unavailable_fitting_models`. For the engine above, expect the
+turnover benchmark and rituximab in the first list and an empty second list. Each compatible
+entry gives the model version, workflow ID, operation, parameter units, bounds,
+starting values, true values and allowed error. Discovery checks compatibility;
+it does not run or qualify every fit. An empty compatible list does not mean
+preset simulation is unavailable.
 
 Inspect a verified declaration without running a fit:
 
@@ -34,13 +47,13 @@ Inspect a verified declaration without running a fit:
 python - <<'PY'
 import json
 from qspquest_models import Library
-model = Library('.').load('qspquest_diffdose_2026_idr_benchmark', version='0.3.1')
+model = Library().load('qspquest_diffdose_2026_idr_benchmark', version='0.3.1')
 print(json.dumps(model.fitting_contract, indent=2))
 print(model.fitting_workflows)
 PY
 ```
 
-Each model has three BDF workflows with different starting points. Without the Python binding, `fitting_contract` and
+Each model has three workflows that use the backward differentiation formula (BDF) solver, with different starting points. Without the Python binding, `fitting_contract` and
 `fitting_workflows` fail with an installation message. A model without fitting
 support returns `{}` and `[]`, and `fit_workflow` fails before fitting.
 
@@ -63,7 +76,7 @@ The equivalent Python call is:
 ```python
 import os
 from qspquest_models import Library
-model = Library('.').load(os.environ['MODEL_ID'], version=os.environ['MODEL_VERSION'])
+model = Library().load(os.environ['MODEL_ID'], version=os.environ['MODEL_VERSION'])
 result = model.fit_workflow(os.environ['WORKFLOW_ID'])
 print(result['checks'])
 ```

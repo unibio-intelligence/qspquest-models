@@ -1,10 +1,11 @@
 # Named OMEX simulations through the QSPQuest engine.
-qspquest_library <- function(root, python = Sys.getenv("QSPQUEST_PYTHON", "python3"), executable = Sys.getenv("QSPQUEST_EXECUTABLE", "")) {
-  root <- normalizePath(root, mustWork = TRUE)
+qspquest_library <- function(root = NULL, python = Sys.getenv("QSPQUEST_PYTHON", "python3"), executable = Sys.getenv("QSPQUEST_EXECUTABLE", "")) {
+  if (!is.null(root)) root <- normalizePath(root, mustWork = TRUE)
   invoke <- function(args) {
     # A local installed package supplies the loader. Pass paths as arguments.
     output <- tempfile(fileext = ".json"); on.exit(unlink(output))
-    command <- c("-m", "qspquest_models", "--library", shQuote(root), "--format", "json")
+    command <- c("-m", "qspquest_models", "--format", "json")
+    if (!is.null(root)) command <- c(command, "--library", shQuote(root))
     if (nzchar(executable)) command <- c(command, "--executable", shQuote(executable))
     value <- system2(python, c(command, args), stdout = TRUE, stderr = output)
     if (!is.null(attr(value, "status")) && attr(value, "status") != 0L) stop(paste(readLines(output), collapse = "\n"))

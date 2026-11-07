@@ -1,6 +1,6 @@
 # QSP: how a local gate changes receptor occupancy
 
-Explore a mechanistic question: can local gate-assisted opening increase tumor
+This quantitative systems pharmacology (QSP) tutorial addresses a mechanistic question: can local gate-assisted opening increase tumor
 cargo-receptor occupancy while retaining lower systemic occupancy?
 This model uses synthetic parameters, 11 state pools and named presets. No
 dataset or download is needed beyond QSPQuest and the library.
@@ -10,7 +10,7 @@ It demonstrates simulation and amount bookkeeping, not efficacy, toxicity or
 population fitting. Units have not been independently checked. See the
 [model card](../models/qspquest_ubi_2026_target_gated_cargo_qsp/2.0.0/MODEL_CARD.md).
 
-## Start
+## Setup
 
 Complete the [library setup](../README.md#setup). The Python
 simulation and checks need only the loader and QSPQuest CLI. Install the plot
@@ -64,7 +64,7 @@ output.mkdir(exist_ok=True)
 
 ## Run a controlled comparison
 
-Each dosed preset gives the same single 30-unit IV bolus of closed construct at
+Each dosed preset gives the same single 30-unit intravenous (IV) bolus of closed construct at
 0 h and samples every 6 h through 336 h (57 rows). The source names those dose
 coordinates nmol. The zero-dose control covers 0–24 h (25 rows).
 
@@ -75,7 +75,7 @@ coordinates nmol. The zero-dose control covers 0–24 h (25 rows).
 | `leaky_systemic_gate_30nmol_iv` | Background opening rate: 0.004 → 0.04 |
 | `no_dose_homeostasis` | No dose; all construct pools start at zero |
 
-Two more presets are available to explore later. Each comparison changes a
+Two further presets are available but are not used here. Each comparison changes a
 mechanism as defined in the model; nothing is fitted.
 
 ```python
@@ -100,7 +100,7 @@ def values(result, name):
 
 ![Stored trajectories for the four comparison conditions](qsp-occupancy.svg)
 
-This preview uses the distributed results. The code below runs and plots your own results.
+This preview shows the stored results distributed with the library. The code below reruns the presets and plots the new results.
 
 ```python
 import matplotlib.pyplot as plt
@@ -131,8 +131,7 @@ for label, result in results.items():
           'central:', round(values(result, 'central_receptor_occupancy_percent')[i], 2))
 ```
 
-At 24 h the balanced preset gives about **37.65% tumor / 13.48% central**
-occupancy. Removing the tumor gate gives **1.37% / 13.48%**. Background leakage
+At 24 h the balanced preset gives a simulated occupancy of about **37.65% tumor / 13.48% central**. Removing the tumor gate gives **1.37% / 13.48%**. Background leakage
 gives **38.33% / 57.70%**; both zero-dose readouts remain zero.
 Removing the gate reduces local occupancy; increasing background opening raises
 systemic occupancy. These are consequences of this synthetic model and its fixed

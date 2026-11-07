@@ -2,7 +2,7 @@
 
 [Choose a model](../MODEL_CATALOG.md) · [Change an input](change-inputs.md) · [Technical reference](model-format.md)
 
-These examples use the full rat model
+These examples use the full rat adeno-associated virus (AAV) brain model
 [`qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp`](../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.1.2/MODEL_CARD.md).
 Complete [Python setup](../README.md#setup), including the engine, and run each
 example from the library checkout (the output-inspection example does not need
@@ -69,7 +69,7 @@ adopted coordinates `mab_lymph, target_lymph, complex_lymph`; author-code status
 The CSV's `.manifest.json` records this choice. Use a new filename if that pair
 already exists; files are never overwritten.
 
-Equations 134-136 (supplement page 32) use plasma concentrations for both plasma
+In the source paper's supplement, equations 134-136 (page 32) use plasma concentrations for both plasma
 and lymph binding. This model uses local lymph concentrations instead. A model
 that follows the printed equations literally is not wrong for that reason alone.
 
@@ -82,8 +82,8 @@ balance and clinical use have not been checked.
 
 ## Change protein barriers without changing vector barriers
 
-Purpose: explore a BBB/BCSFB protein intervention in the full rat model while
-keeping the AAV vector inputs. No animal data is needed.
+Purpose: simulate a protein intervention at the blood–brain barrier (BBB) and the
+blood–cerebrospinal fluid barrier (BCSFB) in the full rat model while keeping the AAV vector inputs. No animal data is needed.
 
 The four reflection inputs are dimensionless numbers between 0 and 1:
 
@@ -94,7 +94,7 @@ The four reflection inputs are dimensionless numbers between 0 and 1:
 | `sigma_protein_bbb` | mAb, TargetX and complex at BBB | 0.9975 |
 | `sigma_protein_bcsfb` | mAb, TargetX and complex at BCSFB | 0.9973 |
 
-The protein inputs act on antibody, TargetX and complex together; they cannot
+The protein inputs act on the monoclonal antibody (mAb), TargetX and complex together; they cannot
 target TargetX alone. `model.parameter_effects` lists what each input affects.
 `copy.parameters` shows editable inputs with their values and units;
 `set_parameter` keeps the unit and rejects unknown names, fixed inputs, non-finite
@@ -144,17 +144,17 @@ model.write_csv(shared_result, 'shared-barrier.csv')
 BARRIERS
 ```
 
-Expect version `2.1.2`, 101 rows and `364 vector states preserved`. The final
-ISF mAb readout is about **8.5530** at baseline and **9.8047** with the protein-only
-override; the final CSF TargetX percentage readout is about **88.3685** and
+Expect version `2.1.2`, 101 rows and `364 vector states preserved`. The final simulated
+brain interstitial fluid (ISF) mAb readout is about **8.5530** at baseline and **9.8047** with the protein-only
+override; the final cerebrospinal fluid (CSF) TargetX percentage readout is about **88.3685** and
 **121.3294**, respectively. Lowering reflection changes both antibody and target
 transport, so stronger target suppression is not guaranteed. These are exploratory
-predictions; a percentage above 100 is relative to the model's baseline value and
+simulated values; a percentage above 100 is relative to the model's baseline value and
 has not been checked against physiology. The vector states stay the same within
 solver rounding (absolute tolerance `1e-18`, relative tolerance `1e-6`). Keep each
 CSV with its `.manifest.json`, which records the inputs used.
 
-An MCP agent can inspect these inputs with `get_model`, then use this complete
+An agent using the Model Context Protocol (MCP) can inspect these inputs with `get_model`, then use this complete
 `simulate` arguments object for the same protein-only request:
 
 ```json

@@ -6,7 +6,7 @@ Explore bispecific-driven T-cell activation and tumor-cell killing in vitro.
 
 **Inspection only · simulation unavailable.** Version 0.1.0.
 
-This is an alternate version. [Open the default version](../2.0.1/MODEL_CARD.md) for the standard quickstart.
+This is an alternate version. [Open the default version](../2.0.2/MODEL_CARD.md) for the standard quickstart.
 
 ## Interpretation and limits
 

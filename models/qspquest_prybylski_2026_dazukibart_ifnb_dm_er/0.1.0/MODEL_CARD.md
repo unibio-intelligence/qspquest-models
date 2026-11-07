@@ -10,12 +10,12 @@ Explore dazukibart exposure-response endpoints in dermatomyositis.
 
 Full ODE simulation of the Stage 1/3 600 mg q4w regimen through crossover week 12.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_prybylski_2026_dazukibart_ifnb_dm_er', version='0.1.0')
+model = Library().load('qspquest_prybylski_2026_dazukibart_ifnb_dm_er', version='0.1.0')
 result = model.run('stage1-600mg-q4w-cdasi-tis')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -48,7 +48,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `state__ifn_total_pg_ml` | Total interferon concentration | `pg/mL` |
 | `state__end_cdasi_a` | Skin disease activity endpoint in the source response model | `score` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -57,7 +57,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_prybylski_2026_dazukibart_ifnb_dm_er --model-version 0.1.0 --scenario stage1-600mg-q4w-cdasi-tis --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_prybylski_2026_dazukibart_ifnb_dm_er --model-version 0.1.0 --scenario stage1-600mg-q4w-cdasi-tis --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -102,7 +102,7 @@ The `stage1-600mg-q4w-cdasi-tis` starter has **52 rows**. Reference checkpoints:
 | `state__end_cdasi_a` | 24 | 10.7518 (12 h, pre) | 24 (0 h, post) | 10.7518 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

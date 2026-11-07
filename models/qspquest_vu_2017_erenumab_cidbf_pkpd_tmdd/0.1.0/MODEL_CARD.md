@@ -4,24 +4,28 @@
 
 Explore erenumab disposition and capsaicin-induced dermal blood-flow response.
 
-**Runnable · 13 experiments.** Version 0.1.0.
+**Retained alternate archive · source and stored-evidence inspection.** Version 0.1.0.
 
-## Run an experiment
+This is an alternate version. [Open the default version](../0.1.1/MODEL_CARD.md) for the standard quickstart.
 
-Monthly 70 mg SC dose-selection simulation at the phase 1 median body weight; paper reports all subjects were expected to exceed mean IC99 within the first dose.
+## Inspect a retained archive
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+This version is retained for source and stored-evidence inspection. Use the linked current version for the supported simulation quickstart.
+
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
-from qspquest_models import Library
+from qspquest_models import Library, load_archive
 
-model = Library('.').load('qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd', version='0.1.0')
-result = model.run('sc-70mg-q4w-75kg-dynamic')
-model.write_csv(result, 'model-example-python.csv')
-print(len(result['times']), 'rows')
+model = load_archive(
+    Library().root / 'models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.1.0/model.omex',
+    expected_sha256='d82b41ccfaf1747814251d3d79dec10533683744c5b040d04b048f47f677a4d7',
+)
+print(model.model_id, model.index['model_version'])
+print(model.scenario_ids)
 ```
 
-### Choose an experiment
+### Archived experiments
 
 A preset is a named experiment with fixed inputs. Summary and table replays return stored
 values; they are not new fits and may not change over time.
@@ -29,7 +33,7 @@ values; they are not new fits and may not change over time.
 <details>
 <summary>Browse all 13 runnable experiments</summary>
 
-| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
+| Archived experiment ID | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
 | `iv-140mg-single-infusion-dynamic` | IV infusion path exercising the paper's Atot(0)=DoseIV branch using an input rate into the central total amount. This is a runtime smoke scenario, not a reproduced figure. | 0–84 h | 86 |
 | `paper-population-and-threshold-checks` | Exact paper and supplement text values for data size, ADA counts, IC99, nonlinear clearance, body-weight percentiles, and selected dose-regimen statements. | 0–1 h | 2 |
@@ -52,7 +56,7 @@ values; they are not new fits and may not change over time.
 Each experiment supplies the parameters, initial state, dosing schedule and sampling times.
 [Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.
 
-`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes
+The archived primary table contains `time`, `side` and the readouts below. `side` distinguishes
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
@@ -61,21 +65,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `total_concentration_ug_mL` | Total erenumab concentration | `1` |
 | `cidbf_inhibition_pct` | Inhibition of capsaicin-induced dermal blood flow | `1` |
 
-Python exports this small table by default. To export every output and biological state:
-
-```python
-model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
-```
-
-The CLI uses the same selection (`--all-readouts` exports the complete table):
-
-```sh
-python -m qspquest_models --library . --model qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd --model-version 0.1.0 --scenario sc-70mg-q4w-75kg-dynamic --csv model-example-cli.csv
-```
-
-In R, `qspquest_data_frame(result)` returns the same primary columns.
-Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
-[R setup and examples](../../../tutorials/r-quickstart.md).
+The table describes archived primary readouts. Use the current-version guide for supported simulation and CSV or R data-frame export.
 
 <details>
 <summary>Technical inventory: 65 outputs and 6 states</summary>
@@ -160,7 +150,7 @@ Column names follow the source paper. A unit of `1` means the engine uses the so
 as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Check your result
+### Stored reference result
 
 The `sc-70mg-q4w-75kg-dynamic` starter has **85 rows**. Reference checkpoints:
 
@@ -170,7 +160,7 @@ The `sc-70mg-q4w-75kg-dynamic` starter has **85 rows**. Reference checkpoints:
 | `cidbf_inhibition_pct` | 0 | 0 (0 h, post) | 89.2983 (61 h, post) | 89.2833 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

@@ -2,21 +2,22 @@
 
 [Start here](README.md) · [Python](tutorials/python-quickstart.md) · [R](tutorials/r-quickstart.md) · [Understand results](tutorials/understand-results.md)
 
-Browse 72 models below, grouped by topic. Use your browser’s Find command to search for a drug,
+Browse 62 models below, grouped by topic. Use your browser’s Find command to search for a drug,
 disease or mechanism. Each model guide lists its experiments and outputs.
-62 models simulate, 5 replay published results and 5 are for inspection only.
+Every model in this catalog can be simulated.
 
-## Good places to start
+## Suggested starting points
 
-| Your question | Start with |
+| Question | Model or tutorial |
 | --- | --- |
-| How do I run and plot a published PK/PD model? | [Rituximab and B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.1/MODEL_CARD.md) |
+| How do I run and plot a published PK/PD model? | [Rituximab and B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.2/MODEL_CARD.md) |
 | How does local gating affect tumor versus systemic occupancy? | [Target-gated cargo walkthrough](tutorials/qsp-gated-cargo.md) |
 | How does exposure change biomarker turnover? | [Small turnover benchmark](models/qspquest_diffdose_2026_idr_benchmark/0.3.1/MODEL_CARD.md) |
 
-PK describes drug exposure, PD describes drug effects, PBPK describes distribution through
-physiological compartments, and QSP describes interacting biological mechanisms.
-PopPK in a model name describes its source; these library examples run fixed parameters, not population fits.
+Pharmacokinetic (PK) models describe drug exposure, pharmacodynamic (PD) models describe drug effects,
+physiologically based pharmacokinetic (PBPK) models describe distribution through physiological compartments,
+and quantitative systems pharmacology (QSP) models describe interacting biological mechanisms.
+PopPK (population pharmacokinetics) in a model name describes its source; these library examples run fixed parameters, not population fits.
 
 ## Browse by topic
 
@@ -33,13 +34,10 @@ PopPK in a model name describes its source; these library examples run fixed par
 | Model | What it describes | Availability |
 | --- | --- | --- |
 | [Asiimwe 2025 ADC MBMA/CUI PopPK](models/qspquest_asiimwe_2025_adc_mbma_cui_poppk/0.1.0/MODEL_CARD.md) | Explore fixed-effect T-DM1 and T-DXd exposure; inspect static utility endpoints. | Runnable · 15 experiments |
-| [Caimi 2024 loncastuximab CD19 QSP dynamic reconstruction](models/qspquest_caimi_2024_loncastuximab_cd19_qsp/0.1.0/MODEL_CARD.md) | Explore reduced loncastuximab trafficking and tumor response; some experiments are unavailable. | Source replay available; dynamic simulation unavailable · 4 unavailable |
 | [Chang 2025 Positively Charged Trastuzumab-vc-MMAE ADC Mouse PK/PD](models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.1.1/MODEL_CARD.md) | Compare charged and wild-type trastuzumab ADC exposure and mouse study endpoints. | Runnable · 37 experiments |
-| [Chen 2025 trastuzumab-PE24 AIDE sphere PK/PD](models/qspquest_chen_2025_trastuzumab_aide_pe24_sphere_pkpd/0.1.0/MODEL_CARD.md) | Explore a trastuzumab-PE24 distribution model; some experiments are unavailable. | Source replay available; dynamic simulation unavailable · 4 unavailable |
 | [Cheng 2022 SKB264 TROP2 ADC Preclinical PK/PD Table-Replay Model](models/qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd/0.1.0/MODEL_CARD.md) | Inspect SKB264 preclinical endpoints and exploratory tumor-growth curves. | Runnable · 47 experiments |
 | [Enfortumab vedotin ADC–payload exposure: exploratory reduced model](models/qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi/0.1.0/MODEL_CARD.md) | Explore reduced ADC and payload exposure; this is not the original full PBPK mechanism. | Runnable · 8 experiments |
 | [Garrett 2019 Inotuzumab Ozogamicin PopPK Model](models/qspquest_garrett_2019_inotuzumab_ozogamicin_poppk/0.1.0/MODEL_CARD.md) | Explore fixed inotuzumab exposure with time-dependent clearance and covariates. | Runnable · 11 experiments |
-| [Op t Hoog 2025 enfortumab vedotin PopPK dosing](models/qspquest_op_t_hoog_2025_enfortumab_vedotin_poppk_dosing/0.1.0/MODEL_CARD.md) | Inspect enfortumab dosing and exposure scenarios; simulation is unavailable. | Inspection only · simulation unavailable |
 | [Stathis 2018 IMGN529 NCA Replay and Exploratory Dose-Level PK Surrogate](models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.1.1/MODEL_CARD.md) | Inspect IMGN529 NCA endpoints and exploratory exposure curves. | Runnable · 17 experiments |
 
 ## Gene delivery and antibody distribution
@@ -59,16 +57,13 @@ PopPK in a model name describes its source; these library examples run fixed par
 | [Briggs 2023 dupilumab AD exposure-response PK/PD](models/qspquest_briggs_2023_dupilumab_ad_er_pkpd/0.1.0/MODEL_CARD.md) | Explore dupilumab exposure-response relationships in atopic dermatitis. | Runnable · 3 experiments |
 | [Cai 2024 ustekinumab pediatric IBD PBPK reduced FcRn/lymphatic ODE](models/qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced/0.1.0/MODEL_CARD.md) | Explore pediatric ustekinumab distribution with a reduced physiological model. | Runnable · 8 experiments |
 | [Coto-Segura 2023 certolizumab pegol psoriasis QSP](models/qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp/0.1.0/MODEL_CARD.md) | Explore certolizumab exposure and psoriasis-response mechanisms. | Runnable · 3 experiments |
-| [Duvnjak 2026 vedolizumab pregnancy albumin/PK](models/qspquest_duvnjak_2026_vedolizumab_pregnancy_albumin_pk/0.1.0/MODEL_CARD.md) | Inspect the relationship between albumin and vedolizumab exposure during pregnancy. | Source replay available; dynamic simulation unavailable · 4 unavailable |
 | [Hemperly 2025 infliximab pediatric IBD PK/ER](models/qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er/0.1.0/MODEL_CARD.md) | Explore pediatric infliximab exposure and IBD response summaries. | Runnable · 4 experiments |
 | [Hyams 2022 Vedolizumab Pediatric HUBBLE PK/NCA/Exposure-Response Intake](models/qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er/0.1.0/MODEL_CARD.md) | Inspect pediatric vedolizumab exposure, NCA and response endpoints. | Runnable · 11 experiments |
 | [Markovic 2024 Vedolizumab Clearance/Remission PopPK](models/qspquest_markovic_2024_vedolizumab_clearance_remission_poppk/0.1.0/MODEL_CARD.md) | Explore vedolizumab clearance and remission relationships. | Runnable · 9 experiments |
 | [Prybylski 2026 dazukibart IFN-beta dermatomyositis ER](models/qspquest_prybylski_2026_dazukibart_ifnb_dm_er/0.1.0/MODEL_CARD.md) | Explore dazukibart exposure-response endpoints in dermatomyositis. | Runnable · 4 experiments |
 | [Rodriguez-Fernandez 2024 Secukinumab MIPD Psoriasis PK/PD](models/qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd/0.1.0/MODEL_CARD.md) | Explore fixed secukinumab exposure and psoriasis-response scenarios. | Runnable · 26 experiments |
 | [Rodriguez-Fernandez 2024 Ustekinumab MIPD Psoriasis PK/PD](models/qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis/0.1.0/MODEL_CARD.md) | Explore fixed ustekinumab exposure and psoriasis-response scenarios. | Runnable · 3 experiments · 1 unavailable |
-| [Thomas 2025 risankizumab precision-dosing dashboard](models/qspquest_thomas_2025_risankizumab_precision_dosing_dashboard/0.1.0/MODEL_CARD.md) | Inspect fixed risankizumab exposure; this is not a clinical dosing service. | Source replay available; dynamic simulation unavailable · 2 unavailable |
 | [Waterhouse 2024 Vedolizumab allo-HSCT GvHD prophylaxis PopPK](models/qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk/0.1.0/MODEL_CARD.md) | Explore fixed vedolizumab exposure in transplant prophylaxis scenarios. | Runnable · 37 experiments |
-| [Yarur 2025 ustekinumab clearance/disease-control PK](models/qspquest_yarur_2025_ustekinumab_clearance_ibd_pk/0.1.0/MODEL_CARD.md) | Inspect ustekinumab clearance and IBD disease-control relationships. | Source replay available; dynamic simulation unavailable · 3 unavailable |
 
 ## Learning and synthetic mechanisms
 
@@ -84,14 +79,12 @@ PopPK in a model name describes its source; these library examples run fixed par
 
 | Model | What it describes | Availability |
 | --- | --- | --- |
-| [Gupta 2025 erenumab rat immune-tolerance PK/PD](models/qspquest_gupta_2025_erenumab_immune_tolerance_pkpd/0.1.0/MODEL_CARD.md) | Inspect a rat erenumab immune-tolerance model; simulation is unavailable. | Inspection only · simulation unavailable |
 | [Lee 2023 ATC161 AUTOTAC alpha-synuclein source-limited PK/PD](models/qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd/0.1.0/MODEL_CARD.md) | Inspect ATC161 degradation endpoints and an exploratory reduced PK/PD model. | Runnable · 3 experiments |
 | [Li 2024 rituximab pediatric INS B-cell repletion K-PD](models/qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic/0.1.0/MODEL_CARD.md) | Explore B-cell recovery after rituximab in pediatric nephrotic syndrome. | Runnable · 24 experiments |
 | [Monteleone 2021 Eculizumab gMG PK/PD](models/qspquest_monteleone_2021_eculizumab_gmg_pkpd/0.1.0/MODEL_CARD.md) | Explore reduced eculizumab exposure and free-C5 response in generalized myasthenia gravis. | Runnable · 7 experiments |
 | [Ortiz 2024 ravulizumab NMOSD PK/PD](models/qspquest_ortiz_2024_ravulizumab_nmosd_pkpd/0.1.0/MODEL_CARD.md) | Explore endpoint-constrained ravulizumab exposure and free-C5 response. | Runnable · 4 experiments |
 | [Pasquiers 2025 rituximab ANCA/gammaglobulin PK/PD](models/qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd/0.1.0/MODEL_CARD.md) | Explore rituximab exposure, ANCA and gammaglobulin dynamics. | Runnable · 5 experiments |
-| [Pernice 2023 GreatNector Alemtuzumab MS Petri Net ODE](models/qspquest_pernice_2023_greatnector_alemtuzumab_ms_petrinet_ode/0.1.0/MODEL_CARD.md) | Inspect alemtuzumab and multiple-sclerosis immune dynamics; simulation is unavailable. | Inspection only · simulation unavailable |
-| [Rituximab exposure–CD19+ B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.1/MODEL_CARD.md) | Compare typical and individualized rituximab exposure and B-cell depletion/recovery. | Runnable · 3 experiments |
+| [Rituximab exposure–CD19+ B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.2/MODEL_CARD.md) | Compare typical and individualized rituximab exposure and B-cell depletion/recovery. | Runnable · 3 experiments |
 | [Vu 2017 Erenumab QSS TMDD and CIDBF PK/PD Model](models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.1.1/MODEL_CARD.md) | Explore erenumab disposition and capsaicin-induced dermal blood-flow response. | Runnable · 13 experiments |
 | [Yoshida 2020 crenezumab Abeta TMDD PK/PD model](models/qspquest_yoshida_2020_crenezumab_abeta_tmdd_pkpd/0.1.0/MODEL_CARD.md) | Explore crenezumab binding and amyloid-beta PK/PD dynamics. | Runnable · 4 experiments |
 
@@ -108,8 +101,6 @@ PopPK in a model name describes its source; these library examples run fixed par
 | [Jafarnejad 2019 Neoadjuvant Nivolumab NSCLC QSP](models/qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp/0.1.0/MODEL_CARD.md) | Explore nivolumab and immune mechanisms in neoadjuvant lung-cancer scenarios. | Runnable · 2 experiments |
 | [Lobet 2026 panitumumab body-composition PopPK](models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.1.1/MODEL_CARD.md) | Explore panitumumab exposure with body-composition covariates. | Runnable · 2 experiments |
 | [Panoilia 2015 Bevacizumab VEGF165 QSS TMDD PopPK Binding Model](models/qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd/0.1.0/MODEL_CARD.md) | Explore bevacizumab binding to VEGF165 and target-mediated disposition. | Runnable · 14 experiments |
-| [Poels 2025 elranatamab RRMM QSP](models/qspquest_poels_2025_elranatamab_mm_qsp/0.1.0/MODEL_CARD.md) | Inspect an elranatamab multiple-myeloma QSP model; simulation is unavailable. | Inspection only · simulation unavailable |
-| [Prunella 2025 Ramucirumab/Paclitaxel Digital-Twin PK-PD QSP](models/qspquest_prunella_2025_ramucirumab_paclitaxel_digital_twin/0.1.0/MODEL_CARD.md) | Inspect ramucirumab/paclitaxel PK/PD scenarios; simulation is unavailable. | Inspection only · simulation unavailable |
 | [Quartino 2017 Pertuzumab Neoadjuvant PK/Exposure-Response Model](models/qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er/0.1.0/MODEL_CARD.md) | Explore pertuzumab exposure and neoadjuvant response summaries. | Runnable · 7 experiments |
 | [Shemesh 2019 Atezolizumab Pediatric and Young Adult PopPK/Safety Model](models/qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety/0.2.1/MODEL_CARD.md) | Explore atezolizumab exposure and safety summaries in younger populations. | Runnable · 16 experiments |
 | [Sule 2025/2026 bevacizumab pediatric minimal PBPK bridge](models/qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge/0.1.0/MODEL_CARD.md) | Explore a reduced physiological model for pediatric bevacizumab exposure. | Runnable · 13 experiments |
@@ -138,7 +129,7 @@ PopPK in a model name describes its source; these library examples run fixed par
 ## Search from the terminal
 
 ```sh
-python -m qspquest_models --library . --search rituximab --runnable
+python -m qspquest_models --search rituximab --runnable
 ```
 
 Add `--format json` for machine-readable output. The [technical reference](tutorials/model-format.md)

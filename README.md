@@ -7,63 +7,60 @@ the hosted service at [biologics.unibiointelligence.com](https://biologics.unibi
 **[Choose a model](MODEL_CATALOG.md)** · **[Run the example below](#run-a-rituximab-model)** ·
 **[Preview a stored result](tutorials/understand-results.md#read-a-stored-result)**
 
-The library contains 72 models: 62 simulate, 5 replay published results and 5 are for inspection only. Together they offer 644 ready-to-run experiments.
+The library contains 62 simulation models. Together they provide 639 preset experiments.
 Examples use fixed parameters, their units have not been independently checked,
-and they are not for choosing clinical doses.
+and they are not intended for clinical dose selection.
 
 ## Setup
 
-You need CPython 3.10+, Rust 1.98.1 and a native compiler. See
-[engine installation](https://github.com/unibio-intelligence/qspquest/blob/main/docs/installation.md)
-for build tools and Windows environment activation. Clone the library and engine
-into the same directory, then install the loader and build the engine:
+Use CPython 3.10 or newer. Create a virtual environment, activate it, and
+install the library with its matching simulation engine:
 
 ```sh
-git clone https://github.com/unibio-intelligence/qspquest.git qspquest
-git clone https://github.com/unibio-intelligence/qspquest-models.git qspquest-models
-cd qspquest-models
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install -e .
-(cd ../qspquest && cargo build --release --locked -p qspquest-cli)
-export QSPQUEST_EXECUTABLE="$(cd ../qspquest && pwd)/target/release/qspquest"
+python -m pip install qspquest-models==0.1.0
 ```
 
-The first engine build can take several minutes. Keep this environment active and
-run the examples from `qspquest-models/`. The Python distribution also bundles the
-catalog and model archives; an installed wheel needs no library checkout and uses
-its bundled library when `--library` is omitted.
-[Fitting](tutorials/library-fitting.md) also needs the matching QSPQuest Python
-binding; simulation does not. With the binding installed, `QSPQUEST_EXECUTABLE`
-is optional.
+On Windows PowerShell, create the environment with `py -m venv .venv` and
+activate it with `.\.venv\Scripts\Activate.ps1` before the same install command.
+The library bundles its catalog and model archives. Supported engine wheels
+need no Rust compiler, source checkout, library-path setting or command-line interface (CLI) executable.
+See the [installation and Python guide](PACKAGE_README.md) for supported platforms,
+a complete Python example and troubleshooting.
+
+The examples below use the installed library from any working directory.
+For source development, install this checkout with `python -m pip install .`;
+pass `--library .` only when intentionally selecting the checkout's library.
+The extended tutorials use the source checkout for their accompanying files.
 
 ## Run a rituximab model
 
-Explore circulating rituximab and CD19+ B cells over 200 days with a fixed typical
-parameter set. The 1000 mg dose is set as a starting concentration (dose/V);
+This example simulates circulating rituximab and CD19+ B cells over 200 days with a fixed typical
+parameter set. The 1000 mg dose is set as a starting concentration (dose divided by volume, dose/V);
 repeat doses are not modeled.
 
 ```sh
-python -m qspquest_models --library . \
-  --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.1 \
+python -m qspquest_models \
+  --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.2 \
   --scenario population-typical-1000mg-full-ode --csv rituximab-cli.csv
 python -m qspquest_models --verify-table rituximab-cli.csv
 ```
 
 Keep `rituximab-cli.csv` and `rituximab-cli.csv.manifest.json` together. The CSV
 contains **201 data rows** with time, event side, rituximab concentration and
-B-cell readouts. CD19+ B cells start at **199.57** and end near **8.70521**.
+B-cell readouts. Simulated CD19+ B cells start at **199.57** and end near **8.70521**.
 Choose a new filename when rerunning: exports never replace existing files.
 
 Outputs are in `mg/L` and `[cell]/mm3`; these units have not yet been independently
-checked. If you see `unknown_unit`, build the matching engine. Read the
-[model guide](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.1/MODEL_CARD.md)
+checked. If you see `unknown_unit`, install the matching `qspquest==0.1.0` engine. Read the
+[model guide](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.2/MODEL_CARD.md)
 and [output interpretation](tutorials/understand-results.md) before using values
 quantitatively.
 
-## Continue with your question
+## Next steps
 
-| I want to… | Next step |
+| Task | Guide |
 | --- | --- |
 | Plot a result | [Python quickstart](tutorials/python-quickstart.md) or [R quickstart](tutorials/r-quickstart.md) |
 | Find a different drug or mechanism | [Model catalog](MODEL_CATALOG.md), grouped by topic |
@@ -74,8 +71,8 @@ quantitatively.
 Search and list a model's exact experiment IDs from the terminal:
 
 ```sh
-python -m qspquest_models --library . --search rituximab --runnable
-python -m qspquest_models --library . --model qspquest_serkland_2025_rituximab_ms_pkpd
+python -m qspquest_models --search rituximab --runnable
+python -m qspquest_models --model qspquest_serkland_2025_rituximab_ms_pkpd
 ```
 
 Use `--model-version VERSION` to pin a catalog version; omitting it chooses the
@@ -84,13 +81,13 @@ also matches catalog descriptions, such as `B-cell recovery`. CSV exports use a
 small set of explained primary readouts; `--all-readouts` includes every output
 and biological state.
 
-## If something goes wrong
+## Troubleshooting
 
 | Problem | Next step |
 | --- | --- |
-| Loader cannot be imported | Activate the environment where `pip install -e .` ran. |
-| Engine cannot be found | Set `QSPQUEST_EXECUTABLE` to the built CLI's absolute path. |
-| Catalog cannot be found | Pass `--library /path/to/qspquest-models`. |
+| Loader cannot be imported | Activate the environment used to install `qspquest-models`. |
+| Engine cannot be found | Reinstall `qspquest-models==0.1.0` in the active environment and run `python -m pip check`. |
+| Catalog cannot be found | Remove an obsolete `QSPQUEST_LIBRARY_DIR` setting to use the bundled library. |
 | Unknown model, version or experiment | Search the catalog and list the exact experiment IDs before running. |
 | An output file already exists | Choose a new filename; keep each CSV with its manifest. |
 

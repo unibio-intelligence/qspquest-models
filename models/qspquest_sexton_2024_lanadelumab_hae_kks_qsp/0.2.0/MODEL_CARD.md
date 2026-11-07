@@ -10,12 +10,12 @@ Explore lanadelumab effects on the kallikrein-kinin system.
 
 Replay of the public SI author-code smoke run for the first sampled virtual patient. The internal model clock starts at 0 h; reported paper/author time is internal time minus 3016 h.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_sexton_2024_lanadelumab_hae_kks_qsp', version='0.2.0')
+model = Library().load('qspquest_sexton_2024_lanadelumab_hae_kks_qsp', version='0.2.0')
 result = model.run('first-virtual-patient-150mg-q2w-author-replay')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -45,7 +45,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `CS_RO_BDKRB2` | Bradykinin B2 receptor occupancy | `1` |
 | `CS_prct_HK2Chain` | Percentage of two-chain high-molecular-weight kininogen | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -54,7 +54,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_sexton_2024_lanadelumab_hae_kks_qsp --model-version 0.2.0 --scenario first-virtual-patient-150mg-q2w-author-replay --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_sexton_2024_lanadelumab_hae_kks_qsp --model-version 0.2.0 --scenario first-virtual-patient-150mg-q2w-author-replay --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -159,7 +159,7 @@ The `first-virtual-patient-150mg-q2w-author-replay` starter has **147 rows**. Re
 | `CS_prct_HK2Chain` | 0 | 0 (0 h, post) | 82.2145 (2530.4 h, pre) | 73.0344 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

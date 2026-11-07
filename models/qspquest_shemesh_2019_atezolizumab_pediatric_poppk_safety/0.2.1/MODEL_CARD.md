@@ -10,12 +10,12 @@ Explore atezolizumab exposure and safety summaries in younger populations.
 
 Fixed-effect projection using published coefficients. Covariate combinations are diagnostic subjects, not reconstructed patients or cohort medians. Dose amounts are fixed in this scenario: recompute the regimen when editing weight. Pediatric dose=min(15 mg/kg,1200 mg); age>=18 dose=1200 mg. No age effect in the final PK equations.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety', version='0.2.1')
+model = Library().load('qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety', version='0.2.1')
 result = model.run('adolescent-ge45kg-15mgkg-q3w-source-limited')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -64,7 +64,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `C_central_ug_mL` | Atezolizumab concentration | `ug/mL` |
 | `AUC_ug_day_mL` | Accumulated central drug exposure | `ug.d/mL` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -73,7 +73,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety --model-version 0.2.1 --scenario adolescent-ge45kg-15mgkg-q3w-source-limited --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety --model-version 0.2.1 --scenario adolescent-ge45kg-15mgkg-q3w-source-limited --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.

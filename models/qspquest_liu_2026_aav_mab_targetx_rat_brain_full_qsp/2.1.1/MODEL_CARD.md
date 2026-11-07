@@ -4,27 +4,28 @@
 
 Compare AAV delivery routes, antibody distribution and brain target engagement in a rat model.
 
-**Runnable · 13 experiments.** Version 2.1.1.
+**Retained alternate archive · source and stored-evidence inspection.** Version 2.1.1.
 
 This is an alternate version. [Open the default version](../2.1.2/MODEL_CARD.md) for the standard quickstart.
 
-## Run an experiment
+## Inspect a retained archive
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+This version is retained for source and stored-evidence inspection. Use the linked current version for the supported simulation quickstart.
+
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
-from qspquest_models import load_archive
+from qspquest_models import Library, load_archive
 
 model = load_archive(
-    'models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.1.1/model.omex',
+    Library().root / 'models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.1.1/model.omex',
     expected_sha256='fdd64ce17b2e6c3e69e2c0c0ca50e6c166a36e39857ac5acbba6aa13e11be5c5',
 )
-result = model.run('figure3_mab_iv_100mgkg')
-model.write_csv(result, 'model-example-python.csv')
-print(len(result['times']), 'rows')
+print(model.model_id, model.index['model_version'])
+print(model.scenario_ids)
 ```
 
-### Choose an experiment
+### Archived experiments
 
 A preset is a named experiment with fixed inputs. Summary and table replays return stored
 values; they are not new fits and may not change over time.
@@ -32,7 +33,7 @@ values; they are not new fits and may not change over time.
 <details>
 <summary>Browse all 13 runnable experiments</summary>
 
-| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
+| Archived experiment ID | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
 | `figure3_mab_iv_100mgkg` | Figure3 mab iv 100mgkg | -1000–504 h | 253 |
 | `figure3_mab_iv_10mgkg` | Figure3 mab iv 10mgkg | -1000–504 h | 253 |
@@ -55,7 +56,7 @@ values; they are not new fits and may not change over time.
 Each experiment supplies the parameters, initial state, dosing schedule and sampling times.
 [Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.
 
-`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes
+The archived primary table contains `time`, `side` and the readouts below. `side` distinguishes
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
@@ -65,17 +66,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `mab_isf_nM` | Antibody concentration in brain interstitial fluid | `1` |
 | `target_isf_pct_baseline` | Brain interstitial target as a percentage of baseline | `1` |
 
-Python exports this small table by default. To export every output and biological state:
-
-```python
-model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
-```
-
-Use the checksum-pinned Python command above for this version; the CLI runs only the default version.
-
-In R, `qspquest_data_frame(result)` returns the same primary columns.
-Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
-[R setup and examples](../../../tutorials/r-quickstart.md).
+The table describes archived primary readouts. Use the current-version guide for supported simulation and CSV or R data-frame export.
 
 <details>
 <summary>Technical inventory: 27 outputs and 725 states</summary>
@@ -841,7 +832,7 @@ Column names follow the source paper. A unit of `1` means the engine uses the so
 as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Check your result
+### Stored reference result
 
 The `figure3_mab_iv_100mgkg` starter has **253 rows**. Reference checkpoints:
 
@@ -852,7 +843,7 @@ The `figure3_mab_iv_100mgkg` starter has **253 rows**. Reference checkpoints:
 | `target_isf_pct_baseline` | 0 | 0 (-1000 h, post) | 99.5489 (-742 h, post) | 90.1056 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

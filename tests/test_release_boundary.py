@@ -18,10 +18,22 @@ class ReleaseBoundaryTests(unittest.TestCase):
     def test_complete_versioned_inventory_preserves_source_only_and_stored_evidence_scope(self):
         result = self.verifier().verify(ROOT)
         self.assertEqual((result["archives"], result["stored_preset_evidence_cases"],
-                          result["selected_stored_preset_evidence_cases"]), (91, 647, 514))
+                          result["selected_stored_preset_evidence_cases"]), (82, 642, 509))
         self.assertEqual(result["current_engine_qualification"], "not_assessed")
-        self.assertFalse(result["publication_ready"])
+        self.assertTrue(result["publication_ready"])
         self.assertEqual(result["fitting_native_identity"], "not_assessed")
+
+    def test_inspection_holds_explain_each_unavailable_scenario(self):
+        library = Library(ROOT)
+        for record in library.availability_records.values():
+            if record.availability != 'inspection_only':
+                continue
+            folder = ROOT / 'models' / record.model_id / record.archive_version
+            holds = json.loads((folder / 'INTERCHANGE_AND_EXECUTION_HOLDS.json').read_text())
+            explained = {row['scenario_id'] for row in holds['parser_or_preparation_holds']
+                         if row.get('error')}
+            model = load_archive(folder / 'model.omex', expected_sha256=record.archive_sha256)
+            self.assertLessEqual(set(model.index['unavailable_scenario_ids']), explained, record.model_id)
 
     def test_native_fitting_verification_cannot_fall_back_to_archive_only(self):
         from unittest.mock import patch
@@ -94,7 +106,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
     def test_source_parser_hold_fails_before_simulator_dispatch(self):
         library = Library(ROOT, executable="/unavailable/simulator")
         model = library.load_source_execution(
-            "qspquest-gupta-2025-erenumab-immune-tolerance-pkpd"
+            "qspquest-yuan-2026-cd3x5t4-in-vitro-qsp"
         )
         self.assertEqual(model.scenario_ids, ())
         sid = model.index["unavailable_scenario_ids"][0]
@@ -104,8 +116,8 @@ class ReleaseBoundaryTests(unittest.TestCase):
     def test_source_discovery_distinguishes_available_and_evidence_bound_presets(self):
         library = Library(ROOT)
         rows = library.list_source_executions()
-        self.assertEqual(len(rows), 65)
-        selected = {'qspquest_serkland_2025_rituximab_ms_pkpd': ('0.3.1', 3),
+        self.assertEqual(len(rows), 55)
+        selected = {'qspquest_serkland_2025_rituximab_ms_pkpd': ('0.3.2', 3),
                     'qspquest_besbassi_2026_crs_qsp_locked_cytokine_network': ('0.1.2', 5),
                     'qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety': ('0.2.1', 16)}
         for row in rows:

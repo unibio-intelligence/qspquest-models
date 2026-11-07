@@ -4,24 +4,28 @@
 
 Compare charged and wild-type trastuzumab ADC exposure and mouse study endpoints.
 
-**Runnable · 37 experiments.** Version 0.1.0.
+**Retained alternate archive · source and stored-evidence inspection.** Version 0.1.0.
 
-## Run an experiment
+This is an alternate version. [Open the default version](../0.1.1/MODEL_CARD.md) for the standard quickstart.
 
-Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.
+## Inspect a retained archive
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+This version is retained for source and stored-evidence inspection. Use the linked current version for the supported simulation quickstart.
+
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
-from qspquest_models import Library
+from qspquest_models import Library, load_archive
 
-model = Library('.').load('qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd', version='0.1.0')
-result = model.run('ode-charged-liver-free-mmae-aucall-h-nm')
-model.write_csv(result, 'model-example-python.csv')
-print(len(result['times']), 'rows')
+model = load_archive(
+    Library().root / 'models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.1.0/model.omex',
+    expected_sha256='9e49cb643fe356f4ba8e4b3a8323f1de241c210a34d61bb375e2249f8f580dbb',
+)
+print(model.model_id, model.index['model_version'])
+print(model.scenario_ids)
 ```
 
-### Choose an experiment
+### Archived experiments
 
 A preset is a named experiment with fixed inputs. Summary and table replays return stored
 values; they are not new fits and may not change over time.
@@ -29,7 +33,7 @@ values; they are not new fits and may not change over time.
 <details>
 <summary>Browse all 37 runnable experiments</summary>
 
-| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
+| Archived experiment ID | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
 | `ode-charged-liver-free-mmae-aucall-h-nm` | Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC. | 0–168 h | 169 |
 | `ode-charged-liver-total-mab-aucall-h-nm` | Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC. | 0–168 h | 169 |
@@ -76,7 +80,7 @@ values; they are not new fits and may not change over time.
 Each experiment supplies the parameters, initial state, dosing schedule and sampling times.
 [Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.
 
-`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes
+The archived primary table contains `time`, `side` and the readouts below. `side` distinguishes
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
@@ -85,21 +89,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `C_nM` | Selected analyte concentration in the tissue named by this experiment | `1` |
 | `AUC_h_nM` | Accumulated exposure to the analyte in the tissue named by this experiment | `1` |
 
-Python exports this small table by default. To export every output and biological state:
-
-```python
-model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
-```
-
-The CLI uses the same selection (`--all-readouts` exports the complete table):
-
-```sh
-python -m qspquest_models --library . --model qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd --model-version 0.1.0 --scenario ode-charged-liver-free-mmae-aucall-h-nm --csv model-example-cli.csv
-```
-
-In R, `qspquest_data_frame(result)` returns the same primary columns.
-Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
-[R setup and examples](../../../tutorials/r-quickstart.md).
+The table describes archived primary readouts. Use the current-version guide for supported simulation and CSV or R data-frame export.
 
 <details>
 <summary>Technical inventory: 177 outputs and 4 states</summary>
@@ -294,7 +284,7 @@ Column names follow the source paper. A unit of `1` means the engine uses the so
 as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Check your result
+### Stored reference result
 
 The `ode-charged-liver-free-mmae-aucall-h-nm` starter has **169 rows**. Reference checkpoints:
 
@@ -304,7 +294,7 @@ The `ode-charged-liver-free-mmae-aucall-h-nm` starter has **169 rows**. Referenc
 | `AUC_h_nM` | 0 | 0 (0 h, post) | 1540 (168 h, pre) | 1540 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

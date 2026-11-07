@@ -10,12 +10,12 @@ Explore fixed-effect T-DM1 and T-DXd exposure; inspect static utility endpoints.
 
 Deterministic two-compartment IV-infusion scenario using Table 1 fixed effects and the paper GitHub median body weight. Paper PK metric summaries are overlaid by the dynamic validation script.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_asiimwe_2025_adc_mbma_cui_poppk', version='0.1.0')
+model = Library().load('qspquest_asiimwe_2025_adc_mbma_cui_poppk', version='0.1.0')
 result = model.run('tdm1-3p6mgkg-cycle1-fixed-effect-ode')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -63,7 +63,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `central_conc_ng_ml` | T-DM1 concentration in the central compartment | `1` |
 | `auc_ng_day_ml` | Accumulated central drug exposure | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -72,7 +72,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_asiimwe_2025_adc_mbma_cui_poppk --model-version 0.1.0 --scenario tdm1-3p6mgkg-cycle1-fixed-effect-ode --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_asiimwe_2025_adc_mbma_cui_poppk --model-version 0.1.0 --scenario tdm1-3p6mgkg-cycle1-fixed-effect-ode --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -111,7 +111,7 @@ The `tdm1-3p6mgkg-cycle1-fixed-effect-ode` starter has **842 rows**. Reference c
 | `auc_ng_day_ml` | 0 | 0 (0 h, post) | 303834 (21 h, pre) | 303834 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

@@ -3,7 +3,7 @@
 [Start here](../README.md) · [Choose a model](../MODEL_CATALOG.md) · [Understand results](understand-results.md)
 
 Use this reference when selecting an exact version, inspecting equations or
-checking a saved run. For everyday use, start with a model guide and the
+checking a saved run. For routine use, start with a model guide and the
 [Python](python-quickstart.md) or [R](r-quickstart.md) quickstart.
 
 ## Select a version
@@ -25,14 +25,14 @@ The shared CLI uses the same exact catalog selection. This command lists the
 selected version's experiments without starting the engine:
 
 ```sh
-python -m qspquest_models --library . --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.1
+python -m qspquest_models --library . --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.2
 ```
 
 `qspquest-models` accepts the same option. An unavailable `--model-version`
 exits with status 2 and code `model_version_unavailable`; JSON errors list
 `requested_version`, `available_versions` and how to fix it in `details`. The CLI
 never falls back to another version.
-The R helpers accept the same selection with `version = '0.3.1'` in scenario
+The R helpers accept the same selection with `version = '0.3.2'` in scenario
 inspection and named runs; the tutorial bridge also supports it in `inputs()`.
 Use `NULL` only when selecting the current catalog default is intended.
 
@@ -59,8 +59,8 @@ unchanged; it does not validate the science.
 
 ## Inspect equations and experiment inputs
 
-OMEX is a ZIP container for a model and its experiments. An SBML file describes
-the mathematical model; a SED-ML file describes an experiment. Python can inspect
+OMEX (Open Modeling EXchange format) is a ZIP container for a model and its experiments. An SBML (Systems Biology Markup Language) file describes
+the mathematical model; a SED-ML (Simulation Experiment Description Markup Language) file describes an experiment. Python can inspect
 the already verified archive without extracting files:
 
 ```python
@@ -112,8 +112,8 @@ python scripts/verify_library.py
 ```
 
 The verifier checks archive and file checksums, source snapshots and stored
-trajectories. The library contains 81 archive versions of 72 models and 647
-stored trajectories; the default versions offer 644 presets. Archives without a
+trajectories. The library contains 82 archive versions of 62 models and 642
+stored trajectories; the default versions offer 639 presets. Archives without a
 stored reference result are marked unqualified. Some archives use native JSON
 rather than SBML/SED-ML. Results use lossless `.csv.gz` compression with
 compressed and uncompressed checksums. [Read a stored result](understand-results.md#read-a-stored-result)
@@ -156,7 +156,7 @@ its paper, that its units are correct or that it is fit for clinical use.
 ## Availability and qualification
 
 `qspquest_models/availability.json` records what each model version can do. The
-catalog, model guides, and Python and MCP discovery all read it. `dynamic`
+catalog, model guides, and Python and Model Context Protocol (MCP) discovery all read it. `dynamic`
 (simulates), `source_replay` (replays published results) and `inspection_only`
 describe what runs; publication review, units, fitting support and fit readiness
 are recorded separately. `current_engine_qualification=not_assessed` means the
@@ -173,20 +173,27 @@ row = next(r for r in library.list_models() if r['id'] == 'qspquest_serkland_202
 print(row['availability'])
 ```
 
-The default versions cover 72 models and 644 presets; the archive holds 81
+The default versions cover 62 models and 639 presets; the archive holds 82
 versions. The record lists supported operations and blockers. `run_preset` runs a
 stored experiment as is; `exploratory_simulation` allows research copies, whose
-results need their own assessment. Source replays reproduce stored values and
-cannot show a treatment response over time. Two models support synthetic fitting
-workflows.
+results need their own assessment. Two archives declare synthetic fitting
+contracts. With `qspquest==0.1.0`, the turnover and rituximab workflows are both
+compatible. The superseded rituximab version 0.3.1 records a request identity
+that differs from the engine's, so fitting that version is held; its preset
+simulation remains available, and version 0.3.2 reruns the same fits. See the
+[fitting tutorial](library-fitting.md) for compatibility discovery and a runnable fit.
 
-Check archive integrity with `python scripts/verify_library.py`; it needs only
-Python's standard library. It checks checksums, declarations, observations,
+The following `scripts/` commands require the public Git source checkout; these
+maintenance scripts are absent from the installed package and PyPI source
+distribution. Run them from the checkout root. Check archive integrity with
+`python scripts/verify_library.py`; it needs only Python's standard library. It checks checksums, declarations, observations,
 recorded convergence and recovery limits, and reports
 `fitting_native_identity=not_assessed`. With the matching QSPQuest Python binding
 installed, `python scripts/verify_library.py --native-fitting` also checks the
-fitting records against the engine; the fitting APIs always run this check.
-Neither command reruns simulations or fits. Use
+fitting records against the engine. A mismatch in a selected version fails the
+check; a mismatch in a superseded version is listed under
+`historical_fitting_holds`. The fitting APIs always enforce this check, and a
+hold must not be bypassed. Neither command reruns simulations or fits. Use
 `python scripts/verify_library.py --for-publication` to also require a completed
 publication review for every archived version; it exits with code 2 if any review
 is pending or missing.
@@ -294,8 +301,7 @@ python -m qspquest_models --search 'B-cell recovery' --format json
 ```
 
 This includes `qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic` with its
-availability record. Source replay models can run only their stored presets, not
-new simulations.
+availability record.
 
 If R cannot find Python, set `QSPQUEST_PYTHON` to the Python executable in your
 activated environment, then recreate `models`; see the [R guide](r-quickstart.md).

@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import sys
 from qspquest_models import Library
+from qspquest_models.fitting import FittingEngineMismatch
 
 
 def main():
@@ -20,14 +21,22 @@ def main():
         if args.model is None:
             if args.version or args.workflow or args.out:
                 raise ValueError('Select --model together with --version, --workflow and --out')
-            ready = []
+            ready, unavailable = [], []
             for row in library.list_models():
                 if row.get('availability', {}).get('fit_ready') is True:
                     model = library.load(row['id'], version=row['version'])
+                    try:
+                        workflows = model.fitting_workflows
+                    except FittingEngineMismatch as error:
+                        unavailable.append({'model_id': row['id'], 'version': row['version'],
+                                            'reason': 'engine_contract_mismatch', 'message': str(error),
+                                            'archived_request_sha256': error.archived_request_sha256,
+                                            'current_request_sha256': error.current_request_sha256})
+                        continue
                     ready.append({'model_id': row['id'], 'version': row['version'],
                                   'workflows': [{'id': w['id'], 'operation': w['operation'], 'parameters': w['parameters'],
-                                                 'qualification': w['qualification']} for w in model.fitting_workflows]})
-            print(json.dumps({'fit_ready_models': ready, 'current_engine_qualification': 'not_assessed'}, indent=2, allow_nan=False))
+                                                 'qualification': w['qualification']} for w in workflows]})
+            print(json.dumps({'fit_ready_models': ready, 'unavailable_fitting_models': unavailable, 'current_engine_qualification': 'not_assessed'}, indent=2, allow_nan=False))
             return 0
         if not all((args.version, args.workflow, args.out)):
             raise ValueError('An execution requires exact --version, --workflow and a new --out JSON file')

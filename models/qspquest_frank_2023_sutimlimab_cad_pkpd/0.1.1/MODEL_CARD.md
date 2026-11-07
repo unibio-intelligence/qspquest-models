@@ -10,12 +10,12 @@ Explore sutimlimab exposure and pharmacodynamics in cold agglutinin disease.
 
 Fixed-effect ODE for a 65 kg non-Japanese patient receiving 6.5 g on day 0/day 7 then q14d through week 149.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_frank_2023_sutimlimab_cad_pkpd', version='0.1.1')
+model = Library().load('qspquest_frank_2023_sutimlimab_cad_pkpd', version='0.1.1')
 result = model.run('approved-65kg-6p5g-q2w')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -48,7 +48,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `cp_activity_percent` | Complement pathway activity | `1` |
 | `hb_g_dl` | Hemoglobin concentration | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -57,7 +57,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_frank_2023_sutimlimab_cad_pkpd --model-version 0.1.1 --scenario approved-65kg-6p5g-q2w --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_frank_2023_sutimlimab_cad_pkpd --model-version 0.1.1 --scenario approved-65kg-6p5g-q2w --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -246,10 +246,7 @@ Column names follow the source paper. A unit of `1` means the engine uses the so
 as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Check your result
-
-Inspect the returned times, event sides, named outputs and units. Numerical
-checks apply to the declared inputs and execution artifact.
+No reference result is stored for this version.
 
 ## Interpretation and limits
 

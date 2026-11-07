@@ -73,6 +73,8 @@ jobs:
           (root / 'SHA256SUMS').rename(Path(__import__('os').environ['RUNNER_TEMP']) / 'SHA256SUMS')
           PY
           python scripts/verify_python_distribution.py dist
+      - name: Require completed archive publication reviews
+        run: python scripts/verify_library.py --for-publication
       - name: Publish with PyPI Trusted Publishing
         uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086
         with:

@@ -12,6 +12,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from qspquest_models import Library, load_archive
+from qspquest_models.fitting import FittingEngineMismatch
 from qspquest_models.availability import require_publication_review
 
 
@@ -58,11 +59,19 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
     csv_paths = set()
     archives_with_evidence = 0
     selected_cases = 0
+    historical_fitting_holds = []
     for relative, digest in sorted(registered.items()):
         archive = root / relative
         model = load_archive(archive, expected_sha256=digest)
         if native_fitting:
-            model.fitting_contract
+            # Selected versions must match the engine. A superseded archive is
+            # immutable; its mismatch is reported, and fitting it stays refused.
+            try:
+                model.fitting_contract
+            except FittingEngineMismatch:
+                if library.availability_records[model.model_id + "/" + model.index["model_version"]].selected:
+                    raise
+                historical_fitting_holds.append(model.model_id + "/" + model.index["model_version"])
         evidence_raw = archive.with_name("evidence.json").read_bytes()
         record = library.availability_records[model.model_id + "/" + model.index["model_version"]]
         require((record.evidence_id == "sha256:" + hashlib.sha256(evidence_raw).hexdigest()), "availability evidence digest mismatch")
@@ -124,6 +133,7 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
         "selected_stored_preset_evidence_cases": selected_cases,
         "current_engine_qualification": "not_assessed",
         "fitting_native_identity": "verified" if native_fitting else "not_assessed",
+        "historical_fitting_holds": historical_fitting_holds,
         "csv_trajectories": len(csv_paths),
     }
     require(((
@@ -131,7 +141,7 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
         result["model_identities"],
         library.availability_counts["selected_preset_requests"],
         cases,
-    ) == (91, 72, 644, 647)), "release scope changed")
+    ) == (82, 62, 639, 642)), "release scope changed")
     return result
 
 

@@ -8,12 +8,12 @@ Compare tumor and systemic receptor occupancy under synthetic gating assumptions
 
 ## Run an experiment
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_ubi_2026_target_gated_cargo_qsp', version='2.0.0')
+model = Library().load('qspquest_ubi_2026_target_gated_cargo_qsp', version='2.0.0')
 result = model.run('balanced_gate_30nmol_iv')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -48,7 +48,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `central_receptor_occupancy_percent` | Percentage of systemic receptors occupied | `1` |
 | `total_construct_nmol` | Total remaining construct amount | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -57,7 +57,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_ubi_2026_target_gated_cargo_qsp --model-version 2.0.0 --scenario balanced_gate_30nmol_iv --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_ubi_2026_target_gated_cargo_qsp --model-version 2.0.0 --scenario balanced_gate_30nmol_iv --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -117,7 +117,7 @@ The `balanced_gate_30nmol_iv` starter has **57 rows**. Reference checkpoints:
 | `total_construct_nmol` | 30 | 22.4046 (336 h, pre) | 30 (0 h, post) | 22.4046 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

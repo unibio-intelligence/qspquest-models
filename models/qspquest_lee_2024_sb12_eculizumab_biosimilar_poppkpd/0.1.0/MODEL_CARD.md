@@ -10,12 +10,12 @@ Explore fixed SB12/eculizumab exposure and pharmacodynamic comparisons.
 
 Full regimen through week 50, observed through week 52. Bolus approximation: PNH infusion duration is not specified in this paper; do not qualify peak concentrations.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd', version='0.1.0')
+model = Library().load('qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd', version='0.1.0')
 result = model.run('pnh-labeled-regimen-dynamic-overlay')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -49,7 +49,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `terminal_complement_activity_pct` | Terminal complement activity | `1` |
 | `ldh_u_l` | Lactate dehydrogenase activity | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -58,7 +58,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd --model-version 0.1.0 --scenario pnh-labeled-regimen-dynamic-overlay --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd --model-version 0.1.0 --scenario pnh-labeled-regimen-dynamic-overlay --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -165,7 +165,7 @@ The `pnh-labeled-regimen-dynamic-overlay` starter has **729 rows**. Reference ch
 | `ldh_u_l` | 219.942 | 216.997 (684 h, post) | 342.84 (168 h, pre) | 222.516 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

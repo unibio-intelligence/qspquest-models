@@ -3,11 +3,11 @@
 [Choose a model](../MODEL_CATALOG.md) · [Understand results](understand-results.md) · [Change an input](change-inputs.md)
 
 Complete the [README setup](../README.md#setup), activate that environment,
-and run the blocks below from the library checkout. Core simulation needs no
+and run the blocks below from any working directory. Core simulation needs no
 plotting packages.
 
-Prefer a notebook? Open the [executable notebook](python-quickstart.ipynb) in Jupyter
-after setup. It locates the library checkout automatically and saves CSV output
+An [executable notebook](python-quickstart.ipynb) is also available; open it in Jupyter
+after setup. It uses the installed bundled library and saves CSV output
 in the notebook’s working directory.
 
 ## Run the first experiment
@@ -15,9 +15,9 @@ in the notebook’s working directory.
 ```python
 from qspquest_models import Library
 
-library = Library('.')
-print(len(library.list_models()))  # 72 identities
-model = library.load('qspquest_serkland_2025_rituximab_ms_pkpd', version='0.3.1')
+library = Library()
+print(len(library.list_models()))  # 62 identities
+model = library.load('qspquest_serkland_2025_rituximab_ms_pkpd', version='0.3.2')
 print(model.scenario_ids)
 result = model.run('population-typical-1000mg-full-ode')
 assert len(result['times']) == 201
@@ -27,7 +27,7 @@ print('Saved rituximab-python.csv and its .manifest.json with', len(result['time
 
 `result` contains `times`, event `sides`, and named `outputs` and `states` with
 their units. The CSV has 201 data rows from day 0 to day 200 with `time`, `side`,
-`rituximab_concentration_mg_l`, `cd19_cells_mm3` as the primary readouts. The [model guide](../models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.1/MODEL_CARD.md) explains the available experiments.
+`rituximab_concentration_mg_l`, `cd19_cells_mm3` as the primary readouts. The [model guide](../models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.2/MODEL_CARD.md) explains the available experiments.
 [Understand results](understand-results.md) explains the units.
 
 ## Plot CD19+ B cells (optional)
@@ -47,20 +47,20 @@ plt.show()
 
 ![Stored rituximab B-cell trajectory](rituximab-bcells.svg)
 
-This preview shows the stored result from version 0.1.0; it is not a check of version 0.3.1.
+This preview shows the stored result from version 0.1.0; it is not a check of version 0.3.2.
 
-The B-cell readout starts at 199.57 and ends near 8.70521 at day 200.
+The simulated B-cell readout starts at 199.57 and ends near 8.70521 at day 200.
 This curve uses one typical parameter set. It does not show patient-to-patient
 variability or recommend a redosing time.
 
-## Try a synthetic benchmark
+## Run a synthetic benchmark
 
 ```python
 model = library.load('qspquest_diffdose_2026_idr_benchmark')
 result = model.run('lower_exposure')
 ```
 
-## Find your next model
+## Find other models
 
 Browse the [model catalog](../MODEL_CATALOG.md) for scientific descriptions and
 experiment choices. In Python, you can filter the structured records:
@@ -74,14 +74,14 @@ for row in matches:
 
 ## Compare declared representations of a source
 
-The rat AAV/mAb paper has a full and a reduced model. Run this from the library
-checkout to list both without running a simulation:
+The rat AAV/mAb paper has a full and a reduced model. Use the installed library
+to list both without running a simulation:
 
 ```bash
 python - <<'FAMILY'
 from qspquest_models import Library
 
-library = Library('.')
+library = Library()
 family_id = 'liu-2026-aav-mab-targetx-rat-brain'
 related = [row for row in library.list_models()
            if row.get('source_family', {}).get('family_id') == family_id]

@@ -17,7 +17,7 @@ denominators; equilibrium and physical qualification are not asserted.`
 percentage definitions, after checking that they match the model. If nothing is
 declared it returns `None`; do not guess the policy from output names.
 
-The ICM AAV scenario starts at −1000 h and gives its first dose at 0 h. A
+The intracisterna magna (ICM) adeno-associated virus (AAV) scenario starts at −1000 h and gives its first dose at 0 h. A
 parameter change made at the start applies from −1000 h; to change something only
 at dosing, apply it at 0 h. The no-dose target scenario starts at −504 h and has
 `intervention_time: null`. Starting early does not guarantee that the system has

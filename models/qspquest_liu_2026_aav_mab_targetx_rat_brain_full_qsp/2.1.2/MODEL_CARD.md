@@ -8,12 +8,12 @@ Compare AAV delivery routes, antibody distribution and brain target engagement i
 
 ## Run an experiment
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp', version='2.1.2')
+model = Library().load('qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp', version='2.1.2')
 result = model.run('figure3_mab_iv_100mgkg')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -60,7 +60,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `mab_isf_nM` | Antibody concentration in brain interstitial fluid | `1` |
 | `target_isf_pct_baseline` | Brain interstitial target as a percentage of baseline | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -69,7 +69,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp --model-version 2.1.2 --scenario figure3_mab_iv_100mgkg --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp --model-version 2.1.2 --scenario figure3_mab_iv_100mgkg --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.

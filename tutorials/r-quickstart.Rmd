@@ -5,19 +5,21 @@ output: html_document
 
 This tutorial uses the standalone QSPQuest engine through the local Python
 loader. Complete the [README setup](../README.md#setup), install `jsonlite`
-with `install.packages("jsonlite")`, then render this file with its tutorials
-directory as the working directory. Set
+with `install.packages("jsonlite")`, then render this file from any working directory. Set
 `QSPQUEST_PYTHON` if R uses a different Python environment. Source numeric coordinates are preserved.
 
 ```{r setup}
-source('qspquest-models.R')
-models <- qspquest_library(normalizePath('..'))
+python <- Sys.getenv('QSPQUEST_PYTHON', 'python')
+helper <- system2(python, c('-c', shQuote("from qspquest_models import Library; print(Library().root / 'tutorials/qspquest-models.R')")), stdout = TRUE)
+stopifnot(length(helper) == 1L, file.exists(helper))
+source(helper)
+models <- qspquest_library(python = python)
 model <- 'qspquest_serkland_2025_rituximab_ms_pkpd'
-models$scenarios(model, version = '0.3.0')
+models$scenarios(model, version = '0.3.2')
 ```
 
 ```{r simulate}
-result <- models$run(model, 'population-typical-1000mg-full-ode', csv = 'rituximab-rmarkdown.csv', version = '0.3.0')
+result <- models$run(model, 'population-typical-1000mg-full-ode', csv = 'rituximab-rmarkdown.csv', version = '0.3.2')
 data <- qspquest_data_frame(result)
 stopifnot(nrow(data) == 201L)
 head(data)
@@ -26,7 +28,7 @@ head(data)
 ```{r plot}
 plot(data$time, data$cd19_cells_mm3, type = 'l', xlab = result$time_unit,
      ylab = 'CD19+ B cells (source scale)')
-saved <- qspquest_read_table('rituximab-rmarkdown.csv')
+saved <- qspquest_read_table('rituximab-rmarkdown.csv', python = python)
 stopifnot(nrow(saved) == nrow(data))
 ```
 

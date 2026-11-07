@@ -47,6 +47,9 @@ def metadata(raw, version, root):
     message = BytesParser().parsebytes(raw)
     require(not message.defects and message.get_all('Name') == ['qspquest-models']
             and message.get_all('Version') == [version], 'Distribution metadata identity differs')
+    dependencies = tomllib.loads((root / 'pyproject.toml').read_text())['project'].get('dependencies', [])
+    require(sorted(message.get_all('Requires-Dist', [])) == sorted(dependencies),
+            'Distribution engine dependency differs')
     description = message.get_payload(decode=True).decode('utf-8').replace('\r\n', '\n')
     require(description.strip() == (root / 'PACKAGE_README.md').read_text().strip(),
             'Distribution description differs from the selected package guide')
@@ -93,7 +96,7 @@ def verify(directory, root=ROOT):
             require(files.get(name) == path.read_bytes(), 'Source archive differs: ' + name)
         allowed = {'PKG-INFO', 'setup.cfg', 'README.md'} | {
             'qspquest_models.egg-info/' + name for name in
-            ('PKG-INFO', 'SOURCES.txt', 'dependency_links.txt', 'entry_points.txt', 'top_level.txt')}
+            ('PKG-INFO', 'SOURCES.txt', 'dependency_links.txt', 'entry_points.txt', 'top_level.txt', 'requires.txt')}
         require(set(files) <= set(selected) | allowed, 'Unselected files in source archive')
         if 'README.md' in files:
             require(files['README.md'] == (root / 'README.md').read_bytes(), 'Source README differs')

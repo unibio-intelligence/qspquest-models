@@ -10,12 +10,12 @@ Explore pertuzumab exposure and neoadjuvant response summaries.
 
 Reference covariate dynamic shell using historical PopPK median LBW and albumin.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er', version='0.1.0')
+model = Library().load('qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er', version='0.1.0')
 result = model.run('historical-reference-840-420-q3w-4cycles')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -50,7 +50,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `pertuzumab_concentration_ug_mL` | Pertuzumab concentration | `1` |
 | `AUC_ug_day_mL` | Accumulated pertuzumab exposure | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -59,7 +59,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er --model-version 0.1.0 --scenario historical-reference-840-420-q3w-4cycles --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er --model-version 0.1.0 --scenario historical-reference-840-420-q3w-4cycles --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -250,7 +250,7 @@ The `historical-reference-840-420-q3w-4cycles` starter has **89 rows**. Referenc
 | `AUC_ug_day_mL` | 0 | 0 (0 h, post) | 7625.27 (84 h, pre) | 7625.27 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

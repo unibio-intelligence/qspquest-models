@@ -4,29 +4,33 @@
 
 Explore TFPI binding, target-mediated disposition and exploratory BAY 1093884 exposure.
 
-**Runnable · 6 experiments.** Version 0.1.0.
+**Retained alternate archive · source and stored-evidence inspection.** Version 0.1.0.
 
-## Run an experiment
+This is an alternate version. [Open the default version](../0.1.1/MODEL_CARD.md) for the standard quickstart.
 
-Paper-fixed Figure 7 IV parameterization with Figure 2/4/7 overlays. No exploratory parameter overrides.
+## Inspect a retained archive
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+This version is retained for source and stored-evidence inspection. Use the linked current version for the supported simulation quickstart.
+
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
-from qspquest_models import Library
+from qspquest_models import Library, load_archive
 
-model = Library('.').load('qspquest_gu_2017_bay1093884_tfpi_qss_tmdd', version='0.1.0')
-result = model.run('gu-2017-cyno-iv20mgkg-qss-tmdd-probe')
-model.write_csv(result, 'model-example-python.csv')
-print(len(result['times']), 'rows')
+model = load_archive(
+    Library().root / 'models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.1.0/model.omex',
+    expected_sha256='ead0a065a9944f7e54554c26bfc611849e863576ac15ddc8071a02c1bb92ad42',
+)
+print(model.model_id, model.index['model_version'])
+print(model.scenario_ids)
 ```
 
-### Choose an experiment
+### Archived experiments
 
 A preset is a named experiment with fixed inputs. Summary and table replays return stored
 values; they are not new fits and may not change over time.
 
-| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |
+| Archived experiment ID | Purpose | Time range | Rows |
 | --- | --- | --- | ---: |
 | `gu-2017-cyno-iv20mgkg-qss-tmdd-probe` | Paper-fixed Figure 7 IV parameterization with Figure 2/4/7 overlays. No exploratory parameter overrides. | 0–1008 h | 1009 |
 | `gu-2017-cyno-iv5mgkg-qss-tmdd-probe` | Paper-fixed Figure 7 IV parameterization with complete Figure 2/4/5/6/7 overlays. No exploratory parameter overrides. | 0–720 h | 721 |
@@ -40,7 +44,7 @@ values; they are not new fits and may not change over time.
 Each experiment supplies the parameters, initial state, dosing schedule and sampling times.
 [Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.
 
-`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes
+The archived primary table contains `time`, `side` and the readouts below. `side` distinguishes
 samples before (`pre`) and after (`post`) a dosing or other discrete event.
 State columns use `state__`; retained constant source values use `source__`.
 
@@ -50,21 +54,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `free_tfpi_percent_baseline` | Free TFPI as a percentage of baseline | `1` |
 | `tfpi_inhibition_percent` | Percentage inhibition of TFPI | `1` |
 
-Python exports this small table by default. To export every output and biological state:
-
-```python
-model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
-```
-
-The CLI uses the same selection (`--all-readouts` exports the complete table):
-
-```sh
-python -m qspquest_models --library . --model qspquest_gu_2017_bay1093884_tfpi_qss_tmdd --model-version 0.1.0 --scenario gu-2017-cyno-iv20mgkg-qss-tmdd-probe --csv model-example-cli.csv
-```
-
-In R, `qspquest_data_frame(result)` returns the same primary columns.
-Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.
-[R setup and examples](../../../tutorials/r-quickstart.md).
+The table describes archived primary readouts. Use the current-version guide for supported simulation and CSV or R data-frame export.
 
 <details>
 <summary>Technical inventory: 137 outputs and 8 states</summary>
@@ -223,7 +213,7 @@ Column names follow the source paper. A unit of `1` means the engine uses the so
 as-is, without a physical unit or conversion; do not infer a unit from the column name.
 [How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.
 
-### Check your result
+### Stored reference result
 
 The `gu-2017-cyno-iv20mgkg-qss-tmdd-probe` starter has **1009 rows**. Reference checkpoints:
 
@@ -234,7 +224,7 @@ The `gu-2017-cyno-iv20mgkg-qss-tmdd-probe` starter has **1009 rows**. Reference 
 | `tfpi_inhibition_percent` | 92.1275 | 0.3922 (1008 h, pre) | 99.3575 (1 h, post) | 0.3922 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

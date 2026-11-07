@@ -36,8 +36,8 @@ purpose before selecting a column to plot.
 Values are reported as the source model computes them; nothing is converted.
 Each column's `unit` is the unit the engine used. The JSON field
 `declared_source_unit` keeps the source's own label, which may differ; a different
-label does not mean a conversion was applied. Stored result files and source
-replay values keep the source's units.
+label does not mean a conversion was applied. Stored result files keep the
+source's units.
 
 Many units are `1` even when names contain `mg_l`, `cells_mm3` or `percent`. A
 unit of `1` means the engine uses the source's number as-is, without a physical
@@ -45,7 +45,7 @@ unit or conversion. The names follow the source paper; do not infer a unit or
 conversion from a column name.
 
 For the rituximab example, the typical experiment has 201 rows from day 0 to day 200.
-The `cd19_cells_mm3` readout begins at 199.57 and ends near 8.70521. This is a
+The simulated `cd19_cells_mm3` readout begins at 199.57 and ends near 8.70521. This is a
 fixed-parameter model trajectory. It does not represent population variability,
 a new fit to patients, or an optimal redosing schedule.
 
@@ -56,14 +56,14 @@ and background opening assumptions produce the differences.
 ## Read a stored result
 
 You can inspect the distributed results with Python's standard library, without
-building QSPQuest. From the library checkout:
+building QSPQuest. After installing the package, run from any directory:
 
 ```python
-from pathlib import Path
+from qspquest_models import Library
 import csv
 import gzip
 
-path = Path('models/qspquest_serkland_2025_rituximab_ms_pkpd/0.1.0/results/'
+path = Library().root / ('models/qspquest_serkland_2025_rituximab_ms_pkpd/0.1.0/results/'
             'population-typical-1000mg-full-ode/qspquest.csv.gz')
 with gzip.open(path, 'rt', newline='') as stream:
     rows = list(csv.DictReader(stream))
@@ -73,7 +73,7 @@ print('Last B-cell value:', rows[-1]['cd19_cells_mm3'])
 ```
 
 Expect 201 rows, with first and last B-cell values of 199.57 and approximately
-8.70521. This is the stored 0.1.0 trajectory, not a check of version 0.3.1.
+8.70521. This is the stored 0.1.0 trajectory, not a check of version 0.3.2.
 
 Each version's `evidence.json` lists its stored files under
 `results/<experiment-id>/`. Reading them does not run a new simulation. Some
@@ -81,7 +81,7 @@ versions have no stored results even when their experiments can run. Some stored
 CSVs omit states; a `starter-preview.json`, when present, gives checkpoints for
 the primary readouts. The model guide says what each version provides.
 
-## Decide what to do next
+## Next steps
 
 - To see the trajectory: [plot it in Python](python-quickstart.md) or [R](r-quickstart.md).
 - To ask a different question: choose another experiment in the model guide.

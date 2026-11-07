@@ -10,12 +10,12 @@ Inspect ATC161 degradation endpoints and an exploratory reduced PK/PD model.
 
 Source-limited ODE initialized from AUC*kel for the reported 20 mg/kg PO ATC161 AUC and half-life, linked to normalized aggregate degradation through the reported DC50.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd', version='0.1.0')
+model = Library().load('qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd', version='0.1.0')
 result = model.run('po20mgkg-first-order-pk-degradation-probe')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -47,7 +47,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `aggregate_fraction` | Remaining alpha-synuclein aggregate fraction | `1` |
 | `degradation_effect_fraction` | Drug-driven degradation effect | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -56,7 +56,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd --model-version 0.1.0 --scenario po20mgkg-first-order-pk-degradation-probe --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd --model-version 0.1.0 --scenario po20mgkg-first-order-pk-degradation-probe --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -146,7 +146,7 @@ The `po20mgkg-first-order-pk-degradation-probe` starter has **241 rows**. Refere
 | `degradation_effect_fraction` | 0.908264 | 0.0994396 (24 h, pre) | 0.908264 (0 h, post) | 0.0994396 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

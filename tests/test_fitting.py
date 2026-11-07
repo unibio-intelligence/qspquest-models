@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 from qspquest_models import Library, load_archive
-from qspquest_models.fitting import validate, select
+from qspquest_models.fitting import validate, select, FittingEngineMismatch
 
 
 def fixture():
@@ -163,8 +163,49 @@ class FittingGuardTests(unittest.TestCase):
             self.assertEqual(select(declaration, 'synthetic')['id'], 'synthetic')
             evidence['native_request_sha256'] = 'e'*64
             workflow['qualification']['evidence'] = add('fitting/evidence.json', evidence)
-            with self.assertRaisesRegex(ValueError, 'workflow identity'):
+            with self.assertRaises(FittingEngineMismatch) as failure:
                 validate(declaration, index, members)
+            self.assertEqual(failure.exception.archived_request_sha256, 'e'*64)
+            self.assertEqual(failure.exception.current_request_sha256, 'b'*64)
+            self.assertIn('preset simulation remains available', str(failure.exception))
+
+
+class FittingDiscoveryTests(unittest.TestCase):
+    def invoke_discovery(self, problem):
+        import contextlib, importlib.util, io, sys
+        from types import SimpleNamespace
+        root = Path(__file__).resolve().parents[1]
+        spec = importlib.util.spec_from_file_location('fitting_tutorial_discovery', root / 'tutorials/fitting_workflow.py')
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        class HeldModel:
+            @property
+            def fitting_workflows(self):
+                raise problem
+        good = SimpleNamespace(fitting_workflows=[{'id': 'compatible', 'operation': 'fit_scalar',
+                                                  'parameters': [], 'qualification': {'status': 'not_assessed'}}])
+        rows = [{'id': name, 'version': 'test', 'availability': {'fit_ready': True}}
+                for name in ('held', 'compatible')]
+        library = SimpleNamespace(list_models=lambda: rows,
+                                  load=lambda ident, version: HeldModel() if ident == 'held' else good)
+        stdout, stderr = io.StringIO(), io.StringIO()
+        with patch.object(module, 'Library', return_value=library), patch.object(sys, 'argv', ['fitting_workflow.py']), contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
+            code = module.main()
+        return code, stdout.getvalue(), stderr.getvalue()
+
+    def test_identity_hold_does_not_hide_other_compatible_workflows(self):
+        code, output, error = self.invoke_discovery(FittingEngineMismatch('a'*64, 'b'*64))
+        self.assertEqual((code, error), (0, ''))
+        result = json.loads(output)
+        self.assertEqual([r['model_id'] for r in result['fit_ready_models']], ['compatible'])
+        self.assertEqual([r['model_id'] for r in result['unavailable_fitting_models']], ['held'])
+        self.assertEqual(result['unavailable_fitting_models'][0]['reason'], 'engine_contract_mismatch')
+        self.assertEqual(result['current_engine_qualification'], 'not_assessed')
+
+    def test_corrupt_fitting_data_still_fails_discovery(self):
+        code, output, error = self.invoke_discovery(ValueError('corrupt fitting member'))
+        self.assertEqual((code, output), (1, ''))
+        self.assertIn('corrupt fitting member', error)
 
 
 class FitResultContractTests(unittest.TestCase):

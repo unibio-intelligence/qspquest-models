@@ -8,12 +8,12 @@ Explore subcutaneous envafolimab exposure and published development summaries.
 
 ## Run an experiment
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_cui_2024_envafolimab_sc_pdl1_midd', version='0.1.0')
+model = Library().load('qspquest_cui_2024_envafolimab_sc_pdl1_midd', version='0.1.0')
 result = model.run('final-model-150mg-qw-20wk-ode-overlay')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -45,7 +45,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `envafolimab_concentration_mg_l` | Envafolimab concentration | `1` |
 | `cl_l_day_individual` | Individual clearance under the fixed covariates | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -54,7 +54,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_cui_2024_envafolimab_sc_pdl1_midd --model-version 0.1.0 --scenario final-model-150mg-qw-20wk-ode-overlay --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_cui_2024_envafolimab_sc_pdl1_midd --model-version 0.1.0 --scenario final-model-150mg-qw-20wk-ode-overlay --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -190,7 +190,7 @@ The `final-model-150mg-qw-20wk-ode-overlay` starter has **561 rows**. Reference 
 | `cl_l_day_individual` | 1.1472 | 0.805821 (140 h, pre) | 1.1472 (0 h, post) | 0.805821 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

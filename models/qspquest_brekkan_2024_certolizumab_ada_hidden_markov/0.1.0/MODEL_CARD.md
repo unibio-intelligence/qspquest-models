@@ -10,12 +10,12 @@ Inspect certolizumab exposure and anti-drug-antibody state dynamics.
 
 Continuous-time two-state probability ODE calibrated to the paper-reported 63-day Model 6 mean first SADA transition.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_brekkan_2024_certolizumab_ada_hidden_markov', version='0.1.0')
+model = Library().load('qspquest_brekkan_2024_certolizumab_ada_hidden_markov', version='0.1.0')
 result = model.run('model6-transition-probability-ode')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -46,7 +46,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `p_ada` | Probability of the anti-drug-antibody state | `1` |
 | `p_noada` | Probability of the state without anti-drug antibodies | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -55,7 +55,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_brekkan_2024_certolizumab_ada_hidden_markov --model-version 0.1.0 --scenario model6-transition-probability-ode --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_brekkan_2024_certolizumab_ada_hidden_markov --model-version 0.1.0 --scenario model6-transition-probability-ode --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -132,7 +132,7 @@ The `model6-transition-probability-ode` starter has **169 rows**. Reference chec
 | `p_noada` | 1 | 0.138401 (168 d, pre) | 1 (0 d, post) | 0.138401 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

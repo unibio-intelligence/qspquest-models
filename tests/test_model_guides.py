@@ -59,6 +59,28 @@ class OutputGuideTests(unittest.TestCase):
         self.assertIn('checksum-pinned', alternate)
         current = '\n'.join(guides.cli_example(True, 'example', 'current', 'scenario'))
         self.assertIn('--model example --model-version current', current)
+        self.assertNotIn('--library .', current)
+
+    def test_retained_version_examples_do_not_require_a_current_catalog_selection_or_run(self):
+        import json, re
+        current = {row['id']: row['version'] for row in json.loads((ROOT / 'catalog.json').read_text())['models']}
+        for card in (ROOT / 'models').glob('*/*/MODEL_CARD.md'):
+            if card.parent.name == current[card.parent.parent.name]:
+                continue
+            for block in re.findall(r'```python\n(.*?)```', card.read_text(), flags=re.S):
+                self.assertNotIn('Library().load(', block, str(card))
+                self.assertNotIn('model.run(', block, str(card))
+                self.assertNotIn('model.write_csv(', block, str(card))
+                self.assertNotIn('fit_workflow(', block, str(card))
+
+    def test_catalog_and_default_links_select_current_versions(self):
+        import json, re
+        current = {row['id']: row['version'] for row in json.loads((ROOT / 'catalog.json').read_text())['models']}
+        for ident, version in re.findall(r'models/([^/]+)/([^/]+)/MODEL_CARD.md', (ROOT / 'MODEL_CATALOG.md').read_text()):
+            self.assertEqual(version, current[ident], ident)
+        for card in (ROOT / 'models').glob('*/*/MODEL_CARD.md'):
+            for version in re.findall(r'\[Open the default version\]\(../([^/]+)/MODEL_CARD.md\)', card.read_text()):
+                self.assertEqual(version, current[card.parent.parent.name], str(card))
 
     def test_missing_native_output_cannot_be_documented_as_a_computed_analyte(self):
         with self.assertRaises(ValueError):

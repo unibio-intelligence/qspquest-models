@@ -10,12 +10,12 @@ Explore pediatric ustekinumab distribution with a reduced physiological model.
 
 Exploratory calibrated ODE induction plus repeated subcutaneous maintenance simulation. Effective Vc and clearance are calibrated from the induction Cmax and half-life targets; SC absorption, distribution, and FcRn terms are unvalidated effective assumptions. It cannot reproduce native PK-Sim organ/FcRn population ribbons without the project and virtual populations.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced', version='0.1.0')
+model = Library().load('qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced', version='0.1.0')
 result = model.run('pediatric-130mg-iv-90mg-sc-q8w-reduced')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -52,7 +52,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `state__A_fcrn_bound_mg` | Drug amount bound to the recycling receptor FcRn | `mg` |
 | `state__AUC_central_mg_h_L` | Accumulated central drug exposure | `mg*h/L` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -61,7 +61,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced --model-version 0.1.0 --scenario pediatric-130mg-iv-90mg-sc-q8w-reduced --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced --model-version 0.1.0 --scenario pediatric-130mg-iv-90mg-sc-q8w-reduced --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -98,7 +98,7 @@ The `pediatric-130mg-iv-90mg-sc-q8w-reduced` starter has **751 rows**. Reference
 | `state__AUC_central_mg_h_L` | 0 | 0 (0 h, post) | 92318.1 (9000 h, pre) | 92318.1 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

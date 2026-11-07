@@ -10,12 +10,12 @@ Explore translational zenocutuzumab exposure and pharmacodynamic scenarios.
 
 Single 360 mg human flat dose using Table 1 70 kg parameters, exercising receptor occupancy and nonlinear clearance.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd', version='0.1.0')
+model = Library().load('qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd', version='0.1.0')
 result = model.run('human-360mg-q3wk-ro-probe')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -53,7 +53,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `central_conc_mg_L` | Zenocutuzumab concentration in the central compartment | `1` |
 | `receptor_occupancy_percent` | Percentage of receptor occupied by antibody | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -62,7 +62,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd --model-version 0.1.0 --scenario human-360mg-q3wk-ro-probe --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd --model-version 0.1.0 --scenario human-360mg-q3wk-ro-probe --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -298,7 +298,7 @@ The `human-360mg-q3wk-ro-probe` starter has **23 rows**. Reference checkpoints:
 | `receptor_occupancy_percent` | 0 | 0 (0 h, post) | 99.8067 (0.5 h, pre) | 23.8456 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

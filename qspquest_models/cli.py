@@ -85,7 +85,7 @@ def _list(library, args):
     if args.format == 'json':
         print(json.dumps(rows, indent=2, allow_nan=False))
         return
-    print(f'{len(rows)} models found. Browse MODEL_CATALOG.md for descriptions and guides.\n')
+    print(f'{len(rows)} models found. Browse {library.root / "MODEL_CATALOG.md"} for descriptions and guides.\n')
     for row in rows:
         availability = row.get('availability', {}).get('availability')
         if availability is None:
@@ -113,7 +113,7 @@ def _select_model(library, parser, model_id):
                     'Use a complete model ID. ' + suggestions, status=2)
 
 
-def _scenarios(model, args):
+def _scenarios(model, args, root):
     if args.format == 'json':
         print(json.dumps(list(model.scenario_ids)))
     elif model.scenario_ids:
@@ -124,10 +124,10 @@ def _scenarios(model, args):
         print('Runnable experiment IDs (use with --scenario):')
         for sid in model.scenario_ids:
             print('  ' + sid)
-        print(f'\nPurpose, inputs and outputs: models/{model.model_id}/{model.index["model_version"]}/MODEL_CARD.md')
+        print(f'\nPurpose, inputs and outputs: {root / "models" / model.model_id / model.index["model_version"] / "MODEL_CARD.md"}')
     else:
         print('Inspection only: simulation is unavailable for this version. Choose a runnable model with --runnable.')
-        print(f'Details: models/{model.model_id}/{model.index["model_version"]}/INTERCHANGE_AND_EXECUTION_HOLDS.json')
+        print(f'Details: {root / "models" / model.model_id / model.index["model_version"] / "INTERCHANGE_AND_EXECUTION_HOLDS.json"}')
 
 
 _FAILURES = {
@@ -164,7 +164,7 @@ def main(argv=None, *, prog=None):
         stage = 'archive'
         model = library.load(args.model, version=args.model_version)
         if not args.scenario:
-            _scenarios(model, args)
+            _scenarios(model, args, library.root)
             return
         if args.scenario not in model.scenario_ids:
             parser.fail('unknown_scenario', 'Unknown or unavailable experiment', args.scenario,

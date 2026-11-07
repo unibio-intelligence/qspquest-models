@@ -10,12 +10,12 @@ Explore reduced pediatric therapeutic-protein distribution scenarios.
 
 Reduced two-compartment IV plus target-binding smoke using Table 2 and Table 4 values.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_pan_2020_pediatric_tp_pbpk_pk_sim', version='0.1.0')
+model = Library().load('qspquest_pan_2020_pediatric_tp_pbpk_pk_sim', version='0.1.0')
 result = model.run('bevacizumab-15mgkg-13y-growth-table4-smoke')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -46,7 +46,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `central_concentration_ug_ml` | Bevacizumab concentration | `1` |
 | `AUC_ug_ml_day` | Accumulated central drug exposure | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -55,7 +55,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_pan_2020_pediatric_tp_pbpk_pk_sim --model-version 0.1.0 --scenario bevacizumab-15mgkg-13y-growth-table4-smoke --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_pan_2020_pediatric_tp_pbpk_pk_sim --model-version 0.1.0 --scenario bevacizumab-15mgkg-13y-growth-table4-smoke --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -173,7 +173,7 @@ The `bevacizumab-15mgkg-13y-growth-table4-smoke` starter has **121 rows**. Refer
 | `AUC_ug_ml_day` | 0 | 0 (0 h, post) | 3927.8 (120 h, pre) | 3927.8 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

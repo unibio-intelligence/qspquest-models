@@ -10,12 +10,12 @@ Explore reduced AAV-driven antibody expression and brain target dynamics.
 
 Reduced Figure 7 reproduction for ICM 1e+12 Vg AAV9. Effective transduced burdens are source-limited calibration quantities, not measured vector copy counts.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp', version='0.1.0')
+model = Library().load('qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp', version='0.1.0')
 result = model.run('icm-1e12-aav9')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -51,7 +51,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `mab_isf_nM` | Antibody concentration in brain interstitial fluid | `1` |
 | `target_isf_pct_baseline` | Brain interstitial target as a percentage of baseline | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -60,7 +60,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp --model-version 0.1.0 --scenario icm-1e12-aav9 --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp --model-version 0.1.0 --scenario icm-1e12-aav9 --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -166,7 +166,7 @@ The `icm-1e12-aav9` starter has **57 rows**. Reference checkpoints:
 | `target_isf_pct_baseline` | 100 | 46.751 (1344 h, pre) | 100 (0 h, post) | 46.751 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

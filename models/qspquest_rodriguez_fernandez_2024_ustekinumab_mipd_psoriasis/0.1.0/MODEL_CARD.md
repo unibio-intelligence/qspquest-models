@@ -10,12 +10,12 @@ Explore fixed ustekinumab exposure and psoriasis-response scenarios.
 
 Source-limited deterministic ODE probe using Supplementary Table S1 patient 18, a high-clearance/low-kout patient, under 90 mg q8w intensified dosing.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis', version='0.1.0')
+model = Library().load('qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis', version='0.1.0')
 result = model.run('patient18-90mg-q8w-intensified-probe')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -47,7 +47,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `drug_effect_fraction` | Fractional drug effect on psoriasis response | `1` |
 | `pasi_target_gap` | Difference from the model psoriasis response target | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -56,7 +56,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis --model-version 0.1.0 --scenario patient18-90mg-q8w-intensified-probe --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis --model-version 0.1.0 --scenario patient18-90mg-q8w-intensified-probe --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -132,7 +132,7 @@ The `patient18-90mg-q8w-intensified-probe` starter has **617 rows**. Reference c
 | `pasi_target_gap` | 17.845 | 0.328356 (606 d, post) | 17.845 (0 d, post) | 0.338366 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

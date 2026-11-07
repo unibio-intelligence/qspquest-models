@@ -10,12 +10,12 @@ Explore nivolumab clearance and response relationships with fixed inputs.
 
 A deterministic fixed-effect simulation using the final two-compartment model, 80 kg receiving the average 240 mg every 14 days for 12 cycles.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response', version='0.1.0')
+model = Library().load('qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response', version='0.1.0')
 result = model.run('typical-male-3mgkg-q2w-dynamic-probe')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -50,7 +50,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | --- | --- | --- |
 | `central_conc_mg_L` | Nivolumab concentration in the central compartment | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -59,7 +59,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response --model-version 0.1.0 --scenario typical-male-3mgkg-q2w-dynamic-probe --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response --model-version 0.1.0 --scenario typical-male-3mgkg-q2w-dynamic-probe --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -307,7 +307,7 @@ The `typical-male-3mgkg-q2w-dynamic-probe` starter has **181 rows**. Reference c
 | `central_conc_mg_L` | 0 | 0 (0 d, post) | 127.514 (154.042 d, pre) | 58.7931 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

@@ -10,12 +10,12 @@ Explore fixed vedolizumab exposure in transplant prophylaxis scenarios.
 
 Full ODE simulation with paper dosing regimen and Figure 3/source endpoint overlays where available.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk', version='0.1.0')
+model = Library().load('qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk', version='0.1.0')
 result = model.run('phase3-300mg-q4w-reference')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -85,7 +85,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `central_concentration_mg_per_L` | Vedolizumab concentration | `1` |
 | `cumulative_auc_mg_day_per_L` | Accumulated central vedolizumab exposure | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -94,7 +94,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk --model-version 0.1.0 --scenario phase3-300mg-q4w-reference --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk --model-version 0.1.0 --scenario phase3-300mg-q4w-reference --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -399,7 +399,7 @@ The `phase3-300mg-q4w-reference` starter has **188 rows**. Reference checkpoints
 | `cumulative_auc_mg_day_per_L` | 0 | 0 (0 h, post) | 11537.3 (180 h, pre) | 11537.3 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

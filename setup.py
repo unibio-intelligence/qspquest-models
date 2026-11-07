@@ -5,7 +5,8 @@ from setuptools import setup
 from setuptools.command.build_py import build_py
 
 ROOT = Path(__file__).resolve().parent
-ASSETS = ("catalog.json", "source-catalog.json", "source-omex-catalog.json",
+ASSETS = ("README.md", "PACKAGE_README.md", "CONTRIBUTING.md", "MODEL_CATALOG.md",
+          "tutorials", "catalog.json", "source-catalog.json", "source-omex-catalog.json",
           "LICENSE", "NOTICE", "SOURCE_NOTICE.md", "models", "sources",
           "scripts/model_summaries.json")
 

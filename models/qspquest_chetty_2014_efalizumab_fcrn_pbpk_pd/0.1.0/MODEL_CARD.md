@@ -10,12 +10,12 @@ Inspect efalizumab FcRn distribution and pharmacodynamic evidence replays.
 
 Reduced first-order progression from Gordon baseline PASI toward Chetty source Yss. This is not a Simcyp virtual-population reproduction.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd', version='0.1.0')
+model = Library().load('qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd', version='0.1.0')
 result = model.run('gordon-1mgkg-pasi-progression-probe')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -46,7 +46,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | --- | --- | --- |
 | `PASI_current` | Psoriasis severity score in the progression probe | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -55,7 +55,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd --model-version 0.1.0 --scenario gordon-1mgkg-pasi-progression-probe --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd --model-version 0.1.0 --scenario gordon-1mgkg-pasi-progression-probe --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -174,7 +174,7 @@ The `gordon-1mgkg-pasi-progression-probe` starter has **85 rows**. Reference che
 | `PASI_current` | 19 | 9.78123 (2016 h, pre) | 19 (0 h, post) | 9.78123 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

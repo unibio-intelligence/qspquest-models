@@ -22,5 +22,15 @@
     "paper_doi": "10.1208/s12248-026-01285-0",
     "license": "CC BY 4.0"
   },
-  "modification_notice": "Ubi-authored implementation and curated scenarios; public identity and distribution metadata differ from source. See reproduction/omission record. Native numeric coordinates preserved; no new physical-dimensional qualification."
+  "modification_notice": "Ubi-authored implementation and curated scenarios; public identity and distribution metadata differ from source. See reproduction/omission record. Native numeric coordinates preserved; no new physical-dimensional qualification.",
+  "rights": {
+    "audit_source": "https://api.crossref.org/works/10.1208%2Fs12248-026-01285-0",
+    "audit_checked_at": "2026-11-06T05:23:27.634482+00:00",
+    "source_license": "CC BY 4.0",
+    "source_license_url": "https://creativecommons.org/licenses/by/4.0",
+    "redistribution_permitted_by_audit": true,
+    "commercial_use": "allowed_with_license_compliance",
+    "derivatives": "allowed_with_license_compliance",
+    "release_blocker": null
+  }
 }

@@ -10,12 +10,12 @@ Explore nivolumab and immune mechanisms in neoadjuvant lung-cancer scenarios.
 
 Reduced ODE probe for two 3 mg/kg nivolumab doses before day-40 surgery. Paper overlays expose the published clinical/model endpoint markers; figure-level trajectory validation remains pending digitized Fig. 6-7 patient data.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp', version='0.1.0')
+model = Library().load('qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp', version='0.1.0')
 result = model.run('neoadjuvant-two-dose-resection-endpoint')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -45,7 +45,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `pd1_blockade_fraction` | Fraction of PD-1 blocked | `1` |
 | `tumor_regression_percent_calc` | Calculated percentage tumor regression | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -54,7 +54,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp --model-version 0.1.0 --scenario neoadjuvant-two-dose-resection-endpoint --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp --model-version 0.1.0 --scenario neoadjuvant-two-dose-resection-endpoint --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -134,7 +134,7 @@ The `neoadjuvant-two-dose-resection-endpoint` starter has **41 rows**. Reference
 | `tumor_regression_percent_calc` | 0 | -11.9483 (40 d, pre) | 0 (0 d, post) | -11.9483 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

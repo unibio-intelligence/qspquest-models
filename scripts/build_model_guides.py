@@ -68,7 +68,7 @@ def cli_example(current, ident, version, scenario):
     if not current:
         return ['Use the checksum-pinned Python command above for this version; the CLI runs only the default version.', '']
     return ['The CLI uses the same selection (`--all-readouts` exports the complete table):', '', '```sh',
-            f'python -m qspquest_models --library . --model {ident} --model-version {version} --scenario {scenario} --csv model-example-cli.csv', '```', '']
+            f'python -m qspquest_models --model {ident} --model-version {version} --scenario {scenario} --csv model-example-cli.csv', '```', '']
 
 
 def reader_order(lines):
@@ -81,7 +81,7 @@ def reader_order(lines):
             sections[-1][1].append(line)
         else:
             introduction.append(line)
-    first = ['## Run an experiment', '## Inputs and outputs', '## Interpretation and limits']
+    first = ['## Run an experiment', '## Inspect a retained archive', '## Inputs and outputs', '## Interpretation and limits']
     ordered = [section for title in first for heading, section in sections if heading == title]
     ordered += [section for heading, section in sections if heading not in first]
     for section in ordered:
@@ -118,6 +118,33 @@ def topic(ident):
         return 'Oncology, binding and immune mechanisms'
     return 'Other pharmacology and protein distribution'
 
+
+
+def availability_parts(cohort):
+    counts = cohort['selected_availability']
+    labels = (('dynamic', 'simulate'), ('source_replay', 'replay published results'),
+              ('inspection_only', 'are for inspection only'))
+    return [f'{counts[key]} {text}' for key, text in labels if counts.get(key)]
+
+
+def joined(parts):
+    return parts[0] if len(parts) == 1 else ', '.join(parts[:-1]) + ' and ' + parts[-1]
+
+
+def availability_sentence(cohort):
+    parts = availability_parts(cohort)
+    if parts == [f"{cohort['selected_model_identities']} simulate"]:
+        return 'Every model in this catalog can be simulated.'
+    parts[0] = parts[0].replace(' ', ' models ', 1)
+    return joined(parts) + '.'
+
+
+def library_sentence(cohort):
+    n = cohort['selected_model_identities']
+    parts = availability_parts(cohort)
+    if parts == [f'{n} simulate']:
+        return f'The library contains {n} simulation models.'
+    return f'The library contains {n} models: {joined(parts)}.'
 
 
 def build():
@@ -201,6 +228,8 @@ def build():
         status = f'Runnable · {len(scenarios)} experiment' + ('s' if len(scenarios) != 1 else '') if scenarios else 'Inspection only · simulation unavailable'
         if profile['availability'] == 'source_replay':
             status = 'Source replay available; dynamic simulation unavailable'
+        if not current and availability.availability != 'inspection_only':
+            status = 'Retained alternate archive · source and stored-evidence inspection'
         if held and scenarios:
             status += f' · {len(held)} unavailable'
         lines = [f'# {title}', '', '[Browse models](../../../MODEL_CATALOG.md) · [Setup](../../../README.md#setup) · [Python](../../../tutorials/python-quickstart.md) · [R](../../../tutorials/r-quickstart.md)', '', summaries[ident], '', f'**{status}.** Version {version}.', '']
@@ -215,18 +244,12 @@ def build():
                   'A runnable preset describes available execution. Stored evidence does not establish qualification for a different engine build.', '',
                   '## What you can explore', '']
         if current and availability.fit_ready:
-            workflow = fitting['workflows'][0]['id']
             location = lines.index('## What you can explore')
             lines[location:location] = [
-                '## Synthetic parameter recovery', '',
-                'Complete the [fitting prerequisites](../../../tutorials/library-fitting.md#prerequisites-and-discovery), including the matching QSPQuest Python binding. Each workflow fits synthetic data stored with the model, with fixed residual errors, parameter bounds and solver settings.', '',
-                '```python', 'from qspquest_models import Library',
-                f"model = Library('.').load('{ident}', version='{version}')",
-                "print([(w['id'], w['operation']) for w in model.fitting_workflows])",
-                f"fit = model.fit_workflow('{workflow}')",
-                "assert fit['checks']['passed'], fit['checks']", "print(fit['checks']['parameters'])", '```', '',
-                'A successful fit converges and recovers each parameter within its allowed error. If a fit runs out of budget or does not converge, its checks fail; read the diagnostics before using the estimates.', '',
-                f"The {len(fitting['workflows'])} archived workflows test recovery on synthetic data only, not the source population fit, uncertainty or clinical use. Read each workflow's solver and qualification record.", '',
+                '## Archived synthetic fitting contract', '',
+                f"This archive declares {len(fitting['workflows'])} synthetic parameter-recovery workflows. Archived fit readiness does not establish compatibility with the installed engine.", '',
+                'Use the [fitting guide](../../../tutorials/library-fitting.md#prerequisites-and-discovery) to list compatible workflows and current engine holds before fitting. Preset simulation does not require fitting compatibility.', '',
+                'These fixtures do not establish source-population reproduction, uncertainty or clinical use.', '',
             ]
         if current and row.get('source_family'):
             family = row['source_family']
@@ -270,13 +293,13 @@ def build():
             lines += ['', 'Inspect the same declarations using `model.output_semantics`. An undeclared identity is `None`; it is not inferred from the readout name.', '']
         if scenarios:
             first = profile['starter']
-            lines += ['## Run an experiment', '', experiments.get(first, {}).get('description', ''), '', 'Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:', '', '```python']
+            lines += ['## Run an experiment' if current else '## Inspect a retained archive', '', experiments.get(first, {}).get('description', '') if current else 'This version is retained for source and stored-evidence inspection. Use the linked current version for the supported simulation quickstart.', '', 'Complete [setup](../../../README.md#setup), then run this Python code from any working directory:', '', '```python']
             if current:
-                lines += ['from qspquest_models import Library', '', f"model = Library('.').load('{ident}', version='{version}')"]
+                lines += ['from qspquest_models import Library', '', f"model = Library().load('{ident}', version='{version}')"]
             else:
                 digest = read(folder / 'evidence.json')['omex_sha256']
-                lines += ['from qspquest_models import load_archive', '', 'model = load_archive(', f"    '{relative}',", f"    expected_sha256='{digest}',", ')']
-            lines += [f"result = model.run('{first}')", "model.write_csv(result, 'model-example-python.csv')", "print(len(result['times']), 'rows')", '```', '', '### Choose an experiment', '', 'A preset is a named experiment with fixed inputs. Summary and table replays return stored', 'values; they are not new fits and may not change over time.', '', '| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |', '| --- | --- | --- | ---: |']
+                lines += ['from qspquest_models import Library, load_archive', '', 'model = load_archive(', f"    Library().root / '{relative}',", f"    expected_sha256='{digest}',", ')']
+            lines += ([f"result = model.run('{first}')", "model.write_csv(result, 'model-example-python.csv')", "print(len(result['times']), 'rows')"] if current else ["print(model.model_id, model.index['model_version'])", "print(model.scenario_ids)"]) + ['```', '', '### Choose an experiment' if current else '### Archived experiments', '', 'A preset is a named experiment with fixed inputs. Summary and table replays return stored', 'values; they are not new fits and may not change over time.', '', '| Experiment ID (pass to `model.run`) | Purpose | Time range | Rows |' if current else '| Archived experiment ID | Purpose | Time range | Rows |', '| --- | --- | --- | ---: |']
             if len(scenarios) > 12:
                 lines[-2:-2] = ['<details>', f'<summary>Browse all {len(scenarios)} runnable experiments</summary>', '']
             for sid, req in requests.items():
@@ -288,7 +311,7 @@ def build():
             if len(scenarios) > 12:
                 lines += ['', '</details>']
             req = requests[first]
-            lines += ['', '## Inputs and outputs', '', 'Each experiment supplies the parameters, initial state, dosing schedule and sampling times.', '[Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.', '', '`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes', 'samples before (`pre`) and after (`post`) a dosing or other discrete event.', 'State columns use `state__`; retained constant source values use `source__`.', '', '| Primary column | Meaning | Unit |', '| --- | --- | --- |']
+            lines += ['', '## Inputs and outputs', '', 'Each experiment supplies the parameters, initial state, dosing schedule and sampling times.', '[Compare presets or change an input](../../../tutorials/change-inputs.md) when exploring another condition.', '', '`model-example-python.csv` contains `time`, `side` and the primary readouts below. `side` distinguishes' if current else 'The archived primary table contains `time`, `side` and the readouts below. `side` distinguishes', 'samples before (`pre`) and after (`post`) a dosing or other discrete event.', 'State columns use `state__`; retained constant source values use `source__`.', '', '| Primary column | Meaning | Unit |', '| --- | --- | --- |']
             source_parameters = source_model.get('parameters', {})
             for output in profile['readouts']:
                 kind, name = output['kind'], output['name']
@@ -297,7 +320,11 @@ def build():
                 lines += [f"| `{prefix}{name}` | {cell(output['meaning'])} | `{unit}` |"]
             if profile['availability'] == 'source_replay':
                 lines += ['', '**This starter is a source replay.** Its values are stored constants or short checks from the source.', 'This version cannot simulate over time. Zero drug states do not show a treatment response.']
-            lines += ['', 'Python exports this small table by default. To export every output and biological state:', '', '```python', "model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)", '```', '', *cli_example(current, ident, version, first), 'In R, `qspquest_data_frame(result)` returns the same primary columns.', 'Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.', '[R setup and examples](../../../tutorials/r-quickstart.md).', '', '<details>', f"<summary>Technical inventory: {len(native['outputs'])} outputs and {len(native['states'])} states</summary>", '', '| Technical column | Unit |', '| --- | --- |']
+            if current:
+                lines += ['', 'Python exports these primary readouts by default. To export every output and biological state:', '', '```python', "model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)", '```', '', *cli_example(current, ident, version, first), 'In R, `qspquest_data_frame(result)` returns the same primary columns.', 'Use `qspquest_data_frame(result, all_readouts = TRUE)` for the complete table.', '[R setup and examples](../../../tutorials/r-quickstart.md).', '']
+            else:
+                lines += ['', 'The table describes archived primary readouts. Use the current-version guide for supported simulation and CSV or R data-frame export.', '']
+            lines += ['<details>', f"<summary>Technical inventory: {len(native['outputs'])} outputs and {len(native['states'])} states</summary>", '', '| Technical column | Unit |', '| --- | --- |']
             for kind, prefix in [('outputs', ''), ('states', 'state__')]:
                 lines += [f"| `{prefix}{name}` | `{out['unit']}` |" for name, out in native[kind].items()]
             lines += ['', '</details>', '', 'Column names follow the source paper. A unit of `1` means the engine uses the source\'s number', 'as-is, without a physical unit or conversion; do not infer a unit from the column name.', '[How to interpret outputs](../../../tutorials/understand-results.md) explains this distinction.', '']
@@ -313,12 +340,12 @@ def build():
                 assert preview['scenario_id'] == first and preview['archive_sha256'] == read(folder / 'evidence.json')['omex_sha256']
                 expected_names = [({'output': '', 'state': 'state__', 'source_parameter': 'source__'}[r['kind']] + r['name']) for r in profile['readouts']]
                 assert [c['name'] for c in preview['columns']] == expected_names
-                lines += ['### Check your result', '', f"The `{first}` starter has **{preview['rows']} rows**. Reference checkpoints:", '', '| Column | First row | Minimum (time, side) | Maximum (time, side) | Last row |', '| --- | ---: | --- | --- | ---: |']
+                lines += ['### Check your result' if current else '### Stored reference result', '', f"The `{first}` starter has **{preview['rows']} rows**. Reference checkpoints:", '', '| Column | First row | Minimum (time, side) | Maximum (time, side) | Last row |', '| --- | ---: | --- | --- | ---: |']
                 for column in preview['columns']:
                     low = f"{column['minimum']:.6g} ({column['minimum_time']:g} {preview['time_unit']}, {column['minimum_side']})"
                     high = f"{column['maximum']:.6g} ({column['maximum_time']:g} {preview['time_unit']}, {column['maximum_side']})"
                     lines += [f"| `{column['name']}` | {column['first']:.6g} | {low} | {high} | {column['last']:.6g} |"]
-                lines += ['', 'These rounded values help you recognize the expected result; they are not pass/fail tolerances.', 'The [full starter reference](starter-preview.json) was produced by running this archive.', 'The original stored CSV may omit states.', '[Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).', '']
+                lines += ['', 'These rounded values help you recognize the expected result; they are not pass/fail tolerances.', 'The [full starter reference](starter-preview.json) contains ' + ('simulated' if profile['availability'] == 'dynamic' else 'published') + ' values produced by running this archive.', 'The original stored CSV may omit states.', '[Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).', '']
             else:
                 raise ValueError(f'Missing starter preview for {ident}; run scripts/validate_starters.py --write-previews')
         else:
@@ -344,7 +371,7 @@ def build():
         (folder / 'MODEL_CARD.md').write_text(minimal_card(re.sub(r'\n{3,}', '\n\n', '\n'.join(reader_order(lines)))))
         if current:
             listing.append((topic(ident), title, folder.relative_to(ROOT).as_posix(), summaries[ident], status))
-    lines = ['# Choose a model', '', '[Start here](README.md) · [Python](tutorials/python-quickstart.md) · [R](tutorials/r-quickstart.md) · [Understand results](tutorials/understand-results.md)', '', f"Browse {cohort['selected_model_identities']} models below, grouped by topic. Use your browser’s Find command to search for a drug,", 'disease or mechanism. Each model guide lists its experiments and outputs.', f"{cohort['selected_availability'].get('dynamic', 0)} models simulate, {cohort['selected_availability'].get('source_replay', 0)} replay published results and {cohort['selected_availability'].get('inspection_only', 0)} are for inspection only.", '', '## Good places to start', '', '| Your question | Start with |', '| --- | --- |', f'| How do I run and plot a published PK/PD model? | [Rituximab and B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/{selected["qspquest_serkland_2025_rituximab_ms_pkpd"]["version"]}/MODEL_CARD.md) |', '| How does local gating affect tumor versus systemic occupancy? | [Target-gated cargo walkthrough](tutorials/qsp-gated-cargo.md) |', '| How does exposure change biomarker turnover? | [Small turnover benchmark](models/qspquest_diffdose_2026_idr_benchmark/0.1.0/MODEL_CARD.md) |', '', 'PK describes drug exposure, PD describes drug effects, PBPK describes distribution through', 'physiological compartments, and QSP describes interacting biological mechanisms.', 'PopPK in a model name describes its source; these library examples run fixed parameters, not population fits.', '', '## Browse by topic', '']
+    lines = ['# Choose a model', '', '[Start here](README.md) · [Python](tutorials/python-quickstart.md) · [R](tutorials/r-quickstart.md) · [Understand results](tutorials/understand-results.md)', '', f"Browse {cohort['selected_model_identities']} models below, grouped by topic. Use your browser’s Find command to search for a drug,", 'disease or mechanism. Each model guide lists its experiments and outputs.', availability_sentence(cohort), '', '## Suggested starting points', '', '| Question | Model or tutorial |', '| --- | --- |', f'| How do I run and plot a published PK/PD model? | [Rituximab and B-cell dynamics](models/qspquest_serkland_2025_rituximab_ms_pkpd/{selected["qspquest_serkland_2025_rituximab_ms_pkpd"]["version"]}/MODEL_CARD.md) |', '| How does local gating affect tumor versus systemic occupancy? | [Target-gated cargo walkthrough](tutorials/qsp-gated-cargo.md) |', f'| How does exposure change biomarker turnover? | [Small turnover benchmark](models/qspquest_diffdose_2026_idr_benchmark/{selected["qspquest_diffdose_2026_idr_benchmark"]["version"]}/MODEL_CARD.md) |', '', 'Pharmacokinetic (PK) models describe drug exposure, pharmacodynamic (PD) models describe drug effects,', 'physiologically based pharmacokinetic (PBPK) models describe distribution through physiological compartments,', 'and quantitative systems pharmacology (QSP) models describe interacting biological mechanisms.', 'PopPK (population pharmacokinetics) in a model name describes its source; these library examples run fixed parameters, not population fits.', '', '## Browse by topic', '']
     categories = sorted({entry[0] for entry in listing})
     for category in categories:
         anchor = re.sub(r'[^\w\s-]', '', category.lower()).replace(' ', '-')
@@ -353,19 +380,16 @@ def build():
         lines += ['', f'## {category}', '', '| Model | What it describes | Availability |', '| --- | --- | --- |']
         for _, title, path, description, status in sorted(x for x in listing if x[0] == category):
             lines += [f'| [{cell(title)}]({path}/MODEL_CARD.md) | {cell(description)} | {status} |']
-    lines += ['', '## Search from the terminal', '', '```sh', 'python -m qspquest_models --library . --search rituximab --runnable', '```', '', 'Add `--format json` for machine-readable output. The [technical reference](tutorials/model-format.md)', 'covers version selection and archive details.', '']
+    lines += ['', '## Search from the terminal', '', '```sh', 'python -m qspquest_models --search rituximab --runnable', '```', '', 'Add `--format json` for machine-readable output. The [technical reference](tutorials/model-format.md)', 'covers version selection and archive details.', '']
     (ROOT / 'MODEL_CATALOG.md').write_text('\n'.join(lines))
     readme = ROOT / 'README.md'
     text = readme.read_text()
     start = text.index('The library contains ')
     end = text.index('\n\n## Setup', start)
-    summary = (f"The library contains {cohort['selected_model_identities']} models: "
-               f"{cohort['selected_availability'].get('dynamic', 0)} simulate, "
-               f"{cohort['selected_availability'].get('source_replay', 0)} replay published results and "
-               f"{cohort['selected_availability'].get('inspection_only', 0)} are for inspection only. "
-               f"Together they offer {cohort['selected_preset_requests']} ready-to-run experiments.\n"
+    summary = (library_sentence(cohort) + ' '
+               f"Together they provide {cohort['selected_preset_requests']} preset experiments.\n"
                "Examples use fixed parameters, their units have not been independently checked,\n"
-               "and they are not for choosing clinical doses.")
+               "and they are not intended for clinical dose selection.")
     readme.write_text(text[:start] + summary + text[end:])
     print(f'Wrote {len(listing)} catalog entries and {len(library.availability_records)} model guides.')
 

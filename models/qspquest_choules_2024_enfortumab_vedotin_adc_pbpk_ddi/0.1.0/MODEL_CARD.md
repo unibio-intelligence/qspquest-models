@@ -10,12 +10,12 @@ Explore reduced ADC and payload exposure; this is not the original full PBPK mec
 
 Source-limited concentration-domain reduced ODE for enfortumab vedotin conjugated antibody and unconjugated MMAE. The proprietary Simcyp ADC/full PBPK workspace and virtual population are not public, so paper endpoints are overlaid rather than claiming full PBPK parity.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi', version='0.1.0')
+model = Library().load('qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi', version='0.1.0')
 result = model.run('ev-1p0-single-dose-reduced-ode')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -51,7 +51,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `adc_conc_ug_ml` | Enfortumab vedotin concentration | `1` |
 | `mmae_conc_ng_ml` | Released MMAE payload concentration | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -60,7 +60,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi --model-version 0.1.0 --scenario ev-1p0-single-dose-reduced-ode --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi --model-version 0.1.0 --scenario ev-1p0-single-dose-reduced-ode --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -488,7 +488,7 @@ The `ev-1p0-single-dose-reduced-ode` starter has **142 rows**. Reference checkpo
 | `mmae_conc_ng_ml` | 0 | 0 (0 h, post) | 1.91795 (2.25 h, post) | 0.897199 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 

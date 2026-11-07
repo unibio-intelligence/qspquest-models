@@ -5,10 +5,17 @@ build-backend = "setuptools.build_meta"
 name = "qspquest-models"
 version = "0.1.0"
 description = "Curated OMEX models for standalone QSPQuest simulation"
+authors = [{name = "UniBio Intelligence"}]
+maintainers = [{name = "Vivek Kohar"}]
 requires-python = ">=3.10"
+dependencies = ["qspquest==0.1.0"]
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE", "SOURCE_NOTICE.md"]
 readme = "PACKAGE_README.md"
+[project.urls]
+Homepage = "https://github.com/unibio-intelligence/qspquest-models"
+Documentation = "https://github.com/unibio-intelligence/qspquest-models/blob/main/PACKAGE_README.md"
+Issues = "https://github.com/unibio-intelligence/qspquest-models/issues"
 [project.scripts]
 qspquest-models = "qspquest_models.cli:main"
 [tool.setuptools]

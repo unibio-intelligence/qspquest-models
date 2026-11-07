@@ -1,0 +1,27 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_serkland_2025_rituximab_ms_pkpd",
+  "model_version": "0.3.2",
+  "omex_sha256": "a49076f7484f0753bdbfa5f19ce305ca3ce2e4adb961d777343efe92e8143366",
+  "cases": [],
+  "source_scenarios": [
+    "exact-monolix-archive-anchor",
+    "population-typical-1000mg-full-ode",
+    "subject1-saem-full-ode-overlay"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false,
+  "scope": "Same scientific source, native model, scenarios and fitting inputs as 0.3.1. The three synthetic fits were rerun and their qualification records name the engine request identity. Complete release qualification is not assessed.",
+  "archive_source_members_preserved": true,
+  "changed_members": [
+    "fitting.json",
+    "fitting/qualification/diffsol_bdf-start-1.json",
+    "fitting/qualification/diffsol_bdf-start-2.json",
+    "fitting/qualification/diffsol_bdf-start-3.json",
+    "fitting/results/diffsol_bdf-start-1.json",
+    "fitting/results/diffsol_bdf-start-2.json",
+    "fitting/results/diffsol_bdf-start-3.json",
+    "index.json"
+  ]
+}

@@ -10,12 +10,12 @@ Compare fixed denosumab/SB16 exposure and pharmacodynamic experiments.
 
 Fixed-effect public ODE simulation for reference denosumab after 60 mg SC at months 0, 6, and 12. Paper comparators are the Table 5 population median and 90 percent PI endpoints.
 
-Complete [setup](../../../README.md#setup), then run this Python code from the library checkout:
+Complete [setup](../../../README.md#setup), then run this Python code from any working directory:
 
 ```python
 from qspquest_models import Library
 
-model = Library('.').load('qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd', version='0.1.0')
+model = Library().load('qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd', version='0.1.0')
 result = model.run('den-60mg-q6mo-three-doses-table5-overlay')
 model.write_csv(result, 'model-example-python.csv')
 print(len(result['times']), 'rows')
@@ -55,7 +55,7 @@ State columns use `state__`; retained constant source values use `source__`.
 | `Rfree_nM` | Free RANKL target concentration | `1` |
 | `bmd_change_percent` | Percentage change in bone mineral density | `1` |
 
-Python exports this small table by default. To export every output and biological state:
+Python exports these primary readouts by default. To export every output and biological state:
 
 ```python
 model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
@@ -64,7 +64,7 @@ model.write_csv(result, 'technical-trajectory.csv', all_readouts=True)
 The CLI uses the same selection (`--all-readouts` exports the complete table):
 
 ```sh
-python -m qspquest_models --library . --model qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd --model-version 0.1.0 --scenario den-60mg-q6mo-three-doses-table5-overlay --csv model-example-cli.csv
+python -m qspquest_models --model qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd --model-version 0.1.0 --scenario den-60mg-q6mo-three-doses-table5-overlay --csv model-example-cli.csv
 ```
 
 In R, `qspquest_data_frame(result)` returns the same primary columns.
@@ -240,7 +240,7 @@ The `den-60mg-q6mo-three-doses-table5-overlay` starter has **551 rows**. Referen
 | `bmd_change_percent` | 0 | 0 (0 h, post) | 6.87563 (12240 h, post) | 6.73937 |
 
 These rounded values help you recognize the expected result; they are not pass/fail tolerances.
-The [full starter reference](starter-preview.json) was produced by running this archive.
+The [full starter reference](starter-preview.json) contains simulated values produced by running this archive.
 The original stored CSV may omit states.
 [Read the original stored result without installing the engine](../../../tutorials/understand-results.md#read-a-stored-result).
 
