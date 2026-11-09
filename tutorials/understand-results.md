@@ -63,23 +63,25 @@ from qspquest_models import Library
 import csv
 import gzip
 
-path = Library().root / ('models/qspquest_serkland_2025_rituximab_ms_pkpd/0.1.0/results/'
-            'population-typical-1000mg-full-ode/qspquest.csv.gz')
+path = Library().root / ('models/qspquest_diffdose_2026_tgi_benchmark/0.1.0/results/'
+            'higher_exposure/qspquest.csv.gz')
 with gzip.open(path, 'rt', newline='') as stream:
     rows = list(csv.DictReader(stream))
 print(len(rows), 'rows')
-print('First B-cell value:', rows[0]['cd19_cells_mm3'])
-print('Last B-cell value:', rows[-1]['cd19_cells_mm3'])
+print('First tumor value:', rows[0]['tumor_total'])
+print('Last tumor value:', rows[-1]['tumor_total'])
 ```
 
-Expect 201 rows, with first and last B-cell values of 199.57 and approximately
-8.70521. This is the stored 0.1.0 trajectory, not a check of version 0.3.2.
+Expect 301 rows, with first and last tumor values of 0.0098 and approximately
+1.18640. These are the stored values for this synthetic benchmark in its native
+model units; they are not patient measurements.
 
 Each version's `evidence.json` lists its stored files under
 `results/<experiment-id>/`. Reading them does not run a new simulation. Some
 versions have no stored results even when their experiments can run. Some stored
-CSVs omit states; a `starter-preview.json`, when present, gives checkpoints for
-the primary readouts. The model guide says what each version provides.
+CSVs contain only time and event side. Run the preset to obtain its numerical
+readouts. A `starter-preview.json`, when present, gives checkpoints for the
+primary readouts. The model guide says what each version provides.
 
 ## Next steps
 

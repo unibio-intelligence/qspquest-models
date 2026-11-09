@@ -1,0 +1,239 @@
+{
+  "qspquest_serkland_2025_rituximab_ms_pkpd/0.5.0": {
+    "parameters": {
+      "V_l": {
+        "role": "structural",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: V_pop",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "kel_day": {
+        "role": "structural",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: cl_pop",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "kdeg1_mm3_cell_day": {
+        "role": "structural",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: kdeg1_pop",
+        "status": "estimated",
+        "unit_basis": "ode_inferred"
+      },
+      "kdeg2_l_mg_day": {
+        "role": "structural",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: kdeg2_pop",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "L0_cells_mm3": {
+        "role": "structural",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "plot_PKPD_results.R: population-average patient B0",
+        "status": "reported",
+        "unit_basis": "declared"
+      },
+      "kout_day": {
+        "role": "structural",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: kout_pop",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "omega_V": {
+        "role": "iiv_sd",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: omega_V",
+        "status": "estimated",
+        "unit_basis": "declared",
+        "variability": {
+          "distribution": "log_normal",
+          "target": "V_l",
+          "scale": "sd"
+        }
+      },
+      "omega_cl": {
+        "role": "iiv_sd",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: omega_cl",
+        "status": "estimated",
+        "unit_basis": "declared",
+        "variability": {
+          "distribution": "log_normal",
+          "target": "kel_day",
+          "scale": "sd"
+        }
+      },
+      "omega_kdeg1": {
+        "role": "iiv_sd",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: omega_kdeg1",
+        "status": "estimated",
+        "unit_basis": "declared",
+        "variability": {
+          "distribution": "log_normal",
+          "target": "kdeg1_mm3_cell_day",
+          "scale": "sd"
+        }
+      },
+      "omega_kdeg2": {
+        "role": "iiv_sd",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: omega_kdeg2",
+        "status": "estimated",
+        "unit_basis": "declared",
+        "variability": {
+          "distribution": "log_normal",
+          "target": "kdeg2_l_mg_day",
+          "scale": "sd"
+        }
+      },
+      "omega_kout": {
+        "role": "iiv_sd",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: omega_kout",
+        "status": "estimated",
+        "unit_basis": "declared",
+        "variability": {
+          "distribution": "log_normal",
+          "target": "kout_day",
+          "scale": "sd"
+        }
+      },
+      "omega_L0": {
+        "role": "iiv_sd",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: omega_L0",
+        "status": "estimated",
+        "unit_basis": "declared",
+        "variability": {
+          "distribution": "additive",
+          "target": "L0_cells_mm3",
+          "scale": "sd"
+        }
+      },
+      "residual_a1": {
+        "role": "residual_error",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: a1",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "residual_b1": {
+        "role": "residual_error",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: b1",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "residual_a2": {
+        "role": "residual_error",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: a2",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "residual_b2": {
+        "role": "residual_error",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/populationParameters.txt: b2",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "ofv": {
+        "role": "information_criterion",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/LogLikelihood/logLikelihood.txt",
+        "status": "reported",
+        "unit_basis": "declared"
+      },
+      "aic": {
+        "role": "information_criterion",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/LogLikelihood/logLikelihood.txt",
+        "status": "reported",
+        "unit_basis": "declared"
+      },
+      "bic": {
+        "role": "information_criterion",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/LogLikelihood/logLikelihood.txt",
+        "status": "reported",
+        "unit_basis": "declared"
+      },
+      "bic_c": {
+        "role": "information_criterion",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/LogLikelihood/logLikelihood.txt",
+        "status": "reported",
+        "unit_basis": "declared"
+      },
+      "subject1_V_l": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/IndividualParameters/estimatedIndividualParameters.txt, id 1: V_SAEM",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "subject1_kel_day": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/IndividualParameters/estimatedIndividualParameters.txt, id 1: cl_SAEM",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "subject1_kdeg1": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/IndividualParameters/estimatedIndividualParameters.txt, id 1: kdeg1_SAEM",
+        "status": "estimated",
+        "unit_basis": "ode_inferred"
+      },
+      "subject1_kdeg2": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/IndividualParameters/estimatedIndividualParameters.txt, id 1: kdeg2_SAEM",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "subject1_L0_cells_mm3": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/IndividualParameters/estimatedIndividualParameters.txt, id 1: L0_SAEM",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "subject1_kout_day": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/IndividualParameters/estimatedIndividualParameters.txt, id 1: kout_SAEM",
+        "status": "estimated",
+        "unit_basis": "declared"
+      },
+      "subject1_final_time_day": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/predictions_y1.txt and predictions_y2.txt: last common time for id 1",
+        "status": "reported",
+        "unit_basis": "declared"
+      },
+      "subject1_rtx_day186_mg_l": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/predictions_y1.txt: id 1 at day 186.05",
+        "status": "reported",
+        "unit_basis": "declared"
+      },
+      "subject1_cd19_day186_cells_mm3": {
+        "role": "subject_replay",
+        "source": "10.5281/zenodo.14712277",
+        "locator": "RTX_PKPD_model3/predictions_y2.txt: id 1 at day 186.05",
+        "status": "reported",
+        "unit_basis": "declared"
+      }
+    }
+  }
+}

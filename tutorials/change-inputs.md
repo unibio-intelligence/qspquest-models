@@ -98,20 +98,19 @@ efficacy.
 
 Inspect the saved requests to confirm the intended change. When studying another
 model, identify how its dose is represented first: for example, the rituximab
-quickstart encodes its starting dose in the initial concentration. Inspect and edit
-that state by its biological name instead:
+quickstart gives its starting 1000 mg as a bolus into the concentration state `C`,
+which raises `C` by the amount divided by `V_l`. Change that dose by its index:
 
 ```python
 rituximab = Library('.').load('qspquest_serkland_2025_rituximab_ms_pkpd')
 copy = rituximab.research_copy('population-typical-1000mg-full-ode')
-print(copy.initial_states)
-copy.set_initial_state('C', 175.40808349401845)  # half the original concentration
+print(copy.doses)
+copy.set_dose(0, 500.0)  # half the original dose, in mg
 changed = copy.run()
 ```
 
-The value uses the same scale as the stored model. In R, pass
-`initial_states = c(C = 175.40808349401845)` to `models$run()`. In the CLI, use
-`--initial C=175.40808349401845`.
+`set_dose` keeps the mg unit. In R, pass `dose_index = 0, dose_amount = 500` to
+`models$run()`. In the CLI, use `--dose 0=500`.
 
 Stored reference results cover only the original experiments, not your edits. See
 [archive editing](model-format.md#research-copies) if you plan to contribute a new

@@ -1,0 +1,26 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd",
+  "model_version": "0.2.0",
+  "omex_sha256": "a96973576a27b71dde14ef5f6dea48a3efd9231d30d88b4e4e0c431c20a9924d",
+  "cases": [],
+  "source_scenarios": [
+    "iv-140mg-single-infusion-dynamic",
+    "paper-population-and-threshold-checks",
+    "sc-21mg-q4w-68kg-s8-dynamic",
+    "sc-21mg-q4w-75kg-dynamic",
+    "sc-21mg-q4w-75kg-s8-dynamic",
+    "sc-21mg-q4w-84kg-s8-dynamic",
+    "sc-70mg-q4w-68kg-s8-dynamic",
+    "sc-70mg-q4w-75kg-dynamic",
+    "sc-70mg-q4w-75kg-s8-dynamic",
+    "sc-70mg-q4w-84kg-s8-dynamic",
+    "sc-7mg-q4w-75kg-dynamic",
+    "table3-pk-parameter-estimates",
+    "table4-pd-parameter-estimates"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false,
+  "archive_source_members_preserved": true
+}

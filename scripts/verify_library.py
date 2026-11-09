@@ -14,6 +14,9 @@ sys.path.insert(0, str(ROOT))
 from qspquest_models import Library, load_archive
 from qspquest_models.fitting import FittingEngineMismatch
 from qspquest_models.availability import require_publication_review
+from qspquest_models import parameters as parameter_metadata
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import check_export_content  # noqa: E402
 
 
 def require(condition, message):
@@ -35,9 +38,31 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
         require((loaded.index["model_version"] == row["version"]), "archive version mismatch")
         selected[row["archive"]] = row["omex_sha256"]
     for row in library.list_source_models():
-        library.load_source_model(row["id"])
-        library.load_source_execution(row["id"])
-        selected[row["omex"]["archive"]] = row["omex"]["omex_sha256"]
+        source = library.load_source_model(row["id"])
+        model = library.load_source_execution(row["id"])
+        relative = row["omex"]["archive"]
+        revision = model.index.get("source_revision")
+        if revision is not None:
+            provenance_name = "SOURCE_REPRODUCTION.json"
+            embedded = json.loads(model.members[provenance_name])
+            adjacent = json.loads((root / relative).with_name(provenance_name).read_bytes())
+            require(revision["source_version"] == row["version"] == source["model.json"]["version"]
+                    == adjacent["source_version"], "selected source version differs: " + row["id"])
+            require(adjacent["source_model_id"] == embedded["source_model_id"] == row["id"],
+                    "source provenance identity differs: " + row["id"])
+            # Archives may preserve the base provenance in their embedded record.
+            base = embedded.get("base_source_version", embedded["source_version"])
+            require(adjacent.get("base_source_version") == base
+                    and embedded["source_version"] in (base, row["version"]),
+                    "base source version differs: " + row["id"])
+            require(all(json.loads(model.members["scientific/" + name]) == value
+                        for name, value in source.items()), "archived source snapshot differs: " + row["id"])
+            for name, raw in model.members.items():
+                if name.startswith('scenarios/') and name.endswith('/request.json'):
+                    request = json.loads(raw)
+                    require(request.get('model_version', row['version']) == row['version'],
+                            'source request version differs: ' + row['id'])
+        selected[relative] = row["omex"]["omex_sha256"]
     registered = {
         f"models/{record.model_id}/{record.archive_version}/model.omex": record.archive_sha256
         for record in library.availability_records.values()
@@ -57,6 +82,7 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
             require((library.load(row['id']).source_interpretations == row['source_interpretations']), 'library integrity check failed')
     cases = 0
     csv_paths = set()
+    coordinate_only_tables = 0
     archives_with_evidence = 0
     selected_cases = 0
     historical_fitting_holds = []
@@ -78,6 +104,13 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
         record.verify_archive(model.index, digest, json.loads(model.members.get("fitting.json", b"{}")))
         evidence = json.loads(evidence_raw)
         require((evidence["omex_sha256"] == digest), "evidence archive mismatch")
+        comparison = evidence.get("preset_checks", {}).get("against_stored_trajectories", {})
+        for check in comparison.get("scenarios", {}).values():
+            if check["compared_values"] == 0:
+                require(check.get("status") == "no_comparable_readouts"
+                        and check.get("max_relative_difference") is None
+                        and check.get("outside_starter_tolerance") is None,
+                        "stored comparison without readouts cannot report numerical agreement")
         seen = set()
         for case in evidence["cases"]:
             require((case["scenario_id"] not in seen), "duplicate preset evidence")
@@ -96,11 +129,10 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
             require((hashlib.sha256(decoded).hexdigest() == record["uncompressed_sha256"]), "original CSV digest mismatch")
             with io.StringIO(decoded.decode()) as stream:
                 reader = csv.reader(stream)
-                require((next(reader)[:2] == [
-                    "time",
-                    "side",
-                ]), "unexpected trajectory columns")
-                require((next(reader, None) is not None), "empty trajectory")
+                columns = next(reader, [])
+                require(columns[:2] == ["time", "side"], "unexpected stored table columns")
+                require(next(reader, None) is not None, "empty stored table")
+                coordinate_only_tables += len(columns) == 2
             require((case.get("engine_identity")), "missing engine identity")
             csv_paths.add(path.relative_to(root).as_posix())
             cases += 1
@@ -113,6 +145,19 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
         archives_with_evidence += bool(seen)
         if library.availability_records[model.model_id + "/" + model.index["model_version"]].selected:
             selected_cases += len(seen)
+    described = set()
+    for row in library.list_models():
+        model = library.load(row["id"])
+        if model.index["native_execution"].get("model"):
+            # Every selected executable archive describes each native symbol.
+            require((library.parameter_metadata(row["id"]) is not None), "missing parameter metadata")
+            described.add((root / row["archive"]).with_name(parameter_metadata.FILENAME).relative_to(root).as_posix())
+    require(({p.relative_to(root).as_posix() for p in root.glob("models/*/*/" + parameter_metadata.FILENAME)}
+             == described), "parameter metadata inventory mismatch")
+    # Selected archives carry model content only, not source-acquisition records.
+    refused, runtime_tokens = check_export_content.findings(library)
+    require((not refused), "source-acquisition bookkeeping in selected archives: "
+            + "; ".join(f"{m}: {w}: {n}" for m, w, n in refused[:10]))
     stored = {
         p.relative_to(root).as_posix()
         for pattern in ("models/*/*/results/*/qspquest.csv.gz",)
@@ -134,14 +179,17 @@ def verify(root=ROOT, *, for_publication=False, native_fitting=False):
         "current_engine_qualification": "not_assessed",
         "fitting_native_identity": "verified" if native_fitting else "not_assessed",
         "historical_fitting_holds": historical_fitting_holds,
-        "csv_trajectories": len(csv_paths),
+        "csv_trajectories": len(csv_paths) - coordinate_only_tables,
+        "csv_coordinate_only_tables": coordinate_only_tables,
+        "parameter_metadata_records": len(described),
+        "archives_with_replay_token": len(runtime_tokens),
     }
     require(((
         result["archives"],
         result["model_identities"],
         library.availability_counts["selected_preset_requests"],
         cases,
-    ) == (82, 62, 639, 642)), "release scope changed")
+    ) == (62, 62, 631, 501)), "release scope changed: " + repr((result["archives"], result["model_identities"], library.availability_counts["selected_preset_requests"], cases)))
     return result
 
 

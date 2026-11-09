@@ -1,0 +1,146 @@
+{
+  "description": "Starting configurations for exploring rituximab persistence, CD19+ B-cell depletion, and immune-cell repopulation with typical or individualized PK/PD parameters.",
+  "model_id": "qspquest-serkland-2025-rituximab-ms-pkpd",
+  "name": "Rituximab exposure and CD19+ B-cell response",
+  "scenarios": [
+    {
+      "description": "Replay to day 0.001 after the starting 1000 mg dose of final model 3 population estimates, likelihood criteria, and subject-1 exported prediction endpoints.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "time": 0.0,
+            "amount": 1000.0,
+            "type": "bolus",
+            "unit": "mg",
+            "target": "C"
+          }
+        ]
+      },
+      "id": "exact-monolix-archive-anchor",
+      "initial_states": {
+        "C": 0.0,
+        "L": 199.57,
+        "elapsed_day": 0.0
+      },
+      "name": "Exact Monolix archive parameter/result anchor",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_summary",
+      "time_span": {
+        "end": 0.001,
+        "start": 0.0,
+        "step": 0.001
+      }
+    },
+    {
+      "description": "Explore rituximab persistence, CD19+ B-cell depletion, and gradual repopulation over 200 days using the typical parameter set.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "time": 0.0,
+            "amount": 1000.0,
+            "type": "bolus",
+            "unit": "mg",
+            "target": "C"
+          }
+        ]
+      },
+      "id": "population-typical-1000mg-full-ode",
+      "initial_states": {
+        "C": 0.0,
+        "L": 199.57,
+        "elapsed_day": 0.0
+      },
+      "interpretation_guardrails": [
+        "Interpret this as a deterministic typical-parameter trajectory, not a population distribution.",
+        "The starting 1000 mg administration is a bolus into C at day 0, which approximates the source's 4-hour infusion as dose/V; further doses or infusions can be added to the regimen.",
+        "Do not use the simulated CD19+ trajectory as a clinical dosing recommendation."
+      ],
+      "name": "Typical 1000 mg exposure and B-cell response",
+      "parameters": {},
+      "scenario_type": "paper_dynamic_ode_plotting_script_reproduction",
+      "scientific_questions": [
+        "How long does circulating rituximab persist after the starting 1000 mg administration?",
+        "How rapidly and deeply are CD19+ B cells depleted?",
+        "Which clearance, drug–cell coupling, and turnover parameters shift B-cell recovery timing?"
+      ],
+      "time_span": {
+        "checkpoints": [
+          0.0,
+          28.0,
+          56.0,
+          92.0,
+          186.0,
+          200.0
+        ],
+        "end": 200.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Explore how an individualized PK/PD parameter set changes rituximab exposure, CD19+ B-cell depletion, and recovery relative to the typical configuration.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "time": 0.0,
+            "amount": 1000.0,
+            "type": "bolus",
+            "unit": "mg",
+            "target": "C"
+          }
+        ]
+      },
+      "id": "subject1-saem-full-ode-overlay",
+      "initial_states": {
+        "C": 0.0,
+        "L": 164.169,
+        "elapsed_day": 0.0
+      },
+      "interpretation_guardrails": [
+        "This configuration demonstrates individual-parameter behavior; it is not a prospective patient-specific dosing workflow.",
+        "The starting 1000 mg administration is a bolus into C at day 0, which approximates the source's 4-hour infusion as dose/V; further doses or infusions can be added to the regimen.",
+        "Do not infer clinical benefit or an optimal redosing time from CD19+ cell count alone."
+      ],
+      "name": "Individualized exposure and B-cell response",
+      "parameters": {
+        "L0_cells_mm3": 164.169,
+        "V_l": 3.68326,
+        "kel_day": 0.0181792,
+        "kdeg1_mm3_cell_day": 0.00248073,
+        "kdeg2_l_mg_day": 0.00343609,
+        "kout_day": 0.00105767
+      },
+      "scenario_type": "paper_dynamic_ode_official_prediction_overlay",
+      "scientific_questions": [
+        "How does this individualized parameter set change rituximab persistence relative to the typical configuration?",
+        "How do the individualized depletion and turnover terms shift the depth and duration of B-cell depletion?",
+        "Which differences are driven by exposure and which are driven by B-cell dynamics?"
+      ],
+      "time_span": {
+        "checkpoints": [
+          13.27,
+          29.13,
+          56.15,
+          92.19,
+          186.05
+        ],
+        "end": 186.05,
+        "start": 0.0,
+        "step": 1.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-10,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-09
+    },
+    "time_span": {
+      "end": 200.0,
+      "start": 0.0,
+      "step": 1.0
+    }
+  },
+  "time_unit": "day"
+}

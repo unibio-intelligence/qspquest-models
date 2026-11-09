@@ -1,0 +1,330 @@
+{
+  "description": "Exact table/SI replay and fixed-effect dynamic probes for Hurkmans et al. 2019.",
+  "model_id": "qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response",
+  "name": "Hurkmans 2019 nivolumab real-world PopPK scenarios",
+  "scenarios": [
+    {
+      "description": "Exact replay of study design and clearance response checks.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "study-design-and-clearance-response-checks",
+      "initial_states": {
+        "AUC": 0,
+        "A_central": 0,
+        "A_peripheral": 0,
+        "elapsed_time": 0,
+        "summary_marker": 0
+      },
+      "name": "Study Design And Clearance Response Checks",
+      "parameters": {},
+      "scenario_type": "paper_exact_scalar_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact replay of table2 final parameter checks.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table2-final-parameter-checks",
+      "initial_states": {
+        "AUC": 0,
+        "A_central": 0,
+        "A_peripheral": 0,
+        "elapsed_time": 0,
+        "summary_marker": 0
+      },
+      "name": "Table2 Final Parameter Checks",
+      "parameters": {},
+      "scenario_type": "paper_exact_scalar_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact replay of supplement s1 and appendix checks.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "supplement-s1-and-appendix-checks",
+      "initial_states": {
+        "AUC": 0,
+        "A_central": 0,
+        "A_peripheral": 0,
+        "elapsed_time": 0,
+        "summary_marker": 0
+      },
+      "name": "Supplement S1 And Appendix Checks",
+      "parameters": {},
+      "scenario_type": "paper_exact_scalar_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact replay of supplement s2 response toxicity checks.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "supplement-s2-response-toxicity-checks",
+      "initial_states": {
+        "AUC": 0,
+        "A_central": 0,
+        "A_peripheral": 0,
+        "elapsed_time": 0,
+        "summary_marker": 0
+      },
+      "name": "Supplement S2 Response Toxicity Checks",
+      "parameters": {},
+      "scenario_type": "paper_exact_scalar_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact replay of supplement s3 quartile checks.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "supplement-s3-quartile-checks",
+      "initial_states": {
+        "AUC": 0,
+        "A_central": 0,
+        "A_peripheral": 0,
+        "elapsed_time": 0,
+        "summary_marker": 0
+      },
+      "name": "Supplement S3 Quartile Checks",
+      "parameters": {},
+      "scenario_type": "paper_exact_scalar_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "A deterministic fixed-effect simulation using the final two-compartment model, 80 kg receiving the average 240 mg every 14 days for 12 cycles.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 0,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 14,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 28,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 42,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 56,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 70,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 84,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 98,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 112,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 126,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 140,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 154,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "typical-male-3mgkg-q2w-dynamic-probe",
+      "initial_states": {
+        "AUC": 0,
+        "A_central": 0,
+        "A_peripheral": 0,
+        "elapsed_time": 0,
+        "summary_marker": 0
+      },
+      "name": "Typical male 3 mg/kg Q2W dynamic probe",
+      "parameters": {
+        "BSA_m2": 1.9,
+        "albumin_g_L": 42,
+        "female_indicator": 0,
+        "scenario_dose_amount_mg": 240
+      },
+      "scenario_type": "paper_dynamic_overlay",
+      "time_span": {
+        "end": 168,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "A fixed-effect simulation at the reported albumin and BSA threshold values associated with higher clearance.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 0,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 14,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 28,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 42,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 56,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 70,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 84,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 98,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 112,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 126,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 140,
+            "type": "infusion"
+          },
+          {
+            "amount": 240,
+            "duration": 0.041666666666666664,
+            "time": 154,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "low-albumin-high-bsa-dynamic-probe",
+      "initial_states": {
+        "AUC": 0,
+        "A_central": 0,
+        "A_peripheral": 0,
+        "elapsed_time": 0,
+        "summary_marker": 0
+      },
+      "name": "Low-albumin/high-BSA covariate dynamic probe",
+      "parameters": {
+        "BSA_m2": 2.2,
+        "albumin_g_L": 37.5,
+        "female_indicator": 0,
+        "scenario_dose_amount_mg": 240
+      },
+      "scenario_type": "paper_dynamic_overlay",
+      "time_span": {
+        "end": 168,
+        "start": 0,
+        "step": 1
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-08,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-06
+    },
+    "time_span": {
+      "end": 168,
+      "start": 0,
+      "step": 1
+    }
+  },
+  "time_unit": "day"
+}

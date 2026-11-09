@@ -1,0 +1,120 @@
+{
+  "cases": [
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:e1059797aef67ccf9a4f33e23f72e72c28c13744d1b358332ade384b9beedbd6",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:1de56729837cb5df6f932eeb68df26bcf38e5d22cbf085627c56c3ed89f46d58",
+        "run_request_hash": "sha256:879970f526140b2833f1b4b66261ee2bc8be099b67b27f19bae2505bcd62a3cb",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/exact-source-tables-and-figures-anchor/qspquest.csv.gz",
+          "sha256": "2ad90b9726bfbb1b077cdcf1fba0615140852db8de69735c0662792c49fd025b",
+          "uncompressed_sha256": "ba761a413c625b903a9e040bf28c071b87f068284570b88191d3ee559478aa4a"
+        }
+      },
+      "scenario_id": "exact-source-tables-and-figures-anchor",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:e1059797aef67ccf9a4f33e23f72e72c28c13744d1b358332ade384b9beedbd6",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:1de56729837cb5df6f932eeb68df26bcf38e5d22cbf085627c56c3ed89f46d58",
+        "run_request_hash": "sha256:91719ae4fa5528396c500ea1e57f8456d78660b6411857aaff80737a8189e648",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/standard-5mgkg-induction-typical-full-ode/qspquest.csv.gz",
+          "sha256": "39a8c557eb070c517f9a49f09eec48475321d90032e90cf0feec2d53d877ef6b",
+          "uncompressed_sha256": "c80a328507b160369258e05a45f837d6c17ae64b8b789bd649cbf0554bb497b7"
+        }
+      },
+      "scenario_id": "standard-5mgkg-induction-typical-full-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:e1059797aef67ccf9a4f33e23f72e72c28c13744d1b358332ade384b9beedbd6",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:64c083c283208054795491d2689f673dcce1e13cb45d54cac239b5708a9a7b45",
+        "run_request_hash": "sha256:91719ae4fa5528396c500ea1e57f8456d78660b6411857aaff80737a8189e648",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/low-albumin-5mgkg-induction-full-ode/qspquest.csv.gz",
+          "sha256": "7cb032f0c6537f59a6adbb336ede195aa1e2f5bfe9e34b4bfa67e0635163d102",
+          "uncompressed_sha256": "216447eb1031727f80a899b5789ec205b4b5e95f25db21f27679d4e9c76eb699"
+        }
+      },
+      "scenario_id": "low-albumin-5mgkg-induction-full-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:e1059797aef67ccf9a4f33e23f72e72c28c13744d1b358332ade384b9beedbd6",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:06d3f6f8e6978f62d75157a79b6bf48fd51d55a4165ce4c06a9a1a41bd6c63ed",
+        "run_request_hash": "sha256:f028e2b73c51d00c61b15696810e299dbd2f644e24ce5bf220425440f57600cc",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/intensified-10mgkg-induction-exploratory-full-ode/qspquest.csv.gz",
+          "sha256": "55a4ab7b9bdd8707dc58b830c596c390f1355b9bfa1761fe00ec9131f13211d1",
+          "uncompressed_sha256": "7bac8fd4743ade7a169502424f588b37283990d483a7848b4e21b775c287c007"
+        }
+      },
+      "scenario_id": "intensified-10mgkg-induction-exploratory-full-ode",
+      "status": "executed"
+    }
+  ],
+  "omex_sha256": "2c341379b14858f9337f1b081779b181e1781c3864d4d4f35debc7619ea37ab1",
+  "source_scenarios": [
+    "exact-source-tables-and-figures-anchor",
+    "standard-5mgkg-induction-typical-full-ode",
+    "low-albumin-5mgkg-induction-full-ode",
+    "intensified-10mgkg-induction-exploratory-full-ode"
+  ],
+  "unavailable_scenarios": []
+}

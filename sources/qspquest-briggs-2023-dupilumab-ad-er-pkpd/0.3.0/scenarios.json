@@ -1,0 +1,237 @@
+{
+  "description": "Exact source-table replay plus fixed-effect ODE scenarios with paper comparator points from article figures.",
+  "model_id": "qspquest-briggs-2023-dupilumab-ad-er-pkpd",
+  "name": "Briggs 2023 dupilumab AD E-R scenarios",
+  "scenarios": [
+    {
+      "description": "Exact replay of article Table II/III and Supplement Table S1/S3 scalar anchors.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "source-table-parameter-checks",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "easi_response_tukey": 3.960827,
+        "elapsed_day": 0.0,
+        "iga_response": 0.0,
+        "peripheral_mg": 0.0,
+        "sc_depot_mg": 0.0,
+        "summary_marker": 0.0,
+        "transit1_mg": 0.0,
+        "transit2_mg": 0.0,
+        "transit3_mg": 0.0
+      },
+      "name": "Source table parameter checks",
+      "parameters": {},
+      "scenario_type": "exact_scalar_paper_reproduction",
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Fixed-effect adult scenario approximating Figure 4/5 adult reference simulations.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 600,
+            "description": "Loading dose 600 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 0.0
+          },
+          {
+            "amount": 300,
+            "description": "Maintenance 300 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 14
+          },
+          {
+            "amount": 300,
+            "description": "Maintenance 300 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 28
+          },
+          {
+            "amount": 300,
+            "description": "Maintenance 300 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 42
+          },
+          {
+            "amount": 300,
+            "description": "Maintenance 300 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 56
+          },
+          {
+            "amount": 300,
+            "description": "Maintenance 300 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 70
+          },
+          {
+            "amount": 300,
+            "description": "Maintenance 300 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 84
+          },
+          {
+            "amount": 300,
+            "description": "Maintenance 300 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 98
+          }
+        ]
+      },
+      "id": "adult-severe-300mg-q2w-16weeks",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "easi_response_tukey": 4.078830996059936,
+        "elapsed_day": 0.0,
+        "iga_response": 0.0,
+        "peripheral_mg": 0.0,
+        "sc_depot_mg": 0.0,
+        "summary_marker": 0.0,
+        "transit1_mg": 0.0,
+        "transit2_mg": 0.0,
+        "transit3_mg": 0.0
+      },
+      "name": "Adult severe AD 600 mg load, 300 mg q2w",
+      "parameters": {
+        "age_year": 37.7,
+        "baseline_easi_score": 32.6,
+        "body_weight_kg": 76.1,
+        "moderate_iga_flag": 0.0,
+        "tcs_flag": 0.0
+      },
+      "scenario_type": "dynamic_ode_paper_overlay_source_limited",
+      "time_span": {
+        "end": 112.0,
+        "start": 0.0,
+        "step": 7.0
+      }
+    },
+    {
+      "description": "Fixed-effect child scenario using Supplement Table S1 child PK and Figure 4 child comparator points.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 400,
+            "description": "Loading dose 400 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 0.0
+          },
+          {
+            "amount": 200,
+            "description": "Maintenance 200 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 14
+          },
+          {
+            "amount": 200,
+            "description": "Maintenance 200 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 28
+          },
+          {
+            "amount": 200,
+            "description": "Maintenance 200 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 42
+          },
+          {
+            "amount": 200,
+            "description": "Maintenance 200 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 56
+          },
+          {
+            "amount": 200,
+            "description": "Maintenance 200 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 70
+          },
+          {
+            "amount": 200,
+            "description": "Maintenance 200 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 84
+          },
+          {
+            "amount": 200,
+            "description": "Maintenance 200 mg",
+            "route": "SC",
+            "target": "sc_depot_mg",
+            "time": 98
+          }
+        ]
+      },
+      "id": "child-severe-200mg-q2w-16weeks",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "easi_response_tukey": 4.324937546871011,
+        "elapsed_day": 0.0,
+        "iga_response": 0.0,
+        "peripheral_mg": 0.0,
+        "sc_depot_mg": 0.0,
+        "summary_marker": 0.0,
+        "transit1_mg": 0.0,
+        "transit2_mg": 0.0,
+        "transit3_mg": 0.0
+      },
+      "name": "Child severe AD 400 mg load, 200 mg q2w",
+      "parameters": {
+        "age_year": 8.5,
+        "baseline_easi_score": 37.9,
+        "body_weight_kg": 31.5,
+        "ka_day": 0.641,
+        "ke_ada_effect": 0.0,
+        "ke_bmi_power": 0.0,
+        "ke_day": 0.0446,
+        "ke_easi_power": 0.169,
+        "ke_white_effect": 0.0,
+        "moderate_iga_flag": 0.0,
+        "reference_age_year": 8.5,
+        "reference_body_weight_kg": 31.5,
+        "tcs_flag": 1.0,
+        "v2_albumin_power": -0.525,
+        "v2_l": 2.18,
+        "v2_weight_power": 0.849,
+        "vm_mg_l_day": 1.64
+      },
+      "scenario_type": "dynamic_ode_paper_overlay_source_limited",
+      "time_span": {
+        "end": 112.0,
+        "start": 0.0,
+        "step": 7.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 112.0,
+      "start": 0.0,
+      "step": 7.0
+    }
+  },
+  "time_unit": "day"
+}

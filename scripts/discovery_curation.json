@@ -1,0 +1,2594 @@
+{
+ "_comment": "Reviewed discovery curation. Labels only: scripts/resolve_discovery.py resolves each label to an ontology ID with an exact-label match and writes qspquest_models/discovery.json. A drug without an NCIt concept has ncit null; a target is an HGNC symbol, {\"uniprot\": accession}, {\"chebi\": label} or a hypothetical label.",
+ "reviewed": "2026-11-07",
+ "models": {
+  "qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "adalimumab",
+     "ncit": "Adalimumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "TNF"
+   ],
+   "indications": [
+    "inflammatory bowel disease",
+    "Crohn disease",
+    "ulcerative colitis"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "central_conc_mg_l": {
+     "analyte": "drug:adalimumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "auc_mg_day_l": {
+     "analyte": "drug:adalimumab",
+     "quantity": "exposure",
+     "ucum": "mg.d/L",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_asiimwe_2025_adc_mbma_cui_poppk": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "trastuzumab emtansine",
+     "ncit": "Trastuzumab Emtansine",
+     "modality": "antibody_drug_conjugate"
+    },
+    {
+     "name": "trastuzumab deruxtecan",
+     "ncit": "Trastuzumab Deruxtecan",
+     "modality": "antibody_drug_conjugate"
+    }
+   ],
+   "targets": [
+    "ERBB2"
+   ],
+   "indications": [
+    "breast cancer",
+    "gastric cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_ng_ml": {
+     "analyte": "drug:trastuzumab emtansine",
+     "quantity": "concentration",
+     "ucum": "ng/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "auc_ng_day_ml": {
+     "analyte": "drug:trastuzumab emtansine",
+     "quantity": "exposure",
+     "ucum": "ng.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_besbassi_2026_crs_qsp_locked_cytokine_network": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "blinatumomab",
+     "ncit": "Blinatumomab",
+     "modality": "bispecific_antibody"
+    },
+    {
+     "name": "TGN1412",
+     "ncit": null,
+     "modality": "monoclonal_antibody"
+    },
+    {
+     "name": "muromonab-CD3",
+     "ncit": "Muromonab-CD3",
+     "modality": "monoclonal_antibody"
+    },
+    {
+     "name": "tocilizumab",
+     "ncit": "Tocilizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "CD19",
+    "CD3E",
+    "CD28",
+    "IL6R"
+   ],
+   "indications": [
+    "cytokine release syndrome"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "Cdrug_nM": {
+     "analyte": "drug:blinatumomab",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "Tact_cells_ul": {
+     "analyte": "cl:T cell",
+     "quantity": "cell_density",
+     "ucum": "/uL",
+     "matrix": "blood",
+     "compartment": null
+    },
+    "IL6_pg_ml": {
+     "analyte": "hgnc:IL6",
+     "quantity": "concentration",
+     "ucum": "pg/mL",
+     "matrix": "blood plasma",
+     "compartment": null
+    },
+    "IFNg_pg_ml": {
+     "analyte": "hgnc:IFNG",
+     "quantity": "concentration",
+     "ucum": "pg/mL",
+     "matrix": "blood plasma",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_brekkan_2024_certolizumab_ada_hidden_markov": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "certolizumab pegol",
+     "ncit": "Certolizumab Pegol",
+     "modality": "antibody_fragment"
+    }
+   ],
+   "targets": [
+    "TNF"
+   ],
+   "indications": [],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "p_ada": {
+     "analyte": "anti-drug antibody production state",
+     "quantity": "probability",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "p_noada": {
+     "analyte": "no anti-drug antibody production state",
+     "quantity": "probability",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_briggs_2023_dupilumab_ad_er_pkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "dupilumab",
+     "ncit": "Dupilumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "IL4R"
+   ],
+   "indications": [
+    "atopic eczema"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "central_conc_mg_l": {
+     "analyte": "drug:dupilumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "easi_score": {
+     "analyte": "Eczema Area and Severity Index",
+     "quantity": "score",
+     "ucum": "{score}",
+     "matrix": null,
+     "compartment": null
+    },
+    "easi_change_from_baseline_pct": {
+     "analyte": "Eczema Area and Severity Index",
+     "quantity": "percent_of_baseline",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "ustekinumab",
+     "ncit": "Ustekinumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "IL12B"
+   ],
+   "indications": [
+    "inflammatory bowel disease",
+    "Crohn disease",
+    "ulcerative colitis"
+   ],
+   "routes": [
+    "intravenous",
+    "subcutaneous"
+   ],
+   "readouts": {
+    "A_central_mg": {
+     "analyte": "drug:ustekinumab",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "A_fcrn_bound_mg": {
+     "analyte": "drug:ustekinumab",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "endosome (FcRn-bound)"
+    },
+    "AUC_central_mg_h_L": {
+     "analyte": "drug:ustekinumab",
+     "quantity": "exposure",
+     "ucum": "mg.h/L",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd": {
+   "context": "preclinical",
+   "species": [
+    "Mus musculus"
+   ],
+   "drugs": [
+    {
+     "name": "trastuzumab-vc-MMAE",
+     "ncit": null,
+     "modality": "antibody_drug_conjugate"
+    },
+    {
+     "name": "monomethyl auristatin E",
+     "ncit": "Monomethyl Auristatin E",
+     "modality": "small_molecule"
+    }
+   ],
+   "targets": [
+    "ERBB2"
+   ],
+   "indications": [
+    "gastric cancer",
+    "breast cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "C_nM": {
+     "analyte": "analyte named by the preset",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": null,
+     "compartment": "tissue named by the preset"
+    },
+    "AUC_h_nM": {
+     "analyte": "analyte named by the preset",
+     "quantity": "exposure",
+     "ucum": "h.nmol/L",
+     "matrix": null,
+     "compartment": "tissue named by the preset"
+    }
+   }
+  },
+  "qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd": {
+   "context": "preclinical",
+   "species": [
+    "Mus musculus",
+    "Rattus norvegicus",
+    "Macaca fascicularis"
+   ],
+   "drugs": [
+    {
+     "name": "sacituzumab tirumotecan",
+     "ncit": "Sacituzumab Tirumotecan",
+     "modality": "antibody_drug_conjugate"
+    }
+   ],
+   "targets": [
+    "TACSTD2"
+   ],
+   "indications": [
+    "cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "tumor_volume_mm3": {
+     "analyte": "tumor volume",
+     "quantity": "tumor_size",
+     "ucum": "mm3",
+     "matrix": null,
+     "compartment": "tumor"
+    }
+   }
+  },
+  "qspquest_chetty_2014_efalizumab_cd11a_turnover": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "efalizumab",
+     "ncit": "Efalizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "ITGAL"
+   ],
+   "indications": [
+    "psoriasis"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "free_cd11a_pct": {
+     "analyte": "target:ITGAL",
+     "quantity": "percent_of_baseline",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    },
+    "occupancy_pct": {
+     "analyte": "target:ITGAL",
+     "quantity": "occupancy",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    },
+    "total_cd11a_pct": {
+     "analyte": "target:ITGAL",
+     "quantity": "percent_of_baseline",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "efalizumab",
+     "ncit": "Efalizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "ITGAL"
+   ],
+   "indications": [
+    "psoriasis"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "PASI_current": {
+     "analyte": "Psoriasis Area and Severity Index",
+     "quantity": "score",
+     "ucum": "{score}",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "denosumab",
+     "ncit": "Denosumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "TNFSF11"
+   ],
+   "indications": [
+    "postmenopausal osteoporosis"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "Ctot_nM": {
+     "analyte": "drug:denosumab",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "Rfree_nM": {
+     "analyte": "target:TNFSF11",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "bmd_change_percent": {
+     "analyte": "lumbar spine bone mineral density",
+     "quantity": "percent_of_baseline",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "enfortumab vedotin",
+     "ncit": "Enfortumab Vedotin",
+     "modality": "antibody_drug_conjugate"
+    },
+    {
+     "name": "monomethyl auristatin E",
+     "ncit": "Monomethyl Auristatin E",
+     "modality": "small_molecule"
+    }
+   ],
+   "targets": [
+    "NECTIN4"
+   ],
+   "indications": [
+    "urothelial carcinoma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "adc_conc_ug_ml": {
+     "analyte": "drug:enfortumab vedotin",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "mmae_conc_ng_ml": {
+     "analyte": "drug:monomethyl auristatin E",
+     "quantity": "concentration",
+     "ucum": "ng/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "tixagevimab",
+     "ncit": "Tixagevimab",
+     "modality": "monoclonal_antibody"
+    },
+    {
+     "name": "cilgavimab",
+     "ncit": "Cilgavimab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    {
+     "uniprot": "P0DTC2"
+    }
+   ],
+   "indications": [
+    "COVID-19"
+   ],
+   "routes": [
+    "intramuscular",
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_ug_ml": {
+     "analyte": "drug:tixagevimab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "AUC_ug_day_ml": {
+     "analyte": "drug:tixagevimab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "certolizumab pegol",
+     "ncit": "Certolizumab Pegol",
+     "modality": "antibody_fragment"
+    }
+   ],
+   "targets": [
+    "TNF"
+   ],
+   "indications": [
+    "psoriasis"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "blood_concentration_mg_l": {
+     "analyte": "drug:certolizumab pegol",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": "blood",
+     "compartment": null
+    },
+    "auc_mg_day_l": {
+     "analyte": "drug:certolizumab pegol",
+     "quantity": "exposure",
+     "ucum": "mg.d/L",
+     "matrix": null,
+     "compartment": "blood"
+    }
+   }
+  },
+  "qspquest_cui_2024_envafolimab_sc_pdl1_midd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "envafolimab",
+     "ncit": "Envafolimab",
+     "modality": "fusion_protein"
+    }
+   ],
+   "targets": [
+    "CD274"
+   ],
+   "indications": [
+    "cancer"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "envafolimab_concentration_mg_l": {
+     "analyte": "drug:envafolimab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "cl_l_day_individual": {
+     "analyte": "drug:envafolimab",
+     "quantity": "clearance",
+     "ucum": "L/d",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd": {
+   "context": "preclinical",
+   "species": [
+    "Macaca fascicularis",
+    "Mus musculus",
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "zenocutuzumab",
+     "ncit": "Zenocutuzumab",
+     "modality": "bispecific_antibody"
+    }
+   ],
+   "targets": [
+    "ERBB2",
+    "ERBB3"
+   ],
+   "indications": [
+    "breast cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_mg_L": {
+     "analyte": "drug:zenocutuzumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "receptor_occupancy_percent": {
+     "analyte": "target:ERBB2",
+     "quantity": "occupancy",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_diffdose_2026_bite_benchmark": {
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical bispecific T-cell engager",
+     "ncit": null,
+     "modality": "bispecific_antibody"
+    }
+   ],
+   "targets": [
+    {
+     "label": "hypothetical target",
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "drug_exposure": {
+     "analyte": "drug:hypothetical bispecific T-cell engager",
+     "quantity": "concentration",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "binary_complexes": {
+     "analyte": "binary drug-target complexes",
+     "quantity": "concentration",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "ternary_complex": {
+     "analyte": "ternary drug-target complex",
+     "quantity": "concentration",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_diffdose_2026_idr_benchmark": {
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical drug",
+     "ncit": null,
+     "modality": null
+    }
+   ],
+   "targets": [],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "drug_exposure": {
+     "analyte": "drug:hypothetical drug",
+     "quantity": "concentration",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "biomarker": {
+     "analyte": "hypothetical biomarker",
+     "quantity": "concentration",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_diffdose_2026_tgi_benchmark": {
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical drug",
+     "ncit": null,
+     "modality": null
+    }
+   ],
+   "targets": [],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "drug_exposure": {
+     "analyte": "drug:hypothetical drug",
+     "quantity": "concentration",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "tumor_total": {
+     "analyte": "tumor burden",
+     "quantity": "tumor_size",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd": {
+   "context": "preclinical",
+   "species": [
+    "Ovis aries"
+   ],
+   "drugs": [
+    {
+     "name": "dabigatran",
+     "ncit": "Dabigatran",
+     "modality": "small_molecule"
+    },
+    {
+     "name": "idarucizumab",
+     "ncit": "Idarucizumab",
+     "modality": "antibody_fragment"
+    }
+   ],
+   "targets": [
+    "F2",
+    {
+     "chebi": "dabigatran"
+    }
+   ],
+   "indications": [],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "dabigatran_conc_mg_l": {
+     "analyte": "drug:dabigatran",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "idarucizumab_conc_mg_l": {
+     "analyte": "drug:idarucizumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "r_time_min": {
+     "analyte": "coagulation reaction time",
+     "quantity": "score",
+     "ucum": "min",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_eaton_2025_idarucizumab_dabigatran_sheep_pkpd": {
+   "context": "preclinical",
+   "species": [
+    "Ovis aries"
+   ],
+   "drugs": [
+    {
+     "name": "dabigatran",
+     "ncit": "Dabigatran",
+     "modality": "small_molecule"
+    },
+    {
+     "name": "idarucizumab",
+     "ncit": "Idarucizumab",
+     "modality": "antibody_fragment"
+    }
+   ],
+   "targets": [
+    "F2",
+    {
+     "chebi": "dabigatran"
+    }
+   ],
+   "indications": [],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": "drug:dabigatran",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "effect_conc_mg_l": {
+     "analyte": "drug:dabigatran",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "effect site"
+    },
+    "idarucizumab_effect_unit": {
+     "analyte": "drug:idarucizumab",
+     "quantity": "score",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_frank_2023_sutimlimab_cad_pkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "sutimlimab",
+     "ncit": "Sutimlimab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "C1S"
+   ],
+   "indications": [
+    "cold agglutinin disease"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_ug_ml": {
+     "analyte": "drug:sutimlimab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "cp_activity_percent": {
+     "analyte": "classical complement pathway activity",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "hb_g_dl": {
+     "analyte": "hemoglobin",
+     "quantity": "concentration",
+     "ucum": "g/dL",
+     "matrix": "blood",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_garrett_2019_inotuzumab_ozogamicin_poppk": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "inotuzumab ozogamicin",
+     "ncit": "Inotuzumab Ozogamicin",
+     "modality": "antibody_drug_conjugate"
+    }
+   ],
+   "targets": [
+    "CD22"
+   ],
+   "indications": [
+    "B-cell acute lymphoblastic leukemia",
+    "non-Hodgkin lymphoma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_concentration_ng_mL": {
+     "analyte": "drug:inotuzumab ozogamicin",
+     "quantity": "concentration",
+     "ucum": "ng/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "CL_total_L_h": {
+     "analyte": "drug:inotuzumab ozogamicin",
+     "quantity": "clearance",
+     "ucum": "L/h",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_gu_2017_bay1093884_tfpi_qss_tmdd": {
+   "context": "preclinical",
+   "species": [
+    "Macaca fascicularis",
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "befovacimab",
+     "ncit": "Befovacimab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "TFPI"
+   ],
+   "indications": [
+    "hemophilia A"
+   ],
+   "routes": [
+    "intravenous",
+    "subcutaneous"
+   ],
+   "readouts": {
+    "central_total_mg_L": {
+     "analyte": "drug:befovacimab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "free_tfpi_percent_baseline": {
+     "analyte": "target:TFPI",
+     "quantity": "percent_of_baseline",
+     "ucum": "%",
+     "matrix": "blood plasma",
+     "compartment": null
+    },
+    "tfpi_inhibition_percent": {
+     "analyte": "target:TFPI",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": "blood plasma",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_haid_2023_protac_mechanistic_pd_framework": {
+   "context": "preclinical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "PROTAC degrader",
+     "ncit": null,
+     "modality": "targeted_protein_degrader"
+    }
+   ],
+   "targets": [],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "mechanistic_degradation": {
+     "analyte": "degraded target protein",
+     "quantity": "fraction",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "pd_response": {
+     "analyte": "pharmacodynamic response",
+     "quantity": "score",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_han_2026_sim2real_pk_daratumumab_tmdd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "daratumumab",
+     "ncit": "Daratumumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "CD38"
+   ],
+   "indications": [
+    "plasma cell myeloma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_concentration_mg_l": {
+     "analyte": "drug:daratumumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "vmax_t_mg_model_time": {
+     "analyte": "drug:daratumumab",
+     "quantity": "rate",
+     "ucum": "mg/d",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "infliximab",
+     "ncit": "Infliximab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "TNF"
+   ],
+   "indications": [
+    "inflammatory bowel disease",
+    "Crohn disease",
+    "ulcerative colitis"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "infliximab_concentration_ug_ml": {
+     "analyte": "drug:infliximab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "auc_ug_day_ml": {
+     "analyte": "drug:infliximab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "nivolumab",
+     "ncit": "Nivolumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "PDCD1"
+   ],
+   "indications": [
+    "non-small cell lung carcinoma",
+    "melanoma",
+    "renal cell carcinoma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_mg_L": {
+     "analyte": "drug:nivolumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "vedolizumab",
+     "ncit": "Vedolizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "ITGA4",
+    "ITGB7"
+   ],
+   "indications": [
+    "ulcerative colitis",
+    "Crohn disease"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_concentration_ug_mL": {
+     "analyte": "drug:vedolizumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "cumulative_auc_ug_day_mL": {
+     "analyte": "drug:vedolizumab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "nivolumab",
+     "ncit": "Nivolumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "PDCD1"
+   ],
+   "indications": [
+    "non-small cell lung carcinoma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "pd1_blockade_fraction": {
+     "analyte": "target:PDCD1",
+     "quantity": "occupancy",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": "tumor"
+    },
+    "tumor_regression_percent_calc": {
+     "analyte": "tumor size",
+     "quantity": "percent_of_baseline",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": "tumor"
+    }
+   }
+  },
+  "qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd": {
+   "context": "preclinical",
+   "species": [
+    "Mus musculus"
+   ],
+   "drugs": [
+    {
+     "name": "ATC161",
+     "ncit": null,
+     "modality": "targeted_protein_degrader"
+    }
+   ],
+   "targets": [
+    "SNCA"
+   ],
+   "indications": [
+    "Parkinson disease"
+   ],
+   "routes": [
+    "oral"
+   ],
+   "readouts": {
+    "plasma_atc161_ng_mL": {
+     "analyte": "drug:ATC161",
+     "quantity": "concentration",
+     "ucum": "ng/mL",
+     "matrix": "blood plasma",
+     "compartment": null
+    },
+    "aggregate_fraction": {
+     "analyte": "alpha-synuclein aggregates",
+     "quantity": "fraction",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "degradation_effect_fraction": {
+     "analyte": "alpha-synuclein aggregates",
+     "quantity": "fraction",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "eculizumab",
+     "ncit": "Eculizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "C5"
+   ],
+   "indications": [
+    "paroxysmal nocturnal hemoglobinuria"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_ug_ml": {
+     "analyte": "drug:eculizumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "terminal_complement_activity_pct": {
+     "analyte": "terminal complement activity",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "ldh_u_l": {
+     "analyte": "lactate dehydrogenase activity",
+     "quantity": "concentration",
+     "ucum": "U/L",
+     "matrix": "blood serum",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_lee_2024_sb12_eculizumab_healthy_poppkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "eculizumab",
+     "ncit": "Eculizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "C5"
+   ],
+   "indications": [],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_ug_ml": {
+     "analyte": "drug:eculizumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "terminal_complement_activity_pct": {
+     "analyte": "terminal complement activity",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": "blood serum",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "rituximab",
+     "ncit": "Rituximab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "MS4A1"
+   ],
+   "indications": [
+    "idiopathic nephrotic syndrome"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "A1_mg": {
+     "analyte": "drug:rituximab",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "K-PD drug compartment"
+    },
+    "cd19_cells_ul": {
+     "analyte": "cl:B cell",
+     "quantity": "cell_density",
+     "ucum": "/uL",
+     "matrix": "blood",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp": {
+   "context": "preclinical",
+   "species": [
+    "Rattus norvegicus"
+   ],
+   "drugs": [
+    {
+     "name": "AAV-encoded anti-TargetX antibody",
+     "ncit": null,
+     "modality": "gene_therapy"
+    }
+   ],
+   "targets": [
+    {
+     "label": "TargetX",
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [
+    "intravenous",
+    "intracisternal",
+    "intracerebral"
+   ],
+   "readouts": {
+    "mab_plasma_ug_mL": {
+     "analyte": "drug:AAV-encoded anti-TargetX antibody",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": "blood plasma",
+     "compartment": null
+    },
+    "mab_isf_nM": {
+     "analyte": "drug:AAV-encoded anti-TargetX antibody",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": "interstitial fluid",
+     "compartment": "brain"
+    },
+    "target_isf_pct_baseline": {
+     "analyte": "target:TargetX",
+     "quantity": "percent_of_baseline",
+     "ucum": "%",
+     "matrix": "interstitial fluid",
+     "compartment": "brain"
+    }
+   }
+  },
+  "qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp": {
+   "context": "preclinical",
+   "species": [
+    "Rattus norvegicus"
+   ],
+   "drugs": [
+    {
+     "name": "AAV-encoded anti-TargetX antibody",
+     "ncit": null,
+     "modality": "gene_therapy"
+    }
+   ],
+   "targets": [
+    {
+     "label": "TargetX",
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [
+    "intravenous",
+    "intracisternal",
+    "intracerebral"
+   ],
+   "readouts": {
+    "mab_plasma_nM": {
+     "analyte": "drug:AAV-encoded anti-TargetX antibody",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": "blood plasma",
+     "compartment": null
+    },
+    "mab_isf_nM": {
+     "analyte": "drug:AAV-encoded anti-TargetX antibody",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": "interstitial fluid",
+     "compartment": "brain"
+    },
+    "target_isf_pct_baseline": {
+     "analyte": "target:TargetX",
+     "quantity": "percent_of_baseline",
+     "ucum": "%",
+     "matrix": "interstitial fluid",
+     "compartment": "brain"
+    }
+   }
+  },
+  "qspquest_lobet_2026_panitumumab_body_composition_poppk": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "panitumumab",
+     "ncit": "Panitumumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "EGFR"
+   ],
+   "indications": [
+    "anal squamous cell carcinoma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_mg_l": {
+     "analyte": "drug:panitumumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "auc_mg_day_l": {
+     "analyte": "drug:panitumumab",
+     "quantity": "exposure",
+     "ucum": "mg.d/L",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_markovic_2024_vedolizumab_clearance_remission_poppk": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "vedolizumab",
+     "ncit": "Vedolizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "ITGA4",
+    "ITGB7"
+   ],
+   "indications": [
+    "ulcerative colitis",
+    "Crohn disease"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "C_central_ug_mL": {
+     "analyte": "drug:vedolizumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "AUC_central_ug_day_mL": {
+     "analyte": "drug:vedolizumab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_monteleone_2021_eculizumab_gmg_pkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "eculizumab",
+     "ncit": "Eculizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "C5"
+   ],
+   "indications": [
+    "myasthenia gravis"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_ug_mL": {
+     "analyte": "drug:eculizumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "free_c5_ug_mL": {
+     "analyte": "target:C5",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "hemolysis_pct": {
+     "analyte": "complement-mediated hemolysis",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_ortiz_2024_ravulizumab_nmosd_pkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "ravulizumab",
+     "ncit": "Ravulizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "C5"
+   ],
+   "indications": [
+    "neuromyelitis optica"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": "drug:ravulizumab",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "free_c5_ug_ml": {
+     "analyte": "target:C5",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "auc_ug_day_ml": {
+     "analyte": "drug:ravulizumab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_pan_2020_pediatric_tp_pbpk_pk_sim": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "palivizumab",
+     "ncit": "Palivizumab",
+     "modality": "monoclonal_antibody"
+    },
+    {
+     "name": "bevacizumab",
+     "ncit": "Bevacizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    {
+     "uniprot": "P03420"
+    },
+    "VEGFA"
+   ],
+   "indications": [
+    "respiratory syncytial virus infectious disease",
+    "cancer"
+   ],
+   "routes": [
+    "intramuscular",
+    "intravenous"
+   ],
+   "readouts": {
+    "central_concentration_ug_ml": {
+     "analyte": "drug:bevacizumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "AUC_ug_ml_day": {
+     "analyte": "drug:bevacizumab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "bevacizumab",
+     "ncit": "Bevacizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "VEGFA"
+   ],
+   "indications": [
+    "colorectal cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "total_bevacizumab_mg_L": {
+     "analyte": "drug:bevacizumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "free_vegf165_ng_L": {
+     "analyte": "target:VEGFA",
+     "quantity": "concentration",
+     "ucum": "ng/L",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "complex_nM": {
+     "analyte": "bevacizumab-VEGF165 complex",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": "blood serum",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "rituximab",
+     "ncit": "Rituximab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "MS4A1"
+   ],
+   "indications": [
+    "anti-neutrophil antibody associated vasculitis"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "rtx_central_mg": {
+     "analyte": "drug:rituximab",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "anca_blood_u_ml": {
+     "analyte": "anti-neutrophil cytoplasmic antibodies",
+     "quantity": "concentration",
+     "ucum": "U/mL",
+     "matrix": "blood",
+     "compartment": null
+    },
+    "gg_g_l": {
+     "analyte": "gamma globulins",
+     "quantity": "concentration",
+     "ucum": "g/L",
+     "matrix": "blood serum",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_prybylski_2026_dazukibart_ifnb_dm_er": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "dazukibart",
+     "ncit": "Dazukibart",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "IFNB1"
+   ],
+   "indications": [
+    "dermatomyositis"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": "drug:dazukibart",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "ifn_total_pg_ml": {
+     "analyte": "target:IFNB1",
+     "quantity": "concentration",
+     "ucum": "pg/mL",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "end_cdasi_a": {
+     "analyte": "Cutaneous Dermatomyositis Disease Area and Severity Index activity",
+     "quantity": "score",
+     "ucum": "{score}",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "pertuzumab",
+     "ncit": "Pertuzumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "ERBB2"
+   ],
+   "indications": [
+    "breast cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "pertuzumab_concentration_ug_mL": {
+     "analyte": "drug:pertuzumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "AUC_ug_day_mL": {
+     "analyte": "drug:pertuzumab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_rajwade_2026_aav8_trastuzumab_nonlinear_pbpk": {
+   "context": "preclinical",
+   "species": [
+    "Mus musculus"
+   ],
+   "drugs": [
+    {
+     "name": "trastuzumab",
+     "ncit": "Trastuzumab",
+     "modality": "gene_therapy"
+    }
+   ],
+   "targets": [],
+   "indications": [],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "aav_blood_vg_per_uL": {
+     "analyte": "AAV8 vector genomes",
+     "quantity": "concentration",
+     "ucum": "{vg}/uL",
+     "matrix": "blood",
+     "compartment": null
+    },
+    "mab_plasma_ug_mL": {
+     "analyte": "drug:trastuzumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": "blood plasma",
+     "compartment": null
+    },
+    "mab_brain_interstitial_nM": {
+     "analyte": "drug:trastuzumab",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": "interstitial fluid",
+     "compartment": "brain"
+    }
+   }
+  },
+  "qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "secukinumab",
+     "ncit": "Secukinumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "IL17A"
+   ],
+   "indications": [
+    "psoriasis"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "central_concentration_mg_l": {
+     "analyte": "drug:secukinumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "drug_effect_fraction": {
+     "analyte": "drug:secukinumab",
+     "quantity": "fraction",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "pasi_target_gap": {
+     "analyte": "Psoriasis Area and Severity Index",
+     "quantity": "score",
+     "ucum": "{score}",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "ustekinumab",
+     "ncit": "Ustekinumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "IL12B"
+   ],
+   "indications": [
+    "psoriasis"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "central_concentration_mg_l": {
+     "analyte": "drug:ustekinumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "drug_effect_fraction": {
+     "analyte": "drug:ustekinumab",
+     "quantity": "fraction",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "pasi_target_gap": {
+     "analyte": "Psoriasis Area and Severity Index",
+     "quantity": "score",
+     "ucum": "{score}",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_serkland_2025_rituximab_ms_pkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "rituximab",
+     "ncit": "Rituximab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "MS4A1"
+   ],
+   "indications": [
+    "multiple sclerosis"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "rituximab_concentration_mg_l": {
+     "analyte": "drug:rituximab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "cd19_cells_mm3": {
+     "analyte": "cl:B cell",
+     "quantity": "cell_density",
+     "ucum": "/mm3",
+     "matrix": "blood",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_sexton_2024_lanadelumab_hae_kks_qsp": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "lanadelumab",
+     "ncit": "Lanadelumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "KLKB1"
+   ],
+   "indications": [
+    "hereditary angioedema"
+   ],
+   "routes": [
+    "subcutaneous"
+   ],
+   "readouts": {
+    "PK_Conc_Central_in_nM": {
+     "analyte": "drug:lanadelumab",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "CS_RO_BDKRB2": {
+     "analyte": "hgnc:BDKRB2",
+     "quantity": "occupancy",
+     "ucum": "1",
+     "matrix": null,
+     "compartment": null
+    },
+    "CS_prct_HK2Chain": {
+     "analyte": "two-chain high-molecular-weight kininogen",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": "blood plasma",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "atezolizumab",
+     "ncit": "Atezolizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "CD274"
+   ],
+   "indications": [
+    "cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "C_central_ug_mL": {
+     "analyte": "drug:atezolizumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "AUC_ug_day_mL": {
+     "analyte": "drug:atezolizumab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "naratuximab emtansine",
+     "ncit": "Naratuximab Emtansine",
+     "modality": "antibody_drug_conjugate"
+    }
+   ],
+   "targets": [
+    "CD37"
+   ],
+   "indications": [
+    "non-Hodgkin lymphoma",
+    "diffuse large B-cell lymphoma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "plasma_imgn529_ug_mL": {
+     "analyte": "drug:naratuximab emtansine",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": "blood plasma",
+     "compartment": null
+    },
+    "auc_h_ug_mL": {
+     "analyte": "drug:naratuximab emtansine",
+     "quantity": "exposure",
+     "ucum": "h.ug/mL",
+     "matrix": null,
+     "compartment": "plasma"
+    }
+   }
+  },
+  "qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "bevacizumab",
+     "ncit": "Bevacizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "VEGFA"
+   ],
+   "indications": [
+    "cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": "drug:bevacizumab",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "peripheral_mg": {
+     "analyte": "drug:bevacizumab",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "peripheral"
+    },
+    "auc_mg_h_l": {
+     "analyte": "drug:bevacizumab",
+     "quantity": "exposure",
+     "ucum": "mg.h/L",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_ubi_2026_membrane_ternary_binding": {
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical bispecific ligand",
+     "ncit": null,
+     "modality": "bispecific_antibody"
+    }
+   ],
+   "targets": [
+    {
+     "label": "hypothetical target",
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "ternary_bridge_nM": {
+     "analyte": "ternary membrane bridge",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": null,
+     "compartment": null
+    },
+    "left_site_ternary_percent": {
+     "analyte": "left membrane site in ternary bridges",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_ubi_2026_target_gated_cargo_qsp": {
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical target-gated cargo construct",
+     "ncit": null,
+     "modality": null
+    }
+   ],
+   "targets": [
+    {
+     "label": "hypothetical target",
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "tumor_receptor_occupancy_percent": {
+     "analyte": "tumor receptor",
+     "quantity": "occupancy",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": "tumor"
+    },
+    "central_receptor_occupancy_percent": {
+     "analyte": "systemic receptor",
+     "quantity": "occupancy",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "total_construct_nmol": {
+     "analyte": "drug:hypothetical target-gated cargo construct",
+     "quantity": "amount",
+     "ucum": "nmol",
+     "matrix": null,
+     "compartment": "whole body"
+    }
+   }
+  },
+  "qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "erenumab",
+     "ncit": "Erenumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "CALCRL",
+    "RAMP1"
+   ],
+   "indications": [
+    "migraine disorder"
+   ],
+   "routes": [
+    "intravenous",
+    "subcutaneous"
+   ],
+   "readouts": {
+    "total_concentration_ug_mL": {
+     "analyte": "drug:erenumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": "blood serum",
+     "compartment": null
+    },
+    "cidbf_inhibition_pct": {
+     "analyte": "capsaicin-induced dermal blood flow",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "vedolizumab",
+     "ncit": "Vedolizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "ITGA4",
+    "ITGB7"
+   ],
+   "indications": [
+    "graft versus host disease"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_concentration_mg_per_L": {
+     "analyte": "drug:vedolizumab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "cumulative_auc_mg_day_per_L": {
+     "analyte": "drug:vedolizumab",
+     "quantity": "exposure",
+     "ucum": "mg.d/L",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "atezolizumab",
+     "ncit": "Atezolizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "CD274"
+   ],
+   "indications": [
+    "non-small cell lung carcinoma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "concentration_ug_per_mL": {
+     "analyte": "drug:atezolizumab",
+     "quantity": "concentration",
+     "ucum": "ug/mL",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "AUC_ug_day_per_mL": {
+     "analyte": "drug:atezolizumab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  },
+  "qspquest_yang_2021_cemiplimab_advanced_malignancies_poppk": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "cemiplimab",
+     "ncit": "Cemiplimab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "PDCD1"
+   ],
+   "indications": [
+    "cancer",
+    "skin squamous cell carcinoma"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_conc_mg_L": {
+     "analyte": "drug:cemiplimab",
+     "quantity": "concentration",
+     "ucum": "mg/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "CL_ind_L_day": {
+     "analyte": "drug:cemiplimab",
+     "quantity": "clearance",
+     "ucum": "L/d",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_yoshida_2020_crenezumab_abeta_tmdd_pkpd": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "crenezumab",
+     "ncit": "Crenezumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "APP"
+   ],
+   "indications": [
+    "Alzheimer disease"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "Ccren_nM": {
+     "analyte": "drug:crenezumab",
+     "quantity": "concentration",
+     "ucum": "nmol/L",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "free_abeta40_pM": {
+     "analyte": "amyloid-beta 1-40",
+     "quantity": "concentration",
+     "ucum": "pmol/L",
+     "matrix": "blood plasma",
+     "compartment": null
+    },
+    "free_abeta42_pM": {
+     "analyte": "amyloid-beta 1-42",
+     "quantity": "concentration",
+     "ucum": "pmol/L",
+     "matrix": "blood plasma",
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp": {
+   "context": "in_vitro",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "CD3x5T4 bispecific antibody",
+     "ncit": null,
+     "modality": "bispecific_antibody"
+    }
+   ],
+   "targets": [
+    "CD3E",
+    "TPBG"
+   ],
+   "indications": [
+    "cancer"
+   ],
+   "routes": [],
+   "readouts": {
+    "tcell_activation_percent": {
+     "analyte": "cl:T cell",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    },
+    "tumor_killing_percent": {
+     "analyte": "tumor cell killing",
+     "quantity": "percent",
+     "ucum": "%",
+     "matrix": null,
+     "compartment": null
+    },
+    "viable_tumor_cells": {
+     "analyte": "viable tumor cells",
+     "quantity": "cell_count",
+     "ucum": "{cells}",
+     "matrix": null,
+     "compartment": null
+    }
+   }
+  },
+  "qspquest_zeng_2026_atezolizumab_software_poppk_simulation": {
+   "context": "clinical",
+   "species": [
+    "Homo sapiens"
+   ],
+   "drugs": [
+    {
+     "name": "atezolizumab",
+     "ncit": "Atezolizumab",
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "targets": [
+    "CD274"
+   ],
+   "indications": [
+    "cancer"
+   ],
+   "routes": [
+    "intravenous"
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": "drug:atezolizumab",
+     "quantity": "amount",
+     "ucum": "mg",
+     "matrix": null,
+     "compartment": "central"
+    },
+    "auc_ug_day_ml": {
+     "analyte": "drug:atezolizumab",
+     "quantity": "exposure",
+     "ucum": "ug.d/mL",
+     "matrix": null,
+     "compartment": "central"
+    }
+   }
+  }
+ }
+}

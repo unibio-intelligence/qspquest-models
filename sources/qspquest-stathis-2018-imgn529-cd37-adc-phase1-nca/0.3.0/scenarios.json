@@ -1,0 +1,489 @@
+{
+  "description": "Complete exact evidence plus eight paper-endpoint probes and eight separately labelled exploratory aggregate calibrations.",
+  "model_id": "qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca",
+  "name": "Stathis 2018 IMGN529 exact, endpoint-probe, and exploratory calibrated scenarios",
+  "scenarios": [
+    {
+      "description": "Exact API replay of 377 numeric fields from Tables 1-5, Supplement Table S1, and source availability.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-table-exact-anchor",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 0.0
+      },
+      "name": "Complete article and supplement exact anchor",
+      "parameters": {},
+      "scenario_type": "paper_exact_scalar_reproduction",
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Paper-endpoint probe initialized at the reported Cmax and eliminated with the reported half-life. It is not a paper-reported structural model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-dose-0p1-exponential-probe",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 2.3
+      },
+      "name": "0.1 mg/kg paper-endpoint exponential probe",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 14.6,
+        "selected_cl_L_h": 0.8,
+        "selected_cmax_ug_mL": 2.3,
+        "selected_dose_mg_kg": 0.1,
+        "selected_half_life_h": 4.9,
+        "selected_vz_L": 5.1,
+        "use_exploratory_calibrated": 0.0
+      },
+      "scenario_type": "paper_endpoint_anchored_exponential_probe",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Paper-endpoint probe initialized at the reported Cmax and eliminated with the reported half-life. It is not a paper-reported structural model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-dose-0p2-exponential-probe",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 3.9
+      },
+      "name": "0.2 mg/kg paper-endpoint exponential probe",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 63.7,
+        "selected_cl_L_h": 0.3,
+        "selected_cmax_ug_mL": 3.9,
+        "selected_dose_mg_kg": 0.2,
+        "selected_half_life_h": 9.8,
+        "selected_vz_L": 3.8,
+        "use_exploratory_calibrated": 0.0
+      },
+      "scenario_type": "paper_endpoint_anchored_exponential_probe",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Paper-endpoint probe initialized at the reported Cmax and eliminated with the reported half-life. It is not a paper-reported structural model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-dose-0p4-exponential-probe",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 9.1
+      },
+      "name": "0.4 mg/kg paper-endpoint exponential probe",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 238.3,
+        "selected_cl_L_h": 0.3,
+        "selected_cmax_ug_mL": 9.1,
+        "selected_dose_mg_kg": 0.4,
+        "selected_half_life_h": 21.6,
+        "selected_vz_L": 4.8,
+        "use_exploratory_calibrated": 0.0
+      },
+      "scenario_type": "paper_endpoint_anchored_exponential_probe",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Paper-endpoint probe initialized at the reported Cmax and eliminated with the reported half-life. It is not a paper-reported structural model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-dose-0p7-exponential-probe",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 13.8
+      },
+      "name": "0.7 mg/kg paper-endpoint exponential probe",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 529.5,
+        "selected_cl_L_h": 0.2,
+        "selected_cmax_ug_mL": 13.8,
+        "selected_dose_mg_kg": 0.7,
+        "selected_half_life_h": 20.9,
+        "selected_vz_L": 2.6,
+        "use_exploratory_calibrated": 0.0
+      },
+      "scenario_type": "paper_endpoint_anchored_exponential_probe",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Paper-endpoint probe initialized at the reported Cmax and eliminated with the reported half-life. It is not a paper-reported structural model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-dose-0p8-exponential-probe",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 20.9
+      },
+      "name": "0.8 mg/kg paper-endpoint exponential probe",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 1174.0,
+        "selected_cl_L_h": 0.07,
+        "selected_cmax_ug_mL": 20.9,
+        "selected_dose_mg_kg": 0.8,
+        "selected_half_life_h": 39.7,
+        "selected_vz_L": 4.0,
+        "use_exploratory_calibrated": 0.0
+      },
+      "scenario_type": "paper_endpoint_anchored_exponential_probe",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Paper-endpoint probe initialized at the reported Cmax and eliminated with the reported half-life. It is not a paper-reported structural model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-dose-1p0-exponential-probe",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 24.9
+      },
+      "name": "1 mg/kg paper-endpoint exponential probe",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 1282.0,
+        "selected_cl_L_h": 0.07,
+        "selected_cmax_ug_mL": 24.9,
+        "selected_dose_mg_kg": 1.0,
+        "selected_half_life_h": 30.3,
+        "selected_vz_L": 2.7,
+        "use_exploratory_calibrated": 0.0
+      },
+      "scenario_type": "paper_endpoint_anchored_exponential_probe",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Paper-endpoint probe initialized at the reported Cmax and eliminated with the reported half-life. It is not a paper-reported structural model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-dose-1p4-exponential-probe",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 36.0
+      },
+      "name": "1.4 mg/kg paper-endpoint exponential probe",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 1822.0,
+        "selected_cl_L_h": 0.09,
+        "selected_cmax_ug_mL": 36.0,
+        "selected_dose_mg_kg": 1.4,
+        "selected_half_life_h": 24.9,
+        "selected_vz_L": 2.9,
+        "use_exploratory_calibrated": 0.0
+      },
+      "scenario_type": "paper_endpoint_anchored_exponential_probe",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Paper-endpoint probe initialized at the reported Cmax and eliminated with the reported half-life. It is not a paper-reported structural model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-dose-1p8-exponential-probe",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 53.5
+      },
+      "name": "1.8 mg/kg paper-endpoint exponential probe",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 2525.0,
+        "selected_cl_L_h": 0.07,
+        "selected_cmax_ug_mL": 53.5,
+        "selected_dose_mg_kg": 1.8,
+        "selected_half_life_h": 33.9,
+        "selected_vz_L": 2.8,
+        "use_exploratory_calibrated": 0.0
+      },
+      "scenario_type": "paper_endpoint_anchored_exponential_probe",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Exploratory aggregate one-state ODE using the same five global dose-trend parameters fitted jointly to all eight Table 4 cohorts. Separate from the paper-endpoint probe and not a paper model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-exploratory-calibrated-dose-0p1-joint-table4",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 1.9816100378589836
+      },
+      "name": "0.1 mg/kg exploratory joint Table 4 calibration",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 14.6,
+        "selected_cl_L_h": 0.8,
+        "selected_cmax_ug_mL": 2.3,
+        "selected_dose_mg_kg": 0.1,
+        "selected_half_life_h": 4.9,
+        "selected_vz_L": 5.1,
+        "use_exploratory_calibrated": 1.0
+      },
+      "scenario_type": "exploratory_calibrated_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Exploratory aggregate one-state ODE using the same five global dose-trend parameters fitted jointly to all eight Table 4 cohorts. Separate from the paper-endpoint probe and not a paper model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-exploratory-calibrated-dose-0p2-joint-table4",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 4.296097673521654
+      },
+      "name": "0.2 mg/kg exploratory joint Table 4 calibration",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 63.7,
+        "selected_cl_L_h": 0.3,
+        "selected_cmax_ug_mL": 3.9,
+        "selected_dose_mg_kg": 0.2,
+        "selected_half_life_h": 9.8,
+        "selected_vz_L": 3.8,
+        "use_exploratory_calibrated": 1.0
+      },
+      "scenario_type": "exploratory_calibrated_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Exploratory aggregate one-state ODE using the same five global dose-trend parameters fitted jointly to all eight Table 4 cohorts. Separate from the paper-endpoint probe and not a paper model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-exploratory-calibrated-dose-0p4-joint-table4",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 9.313868454350034
+      },
+      "name": "0.4 mg/kg exploratory joint Table 4 calibration",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 238.3,
+        "selected_cl_L_h": 0.3,
+        "selected_cmax_ug_mL": 9.1,
+        "selected_dose_mg_kg": 0.4,
+        "selected_half_life_h": 21.6,
+        "selected_vz_L": 4.8,
+        "use_exploratory_calibrated": 1.0
+      },
+      "scenario_type": "exploratory_calibrated_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Exploratory aggregate one-state ODE using the same five global dose-trend parameters fitted jointly to all eight Table 4 cohorts. Separate from the paper-endpoint probe and not a paper model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-exploratory-calibrated-dose-0p7-joint-table4",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 17.395884988313277
+      },
+      "name": "0.7 mg/kg exploratory joint Table 4 calibration",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 529.5,
+        "selected_cl_L_h": 0.2,
+        "selected_cmax_ug_mL": 13.8,
+        "selected_dose_mg_kg": 0.7,
+        "selected_half_life_h": 20.9,
+        "selected_vz_L": 2.6,
+        "use_exploratory_calibrated": 1.0
+      },
+      "scenario_type": "exploratory_calibrated_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Exploratory aggregate one-state ODE using the same five global dose-trend parameters fitted jointly to all eight Table 4 cohorts. Separate from the paper-endpoint probe and not a paper model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-exploratory-calibrated-dose-0p8-joint-table4",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 20.192312227814497
+      },
+      "name": "0.8 mg/kg exploratory joint Table 4 calibration",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 1174.0,
+        "selected_cl_L_h": 0.07,
+        "selected_cmax_ug_mL": 20.9,
+        "selected_dose_mg_kg": 0.8,
+        "selected_half_life_h": 39.7,
+        "selected_vz_L": 4.0,
+        "use_exploratory_calibrated": 1.0
+      },
+      "scenario_type": "exploratory_calibrated_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Exploratory aggregate one-state ODE using the same five global dose-trend parameters fitted jointly to all eight Table 4 cohorts. Separate from the paper-endpoint probe and not a paper model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-exploratory-calibrated-dose-1p0-joint-table4",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 25.904302667367148
+      },
+      "name": "1 mg/kg exploratory joint Table 4 calibration",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 1282.0,
+        "selected_cl_L_h": 0.07,
+        "selected_cmax_ug_mL": 24.9,
+        "selected_dose_mg_kg": 1.0,
+        "selected_half_life_h": 30.3,
+        "selected_vz_L": 2.7,
+        "use_exploratory_calibrated": 1.0
+      },
+      "scenario_type": "exploratory_calibrated_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Exploratory aggregate one-state ODE using the same five global dose-trend parameters fitted jointly to all eight Table 4 cohorts. Separate from the paper-endpoint probe and not a paper model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-exploratory-calibrated-dose-1p4-joint-table4",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 37.71398993713677
+      },
+      "name": "1.4 mg/kg exploratory joint Table 4 calibration",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 1822.0,
+        "selected_cl_L_h": 0.09,
+        "selected_cmax_ug_mL": 36.0,
+        "selected_dose_mg_kg": 1.4,
+        "selected_half_life_h": 24.9,
+        "selected_vz_L": 2.9,
+        "use_exploratory_calibrated": 1.0
+      },
+      "scenario_type": "exploratory_calibrated_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Exploratory aggregate one-state ODE using the same five global dose-trend parameters fitted jointly to all eight Table 4 cohorts. Separate from the paper-endpoint probe and not a paper model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "stathis-exploratory-calibrated-dose-1p8-joint-table4",
+      "initial_states": {
+        "auc_h_ug_mL": 0.0,
+        "elapsed_h": 0.0,
+        "plasma_imgn529_ug_mL": 49.92824658538537
+      },
+      "name": "1.8 mg/kg exploratory joint Table 4 calibration",
+      "parameters": {
+        "selected_aucinf_h_ug_mL": 2525.0,
+        "selected_cl_L_h": 0.07,
+        "selected_cmax_ug_mL": 53.5,
+        "selected_dose_mg_kg": 1.8,
+        "selected_half_life_h": 33.9,
+        "selected_vz_L": 2.8,
+        "use_exploratory_calibrated": 1.0
+      },
+      "scenario_type": "exploratory_calibrated_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "end": 504.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver_options": {
+      "abstol": 1e-08,
+      "maxiters": 1000000,
+      "method": "Rosenbrock23",
+      "reltol": 1e-06
+    },
+    "time_span": {
+      "end": 504.0,
+      "start": 0.0,
+      "step": 2.0
+    }
+  },
+  "time_unit": "h"
+}

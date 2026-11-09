@@ -759,7 +759,13 @@ class Library:
                 for row in self.catalog['models']] if self.availability_records else list(self.catalog['models'])
 
     def search(self, query):
-        """Search the displayed browsing summaries and retained source descriptions."""
+        """Search names and descriptions by substring and discovery terms by whole words.
+
+        Discovery terms are the ontology labels, identifiers and synonyms of a
+        model's species, drugs, targets, indications, routes and modalities, and
+        its citation, so "CD20", "BCMA", "rat" or "NCBITaxon:9606" find models.
+        """
+        import re
         summaries_path = self.root / 'scripts/model_summaries.json'
         summaries = _json(summaries_path.read_bytes()) if summaries_path.is_file() else {}
         descriptions = {}
@@ -767,15 +773,22 @@ class Library:
             for source in self.list_source_models():
                 if source.get('format') == 'scientific_json' and source.get('omex'):
                     descriptions[source['omex']['model_id']] = self.load_source_model(source['id'])['model.json'].get('description', '')
-        # Users commonly paste a typographic dash or a regular hyphen.
+
+        # Users commonly paste a typographic dash, a regular hyphen or an underscore.
         def normalize(value):
-            import re
-            return re.sub(r'[-–—]', ' ', value.casefold())
-        query = normalize(query)
-        return [row for row in self.list_models() if query in normalize(' '.join([
-            *(str(row.get(k, '')) for k in ['id', 'name', 'description']),
-            summaries.get(row['id'], ''), descriptions.get(row['id'], ''),
-        ]))]
+            return ' '.join(re.sub(r'[-–—_]', ' ', str(value).casefold()).split())
+        phrase = normalize(query)
+        if not phrase:
+            return self.list_models()
+        pattern = re.compile(r'(?<![0-9a-z])' + re.escape(phrase) + r'(?![0-9a-z])')
+        matches = []
+        for row in self.list_models():
+            descriptions_and_names = [row.get(key, '') for key in ('id', 'name', 'description')]
+            descriptions_and_names += [summaries.get(row['id'], ''), descriptions.get(row['id'], '')]
+            if any(phrase in normalize(value) for value in descriptions_and_names) or any(
+                    pattern.search(normalize(term)) for term in discovery_terms(row.get('discovery'))):
+                matches.append(row)
+        return matches
 
     def list_source_models(self):
         """List scientific-source models, including explicit rights holds."""
@@ -912,3 +925,35 @@ class Library:
                 or set(model.scenario_ids) != set(row['scenario_ids'])):
             raise ValueError("catalog/archive mismatch")
         return model
+
+    def parameter_metadata(self, model_id, *, version=None):
+        """Parameter roles, provenance and readable names for a selected archive.
+
+        Returns the checked ``parameters.json`` record, or None when the archive
+        has no native model. ``parameters.name_map(record)`` gives the
+        native-to-readable names that form a valid QSPQuest model.
+        """
+        from . import parameters
+        model = self.load(model_id, version=version)
+        native = model.index['native_execution']
+        if not native.get('model'):
+            return None
+        row = next(r for r in self.catalog['models']
+                   if r['id'] == model_id and r['version'] == model.index['model_version'])
+        return parameters.load(self.root / row['archive'], _json(model.members[native['model']]),
+                               model_id=model_id, model_version=row['version'],
+                               archive_sha256=model.archive_sha256)
+
+
+def discovery_terms(discovery):
+    """Searchable labels, identifiers and synonyms of a catalog row's discovery record."""
+    if not discovery:
+        return []
+    terms = [discovery.get('context', '')]
+    for citation in discovery.get('citations', []):
+        terms += [citation.get(k) or '' for k in ('doi', 'pmid', 'pmcid', 'title', 'journal', 'first_author')]
+    for group in ('species', 'drugs', 'targets', 'indications', 'routes', 'modalities'):
+        for item in discovery.get(group, []):
+            terms += [item.get(k) or '' for k in ('name', 'symbol', 'id', 'label', 'key', 'uniprot')]
+            terms += item.get('synonyms', [])
+    return terms

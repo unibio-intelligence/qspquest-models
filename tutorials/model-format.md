@@ -25,37 +25,21 @@ The shared CLI uses the same exact catalog selection. This command lists the
 selected version's experiments without starting the engine:
 
 ```sh
-python -m qspquest_models --library . --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.2
+python -m qspquest_models --library . --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.5.0
 ```
 
 `qspquest-models` accepts the same option. An unavailable `--model-version`
 exits with status 2 and code `model_version_unavailable`; JSON errors list
 `requested_version`, `available_versions` and how to fix it in `details`. The CLI
 never falls back to another version.
-The R helpers accept the same selection with `version = '0.3.2'` in scenario
+The R helpers accept the same selection with `version = '0.5.0'` in scenario
 inspection and named runs; the tutorial bridge also supports it in `inputs()`.
 Use `NULL` only when selecting the current catalog default is intended.
 
-To load another distributed version, use its archive and the checksum in the
-adjacent evidence record. This example explicitly selects version 0.1.0:
-
-```python
-from pathlib import Path
-import json
-from qspquest_models import load_archive
-
-folder = Path('models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/0.1.0')
-evidence = json.loads((folder / 'evidence.json').read_text())
-model = load_archive(folder / 'model.omex', expected_sha256=evidence['omex_sha256'])
-print(model.index['model_version'])
-print(model.scenario_ids)  # () — this alternate version is inspection-only
-```
-
-Read that version's [model guide](../models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/0.1.0/MODEL_CARD.md)
-for its inspection-only scope. Use the default 2.0.2 version for runnable experiments.
-Save the version and checksum with your analysis
-if you need to repeat it exactly. A matching checksum confirms the file is
-unchanged; it does not validate the science.
+Each package includes one current version per model. Save the archive version and
+checksum with your analysis. To inspect an archive you have saved, use
+`load_archive(path, expected_sha256=checksum)`. A matching checksum confirms
+that its bytes are unchanged; it does not validate the science.
 
 ## Inspect equations and experiment inputs
 
@@ -112,16 +96,20 @@ python scripts/verify_library.py
 ```
 
 The verifier checks archive and file checksums, source snapshots and stored
-trajectories. The library contains 82 archive versions of 62 models and 642
-stored trajectories; the default versions offer 639 presets. Archives without a
-stored reference result are marked unqualified. Some archives use native JSON
+tables. The library contains 62 current model archives and 501 stored
+tables, of which 370 contain numerical readouts and 131 contain only time and
+event side. The default versions offer 631 presets. Coordinate-only tables
+record the observation grid. Numerical comparison requires stored readouts. Some archives use native JSON
 rather than SBML/SED-ML. Results use lossless `.csv.gz` compression with
 compressed and uncompressed checksums. [Read a stored result](understand-results.md#read-a-stored-result)
 without installing the engine.
 
 Model guides describe the available experiments and source reuse terms.
 `evidence.json` links stored results to their archive;
-`SOURCE_REPRODUCTION.json` lists what the version can run and which experiments are unavailable.
+The adjacent `SOURCE_REPRODUCTION.json` records the selected scientific
+snapshot and its limits. For a revised source, the archived `index.json` binds
+the selected snapshot through `source_revision.source_version`. The provenance
+record can also identify the base source version.
 
 ## Machine-readable discovery
 
@@ -146,6 +134,32 @@ from the archive's `execution_version`, `model_id` and `archive_sha256`.
 `available_scenario_ids` lists runnable presets; `qualified_scenario_ids` lists
 only those with stored reference results for that archive. Runnable presets
 without a reference are marked `fixed_presets_unqualified`.
+
+Each model record has a `discovery` field that describes the paper and model in
+standard vocabularies:
+
+| Field | Vocabulary |
+| --- | --- |
+| `citations` | DOI, PMID and title from Europe PMC (Crossref for unindexed preprints) |
+| `species` | NCBI Taxonomy, for example `NCBITaxon:10116` (rat) |
+| `drugs`, `routes`, `modalities` | NCI Thesaurus |
+| `targets` | HGNC symbols with their aliases (CD20 is `MS4A1`), UniProt for non-human proteins, ChEBI for small molecules |
+| `indications` | MONDO |
+| `readouts` | Analyte (NCIt, HGNC or Cell Ontology), matrix (UBERON), quantity and UCUM unit for each primary readout |
+
+`context` is `clinical`, `preclinical`, `in_vitro` or `hypothetical`. A name
+with no ontology entry has a null identifier; an empty list means the field does
+not apply or the paper does not state it. `--search` matches substrings in model
+names and descriptions and whole words in ontology labels and synonyms. Search
+for an identifier such as `NCBITaxon:10116` to avoid incidental matches in
+descriptions. `qspquest_models/scenarios.json` lists each selected version's
+presets with their purpose and inputs. A preset with `input_basis: native_request`
+summarizes the executable regimen in the engine's time and dose units.
+The summary includes up to 50 administration entries. A preset with `input_basis: scientific_source` summarizes the source description and
+gives the reason it cannot run. Source and engine unit labels can differ.
+Use the archived request or the run's effective inputs for exact execution.
+The readout units describe the source; an archive's own unit labels are
+unchanged until a new version corrects them.
 
 
 [Independent validation](https://github.com/unibio-intelligence/qspquest-validation)
@@ -173,26 +187,21 @@ row = next(r for r in library.list_models() if r['id'] == 'qspquest_serkland_202
 print(row['availability'])
 ```
 
-The default versions cover 62 models and 639 presets; the archive holds 82
-versions. The record lists supported operations and blockers. `run_preset` runs a
-stored experiment as is; `exploratory_simulation` allows research copies, whose
-results need their own assessment. Two archives declare synthetic fitting
-contracts. With `qspquest==0.1.0`, the turnover and rituximab workflows are both
-compatible. The superseded rituximab version 0.3.1 records a request identity
-that differs from the engine's, so fitting that version is held; its preset
-simulation remains available, and version 0.3.2 reruns the same fits. See the
-[fitting tutorial](library-fitting.md) for compatibility discovery and a runnable fit.
+The package covers 62 models and 631 presets. Each record lists supported
+operations and blockers. `run_preset` runs a stored experiment as is;
+`exploratory_simulation` allows research copies, whose results need their own
+assessment. Two archives declare synthetic fitting contracts. See the
+[fitting tutorial](library-fitting.md) for engine compatibility discovery and a runnable fit.
 
 The following `scripts/` commands require the public Git source checkout; these
-maintenance scripts are absent from the installed package and PyPI source
+maintenance scripts are absent from the installed package and Python source
 distribution. Run them from the checkout root. Check archive integrity with
 `python scripts/verify_library.py`; it needs only Python's standard library. It checks checksums, declarations, observations,
 recorded convergence and recovery limits, and reports
 `fitting_native_identity=not_assessed`. With the matching QSPQuest Python binding
 installed, `python scripts/verify_library.py --native-fitting` also checks the
 fitting records against the engine. A mismatch in a selected version fails the
-check; a mismatch in a superseded version is listed under
-`historical_fitting_holds`. The fitting APIs always enforce this check, and a
+check. The fitting APIs always enforce this check, and a
 hold must not be bypassed. Neither command reruns simulations or fits. Use
 `python scripts/verify_library.py --for-publication` to also require a completed
 publication review for every archived version; it exits with code 2 if any review
@@ -247,6 +256,50 @@ Keep `context.input_binding_hash` after inspection and pass it to
 research copies stop working and `InputBindingError.diagnostic` says what to do.
 See the complete
 [input inspection and edit tutorial](input-bindings.md).
+
+## Parameter roles and readable names
+
+Each selected archive with a native model has a `parameters.json` record next to
+its `evidence.json`. The record lists every native state, parameter, covariate,
+definition and output with its native name, its source name and a readable
+name. Readable names are legal QSPQuest identifiers (lowercase snake_case), so
+a model renamed through them compiles and computes the same trajectories:
+
+```python
+from qspquest_models import Library
+from qspquest_models.parameters import name_map
+
+record = Library().parameter_metadata('qspquest_serkland_2025_rituximab_ms_pkpd')
+names = name_map(record)
+print(names['symbols']['source_symbol_6'])  # kel_day
+kel = next(p for p in record['parameters'] if p['source_name'] == 'kel_day')
+print(kel['role'], kel['provenance'])
+```
+
+Each parameter has one `role`:
+
+| Role | Meaning |
+| --- | --- |
+| `structural` | Used by a state equation, initial value or dose scale |
+| `iiv_sd` | Inter-individual variability; `variability` gives its distribution, scale and target |
+| `residual_error` | Observation error parameter |
+| `information_criterion` | Objective function value, AIC or BIC |
+| `subject_replay` | Individual estimate or prediction used to replay one subject |
+| `administration` | Dose amount, time or interval held as a parameter |
+| `source_check` | Reported source value kept to check reproduction; not used by the dynamics |
+| `runtime` | Replay token with no scientific meaning |
+| `unit_basis` | Engine constant that carries a source unit |
+
+`structural` is computed from the equations, not from names. A parameter with
+`classification` `curated` was reviewed against the source, and its
+`provenance` gives the source, a file, table or equation `locator`, a `status`
+(`estimated`, `fixed`, `assumed`, `derived` or `reported`) and a `unit_basis`
+(`declared` or `ode_inferred`). Other parameters say `not_curated`; their role
+comes from the equations or from a closed set of name rules
+(`scripts/build_parameter_metadata.py`), and their `locator` is copied from the
+source category label without review. Rituximab 0.5.0 is curated. In the
+public Git checkout, `python scripts/check_readable_names.py` renames every
+selected model through its record and compares it with the native run.
 
 ## Focused tutorials
 

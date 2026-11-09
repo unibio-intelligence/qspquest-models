@@ -39,7 +39,7 @@ def fixture():
 
 class FittingGuardTests(unittest.TestCase):
     def test_pinned_simulation_only_archive_cannot_execute_and_returns_copies(self):
-        model = load_archive(Path(__file__).resolve().parents[1]/'models/qspquest_diffdose_2026_idr_benchmark/0.1.0/model.omex', expected_sha256='fd703aa06e91c456512164a5972645a563656397d01ce049b519d72ddb23c778')
+        model = Library(Path(__file__).resolve().parents[1]).load('qspquest_diffdose_2026_tgi_benchmark')
         self.assertEqual(model.fitting_contract, {})
         self.assertEqual(model.fitting_workflows, [])
         model.fitting_contract['fit_ready'] = True

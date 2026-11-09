@@ -1,0 +1,607 @@
+{
+  "description": "Exact Table 1/Table 2/supplement/source-status checks plus deterministic fixed-effect PK dynamic probes.",
+  "model_id": "qspquest-garrett-2019-inotuzumab-ozogamicin-poppk",
+  "name": "Garrett 2019 inotuzumab ozogamicin PopPK scenarios",
+  "scenarios": [
+    {
+      "description": "Exact article Table 2 fixed-effect, uncertainty, random-effect, covariance, residual-error, and bootstrap scalar values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table2-final-parameter-estimate-checks",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "Table 2 final model parameter checks",
+      "parameters": {},
+      "scenario_type": "exact_scalar_paper_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact study population, observation count, VPC count, fractionated dose design, and published C4D1 AUC/half-life/accumulation source targets.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "study-design-and-simulation-text-checks",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "Study design and simulation text checks",
+      "parameters": {},
+      "scenario_type": "exact_scalar_paper_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Deterministic fixed-effect equation check for ALL, no rituximab, BBSA 1.84 m2, BLSTPB 5.25%, evaluated at 1848 h (reported Day 78/C4D1).",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "all-reference-day78-formula-checks",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "ALL reference covariate equation checks at C4D1",
+      "parameters": {
+        "ALL_indicator": 1,
+        "BBSA_m2": 1.84,
+        "BLSTPB_pct": 5.25,
+        "no_rituximab_indicator": 1
+      },
+      "scenario_type": "exact_formula_reproduction",
+      "time_span": {
+        "end": 1848,
+        "start": 0,
+        "step": 1848
+      }
+    },
+    {
+      "description": "Fixed-effect formula checks for the text-reported 10th percentile BBSA 1.55 m2 and 90th percentile BBSA 2.21 m2 effects on CL1, CL2, and V1.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "bbsa-covariate-formula-checks",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "BBSA percentile covariate formula checks",
+      "parameters": {},
+      "scenario_type": "exact_formula_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Deterministic fixed-effect smoke simulation for the published ALL regimen. This exercises the ODE and can be compared visually with Figure 7 behavior, but it is not a NONMEM population-percentile or VPC reproduction.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1.4720000000000002,
+            "duration": 1,
+            "source": "0.8 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "0.5 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 168,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "0.5 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 336,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.4720000000000002,
+            "duration": 1,
+            "source": "0.8 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 504,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "0.5 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 672,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "0.5 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 840,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.4720000000000002,
+            "duration": 1,
+            "source": "0.8 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 1176,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "0.5 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 1344,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "0.5 mg/m2 dose at BBSA 1.84 m2; 1 h runtime infusion approximation",
+            "time": 1512,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "fractionated-all-three-cycle-dynamic-smoke",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "ALL 1.8 mg/m2/cycle fractionated regimen dynamic smoke",
+      "parameters": {
+        "ALL_indicator": 1,
+        "BBSA_m2": 1.84,
+        "BLSTPB_pct": 5.25,
+        "no_rituximab_indicator": 1
+      },
+      "scenario_type": "dynamic_model_smoke",
+      "time_span": {
+        "end": 1848,
+        "start": 0,
+        "step": 24
+      }
+    },
+    {
+      "description": "Paper Figure 7/8 covariate condition. Typical fixed effects only; not the population median or interval. One-hour infusion approximation.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1.2400000000000002,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.775,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 168,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.775,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 336,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.2400000000000002,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 504,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.775,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 672,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.775,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 840,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.2400000000000002,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1176,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.775,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1344,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.775,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1512,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "source-review-all-low-joint-covariates",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "ALL low BSA/blasts typical subject",
+      "parameters": {
+        "ALL_indicator": 1,
+        "BBSA_m2": 1.55,
+        "BLSTPB_pct": 0.0001,
+        "no_rituximab_indicator": 1
+      },
+      "scenario_type": "dynamic_model_smoke",
+      "time_span": {
+        "end": 1848,
+        "start": 0,
+        "step": 24
+      }
+    },
+    {
+      "description": "Paper Figure 7/8 covariate condition. Typical fixed effects only; not the population median or interval. One-hour infusion approximation.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1.4720000000000002,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 168,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 336,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.4720000000000002,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 504,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 672,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 840,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.4720000000000002,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1176,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1344,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 0.92,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1512,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "source-review-all-median-joint-covariates",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "ALL median BSA/blasts typical subject",
+      "parameters": {
+        "ALL_indicator": 1,
+        "BBSA_m2": 1.84,
+        "BLSTPB_pct": 5.0,
+        "no_rituximab_indicator": 1
+      },
+      "scenario_type": "dynamic_model_smoke",
+      "time_span": {
+        "end": 1848,
+        "start": 0,
+        "step": 24
+      }
+    },
+    {
+      "description": "Paper Figure 7/8 covariate condition. Typical fixed effects only; not the population median or interval. One-hour infusion approximation.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1.768,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.105,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 168,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.105,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 336,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.768,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 504,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.105,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 672,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.105,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 840,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.768,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1176,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.105,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1344,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1.105,
+            "duration": 1,
+            "source": "Fractionated mg/m2 regimen scaled to scenario BSA; 1-h infusion approximation",
+            "time": 1512,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "source-review-all-high-joint-covariates",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "ALL high BSA/blasts typical subject",
+      "parameters": {
+        "ALL_indicator": 1,
+        "BBSA_m2": 2.21,
+        "BLSTPB_pct": 69.0,
+        "no_rituximab_indicator": 1
+      },
+      "scenario_type": "dynamic_model_smoke",
+      "time_span": {
+        "end": 1848,
+        "start": 0,
+        "step": 24
+      }
+    },
+    {
+      "description": "Supplement Online Resource 1 NHL Q4W regimen and Resource 3 missing-blast sentinel. Rituximab acts only as a PK covariate; no rituximab PK simulation. One-hour infusion approximation.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 3.3120000000000003,
+            "duration": 1.0,
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 3.3120000000000003,
+            "duration": 1.0,
+            "time": 672,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 3.3120000000000003,
+            "duration": 1.0,
+            "time": 1344,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "source-review-nhl-without-rituximab",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "NHL without rituximab covariate",
+      "parameters": {
+        "ALL_indicator": 0,
+        "BBSA_m2": 1.84,
+        "BLSTPB_pct": -99,
+        "no_rituximab_indicator": 1
+      },
+      "scenario_type": "dynamic_model_smoke",
+      "time_span": {
+        "end": 2016,
+        "start": 0,
+        "step": 12
+      }
+    },
+    {
+      "description": "Supplement Online Resource 1 NHL Q4W regimen and Resource 3 missing-blast sentinel. Rituximab acts only as a PK covariate; no rituximab PK simulation. One-hour infusion approximation.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 3.3120000000000003,
+            "duration": 1.0,
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 3.3120000000000003,
+            "duration": 1.0,
+            "time": 672,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 3.3120000000000003,
+            "duration": 1.0,
+            "time": 1344,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "source-review-nhl-with-rituximab",
+      "initial_states": {
+        "AUC_ng_h_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_h": 0
+      },
+      "name": "NHL with rituximab covariate",
+      "parameters": {
+        "ALL_indicator": 0,
+        "BBSA_m2": 1.84,
+        "BLSTPB_pct": -99,
+        "no_rituximab_indicator": 0
+      },
+      "scenario_type": "dynamic_model_smoke",
+      "time_span": {
+        "end": 2016,
+        "start": 0,
+        "step": 12
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-08,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-06
+    },
+    "solver_options": {
+      "abstol": 1e-11,
+      "maxiters": 1000000,
+      "method": "Tsit5",
+      "reltol": 1e-10
+    },
+    "time_span": {
+      "end": 1848,
+      "start": 0,
+      "step": 24
+    }
+  },
+  "time_unit": "h"
+}

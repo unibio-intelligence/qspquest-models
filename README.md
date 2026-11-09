@@ -7,42 +7,42 @@ the hosted service at [biologics.unibiointelligence.com](https://biologics.unibi
 **[Choose a model](MODEL_CATALOG.md)** · **[Run the example below](#run-a-rituximab-model)** ·
 **[Preview a stored result](tutorials/understand-results.md#read-a-stored-result)**
 
-The library contains 62 simulation models. Together they provide 639 preset experiments.
+The library contains 62 simulation models. Together they provide 631 preset experiments.
 Examples use fixed parameters, their units have not been independently checked,
 and they are not intended for clinical dose selection.
 
 ## Setup
 
-Use CPython 3.10 or newer. Create a virtual environment, activate it, and
-install the library with its matching simulation engine:
+Use CPython 3.10 or newer. From the root of this model-library checkout,
+create a virtual environment and install the library with its matching
+simulation engine:
 
 ```sh
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install qspquest-models==0.1.0
+python -m pip install .
 ```
 
 On Windows PowerShell, create the environment with `py -m venv .venv` and
 activate it with `.\.venv\Scripts\Activate.ps1` before the same install command.
-The library bundles its catalog and model archives. Supported engine wheels
-need no Rust compiler, source checkout, library-path setting or command-line interface (CLI) executable.
+The installed library bundles its catalog and model archives. Supported engine
+wheels run without a Rust compiler or a separate engine executable.
 See the [installation and Python guide](PACKAGE_README.md) for supported platforms,
 a complete Python example and troubleshooting.
 
-The examples below use the installed library from any working directory.
-For source development, install this checkout with `python -m pip install .`;
-pass `--library .` only when intentionally selecting the checkout's library.
-The extended tutorials use the source checkout for their accompanying files.
+After installation, run the examples below from any working directory.
+Use `--library .` from the checkout root to select its archives directly.
+The extended tutorials use the checkout for their accompanying files.
 
 ## Run a rituximab model
 
 This example simulates circulating rituximab and CD19+ B cells over 200 days with a fixed typical
-parameter set. The 1000 mg dose is set as a starting concentration (dose divided by volume, dose/V);
-repeat doses are not modeled.
+parameter set. The 1000 mg dose is a bolus into the circulating concentration at day 0;
+add further doses to study a regimen.
 
 ```sh
 python -m qspquest_models \
-  --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.3.2 \
+  --model qspquest_serkland_2025_rituximab_ms_pkpd --model-version 0.5.0 \
   --scenario population-typical-1000mg-full-ode --csv rituximab-cli.csv
 python -m qspquest_models --verify-table rituximab-cli.csv
 ```
@@ -54,7 +54,7 @@ Choose a new filename when rerunning: exports never replace existing files.
 
 Outputs are in `mg/L` and `[cell]/mm3`; these units have not yet been independently
 checked. If you see `unknown_unit`, install the matching `qspquest==0.1.0` engine. Read the
-[model guide](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.2/MODEL_CARD.md)
+[model guide](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.5.0/MODEL_CARD.md)
 and [output interpretation](tutorials/understand-results.md) before using values
 quantitatively.
 

@@ -1,0 +1,92 @@
+{
+  "cases": [
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:8feea43ba6810c89fd76133ef3e8538182c83559d6d9f0cab657001242a734ad",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:325d5d4663bbd1f558d79c47170bdae178b4d1c87a09fd53a9ffac079359fa27",
+        "run_request_hash": "sha256:a8d506f96959647f325724809556a291bed1e4dc1c956604f3b3f59eb0b88047",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/model6-table3-s1-exact-anchor/qspquest.csv.gz",
+          "sha256": "6193121b901685ea7c17196b6b03c2354de9332cf313c360a3c8044671217724",
+          "uncompressed_sha256": "85ec37eb5232d5a0bd62c012c42a710fb496ccbf6e473c30c9c8ebbd1157a4f3"
+        }
+      },
+      "scenario_id": "model6-table3-s1-exact-anchor",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:8feea43ba6810c89fd76133ef3e8538182c83559d6d9f0cab657001242a734ad",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:325d5d4663bbd1f558d79c47170bdae178b4d1c87a09fd53a9ffac079359fa27",
+        "run_request_hash": "sha256:c4f645503afdc8734ef519cb90f0f7d5133cb3fea8a7c282bd4dc1e74a98226e",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/model6-transition-probability-ode/qspquest.csv.gz",
+          "sha256": "fe6ccf9376c5ce62a0e1e0066c16c8365ecd977a79e7ef6db1d5c4308177961c",
+          "uncompressed_sha256": "4304893e38cf133a1c05ce40aa3f6820f79f8283c47e8dbdc9754e23b5183899"
+        }
+      },
+      "scenario_id": "model6-transition-probability-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:8feea43ba6810c89fd76133ef3e8538182c83559d6d9f0cab657001242a734ad",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:325d5d4663bbd1f558d79c47170bdae178b4d1c87a09fd53a9ffac079359fa27",
+        "run_request_hash": "sha256:a8d506f96959647f325724809556a291bed1e4dc1c956604f3b3f59eb0b88047",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/univariate-model-comparison-exact-anchor/qspquest.csv.gz",
+          "sha256": "6193121b901685ea7c17196b6b03c2354de9332cf313c360a3c8044671217724",
+          "uncompressed_sha256": "85ec37eb5232d5a0bd62c012c42a710fb496ccbf6e473c30c9c8ebbd1157a4f3"
+        }
+      },
+      "scenario_id": "univariate-model-comparison-exact-anchor",
+      "status": "executed"
+    }
+  ],
+  "omex_sha256": "85d0569dd1e7336ae40b60e3be290b182575f6d6a0a60b7025ad631a2ee26858",
+  "source_scenarios": [
+    "model6-table3-s1-exact-anchor",
+    "model6-transition-probability-ode",
+    "univariate-model-comparison-exact-anchor"
+  ],
+  "unavailable_scenarios": []
+}

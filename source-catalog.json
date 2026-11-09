@@ -5,30 +5,30 @@
       "dois": [
         "10.21203/rs.3.rs-8670135/v1"
       ],
-      "exported_sha256": "42eb80499790ba984af8c02f48dd3cadab073ce88a200a487a2161d3d1a7b8f2",
+      "exported_sha256": "444ebad355f333c73018e4d5394ea7c100cf9c48bc215d7ca48a520bf686bd18",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation/0.1.0/equations.json",
-          "sha256": "13771f231df83c6e627b70bdc9914b8b5e7c05db083e3cd933d937c482cad109"
+          "path": "sources/qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation/0.3.0/equations.json",
+          "sha256": "6e0ba15525391e7071e6ed9e52bfbf53aff488422423644897988ef913afd444"
         },
         "model.json": {
-          "path": "sources/qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation/0.1.0/model.json",
-          "sha256": "5c19bb119a9105e6c7547f40ef8c98fe830693e6d7b0f2e19fbd215b61c6f365"
+          "path": "sources/qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation/0.3.0/model.json",
+          "sha256": "c1be08546e963e171ffa43da9c117020be21d6c40e82b777962c13c5caaf32b5"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation/0.1.0/scenarios.json",
-          "sha256": "ffb83dfe058024ef34041686aac61b571d0b822daf0a88e8711bbd6ce8fcfa23"
+          "path": "sources/qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation/0.3.0/scenarios.json",
+          "sha256": "8c6dd13622eb3578d78eab85710c80145c949e983e2be4193a83446d3e985b3c"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation",
       "name": "Aguilo-Lafarga 2026 Adalimumab IBD PopPK External Validation",
       "omex": {
-        "archive": "models/qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation/0.1.0/model.omex",
+        "archive": "models/qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation/0.3.0/model.omex",
         "model_id": "qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation",
-        "omex_sha256": "f600631bf87c08b2d533259a577d62c62ed421c9e4347b3bcdcccbd6d6a793da",
+        "omex_sha256": "ab5fadc5920ca6d24d0b5b975de71cce806921d16c7908295b5d3f27f0502c60",
         "source_model_id": "qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "berends-adalimumab-induction-q2w-ode",
@@ -73,44 +73,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation",
-        "outputs": 186,
-        "parameters": 182,
+        "outputs": 184,
+        "parameters": 179,
         "states": 5,
         "status": "parsed"
       },
       "source_sha256": "013665e4cff86ec58245ea096899e9c6c5c3314b02a8f6019e3a22f388b72fa9",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1002/psp4.70013"
       ],
-      "exported_sha256": "9628dbce61c640e548e39282efa2627e12eb8653817a613620cd755455139138",
+      "exported_sha256": "c0a4ed2b57835dbac0685a061fd7d40b30da60dc777a060412909e956d66f829",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-asiimwe-2025-adc-mbma-cui-poppk/0.1.0/equations.json",
-          "sha256": "6e5eeeeaea43661a6cd4849905be64b9481bc8fc374caefe45740272211da316"
+          "path": "sources/qspquest-asiimwe-2025-adc-mbma-cui-poppk/0.2.0/equations.json",
+          "sha256": "0c28d04025f2373a9cb5f2d494c501de4af71da1992c77493fedbc0a88b82435"
         },
         "model.json": {
-          "path": "sources/qspquest-asiimwe-2025-adc-mbma-cui-poppk/0.1.0/model.json",
-          "sha256": "95ba747396f3b8e585a6f33ebc870874d9d2e7a7b013383790f64194d759b7a0"
+          "path": "sources/qspquest-asiimwe-2025-adc-mbma-cui-poppk/0.2.0/model.json",
+          "sha256": "89a0f8b9cb1d68b1c21a6cc03eac153d3118fef8a539742a9d678bada3587ca7"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-asiimwe-2025-adc-mbma-cui-poppk/0.1.0/scenarios.json",
-          "sha256": "9a4edc1c509d69dc65a8015fd57ad4d8c362ec9b749112f7f79d7636a4e6072e"
+          "path": "sources/qspquest-asiimwe-2025-adc-mbma-cui-poppk/0.2.0/scenarios.json",
+          "sha256": "14b8909d2079baffacffacb99b3ad47801e24c3232dfed0b13c17950af9c6640"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-asiimwe-2025-adc-mbma-cui-poppk",
       "name": "Asiimwe 2025 ADC MBMA/CUI PopPK",
       "omex": {
-        "archive": "models/qspquest_asiimwe_2025_adc_mbma_cui_poppk/0.1.0/model.omex",
+        "archive": "models/qspquest_asiimwe_2025_adc_mbma_cui_poppk/0.2.0/model.omex",
         "model_id": "qspquest_asiimwe_2025_adc_mbma_cui_poppk",
-        "omex_sha256": "47d5bb9488fee3f2393eba91c3efd2848fe02dfa0a4f06f87d8e04097ef19f1d",
+        "omex_sha256": "25168c399bd697460c63261d1650809fb1a867e545b6d469458d250a382f62c0",
         "source_model_id": "qspquest-asiimwe-2025-adc-mbma-cui-poppk",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "exact-table1-cui-source-anchor",
@@ -160,43 +160,43 @@
       "source_parser": {
         "id": "qspquest-asiimwe-2025-adc-mbma-cui-poppk",
         "outputs": 6,
-        "parameters": 52,
+        "parameters": 51,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "6a20be483c371a6623b799394245e46ba850f8ed01c3cbfac7ed9d46f6c87133",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.64898/2026.05.05.722920"
       ],
-      "exported_sha256": "ee43fe4a842aaf92e8a488ef79210e0e3b6496a36030fb7edaed1fa560a99c16",
+      "exported_sha256": "f1f25a3dd5199cae04b80d76fa7a3e4362ecd58976842aa29f17052d88536c83",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-besbassi-2026-crs-qsp-locked-cytokine-network/0.1.0/equations.json",
-          "sha256": "7bcba4e8c7c30bd5bd2aee1d3605fa363735cea12a9360f4f15744df6764f707"
+          "path": "sources/qspquest-besbassi-2026-crs-qsp-locked-cytokine-network/0.2.0/equations.json",
+          "sha256": "eb38a76cdeee35d2954ee2c0988848bc95cb8d59d78ea94c6a3ac11f5cd061d2"
         },
         "model.json": {
-          "path": "sources/qspquest-besbassi-2026-crs-qsp-locked-cytokine-network/0.1.0/model.json",
-          "sha256": "c8be09827ef37385b8b7b7f75aa2e928ef152afa9960c4f5851876629d12f343"
+          "path": "sources/qspquest-besbassi-2026-crs-qsp-locked-cytokine-network/0.2.0/model.json",
+          "sha256": "7248223d924d174484e7d0d8548a0d85cd2fe871da20b761abd0294cdc8873e4"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-besbassi-2026-crs-qsp-locked-cytokine-network/0.1.0/scenarios.json",
-          "sha256": "23405afaef4af969f5fa3206b99596ac310cb6ac1dd0b9ee5ce2cefa0b764e0b"
+          "path": "sources/qspquest-besbassi-2026-crs-qsp-locked-cytokine-network/0.2.0/scenarios.json",
+          "sha256": "6bb13496d7e5a98bb7faa999143a5125b33bdabe6020164b66e843a140000eaa"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-besbassi-2026-crs-qsp-locked-cytokine-network",
       "name": "Besbassi 2026 CRS QSP locked cytokine network",
       "omex": {
-        "archive": "models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.2/model.omex",
+        "archive": "models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.2.0/model.omex",
         "model_id": "qspquest_besbassi_2026_crs_qsp_locked_cytokine_network",
-        "omex_sha256": "2e536a1f97b143f6b4077d0c134ddfd02007dbfc5cac3471e2a97c19a3978292",
+        "omex_sha256": "86db3e25d4a2e04808c9e1311d57ba18a22d8cb8a055f88e0c199ac572449e41",
         "source_model_id": "qspquest-besbassi-2026-crs-qsp-locked-cytokine-network",
-        "version": "0.1.2"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -220,43 +220,43 @@
       "source_parser": {
         "id": "qspquest-besbassi-2026-crs-qsp-locked-cytokine-network",
         "outputs": 0,
-        "parameters": 54,
+        "parameters": 53,
         "states": 11,
         "status": "parsed"
       },
       "source_sha256": "25362ed50a0726b778c9b65126cb4e20e8f558a46fd79e68555253647af95b86",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s10928-023-09890-8"
       ],
-      "exported_sha256": "f1a0ddf11a5629a808ebbaec96c3860c43b0773cbd9ec7f16378db6387c82a58",
+      "exported_sha256": "e99d3cd8869154d99c02458621fa042291a2daa31ab1c4a5795fb85f44972145",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-brekkan-2024-certolizumab-ada-hidden-markov/0.1.0/equations.json",
-          "sha256": "fe4f055ed32b97ef91d468fe144e669ece3c3c971c44eca4fdb43a76b79c8d87"
+          "path": "sources/qspquest-brekkan-2024-certolizumab-ada-hidden-markov/0.2.0/equations.json",
+          "sha256": "d4232922a236878be4bb636359ead7153a939a9671ca3e99da74512613fe25c2"
         },
         "model.json": {
-          "path": "sources/qspquest-brekkan-2024-certolizumab-ada-hidden-markov/0.1.0/model.json",
-          "sha256": "0a43ded12f796efab2ca33d67b0eeea868208c937de0232cdabfc50b59e8b71a"
+          "path": "sources/qspquest-brekkan-2024-certolizumab-ada-hidden-markov/0.2.0/model.json",
+          "sha256": "29ad012755a2d533b20896f179684e18f6e2d7ed5ad6c0640b76ca2d8b502276"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-brekkan-2024-certolizumab-ada-hidden-markov/0.1.0/scenarios.json",
-          "sha256": "c7d1b5b3638c6b29513f31ced23a0ae3d73d163f196efba1430a2944312e4e41"
+          "path": "sources/qspquest-brekkan-2024-certolizumab-ada-hidden-markov/0.2.0/scenarios.json",
+          "sha256": "985b946467179817fac2d12435552d9f99719ec06629da24d0d06b686ec90b46"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-brekkan-2024-certolizumab-ada-hidden-markov",
       "name": "Brekkan 2024 certolizumab ADA bivariate hidden-Markov model",
       "omex": {
-        "archive": "models/qspquest_brekkan_2024_certolizumab_ada_hidden_markov/0.1.0/model.omex",
+        "archive": "models/qspquest_brekkan_2024_certolizumab_ada_hidden_markov/0.2.0/model.omex",
         "model_id": "qspquest_brekkan_2024_certolizumab_ada_hidden_markov",
-        "omex_sha256": "fb51cb38aca6458370b4b2ee237e408259ec190173609dd4d8d469b4b02826a5",
+        "omex_sha256": "85d0569dd1e7336ae40b60e3be290b182575f6d6a0a60b7025ad631a2ee26858",
         "source_model_id": "qspquest-brekkan-2024-certolizumab-ada-hidden-markov",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "model6-table3-s1-exact-anchor",
@@ -282,43 +282,43 @@
       "source_parser": {
         "id": "qspquest-brekkan-2024-certolizumab-ada-hidden-markov",
         "outputs": 43,
-        "parameters": 32,
+        "parameters": 31,
         "states": 5,
         "status": "parsed"
       },
       "source_sha256": "2b8433000b966055649f35de1682887a0f8918df85b9e9760d9f662fdeeb52d2",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s11095-023-03616-8"
       ],
-      "exported_sha256": "0ead9e4d61f2fee2191d27535fec257f9be2e423771be396b71ad1832d3d4eea",
+      "exported_sha256": "a73ec52c21b33f45a56ef4ec1e1fa38c974b5b40a9607b20ef477e57de0dd69e",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-briggs-2023-dupilumab-ad-er-pkpd/0.1.0/equations.json",
-          "sha256": "f7830df4ba72eb4b2828dd7072ca23c8962517bbc636072856e47cbc760d6f34"
+          "path": "sources/qspquest-briggs-2023-dupilumab-ad-er-pkpd/0.3.0/equations.json",
+          "sha256": "63630d0111b29dae0348c2851da020abf44ee25569bddfa69cdc41d6876ad17a"
         },
         "model.json": {
-          "path": "sources/qspquest-briggs-2023-dupilumab-ad-er-pkpd/0.1.0/model.json",
-          "sha256": "aaa489c8963d38f3e562cb066852742208a3ac9fd737b53eb2d161dcd50366b3"
+          "path": "sources/qspquest-briggs-2023-dupilumab-ad-er-pkpd/0.3.0/model.json",
+          "sha256": "a1785bdaddeb6dca6cc950a26a8ad9e4f4f9af8c9b41a5c9cfb7b876d0aad6b8"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-briggs-2023-dupilumab-ad-er-pkpd/0.1.0/scenarios.json",
-          "sha256": "9c4bba9be964de3cffb8427b387e43fee66ff77855433c95e6d9ad63ba6f0c81"
+          "path": "sources/qspquest-briggs-2023-dupilumab-ad-er-pkpd/0.3.0/scenarios.json",
+          "sha256": "314df493e404ca4922b3705a2d8b80fb87603ac882133d1d6308f9a66bfc57c0"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-briggs-2023-dupilumab-ad-er-pkpd",
       "name": "Briggs 2023 dupilumab AD exposure-response PK/PD",
       "omex": {
-        "archive": "models/qspquest_briggs_2023_dupilumab_ad_er_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_briggs_2023_dupilumab_ad_er_pkpd/0.3.0/model.omex",
         "model_id": "qspquest_briggs_2023_dupilumab_ad_er_pkpd",
-        "omex_sha256": "77d4ad400aa2d37db95f9742d2f78ada6b5d501f2ed36d44657d2bd41c783a98",
+        "omex_sha256": "06c2a129ecc75c588b2c38fb3fbcd066e33b0e030469da4578dff1135d1444fb",
         "source_model_id": "qspquest-briggs-2023-dupilumab-ad-er-pkpd",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "adult-severe-300mg-q2w-16weeks",
@@ -343,44 +343,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-briggs-2023-dupilumab-ad-er-pkpd",
-        "outputs": 128,
-        "parameters": 83,
+        "outputs": 119,
+        "parameters": 75,
         "states": 11,
         "status": "parsed"
       },
       "source_sha256": "64a6e5d7ece22a0c6d7281b8b8e8eb62b7f1a028259ab7b18564437c4b4e2dbc",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1016/j.ejps.2024.106807"
       ],
-      "exported_sha256": "ceaf477573c20e1a1e734c4710932c8e5b9d12d4ccc354aa5e0f325c8e01ae75",
+      "exported_sha256": "29f81882f390104ff4da1ffea210953659a09f7f193dbbc5413696a2688eb45a",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced/0.1.0/equations.json",
-          "sha256": "fb46853a1ce7163403224d770b67841bb05f52a7df6efb010d0b533939b65a8a"
+          "path": "sources/qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced/0.2.0/equations.json",
+          "sha256": "7d66ecf5bf88b5185c793edb8f6955d82078de2efdb17e39df8ba3e00c24903a"
         },
         "model.json": {
-          "path": "sources/qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced/0.1.0/model.json",
-          "sha256": "e565517cdcca4afe9e170aac43bfeac655da1913b3e7b97973ceb5628bdf786f"
+          "path": "sources/qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced/0.2.0/model.json",
+          "sha256": "2527bfc251e1d8d0e2f2c05eba481ec475b001de6d92744f5e37bb4d4812b6f3"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced/0.1.0/scenarios.json",
-          "sha256": "98ec90010dc9f31435226c9977b4c81b37aaafb1ca56c0bbc8dd51f27cdbd231"
+          "path": "sources/qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced/0.2.0/scenarios.json",
+          "sha256": "a2e9037ac226e62b0be08830877592a996733d2697b4bb0c769ff4231ff160a3"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced",
       "name": "Cai 2024 ustekinumab pediatric IBD PBPK reduced FcRn/lymphatic ODE",
       "omex": {
-        "archive": "models/qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced/0.1.0/model.omex",
+        "archive": "models/qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced/0.2.0/model.omex",
         "model_id": "qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced",
-        "omex_sha256": "10935554a9d4c32926dca72b3c56ce9ced4db4cbaf9d6f216fb24d204cceefbe",
+        "omex_sha256": "03455c1480f8becb5e1125ffa1a2a41d0c07bc01ff61946dbe1dab27b40a44f9",
         "source_model_id": "qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "adult-390mg-iv-90mg-sc-q8w-reduced",
@@ -416,43 +416,43 @@
       "source_parser": {
         "id": "qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced",
         "outputs": 0,
-        "parameters": 16,
+        "parameters": 15,
         "states": 7,
         "status": "parsed"
       },
       "source_sha256": "480a01a0279ce118e03042a18874dbcbeb8af256165560b8e4f533e4d3719709",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3390/pharmaceutics17030377"
       ],
-      "exported_sha256": "ad24dee9aae42dca3babe73bd069981d5bc373ab7a30e967ef454fc4c27ccd6a",
+      "exported_sha256": "2074b38c27896dd3aa224ebc95ecc3fe554c5a83929426d8e59edb596d6b6fef",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd/0.1.0/equations.json",
-          "sha256": "4e5b35a21f85cee465f7257745279b7163a84c9a69cdd394eab6c44722a37a6d"
+          "path": "sources/qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd/0.3.0/equations.json",
+          "sha256": "6186168dc0a52cd1c9628ddb7b06f2d6c678bc220de76f3065755b5d8a4acab0"
         },
         "model.json": {
-          "path": "sources/qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd/0.1.0/model.json",
-          "sha256": "c0c2a11def017dc11175d5a7fc071b3d4a240d889ecff3e94e81780ff57a27dd"
+          "path": "sources/qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd/0.3.0/model.json",
+          "sha256": "5596925167a7fee0ea7145da2ae9f3cb68f78e5bc07055b3ebe58a755ec0fdf6"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd/0.1.0/scenarios.json",
-          "sha256": "3ee9c7c0ba70b7047a50357d58cb6f17076033a58b5737f1b17a7ad9fd44a126"
+          "path": "sources/qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd/0.3.0/scenarios.json",
+          "sha256": "34357b84d7d45f5077b0d76f9150cdd810b5858de95179800bb677249e81a15f"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd",
       "name": "Chang 2025 Positively Charged Trastuzumab-vc-MMAE ADC Mouse PK/PD",
       "omex": {
-        "archive": "models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.1.1/model.omex",
+        "archive": "models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.3.0/model.omex",
         "model_id": "qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd",
-        "omex_sha256": "101fb33900c088f0e03392b3cb4a174236345121d961de6ee1484558839a7c4f",
+        "omex_sha256": "e1f05badd7519d322664a374d4c77f29885072abaffaf2a124d44c7ad10059d9",
         "source_model_id": "qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd",
-        "version": "0.1.1"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -507,44 +507,44 @@
       "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd",
-        "outputs": 177,
-        "parameters": 172,
+        "outputs": 170,
+        "parameters": 165,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "ac297da782be8237690806800c7ba1a315d0217bee88a0d27cb8f74719a5837a",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3389/fonc.2022.951589"
       ],
-      "exported_sha256": "f6ca811f21a47c995bd4d0d50c1dc8b6da17b996d1f7efa76161d60b428688aa",
+      "exported_sha256": "66d6cc12d65d85050f9275d993d17517188f8070d18d56974640240dd3b6be61",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd/0.1.0/equations.json",
-          "sha256": "f3f256e490c2d821645a2461cf08809aa72119a36b86e37a82b568c4a1057e00"
+          "path": "sources/qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd/0.3.0/equations.json",
+          "sha256": "bcff7a51b54b2ddbc24cdf22258ab591b52ee4667e98f0bdd5e65f89cb301ee4"
         },
         "model.json": {
-          "path": "sources/qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd/0.1.0/model.json",
-          "sha256": "17bbbae4f103fff7373a260e35b511320c80c7fc75444d7f990f14e65c1ac2b9"
+          "path": "sources/qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd/0.3.0/model.json",
+          "sha256": "09107c8a13d5dc5151bb04b372249ab69d8a730404b2c0263cdf0f0d28d7bb4f"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd/0.1.0/scenarios.json",
-          "sha256": "7957d654854390a93800ada18d12fcf3ade90108fd6658cef00f4fa2f25209d1"
+          "path": "sources/qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd/0.3.0/scenarios.json",
+          "sha256": "5d02181599866d30cedef2d281d2b5a180748edf58102bfc89173d7de2a8a942"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd",
       "name": "Cheng 2022 SKB264 TROP2 ADC Preclinical PK/PD Table-Replay Model",
       "omex": {
-        "archive": "models/qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd/0.3.0/model.omex",
         "model_id": "qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd",
-        "omex_sha256": "8c2eb45bfcbc98c81fff3c84f789598c8524e692fdcf8a288ed7d30737c624dd",
+        "omex_sha256": "98c0b91eb67cf1158fb0a143b5ba56e0a57f44583dfe5cee3de6413a41e8c0cf",
         "source_model_id": "qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "corrigendum-table5",
@@ -592,7 +592,6 @@
         "monkey-table2",
         "mouse-tissue-table4",
         "payload-table3",
-        "source-identity",
         "tox-table1"
       ],
       "rights": {
@@ -606,7 +605,6 @@
         "source_license_url": "https://creativecommons.org/licenses/by/4.0/"
       },
       "scenario_ids": [
-        "source-identity",
         "design-affinity-cytotoxicity",
         "methods-design",
         "efficacy-pkpd-text",
@@ -657,14 +655,14 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd",
-        "outputs": 221,
-        "parameters": 212,
+        "outputs": 207,
+        "parameters": 198,
         "states": 2,
         "status": "parsed"
       },
       "source_sha256": "6982b100259143edc15783d68fbc005f7fb21e2d1fffa5d6b098a496a44524f2",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
@@ -739,30 +737,30 @@
       "dois": [
         "10.3389/fimmu.2014.00670"
       ],
-      "exported_sha256": "4337ae01920fd9e894fe6497f95f9dea91e1a1bc01b19cde6e5578ccd2ce436f",
+      "exported_sha256": "64fa886244fc3d1af11aa64713ff6c99ee6c2c6ad21507304e7ce1d0f55c12df",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd/0.1.0/equations.json",
-          "sha256": "a76a4585733c2e4ed207bf96e1d791651a1317d85fbffe1b466c2d6931f9ab56"
+          "path": "sources/qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd/0.3.0/equations.json",
+          "sha256": "bc681c1149b3b27c8f2fba177e5eeca882d18f48e42a1f56d5d926af3a476640"
         },
         "model.json": {
-          "path": "sources/qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd/0.1.0/model.json",
-          "sha256": "b301444f29a45ed32b800a65c00d81a62163afa3e39979891cc177350d11538a"
+          "path": "sources/qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd/0.3.0/model.json",
+          "sha256": "a8302a713ad2cc317dc2d2294219909c00c32f92b81b346db23187de07082b1c"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd/0.1.0/scenarios.json",
-          "sha256": "3157ba9a1fa789e99cffc3a54a257a4d8805915ef5e5e8eaba927170e83fe84e"
+          "path": "sources/qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd/0.3.0/scenarios.json",
+          "sha256": "1d9313d9e19e77542eb4a3e2e7334b782b7f5d61c608845d5d1222ce0de0489d"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd",
       "name": "Chetty 2014 Efalizumab FcRn PBPK/PD Evidence Replay",
       "omex": {
-        "archive": "models/qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd/0.1.0/model.omex",
+        "archive": "models/qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd/0.3.0/model.omex",
         "model_id": "qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd",
-        "omex_sha256": "9b4c24915bad3ca91375cb237c76554b17aeb0cb68cfd9425ad055e2a10d1784",
+        "omex_sha256": "97de739490044bfb34b43f72356cdfdba5a2f860c085b85a34b55047066d5a89",
         "source_model_id": "qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "exploratory-calibrated-gordon-digitized-pasi-probe",
@@ -789,44 +787,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd",
-        "outputs": 89,
-        "parameters": 79,
+        "outputs": 75,
+        "parameters": 65,
         "states": 2,
         "status": "parsed"
       },
       "source_sha256": "2d81bb97c6edde1a0f5e08a11f83bfdd98737286b5c3f40b0d88692247a4baeb",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3389/fphar.2025.1631034"
       ],
-      "exported_sha256": "6022d6156f639f29bbb663fe8096f9dd65a57ffd0df16916adca7d23c13a887d",
+      "exported_sha256": "d07538d324ff5be6ebaef3c9f9236fc237a75df2c6ef235216763afd86270e0f",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd/0.1.0/equations.json",
-          "sha256": "31370cf561914cb2943a79e1d11f15b39e221fa6480b0314b210f516a48ea4c6"
+          "path": "sources/qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd/0.3.0/equations.json",
+          "sha256": "e4f6e675432e7ee0afc174302f258f52f9175404ce02e9ebf6e382520a35e95f"
         },
         "model.json": {
-          "path": "sources/qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd/0.1.0/model.json",
-          "sha256": "44d27f5694ea154d978c25f2cb1947cf51f21b3012d762a7a91ce8add644626d"
+          "path": "sources/qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd/0.3.0/model.json",
+          "sha256": "3aac4f1c6dc8db60f46b66cbf3df4fdfa16a5cc01a4e8984f65373c16b55eac6"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd/0.1.0/scenarios.json",
-          "sha256": "9c1c2a1518c04ba47a1617251dde90a27ed361089abdc9546bccedf53b3d23cd"
+          "path": "sources/qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd/0.3.0/scenarios.json",
+          "sha256": "5b172ddbbe7a833628a72b5427354890ba92bc3e54c2b798ef532337eea04b53"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd",
       "name": "Choi 2025 Denosumab SB16 Biosimilarity PopPK/PD",
       "omex": {
-        "archive": "models/qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd/0.3.0/model.omex",
         "model_id": "qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd",
-        "omex_sha256": "304097625e4e3f3c093e66f2cc8fa8e6164bf6eed3cefecc2f70f70c8b095784",
+        "omex_sha256": "5ec276efa03fa788336a0a52876212196d617910d9fda6b13f8af962d2a0bca9",
         "source_model_id": "qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "den-60mg-q6mo-three-doses-table5-overlay",
@@ -867,44 +865,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd",
-        "outputs": 139,
-        "parameters": 117,
+        "outputs": 128,
+        "parameters": 105,
         "states": 7,
         "status": "parsed"
       },
       "source_sha256": "81f2ab31ad8144da20eb47fe4981386fb8e05a1264c79c60feb1d35fb0977ded",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s10928-023-09877-5"
       ],
-      "exported_sha256": "322dc5e9b8abf2fc3624580b010a5117f87f953385dca2430c886abe91f6842d",
+      "exported_sha256": "399895427130df5d97d8affa520904f6a11dcd9e240c6e931f441dbe302230e7",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi/0.1.0/equations.json",
-          "sha256": "f8735b5dad21f58a99a4c3d73ebd96cfd5655c2b243f4adc38ead31c3141865f"
+          "path": "sources/qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi/0.3.0/equations.json",
+          "sha256": "8cc563aa5d2461efd46197af2d733ba7461f7a561ff5b0fc805e85502ebd8a39"
         },
         "model.json": {
-          "path": "sources/qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi/0.1.0/model.json",
-          "sha256": "d4cf4b6c5a6d935d0d73edf717d688322a857760c26719c4e36a964b56a66825"
+          "path": "sources/qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi/0.3.0/model.json",
+          "sha256": "f75edef70f60e6f71d77dc8a3cfa73af127d66ee5e425e71481c98939d3a8285"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi/0.1.0/scenarios.json",
-          "sha256": "6d1d2a53e8035c69720d8e2f8ad17cecbae6cd091f2d49b4ff6c64f9fb314bcd"
+          "path": "sources/qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi/0.3.0/scenarios.json",
+          "sha256": "24704f1c23b0031e770e0fbb44bddbf23ac5e864f7c328c66c4d02d56c193c9c"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi",
       "name": "Choules 2024 Enfortumab Vedotin ADC PBPK-DDI Model",
       "omex": {
-        "archive": "models/qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi/0.1.0/model.omex",
+        "archive": "models/qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi/0.3.0/model.omex",
         "model_id": "qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi",
-        "omex_sha256": "972ee8cdde109a414897cf7da56fb0e6553c50ed064a7c7f55441ff208becb59",
+        "omex_sha256": "d6dfcc0c17e737a7750bf55d5c105f96917208e63887b785fdef9e3c3920f70a",
         "source_model_id": "qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "ev-1p0-single-dose-reduced-ode",
@@ -939,14 +937,14 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi",
-        "outputs": 394,
-        "parameters": 396,
+        "outputs": 378,
+        "parameters": 379,
         "states": 5,
         "status": "parsed"
       },
       "source_sha256": "abe8182d0d4f923bfe5cdbb03cc47691a2953793f7ff5698257da1f7be7d26b7",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
@@ -1049,30 +1047,30 @@
       "dois": [
         "10.3389/fimmu.2023.1212981"
       ],
-      "exported_sha256": "362c89f6d0dd582416102c12db6af618bffeff81a99484b969b38817a656c2ea",
+      "exported_sha256": "6a2e2affcbed1f52d0641b023f41f94190cbdb9b7128324f557f3357383506ef",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp/0.1.0/equations.json",
-          "sha256": "1e7c2c49109246de6a6f93d25ab18b67321f45366b1555d248a96e6ccbac346f"
+          "path": "sources/qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp/0.2.0/equations.json",
+          "sha256": "17d5e54a1259305204d4de54e16ca0a64f1b06989231f8e1667e8af3a8c4ae5b"
         },
         "model.json": {
-          "path": "sources/qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp/0.1.0/model.json",
-          "sha256": "1d0ca9aefa47a7223b17724f275f71e7f979efd3562967ce9a78efda9be94353"
+          "path": "sources/qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp/0.2.0/model.json",
+          "sha256": "8f0b1561675141d9e9f88077a16791422dd8c20b2a37b6606c096125544c4dd5"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp/0.1.0/scenarios.json",
-          "sha256": "a437ac983b9ca50d8490c38d93a8ded36567463abae5fbb6a0187bbaa272ee10"
+          "path": "sources/qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp/0.2.0/scenarios.json",
+          "sha256": "aaf4e0f3ff055c57677e3ca419affc9766a8d1d52fdb6d643f2cf46e5c990031"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp",
       "name": "Coto-Segura 2023 certolizumab pegol psoriasis QSP",
       "omex": {
-        "archive": "models/qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp/0.1.0/model.omex",
+        "archive": "models/qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp/0.2.0/model.omex",
         "model_id": "qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp",
-        "omex_sha256": "cdd13040b94115714561f366d8f9f6149462448da33da1a0ee2e693961bf0783",
+        "omex_sha256": "558c14f7b0c93df67105a5ad15541a1aec934a4208978927070b03e60352a640",
         "source_model_id": "qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "exact-source-anchor",
@@ -1098,43 +1096,43 @@
       "source_parser": {
         "id": "qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp",
         "outputs": 63,
-        "parameters": 58,
+        "parameters": 57,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "735ea0900354b117001a63a5c2e52bbb0f4e3d6346b93806ea46592391d91b20",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1093/oncolo/oyae102"
       ],
-      "exported_sha256": "91d1f708b9c48ecf84987c16e0dd212b508063fdba2b79e928634b121a4d4df8",
+      "exported_sha256": "87b8071e5e6ae962e343383620f0c6da12dc9687afbb69a167340a605cb00e0c",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-cui-2024-envafolimab-sc-pdl1-midd/0.1.0/equations.json",
-          "sha256": "1964364bacfe776cfa7cc25249a83209cb6678a503f961490ee876aedac3563a"
+          "path": "sources/qspquest-cui-2024-envafolimab-sc-pdl1-midd/0.2.0/equations.json",
+          "sha256": "4b20b4c667b595477afbdaf0450f7a3c61a5953c02425d95a048149e7f64be8e"
         },
         "model.json": {
-          "path": "sources/qspquest-cui-2024-envafolimab-sc-pdl1-midd/0.1.0/model.json",
-          "sha256": "6b5cb2200f71949c630ea40a016bc4af59d94d088052d2a0f8c2f4b301af9847"
+          "path": "sources/qspquest-cui-2024-envafolimab-sc-pdl1-midd/0.2.0/model.json",
+          "sha256": "fcdac41020c1d01b7bc41085812dba58b04858d4b3caa78520f01f47b4372a64"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-cui-2024-envafolimab-sc-pdl1-midd/0.1.0/scenarios.json",
-          "sha256": "6aef7f400f3ee73acb0a1e36e8c3d80724844661087deb8d5de9725328026e36"
+          "path": "sources/qspquest-cui-2024-envafolimab-sc-pdl1-midd/0.2.0/scenarios.json",
+          "sha256": "37d4ed73b7143b81205cd96a6f8960f8132c529d4c80a7321a797a04a1ebe4df"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-cui-2024-envafolimab-sc-pdl1-midd",
       "name": "Cui 2024 Envafolimab SC PD-L1 PopPK/MIDD",
       "omex": {
-        "archive": "models/qspquest_cui_2024_envafolimab_sc_pdl1_midd/0.1.0/model.omex",
+        "archive": "models/qspquest_cui_2024_envafolimab_sc_pdl1_midd/0.2.0/model.omex",
         "model_id": "qspquest_cui_2024_envafolimab_sc_pdl1_midd",
-        "omex_sha256": "1ac27c73dcb7a015994d4d6ceb17aaf42f07dcafc28b39b6a6cdf072a8c9cd39",
+        "omex_sha256": "ce4e57b9cb9b598ff817c66fd5fab5222dcf8416d10d7597c038199071e078c9",
         "source_model_id": "qspquest-cui-2024-envafolimab-sc-pdl1-midd",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "exact-source-anchor",
@@ -1162,43 +1160,43 @@
       "source_parser": {
         "id": "qspquest-cui-2024-envafolimab-sc-pdl1-midd",
         "outputs": 103,
-        "parameters": 107,
+        "parameters": 106,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "a5f28cd0d9dc460576bedb348770a8474e6f50fdc8581dedac0419eb75f71356",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s10637-018-0593-x"
       ],
-      "exported_sha256": "a4f4e2cae8c6b3c384451373258ec8175520001397cccff610a605c31a978ab8",
+      "exported_sha256": "ca715ec5072f35daf241a8a3c34846d0936ec6f11625eeb32029a374debc9768",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd/0.1.0/equations.json",
-          "sha256": "7e2b348ff16526cb2b519443debd1e0468eafa6bed619e75423fe229712c07aa"
+          "path": "sources/qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd/0.4.0/equations.json",
+          "sha256": "014790ce621c90cbb28bf62998bda53af0212e3035db8e64d6f8c1f0858a220c"
         },
         "model.json": {
-          "path": "sources/qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd/0.1.0/model.json",
-          "sha256": "a6d4d196278b95d3cd090cc24774e40152862e92f6d8af2db812b3aaf7d5fc85"
+          "path": "sources/qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd/0.4.0/model.json",
+          "sha256": "532809c373cb79a705b068e559370ed7bdfd11de2464b752779fd033118ddd6a"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd/0.1.0/scenarios.json",
-          "sha256": "62bc2a67af09f130305d22ccfc9f981111726b107d20921e98496f56a7b59276"
+          "path": "sources/qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd/0.4.0/scenarios.json",
+          "sha256": "1d1d73786cd97d0d37f2a6b8e11e311132b426c3afdf1537c719e6347e177061"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd",
       "name": "de Vries Schultink 2018 MCLA-128/Zenocutuzumab Translational PK-PD",
       "omex": {
-        "archive": "models/qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd/0.4.0/model.omex",
         "model_id": "qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd",
-        "omex_sha256": "afe6d5df848b6b94fc11b45003af2ac229114bd299491b117645ed66718cb004",
+        "omex_sha256": "ca4cd031b32629d50dcf22c7d863f0f59641f5339525e2b026ecfd7ef4fcad01",
         "source_model_id": "qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd",
-        "version": "0.1.0"
+        "version": "0.4.0"
       },
       "qualified_scenario_ids": [
         "figure1-cyno-100mgkg-vpc-digitized-source-limited",
@@ -1206,7 +1204,6 @@
         "figure1-cyno-30mgkg-vpc-digitized-source-limited",
         "human-360mg-q3wk-ro-probe",
         "mouse-vehicle-fig4-population-probe",
-        "source-status-and-identity",
         "study-design-and-methods",
         "table1-pk-parameters",
         "table2-tumor-pd-parameters",
@@ -1223,7 +1220,6 @@
         "source_license_url": "https://creativecommons.org/licenses/by/4.0"
       },
       "scenario_ids": [
-        "source-status-and-identity",
         "study-design-and-methods",
         "table1-pk-parameters",
         "table2-tumor-pd-parameters",
@@ -1242,8 +1238,8 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd",
-        "outputs": 201,
-        "parameters": 245,
+        "outputs": 182,
+        "parameters": 225,
         "states": 6,
         "status": "parsed"
       },
@@ -1255,37 +1251,37 @@
         "mouse-2p5mgkg-q1wk-tumor-probe",
         "mouse-9p5mgkg-q1wk-tumor-probe"
       ],
-      "version": "0.1.0"
+      "version": "0.4.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1177/02676591251406086"
       ],
-      "exported_sha256": "29a862cf0b95b22726d02c55a3b8c00f2224d8e610d28e0e4b2ab2792b9b87cb",
+      "exported_sha256": "1099d292abf5f4022b9536f19a0befdf0575130c8fe40f1620cc20fb8b8d8fff",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd/0.1.0/equations.json",
-          "sha256": "d4af6781e29d05f8579b9bdc6f4a5caacba407a4bfdd1839c3128065dd2c1c0c"
+          "path": "sources/qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd/0.2.0/equations.json",
+          "sha256": "710613984a774d8e9886a5dbea93edb83f8c881db7ef3f034e62559a8f92a732"
         },
         "model.json": {
-          "path": "sources/qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd/0.1.0/model.json",
-          "sha256": "b59312085ac7f58873aa8196e5580d384a90167eb43238d689b0091c456c687d"
+          "path": "sources/qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd/0.2.0/model.json",
+          "sha256": "a07e4919db7bd6e1b9ffdb1472e93609203965fcab63ea086f0d9aa11fc05524"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd/0.1.0/scenarios.json",
-          "sha256": "e9b9ac713f19600946bd46ad5dab6c8ec1acbcadb1093b3edc9b659d58ef1127"
+          "path": "sources/qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd/0.2.0/scenarios.json",
+          "sha256": "812c76e80a4ba979a0666e5cde3d7c13d9a0726730748e73ee60177db7c12e13"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd",
       "name": "Eaton 2025 dabigatran-idarucizumab sheep CPB PK/PD",
       "omex": {
-        "archive": "models/qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd/0.2.0/model.omex",
         "model_id": "qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd",
-        "omex_sha256": "352021e3fa82957312bd6585aa2a715b4db428be35cfa184314e6ae6a6b259bc",
+        "omex_sha256": "b7579bc9c1682ffe45c223c8f93d1762a20f0cc90ea469b9db5fd09a457767d7",
         "source_model_id": "qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "cpb-idarucizumab-reversal-overlay",
@@ -1309,13 +1305,13 @@
       "source_parser": {
         "id": "qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd",
         "outputs": 10,
-        "parameters": 28,
+        "parameters": 27,
         "states": 7,
         "status": "parsed"
       },
       "source_sha256": "0cb51f66e8ce2098f1beaadf119f1e186565701626f866da70c80d9fe1e3a352",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
@@ -1444,30 +1440,30 @@
       "dois": [
         "10.1124/jpet.122.001511"
       ],
-      "exported_sha256": "28704ec5e2edf93cce52eeeab52cafb275c340c0873ce114264726495b9591dc",
+      "exported_sha256": "cd780376a6a4b188db54cc90d64ad9f08840115a6fda39ca55e62339fa185792",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-frank-2023-sutimlimab-cad-pkpd/0.1.0/equations.json",
-          "sha256": "77ffabbe60e87dcc4651148421915c5b13d43e333f8bb8da4254e49c4c1defda"
+          "path": "sources/qspquest-frank-2023-sutimlimab-cad-pkpd/0.3.0/equations.json",
+          "sha256": "09ef813605329345259bca995a5505210417ba0c8d4884f2777eae8776a1c17e"
         },
         "model.json": {
-          "path": "sources/qspquest-frank-2023-sutimlimab-cad-pkpd/0.1.0/model.json",
-          "sha256": "c13496b5303a2a768a5c1b693ce61ac0351bcb406d69d4e5ffb09c98c02fbb22"
+          "path": "sources/qspquest-frank-2023-sutimlimab-cad-pkpd/0.3.0/model.json",
+          "sha256": "9ffb2d9f42b57ba7abf43fad26aa0675b5d4d6c8d44a5e4df69f50d6603f83cc"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-frank-2023-sutimlimab-cad-pkpd/0.1.0/scenarios.json",
-          "sha256": "50b198c6273a0def41b1978d8c8ed5a6e70ae38e0710654d02ecbed47be31c29"
+          "path": "sources/qspquest-frank-2023-sutimlimab-cad-pkpd/0.3.0/scenarios.json",
+          "sha256": "84a744cb8ff5ab2df91860e8900d1975ef447e46cc239110bfb13d31517024bc"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-frank-2023-sutimlimab-cad-pkpd",
       "name": "Frank 2023 sutimlimab CAD PK/PD",
       "omex": {
-        "archive": "models/qspquest_frank_2023_sutimlimab_cad_pkpd/0.1.1/model.omex",
+        "archive": "models/qspquest_frank_2023_sutimlimab_cad_pkpd/0.3.0/model.omex",
         "model_id": "qspquest_frank_2023_sutimlimab_cad_pkpd",
-        "omex_sha256": "2dbbb0b650b549e693896d0fbadd703ec36b7a3abd9b979a268da79bf396f608",
+        "omex_sha256": "2f37b35445bf4d8f3b76d5a878cda82a36812f0b991741103072d7f275af89d3",
         "source_model_id": "qspquest-frank-2023-sutimlimab-cad-pkpd",
-        "version": "0.1.1"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -1489,44 +1485,44 @@
       "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-frank-2023-sutimlimab-cad-pkpd",
-        "outputs": 165,
-        "parameters": 150,
+        "outputs": 162,
+        "parameters": 146,
         "states": 5,
         "status": "parsed"
       },
       "source_sha256": "f14ebe0a61a42e5c3450cf618c715dbcf9df9f9d96f53e971d5a5fa7af336297",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s10928-018-9614-9"
       ],
-      "exported_sha256": "53d7caf81575ab5addd3ff0e362e5a18d546a75adcd546e37539c3829cded59f",
+      "exported_sha256": "54223cc064ea56e22606ac63e0901b9f6a57b4fb783d136e7ac23ea8ba43376a",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-garrett-2019-inotuzumab-ozogamicin-poppk/0.1.0/equations.json",
-          "sha256": "7ce241b41db7b7d2eee9bf470915e8576115033f08162a47ba0f6e5d6ff068b7"
+          "path": "sources/qspquest-garrett-2019-inotuzumab-ozogamicin-poppk/0.4.0/equations.json",
+          "sha256": "d551aaabe9534c7af32d78436cfd855b680fd0093fb99b331be22e7005a380c9"
         },
         "model.json": {
-          "path": "sources/qspquest-garrett-2019-inotuzumab-ozogamicin-poppk/0.1.0/model.json",
-          "sha256": "8639fbcb14140080dacb2f78951ab841063913dd7f4f5d473a028862ae78e8ce"
+          "path": "sources/qspquest-garrett-2019-inotuzumab-ozogamicin-poppk/0.4.0/model.json",
+          "sha256": "2c2dffcbfc269852ce42321537f91adb49ccea7bd185f44edf50d41b6f01daa8"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-garrett-2019-inotuzumab-ozogamicin-poppk/0.1.0/scenarios.json",
-          "sha256": "25b3d907b9d72418681360f18f6a344b421b57f7df225b73bb8ca33b0a987a16"
+          "path": "sources/qspquest-garrett-2019-inotuzumab-ozogamicin-poppk/0.4.0/scenarios.json",
+          "sha256": "f2332bd9f21f007942d9241db67a0d52488790e656e2063d864c526b6f3ff643"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-garrett-2019-inotuzumab-ozogamicin-poppk",
       "name": "Garrett 2019 Inotuzumab Ozogamicin PopPK Model",
       "omex": {
-        "archive": "models/qspquest_garrett_2019_inotuzumab_ozogamicin_poppk/0.1.0/model.omex",
+        "archive": "models/qspquest_garrett_2019_inotuzumab_ozogamicin_poppk/0.4.0/model.omex",
         "model_id": "qspquest_garrett_2019_inotuzumab_ozogamicin_poppk",
-        "omex_sha256": "ed2fe64f0a210b86b6416516e3dfb8a02b84ea10f535f4b8c310533c706afc25",
+        "omex_sha256": "cb71d233e6472b6234b86a40882021cb1c0d2854023aea37b384cb72e39aa446",
         "source_model_id": "qspquest-garrett-2019-inotuzumab-ozogamicin-poppk",
-        "version": "0.1.0"
+        "version": "0.4.0"
       },
       "qualified_scenario_ids": [
         "all-reference-day78-formula-checks",
@@ -1537,7 +1533,6 @@
         "source-review-all-median-joint-covariates",
         "source-review-nhl-with-rituximab",
         "source-review-nhl-without-rituximab",
-        "source-status-checks",
         "study-design-and-simulation-text-checks",
         "table2-final-parameter-estimate-checks"
       ],
@@ -1554,7 +1549,6 @@
       "scenario_ids": [
         "table2-final-parameter-estimate-checks",
         "study-design-and-simulation-text-checks",
-        "source-status-checks",
         "all-reference-day78-formula-checks",
         "bbsa-covariate-formula-checks",
         "fractionated-all-three-cycle-dynamic-smoke",
@@ -1567,44 +1561,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-garrett-2019-inotuzumab-ozogamicin-poppk",
-        "outputs": 149,
-        "parameters": 145,
+        "outputs": 143,
+        "parameters": 138,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "2767d27d8ed1fc6341e495460fb0eac22d9e444494aec9c1f8f30329e0e2a2c4",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.4.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1208/s12248-017-0086-4"
       ],
-      "exported_sha256": "f60c4363003297f6f63541c89533816f02a845e39d7ca9d54614bea5e90947f4",
+      "exported_sha256": "356a603955fe3a4f3b2137a8a2a5f4f6764da5272f608f3c64b22431e62fc109",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-gu-2017-bay1093884-tfpi-qss-tmdd/0.1.0/equations.json",
-          "sha256": "37d50930a2fcdf24cb5e31f63d17204e3a385837526654c0f351684cb0d8c447"
+          "path": "sources/qspquest-gu-2017-bay1093884-tfpi-qss-tmdd/0.3.0/equations.json",
+          "sha256": "cd58a5ee392ae75a723ebde8beacfec039680458b3322010ee2ccfb61db9e4bc"
         },
         "model.json": {
-          "path": "sources/qspquest-gu-2017-bay1093884-tfpi-qss-tmdd/0.1.0/model.json",
-          "sha256": "0e97a72947472bccd53b88f0bcc9b3d6bb04580c6d907375a9d33362993d74b5"
+          "path": "sources/qspquest-gu-2017-bay1093884-tfpi-qss-tmdd/0.3.0/model.json",
+          "sha256": "44951fe17655b94f457240a95a7875e08ef22a85505739a415eb6f0009805264"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-gu-2017-bay1093884-tfpi-qss-tmdd/0.1.0/scenarios.json",
-          "sha256": "3772bbb5e811bd8b2d54217eeab19693c95f176b4a615f85c2c7da7e70adfb45"
+          "path": "sources/qspquest-gu-2017-bay1093884-tfpi-qss-tmdd/0.3.0/scenarios.json",
+          "sha256": "2b196079aaf462df9f9685fccb11dff2a8a645a0274292368f7ec5634f4e21ff"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-gu-2017-bay1093884-tfpi-qss-tmdd",
       "name": "Gu 2017 BAY 1093884 TFPI QSS-TMDD and Exploratory SC/Human PK/PD",
       "omex": {
-        "archive": "models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.1.1/model.omex",
+        "archive": "models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.3.0/model.omex",
         "model_id": "qspquest_gu_2017_bay1093884_tfpi_qss_tmdd",
-        "omex_sha256": "34ad5e17d06c7da8f6c15640117e8accbcedce003ebda2a660a5ce5b695a2c10",
+        "omex_sha256": "a9273f3566e13b86555f2766c2f76a37581fa6b9f477cb76a336058ce2ddf54f",
         "source_model_id": "qspquest-gu-2017-bay1093884-tfpi-qss-tmdd",
-        "version": "0.1.1"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -1628,44 +1622,44 @@
       "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-gu-2017-bay1093884-tfpi-qss-tmdd",
-        "outputs": 137,
-        "parameters": 135,
+        "outputs": 123,
+        "parameters": 121,
         "states": 8,
         "status": "parsed"
       },
       "source_sha256": "44a4700394340fefde2d8f45fd96461ea2abf335dc5f3925d4b3284f63434b6a",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3390/pharmaceutics15010195"
       ],
-      "exported_sha256": "e9a955c98c280cd2663083e3ff2ec8c08e6485021ab5655c44c76d9e8785aac6",
+      "exported_sha256": "f799483f6c64b8b879f50850f9f9c976486475c53d5f6c15bd051a4727553046",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-haid-2023-protac-mechanistic-pd-framework/0.1.0/equations.json",
-          "sha256": "5088a775dc2cf860b24f13774d4e38bf384b8c3172f7767311df43068578a298"
+          "path": "sources/qspquest-haid-2023-protac-mechanistic-pd-framework/0.3.0/equations.json",
+          "sha256": "0bc6f272bb3b1c67a80764f61b55b0432c865438e15f2f2375517b47e38a095f"
         },
         "model.json": {
-          "path": "sources/qspquest-haid-2023-protac-mechanistic-pd-framework/0.1.0/model.json",
-          "sha256": "2745109bd73990777abb7fd53ecc3d42b5a97054b4fde6e49094d1430e3fbd66"
+          "path": "sources/qspquest-haid-2023-protac-mechanistic-pd-framework/0.3.0/model.json",
+          "sha256": "0d5191926b020d1539ff94679aff0da3e52db96c82a82865e57522947c2cf2db"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-haid-2023-protac-mechanistic-pd-framework/0.1.0/scenarios.json",
-          "sha256": "59747c5bf3820231d62c899e1ceb23e6d0835559c404e03483083a190a08b10c"
+          "path": "sources/qspquest-haid-2023-protac-mechanistic-pd-framework/0.3.0/scenarios.json",
+          "sha256": "f5edc74e93aa3b961b5b81c933bb391bdc050f3f4930d68d0d0da845ca47b44f"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-haid-2023-protac-mechanistic-pd-framework",
       "name": "Haid 2023 PROTAC mechanistic pharmacodynamic framework",
       "omex": {
-        "archive": "models/qspquest_haid_2023_protac_mechanistic_pd_framework/0.1.0/model.omex",
+        "archive": "models/qspquest_haid_2023_protac_mechanistic_pd_framework/0.3.0/model.omex",
         "model_id": "qspquest_haid_2023_protac_mechanistic_pd_framework",
-        "omex_sha256": "809aeb9f07c8df861d3d89776611f2096f8e3aa55f4dba395f3c0825aef61c8a",
+        "omex_sha256": "906cbecd7c508101fc5d0112b54b89e4786d67d7560cc7af26b106495bde70f9",
         "source_model_id": "qspquest-haid-2023-protac-mechanistic-pd-framework",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "exact-article-si-source-checks",
@@ -1690,44 +1684,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-haid-2023-protac-mechanistic-pd-framework",
-        "outputs": 85,
-        "parameters": 69,
+        "outputs": 78,
+        "parameters": 62,
         "states": 3,
         "status": "parsed"
       },
       "source_sha256": "2aa11f80c8872de0f014e5b81b24633f12b3dabc35842a50d3ca40ccb1bd4083",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.21203/rs.3.rs-9308510/v1"
       ],
-      "exported_sha256": "fb3c708722f1e632054433a80ae2f5d4409f784bbd67ddf36cd1d2655b7df313",
+      "exported_sha256": "a4287801f39ecaeac914d8bd5504649417d910340a4b4eea064626e1cde7e5c0",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-han-2026-sim2real-pk-daratumumab-tmdd/0.1.0/equations.json",
-          "sha256": "96407d786293ad0a184313cf34761cec29d10b5bb0a738a13e533afd6570e5a5"
+          "path": "sources/qspquest-han-2026-sim2real-pk-daratumumab-tmdd/0.2.0/equations.json",
+          "sha256": "5c1a886a20989723a931b3fcc90ec739f372f370bd9a573044eba339904cc036"
         },
         "model.json": {
-          "path": "sources/qspquest-han-2026-sim2real-pk-daratumumab-tmdd/0.1.0/model.json",
-          "sha256": "9fd872dbf1aa0948644e84392a8b9ab854a7d34b7a6d3cc9e5da315c4abddbbc"
+          "path": "sources/qspquest-han-2026-sim2real-pk-daratumumab-tmdd/0.2.0/model.json",
+          "sha256": "992f7aa5e8ce10c3932036b3afd7351a1154adbe3ef699e314d5f6f8fa222021"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-han-2026-sim2real-pk-daratumumab-tmdd/0.1.0/scenarios.json",
-          "sha256": "8a696bdd2ef4c5f49cc9c2aeb73cc8ce1f3e7618b5610b4f3e5eb2ff3964d071"
+          "path": "sources/qspquest-han-2026-sim2real-pk-daratumumab-tmdd/0.2.0/scenarios.json",
+          "sha256": "79f5b4ca33c478279defbe3ebb03afba8692eb82d950b88e47b4026435a959d7"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-han-2026-sim2real-pk-daratumumab-tmdd",
       "name": "Han 2026 Sim2Real-PK Daratumumab Public TMDD ODE",
       "omex": {
-        "archive": "models/qspquest_han_2026_sim2real_pk_daratumumab_tmdd/0.1.0/model.omex",
+        "archive": "models/qspquest_han_2026_sim2real_pk_daratumumab_tmdd/0.2.0/model.omex",
         "model_id": "qspquest_han_2026_sim2real_pk_daratumumab_tmdd",
-        "omex_sha256": "737377cc24f6089a37878620f0d87f7dd690a704440aa8b2e3372a619604d3dc",
+        "omex_sha256": "5296350a02243c19bb4def1ad54c866dd79c8502bc730e38054e66454c1ddfd7",
         "source_model_id": "qspquest-han-2026-sim2real-pk-daratumumab-tmdd",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "label-like-16mgkg-window-ode-overlay",
@@ -1755,43 +1749,43 @@
       "source_parser": {
         "id": "qspquest-han-2026-sim2real-pk-daratumumab-tmdd",
         "outputs": 11,
-        "parameters": 34,
+        "parameters": 33,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "44bda67a41dd76d7b8e3bb34e1039f00d63eac5e06ebd4649fd235a7aafdb231",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3390/jcm14227968"
       ],
-      "exported_sha256": "5b63324fe5f7fcda364bac4767fa0d7a4f2fe85203c28e363afd20d3e99ba8e0",
+      "exported_sha256": "41363a568ea9bf4d8b657c74bfe8023316d42cd0474ac36f52953dab4122ac3c",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er/0.1.0/equations.json",
-          "sha256": "aafc4d919860fbdd665f321b0a188d9c47bccac6ea64e28349c6e9bef2ac6057"
+          "path": "sources/qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er/0.3.0/equations.json",
+          "sha256": "117cc0ecd5fc21aa3ebc1a18f601cf99c8dec16db12859f032dc9226451ab0d7"
         },
         "model.json": {
-          "path": "sources/qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er/0.1.0/model.json",
-          "sha256": "9f168adeb7924aa95269240ec3b81dff812bd990c433bc7169383bc993fc035c"
+          "path": "sources/qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er/0.3.0/model.json",
+          "sha256": "5d4a7029810908c9fee74bda110f287fbbb1ea89d309806412e8d74b0e234044"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er/0.1.0/scenarios.json",
-          "sha256": "ed390bdd152f0da6cf3ce59656d8a4922f6a8335de632c37a5350dda63d21305"
+          "path": "sources/qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er/0.3.0/scenarios.json",
+          "sha256": "f0cde9930ffe77ae730e6f23e6ef5b9fa63a0248d99a702308689a1e7bcb4db1"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er",
       "name": "Hemperly 2025 infliximab pediatric IBD PK/ER",
       "omex": {
-        "archive": "models/qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er/0.1.0/model.omex",
+        "archive": "models/qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er/0.3.0/model.omex",
         "model_id": "qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er",
-        "omex_sha256": "c54687d484be12cd3a11c9202d333a0b89e808e34177fb6353e4975f67c6db2d",
+        "omex_sha256": "2c341379b14858f9337f1b081779b181e1781c3864d4d4f35debc7619ea37ab1",
         "source_model_id": "qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "exact-source-tables-and-figures-anchor",
@@ -1819,47 +1813,46 @@
       "source_parser": {
         "id": "qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er",
         "outputs": 11,
-        "parameters": 215,
+        "parameters": 206,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "5274d7269573d858a9de577af4ad87375662bd01077e868513556a47fe7de0a1",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1186/s40425-019-0669-y"
       ],
-      "exported_sha256": "f8ec3a3bf0ea7d7d7d78f0bfcc35ddd5c584fa2b2045f03de87f017364f3c7e0",
+      "exported_sha256": "8ffdabea8aff06e1dddd4831aa219d9c5c8898d298199391b30971f93a826d3c",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response/0.1.0/equations.json",
-          "sha256": "c78c8e7071a2fe6481ea190aa09855ac0389f03ef3c83dbd6e21b69c3bae5edd"
+          "path": "sources/qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response/0.3.0/equations.json",
+          "sha256": "37286e8d370bb04c844e405255ba3dcdfb8d55a9a6987851e7ab59d5c7495f15"
         },
         "model.json": {
-          "path": "sources/qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response/0.1.0/model.json",
-          "sha256": "a5994bf700d37df2777e98bf5358f94c71f172f5f645f8db7ce492629fd78911"
+          "path": "sources/qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response/0.3.0/model.json",
+          "sha256": "713a9dbf5fb8ce399068b17497a7b387f757418ce34cccbaf42b0fa682112acd"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response/0.1.0/scenarios.json",
-          "sha256": "a791102121616328f49a87f710fa39bfcfd1306043227d0967b41abc3d75161d"
+          "path": "sources/qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response/0.3.0/scenarios.json",
+          "sha256": "47ad218ebb60874dd63d877ea0f5eb39d5f02ca285661d06946bccbfa6d93f3c"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response",
       "name": "Hurkmans 2019 Nivolumab Real-World PopPK Clearance-Response",
       "omex": {
-        "archive": "models/qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response/0.1.0/model.omex",
+        "archive": "models/qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response/0.3.0/model.omex",
         "model_id": "qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response",
-        "omex_sha256": "d2ed4915547d14bd75577170e968adcc3c1d39d7aa917d1007dc1a9bf787069d",
+        "omex_sha256": "c29a0cffb25447b8036bdea3c6ab3002d5c3c503df381857a28f0ad914a5067e",
         "source_model_id": "qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "low-albumin-high-bsa-dynamic-probe",
-        "source-status-checks",
         "study-design-and-clearance-response-checks",
         "supplement-s1-and-appendix-checks",
         "supplement-s2-response-toxicity-checks",
@@ -1878,7 +1871,6 @@
         "source_license_url": "http://creativecommons.org/licenses/by/4.0/"
       },
       "scenario_ids": [
-        "source-status-checks",
         "study-design-and-clearance-response-checks",
         "table2-final-parameter-checks",
         "supplement-s1-and-appendix-checks",
@@ -1890,44 +1882,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response",
-        "outputs": 215,
-        "parameters": 203,
+        "outputs": 198,
+        "parameters": 186,
         "states": 5,
         "status": "parsed"
       },
       "source_sha256": "e5df711a7bbe282e94d48acb7b654bf0d9792f1b62bd1b263b56047f36a1ea10",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1093/ecco-jcc/jjac036"
       ],
-      "exported_sha256": "18ab4d9421b56e5a82a65f1c9285f8444d32413ac00c637f316ef6e82047f6c2",
+      "exported_sha256": "23401c71a1cf98717f250acda5be78aeca36eca5359678eb869d95dae70dcf20",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er/0.1.0/equations.json",
-          "sha256": "4a3554520fb7a625101895fb20526a3942cf30e8ba7312b66694b02612a5b167"
+          "path": "sources/qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er/0.3.0/equations.json",
+          "sha256": "ed02851d4189623dfd21a414ff1acc5e00835d56d85482d01782a40f28ceeb91"
         },
         "model.json": {
-          "path": "sources/qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er/0.1.0/model.json",
-          "sha256": "b5f9f1fa2c650a337b3d70eac61dc63f4faf55e23af46cac89038e1b5b557dd3"
+          "path": "sources/qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er/0.3.0/model.json",
+          "sha256": "4fca6897a7009be8a1184d5c983b01366be63c85d2f18c36097ad1d359f2ca4a"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er/0.1.0/scenarios.json",
-          "sha256": "167b9873257bb965ad89a1d48b88e167a3724e34a8a37808b86b8cfb2f92678e"
+          "path": "sources/qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er/0.3.0/scenarios.json",
+          "sha256": "dd4122185e6c53da883c0ccc63858ab62f60a10770a892900de9d55dced72c27"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er",
       "name": "Hyams 2022 Vedolizumab Pediatric HUBBLE PK/NCA/Exposure-Response Intake",
       "omex": {
-        "archive": "models/qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er/0.1.0/model.omex",
+        "archive": "models/qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er/0.3.0/model.omex",
         "model_id": "qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er",
-        "omex_sha256": "e5e4ed5220722eb6082675e68a416ea7d4ebd31fdcb4ac3be155ddbeb81bdfff",
+        "omex_sha256": "0df5eeb7475026eaba701fd0245ef9ebf031462fc436a12fe526bfa5c3fd8f55",
         "source_model_id": "qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "ada-and-safety-checks",
@@ -1936,7 +1928,6 @@
         "ge30-low-150mg-week14-probe",
         "lt30-high-200mg-week14-probe",
         "lt30-low-100mg-week14-probe",
-        "source-status-and-identity-checks",
         "study-design-and-dosing-checks",
         "supplement-referenced-range-checks",
         "table3-adult-measure-response-checks",
@@ -1953,7 +1944,6 @@
         "source_license_url": "https://creativecommons.org/licenses/by/4.0/"
       },
       "scenario_ids": [
-        "source-status-and-identity-checks",
         "study-design-and-dosing-checks",
         "baseline-population-checks",
         "week14-ctrough-checks",
@@ -1968,44 +1958,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er",
-        "outputs": 170,
-        "parameters": 171,
+        "outputs": 154,
+        "parameters": 154,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "2a828fd38d990b73b8808470b981c5b4317efbcd7aea3cd648a09309e0becfc6",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1208/s12248-019-0350-x"
       ],
-      "exported_sha256": "aec8544158074c848e20f388bbf54f141bd81b6f5b205dbeab8ef44a92c6b599",
+      "exported_sha256": "147990eeef44a9366c4c09ea261969f09f13af07411fb017d6f1effe890e19e6",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp/0.1.0/equations.json",
-          "sha256": "46bcd8042d2e6d11d4a31f0909b34c89db7a78eeef24b7cc6e0f6f9f04c8b7be"
+          "path": "sources/qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp/0.2.0/equations.json",
+          "sha256": "c0cfa8957b39ba88e83ad31fea47afa71ae81fadcaf41ae0edd8ecf86f0aa4c6"
         },
         "model.json": {
-          "path": "sources/qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp/0.1.0/model.json",
-          "sha256": "c62035d2810e47dfe685047d6da395d086b0770d6bd8051ac9e6b66585728ffc"
+          "path": "sources/qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp/0.2.0/model.json",
+          "sha256": "9589a1b8cc8e40735189c56bfc8b586b11cfa61e277ecb4fd266f8ed13a2272b"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp/0.1.0/scenarios.json",
-          "sha256": "6275eb4966565e62f6f1c5db4fd21db65cb6069709dc5cc858479682da62b0c2"
+          "path": "sources/qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp/0.2.0/scenarios.json",
+          "sha256": "f433b4d9937fd13f83468a52cd3686898eb76326358b5471c3701890f9da0480"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp",
       "name": "Jafarnejad 2019 Neoadjuvant Nivolumab NSCLC QSP",
       "omex": {
-        "archive": "models/qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp/0.1.0/model.omex",
+        "archive": "models/qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp/0.2.0/model.omex",
         "model_id": "qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp",
-        "omex_sha256": "05e0aa26c8258428e7798fa1d06423fd39c2bef93f812a9a6113dec882f02ae2",
+        "omex_sha256": "ecdf69eae237c74183a38f21342ee47b9611fccc328647e5e15de2e9490dc313",
         "source_model_id": "qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "exact-source-inventory-and-trial-design",
@@ -2029,48 +2019,47 @@
       "source_parser": {
         "id": "qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp",
         "outputs": 43,
-        "parameters": 46,
+        "parameters": 45,
         "states": 8,
         "status": "parsed"
       },
       "source_sha256": "14fd21d3c6d0c55e6c9e7e3af5a22fea568bff108587c69302b4a3f6a3490240",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1186/s13024-023-00630-7"
       ],
-      "exported_sha256": "25ee849ca3b8275b872dd996609b70dd87a84d629a9f2dcf251814cdbec9a820",
+      "exported_sha256": "c6112540a3f3cbe4db28b5b1afe3516d8cd5e82d26777433e98936b984654e51",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd/0.1.0/equations.json",
-          "sha256": "3c071567c67c66e2ed5c10c979ec7016a373490e756a31283dd27ec474a0377e"
+          "path": "sources/qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd/0.3.0/equations.json",
+          "sha256": "d5c971dc0af88796d6db37c1a11aaad4b43c12a0592aab22da37d8e98bcc47f7"
         },
         "model.json": {
-          "path": "sources/qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd/0.1.0/model.json",
-          "sha256": "17c72c66339b9d4fbacc8922af10fac0c1d85c70a453b82865125c917a6e58dc"
+          "path": "sources/qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd/0.3.0/model.json",
+          "sha256": "334d6292503c3a07a82e09c10a645071084be785837b68e1ca637b6cf1e6e5c2"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd/0.1.0/scenarios.json",
-          "sha256": "8cd4da5c8305120d30a8a4486b63e4793b9928ede1e8506ddadbccbb52e4c601"
+          "path": "sources/qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd/0.3.0/scenarios.json",
+          "sha256": "9459259c0cfa572298f03dafcbbf44f3a721a771d4ca0c17880f47976e1f0dc5"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd",
       "name": "Lee 2023 ATC161 AUTOTAC alpha-synuclein source-limited PK/PD",
       "omex": {
-        "archive": "models/qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd/0.3.0/model.omex",
         "model_id": "qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd",
-        "omex_sha256": "09b68221513bca59a828b8be63d773a3a950b2eb4839033fb6b74c600dec1724",
+        "omex_sha256": "0afe02d755d5af807652f69088bc66d33ee7a401320fa3f358f13bb48e3f58e0",
         "source_model_id": "qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "atc161-pk-pd-anchor-exact-replay",
-        "po20mgkg-first-order-pk-degradation-probe",
-        "source-availability-exact-replay"
+        "po20mgkg-first-order-pk-degradation-probe"
       ],
       "rights": {
         "audit_checked_at": "2026-11-06T05:22:02.117382+00:00",
@@ -2083,51 +2072,50 @@
         "source_license_url": "https://creativecommons.org/licenses/by/4.0"
       },
       "scenario_ids": [
-        "source-availability-exact-replay",
         "atc161-pk-pd-anchor-exact-replay",
         "po20mgkg-first-order-pk-degradation-probe"
       ],
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd",
-        "outputs": 56,
-        "parameters": 49,
+        "outputs": 42,
+        "parameters": 35,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "15d100fbb772838a5f5cf9ec6b804b705d1ee1392bc289da4dee72a9a4feb6db",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s00228-024-03703-8"
       ],
-      "exported_sha256": "248ea720a337d464d1b60a6da89b06e3669fbadf730689331c5b9cb4fa6405c3",
+      "exported_sha256": "29d67cbc75f52d8b29b304efe9f15cb7e22178afb4a291234c14f8b5395905e7",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd/0.1.0/equations.json",
-          "sha256": "72a7dc35f7a8980c8958810e35f49aae00daf3692651a0f666dd1d7a021513a0"
+          "path": "sources/qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd/0.3.0/equations.json",
+          "sha256": "4af1c840659f96f6130d648a6d83fc2489e7796e9bd1f1d4edc872bc0cecca74"
         },
         "model.json": {
-          "path": "sources/qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd/0.1.0/model.json",
-          "sha256": "131db2051f276a40960813fd4d0fd66554acc9bac1bf92440ceb34f5208de4ec"
+          "path": "sources/qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd/0.3.0/model.json",
+          "sha256": "7ff0b805c4854930a04a11cf06293d0d69b2476faafffe4b5cae83eb910ebabe"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd/0.1.0/scenarios.json",
-          "sha256": "9fe71178991de4adce8f465a7a508c99c595a48bc03dad00e079e14a9b8aebcc"
+          "path": "sources/qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd/0.3.0/scenarios.json",
+          "sha256": "e6da2c99ec5b31990db9c169b18cb2d4f9eb67231739964002a62b3db54fd97b"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd",
       "name": "Lee 2024 SB12/eculizumab biosimilar PopPK/PD/efficacy",
       "omex": {
-        "archive": "models/qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd/0.3.0/model.omex",
         "model_id": "qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd",
-        "omex_sha256": "cb31b3e0e3a4750a1af56f925a0514334af1fcbb4899b626efd54f37db203a65",
+        "omex_sha256": "5edf01250c89db508d1a31ddfca51008e12717ba11482214de769a0433a592e8",
         "source_model_id": "qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "exact-source-table-anchor",
@@ -2156,14 +2144,14 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd",
-        "outputs": 73,
-        "parameters": 62,
+        "outputs": 68,
+        "parameters": 57,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "7ca011ca5002a6c7df2f9041ce7e54d363bca90e8b785e97150996bbd17979e8",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
@@ -2232,30 +2220,30 @@
       "dois": [
         "10.3389/fphar.2024.1526936"
       ],
-      "exported_sha256": "67571b22aefd6838fc23b0cc3369c7d23747b8144931bd64e043786cc27338b7",
+      "exported_sha256": "bc420d1af9d40aac72e16922def96005e811938b881863e08ab92f079253200c",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic/0.1.0/equations.json",
-          "sha256": "a90850c745fc5c271c4f2e63265ec1366620ca3b015f3cc98ffcac90e67b2080"
+          "path": "sources/qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic/0.2.0/equations.json",
+          "sha256": "7cdaa2edd2fbe82368083c38f94b24d3c72a4798d92c0a86a8aaa6bde08d59fb"
         },
         "model.json": {
-          "path": "sources/qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic/0.1.0/model.json",
-          "sha256": "57a90b3ad038a57e18cb970a965c286af81a01466f8dc249a277eaf830348315"
+          "path": "sources/qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic/0.2.0/model.json",
+          "sha256": "7d34f969c4ff7b8c817a6394ed5dd0f164201491f24aa02be34476a6baa4b378"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic/0.1.0/scenarios.json",
-          "sha256": "21c0726f94c175d8f2aa1fff1f17b189f49d40373a3c39fdd4df6ed50aaeaa0e"
+          "path": "sources/qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic/0.2.0/scenarios.json",
+          "sha256": "a4a3872c4148451e680bab676eb75e1a508049ca60e9360212979e1c6ee46bd6"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic",
       "name": "Li 2024 rituximab pediatric INS B-cell repletion K-PD",
       "omex": {
-        "archive": "models/qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic/0.1.0/model.omex",
+        "archive": "models/qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic/0.2.0/model.omex",
         "model_id": "qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic",
-        "omex_sha256": "792ac5c6bbbc199054eb8ede06281ad5fff839d7c3184a667a0e3ba732aa2544",
+        "omex_sha256": "afc35667fbed05c2feee287dfcdbaa1033d50092f4f1c5e95e5bf3656ec59f0b",
         "source_model_id": "qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "exact-source-table-anchor",
@@ -2322,44 +2310,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic",
-        "outputs": 1,
-        "parameters": 13,
+        "outputs": 0,
+        "parameters": 12,
         "states": 3,
         "status": "parsed"
       },
       "source_sha256": "8465a373fe50e817a5a6acc02ec5f5393a9e519ca78a36a8398a2a0fe753943c",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s10928-026-10051-w"
       ],
-      "exported_sha256": "a42169519e788bc71223580594f09a04fac5b5d9810f4aebc80c0279e4dd6e5e",
+      "exported_sha256": "cf82278e6089235c2582d9a150a45fd435be5ae84746e7d486231fa386dc2b91",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp/0.1.0/equations.json",
-          "sha256": "7170535441945aa6fe71bf31c662147448fbaac956e7149970a73e26a7c870f5"
+          "path": "sources/qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp/0.2.0/equations.json",
+          "sha256": "ef87f1ebd42effd00417f0645a12712349757b5753cb9d95daaca4431f3a1fce"
         },
         "model.json": {
-          "path": "sources/qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp/0.1.0/model.json",
-          "sha256": "686409eba61f2fa17c14a2e60b6db81f6c79270adea9fbd4187564b23b013182"
+          "path": "sources/qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp/0.2.0/model.json",
+          "sha256": "4e4c9a58d1f283bc3e60196e5dcb4c2cfe57c054d454d5d4ff9c32b3b30a2dca"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp/0.1.0/scenarios.json",
-          "sha256": "9674d83867c402a177aac24a8e096e87e1e74a9bd2e888bcc1cb5b588744bddd"
+          "path": "sources/qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp/0.2.0/scenarios.json",
+          "sha256": "3cad3e35508b8b166d1dd1e3e69ba4fcf8ee2465529726fecda698e142950aae"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp",
       "name": "Liu 2026 reduced AAV-mediated anti-TargetX rat brain QSP",
       "omex": {
-        "archive": "models/qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp/0.1.0/model.omex",
+        "archive": "models/qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp/0.2.0/model.omex",
         "model_id": "qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp",
-        "omex_sha256": "9a2219d39c02b1086f1d55e8258add7b29d3f0122a855e5a9d178f4168dea99c",
+        "omex_sha256": "384d67dcee6d8e0e152ae8e07008fe971643e35b39d48f11fba3c96b837b49c3",
         "source_model_id": "qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "exact-parameter-anchor",
@@ -2393,19 +2381,19 @@
       "source_parser": {
         "id": "qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp",
         "outputs": 58,
-        "parameters": 54,
+        "parameters": 53,
         "states": 18,
         "status": "parsed"
       },
       "source_sha256": "0b1adb66b6c4cc2e5acee81d9ba37756a18af405ac87a9a0e71cb242963c686c",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source_family": {
         "family_id": "liu-2026-aav-mab-targetx-rat-brain",
         "paper_id": "10.1007/s10928-026-10051-w",
         "canonical_model": {
           "model_id": "qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp",
-          "version": "2.1.2"
+          "version": "2.2.0"
         }
       },
       "model_fidelity": "reduced"
@@ -2415,30 +2403,30 @@
       "dois": [
         "10.1016/j.biopha.2026.119242"
       ],
-      "exported_sha256": "864d4e5be49441a3b268581bd5048496b42b962359a5b44957775d3d8eb2c4f9",
+      "exported_sha256": "a1609bf737026fed95721bc7902e0faa7cfc268a034c5edf4b6660b96c6f1b24",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-lobet-2026-panitumumab-body-composition-poppk/0.1.0/equations.json",
-          "sha256": "e3ee47d2ea5335fc1ffff824b43df60476ef7ad6d8ccebfce6960e34e02f7a36"
+          "path": "sources/qspquest-lobet-2026-panitumumab-body-composition-poppk/0.2.0/equations.json",
+          "sha256": "5a1f5f0c62ba9780c0f37d62260f099cfb0c05cfb15fa718bfac6332676542f4"
         },
         "model.json": {
-          "path": "sources/qspquest-lobet-2026-panitumumab-body-composition-poppk/0.1.0/model.json",
-          "sha256": "137b119faf0164daa42e6197989a443d1472746857fe29172defa3742c31cecd"
+          "path": "sources/qspquest-lobet-2026-panitumumab-body-composition-poppk/0.2.0/model.json",
+          "sha256": "c60204449d86ecdeaa8870cd12549bdb229a790d50f6f339fd47c1d638a004db"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-lobet-2026-panitumumab-body-composition-poppk/0.1.0/scenarios.json",
-          "sha256": "ceead4581b4e915532c7853a32dfe9bde30d56ef650e37d0a7a0b6e9fb0b5e9c"
+          "path": "sources/qspquest-lobet-2026-panitumumab-body-composition-poppk/0.2.0/scenarios.json",
+          "sha256": "6f78124f2c0f87cbb5e2d0938f08a5629fcfe35af03eaf90d6486f0eed94036e"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-lobet-2026-panitumumab-body-composition-poppk",
       "name": "Lobet 2026 panitumumab body-composition PopPK",
       "omex": {
-        "archive": "models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.1.1/model.omex",
+        "archive": "models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.2.0/model.omex",
         "model_id": "qspquest_lobet_2026_panitumumab_body_composition_poppk",
-        "omex_sha256": "48e0781128729f725ab18b6252cf78c57d393dbbb8ee53957fa29d7fc09638a2",
+        "omex_sha256": "4ab27c8e6352d76434fceb2e4435699e8b530db49532b5aad24e14e105a18e70",
         "source_model_id": "qspquest-lobet-2026-panitumumab-body-composition-poppk",
-        "version": "0.1.1"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -2459,43 +2447,43 @@
       "source_parser": {
         "id": "qspquest-lobet-2026-panitumumab-body-composition-poppk",
         "outputs": 9,
-        "parameters": 69,
+        "parameters": 68,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "0e53311b7afd5fbf097dae0d200e908561564aded9d9bddfd75bae78bcd95493",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3390/pharmaceutics16121629"
       ],
-      "exported_sha256": "baef2e490a1e43ab05438c87836538e08f065036fc1258eb10ac2c0e8d2488a5",
+      "exported_sha256": "f91b8712c811d8c71675b44b7c4af69796c6f182938b37719e163e21f0c373ae",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-markovic-2024-vedolizumab-clearance-remission-poppk/0.1.0/equations.json",
-          "sha256": "cf342216b09ffdc0512a1b626c189e1811d27c3bdd2abc35aaac335b261af3ce"
+          "path": "sources/qspquest-markovic-2024-vedolizumab-clearance-remission-poppk/0.2.0/equations.json",
+          "sha256": "cfbf0df5928571ff8f591834d2b954e0e1dcc61b1e07cb9f89fdc20d306422d6"
         },
         "model.json": {
-          "path": "sources/qspquest-markovic-2024-vedolizumab-clearance-remission-poppk/0.1.0/model.json",
-          "sha256": "334f77e74e15d59698f4e1fc95bde5de58a4d47008ceb2a0c8bc7978aadd36ce"
+          "path": "sources/qspquest-markovic-2024-vedolizumab-clearance-remission-poppk/0.2.0/model.json",
+          "sha256": "1c69f2b405a8b0e89dc940bb481a9b07f21b5da0a387d0c98be660d9aace92ea"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-markovic-2024-vedolizumab-clearance-remission-poppk/0.1.0/scenarios.json",
-          "sha256": "27f3fb5b793ccd294623078b9e6d732d10d5694f28444bae4a09784b81de43f5"
+          "path": "sources/qspquest-markovic-2024-vedolizumab-clearance-remission-poppk/0.2.0/scenarios.json",
+          "sha256": "c534e4f8c78a305a8f766b3c6f328a3d6661c5374041c1ae1af93f9f5b285dda"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-markovic-2024-vedolizumab-clearance-remission-poppk",
       "name": "Markovic 2024 Vedolizumab Clearance/Remission PopPK",
       "omex": {
-        "archive": "models/qspquest_markovic_2024_vedolizumab_clearance_remission_poppk/0.1.0/model.omex",
+        "archive": "models/qspquest_markovic_2024_vedolizumab_clearance_remission_poppk/0.2.0/model.omex",
         "model_id": "qspquest_markovic_2024_vedolizumab_clearance_remission_poppk",
-        "omex_sha256": "5dedafec629004ac128eda5b49991f27fb860e839432e8af5a03c5a77caa5282",
+        "omex_sha256": "728032c1cff4d6712cf237fa1ea23665d6c8ffb603502609e83f081aed67d349",
         "source_model_id": "qspquest-markovic-2024-vedolizumab-clearance-remission-poppk",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "induction-10w-q4w-no-prior-anti-tnf",
@@ -2533,50 +2521,49 @@
       "source_parser": {
         "id": "qspquest-markovic-2024-vedolizumab-clearance-remission-poppk",
         "outputs": 10,
-        "parameters": 17,
+        "parameters": 16,
         "states": 3,
         "status": "parsed"
       },
       "source_sha256": "702209795d4a7d88ba41f2b9dc297b082a8f6c2637cfba27ccb364375f6c35dc",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3389/fneur.2021.696385"
       ],
-      "exported_sha256": "5e1c2175ecf5c5bdefbc2fc4df1832fb27d9eb07f63e4dbc65ed71744b2667a0",
+      "exported_sha256": "7dde570c38f2550773d6d58fd51d97d32b0089fc684b793ecc6be22420a1f048",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-monteleone-2021-eculizumab-gmg-pkpd/0.1.0/equations.json",
-          "sha256": "5caee61850b6509db1dc505fc312429b5cb35198db9f31b1f76a548a1eab790b"
+          "path": "sources/qspquest-monteleone-2021-eculizumab-gmg-pkpd/0.3.0/equations.json",
+          "sha256": "0d36fc055d747b5974a03a8ab71c50be49169738cad0920f330ff780eb634fac"
         },
         "model.json": {
-          "path": "sources/qspquest-monteleone-2021-eculizumab-gmg-pkpd/0.1.0/model.json",
-          "sha256": "cb4991a227e7e7afaf7767ef02532bfe964a160edb7c90b9a765a9aa66f07200"
+          "path": "sources/qspquest-monteleone-2021-eculizumab-gmg-pkpd/0.3.0/model.json",
+          "sha256": "e290ce667380ce7030cbef90a9a8ff5bd479cb5d7c62810358280e2b761749b2"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-monteleone-2021-eculizumab-gmg-pkpd/0.1.0/scenarios.json",
-          "sha256": "d51eb5ac40b3ff23bd73aa373e3bc9f01019b42680059f387ffdfe7bdc92d258"
+          "path": "sources/qspquest-monteleone-2021-eculizumab-gmg-pkpd/0.3.0/scenarios.json",
+          "sha256": "28cfbd69f5e1e4b428168b7f0057af0a6addf40f3fe871179759d1f0bc5f2b99"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-monteleone-2021-eculizumab-gmg-pkpd",
       "name": "Monteleone 2021 Eculizumab gMG PK/PD",
       "omex": {
-        "archive": "models/qspquest_monteleone_2021_eculizumab_gmg_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_monteleone_2021_eculizumab_gmg_pkpd/0.3.0/model.omex",
         "model_id": "qspquest_monteleone_2021_eculizumab_gmg_pkpd",
-        "omex_sha256": "57aadac8bed8e07fb0fa69c64da724808de5913fb8a7a7461cd666c8ff1136d7",
+        "omex_sha256": "4c72e9f3b2bb0be7b064b498a7e12ea9bcdbd6b7fc8477f21e4e69a24773e6f0",
         "source_model_id": "qspquest-monteleone-2021-eculizumab-gmg-pkpd",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "baseline-checks",
         "exploratory-calibrated-fig1-median-clearance-pkpd-context",
         "pkpd-result-checks",
         "regain-900-1200mg-iv-pkpd-context",
-        "source-status-checks",
         "study-design-assay-checks",
         "table1-pk-summary-checks"
       ],
@@ -2595,51 +2582,50 @@
         "baseline-checks",
         "table1-pk-summary-checks",
         "pkpd-result-checks",
-        "source-status-checks",
         "regain-900-1200mg-iv-pkpd-context",
         "exploratory-calibrated-fig1-median-clearance-pkpd-context"
       ],
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-monteleone-2021-eculizumab-gmg-pkpd",
-        "outputs": 175,
-        "parameters": 174,
+        "outputs": 164,
+        "parameters": 164,
         "states": 4,
         "status": "parsed"
       },
       "source_sha256": "7a554220a36497bf474cd4864da275730e58e1723488ca6bf2c2aeedb8cc280c",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3389/fneur.2024.1332890"
       ],
-      "exported_sha256": "534642630c4212a25766d4dcf6831f30ace5309bff6f2eaf1959ed5b53eda176",
+      "exported_sha256": "5e3b71ae46817603f8250172ef9d21d3bd50fee3a00e9ed2dfbe975b135dbc0c",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-ortiz-2024-ravulizumab-nmosd-pkpd/0.1.0/equations.json",
-          "sha256": "35c7bb6b8bec369053a5282d163edaede2d38ee2651e0ac06e47a157c887d05e"
+          "path": "sources/qspquest-ortiz-2024-ravulizumab-nmosd-pkpd/0.2.0/equations.json",
+          "sha256": "66add56f20ffcf2300748e17e9f69d8e3fe6d8998f9afad67ae3812e9f099cef"
         },
         "model.json": {
-          "path": "sources/qspquest-ortiz-2024-ravulizumab-nmosd-pkpd/0.1.0/model.json",
-          "sha256": "2111c6d625eca8b8334e69520b06eb2e4be8f3568e8141e46f959f02fdcdd0da"
+          "path": "sources/qspquest-ortiz-2024-ravulizumab-nmosd-pkpd/0.2.0/model.json",
+          "sha256": "a303b2b522a2361974dca0f2cf0e66f4d3b29c6442faba19ed6de79ce2287b41"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-ortiz-2024-ravulizumab-nmosd-pkpd/0.1.0/scenarios.json",
-          "sha256": "e97beb14189343b321d917df539b67d718b7a750ab788710265dc6747cfbfc93"
+          "path": "sources/qspquest-ortiz-2024-ravulizumab-nmosd-pkpd/0.2.0/scenarios.json",
+          "sha256": "848611e1b97fab637ab3fc4f0c78cb181b622829125bf82a649faaeac0048236"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-ortiz-2024-ravulizumab-nmosd-pkpd",
       "name": "Ortiz 2024 ravulizumab NMOSD PK/PD",
       "omex": {
-        "archive": "models/qspquest_ortiz_2024_ravulizumab_nmosd_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_ortiz_2024_ravulizumab_nmosd_pkpd/0.2.0/model.omex",
         "model_id": "qspquest_ortiz_2024_ravulizumab_nmosd_pkpd",
-        "omex_sha256": "06758e13e687fad68f1613b51a844223f3fe137178ddfb9351ac00757179bb42",
+        "omex_sha256": "a536b3a0597eecd4d5d933d0f59aa177acbe205d32425172553efbab4c6a8dcc",
         "source_model_id": "qspquest-ortiz-2024-ravulizumab-nmosd-pkpd",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "article-ema-exact-anchor",
@@ -2667,43 +2653,43 @@
       "source_parser": {
         "id": "qspquest-ortiz-2024-ravulizumab-nmosd-pkpd",
         "outputs": 0,
-        "parameters": 9,
+        "parameters": 8,
         "states": 3,
         "status": "parsed"
       },
       "source_sha256": "0ff327398c4fdabbbc9d4e54dd55fd56ff64ae078ed0f9c2d2dc180bf9005b08",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3389/fphar.2020.00868"
       ],
-      "exported_sha256": "1ef3f152425508294a9a3c4c9a9941aa9ce8ca6a6180644fdb68393af1f93ed3",
+      "exported_sha256": "59e4004089e17b86930179da2c85113d6cec3f2af199cbc879e2948b0c3561f1",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-pan-2020-pediatric-tp-pbpk-pk-sim/0.1.0/equations.json",
-          "sha256": "b2963b0764dfde1cc064635c8818f5f096f1903e1036bf37eedd6f3b47533558"
+          "path": "sources/qspquest-pan-2020-pediatric-tp-pbpk-pk-sim/0.3.0/equations.json",
+          "sha256": "2fddd8b73246c5967bf55bb29b0965e9f56292560a0d0aca0ac78ab54a70cbba"
         },
         "model.json": {
-          "path": "sources/qspquest-pan-2020-pediatric-tp-pbpk-pk-sim/0.1.0/model.json",
-          "sha256": "4f50b7ca8edf67527c220f669027cd31bc207c14f1d70aff85a0c846f548fe4e"
+          "path": "sources/qspquest-pan-2020-pediatric-tp-pbpk-pk-sim/0.3.0/model.json",
+          "sha256": "c61a9795428cadbcea3856696261e9630d252854db4148e0dd0b4be8d176cdad"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-pan-2020-pediatric-tp-pbpk-pk-sim/0.1.0/scenarios.json",
-          "sha256": "5ff09787cdd8ada871d681ddcb7b5bc12ff0000986a15b1736bb5ac6cac1a04a"
+          "path": "sources/qspquest-pan-2020-pediatric-tp-pbpk-pk-sim/0.3.0/scenarios.json",
+          "sha256": "bdfed35464c61c26a7122733cfe3b0fbd5a9a9253f219e272c84e17a02b580a7"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-pan-2020-pediatric-tp-pbpk-pk-sim",
       "name": "Pan/Basu 2020 Pediatric Therapeutic Protein PBPK Reduced Validation Model",
       "omex": {
-        "archive": "models/qspquest_pan_2020_pediatric_tp_pbpk_pk_sim/0.1.0/model.omex",
+        "archive": "models/qspquest_pan_2020_pediatric_tp_pbpk_pk_sim/0.3.0/model.omex",
         "model_id": "qspquest_pan_2020_pediatric_tp_pbpk_pk_sim",
-        "omex_sha256": "1fe0297c4ff6d5bc8f93646139df393862b0f16fbb473676d1f620165169b352",
+        "omex_sha256": "6576583331c4fb133e0ab12eb7465ad5e997c5f5b510062cdad4f8d68556d26d",
         "source_model_id": "qspquest-pan-2020-pediatric-tp-pbpk-pk-sim",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "bevacizumab-15mgkg-13y-growth-table4-smoke",
@@ -2728,49 +2714,49 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-pan-2020-pediatric-tp-pbpk-pk-sim",
-        "outputs": 83,
-        "parameters": 91,
+        "outputs": 80,
+        "parameters": 88,
         "states": 6,
         "status": "parsed"
       },
       "source_sha256": "78f11c08bebc69f4c85374eead9ce4c3eef950ebfd9338b3e0225be5370270df",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s00280-015-2701-3"
       ],
-      "exported_sha256": "3cd2527790e47ab0e8909815b169d4eb64e7ff412752c4e29957c4656c837d8c",
+      "exported_sha256": "0a4cbd21331e3e47ecf8163c4ffa203ba16f0a5550eac2ad715073cc394b04e3",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd/0.1.0/equations.json",
-          "sha256": "4cef4473281105c4bc9d844c8ecf68c1f080ee7e32dbab8665e45e336488488a"
+          "path": "sources/qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd/0.3.0/equations.json",
+          "sha256": "cc730e93f38df44734bb2101e8bc9fb3caee627290365bf683e045508671d121"
         },
         "model.json": {
-          "path": "sources/qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd/0.1.0/model.json",
-          "sha256": "75f9ebdc5a54e0e4dce5b4ffb6b29471470f57332a8540364dffc42cfb6daa64"
+          "path": "sources/qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd/0.3.0/model.json",
+          "sha256": "a609fcba4f8c04dc32aab430b555414cc260f0f9a57180b43ff0a878e7244d48"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd/0.1.0/scenarios.json",
-          "sha256": "2b72acb8f6f2478c777447865bdbba24d8049e6718c71d952b8e0d31c34f907a"
+          "path": "sources/qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd/0.3.0/scenarios.json",
+          "sha256": "87680a42fe5585b4e585293331e044289d0eaee88edd17b4213f58261d5ba51c"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd",
       "name": "Panoilia 2015 Bevacizumab VEGF165 QSS TMDD PopPK Binding Model",
       "omex": {
-        "archive": "models/qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd/0.1.0/model.omex",
+        "archive": "models/qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd/0.3.0/model.omex",
         "model_id": "qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd",
-        "omex_sha256": "4b133bc7ede1c288f6b655a45c7e0e65107caa1b3d26b6161510613c21d6fbf5",
+        "omex_sha256": "47dd99c449b061a0f9e90108c0267b7e9517ee72bd8c0ceef9677053bb7b8f04",
         "source_model_id": "qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "fig3-5mgkg-q2w-70kg-dynamic",
         "fig3-7p5mgkg-q3w-70kg-dynamic",
-        "fig3-text-and-source-status-checks",
+        "fig3-text-checks",
         "methods-covariate-and-evaluation-checks",
         "source-review-10mgkg-q2w",
         "source-review-5mgkg-q2w-50kg",
@@ -2798,7 +2784,7 @@
         "table2-in-vitro-free-vegf-assay",
         "table3-pk-and-tmdd-parameter-estimates",
         "methods-covariate-and-evaluation-checks",
-        "fig3-text-and-source-status-checks",
+        "fig3-text-checks",
         "fig3-5mgkg-q2w-70kg-dynamic",
         "fig3-7p5mgkg-q3w-70kg-dynamic",
         "source-review-5mgkg-q2w-90-then-60min",
@@ -2812,44 +2798,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd",
-        "outputs": 96,
-        "parameters": 79,
+        "outputs": 88,
+        "parameters": 73,
         "states": 5,
         "status": "parsed"
       },
       "source_sha256": "2916745b665cf8f6b610f2ad474eb336e7e5113b2dbb6ff549be1a819c9f6025",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1016/j.ebiom.2025.105989"
       ],
-      "exported_sha256": "c28d31fee517e57ba33a0b0b07eb78fc94b269793c3b7d40d910d467f0e9d0ae",
+      "exported_sha256": "e67f5a8ec7a44567d20627e7e2b9d83d7788cc98f5665fd48d11de143d43f931",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd/0.1.0/equations.json",
-          "sha256": "f0e72ad48cdfcdb2c225682c741c3917f3f123bbac73a1d35513c9808e4dee2b"
+          "path": "sources/qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd/0.2.0/equations.json",
+          "sha256": "821142a2480b55c1985b3cd36920a3d22301e068515db167a38f17eaba0697d8"
         },
         "model.json": {
-          "path": "sources/qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd/0.1.0/model.json",
-          "sha256": "dd09d450f6ae30478899859444855e52076a715ef8ffe1156a114c8566743cdd"
+          "path": "sources/qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd/0.2.0/model.json",
+          "sha256": "353275c46e1210566fc2a57f9ad9e128b65a162211f63ae70205acb1c33b5b47"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd/0.1.0/scenarios.json",
-          "sha256": "67348c7c250b86242465a1fb9147be38553a4e6b0ab0a6540a3ece8cbfd4724b"
+          "path": "sources/qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd/0.2.0/scenarios.json",
+          "sha256": "5acc8483a4a255bb3c9d67e42866e56eefe176479c5842a83d406bdd7caf61be"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd",
       "name": "Pasquiers 2025 rituximab ANCA/gammaglobulin PK/PD",
       "omex": {
-        "archive": "models/qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd/0.1.0/model.omex",
+        "archive": "models/qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd/0.2.0/model.omex",
         "model_id": "qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd",
-        "omex_sha256": "9fd5d23a3d65eaf719325842e6a64ed4298f3ab24b988464b6808e89b3ba7e6a",
+        "omex_sha256": "c6927d8af43f5136b7110326413ffa53353fe3fd43d34e05b779d6a52aefbb99",
         "source_model_id": "qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "exact-article-supplement-table-anchor",
@@ -2879,43 +2865,43 @@
       "source_parser": {
         "id": "qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd",
         "outputs": 0,
-        "parameters": 26,
+        "parameters": 25,
         "states": 6,
         "status": "parsed"
       },
       "source_sha256": "568f18af60e77ac86c2513c379a4f66bc635e22c5a599f0213456e92963bbc28",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s10928-026-10022-1"
       ],
-      "exported_sha256": "add6a58dd3b00b9dea706e038168387bf31abbbd4c4f828e0f0ee9ce831e5d00",
+      "exported_sha256": "6a22c479f2bdeb4aacc1b20ffea52cc691718b289b72ddeca0c6cdbbaf036687",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-prybylski-2026-dazukibart-ifnb-dm-er/0.1.0/equations.json",
-          "sha256": "e2920d27253056cb5f96f0586cfb200a1eacec825c2755b99e93e2ea3ca7ee00"
+          "path": "sources/qspquest-prybylski-2026-dazukibart-ifnb-dm-er/0.2.0/equations.json",
+          "sha256": "d2e9c4de33d830268d3a17465e15662070d782dcb90a7bb75462a177931e52c7"
         },
         "model.json": {
-          "path": "sources/qspquest-prybylski-2026-dazukibart-ifnb-dm-er/0.1.0/model.json",
-          "sha256": "192bc1ec9bbf33bdb2256a29ff6a3b12b071982e04e748221ed48506a534a652"
+          "path": "sources/qspquest-prybylski-2026-dazukibart-ifnb-dm-er/0.2.0/model.json",
+          "sha256": "a445b95bd16fac499173a2a045419cc1e3ba007718a6654570f4f95d1dd9d4e8"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-prybylski-2026-dazukibart-ifnb-dm-er/0.1.0/scenarios.json",
-          "sha256": "376203e75375f949a30acb1ebcfa40a5cddfcc57449a2df76143a7825ec8b351"
+          "path": "sources/qspquest-prybylski-2026-dazukibart-ifnb-dm-er/0.2.0/scenarios.json",
+          "sha256": "cb21b6ec532c70c69495b12d902f3c3aaad2b55bc569a703468fcd371074a0c2"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-prybylski-2026-dazukibart-ifnb-dm-er",
       "name": "Prybylski 2026 dazukibart IFN-beta dermatomyositis ER",
       "omex": {
-        "archive": "models/qspquest_prybylski_2026_dazukibart_ifnb_dm_er/0.1.0/model.omex",
+        "archive": "models/qspquest_prybylski_2026_dazukibart_ifnb_dm_er/0.2.0/model.omex",
         "model_id": "qspquest_prybylski_2026_dazukibart_ifnb_dm_er",
-        "omex_sha256": "868bbbf24eee5a4d75f01b9a80208ec6ab6380ee36dedd269b7c48d698958ae8",
+        "omex_sha256": "49423ab896fe962a42d6fde6e23433cdcb53c4390179230959aa7bf8f01db1fc",
         "source_model_id": "qspquest-prybylski-2026-dazukibart-ifnb-dm-er",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "exact-si-model-anchor",
@@ -2943,43 +2929,43 @@
       "source_parser": {
         "id": "qspquest-prybylski-2026-dazukibart-ifnb-dm-er",
         "outputs": 0,
-        "parameters": 38,
+        "parameters": 37,
         "states": 15,
         "status": "parsed"
       },
       "source_sha256": "9b8c9978a38e95127eea931b88c4ffc68631487ef83a72d1ee4f3f1b0bf261e6",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s00280-016-3218-0"
       ],
-      "exported_sha256": "885495da45af43eed185edbfd4c565f5426ead7198ed9648bf58df8d065f67f2",
+      "exported_sha256": "6128b9d76e02827dd2504e08b5073ff3b6235df1c97359706b85ad56c6dbaf84",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er/0.1.0/equations.json",
-          "sha256": "ae8846a3e639fba4061a6b8e38dcd3cb7e1f44f9726d4953542e7535e56279ad"
+          "path": "sources/qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er/0.3.0/equations.json",
+          "sha256": "c9e61d3c01b128790db4e37d78bd00c8b9304f1ece6e89a8753f58cbec27a1c5"
         },
         "model.json": {
-          "path": "sources/qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er/0.1.0/model.json",
-          "sha256": "f41905e2c4cc3762228a89fd030fbbbcd7fed8697487c5bbaa75f6fa491043d7"
+          "path": "sources/qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er/0.3.0/model.json",
+          "sha256": "c1391af9dada23d1f1cdf36e8555789b600536847aa8aca288d42ea12bc0b34c"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er/0.1.0/scenarios.json",
-          "sha256": "c915681807831162b47860e0683772dbf44781c7867a390d9539fa5b9d4994ea"
+          "path": "sources/qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er/0.3.0/scenarios.json",
+          "sha256": "780f11cb227f212407e8e6f40de0af087b81c3decceeb2d35aa087d97d355083"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er",
       "name": "Quartino 2017 Pertuzumab Neoadjuvant PK/Exposure-Response Model",
       "omex": {
-        "archive": "models/qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er/0.1.0/model.omex",
+        "archive": "models/qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er/0.3.0/model.omex",
         "model_id": "qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er",
-        "omex_sha256": "f7b82cd59b31916abf1f0244d1e7808d125e045222089825700fee74fb6c2933",
+        "omex_sha256": "3931d5b7b94cb57506bdfac2aaef7f3dd0d6b4b6ee1f7ceff1d93769bdba52b0",
         "source_model_id": "qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "dose-selection-checks",
@@ -2987,7 +2973,6 @@
         "historical-reference-840-420-q3w-4cycles",
         "neosphere-design-baseline-checks",
         "poppk-model-ddi-checks",
-        "source-status-checks",
         "typical-neosphere-840-420-q3w-4cycles"
       ],
       "rights": {
@@ -3001,7 +2986,6 @@
         "source_license_url": "http://creativecommons.org/licenses/by/4.0"
       },
       "scenario_ids": [
-        "source-status-checks",
         "neosphere-design-baseline-checks",
         "poppk-model-ddi-checks",
         "exposure-response-checks",
@@ -3012,44 +2996,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er",
-        "outputs": 157,
-        "parameters": 148,
+        "outputs": 150,
+        "parameters": 140,
         "states": 5,
         "status": "parsed"
       },
       "source_sha256": "8c555fe8b09aacb55e10b2b119e6fc9a4c5525761dac420bc4b9a045792f068e",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3390/pharmaceutics16121576"
       ],
-      "exported_sha256": "6aadce29dca5708efd84fd9b543dacae78da6e3b60c3507b0efda0bf6baeb4a5",
+      "exported_sha256": "5af717ae333f45e35a7a7d2d414846feefe28b6b608e899eccaa5da4e3c3a3ec",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd/0.1.0/equations.json",
-          "sha256": "f73a1c1ec1c1cd97cf131c50839f20cecbb41ed6848fbb1265f43d4a450ee746"
+          "path": "sources/qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd/0.2.0/equations.json",
+          "sha256": "44af8277310ee9e94ea7e50c30104a708cf3e9e423654352abc66ec5dedf697d"
         },
         "model.json": {
-          "path": "sources/qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd/0.1.0/model.json",
-          "sha256": "187260dd35b3838e33edbec5633ebac3e0c279911d53d2c2041de45eda418ff3"
+          "path": "sources/qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd/0.2.0/model.json",
+          "sha256": "2ed5c63638d3aaa84b36ddfb113026cc3891afb278d65cb94b68883e47bbdc23"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd/0.1.0/scenarios.json",
-          "sha256": "42c21fdcb47e051f89442e264c0a7d1d9fe6d8b1f6e4d8cb8e241d769f365deb"
+          "path": "sources/qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd/0.2.0/scenarios.json",
+          "sha256": "0ad44b109ab9249a3f920dd808d9a291363f2b0bfb628b609ec7af8c3e1ec2cd"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd",
       "name": "Rodriguez-Fernandez 2024 Secukinumab MIPD Psoriasis PK/PD",
       "omex": {
-        "archive": "models/qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd/0.1.0/model.omex",
+        "archive": "models/qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd/0.2.0/model.omex",
         "model_id": "qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd",
-        "omex_sha256": "d86a64bafb367e319aae6024be35316cfe7f98e151a3f87cc2ee33204a8942c8",
+        "omex_sha256": "d105af03ddf99e274d74cccf20c0ce3bb1697eeea6e032f259c9f72602866ad6",
         "source_model_id": "qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "si-subject-1-parameter-anchor",
@@ -3121,43 +3105,43 @@
       "source_parser": {
         "id": "qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd",
         "outputs": 548,
-        "parameters": 544,
+        "parameters": 543,
         "states": 13,
         "status": "parsed"
       },
       "source_sha256": "38e4d8a1a2aad1791c53d2f0f93efd70f0939590677455b642fa122d2fad98d9",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.3390/pharmaceutics16101295"
       ],
-      "exported_sha256": "3126b10af85b0b34ee980500c36384c683d868f074bd3614923c50d913f98cad",
+      "exported_sha256": "126bc653e68e7aa454d9ace8a30d990e5c2bb254e2aa9ee9319f828b3e811213",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis/0.1.0/equations.json",
-          "sha256": "a77ce1781e25a432d03484ed6d2f36d3ffaceb357bcdde50b641c381c883eee8"
+          "path": "sources/qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis/0.2.0/equations.json",
+          "sha256": "d857622abf470e0c6569654f39a43224fb6f7e749e9d3954aca08018cab157bc"
         },
         "model.json": {
-          "path": "sources/qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis/0.1.0/model.json",
-          "sha256": "fa5b03f0a707c7262c5d718761f4a7354a64b942f82a27bdd33f44318c8972c5"
+          "path": "sources/qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis/0.2.0/model.json",
+          "sha256": "6f66fadc384f7e770328bfa3773d8e1f15b897b01282c3d801f8c2e88cb3839d"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis/0.1.0/scenarios.json",
-          "sha256": "0cdd4d35926a4a092c25624a94cd6c8d03c4444234840d0b5d97c32a959ca644"
+          "path": "sources/qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis/0.2.0/scenarios.json",
+          "sha256": "29661d4e9d56d7bde97eba1245076134702a9ff29cf133b0186a85c0d90a90f9"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis",
       "name": "Rodriguez-Fernandez 2024 Ustekinumab MIPD Psoriasis PK/PD",
       "omex": {
-        "archive": "models/qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis/0.1.0/model.omex",
+        "archive": "models/qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis/0.2.0/model.omex",
         "model_id": "qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis",
-        "omex_sha256": "ae9fc2241ecefd2178a54e82862c67ec85e7c23a8212a08efd27c9cc3496a6ca",
+        "omex_sha256": "1a3e6fd42cfad480df4d06a9741407dde9c6fa3c8928b015359b18031a08a889",
         "source_model_id": "qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "patient18-90mg-q8w-intensified-probe",
@@ -3184,7 +3168,7 @@
       "source_parser": {
         "id": "qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis",
         "outputs": 40,
-        "parameters": 32,
+        "parameters": 31,
         "states": 6,
         "status": "parsed"
       },
@@ -3192,37 +3176,37 @@
       "unavailable_scenario_ids": [
         "patient1-45mg-q12w-10cycle-probe"
       ],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1002/bcp.70136"
       ],
-      "exported_sha256": "081632df933f410a1c261e8a3f9e8613bb7ac65fb445fc65d210da52ed837641",
+      "exported_sha256": "f669598e8d66f3b56bded0f13551d2b864551eb8f8b86e91a18322589192b8b4",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-serkland-2025-rituximab-ms-pkpd/0.1.0/equations.json",
-          "sha256": "7746b38d9dcd6cc02b125f64b7eaaabcb3aed3c3ccdd8a71fbe63e86523aa933"
+          "path": "sources/qspquest-serkland-2025-rituximab-ms-pkpd/0.3.0/equations.json",
+          "sha256": "2bc8de72048f9fca15a97b8f030b74d768761d3553573f3fb0971df7c968802b"
         },
         "model.json": {
-          "path": "sources/qspquest-serkland-2025-rituximab-ms-pkpd/0.1.0/model.json",
-          "sha256": "d69a19f1866ececa6f05b017db5e72fbeaf05d82200e60e66a643ceb455b3bea"
+          "path": "sources/qspquest-serkland-2025-rituximab-ms-pkpd/0.3.0/model.json",
+          "sha256": "051b2cf5356af966260f97a43e2b1694ea4f207ceb20a6dcd5b0581114e2d768"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-serkland-2025-rituximab-ms-pkpd/0.1.0/scenarios.json",
-          "sha256": "c2d749b770e3222794a0942a5bef3ec9b6fab949c716a14f85d93b36ea90dee6"
+          "path": "sources/qspquest-serkland-2025-rituximab-ms-pkpd/0.3.0/scenarios.json",
+          "sha256": "3e920eb7f7bfc2f910efa39727894624be50ab7bbc49c5625b8dde3717aea30b"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-serkland-2025-rituximab-ms-pkpd",
       "name": "Rituximab exposure\u2013CD19+ B-cell dynamics",
       "omex": {
-        "archive": "models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.2/model.omex",
+        "archive": "models/qspquest_serkland_2025_rituximab_ms_pkpd/0.5.0/model.omex",
         "model_id": "qspquest_serkland_2025_rituximab_ms_pkpd",
-        "omex_sha256": "a49076f7484f0753bdbfa5f19ce305ca3ce2e4adb961d777343efe92e8143366",
+        "omex_sha256": "32e1a49053118490bc253b5154cdd7c9b6cfd7db76f8d5c75ea1091230050604",
         "source_model_id": "qspquest-serkland-2025-rituximab-ms-pkpd",
-        "version": "0.3.2"
+        "version": "0.5.0"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -3243,44 +3227,44 @@
       "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-serkland-2025-rituximab-ms-pkpd",
-        "outputs": 7,
-        "parameters": 31,
+        "outputs": 6,
+        "parameters": 29,
         "states": 3,
         "status": "parsed"
       },
       "source_sha256": "c1e380c3924f9250f3eb55532f4254a799410fc98f9ac7c2d8a7653437e11d7e",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s10928-024-09919-6"
       ],
-      "exported_sha256": "5df13e647557cae8d72baf0474758289e53dfdf3a7009d5b36ca67f81343e965",
+      "exported_sha256": "111ff537f6933e49ac915dd9977854c6b13702f289c8be40f0ea9a1cc8e45a7d",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-sexton-2024-lanadelumab-hae-kks-qsp/0.1.0/equations.json",
-          "sha256": "c009e5bea75d7c67268bd3de7508413c17082343f5ba86896fa94f3b695cac68"
+          "path": "sources/qspquest-sexton-2024-lanadelumab-hae-kks-qsp/0.2.0/equations.json",
+          "sha256": "838484284b25325ceb82ea1f85485fa6cdee0417e9117160f2e0e8f76f1143d4"
         },
         "model.json": {
-          "path": "sources/qspquest-sexton-2024-lanadelumab-hae-kks-qsp/0.1.0/model.json",
-          "sha256": "adc83a7588241b008e12ec78fd4a26d491e05e03e0b0ae9286639f4954e431fc"
+          "path": "sources/qspquest-sexton-2024-lanadelumab-hae-kks-qsp/0.2.0/model.json",
+          "sha256": "8498ca336a8ca19fc6acf397616e80e3f8abce5b1f66b8dfe0ca1eba09df809f"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-sexton-2024-lanadelumab-hae-kks-qsp/0.1.0/scenarios.json",
-          "sha256": "34d4c2b303c322dae967a999ac990aef1ec9f6e409ec31804f220c9cf77702b1"
+          "path": "sources/qspquest-sexton-2024-lanadelumab-hae-kks-qsp/0.2.0/scenarios.json",
+          "sha256": "784ca9ef7105a9a3bc4c975e8d216e459742a42f2418afdd662743a8190c41ad"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-sexton-2024-lanadelumab-hae-kks-qsp",
       "name": "Sexton 2024 Lanadelumab HAE Plasma Kallikrein-Kinin QSP",
       "omex": {
-        "archive": "models/qspquest_sexton_2024_lanadelumab_hae_kks_qsp/0.2.0/model.omex",
+        "archive": "models/qspquest_sexton_2024_lanadelumab_hae_kks_qsp/0.3.0/model.omex",
         "model_id": "qspquest_sexton_2024_lanadelumab_hae_kks_qsp",
-        "omex_sha256": "22a5c1dfa3630a63ef983edeb57603dc31ebc32f369b79dd5ebdc191e44ffd8e",
+        "omex_sha256": "238bbc9fe1905dc402d08c7f26fa47608c6854c512f7d2e4f66ca03fc53a8f44",
         "source_model_id": "qspquest-sexton-2024-lanadelumab-hae-kks-qsp",
-        "version": "0.2.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "first-virtual-patient-150mg-q2w-author-replay"
@@ -3301,14 +3285,14 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-sexton-2024-lanadelumab-hae-kks-qsp",
-        "outputs": 12,
-        "parameters": 191,
+        "outputs": 11,
+        "parameters": 190,
         "states": 61,
         "status": "parsed"
       },
       "source_sha256": "36bebc0a3bf1994e524ad7db09dc1ea6f65be9966cd3aa8615d26dcb49f9120f",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
@@ -3386,30 +3370,30 @@
       "dois": [
         "10.1007/s10637-018-0570-4"
       ],
-      "exported_sha256": "9b3794e2210286914606f026fe554cc1af68ce0423b255951d11a439617cbb6b",
+      "exported_sha256": "e744e3e0ffc198cc16e1a9fca985fba4fc7502b812b4960e541d730891aff103",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca/0.1.0/equations.json",
-          "sha256": "e9dfd829008ae028f379477e38cb810b99952befcb636f0b621c58735f602c5c"
+          "path": "sources/qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca/0.3.0/equations.json",
+          "sha256": "2005e9cb37312dd13cc1aab486ad1f7344732bb4504988fd47de8f5d351c9871"
         },
         "model.json": {
-          "path": "sources/qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca/0.1.0/model.json",
-          "sha256": "003fbc56daca33f729d606570d10f45740741d4ac1adca69e6557bfa7e219086"
+          "path": "sources/qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca/0.3.0/model.json",
+          "sha256": "805e9931f0336987f6a8b252009e64d4b75f1f2b262af87e877150e5ab917bec"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca/0.1.0/scenarios.json",
-          "sha256": "e669d0859dc187e1ec55795fbe4a5eeb82f205641fb5e860cce9c5cf9f99451f"
+          "path": "sources/qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca/0.3.0/scenarios.json",
+          "sha256": "d79023d64fab60788557d71d95ba7d2c6c6ebf13389c70c92b1ce45270c26c57"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca",
       "name": "Stathis 2018 IMGN529 NCA Replay and Exploratory Dose-Level PK Surrogate",
       "omex": {
-        "archive": "models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.1.1/model.omex",
+        "archive": "models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.3.0/model.omex",
         "model_id": "qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca",
-        "omex_sha256": "c38e8ab0a963070c7dcb61434a8adae2a43e570d01d3748308dbbfd0072ef787",
+        "omex_sha256": "0ce9f8a6882cebcf0679cbb3014692eadcf6ffa29355c076ac53496350fb52b4",
         "source_model_id": "qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca",
-        "version": "0.1.1"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -3444,44 +3428,44 @@
       "simulation_status": "fixed_presets_unqualified",
       "source_parser": {
         "id": "qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca",
-        "outputs": 399,
-        "parameters": 391,
+        "outputs": 388,
+        "parameters": 380,
         "states": 3,
         "status": "parsed"
       },
       "source_sha256": "a15c589cc2c1625278c4445142f48a11fee4919f1c75756725d1e7be818d6730",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1208/s12248-025-01120-y"
       ],
-      "exported_sha256": "26401ed4b859dd9f18e49c7cb64b3cf968ce4eb82170aaa093337e8173e82473",
+      "exported_sha256": "4f0a2db991c946c664b5b0def7ead8e720043e05ace4178056263e45dea4afa3",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge/0.1.0/equations.json",
-          "sha256": "c2228271138be46eeb67236cd0694f1aad0278e6a32e0185ef2ae68ae548a21f"
+          "path": "sources/qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge/0.3.0/equations.json",
+          "sha256": "484cf4bcec3ee1a86e367f18a8bf57b980210bfcef946d8c179af45a7187fa56"
         },
         "model.json": {
-          "path": "sources/qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge/0.1.0/model.json",
-          "sha256": "61b67e58d906124e9c4d003444aca77af380defb93961a168572a79b7f781633"
+          "path": "sources/qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge/0.3.0/model.json",
+          "sha256": "249f2d12a6bdb9cdc3e4df88a8b3dcdfdace642213b04c1809d7dc6c26429c6b"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge/0.1.0/scenarios.json",
-          "sha256": "ef45ad21be515eeae75656c32ca3e366f35b950045a24fa6b0e5ed28fe8656d9"
+          "path": "sources/qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge/0.3.0/scenarios.json",
+          "sha256": "b4c1f79794bcec37218294364eb3290265354a1b3e95fcb728da6609318123a1"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge",
       "name": "Sule 2025/2026 bevacizumab pediatric minimal PBPK bridge",
       "omex": {
-        "archive": "models/qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge/0.1.0/model.omex",
+        "archive": "models/qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge/0.3.0/model.omex",
         "model_id": "qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge",
-        "omex_sha256": "9fd61c0af2dcf33b89d7a4950625d041fca4616abf0129b3e682c019cf9e0c3b",
+        "omex_sha256": "f199a6e8dcbbc82abe87aa2b0f635fcc7ecdc6ef4cb03646460a9425f6c4f27c",
         "source_model_id": "qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "adult-female-ge18-10mgkg-q2w-ode-endpoint-overlay",
@@ -3527,43 +3511,43 @@
       "source_parser": {
         "id": "qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge",
         "outputs": 0,
-        "parameters": 221,
+        "parameters": 216,
         "states": 3,
         "status": "parsed"
       },
       "source_sha256": "66a234e734e32a81cb61d20c43ea63826b385797819ab1ea069cea59dcf365c9",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1007/s11095-017-2183-6"
       ],
-      "exported_sha256": "91f2e5385dfa3326e3f6e943691646b7b9b73def2593c2d5df17a74a5997e4e0",
+      "exported_sha256": "0eb60fe11eb3d363081429dac4e94e23ca0b262ecea08ade2ef7dfbb1614b8c0",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd/0.1.0/equations.json",
-          "sha256": "8e4554484f503b06fe26006694cfab917ae9f288a093fe7be10a46f22b4c6efd"
+          "path": "sources/qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd/0.2.0/equations.json",
+          "sha256": "f94fe4fbd7e5d95af7f604968777bb9cc6297ee5e4251fa6c1e5a2195180459e"
         },
         "model.json": {
-          "path": "sources/qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd/0.1.0/model.json",
-          "sha256": "3178d12564d055aa640b7afaef4b5e3277872b61c3ff978d34bb0ae19d89fa6d"
+          "path": "sources/qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd/0.2.0/model.json",
+          "sha256": "9c5ca43b4e0716d387d2997cc7413aae6117d9ca422ed23f8e0b9201874bd08a"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd/0.1.0/scenarios.json",
-          "sha256": "130369dfac4f424511eac14f80d3397a921ccf7f596b33688ebd3e2165bb38a1"
+          "path": "sources/qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd/0.2.0/scenarios.json",
+          "sha256": "773f4df18eae0be20c243368d91d9c7009d8ab1c2cb36d60e109a981a087157a"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd",
       "name": "Vu 2017 Erenumab QSS TMDD and CIDBF PK/PD Model",
       "omex": {
-        "archive": "models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.1.1/model.omex",
+        "archive": "models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.2.0/model.omex",
         "model_id": "qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd",
-        "omex_sha256": "2fb5323c725dc73b25022826afdd676c0dfbbb58fbb163b8897feb4d4a24be44",
+        "omex_sha256": "a96973576a27b71dde14ef5f6dea48a3efd9231d30d88b4e4e0c431c20a9924d",
         "source_model_id": "qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd",
-        "version": "0.1.1"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [],
       "rights": {
@@ -3595,43 +3579,43 @@
       "source_parser": {
         "id": "qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd",
         "outputs": 65,
-        "parameters": 51,
+        "parameters": 50,
         "states": 6,
         "status": "parsed"
       },
       "source_sha256": "976d72aaa569b94311bc1b2d2785e013fc327db7bdc95bba640308f50e100ed1",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1002/prp2.1257"
       ],
-      "exported_sha256": "32cf468b38be703ccc5c9fd5abf5e3c52aef25be41879df705a9d6b33f2b3380",
+      "exported_sha256": "e6cd4f615764582772cf79eda66a88fbd317f97cdc9fdc53620a191150a68af4",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk/0.1.0/equations.json",
-          "sha256": "2a0d86e42a0195ad56c56843912689ce9b48d6f0fdb47bd737f0ada2abe00ba1"
+          "path": "sources/qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk/0.3.0/equations.json",
+          "sha256": "34eba991f060708e7a9084841139b4bbe0767e71ce9bd459ba58b35f36ab6fa0"
         },
         "model.json": {
-          "path": "sources/qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk/0.1.0/model.json",
-          "sha256": "88e85695e9a22e65d5a463afa3c9747d1ce18cb24643d1427246ff4f2ac18f2f"
+          "path": "sources/qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk/0.3.0/model.json",
+          "sha256": "814d841b64075a25a27edc950311a4de1c29dec2f98d7580b9e9eb2a08065b49"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk/0.1.0/scenarios.json",
-          "sha256": "8a1852344c0cbcf0ec3ee585b1df38b40afa1becf92114a433dbfbaee1cbf94c"
+          "path": "sources/qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk/0.3.0/scenarios.json",
+          "sha256": "273c836efa4d2e229014624ea2ae19c1266e908db31a37fe13bdc36b9f63992e"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk",
       "name": "Waterhouse 2024 Vedolizumab allo-HSCT GvHD prophylaxis PopPK",
       "omex": {
-        "archive": "models/qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk/0.1.0/model.omex",
+        "archive": "models/qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk/0.3.0/model.omex",
         "model_id": "qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk",
-        "omex_sha256": "11af93e2ce375aaadfb24b05279e069222831f303e8711699f023983ccaa490d",
+        "omex_sha256": "365ae02d977e4202b7c48558c16f96b2519746b80acc05c4f2b307a9a9ed2f5c",
         "source_model_id": "qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk",
-        "version": "0.1.0"
+        "version": "0.3.0"
       },
       "qualified_scenario_ids": [
         "fig3-age-23y-relative-cl-check",
@@ -3724,44 +3708,44 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk",
-        "outputs": 271,
-        "parameters": 267,
+        "outputs": 262,
+        "parameters": 257,
         "states": 5,
         "status": "parsed"
       },
       "source_sha256": "89fa7edec7283833901122d56091ef35ee0a8b24ffa8d8885b6e8c75535543dd",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "contribution_license": "Apache-2.0",
       "dois": [
         "10.1016/j.jtocrr.2024.100683"
       ],
-      "exported_sha256": "ce61a07a3282a2c2ed16eb9e18ad0078ad56a1722ff783e5eb00ec62d2ea68be",
+      "exported_sha256": "1390ce1f376970bc63a06e1b3831d0bc173188e3471f40baeeeb3faa82dd7f82",
       "files": {
         "equations.json": {
-          "path": "sources/qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk/0.1.0/equations.json",
-          "sha256": "4f20c071f6e3d55c327b0e3c05a286ff2a07fbffb4ea213f29c0894ff7ace07c"
+          "path": "sources/qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk/0.2.0/equations.json",
+          "sha256": "c76019f351d22d26709d7287336c46713baccd48453d337e10aee686b5d52973"
         },
         "model.json": {
-          "path": "sources/qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk/0.1.0/model.json",
-          "sha256": "2b3ca880462cde94ae52d16a8db6a89ec91cd4b87b76f305a25c2b279e82a065"
+          "path": "sources/qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk/0.2.0/model.json",
+          "sha256": "21abcb85afba2830438751acd89f7ddabcb7880756c579b6018a7d97710b57b1"
         },
         "scenarios.json": {
-          "path": "sources/qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk/0.1.0/scenarios.json",
-          "sha256": "4fbd33e66ea3b625e2d4bc952115ec43fb65bcee949e755b54d8d06f16b1857a"
+          "path": "sources/qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk/0.2.0/scenarios.json",
+          "sha256": "f3966c0069cb3c6827fb451853903a43fd65f66a5ee67ffdd7b1ac9b265eceaf"
         }
       },
       "format": "scientific_json",
       "id": "qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk",
       "name": "Yagishita 2024 Atezolizumab J-TAIL Real-World PopPK Validation",
       "omex": {
-        "archive": "models/qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk/0.1.0/model.omex",
+        "archive": "models/qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk/0.2.0/model.omex",
         "model_id": "qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk",
-        "omex_sha256": "452825656bbcf12158cc92858628e094a432b1773b9faf8844f3daeb298cb44e",
+        "omex_sha256": "518d3b3e1bf628510c10227cf08abe645635c211cbea362ba076066b85e8b586",
         "source_model_id": "qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk",
-        "version": "0.1.0"
+        "version": "0.2.0"
       },
       "qualified_scenario_ids": [
         "jtail-1200mg-q3w-median-covariate-exposure-overlay",
@@ -3788,14 +3772,14 @@
       "simulation_status": "fixed_presets_qualified",
       "source_parser": {
         "id": "qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk",
-        "outputs": 171,
-        "parameters": 187,
+        "outputs": 170,
+        "parameters": 186,
         "states": 3,
         "status": "parsed"
       },
       "source_sha256": "ba74633fc9da935124f6a0e410ebf75f9a149844dd43bce90ffaf784dc0dd8a6",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "contribution_license": "Apache-2.0",
@@ -3981,84 +3965,6 @@
       },
       "source_sha256": "b4b97e63e2e337abbb3550dccfa5ad0f417c18aa79f05ee96ae641d3fe853a32",
       "unavailable_scenario_ids": [],
-      "version": "0.1.0"
-    },
-    {
-      "contribution_license": "Apache-2.0",
-      "dois": [
-        "10.1208/s12248-026-01259-2"
-      ],
-      "exported_sha256": "420dddaa7dbe5e8193e31ec5f739daaa2856dc34aedc0e9d29162055fcd4e0b9",
-      "files": {
-        "equations.json": {
-          "path": "sources/qspquest-yuan-2026-cd3x5t4-in-vitro-qsp/0.1.0/equations.json",
-          "sha256": "400eee2eb4711c174c5c48dbfe3fa81b7eb66e92c86bcf6c0d89668274fe28f8"
-        },
-        "model.json": {
-          "path": "sources/qspquest-yuan-2026-cd3x5t4-in-vitro-qsp/0.1.0/model.json",
-          "sha256": "5c4d43d2d468c7d2a78d97f04e7be38c739fc25e998572f20ca8e0850518262b"
-        },
-        "scenarios.json": {
-          "path": "sources/qspquest-yuan-2026-cd3x5t4-in-vitro-qsp/0.1.0/scenarios.json",
-          "sha256": "de00771a8fd3c53f8cd9144560a7d2fe01d37c65d5094a7819f7907e3f6f969e"
-        }
-      },
-      "format": "scientific_json",
-      "id": "qspquest-yuan-2026-cd3x5t4-in-vitro-qsp",
-      "name": "CD3\u00d75T4 In Vitro Activation and Cytotoxicity QSP",
-      "omex": {
-        "archive": "models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/0.1.0/model.omex",
-        "model_id": "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp",
-        "omex_sha256": "c4f21f3555aca5b2193e1a04196a7afbcbb3f298552e51c92f586f9af5c34fc1",
-        "source_model_id": "qspquest-yuan-2026-cd3x5t4-in-vitro-qsp",
-        "version": "0.1.0"
-      },
-      "qualified_scenario_ids": [],
-      "rights": {
-        "audit_checked_at": "2026-08-14T00:00:00-04:00",
-        "audit_source": "version_of_record_article_notice_and_crossref_license_metadata",
-        "commercial_use": "allowed_with_license_compliance",
-        "derivatives": "allowed_with_license_compliance",
-        "redistribution_permitted_by_audit": true,
-        "release_blocker": null,
-        "source_license": "CC BY 4.0",
-        "source_license_url": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      "scenario_ids": [
-        "mda-mb-468-untreated-et4",
-        "mda-mb-468-duobody-6-86nm-et4",
-        "mda-mb-468-duobody-6-86nm-et1",
-        "mda-mb-468-duobody-6-86nm-et8",
-        "mda-mb-468-duobody-6-86nm-et2",
-        "mda-mb-231-duobody-6-86nm-et4",
-        "mda-mb-468-high-affinity-6-86nm-et8",
-        "mda-mb-231-high-affinity-6-86nm-et8",
-        "bxpc-3-duobody-6-86nm-et4",
-        "eplc-272h-duobody-6-86nm-et4",
-        "sk-gt-4-duobody-6-86nm-et4"
-      ],
-      "simulation_status": "source_only_hold",
-      "source_parser": {
-        "id": "qspquest-yuan-2026-cd3x5t4-in-vitro-qsp",
-        "outputs": 18,
-        "parameters": 33,
-        "states": 17,
-        "status": "parsed"
-      },
-      "source_sha256": "6d826cb35ed875d6bb1d2115d6dae793c4882d742892bbc8ac1dc6f56a84373b",
-      "unavailable_scenario_ids": [
-        "bxpc-3-duobody-6-86nm-et4",
-        "eplc-272h-duobody-6-86nm-et4",
-        "mda-mb-231-duobody-6-86nm-et4",
-        "mda-mb-231-high-affinity-6-86nm-et8",
-        "mda-mb-468-duobody-6-86nm-et1",
-        "mda-mb-468-duobody-6-86nm-et2",
-        "mda-mb-468-duobody-6-86nm-et4",
-        "mda-mb-468-duobody-6-86nm-et8",
-        "mda-mb-468-high-affinity-6-86nm-et8",
-        "mda-mb-468-untreated-et4",
-        "sk-gt-4-duobody-6-86nm-et4"
-      ],
       "version": "0.1.0"
     },
     {

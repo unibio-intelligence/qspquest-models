@@ -1,0 +1,7473 @@
+{
+ "schema": "qspquest.models.discovery/v1",
+ "generated": "2026-11-07",
+ "vocabularies": {
+  "species": "NCBITaxon",
+  "indications": "MONDO",
+  "drugs": "NCIt",
+  "routes": "NCIt",
+  "modalities": "NCIt",
+  "human_targets": "HGNC",
+  "protein_targets": "UniProt",
+  "small_molecule_targets": "ChEBI",
+  "cells": "CL",
+  "matrices": "UBERON",
+  "units": "UCUM",
+  "citations": "Europe PMC, then Crossref"
+ },
+ "models": {
+  "qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation": {
+   "citations": [
+    {
+     "doi": "10.21203/rs.3.rs-8670135/v1",
+     "pmid": null,
+     "pmcid": null,
+     "title": "External validation of population pharmacokinetic models of adalimumab in adult patients with inflammatory bowel disease: Towards model-informed precision dosing",
+     "journal": "Research Square",
+     "year": 2026,
+     "first_author": "Aguilo-Lafarga"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "adalimumab",
+     "id": "NCIT:C65216",
+     "label": "Adalimumab",
+     "synonyms": [
+      "ABP 501",
+      "Adalimumab Biosimilar ABP 501",
+      "D2E7",
+      "Humira",
+      "LU200134"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "TNF",
+     "id": "HGNC:11892",
+     "label": "tumor necrosis factor",
+     "synonyms": [
+      "TNFSF2",
+      "DIF",
+      "TNF-alpha",
+      "TNFA",
+      "TNF superfamily, member 2"
+     ],
+     "uniprot": "P01375"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005265",
+     "label": "inflammatory bowel disease",
+     "synonyms": [
+      "IBD",
+      "autoimmune bowel disorder"
+     ]
+    },
+    {
+     "id": "MONDO:0005011",
+     "label": "Crohn disease",
+     "synonyms": [
+      "Crohn's disease of large bowel",
+      "Crohn's disease",
+      "paediatric Crohn's disease",
+      "pediatric Crohn's disease",
+      "regional enteritis"
+     ]
+    },
+    {
+     "id": "MONDO:0005101",
+     "label": "ulcerative colitis",
+     "synonyms": [
+      "left-sided ulcerative colitis",
+      "colitis ulcerative",
+      "ulcerative colitis (disease)"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_mg_l": {
+     "analyte": {
+      "label": "adalimumab",
+      "id": "NCIT:C65216"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "auc_mg_day_l": {
+     "analyte": {
+      "label": "adalimumab",
+      "id": "NCIT:C65216"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg.d/L"
+    }
+   }
+  },
+  "qspquest_asiimwe_2025_adc_mbma_cui_poppk": {
+   "citations": [
+    {
+     "doi": "10.1002/psp4.70013",
+     "pmid": "40040312",
+     "pmcid": "PMC12625083",
+     "title": "Postmarketing Assessment of Antibody-Drug Conjugates: Proof-of-Concept Using Model-Based Meta-Analysis and a Clinical Utility Index Approach",
+     "journal": "CPT: pharmacometrics & systems pharmacology",
+     "year": 2025,
+     "first_author": "Asiimwe"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "trastuzumab emtansine",
+     "id": "NCIT:C82492",
+     "label": "Trastuzumab Emtansine",
+     "synonyms": [
+      "ADO-Trastuzumab Emtansine",
+      "Ado Trastuzumab Emtansine",
+      "Kadcyla",
+      "PRO 132365",
+      "PRO-132365",
+      "PRO132365",
+      "RO5304020",
+      "T-DM1",
+      "TDM1",
+      "Trastuzumab-DM1",
+      "Trastuzumab-MCC-DM1 Antibody-Drug Conjugate",
+      "Trastuzumab-MCC-DM1 Immunoconjugate",
+      "Trastuzumab-MCC-DM1"
+     ],
+     "modality": "antibody_drug_conjugate"
+    },
+    {
+     "name": "trastuzumab deruxtecan",
+     "id": "NCIT:C128799",
+     "label": "Trastuzumab Deruxtecan",
+     "synonyms": [
+      "DS-8201",
+      "DS-8201a",
+      "Enhertu",
+      "Fam-trastuzumab Deruxtecan-nxki",
+      "T-DXd",
+      "WHO 10516"
+     ],
+     "modality": "antibody_drug_conjugate"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "antibody_drug_conjugate",
+     "id": "NCIT:C129823",
+     "label": "Antineoplastic Antibody-Drug Conjugate"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ERBB2",
+     "id": "HGNC:3430",
+     "label": "erb-b2 receptor tyrosine kinase 2",
+     "synonyms": [
+      "NEU",
+      "HER-2",
+      "CD340",
+      "HER2",
+      "c-ERB2",
+      "c-ERB-2",
+      "MLN-19",
+      "p185(erbB2)",
+      "NGL",
+      "neuro/glioblastoma derived oncogene homolog",
+      "human epidermal growth factor receptor 2",
+      "metastatic lymph node gene 19"
+     ],
+     "uniprot": "P04626"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0007254",
+     "label": "breast cancer",
+     "synonyms": [
+      "breast tumor",
+      "mammary tumor",
+      "primary breast cancer",
+      "breast tumour",
+      "cancer of breast",
+      "malignant breast neoplasm",
+      "malignant breast tumor",
+      "malignant breast tumour",
+      "malignant neoplasm of breast",
+      "malignant neoplasm of the breast",
+      "malignant tumor of breast",
+      "malignant tumor of the breast",
+      "malignant tumour of breast",
+      "malignant tumour of the breast",
+      "mammary tumour"
+     ]
+    },
+    {
+     "id": "MONDO:0001056",
+     "label": "gastric cancer",
+     "synonyms": [
+      "Ca body - stomach",
+      "Ca lesser curvature - stomach",
+      "ca greater curvature of stomach",
+      "gastric cancer risk after h. pylori infection",
+      "gastric cancer, somatic",
+      "gastric neoplasm",
+      "malignant neoplasm of body of stomach",
+      "malignant neoplasm of lesser curve of stomach",
+      "malignant tumor of body of stomach",
+      "malignant tumor of greater curve of stomach",
+      "malignant tumor of lesser curve of stomach",
+      "GC",
+      "cancer of stomach",
+      "malignant gastric neoplasm",
+      "malignant gastric tumor",
+      "malignant gastric tumour",
+      "malignant neoplasm of stomach",
+      "malignant neoplasm of the stomach",
+      "malignant stomach neoplasm",
+      "malignant tumor of stomach",
+      "malignant tumor of the stomach",
+      "malignant tumour of body of stomach",
+      "malignant tumour of greater curve of stomach",
+      "malignant tumour of lesser curve of stomach",
+      "malignant tumour of stomach",
+      "malignant tumour of the stomach",
+      "stomach cancer"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_ng_ml": {
+     "analyte": {
+      "label": "trastuzumab emtansine",
+      "id": "NCIT:C82492"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ng/mL"
+    },
+    "auc_ng_day_ml": {
+     "analyte": {
+      "label": "trastuzumab emtansine",
+      "id": "NCIT:C82492"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ng.d/mL"
+    }
+   }
+  },
+  "qspquest_besbassi_2026_crs_qsp_locked_cytokine_network": {
+   "citations": [
+    {
+     "doi": "10.64898/2026.05.05.722920",
+     "pmid": null,
+     "pmcid": null,
+     "title": "A PK-Driven Quantitative Systems Pharmacology Model Predicts Cytokine Release Syndrome Severity Across T Cell-Activating Therapies via a Locked Cytokine Amplification Network",
+     "journal": "bioRxiv",
+     "year": 2026,
+     "first_author": "Besbassi"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "blinatumomab",
+     "id": "NCIT:C62528",
+     "label": "Blinatumomab",
+     "synonyms": [
+      "AMG 103",
+      "AMG-103",
+      "AMG103",
+      "Anti-CD19 x Anti-CD3 Bispecific Monoclonal Antibody",
+      "Anti-CD19/Anti-CD3 Recombinant Bispecific Monoclonal Antibody MT103",
+      "Blincyto",
+      "MEDI 538",
+      "MEDI-538",
+      "MEDI538",
+      "MT 103",
+      "MT-103",
+      "MT103"
+     ],
+     "modality": "bispecific_antibody"
+    },
+    {
+     "name": "TGN1412",
+     "id": null,
+     "label": "TGN1412",
+     "synonyms": [],
+     "modality": "monoclonal_antibody"
+    },
+    {
+     "name": "muromonab-CD3",
+     "id": "NCIT:C1321",
+     "label": "Muromonab-CD3",
+     "synonyms": [
+      "Anti-CD3 Monoclonal Antibody OKT3",
+      "MoAb OKT3",
+      "Monoclonal Antibody OKT3",
+      "Orthoclone OKT3",
+      "muromonab-CD3 monoclonal antibody"
+     ],
+     "modality": "monoclonal_antibody"
+    },
+    {
+     "name": "tocilizumab",
+     "id": "NCIT:C84217",
+     "label": "Tocilizumab",
+     "synonyms": [
+      "Actemra",
+      "IL-6 receptor monoclonal antibodies: tocilizumab",
+      "MRA",
+      "R-1569",
+      "RoActemra"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "bispecific_antibody",
+     "id": "NCIT:C1454",
+     "label": "Bispecific Antibody"
+    },
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD19",
+     "id": "HGNC:1633",
+     "label": "CD19 molecule",
+     "synonyms": [],
+     "uniprot": "P15391"
+    },
+    {
+     "symbol": "CD3E",
+     "id": "HGNC:1674",
+     "label": "CD3 epsilon subunit of T-cell receptor complex",
+     "synonyms": [
+      "CD3epsilon",
+      "CD3-epsilon",
+      "T-cell surface glycoprotein CD3 epsilon chain"
+     ],
+     "uniprot": "P07766"
+    },
+    {
+     "symbol": "CD28",
+     "id": "HGNC:1653",
+     "label": "CD28 molecule",
+     "synonyms": [
+      "T-cell-specific surface glycoprotein"
+     ],
+     "uniprot": "P10747"
+    },
+    {
+     "symbol": "IL6R",
+     "id": "HGNC:6019",
+     "label": "interleukin 6 receptor",
+     "synonyms": [
+      "CD126",
+      "IL-6R",
+      "IL-1Ra",
+      "IL6RA",
+      "gp80",
+      "membrane glycoprotein 80",
+      "interleukin 6 receptor subunit alpha"
+     ],
+     "uniprot": "P08887"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0600008",
+     "label": "cytokine release syndrome",
+     "synonyms": [
+      "CRS",
+      "cytokine storm",
+      "cytokine-associated toxicity"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "Cdrug_nM": {
+     "analyte": {
+      "label": "blinatumomab",
+      "id": "NCIT:C62528"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "nmol/L"
+    },
+    "Tact_cells_ul": {
+     "analyte": {
+      "label": "T cell",
+      "id": "CL:0000084"
+     },
+     "quantity": "cell_density",
+     "matrix": {
+      "id": "UBERON:0000178",
+      "label": "blood"
+     },
+     "compartment": null,
+     "ucum": "/uL"
+    },
+    "IL6_pg_ml": {
+     "analyte": {
+      "label": "IL6",
+      "id": "HGNC:6018"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "pg/mL"
+    },
+    "IFNg_pg_ml": {
+     "analyte": {
+      "label": "IFNG",
+      "id": "HGNC:5438"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "pg/mL"
+    }
+   }
+  },
+  "qspquest_brekkan_2024_certolizumab_ada_hidden_markov": {
+   "citations": [
+    {
+     "doi": "10.1007/s10928-023-09890-8",
+     "pmid": "37943398",
+     "pmcid": "PMC10884144",
+     "title": "Characterization of anti-drug antibody dynamics using a bivariate mixed hidden-markov model by nonlinear-mixed effects approach",
+     "journal": "Journal of pharmacokinetics and pharmacodynamics",
+     "year": 2024,
+     "first_author": "Brekkan"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "certolizumab pegol",
+     "id": "NCIT:C80972",
+     "label": "Certolizumab Pegol",
+     "synonyms": [
+      "CDP 870",
+      "CDP870",
+      "CZP",
+      "Cimzia",
+      "PHA-738144"
+     ],
+     "modality": "antibody_fragment"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "antibody_fragment",
+     "id": "NCIT:C13246",
+     "label": "Fab Fragment"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "TNF",
+     "id": "HGNC:11892",
+     "label": "tumor necrosis factor",
+     "synonyms": [
+      "TNFSF2",
+      "DIF",
+      "TNF-alpha",
+      "TNFA",
+      "TNF superfamily, member 2"
+     ],
+     "uniprot": "P01375"
+    }
+   ],
+   "indications": [],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "p_ada": {
+     "analyte": {
+      "label": "anti-drug antibody production state",
+      "id": null
+     },
+     "quantity": "probability",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "p_noada": {
+     "analyte": {
+      "label": "no anti-drug antibody production state",
+      "id": null
+     },
+     "quantity": "probability",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    }
+   }
+  },
+  "qspquest_briggs_2023_dupilumab_ad_er_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1007/s11095-023-03616-8",
+     "pmid": "38082089",
+     "pmcid": "PMC10733507",
+     "title": "Integrated Exposure-Response of Dupilumab in Children, Adolescents, and Adults With Atopic Dermatitis Using Categorical and Continuous Efficacy Assessments: A Population Analysis",
+     "journal": "Pharmaceutical research",
+     "year": 2023,
+     "first_author": "Briggs"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "dupilumab",
+     "id": "NCIT:C162455",
+     "label": "Dupilumab",
+     "synonyms": [
+      "Dupixent",
+      "REGN 668",
+      "REGN-668",
+      "REGN668",
+      "SAR 231893",
+      "SAR-231893",
+      "SAR231893"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "IL4R",
+     "id": "HGNC:6015",
+     "label": "interleukin 4 receptor",
+     "synonyms": [
+      "CD124",
+      "interleukin 13 receptor"
+     ],
+     "uniprot": "P24394"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004980",
+     "label": "atopic eczema",
+     "synonyms": [
+      "AD",
+      "ATOD",
+      "allergic form of dermatitis",
+      "atopic dermatitis",
+      "dermatitis, atopic",
+      "eczema",
+      "eczema, atopic",
+      "eczematous dermatitis"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_mg_l": {
+     "analyte": {
+      "label": "dupilumab",
+      "id": "NCIT:C162455"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "easi_score": {
+     "analyte": {
+      "label": "Eczema Area and Severity Index",
+      "id": null
+     },
+     "quantity": "score",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "{score}"
+    },
+    "easi_change_from_baseline_pct": {
+     "analyte": {
+      "label": "Eczema Area and Severity Index",
+      "id": null
+     },
+     "quantity": "percent_of_baseline",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced": {
+   "citations": [
+    {
+     "doi": "10.1016/j.ejps.2024.106807",
+     "pmid": "38797440",
+     "pmcid": null,
+     "title": "Physiologically-based pharmacokinetic modeling to predict the exposure and provide dosage regimens of Ustekinumab in pediatric patients with inflammatory bowel disease",
+     "journal": "European journal of pharmaceutical sciences : official journal of the European Federation for Pharmaceutical Sciences",
+     "year": 2024,
+     "first_author": "Cai"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "ustekinumab",
+     "id": "NCIT:C84237",
+     "label": "Ustekinumab",
+     "synonyms": [
+      "CNTO 1275",
+      "CNTO1275",
+      "Stelara"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "IL12B",
+     "id": "HGNC:5970",
+     "label": "interleukin 12B",
+     "synonyms": [
+      "CLMF",
+      "IL-12B",
+      "NKSF",
+      "CLMF2",
+      "NKSF2",
+      "natural killer cell stimulatory factor-2",
+      "cytotoxic lymphocyte maturation factor 2, p40",
+      "interleukin 12, p40",
+      "natural killer cell stimulatory factor, 40 kD subunit",
+      "interleukin-12 beta chain",
+      "IL12, subunit p40"
+     ],
+     "uniprot": "P29460"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005265",
+     "label": "inflammatory bowel disease",
+     "synonyms": [
+      "IBD",
+      "autoimmune bowel disorder"
+     ]
+    },
+    {
+     "id": "MONDO:0005011",
+     "label": "Crohn disease",
+     "synonyms": [
+      "Crohn's disease of large bowel",
+      "Crohn's disease",
+      "paediatric Crohn's disease",
+      "pediatric Crohn's disease",
+      "regional enteritis"
+     ]
+    },
+    {
+     "id": "MONDO:0005101",
+     "label": "ulcerative colitis",
+     "synonyms": [
+      "left-sided ulcerative colitis",
+      "colitis ulcerative",
+      "ulcerative colitis (disease)"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    },
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "A_central_mg": {
+     "analyte": {
+      "label": "ustekinumab",
+      "id": "NCIT:C84237"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg"
+    },
+    "A_fcrn_bound_mg": {
+     "analyte": {
+      "label": "ustekinumab",
+      "id": "NCIT:C84237"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "endosome (FcRn-bound)",
+     "ucum": "mg"
+    },
+    "AUC_central_mg_h_L": {
+     "analyte": {
+      "label": "ustekinumab",
+      "id": "NCIT:C84237"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg.h/L"
+    }
+   }
+  },
+  "qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd": {
+   "citations": [
+    {
+     "doi": "10.3390/pharmaceutics17030377",
+     "pmid": "40143040",
+     "pmcid": "PMC11944646",
+     "title": "PK/PD of Positively Charged ADC in Mice",
+     "journal": "Pharmaceutics",
+     "year": 2025,
+     "first_author": "Chang"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:10090",
+     "label": "Mus musculus",
+     "synonyms": [
+      "house mouse",
+      "mouse"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "trastuzumab-vc-MMAE",
+     "id": null,
+     "label": "trastuzumab-vc-MMAE",
+     "synonyms": [],
+     "modality": "antibody_drug_conjugate"
+    },
+    {
+     "name": "monomethyl auristatin E",
+     "id": "NCIT:C122637",
+     "label": "Monomethyl Auristatin E",
+     "synonyms": [
+      "MMAE",
+      "Monomethylauristatin E"
+     ],
+     "modality": "small_molecule"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "antibody_drug_conjugate",
+     "id": "NCIT:C129823",
+     "label": "Antineoplastic Antibody-Drug Conjugate"
+    },
+    {
+     "key": "small_molecule",
+     "id": "NCIT:C48809",
+     "label": "Small Molecule"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ERBB2",
+     "id": "HGNC:3430",
+     "label": "erb-b2 receptor tyrosine kinase 2",
+     "synonyms": [
+      "NEU",
+      "HER-2",
+      "CD340",
+      "HER2",
+      "c-ERB2",
+      "c-ERB-2",
+      "MLN-19",
+      "p185(erbB2)",
+      "NGL",
+      "neuro/glioblastoma derived oncogene homolog",
+      "human epidermal growth factor receptor 2",
+      "metastatic lymph node gene 19"
+     ],
+     "uniprot": "P04626"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0001056",
+     "label": "gastric cancer",
+     "synonyms": [
+      "Ca body - stomach",
+      "Ca lesser curvature - stomach",
+      "ca greater curvature of stomach",
+      "gastric cancer risk after h. pylori infection",
+      "gastric cancer, somatic",
+      "gastric neoplasm",
+      "malignant neoplasm of body of stomach",
+      "malignant neoplasm of lesser curve of stomach",
+      "malignant tumor of body of stomach",
+      "malignant tumor of greater curve of stomach",
+      "malignant tumor of lesser curve of stomach",
+      "GC",
+      "cancer of stomach",
+      "malignant gastric neoplasm",
+      "malignant gastric tumor",
+      "malignant gastric tumour",
+      "malignant neoplasm of stomach",
+      "malignant neoplasm of the stomach",
+      "malignant stomach neoplasm",
+      "malignant tumor of stomach",
+      "malignant tumor of the stomach",
+      "malignant tumour of body of stomach",
+      "malignant tumour of greater curve of stomach",
+      "malignant tumour of lesser curve of stomach",
+      "malignant tumour of stomach",
+      "malignant tumour of the stomach",
+      "stomach cancer"
+     ]
+    },
+    {
+     "id": "MONDO:0007254",
+     "label": "breast cancer",
+     "synonyms": [
+      "breast tumor",
+      "mammary tumor",
+      "primary breast cancer",
+      "breast tumour",
+      "cancer of breast",
+      "malignant breast neoplasm",
+      "malignant breast tumor",
+      "malignant breast tumour",
+      "malignant neoplasm of breast",
+      "malignant neoplasm of the breast",
+      "malignant tumor of breast",
+      "malignant tumor of the breast",
+      "malignant tumour of breast",
+      "malignant tumour of the breast",
+      "mammary tumour"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "C_nM": {
+     "analyte": {
+      "label": "analyte named by the preset",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "tissue named by the preset",
+     "ucum": "nmol/L"
+    },
+    "AUC_h_nM": {
+     "analyte": {
+      "label": "analyte named by the preset",
+      "id": null
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "tissue named by the preset",
+     "ucum": "h.nmol/L"
+    }
+   }
+  },
+  "qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd": {
+   "citations": [
+    {
+     "doi": "10.3389/fonc.2022.951589",
+     "pmid": "36620535",
+     "pmcid": "PMC9817100",
+     "title": "Preclinical profiles of SKB264, a novel anti-TROP2 antibody conjugated to topoisomerase inhibitor, demonstrated promising antitumor efficacy compared to IMMU-132",
+     "journal": "Frontiers in oncology",
+     "year": 2022,
+     "first_author": "Cheng"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:10090",
+     "label": "Mus musculus",
+     "synonyms": [
+      "house mouse",
+      "mouse"
+     ]
+    },
+    {
+     "id": "NCBITaxon:10116",
+     "label": "Rattus norvegicus",
+     "synonyms": [
+      "Mus norvegicus",
+      "Norway rat",
+      "brown rat",
+      "rat",
+      "rats"
+     ]
+    },
+    {
+     "id": "NCBITaxon:9541",
+     "label": "Macaca fascicularis",
+     "synonyms": [
+      "Macaca cynomolgus",
+      "Macaca irus",
+      "Simia fascicularis",
+      "crab eating macaque",
+      "crab-eating macaque",
+      "cynomolgus macaque",
+      "cynomolgus monkey",
+      "cynomolgus monkeys",
+      "long-tailed macaque"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "sacituzumab tirumotecan",
+     "id": "NCIT:C166409",
+     "label": "Sacituzumab Tirumotecan",
+     "synonyms": [
+      "ADC MK-2870",
+      "ADC SKB264",
+      "Anti-TROP2 Antibody-drug Conjugate MK-2870",
+      "Anti-TROP2 Antibody-drug Conjugate SKB264",
+      "MK 2870",
+      "MK-2870",
+      "MK2870",
+      "SKB 264",
+      "SKB-264",
+      "SKB264"
+     ],
+     "modality": "antibody_drug_conjugate"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "antibody_drug_conjugate",
+     "id": "NCIT:C129823",
+     "label": "Antineoplastic Antibody-Drug Conjugate"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "TACSTD2",
+     "id": "HGNC:11530",
+     "label": "tumor associated calcium signal transducer 2",
+     "synonyms": [
+      "TROP2",
+      "GA733-1",
+      "EGP-1",
+      "M1S1",
+      "epithelial glycoprotein-1",
+      "trophoblast cell surface antigen 2"
+     ],
+     "uniprot": "P09758"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004992",
+     "label": "cancer",
+     "synonyms": [
+      "malignant neoplasm (disease)",
+      "CA",
+      "MT",
+      "cell type cancer",
+      "malignancy",
+      "malignant growth",
+      "malignant neoplasm",
+      "malignant neoplastic disease",
+      "malignant tumor",
+      "malignant tumour",
+      "neoplasm (disease), malignant",
+      "neoplasm, malignant"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "tumor_volume_mm3": {
+     "analyte": {
+      "label": "tumor volume",
+      "id": null
+     },
+     "quantity": "tumor_size",
+     "matrix": null,
+     "compartment": "tumor",
+     "ucum": "mm3"
+    }
+   }
+  },
+  "qspquest_chetty_2014_efalizumab_cd11a_turnover": {
+   "citations": [
+    {
+     "doi": "10.3389/fimmu.2014.00670",
+     "pmid": "25601866",
+     "pmcid": "PMC4283607",
+     "title": "Prediction of the Pharmacokinetics, Pharmacodynamics, and Efficacy of a Monoclonal Antibody, Using a Physiologically Based Pharmacokinetic FcRn Model",
+     "journal": "Frontiers in immunology",
+     "year": 2014,
+     "first_author": "Chetty"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "efalizumab",
+     "id": "NCIT:C68831",
+     "label": "Efalizumab",
+     "synonyms": [
+      "Hu 1124",
+      "Raptiva",
+      "Xanelim"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ITGAL",
+     "id": "HGNC:6148",
+     "label": "integrin subunit alpha L",
+     "synonyms": [
+      "HNA-5",
+      "LFA-1",
+      "LFA1A",
+      "CD11A",
+      "human neutrophil antigen 5",
+      "antigen CD11A (p180)",
+      "lymphocyte function-associated antigen 1, alpha polypeptide"
+     ],
+     "uniprot": "P20701"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005083",
+     "label": "psoriasis",
+     "synonyms": []
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "free_cd11a_pct": {
+     "analyte": {
+      "label": "ITGAL",
+      "id": "HGNC:6148"
+     },
+     "quantity": "percent_of_baseline",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    },
+    "occupancy_pct": {
+     "analyte": {
+      "label": "ITGAL",
+      "id": "HGNC:6148"
+     },
+     "quantity": "occupancy",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    },
+    "total_cd11a_pct": {
+     "analyte": {
+      "label": "ITGAL",
+      "id": "HGNC:6148"
+     },
+     "quantity": "percent_of_baseline",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd": {
+   "citations": [
+    {
+     "doi": "10.3389/fimmu.2014.00670",
+     "pmid": "25601866",
+     "pmcid": "PMC4283607",
+     "title": "Prediction of the Pharmacokinetics, Pharmacodynamics, and Efficacy of a Monoclonal Antibody, Using a Physiologically Based Pharmacokinetic FcRn Model",
+     "journal": "Frontiers in immunology",
+     "year": 2014,
+     "first_author": "Chetty"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "efalizumab",
+     "id": "NCIT:C68831",
+     "label": "Efalizumab",
+     "synonyms": [
+      "Hu 1124",
+      "Raptiva",
+      "Xanelim"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ITGAL",
+     "id": "HGNC:6148",
+     "label": "integrin subunit alpha L",
+     "synonyms": [
+      "HNA-5",
+      "LFA-1",
+      "LFA1A",
+      "CD11A",
+      "human neutrophil antigen 5",
+      "antigen CD11A (p180)",
+      "lymphocyte function-associated antigen 1, alpha polypeptide"
+     ],
+     "uniprot": "P20701"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005083",
+     "label": "psoriasis",
+     "synonyms": []
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "PASI_current": {
+     "analyte": {
+      "label": "Psoriasis Area and Severity Index",
+      "id": null
+     },
+     "quantity": "score",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "{score}"
+    }
+   }
+  },
+  "qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd": {
+   "citations": [
+    {
+     "doi": "10.3389/fphar.2025.1631034",
+     "pmid": "40904558",
+     "pmcid": "PMC12403037",
+     "title": "Population pharmacokinetics/pharmacodynamics analysis confirming biosimilarity of SB16 to reference denosumab",
+     "journal": "Frontiers in pharmacology",
+     "year": 2025,
+     "first_author": "Choi"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "denosumab",
+     "id": "NCIT:C61313",
+     "label": "Denosumab",
+     "synonyms": [
+      "AMG 162",
+      "AMG-162",
+      "Denosumab Biosimilar MW032",
+      "Denosumab Biosimilar QL1206",
+      "Denosumab Biosimilar TK-006",
+      "Prolia",
+      "Ranmark",
+      "TK-006",
+      "Xgeva"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "TNFSF11",
+     "id": "HGNC:11926",
+     "label": "TNF superfamily member 11",
+     "synonyms": [
+      "TRANCE",
+      "RANKL",
+      "OPGL",
+      "ODF",
+      "CD254"
+     ],
+     "uniprot": "O14788"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0008159",
+     "label": "postmenopausal osteoporosis",
+     "synonyms": []
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "Ctot_nM": {
+     "analyte": {
+      "label": "denosumab",
+      "id": "NCIT:C61313"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "nmol/L"
+    },
+    "Rfree_nM": {
+     "analyte": {
+      "label": "TNFSF11",
+      "id": "HGNC:11926"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "nmol/L"
+    },
+    "bmd_change_percent": {
+     "analyte": {
+      "label": "lumbar spine bone mineral density",
+      "id": null
+     },
+     "quantity": "percent_of_baseline",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi": {
+   "citations": [
+    {
+     "doi": "10.1007/s10928-023-09877-5",
+     "pmid": "37632598",
+     "pmcid": "PMC11576838",
+     "title": "Physiologically based pharmacokinetic model to predict drug-drug interactions with the antibody-drug conjugate enfortumab vedotin",
+     "journal": "Journal of pharmacokinetics and pharmacodynamics",
+     "year": 2024,
+     "first_author": "Choules"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "enfortumab vedotin",
+     "id": "NCIT:C114500",
+     "label": "Enfortumab Vedotin",
+     "synonyms": [
+      "AGS 22ME",
+      "AGS-22M6E",
+      "ASG 22CE",
+      "ASG-22CE",
+      "ASG22CE",
+      "Anti-Nectin 4 ADC ASG-22CE",
+      "Anti-nectin-4 Monoclonal Antibody-Drug Conjugate AGS-22M6E",
+      "Enfortumab Vedotin-ejfv",
+      "Padcev"
+     ],
+     "modality": "antibody_drug_conjugate"
+    },
+    {
+     "name": "monomethyl auristatin E",
+     "id": "NCIT:C122637",
+     "label": "Monomethyl Auristatin E",
+     "synonyms": [
+      "MMAE",
+      "Monomethylauristatin E"
+     ],
+     "modality": "small_molecule"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "antibody_drug_conjugate",
+     "id": "NCIT:C129823",
+     "label": "Antineoplastic Antibody-Drug Conjugate"
+    },
+    {
+     "key": "small_molecule",
+     "id": "NCIT:C48809",
+     "label": "Small Molecule"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "NECTIN4",
+     "id": "HGNC:19688",
+     "label": "nectin cell adhesion molecule 4",
+     "synonyms": [
+      "nectin-4",
+      "PRR4",
+      "LNIR",
+      "PVRL4"
+     ],
+     "uniprot": "Q96NY8"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0040679",
+     "label": "urothelial carcinoma",
+     "synonyms": [
+      "transitional cell car. -uroth.",
+      "transitional cell carcinoma of the urothelial tract",
+      "Uroepithelial carcinoma",
+      "transitional cell carcinoma of the urinary tract"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "adc_conc_ug_ml": {
+     "analyte": {
+      "label": "enfortumab vedotin",
+      "id": "NCIT:C114500"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "mmae_conc_ng_ml": {
+     "analyte": {
+      "label": "monomethyl auristatin E",
+      "id": "NCIT:C122637"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ng/mL"
+    }
+   }
+  },
+  "qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk": {
+   "citations": [
+    {
+     "doi": "10.1128/aac.01587-23",
+     "pmid": "38534112",
+     "pmcid": "PMC11064475",
+     "title": "Accelerating therapeutics development during a pandemic: population pharmacokinetics of the long-acting antibody combination AZD7442 (tixagevimab/cilgavimab) in the prophylaxis and treatment of COVID-19",
+     "journal": "Antimicrobial agents and chemotherapy",
+     "year": 2024,
+     "first_author": "Clegg"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "tixagevimab",
+     "id": "NCIT:C177082",
+     "label": "Tixagevimab",
+     "synonyms": [
+      "AZD 8895",
+      "AZD-8895",
+      "AZD8895",
+      "COV2-2196"
+     ],
+     "modality": "monoclonal_antibody"
+    },
+    {
+     "name": "cilgavimab",
+     "id": "NCIT:C177058",
+     "label": "Cilgavimab",
+     "synonyms": [
+      "AZD 1061",
+      "AZD-1061",
+      "AZD1061",
+      "COV2-2130"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": null,
+     "id": "UniProt:P0DTC2",
+     "label": "Spike glycoprotein (Severe acute respiratory syndrome coronavirus 2)",
+     "synonyms": [
+      "E2",
+      "Peplomer protein",
+      "S glycoprotein"
+     ],
+     "uniprot": "P0DTC2"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0100096",
+     "label": "COVID-19",
+     "synonyms": [
+      "2019 novel coronavirus infection",
+      "2019 novel coronavirus",
+      "2019-nCoV infection",
+      "2019-nCoV",
+      "SARS-CoV-2",
+      "SARS-coronavirus 2",
+      "beta-CoV",
+      "beta-CoVs",
+      "betacoronavirus",
+      "coronavirus disease 2019",
+      "severe acute respiratory syndrome coronavirus 2 infectious disease",
+      "severe acute respiratory syndrome coronavirus 2",
+      "β-CoV",
+      "β-CoVs",
+      "β-coronavirus"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intramuscular",
+     "id": "NCIT:C28161",
+     "label": "Intramuscular Route of Administration"
+    },
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_ug_ml": {
+     "analyte": {
+      "label": "tixagevimab",
+      "id": "NCIT:C177082"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "AUC_ug_day_ml": {
+     "analyte": {
+      "label": "tixagevimab",
+      "id": "NCIT:C177082"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp": {
+   "citations": [
+    {
+     "doi": "10.3389/fimmu.2023.1212981",
+     "pmid": "37809085",
+     "pmcid": "PMC10552644",
+     "title": "A quantitative systems pharmacology model for certolizumab pegol treatment in moderate-to-severe psoriasis",
+     "journal": "Frontiers in immunology",
+     "year": 2023,
+     "first_author": "Coto-Segura"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "certolizumab pegol",
+     "id": "NCIT:C80972",
+     "label": "Certolizumab Pegol",
+     "synonyms": [
+      "CDP 870",
+      "CDP870",
+      "CZP",
+      "Cimzia",
+      "PHA-738144"
+     ],
+     "modality": "antibody_fragment"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "antibody_fragment",
+     "id": "NCIT:C13246",
+     "label": "Fab Fragment"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "TNF",
+     "id": "HGNC:11892",
+     "label": "tumor necrosis factor",
+     "synonyms": [
+      "TNFSF2",
+      "DIF",
+      "TNF-alpha",
+      "TNFA",
+      "TNF superfamily, member 2"
+     ],
+     "uniprot": "P01375"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005083",
+     "label": "psoriasis",
+     "synonyms": []
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "blood_concentration_mg_l": {
+     "analyte": {
+      "label": "certolizumab pegol",
+      "id": "NCIT:C80972"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0000178",
+      "label": "blood"
+     },
+     "compartment": null,
+     "ucum": "mg/L"
+    },
+    "auc_mg_day_l": {
+     "analyte": {
+      "label": "certolizumab pegol",
+      "id": "NCIT:C80972"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "blood",
+     "ucum": "mg.d/L"
+    }
+   }
+  },
+  "qspquest_cui_2024_envafolimab_sc_pdl1_midd": {
+   "citations": [
+    {
+     "doi": "10.1093/oncolo/oyae102",
+     "pmid": "38982653",
+     "pmcid": "PMC11379657",
+     "title": "Model-informed drug development of envafolimab, a subcutaneously injectable PD-L1 antibody, in patients with advanced solid tumors",
+     "journal": "The oncologist",
+     "year": 2024,
+     "first_author": "Cui"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "envafolimab",
+     "id": "NCIT:C129714",
+     "label": "Envafolimab",
+     "synonyms": [
+      "Anti-PD-L1 MoAb KN035",
+      "Enweida",
+      "KN 035",
+      "KN-035",
+      "KN035"
+     ],
+     "modality": "fusion_protein"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "fusion_protein",
+     "id": "NCIT:C17561",
+     "label": "Fusion Protein"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD274",
+     "id": "HGNC:17635",
+     "label": "CD274 molecule",
+     "synonyms": [
+      "B7-H",
+      "B7H1",
+      "PD-L1",
+      "PDL1",
+      "B7-H1",
+      "PDCD1LG1",
+      "B7 homolog 1"
+     ],
+     "uniprot": "Q9NZQ7"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004992",
+     "label": "cancer",
+     "synonyms": [
+      "malignant neoplasm (disease)",
+      "CA",
+      "MT",
+      "cell type cancer",
+      "malignancy",
+      "malignant growth",
+      "malignant neoplasm",
+      "malignant neoplastic disease",
+      "malignant tumor",
+      "malignant tumour",
+      "neoplasm (disease), malignant",
+      "neoplasm, malignant"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "envafolimab_concentration_mg_l": {
+     "analyte": {
+      "label": "envafolimab",
+      "id": "NCIT:C129714"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "cl_l_day_individual": {
+     "analyte": {
+      "label": "envafolimab",
+      "id": "NCIT:C129714"
+     },
+     "quantity": "clearance",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "L/d"
+    }
+   }
+  },
+  "qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1007/s10637-018-0593-x",
+     "pmid": "29728897",
+     "pmcid": "PMC6244972",
+     "title": "Translational PK-PD modeling analysis of MCLA-128, a HER2/HER3 bispecific monoclonal antibody, to predict clinical efficacious exposure and dose",
+     "journal": "Investigational new drugs",
+     "year": 2018,
+     "first_author": "de Vries Schultink"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9541",
+     "label": "Macaca fascicularis",
+     "synonyms": [
+      "Macaca cynomolgus",
+      "Macaca irus",
+      "Simia fascicularis",
+      "crab eating macaque",
+      "crab-eating macaque",
+      "cynomolgus macaque",
+      "cynomolgus monkey",
+      "cynomolgus monkeys",
+      "long-tailed macaque"
+     ]
+    },
+    {
+     "id": "NCBITaxon:10090",
+     "label": "Mus musculus",
+     "synonyms": [
+      "house mouse",
+      "mouse"
+     ]
+    },
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "zenocutuzumab",
+     "id": "NCIT:C152948",
+     "label": "Zenocutuzumab",
+     "synonyms": [
+      "Anti-HER2 x Anti-HER3 Bispecific Monoclonal Antibody MCLA-128",
+      "Anti-HER2/Anti-HER3 Bispecific Monoclonal Antibody MCLA-128",
+      "Bizengri",
+      "MCLA 128",
+      "MCLA-128",
+      "MCLA128",
+      "Zenocutuzumab-zbco"
+     ],
+     "modality": "bispecific_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "bispecific_antibody",
+     "id": "NCIT:C1454",
+     "label": "Bispecific Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ERBB2",
+     "id": "HGNC:3430",
+     "label": "erb-b2 receptor tyrosine kinase 2",
+     "synonyms": [
+      "NEU",
+      "HER-2",
+      "CD340",
+      "HER2",
+      "c-ERB2",
+      "c-ERB-2",
+      "MLN-19",
+      "p185(erbB2)",
+      "NGL",
+      "neuro/glioblastoma derived oncogene homolog",
+      "human epidermal growth factor receptor 2",
+      "metastatic lymph node gene 19"
+     ],
+     "uniprot": "P04626"
+    },
+    {
+     "symbol": "ERBB3",
+     "id": "HGNC:3431",
+     "label": "erb-b2 receptor tyrosine kinase 3",
+     "synonyms": [
+      "HER3",
+      "LCCS2",
+      "human epidermal growth factor receptor 3"
+     ],
+     "uniprot": "P21860"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0007254",
+     "label": "breast cancer",
+     "synonyms": [
+      "breast tumor",
+      "mammary tumor",
+      "primary breast cancer",
+      "breast tumour",
+      "cancer of breast",
+      "malignant breast neoplasm",
+      "malignant breast tumor",
+      "malignant breast tumour",
+      "malignant neoplasm of breast",
+      "malignant neoplasm of the breast",
+      "malignant tumor of breast",
+      "malignant tumor of the breast",
+      "malignant tumour of breast",
+      "malignant tumour of the breast",
+      "mammary tumour"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_mg_L": {
+     "analyte": {
+      "label": "zenocutuzumab",
+      "id": "NCIT:C152948"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "receptor_occupancy_percent": {
+     "analyte": {
+      "label": "ERBB2",
+      "id": "HGNC:3430"
+     },
+     "quantity": "occupancy",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_diffdose_2026_bite_benchmark": {
+   "citations": [
+    {
+     "doi": "10.1007/s10957-021-01819-w",
+     "pmid": "34720180",
+     "pmcid": "PMC8550736",
+     "title": "OptiDose: Computing the Individualized Optimal Drug Dosing Regimen Using Optimal Control",
+     "journal": "Journal of optimization theory and applications",
+     "year": 2021,
+     "first_author": "Bachmann"
+    }
+   ],
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical bispecific T-cell engager",
+     "id": null,
+     "label": "hypothetical bispecific T-cell engager",
+     "synonyms": [],
+     "modality": "bispecific_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "bispecific_antibody",
+     "id": "NCIT:C1454",
+     "label": "Bispecific Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": null,
+     "id": null,
+     "label": "hypothetical target",
+     "synonyms": [],
+     "uniprot": null,
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "drug_exposure": {
+     "analyte": {
+      "label": "hypothetical bispecific T-cell engager",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "binary_complexes": {
+     "analyte": {
+      "label": "binary drug-target complexes",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "ternary_complex": {
+     "analyte": {
+      "label": "ternary drug-target complex",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    }
+   }
+  },
+  "qspquest_diffdose_2026_idr_benchmark": {
+   "citations": [
+    {
+     "doi": "10.1007/s10957-021-01819-w",
+     "pmid": "34720180",
+     "pmcid": "PMC8550736",
+     "title": "OptiDose: Computing the Individualized Optimal Drug Dosing Regimen Using Optimal Control",
+     "journal": "Journal of optimization theory and applications",
+     "year": 2021,
+     "first_author": "Bachmann"
+    }
+   ],
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical drug",
+     "id": null,
+     "label": "hypothetical drug",
+     "synonyms": [],
+     "modality": null
+    }
+   ],
+   "modalities": [],
+   "targets": [],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "drug_exposure": {
+     "analyte": {
+      "label": "hypothetical drug",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "biomarker": {
+     "analyte": {
+      "label": "hypothetical biomarker",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    }
+   }
+  },
+  "qspquest_diffdose_2026_tgi_benchmark": {
+   "citations": [
+    {
+     "doi": "10.1007/s10957-021-01819-w",
+     "pmid": "34720180",
+     "pmcid": "PMC8550736",
+     "title": "OptiDose: Computing the Individualized Optimal Drug Dosing Regimen Using Optimal Control",
+     "journal": "Journal of optimization theory and applications",
+     "year": 2021,
+     "first_author": "Bachmann"
+    }
+   ],
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical drug",
+     "id": null,
+     "label": "hypothetical drug",
+     "synonyms": [],
+     "modality": null
+    }
+   ],
+   "modalities": [],
+   "targets": [],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "drug_exposure": {
+     "analyte": {
+      "label": "hypothetical drug",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "tumor_total": {
+     "analyte": {
+      "label": "tumor burden",
+      "id": null
+     },
+     "quantity": "tumor_size",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    }
+   }
+  },
+  "qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1177/02676591251406086",
+     "pmid": "41325644",
+     "pmcid": "PMC13323899",
+     "title": "Dabigatran-idarucizumab pharmacokinetics-pharmacodynamics in sheep undergoing cardiopulmonary bypass",
+     "journal": "Perfusion",
+     "year": 2026,
+     "first_author": "Eaton"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9940",
+     "label": "Ovis aries",
+     "synonyms": [
+      "Ovis ammon aries",
+      "Ovis orientalis aries",
+      "Ovis ovis",
+      "domestic sheep",
+      "lambs",
+      "sheep",
+      "wild sheep"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "dabigatran",
+     "id": "NCIT:C73224",
+     "label": "Dabigatran",
+     "synonyms": [],
+     "modality": "small_molecule"
+    },
+    {
+     "name": "idarucizumab",
+     "id": "NCIT:C128646",
+     "label": "Idarucizumab",
+     "synonyms": [
+      "BI 655075",
+      "BI-655075",
+      "BI655075",
+      "Praxbind"
+     ],
+     "modality": "antibody_fragment"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "small_molecule",
+     "id": "NCIT:C48809",
+     "label": "Small Molecule"
+    },
+    {
+     "key": "antibody_fragment",
+     "id": "NCIT:C13246",
+     "label": "Fab Fragment"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "F2",
+     "id": "HGNC:3535",
+     "label": "coagulation factor II, thrombin",
+     "synonyms": [
+      "prepro-coagulation factor II"
+     ],
+     "uniprot": "P00734"
+    },
+    {
+     "symbol": null,
+     "id": "CHEBI:70752",
+     "label": "dabigatran",
+     "synonyms": [
+      "BIBR 953 ZW",
+      "BIBR-953",
+      "BIBR-953-ZW",
+      "Pradaxa (dabigatran)"
+     ],
+     "uniprot": null
+    }
+   ],
+   "indications": [],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "dabigatran_conc_mg_l": {
+     "analyte": {
+      "label": "dabigatran",
+      "id": "NCIT:C73224"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "idarucizumab_conc_mg_l": {
+     "analyte": {
+      "label": "idarucizumab",
+      "id": "NCIT:C128646"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "r_time_min": {
+     "analyte": {
+      "label": "coagulation reaction time",
+      "id": null
+     },
+     "quantity": "score",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "min"
+    }
+   }
+  },
+  "qspquest_eaton_2025_idarucizumab_dabigatran_sheep_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1177/02676591231226291",
+     "pmid": "38171494",
+     "pmcid": "PMC11715065",
+     "title": "Dabigatran pharmacokinetic-pharmacodynamic in sheep: Informing dose for anticoagulation during cardiopulmonary bypass",
+     "journal": "Perfusion",
+     "year": 2025,
+     "first_author": "Eaton"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9940",
+     "label": "Ovis aries",
+     "synonyms": [
+      "Ovis ammon aries",
+      "Ovis orientalis aries",
+      "Ovis ovis",
+      "domestic sheep",
+      "lambs",
+      "sheep",
+      "wild sheep"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "dabigatran",
+     "id": "NCIT:C73224",
+     "label": "Dabigatran",
+     "synonyms": [],
+     "modality": "small_molecule"
+    },
+    {
+     "name": "idarucizumab",
+     "id": "NCIT:C128646",
+     "label": "Idarucizumab",
+     "synonyms": [
+      "BI 655075",
+      "BI-655075",
+      "BI655075",
+      "Praxbind"
+     ],
+     "modality": "antibody_fragment"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "small_molecule",
+     "id": "NCIT:C48809",
+     "label": "Small Molecule"
+    },
+    {
+     "key": "antibody_fragment",
+     "id": "NCIT:C13246",
+     "label": "Fab Fragment"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "F2",
+     "id": "HGNC:3535",
+     "label": "coagulation factor II, thrombin",
+     "synonyms": [
+      "prepro-coagulation factor II"
+     ],
+     "uniprot": "P00734"
+    },
+    {
+     "symbol": null,
+     "id": "CHEBI:70752",
+     "label": "dabigatran",
+     "synonyms": [
+      "BIBR 953 ZW",
+      "BIBR-953",
+      "BIBR-953-ZW",
+      "Pradaxa (dabigatran)"
+     ],
+     "uniprot": null
+    }
+   ],
+   "indications": [],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": {
+      "label": "dabigatran",
+      "id": "NCIT:C73224"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg"
+    },
+    "effect_conc_mg_l": {
+     "analyte": {
+      "label": "dabigatran",
+      "id": "NCIT:C73224"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "effect site",
+     "ucum": "mg/L"
+    },
+    "idarucizumab_effect_unit": {
+     "analyte": {
+      "label": "idarucizumab",
+      "id": "NCIT:C128646"
+     },
+     "quantity": "score",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    }
+   }
+  },
+  "qspquest_frank_2023_sutimlimab_cad_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1124/jpet.122.001511",
+     "pmid": "37164370",
+     "pmcid": null,
+     "title": "Sutimlimab Pharmacokinetics and Pharmacodynamics in Patients with Cold Agglutinin Disease",
+     "journal": "The Journal of pharmacology and experimental therapeutics",
+     "year": 2023,
+     "first_author": "Frank"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "sutimlimab",
+     "id": "NCIT:C153093",
+     "label": "Sutimlimab",
+     "synonyms": [
+      "BIVV 009",
+      "BIVV-009",
+      "BIVV009",
+      "Enjaymo",
+      "IPN 009",
+      "IPN-009",
+      "IPN009",
+      "Sutimlimab-jome",
+      "TNT009",
+      "WHO 10757"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "C1S",
+     "id": "HGNC:1247",
+     "label": "complement C1s",
+     "synonyms": [],
+     "uniprot": "P09871"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0018922",
+     "label": "cold agglutinin disease",
+     "synonyms": [
+      "CAD",
+      "CAS",
+      "anemia, hemolytic, cold antibody",
+      "chronic cold agglutinin disease",
+      "cold agglutinin syndrome",
+      "cold antibody disease",
+      "cold antibody hemolytic anaemia",
+      "cold antibody hemolytic anemia"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_ug_ml": {
+     "analyte": {
+      "label": "sutimlimab",
+      "id": "NCIT:C153093"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "cp_activity_percent": {
+     "analyte": {
+      "label": "classical complement pathway activity",
+      "id": null
+     },
+     "quantity": "percent",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "%"
+    },
+    "hb_g_dl": {
+     "analyte": {
+      "label": "hemoglobin",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0000178",
+      "label": "blood"
+     },
+     "compartment": null,
+     "ucum": "g/dL"
+    }
+   }
+  },
+  "qspquest_garrett_2019_inotuzumab_ozogamicin_poppk": {
+   "citations": [
+    {
+     "doi": "10.1007/s10928-018-9614-9",
+     "pmid": "30859374",
+     "pmcid": "PMC6529376",
+     "title": "Population pharmacokinetics of inotuzumab ozogamicin in relapsed/refractory acute lymphoblastic leukemia and non-Hodgkin lymphoma",
+     "journal": "Journal of pharmacokinetics and pharmacodynamics",
+     "year": 2019,
+     "first_author": "Garrett"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "inotuzumab ozogamicin",
+     "id": "NCIT:C71542",
+     "label": "Inotuzumab Ozogamicin",
+     "synonyms": [
+      "Besponsa",
+      "CMC 544",
+      "CMC-544",
+      "CMC544",
+      "WAY-207294",
+      "Way 207294"
+     ],
+     "modality": "antibody_drug_conjugate"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "antibody_drug_conjugate",
+     "id": "NCIT:C129823",
+     "label": "Antineoplastic Antibody-Drug Conjugate"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD22",
+     "id": "HGNC:1643",
+     "label": "CD22 molecule",
+     "synonyms": [
+      "SIGLEC-2",
+      "SIGLEC2",
+      "sialic acid binding Ig-like lectin 2"
+     ],
+     "uniprot": "P20273"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004947",
+     "label": "B-cell acute lymphoblastic leukemia",
+     "synonyms": [
+      "B lymphoblastic leukemia/lymphoma",
+      "precursor B lymphoblastic leukemia/lymphoma",
+      "precursor B-lymphoblastic lymphoma/leukemia"
+     ]
+    },
+    {
+     "id": "MONDO:0018908",
+     "label": "non-Hodgkin lymphoma",
+     "synonyms": [
+      "NHL",
+      "non-Hodgkin's lymphoma (NHL)",
+      "non-Hodgkin's lymphoma",
+      "non-Hodgkins lymphoma"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_concentration_ng_mL": {
+     "analyte": {
+      "label": "inotuzumab ozogamicin",
+      "id": "NCIT:C71542"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ng/mL"
+    },
+    "CL_total_L_h": {
+     "analyte": {
+      "label": "inotuzumab ozogamicin",
+      "id": "NCIT:C71542"
+     },
+     "quantity": "clearance",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "L/h"
+    }
+   }
+  },
+  "qspquest_gu_2017_bay1093884_tfpi_qss_tmdd": {
+   "citations": [
+    {
+     "doi": "10.1208/s12248-017-0086-4",
+     "pmid": "28516358",
+     "pmcid": null,
+     "title": "Mechanistic Modeling of the Pharmacodynamic and Pharmacokinetic Relationship of Tissue Factor Pathway Inhibitor-Neutralizing Antibody (BAY 1093884) in Cynomolgus Monkeys",
+     "journal": "The AAPS journal",
+     "year": 2017,
+     "first_author": "Gu"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9541",
+     "label": "Macaca fascicularis",
+     "synonyms": [
+      "Macaca cynomolgus",
+      "Macaca irus",
+      "Simia fascicularis",
+      "crab eating macaque",
+      "crab-eating macaque",
+      "cynomolgus macaque",
+      "cynomolgus monkey",
+      "cynomolgus monkeys",
+      "long-tailed macaque"
+     ]
+    },
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "befovacimab",
+     "id": "NCIT:C171827",
+     "label": "Befovacimab",
+     "synonyms": [],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "TFPI",
+     "id": "HGNC:11760",
+     "label": "tissue factor pathway inhibitor",
+     "synonyms": [
+      "EPI",
+      "TFI",
+      "TFPI1",
+      "LACI",
+      "extrinsic pathway inhibitor"
+     ],
+     "uniprot": "P10646"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0010602",
+     "label": "hemophilia A",
+     "synonyms": [
+      "hemophilia a, X-linked recessive",
+      "hemophilia type A",
+      "HEMA",
+      "Haemophilia A",
+      "autosomal haemophilia a",
+      "classic haemophilia",
+      "classic hemophilia",
+      "classical haemophilia",
+      "classical hemophilia",
+      "congenital factor VIII disorder",
+      "factor 8 deficiency",
+      "factor VIII deficiency",
+      "haemophilia A, congenital",
+      "haemophilia a, X-linked recessive",
+      "haemophilia type A",
+      "hem A",
+      "hemophilia A, congenital",
+      "hereditary Factor VIII deficiency disease",
+      "hereditary Factor VIII deficiency"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    },
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_total_mg_L": {
+     "analyte": {
+      "label": "befovacimab",
+      "id": "NCIT:C171827"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "free_tfpi_percent_baseline": {
+     "analyte": {
+      "label": "TFPI",
+      "id": "HGNC:11760"
+     },
+     "quantity": "percent_of_baseline",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "%"
+    },
+    "tfpi_inhibition_percent": {
+     "analyte": {
+      "label": "TFPI",
+      "id": "HGNC:11760"
+     },
+     "quantity": "percent",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_haid_2023_protac_mechanistic_pd_framework": {
+   "citations": [
+    {
+     "doi": "10.3390/pharmaceutics15010195",
+     "pmid": "36678824",
+     "pmcid": "PMC9865105",
+     "title": "A Mechanistic Pharmacodynamic Modeling Framework for the Assessment and Optimization of Proteolysis Targeting Chimeras (PROTACs)",
+     "journal": "Pharmaceutics",
+     "year": 2023,
+     "first_author": "Haid"
+    }
+   ],
+   "context": "preclinical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "PROTAC degrader",
+     "id": null,
+     "label": "PROTAC degrader",
+     "synonyms": [],
+     "modality": "targeted_protein_degrader"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "targeted_protein_degrader",
+     "id": null,
+     "label": "targeted protein degrader"
+    }
+   ],
+   "targets": [],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "mechanistic_degradation": {
+     "analyte": {
+      "label": "degraded target protein",
+      "id": null
+     },
+     "quantity": "fraction",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "pd_response": {
+     "analyte": {
+      "label": "pharmacodynamic response",
+      "id": null
+     },
+     "quantity": "score",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    }
+   }
+  },
+  "qspquest_han_2026_sim2real_pk_daratumumab_tmdd": {
+   "citations": [
+    {
+     "doi": "10.21203/rs.3.rs-9308510/v1",
+     "pmid": null,
+     "pmcid": null,
+     "title": "Sim2Real-PK framework for precision dosing: Integrating pharmacokinetic mechanisms and deep learning to decode clinical heterogeneity from sparse data",
+     "journal": "Research Square",
+     "year": 2026,
+     "first_author": "Han"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "daratumumab",
+     "id": "NCIT:C74007",
+     "label": "Daratumumab",
+     "synonyms": [
+      "Daratumumab Biosimilar HLX15",
+      "Daratumumab-fihj",
+      "Darzalex",
+      "HLX15",
+      "HuMax-CD38",
+      "JNJ 54767414",
+      "JNJ-54767414",
+      "JNJ54767414"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD38",
+     "id": "HGNC:1667",
+     "label": "CD38 molecule",
+     "synonyms": [
+      "cADPR1",
+      "ADP-ribosyl cyclase 1",
+      "NAD(+) nucleosidase"
+     ],
+     "uniprot": "P28907"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0009693",
+     "label": "plasma cell myeloma",
+     "synonyms": [
+      "multiple myeloma, resistance to, Somatic mutation",
+      "multiple myeloma, susceptibility to, Somatic mutation",
+      "Kahler disease",
+      "Kahler's disease",
+      "Multiple Myeloma",
+      "medullary plasmacytoma",
+      "multiple myeloma/plasma cell myeloma",
+      "myeloid neoplasm of plasma cell",
+      "myeloma - multiple",
+      "myeloma",
+      "myeloma, multiple",
+      "myeloma, plasma cell, malignant",
+      "myelomatosis",
+      "plasma cell myeloid neoplasm"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_concentration_mg_l": {
+     "analyte": {
+      "label": "daratumumab",
+      "id": "NCIT:C74007"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "vmax_t_mg_model_time": {
+     "analyte": {
+      "label": "daratumumab",
+      "id": "NCIT:C74007"
+     },
+     "quantity": "rate",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "mg/d"
+    }
+   }
+  },
+  "qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er": {
+   "citations": [
+    {
+     "doi": "10.3390/jcm14227968",
+     "pmid": "41303004",
+     "pmcid": "PMC12653867",
+     "title": "Pharmacokinetics and Exposure-Response During Infliximab Induction Therapy in Pediatric IBD Using Point-of-Care Assay",
+     "journal": "Journal of clinical medicine",
+     "year": 2025,
+     "first_author": "Hemperly"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "infliximab",
+     "id": "NCIT:C1789",
+     "label": "Infliximab",
+     "synonyms": [
+      "Avakine",
+      "Remicade",
+      "Remsima",
+      "cA2"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "TNF",
+     "id": "HGNC:11892",
+     "label": "tumor necrosis factor",
+     "synonyms": [
+      "TNFSF2",
+      "DIF",
+      "TNF-alpha",
+      "TNFA",
+      "TNF superfamily, member 2"
+     ],
+     "uniprot": "P01375"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005265",
+     "label": "inflammatory bowel disease",
+     "synonyms": [
+      "IBD",
+      "autoimmune bowel disorder"
+     ]
+    },
+    {
+     "id": "MONDO:0005011",
+     "label": "Crohn disease",
+     "synonyms": [
+      "Crohn's disease of large bowel",
+      "Crohn's disease",
+      "paediatric Crohn's disease",
+      "pediatric Crohn's disease",
+      "regional enteritis"
+     ]
+    },
+    {
+     "id": "MONDO:0005101",
+     "label": "ulcerative colitis",
+     "synonyms": [
+      "left-sided ulcerative colitis",
+      "colitis ulcerative",
+      "ulcerative colitis (disease)"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "infliximab_concentration_ug_ml": {
+     "analyte": {
+      "label": "infliximab",
+      "id": "NCIT:C1789"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "auc_ug_day_ml": {
+     "analyte": {
+      "label": "infliximab",
+      "id": "NCIT:C1789"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response": {
+   "citations": [
+    {
+     "doi": "10.1186/s40425-019-0669-y",
+     "pmid": "31324223",
+     "pmcid": "PMC6642527",
+     "title": "A prospective cohort study on the pharmacokinetics of nivolumab in metastatic non-small cell lung cancer, melanoma, and renal cell cancer patients",
+     "journal": "Journal for immunotherapy of cancer",
+     "year": 2019,
+     "first_author": "Hurkmans"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "nivolumab",
+     "id": "NCIT:C68814",
+     "label": "Nivolumab",
+     "synonyms": [
+      "ABP 206",
+      "BCD-263",
+      "BMS 936558",
+      "BMS-936558",
+      "BMS936558",
+      "CMAB819",
+      "MDX 1106",
+      "MDX-1106",
+      "MDX1106",
+      "NIVO",
+      "Nivolumab Biosimilar ABP 206",
+      "Nivolumab Biosimilar BCD-263",
+      "Nivolumab Biosimilar CMAB819",
+      "ONO 4538",
+      "ONO-4538",
+      "ONO4538",
+      "Opdivo"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "PDCD1",
+     "id": "HGNC:8760",
+     "label": "programmed cell death 1",
+     "synonyms": [
+      "CD279",
+      "PD1",
+      "hSLE1",
+      "PD-1",
+      "SLEB2"
+     ],
+     "uniprot": "Q15116"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005233",
+     "label": "non-small cell lung carcinoma",
+     "synonyms": [
+      "NSCLC - non-small cell lung cancer",
+      "NSCLC",
+      "non-small cell cancer of lung",
+      "non-small cell cancer of the lung",
+      "non-small cell carcinoma of lung",
+      "non-small cell carcinoma of the lung",
+      "non-small cell lung cancer",
+      "non-small cell lung carcinoma (disease)"
+     ]
+    },
+    {
+     "id": "MONDO:0005105",
+     "label": "melanoma",
+     "synonyms": [
+      "malignant melanoma",
+      "melanoma (disease)",
+      "melanoma, malignant"
+     ]
+    },
+    {
+     "id": "MONDO:0005086",
+     "label": "renal cell carcinoma",
+     "synonyms": [
+      "RCC",
+      "kidney adenocarcinoma",
+      "renal cell adenocarcinoma",
+      "renal cell carcinoma (disease)"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_mg_L": {
+     "analyte": {
+      "label": "nivolumab",
+      "id": "NCIT:C68814"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    }
+   }
+  },
+  "qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er": {
+   "citations": [
+    {
+     "doi": "10.1093/ecco-jcc/jjac036",
+     "pmid": "35301512",
+     "pmcid": "PMC9426668",
+     "title": "Pharmacokinetics, Safety and Efficacy of Intravenous Vedolizumab in Paediatric Patients with Ulcerative Colitis or Crohn's Disease: Results from the Phase 2 HUBBLE Study",
+     "journal": "Journal of Crohn's & colitis",
+     "year": 2022,
+     "first_author": "Hyams"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "vedolizumab",
+     "id": "NCIT:C95798",
+     "label": "Vedolizumab",
+     "synonyms": [
+      "Entyvio",
+      "LDP 02",
+      "LDP-02",
+      "LDP02",
+      "MLN0002",
+      "MLN02"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ITGA4",
+     "id": "HGNC:6140",
+     "label": "integrin subunit alpha 4",
+     "synonyms": [
+      "CD49d",
+      "antigen CD49D",
+      "alpha 4 subunit of VLA-4 receptor"
+     ],
+     "uniprot": "P13612"
+    },
+    {
+     "symbol": "ITGB7",
+     "id": "HGNC:6162",
+     "label": "integrin subunit beta 7",
+     "synonyms": [],
+     "uniprot": "P26010"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005101",
+     "label": "ulcerative colitis",
+     "synonyms": [
+      "left-sided ulcerative colitis",
+      "colitis ulcerative",
+      "ulcerative colitis (disease)"
+     ]
+    },
+    {
+     "id": "MONDO:0005011",
+     "label": "Crohn disease",
+     "synonyms": [
+      "Crohn's disease of large bowel",
+      "Crohn's disease",
+      "paediatric Crohn's disease",
+      "pediatric Crohn's disease",
+      "regional enteritis"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_concentration_ug_mL": {
+     "analyte": {
+      "label": "vedolizumab",
+      "id": "NCIT:C95798"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "cumulative_auc_ug_day_mL": {
+     "analyte": {
+      "label": "vedolizumab",
+      "id": "NCIT:C95798"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp": {
+   "citations": [
+    {
+     "doi": "10.1208/s12248-019-0350-x",
+     "pmid": "31236847",
+     "pmcid": "PMC6591205",
+     "title": "A Computational Model of Neoadjuvant PD-1 Inhibition in Non-Small Cell Lung Cancer",
+     "journal": "The AAPS journal",
+     "year": 2019,
+     "first_author": "Jafarnejad"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "nivolumab",
+     "id": "NCIT:C68814",
+     "label": "Nivolumab",
+     "synonyms": [
+      "ABP 206",
+      "BCD-263",
+      "BMS 936558",
+      "BMS-936558",
+      "BMS936558",
+      "CMAB819",
+      "MDX 1106",
+      "MDX-1106",
+      "MDX1106",
+      "NIVO",
+      "Nivolumab Biosimilar ABP 206",
+      "Nivolumab Biosimilar BCD-263",
+      "Nivolumab Biosimilar CMAB819",
+      "ONO 4538",
+      "ONO-4538",
+      "ONO4538",
+      "Opdivo"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "PDCD1",
+     "id": "HGNC:8760",
+     "label": "programmed cell death 1",
+     "synonyms": [
+      "CD279",
+      "PD1",
+      "hSLE1",
+      "PD-1",
+      "SLEB2"
+     ],
+     "uniprot": "Q15116"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005233",
+     "label": "non-small cell lung carcinoma",
+     "synonyms": [
+      "NSCLC - non-small cell lung cancer",
+      "NSCLC",
+      "non-small cell cancer of lung",
+      "non-small cell cancer of the lung",
+      "non-small cell carcinoma of lung",
+      "non-small cell carcinoma of the lung",
+      "non-small cell lung cancer",
+      "non-small cell lung carcinoma (disease)"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "pd1_blockade_fraction": {
+     "analyte": {
+      "label": "PDCD1",
+      "id": "HGNC:8760"
+     },
+     "quantity": "occupancy",
+     "matrix": null,
+     "compartment": "tumor",
+     "ucum": "1"
+    },
+    "tumor_regression_percent_calc": {
+     "analyte": {
+      "label": "tumor size",
+      "id": null
+     },
+     "quantity": "percent_of_baseline",
+     "matrix": null,
+     "compartment": "tumor",
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1186/s13024-023-00630-7",
+     "pmid": "37355598",
+     "pmcid": "PMC10290391",
+     "title": "Targeted degradation of ⍺-synuclein aggregates in Parkinson's disease using the AUTOTAC technology",
+     "journal": "Molecular neurodegeneration",
+     "year": 2023,
+     "first_author": "Lee"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:10090",
+     "label": "Mus musculus",
+     "synonyms": [
+      "house mouse",
+      "mouse"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "ATC161",
+     "id": null,
+     "label": "ATC161",
+     "synonyms": [],
+     "modality": "targeted_protein_degrader"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "targeted_protein_degrader",
+     "id": null,
+     "label": "targeted protein degrader"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "SNCA",
+     "id": "HGNC:11138",
+     "label": "synuclein alpha",
+     "synonyms": [
+      "NACP",
+      "PD1",
+      "PARK1",
+      "PARK4",
+      "non A4 component of amyloid precursor",
+      "alpha-synuclein",
+      "α-synuclein"
+     ],
+     "uniprot": "P37840"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005180",
+     "label": "Parkinson disease",
+     "synonyms": [
+      "PD",
+      "Parkinson's disease",
+      "paralysis agitans"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "oral",
+     "id": "NCIT:C38288",
+     "label": "Oral Route of Administration"
+    }
+   ],
+   "readouts": {
+    "plasma_atc161_ng_mL": {
+     "analyte": {
+      "label": "ATC161",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "ng/mL"
+    },
+    "aggregate_fraction": {
+     "analyte": {
+      "label": "alpha-synuclein aggregates",
+      "id": null
+     },
+     "quantity": "fraction",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "degradation_effect_fraction": {
+     "analyte": {
+      "label": "alpha-synuclein aggregates",
+      "id": null
+     },
+     "quantity": "fraction",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    }
+   }
+  },
+  "qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd": {
+   "citations": [
+    {
+     "doi": "10.1007/s00228-024-03703-8",
+     "pmid": "38814441",
+     "pmcid": "PMC11303580",
+     "title": "Population pharmacokinetic, pharmacodynamic and efficacy modeling of SB12 (proposed eculizumab biosimilar) and reference eculizumab",
+     "journal": "European journal of clinical pharmacology",
+     "year": 2024,
+     "first_author": "Lee"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "eculizumab",
+     "id": "NCIT:C48386",
+     "label": "Eculizumab",
+     "synonyms": [
+      "ABP 959",
+      "ABP-959",
+      "ABP959",
+      "Alexion",
+      "BCD 148",
+      "BCD-148",
+      "BCD148",
+      "Eculizumab Biosimilar ABP 959",
+      "Eculizumab Biosimilar BCD-148",
+      "Eculizumab Biosimilar SB12",
+      "Eculizumab-beke",
+      "Eculizumab-epys",
+      "Elizaria",
+      "Monoclonal antibody 5G1.1",
+      "SB 12",
+      "SB-12",
+      "SB12",
+      "Soliris",
+      "h5G1.1"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "C5",
+     "id": "HGNC:1331",
+     "label": "complement C5",
+     "synonyms": [
+      "CPAMD4",
+      "C5a",
+      "C5b",
+      "prepro-C5",
+      "C5a anaphylatoxin"
+     ],
+     "uniprot": "P01031"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0100244",
+     "label": "paroxysmal nocturnal hemoglobinuria",
+     "synonyms": [
+      "Marchiafava-Micheli disease",
+      "PNH",
+      "acquired paroxysmal nocturnal hemoglobinuria",
+      "hereditary paroxysmal nocturnal hemoglobinuria",
+      "inherited paroxysmal nocturnal hemoglobinuria",
+      "paroxysmal hemoglobinuria"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_ug_ml": {
+     "analyte": {
+      "label": "eculizumab",
+      "id": "NCIT:C48386"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "terminal_complement_activity_pct": {
+     "analyte": {
+      "label": "terminal complement activity",
+      "id": null
+     },
+     "quantity": "percent",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "%"
+    },
+    "ldh_u_l": {
+     "analyte": {
+      "label": "lactate dehydrogenase activity",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "U/L"
+    }
+   }
+  },
+  "qspquest_lee_2024_sb12_eculizumab_healthy_poppkpd": {
+   "citations": [
+    {
+     "doi": "10.1007/s00228-024-03703-8",
+     "pmid": "38814441",
+     "pmcid": "PMC11303580",
+     "title": "Population pharmacokinetic, pharmacodynamic and efficacy modeling of SB12 (proposed eculizumab biosimilar) and reference eculizumab",
+     "journal": "European journal of clinical pharmacology",
+     "year": 2024,
+     "first_author": "Lee"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "eculizumab",
+     "id": "NCIT:C48386",
+     "label": "Eculizumab",
+     "synonyms": [
+      "ABP 959",
+      "ABP-959",
+      "ABP959",
+      "Alexion",
+      "BCD 148",
+      "BCD-148",
+      "BCD148",
+      "Eculizumab Biosimilar ABP 959",
+      "Eculizumab Biosimilar BCD-148",
+      "Eculizumab Biosimilar SB12",
+      "Eculizumab-beke",
+      "Eculizumab-epys",
+      "Elizaria",
+      "Monoclonal antibody 5G1.1",
+      "SB 12",
+      "SB-12",
+      "SB12",
+      "Soliris",
+      "h5G1.1"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "C5",
+     "id": "HGNC:1331",
+     "label": "complement C5",
+     "synonyms": [
+      "CPAMD4",
+      "C5a",
+      "C5b",
+      "prepro-C5",
+      "C5a anaphylatoxin"
+     ],
+     "uniprot": "P01031"
+    }
+   ],
+   "indications": [],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_ug_ml": {
+     "analyte": {
+      "label": "eculizumab",
+      "id": "NCIT:C48386"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "terminal_complement_activity_pct": {
+     "analyte": {
+      "label": "terminal complement activity",
+      "id": null
+     },
+     "quantity": "percent",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic": {
+   "citations": [
+    {
+     "doi": "10.3389/fphar.2024.1526936",
+     "pmid": "39840094",
+     "pmcid": "PMC11746908",
+     "title": "Kinetic-pharmacodynamic model to predict post-rituximab B-cell repletion as a predictor of relapse in pediatric idiopathic nephrotic syndrome",
+     "journal": "Frontiers in pharmacology",
+     "year": 2024,
+     "first_author": "Li"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "rituximab",
+     "id": "NCIT:C1702",
+     "label": "Rituximab",
+     "synonyms": [
+      "ABP 798",
+      "ABP-798",
+      "ABP798",
+      "BI 695500",
+      "BI-695500",
+      "BI695500",
+      "Blitzima",
+      "C2B8 Monoclonal Antibody",
+      "CT P10",
+      "CT-P10",
+      "CTP10",
+      "Chimeric Anti-CD20 Antibody",
+      "GP 2013",
+      "GP-2013",
+      "GP2013",
+      "IDEC 102",
+      "IDEC-102",
+      "IDEC-C2B8 Monoclonal Antibody",
+      "IDEC-C2B8",
+      "IDEC102",
+      "Ikgdar",
+      "MabThera",
+      "Mabtas",
+      "Monoclonal Antibody IDEC-C2B8",
+      "PF 05280586",
+      "PF-05280586",
+      "PF05280586",
+      "RTXM 83",
+      "RTXM-83",
+      "RTXM83",
+      "Riabni",
+      "Ritemvia",
+      "Rituxan",
+      "Rituximab ABBS",
+      "Rituximab ARRX",
+      "Rituximab Biosimilar ABP 798",
+      "Rituximab Biosimilar BI 695500",
+      "Rituximab Biosimilar CT-P10",
+      "Rituximab Biosimilar GB241",
+      "Rituximab Biosimilar GP2013",
+      "Rituximab Biosimilar IBI301",
+      "Rituximab Biosimilar JHL1101",
+      "Rituximab Biosimilar PF-05280586",
+      "Rituximab Biosimilar RTXM83",
+      "Rituximab Biosimilar SAIT101",
+      "Rituximab Biosimilar SIBP-02",
+      "Rituximab PVVR",
+      "Rituximab-abbs",
+      "Rituximab-arrx",
+      "Rituximab-blit",
+      "Rituximab-pvvr",
+      "Rituximab-rite",
+      "Rituximab-rixa",
+      "Rituximab-rixi",
+      "Rixathon",
+      "Riximyo",
+      "Ruxience",
+      "Truxima",
+      "rituximab biosimilar TQB2303"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "MS4A1",
+     "id": "HGNC:7315",
+     "label": "membrane spanning 4-domains A1",
+     "synonyms": [
+      "B1",
+      "Bp35",
+      "FMC7",
+      "CD20"
+     ],
+     "uniprot": "P11836"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0018170",
+     "label": "idiopathic nephrotic syndrome",
+     "synonyms": []
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "A1_mg": {
+     "analyte": {
+      "label": "rituximab",
+      "id": "NCIT:C1702"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "K-PD drug compartment",
+     "ucum": "mg"
+    },
+    "cd19_cells_ul": {
+     "analyte": {
+      "label": "B cell",
+      "id": "CL:0000236"
+     },
+     "quantity": "cell_density",
+     "matrix": {
+      "id": "UBERON:0000178",
+      "label": "blood"
+     },
+     "compartment": null,
+     "ucum": "/uL"
+    }
+   }
+  },
+  "qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp": {
+   "citations": [
+    {
+     "doi": "10.1007/s10928-026-10051-w",
+     "pmid": "42471535",
+     "pmcid": "PMC13380586",
+     "title": "QSP model for AAV-mediated antibody delivery in rat brain",
+     "journal": "Journal of pharmacokinetics and pharmacodynamics",
+     "year": 2026,
+     "first_author": "Liu"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:10116",
+     "label": "Rattus norvegicus",
+     "synonyms": [
+      "Mus norvegicus",
+      "Norway rat",
+      "brown rat",
+      "rat",
+      "rats"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "AAV-encoded anti-TargetX antibody",
+     "id": null,
+     "label": "AAV-encoded anti-TargetX antibody",
+     "synonyms": [],
+     "modality": "gene_therapy"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "gene_therapy",
+     "id": "NCIT:C15238",
+     "label": "Gene Therapy"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": null,
+     "id": null,
+     "label": "TargetX",
+     "synonyms": [],
+     "uniprot": null,
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    },
+    {
+     "key": "intracisternal",
+     "id": "NCIT:C38233",
+     "label": "Intracisternal Route of Administration"
+    },
+    {
+     "key": "intracerebral",
+     "id": "NCIT:C38232",
+     "label": "Intracerebral Route of Administration"
+    }
+   ],
+   "readouts": {
+    "mab_plasma_ug_mL": {
+     "analyte": {
+      "label": "AAV-encoded anti-TargetX antibody",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "ug/mL"
+    },
+    "mab_isf_nM": {
+     "analyte": {
+      "label": "AAV-encoded anti-TargetX antibody",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0000913",
+      "label": "interstitial fluid"
+     },
+     "compartment": "brain",
+     "ucum": "nmol/L"
+    },
+    "target_isf_pct_baseline": {
+     "analyte": {
+      "label": "TargetX",
+      "id": null
+     },
+     "quantity": "percent_of_baseline",
+     "matrix": {
+      "id": "UBERON:0000913",
+      "label": "interstitial fluid"
+     },
+     "compartment": "brain",
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp": {
+   "citations": [
+    {
+     "doi": "10.1007/s10928-026-10051-w",
+     "pmid": "42471535",
+     "pmcid": "PMC13380586",
+     "title": "QSP model for AAV-mediated antibody delivery in rat brain",
+     "journal": "Journal of pharmacokinetics and pharmacodynamics",
+     "year": 2026,
+     "first_author": "Liu"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:10116",
+     "label": "Rattus norvegicus",
+     "synonyms": [
+      "Mus norvegicus",
+      "Norway rat",
+      "brown rat",
+      "rat",
+      "rats"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "AAV-encoded anti-TargetX antibody",
+     "id": null,
+     "label": "AAV-encoded anti-TargetX antibody",
+     "synonyms": [],
+     "modality": "gene_therapy"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "gene_therapy",
+     "id": "NCIT:C15238",
+     "label": "Gene Therapy"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": null,
+     "id": null,
+     "label": "TargetX",
+     "synonyms": [],
+     "uniprot": null,
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    },
+    {
+     "key": "intracisternal",
+     "id": "NCIT:C38233",
+     "label": "Intracisternal Route of Administration"
+    },
+    {
+     "key": "intracerebral",
+     "id": "NCIT:C38232",
+     "label": "Intracerebral Route of Administration"
+    }
+   ],
+   "readouts": {
+    "mab_plasma_nM": {
+     "analyte": {
+      "label": "AAV-encoded anti-TargetX antibody",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "nmol/L"
+    },
+    "mab_isf_nM": {
+     "analyte": {
+      "label": "AAV-encoded anti-TargetX antibody",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0000913",
+      "label": "interstitial fluid"
+     },
+     "compartment": "brain",
+     "ucum": "nmol/L"
+    },
+    "target_isf_pct_baseline": {
+     "analyte": {
+      "label": "TargetX",
+      "id": null
+     },
+     "quantity": "percent_of_baseline",
+     "matrix": {
+      "id": "UBERON:0000913",
+      "label": "interstitial fluid"
+     },
+     "compartment": "brain",
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_lobet_2026_panitumumab_body_composition_poppk": {
+   "citations": [
+    {
+     "doi": "10.1016/j.biopha.2026.119242",
+     "pmid": "41865627",
+     "pmcid": null,
+     "title": "Analysis of the relationship between body composition and the pharmacokinetics of panitumumab in the treatment of localized squamous cell carcinoma of the anus - An ancillary study of the FFCD0904 phase I and II trial",
+     "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
+     "year": 2026,
+     "first_author": "Lobet"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "panitumumab",
+     "id": "NCIT:C1857",
+     "label": "Panitumumab",
+     "synonyms": [
+      "ABX-EGF Monoclonal Antibody",
+      "ABX-EGF",
+      "ABX-EGF, Clone E7.6.3",
+      "E7.6.3",
+      "Human IgG2K Monoclonal Antibody",
+      "MoAb ABX-EGF",
+      "MoAb E7.6.3",
+      "Monoclonal Antibody ABX-EGF",
+      "Monoclonal Antibody E7.6.3",
+      "Vectibix"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "EGFR",
+     "id": "HGNC:3236",
+     "label": "epidermal growth factor receptor",
+     "synonyms": [
+      "ERBB1",
+      "ERRP",
+      "ERBB",
+      "erythroblastic leukemia viral (v-erb-b) oncogene homolog (avian)",
+      "erb-b2 receptor tyrosine kinase 1"
+     ],
+     "uniprot": "P00533"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0006082",
+     "label": "anal squamous cell carcinoma",
+     "synonyms": [
+      "squamous cell carcinoma - anus",
+      "ANSC",
+      "anal squamous cell cancer",
+      "anus squamous cell carcinoma",
+      "epidermoid anal carcinoma",
+      "epidermoid carcinoma of anus",
+      "epidermoid carcinoma of the anus",
+      "squamous cell anal carcinoma",
+      "squamous cell carcinoma of anus",
+      "squamous cell carcinoma of the anus"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_mg_l": {
+     "analyte": {
+      "label": "panitumumab",
+      "id": "NCIT:C1857"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "auc_mg_day_l": {
+     "analyte": {
+      "label": "panitumumab",
+      "id": "NCIT:C1857"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg.d/L"
+    }
+   }
+  },
+  "qspquest_markovic_2024_vedolizumab_clearance_remission_poppk": {
+   "citations": [
+    {
+     "doi": "10.3390/pharmaceutics16121629",
+     "pmid": "39771608",
+     "pmcid": "PMC11677246",
+     "title": "Vedolizumab Clearance as a Surrogate Marker for Remission in Inflammatory Bowel Disease Patients: Insights from Real-World Pharmacokinetics",
+     "journal": "Pharmaceutics",
+     "year": 2024,
+     "first_author": "Marković"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "vedolizumab",
+     "id": "NCIT:C95798",
+     "label": "Vedolizumab",
+     "synonyms": [
+      "Entyvio",
+      "LDP 02",
+      "LDP-02",
+      "LDP02",
+      "MLN0002",
+      "MLN02"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ITGA4",
+     "id": "HGNC:6140",
+     "label": "integrin subunit alpha 4",
+     "synonyms": [
+      "CD49d",
+      "antigen CD49D",
+      "alpha 4 subunit of VLA-4 receptor"
+     ],
+     "uniprot": "P13612"
+    },
+    {
+     "symbol": "ITGB7",
+     "id": "HGNC:6162",
+     "label": "integrin subunit beta 7",
+     "synonyms": [],
+     "uniprot": "P26010"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005101",
+     "label": "ulcerative colitis",
+     "synonyms": [
+      "left-sided ulcerative colitis",
+      "colitis ulcerative",
+      "ulcerative colitis (disease)"
+     ]
+    },
+    {
+     "id": "MONDO:0005011",
+     "label": "Crohn disease",
+     "synonyms": [
+      "Crohn's disease of large bowel",
+      "Crohn's disease",
+      "paediatric Crohn's disease",
+      "pediatric Crohn's disease",
+      "regional enteritis"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "C_central_ug_mL": {
+     "analyte": {
+      "label": "vedolizumab",
+      "id": "NCIT:C95798"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "AUC_central_ug_day_mL": {
+     "analyte": {
+      "label": "vedolizumab",
+      "id": "NCIT:C95798"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_monteleone_2021_eculizumab_gmg_pkpd": {
+   "citations": [
+    {
+     "doi": "10.3389/fneur.2021.696385",
+     "pmid": "34795626",
+     "pmcid": "PMC8594444",
+     "title": "Eculizumab Pharmacokinetics and Pharmacodynamics in Patients With Generalized Myasthenia Gravis",
+     "journal": "Frontiers in neurology",
+     "year": 2021,
+     "first_author": "Monteleone"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "eculizumab",
+     "id": "NCIT:C48386",
+     "label": "Eculizumab",
+     "synonyms": [
+      "ABP 959",
+      "ABP-959",
+      "ABP959",
+      "Alexion",
+      "BCD 148",
+      "BCD-148",
+      "BCD148",
+      "Eculizumab Biosimilar ABP 959",
+      "Eculizumab Biosimilar BCD-148",
+      "Eculizumab Biosimilar SB12",
+      "Eculizumab-beke",
+      "Eculizumab-epys",
+      "Elizaria",
+      "Monoclonal antibody 5G1.1",
+      "SB 12",
+      "SB-12",
+      "SB12",
+      "Soliris",
+      "h5G1.1"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "C5",
+     "id": "HGNC:1331",
+     "label": "complement C5",
+     "synonyms": [
+      "CPAMD4",
+      "C5a",
+      "C5b",
+      "prepro-C5",
+      "C5a anaphylatoxin"
+     ],
+     "uniprot": "P01031"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0009688",
+     "label": "myasthenia gravis",
+     "synonyms": [
+      "MG",
+      "acquired myasthenia",
+      "autoimmune myasthenia gravis"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_ug_mL": {
+     "analyte": {
+      "label": "eculizumab",
+      "id": "NCIT:C48386"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "free_c5_ug_mL": {
+     "analyte": {
+      "label": "C5",
+      "id": "HGNC:1331"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "ug/mL"
+    },
+    "hemolysis_pct": {
+     "analyte": {
+      "label": "complement-mediated hemolysis",
+      "id": null
+     },
+     "quantity": "percent",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_ortiz_2024_ravulizumab_nmosd_pkpd": {
+   "citations": [
+    {
+     "doi": "10.3389/fneur.2024.1332890",
+     "pmid": "38356884",
+     "pmcid": "PMC10865503",
+     "title": "Immediate and sustained terminal complement inhibition with ravulizumab in patients with anti-aquaporin-4 antibody-positive neuromyelitis optica spectrum disorder",
+     "journal": "Frontiers in neurology",
+     "year": 2024,
+     "first_author": "Ortiz"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "ravulizumab",
+     "id": "NCIT:C124657",
+     "label": "Ravulizumab",
+     "synonyms": [
+      "ALXN 1210",
+      "ALXN-1210",
+      "ALXN1210",
+      "Ravulizumab-cwvz",
+      "Ultomiris"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "C5",
+     "id": "HGNC:1331",
+     "label": "complement C5",
+     "synonyms": [
+      "CPAMD4",
+      "C5a",
+      "C5b",
+      "prepro-C5",
+      "C5a anaphylatoxin"
+     ],
+     "uniprot": "P01031"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0019100",
+     "label": "neuromyelitis optica",
+     "synonyms": [
+      "Devic disease",
+      "Devic syndrome",
+      "Devic's neuromyelitis optica",
+      "NMO",
+      "Neuromyelitis Optica Spectrum Disorder"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": {
+      "label": "ravulizumab",
+      "id": "NCIT:C124657"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg"
+    },
+    "free_c5_ug_ml": {
+     "analyte": {
+      "label": "C5",
+      "id": "HGNC:1331"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "ug/mL"
+    },
+    "auc_ug_day_ml": {
+     "analyte": {
+      "label": "ravulizumab",
+      "id": "NCIT:C124657"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_pan_2020_pediatric_tp_pbpk_pk_sim": {
+   "citations": [
+    {
+     "doi": "10.3389/fphar.2020.00868",
+     "pmid": "32595502",
+     "pmcid": "PMC7300301",
+     "title": "Physiologically Based Pharmacokinetic Modeling of Monoclonal Antibodies in Pediatric Populations Using PK-Sim",
+     "journal": "Frontiers in pharmacology",
+     "year": 2020,
+     "first_author": "Basu"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "palivizumab",
+     "id": "NCIT:C2625",
+     "label": "Palivizumab",
+     "synonyms": [
+      "MEDI 493",
+      "Synagis"
+     ],
+     "modality": "monoclonal_antibody"
+    },
+    {
+     "name": "bevacizumab",
+     "id": "NCIT:C2039",
+     "label": "Bevacizumab",
+     "synonyms": [
+      "ABP 215",
+      "ABP-215",
+      "ABP215",
+      "Alymsys",
+      "Anti-VEGF Humanized Monoclonal Antibody",
+      "Anti-VEGF Monoclonal Antibody SIBP04",
+      "Anti-VEGF rhuMAb",
+      "Anti-VEGF",
+      "Avastin",
+      "Avzivi",
+      "Aybintio",
+      "BAT 1706",
+      "BAT-1706",
+      "BAT1706 Biosimilar",
+      "BAT1706",
+      "BP102 Biosimilar",
+      "BP102",
+      "Bevacizumab Biosimilar ABP 215",
+      "Bevacizumab Biosimilar BAT1706",
+      "Bevacizumab Biosimilar BEVZ92",
+      "Bevacizumab Biosimilar BI 695502",
+      "Bevacizumab Biosimilar CBT 124",
+      "Bevacizumab Biosimilar CT-P16",
+      "Bevacizumab Biosimilar FKB238",
+      "Bevacizumab Biosimilar GB-222",
+      "Bevacizumab Biosimilar HD204",
+      "Bevacizumab Biosimilar HLX04",
+      "Bevacizumab Biosimilar IBI305",
+      "Bevacizumab Biosimilar LY01008",
+      "Bevacizumab Biosimilar MB02",
+      "Bevacizumab Biosimilar MIL60",
+      "Bevacizumab Biosimilar MYL-1402O",
+      "Bevacizumab Biosimilar Mvasi",
+      "Bevacizumab Biosimilar QL 1101",
+      "Bevacizumab Biosimilar QL1101",
+      "Bevacizumab Biosimilar RPH-001",
+      "Bevacizumab Biosimilar SCT501",
+      "Bevacizumab Biosimilar Zirabev",
+      "Bevacizumab awwb",
+      "Bevacizumab-adcd",
+      "Bevacizumab-awwb",
+      "Bevacizumab-aybi",
+      "Bevacizumab-bvzr",
+      "Bevacizumab-equi",
+      "Bevacizumab-maly",
+      "Bevacizumab-onbe",
+      "Bevacizumab-tnjn",
+      "CT P16",
+      "CT-P16",
+      "CTP16",
+      "Equidacent",
+      "FKB 238",
+      "FKB-238",
+      "FKB238",
+      "HD204",
+      "MB 02",
+      "MB-02",
+      "MB02",
+      "MYL-1402O",
+      "Mvasi"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": null,
+     "id": "UniProt:P03420",
+     "label": "Fusion glycoprotein F0 (Human respiratory syncytial virus A (strain A2))",
+     "synonyms": [],
+     "uniprot": "P03420"
+    },
+    {
+     "symbol": "VEGFA",
+     "id": "HGNC:12680",
+     "label": "vascular endothelial growth factor A",
+     "synonyms": [
+      "VEGF-A",
+      "VPF",
+      "VEGF"
+     ],
+     "uniprot": "P15692"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0001577",
+     "label": "respiratory syncytial virus infectious disease",
+     "synonyms": [
+      "Human respiratory syncytial virus infection",
+      "infections, Human respiratory syncytial virus",
+      "respiratory syncytial virus infection"
+     ]
+    },
+    {
+     "id": "MONDO:0004992",
+     "label": "cancer",
+     "synonyms": [
+      "malignant neoplasm (disease)",
+      "CA",
+      "MT",
+      "cell type cancer",
+      "malignancy",
+      "malignant growth",
+      "malignant neoplasm",
+      "malignant neoplastic disease",
+      "malignant tumor",
+      "malignant tumour",
+      "neoplasm (disease), malignant",
+      "neoplasm, malignant"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intramuscular",
+     "id": "NCIT:C28161",
+     "label": "Intramuscular Route of Administration"
+    },
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_concentration_ug_ml": {
+     "analyte": {
+      "label": "bevacizumab",
+      "id": "NCIT:C2039"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "AUC_ug_ml_day": {
+     "analyte": {
+      "label": "bevacizumab",
+      "id": "NCIT:C2039"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd": {
+   "citations": [
+    {
+     "doi": "10.1007/s00280-015-2701-3",
+     "pmid": "25687989",
+     "pmcid": "PMC4365273",
+     "title": "A pharmacokinetic binding model for bevacizumab and VEGF165 in colorectal cancer patients",
+     "journal": "Cancer chemotherapy and pharmacology",
+     "year": 2015,
+     "first_author": "Panoilia"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "bevacizumab",
+     "id": "NCIT:C2039",
+     "label": "Bevacizumab",
+     "synonyms": [
+      "ABP 215",
+      "ABP-215",
+      "ABP215",
+      "Alymsys",
+      "Anti-VEGF Humanized Monoclonal Antibody",
+      "Anti-VEGF Monoclonal Antibody SIBP04",
+      "Anti-VEGF rhuMAb",
+      "Anti-VEGF",
+      "Avastin",
+      "Avzivi",
+      "Aybintio",
+      "BAT 1706",
+      "BAT-1706",
+      "BAT1706 Biosimilar",
+      "BAT1706",
+      "BP102 Biosimilar",
+      "BP102",
+      "Bevacizumab Biosimilar ABP 215",
+      "Bevacizumab Biosimilar BAT1706",
+      "Bevacizumab Biosimilar BEVZ92",
+      "Bevacizumab Biosimilar BI 695502",
+      "Bevacizumab Biosimilar CBT 124",
+      "Bevacizumab Biosimilar CT-P16",
+      "Bevacizumab Biosimilar FKB238",
+      "Bevacizumab Biosimilar GB-222",
+      "Bevacizumab Biosimilar HD204",
+      "Bevacizumab Biosimilar HLX04",
+      "Bevacizumab Biosimilar IBI305",
+      "Bevacizumab Biosimilar LY01008",
+      "Bevacizumab Biosimilar MB02",
+      "Bevacizumab Biosimilar MIL60",
+      "Bevacizumab Biosimilar MYL-1402O",
+      "Bevacizumab Biosimilar Mvasi",
+      "Bevacizumab Biosimilar QL 1101",
+      "Bevacizumab Biosimilar QL1101",
+      "Bevacizumab Biosimilar RPH-001",
+      "Bevacizumab Biosimilar SCT501",
+      "Bevacizumab Biosimilar Zirabev",
+      "Bevacizumab awwb",
+      "Bevacizumab-adcd",
+      "Bevacizumab-awwb",
+      "Bevacizumab-aybi",
+      "Bevacizumab-bvzr",
+      "Bevacizumab-equi",
+      "Bevacizumab-maly",
+      "Bevacizumab-onbe",
+      "Bevacizumab-tnjn",
+      "CT P16",
+      "CT-P16",
+      "CTP16",
+      "Equidacent",
+      "FKB 238",
+      "FKB-238",
+      "FKB238",
+      "HD204",
+      "MB 02",
+      "MB-02",
+      "MB02",
+      "MYL-1402O",
+      "Mvasi"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "VEGFA",
+     "id": "HGNC:12680",
+     "label": "vascular endothelial growth factor A",
+     "synonyms": [
+      "VEGF-A",
+      "VPF",
+      "VEGF"
+     ],
+     "uniprot": "P15692"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005575",
+     "label": "colorectal cancer",
+     "synonyms": [
+      "cancer of large bowel",
+      "cancer of large intestine",
+      "cancer of the large bowel",
+      "colon cancer, advanced, somatic",
+      "colon cancer, somatic",
+      "colorectal cancer with chromosomal instability, somatic",
+      "colorectal cancer, autosomal dominant, somatic mutation",
+      "colorectal cancer, somatic",
+      "colorectal cancer, susceptibility to, autosomal dominant, somatic mutation",
+      "malignant large bowel neoplasm",
+      "malignant large bowel tumor",
+      "malignant large intestine neoplasm",
+      "malignant large intestine tumor",
+      "malignant neoplasm of large bowel",
+      "malignant neoplasm of large intestine",
+      "malignant neoplasm of the large bowel",
+      "malignant neoplasm of the large intestine",
+      "malignant tumor of large bowel",
+      "malignant tumor of large intestine",
+      "malignant tumor of the large bowel",
+      "malignant tumor of the large intestine",
+      "CRC",
+      "cancer of colorectum",
+      "colorectum cancer",
+      "malignant colorectal neoplasm",
+      "malignant colorectal tumor",
+      "malignant colorectal tumour",
+      "malignant colorectum neoplasm",
+      "malignant large bowel tumour",
+      "malignant large intestine tumour",
+      "malignant neoplasm of colorectum",
+      "malignant tumour of large bowel",
+      "malignant tumour of large intestine",
+      "malignant tumour of the large bowel",
+      "malignant tumour of the large intestine"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "total_bevacizumab_mg_L": {
+     "analyte": {
+      "label": "bevacizumab",
+      "id": "NCIT:C2039"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "mg/L"
+    },
+    "free_vegf165_ng_L": {
+     "analyte": {
+      "label": "VEGFA",
+      "id": "HGNC:12680"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "ng/L"
+    },
+    "complex_nM": {
+     "analyte": {
+      "label": "bevacizumab-VEGF165 complex",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "nmol/L"
+    }
+   }
+  },
+  "qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1016/j.ebiom.2025.105989",
+     "pmid": "41187618",
+     "pmcid": "PMC12677076",
+     "title": "Comparison of rituximab induction and maintenance regimens in anti-neutrophil cytoplasmic antibodies (ANCA)-associated vasculitis: PK/PD modelling of ANCA and gammaglobulin levels in real-world patients",
+     "journal": "EBioMedicine",
+     "year": 2025,
+     "first_author": "Pasquiers"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "rituximab",
+     "id": "NCIT:C1702",
+     "label": "Rituximab",
+     "synonyms": [
+      "ABP 798",
+      "ABP-798",
+      "ABP798",
+      "BI 695500",
+      "BI-695500",
+      "BI695500",
+      "Blitzima",
+      "C2B8 Monoclonal Antibody",
+      "CT P10",
+      "CT-P10",
+      "CTP10",
+      "Chimeric Anti-CD20 Antibody",
+      "GP 2013",
+      "GP-2013",
+      "GP2013",
+      "IDEC 102",
+      "IDEC-102",
+      "IDEC-C2B8 Monoclonal Antibody",
+      "IDEC-C2B8",
+      "IDEC102",
+      "Ikgdar",
+      "MabThera",
+      "Mabtas",
+      "Monoclonal Antibody IDEC-C2B8",
+      "PF 05280586",
+      "PF-05280586",
+      "PF05280586",
+      "RTXM 83",
+      "RTXM-83",
+      "RTXM83",
+      "Riabni",
+      "Ritemvia",
+      "Rituxan",
+      "Rituximab ABBS",
+      "Rituximab ARRX",
+      "Rituximab Biosimilar ABP 798",
+      "Rituximab Biosimilar BI 695500",
+      "Rituximab Biosimilar CT-P10",
+      "Rituximab Biosimilar GB241",
+      "Rituximab Biosimilar GP2013",
+      "Rituximab Biosimilar IBI301",
+      "Rituximab Biosimilar JHL1101",
+      "Rituximab Biosimilar PF-05280586",
+      "Rituximab Biosimilar RTXM83",
+      "Rituximab Biosimilar SAIT101",
+      "Rituximab Biosimilar SIBP-02",
+      "Rituximab PVVR",
+      "Rituximab-abbs",
+      "Rituximab-arrx",
+      "Rituximab-blit",
+      "Rituximab-pvvr",
+      "Rituximab-rite",
+      "Rituximab-rixa",
+      "Rituximab-rixi",
+      "Rixathon",
+      "Riximyo",
+      "Ruxience",
+      "Truxima",
+      "rituximab biosimilar TQB2303"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "MS4A1",
+     "id": "HGNC:7315",
+     "label": "membrane spanning 4-domains A1",
+     "synonyms": [
+      "B1",
+      "Bp35",
+      "FMC7",
+      "CD20"
+     ],
+     "uniprot": "P11836"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005435",
+     "label": "anti-neutrophil antibody associated vasculitis",
+     "synonyms": []
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "rtx_central_mg": {
+     "analyte": {
+      "label": "rituximab",
+      "id": "NCIT:C1702"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg"
+    },
+    "anca_blood_u_ml": {
+     "analyte": {
+      "label": "anti-neutrophil cytoplasmic antibodies",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0000178",
+      "label": "blood"
+     },
+     "compartment": null,
+     "ucum": "U/mL"
+    },
+    "gg_g_l": {
+     "analyte": {
+      "label": "gamma globulins",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "g/L"
+    }
+   }
+  },
+  "qspquest_prybylski_2026_dazukibart_ifnb_dm_er": {
+   "citations": [
+    {
+     "doi": "10.1007/s10928-026-10022-1",
+     "pmid": "41874840",
+     "pmcid": "PMC13013141",
+     "title": "Early exposure-response modeling of an interferon-beta monoclonal antibody (dazukibart) in adults with dermatomyositis",
+     "journal": "Journal of pharmacokinetics and pharmacodynamics",
+     "year": 2026,
+     "first_author": "Prybylski"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "dazukibart",
+     "id": "NCIT:C191872",
+     "label": "Dazukibart",
+     "synonyms": [
+      "PF-06823859"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "IFNB1",
+     "id": "HGNC:5434",
+     "label": "interferon beta 1",
+     "synonyms": [
+      "IFB",
+      "IFF",
+      "IFNB"
+     ],
+     "uniprot": "P01574"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0016367",
+     "label": "dermatomyositis",
+     "synonyms": [
+      "Amyopathic dermatomyositis",
+      "DM",
+      "adult dermatomyositis",
+      "dermatopolymyositis"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": {
+      "label": "dazukibart",
+      "id": "NCIT:C191872"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg"
+    },
+    "ifn_total_pg_ml": {
+     "analyte": {
+      "label": "IFNB1",
+      "id": "HGNC:5434"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "pg/mL"
+    },
+    "end_cdasi_a": {
+     "analyte": {
+      "label": "Cutaneous Dermatomyositis Disease Area and Severity Index activity",
+      "id": null
+     },
+     "quantity": "score",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "{score}"
+    }
+   }
+  },
+  "qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er": {
+   "citations": [
+    {
+     "doi": "10.1007/s00280-016-3218-0",
+     "pmid": "28074265",
+     "pmcid": "PMC5306091",
+     "title": "Pharmacokinetic and exposure-response analyses of pertuzumab in combination with trastuzumab and docetaxel during neoadjuvant treatment of HER2+ early breast cancer",
+     "journal": "Cancer chemotherapy and pharmacology",
+     "year": 2017,
+     "first_author": "Quartino"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "pertuzumab",
+     "id": "NCIT:C38692",
+     "label": "Pertuzumab",
+     "synonyms": [
+      "2C4 Antibody",
+      "2C4",
+      "BCD-178",
+      "EG1206A",
+      "HLX11",
+      "HS627",
+      "MoAb 2C4",
+      "Monoclonal Antibody 2C4",
+      "Omnitarg",
+      "Perjeta",
+      "Pertuzumab Biosimilar BCD-178",
+      "Pertuzumab Biosimilar EG1206A",
+      "Pertuzumab Biosimilar HLX11",
+      "Pertuzumab Biosimilar HS627",
+      "Pertuzumab Biosimilar TQB2440",
+      "Pertuzumab-dpzb",
+      "Poherdy",
+      "RO4368451",
+      "Rhumab 2C4",
+      "TQB 2440",
+      "TQB-2440",
+      "TQB2440",
+      "rhuMAb2C4"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ERBB2",
+     "id": "HGNC:3430",
+     "label": "erb-b2 receptor tyrosine kinase 2",
+     "synonyms": [
+      "NEU",
+      "HER-2",
+      "CD340",
+      "HER2",
+      "c-ERB2",
+      "c-ERB-2",
+      "MLN-19",
+      "p185(erbB2)",
+      "NGL",
+      "neuro/glioblastoma derived oncogene homolog",
+      "human epidermal growth factor receptor 2",
+      "metastatic lymph node gene 19"
+     ],
+     "uniprot": "P04626"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0007254",
+     "label": "breast cancer",
+     "synonyms": [
+      "breast tumor",
+      "mammary tumor",
+      "primary breast cancer",
+      "breast tumour",
+      "cancer of breast",
+      "malignant breast neoplasm",
+      "malignant breast tumor",
+      "malignant breast tumour",
+      "malignant neoplasm of breast",
+      "malignant neoplasm of the breast",
+      "malignant tumor of breast",
+      "malignant tumor of the breast",
+      "malignant tumour of breast",
+      "malignant tumour of the breast",
+      "mammary tumour"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "pertuzumab_concentration_ug_mL": {
+     "analyte": {
+      "label": "pertuzumab",
+      "id": "NCIT:C38692"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "AUC_ug_day_mL": {
+     "analyte": {
+      "label": "pertuzumab",
+      "id": "NCIT:C38692"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_rajwade_2026_aav8_trastuzumab_nonlinear_pbpk": {
+   "citations": [
+    {
+     "doi": "10.1208/s12248-026-01285-0",
+     "pmid": "42711583",
+     "pmcid": null,
+     "title": "Decoding Nonlinearities in AAV-Based Gene Therapy Using PBPK Modelling",
+     "journal": "The AAPS journal",
+     "year": 2026,
+     "first_author": "Rajwade"
+    }
+   ],
+   "context": "preclinical",
+   "species": [
+    {
+     "id": "NCBITaxon:10090",
+     "label": "Mus musculus",
+     "synonyms": [
+      "house mouse",
+      "mouse"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "trastuzumab",
+     "id": "NCIT:C1647",
+     "label": "Trastuzumab",
+     "synonyms": [
+      "ABP 980",
+      "ALT02",
+      "Biceltis",
+      "CANMab",
+      "CT-P06",
+      "CT-P6",
+      "HLX 02",
+      "HLX-02",
+      "HLX02",
+      "Herceptin Biosimilar PF-05280014",
+      "Herceptin Trastuzumab Biosimilar PF-05280014",
+      "Herceptin",
+      "Hercessi",
+      "Herclon",
+      "Hertraz",
+      "Herwenda",
+      "Herzuma",
+      "Kanjinti",
+      "Ogivri",
+      "Ontruzant",
+      "PF 05280014",
+      "PF-05280014",
+      "PF05280014",
+      "QL 1701",
+      "QL-1701",
+      "QL1701",
+      "RO0452317",
+      "SB3",
+      "Trastuzumab Biosimilar ABP 980",
+      "Trastuzumab Biosimilar ALT02",
+      "Trastuzumab Biosimilar CT-P6",
+      "Trastuzumab Biosimilar HLX02",
+      "Trastuzumab Biosimilar PF-05280014",
+      "Trastuzumab Biosimilar QL1701",
+      "Trastuzumab Biosimilar SB3",
+      "Trastuzumab Biosimilar SIBP-01",
+      "Trastuzumab-anns",
+      "Trastuzumab-dkst",
+      "Trastuzumab-dttb",
+      "Trastuzumab-herw",
+      "Trastuzumab-pkrb",
+      "Trastuzumab-qyyp",
+      "Trastuzumab-strf",
+      "Trastuzumab-zerc",
+      "Trazimera",
+      "Zercepac",
+      "rhuMAb HER2",
+      "trastuzumab biosimilar EG12014"
+     ],
+     "modality": "gene_therapy"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "gene_therapy",
+     "id": "NCIT:C15238",
+     "label": "Gene Therapy"
+    }
+   ],
+   "targets": [],
+   "indications": [],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "aav_blood_vg_per_uL": {
+     "analyte": {
+      "label": "AAV8 vector genomes",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0000178",
+      "label": "blood"
+     },
+     "compartment": null,
+     "ucum": "{vg}/uL"
+    },
+    "mab_plasma_ug_mL": {
+     "analyte": {
+      "label": "trastuzumab",
+      "id": "NCIT:C1647"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "ug/mL"
+    },
+    "mab_brain_interstitial_nM": {
+     "analyte": {
+      "label": "trastuzumab",
+      "id": "NCIT:C1647"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0000913",
+      "label": "interstitial fluid"
+     },
+     "compartment": "brain",
+     "ucum": "nmol/L"
+    }
+   }
+  },
+  "qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd": {
+   "citations": [
+    {
+     "doi": "10.3390/pharmaceutics16121576",
+     "pmid": "39771555",
+     "pmcid": "PMC11678170",
+     "title": "Personalized Secukinumab Treatment in Patients with Plaque Psoriasis Using Model-Informed Precision Dosing",
+     "journal": "Pharmaceutics",
+     "year": 2024,
+     "first_author": "Rodriguez-Fernandez"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "secukinumab",
+     "id": "NCIT:C152315",
+     "label": "Secukinumab",
+     "synonyms": [
+      "AIN457",
+      "Cosentyx"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "IL17A",
+     "id": "HGNC:5981",
+     "label": "interleukin 17A",
+     "synonyms": [
+      "IL-17A",
+      "IL-17",
+      "CTLA8",
+      "IL17",
+      "cytotoxic T-lymphocyte-associated protein 8"
+     ],
+     "uniprot": "Q16552"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005083",
+     "label": "psoriasis",
+     "synonyms": []
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_concentration_mg_l": {
+     "analyte": {
+      "label": "secukinumab",
+      "id": "NCIT:C152315"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "drug_effect_fraction": {
+     "analyte": {
+      "label": "secukinumab",
+      "id": "NCIT:C152315"
+     },
+     "quantity": "fraction",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "pasi_target_gap": {
+     "analyte": {
+      "label": "Psoriasis Area and Severity Index",
+      "id": null
+     },
+     "quantity": "score",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "{score}"
+    }
+   }
+  },
+  "qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis": {
+   "citations": [
+    {
+     "doi": "10.3390/pharmaceutics16101295",
+     "pmid": "39458624",
+     "pmcid": "PMC11510411",
+     "title": "Model-Informed Precision Dosing for Personalized Ustekinumab Treatment in Plaque Psoriasis",
+     "journal": "Pharmaceutics",
+     "year": 2024,
+     "first_author": "Rodríguez-Fernández"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "ustekinumab",
+     "id": "NCIT:C84237",
+     "label": "Ustekinumab",
+     "synonyms": [
+      "CNTO 1275",
+      "CNTO1275",
+      "Stelara"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "IL12B",
+     "id": "HGNC:5970",
+     "label": "interleukin 12B",
+     "synonyms": [
+      "CLMF",
+      "IL-12B",
+      "NKSF",
+      "CLMF2",
+      "NKSF2",
+      "natural killer cell stimulatory factor-2",
+      "cytotoxic lymphocyte maturation factor 2, p40",
+      "interleukin 12, p40",
+      "natural killer cell stimulatory factor, 40 kD subunit",
+      "interleukin-12 beta chain",
+      "IL12, subunit p40"
+     ],
+     "uniprot": "P29460"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005083",
+     "label": "psoriasis",
+     "synonyms": []
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_concentration_mg_l": {
+     "analyte": {
+      "label": "ustekinumab",
+      "id": "NCIT:C84237"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "drug_effect_fraction": {
+     "analyte": {
+      "label": "ustekinumab",
+      "id": "NCIT:C84237"
+     },
+     "quantity": "fraction",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "pasi_target_gap": {
+     "analyte": {
+      "label": "Psoriasis Area and Severity Index",
+      "id": null
+     },
+     "quantity": "score",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "{score}"
+    }
+   }
+  },
+  "qspquest_serkland_2025_rituximab_ms_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1002/bcp.70136",
+     "pmid": "40515509",
+     "pmcid": null,
+     "title": "Pharmacokinetic-pharmacodynamic modelling in a clinical pilot study of rituximab in multiple sclerosis: Towards personalized dosing interval",
+     "journal": "British journal of clinical pharmacology",
+     "year": 2025,
+     "first_author": "Serkland"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "rituximab",
+     "id": "NCIT:C1702",
+     "label": "Rituximab",
+     "synonyms": [
+      "ABP 798",
+      "ABP-798",
+      "ABP798",
+      "BI 695500",
+      "BI-695500",
+      "BI695500",
+      "Blitzima",
+      "C2B8 Monoclonal Antibody",
+      "CT P10",
+      "CT-P10",
+      "CTP10",
+      "Chimeric Anti-CD20 Antibody",
+      "GP 2013",
+      "GP-2013",
+      "GP2013",
+      "IDEC 102",
+      "IDEC-102",
+      "IDEC-C2B8 Monoclonal Antibody",
+      "IDEC-C2B8",
+      "IDEC102",
+      "Ikgdar",
+      "MabThera",
+      "Mabtas",
+      "Monoclonal Antibody IDEC-C2B8",
+      "PF 05280586",
+      "PF-05280586",
+      "PF05280586",
+      "RTXM 83",
+      "RTXM-83",
+      "RTXM83",
+      "Riabni",
+      "Ritemvia",
+      "Rituxan",
+      "Rituximab ABBS",
+      "Rituximab ARRX",
+      "Rituximab Biosimilar ABP 798",
+      "Rituximab Biosimilar BI 695500",
+      "Rituximab Biosimilar CT-P10",
+      "Rituximab Biosimilar GB241",
+      "Rituximab Biosimilar GP2013",
+      "Rituximab Biosimilar IBI301",
+      "Rituximab Biosimilar JHL1101",
+      "Rituximab Biosimilar PF-05280586",
+      "Rituximab Biosimilar RTXM83",
+      "Rituximab Biosimilar SAIT101",
+      "Rituximab Biosimilar SIBP-02",
+      "Rituximab PVVR",
+      "Rituximab-abbs",
+      "Rituximab-arrx",
+      "Rituximab-blit",
+      "Rituximab-pvvr",
+      "Rituximab-rite",
+      "Rituximab-rixa",
+      "Rituximab-rixi",
+      "Rixathon",
+      "Riximyo",
+      "Ruxience",
+      "Truxima",
+      "rituximab biosimilar TQB2303"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "MS4A1",
+     "id": "HGNC:7315",
+     "label": "membrane spanning 4-domains A1",
+     "synonyms": [
+      "B1",
+      "Bp35",
+      "FMC7",
+      "CD20"
+     ],
+     "uniprot": "P11836"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005301",
+     "label": "multiple sclerosis",
+     "synonyms": [
+      "generalized multiple sclerosis",
+      "generalised multiple sclerosis"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "rituximab_concentration_mg_l": {
+     "analyte": {
+      "label": "rituximab",
+      "id": "NCIT:C1702"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "mg/L"
+    },
+    "cd19_cells_mm3": {
+     "analyte": {
+      "label": "B cell",
+      "id": "CL:0000236"
+     },
+     "quantity": "cell_density",
+     "matrix": {
+      "id": "UBERON:0000178",
+      "label": "blood"
+     },
+     "compartment": null,
+     "ucum": "/mm3"
+    }
+   }
+  },
+  "qspquest_sexton_2024_lanadelumab_hae_kks_qsp": {
+   "citations": [
+    {
+     "doi": "10.1007/s10928-024-09919-6",
+     "pmid": "38734778",
+     "pmcid": "PMC11579104",
+     "title": "A quantitative systems pharmacology model of plasma kallikrein-kinin system dysregulation in hereditary angioedema",
+     "journal": "Journal of pharmacokinetics and pharmacodynamics",
+     "year": 2024,
+     "first_author": "Sexton"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "lanadelumab",
+     "id": "NCIT:C166535",
+     "label": "Lanadelumab",
+     "synonyms": [
+      "DX-2930",
+      "Lanadelumab-flyo",
+      "SHP643",
+      "TAK-743",
+      "Takhzyro"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "KLKB1",
+     "id": "HGNC:6371",
+     "label": "kallikrein B1",
+     "synonyms": [
+      "KLK3",
+      "Fletcher factor"
+     ],
+     "uniprot": "P03952"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0019623",
+     "label": "hereditary angioedema",
+     "synonyms": [
+      "HAE",
+      "angioedema, hereditary",
+      "deficiency of C1 esterase inhibitor",
+      "familial angioneurotic edema",
+      "familial angioneurotic oedema",
+      "hereditary angioneurotic edema",
+      "hereditary angioneurotic oedema",
+      "hereditary bradykinine-induced angioedema",
+      "hereditary non histamine-induced angioedema"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "PK_Conc_Central_in_nM": {
+     "analyte": {
+      "label": "lanadelumab",
+      "id": "NCIT:C166535"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "nmol/L"
+    },
+    "CS_RO_BDKRB2": {
+     "analyte": {
+      "label": "BDKRB2",
+      "id": "HGNC:1030"
+     },
+     "quantity": "occupancy",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "1"
+    },
+    "CS_prct_HK2Chain": {
+     "analyte": {
+      "label": "two-chain high-molecular-weight kininogen",
+      "id": null
+     },
+     "quantity": "percent",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety": {
+   "citations": [
+    {
+     "doi": "10.1186/s40425-019-0791-x",
+     "pmid": "31753029",
+     "pmcid": "PMC6868826",
+     "title": "Population pharmacokinetics, exposure-safety, and immunogenicity of atezolizumab in pediatric and young adult patients with cancer",
+     "journal": "Journal for immunotherapy of cancer",
+     "year": 2019,
+     "first_author": "Shemesh"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "atezolizumab",
+     "id": "NCIT:C106250",
+     "label": "Atezolizumab",
+     "synonyms": [
+      "MPDL 3280A",
+      "MPDL 328OA",
+      "MPDL-3280A",
+      "MPDL3280A",
+      "MPDL328OA",
+      "RG 7446",
+      "RG-7446",
+      "RG7446",
+      "RO 5541267",
+      "RO-5541267",
+      "RO5541267",
+      "Tecentriq"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD274",
+     "id": "HGNC:17635",
+     "label": "CD274 molecule",
+     "synonyms": [
+      "B7-H",
+      "B7H1",
+      "PD-L1",
+      "PDL1",
+      "B7-H1",
+      "PDCD1LG1",
+      "B7 homolog 1"
+     ],
+     "uniprot": "Q9NZQ7"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004992",
+     "label": "cancer",
+     "synonyms": [
+      "malignant neoplasm (disease)",
+      "CA",
+      "MT",
+      "cell type cancer",
+      "malignancy",
+      "malignant growth",
+      "malignant neoplasm",
+      "malignant neoplastic disease",
+      "malignant tumor",
+      "malignant tumour",
+      "neoplasm (disease), malignant",
+      "neoplasm, malignant"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "C_central_ug_mL": {
+     "analyte": {
+      "label": "atezolizumab",
+      "id": "NCIT:C106250"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "AUC_ug_day_mL": {
+     "analyte": {
+      "label": "atezolizumab",
+      "id": "NCIT:C106250"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca": {
+   "citations": [
+    {
+     "doi": "10.1007/s10637-018-0570-4",
+     "pmid": "29453628",
+     "pmcid": "PMC6153548",
+     "title": "Safety, tolerability, and preliminary activity of IMGN529, a CD37-targeted antibody-drug conjugate, in patients with relapsed or refractory B-cell non-Hodgkin lymphoma: a dose-escalation, phase I study",
+     "journal": "Investigational new drugs",
+     "year": 2018,
+     "first_author": "Stathis"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "naratuximab emtansine",
+     "id": "NCIT:C100101",
+     "label": "Naratuximab Emtansine",
+     "synonyms": [
+      "IMGN529",
+      "MP 529",
+      "MP-529",
+      "MP529"
+     ],
+     "modality": "antibody_drug_conjugate"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "antibody_drug_conjugate",
+     "id": "NCIT:C129823",
+     "label": "Antineoplastic Antibody-Drug Conjugate"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD37",
+     "id": "HGNC:1666",
+     "label": "CD37 molecule",
+     "synonyms": [
+      "TSPAN26"
+     ],
+     "uniprot": "P11049"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0018908",
+     "label": "non-Hodgkin lymphoma",
+     "synonyms": [
+      "NHL",
+      "non-Hodgkin's lymphoma (NHL)",
+      "non-Hodgkin's lymphoma",
+      "non-Hodgkins lymphoma"
+     ]
+    },
+    {
+     "id": "MONDO:0018905",
+     "label": "diffuse large B-cell lymphoma",
+     "synonyms": [
+      "DLBCL"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "plasma_imgn529_ug_mL": {
+     "analyte": {
+      "label": "naratuximab emtansine",
+      "id": "NCIT:C100101"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "ug/mL"
+    },
+    "auc_h_ug_mL": {
+     "analyte": {
+      "label": "naratuximab emtansine",
+      "id": "NCIT:C100101"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "plasma",
+     "ucum": "h.ug/mL"
+    }
+   }
+  },
+  "qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge": {
+   "citations": [
+    {
+     "doi": "10.1208/s12248-025-01120-y",
+     "pmid": "41196551",
+     "pmcid": null,
+     "title": "Utilizing Minimal Physiologically Based Pharmacokinetic Modeling to Bridge Bevacizumab Pharmacokinetics from Adult to Pediatric Patients",
+     "journal": "The AAPS journal",
+     "year": 2025,
+     "first_author": "Sule"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "bevacizumab",
+     "id": "NCIT:C2039",
+     "label": "Bevacizumab",
+     "synonyms": [
+      "ABP 215",
+      "ABP-215",
+      "ABP215",
+      "Alymsys",
+      "Anti-VEGF Humanized Monoclonal Antibody",
+      "Anti-VEGF Monoclonal Antibody SIBP04",
+      "Anti-VEGF rhuMAb",
+      "Anti-VEGF",
+      "Avastin",
+      "Avzivi",
+      "Aybintio",
+      "BAT 1706",
+      "BAT-1706",
+      "BAT1706 Biosimilar",
+      "BAT1706",
+      "BP102 Biosimilar",
+      "BP102",
+      "Bevacizumab Biosimilar ABP 215",
+      "Bevacizumab Biosimilar BAT1706",
+      "Bevacizumab Biosimilar BEVZ92",
+      "Bevacizumab Biosimilar BI 695502",
+      "Bevacizumab Biosimilar CBT 124",
+      "Bevacizumab Biosimilar CT-P16",
+      "Bevacizumab Biosimilar FKB238",
+      "Bevacizumab Biosimilar GB-222",
+      "Bevacizumab Biosimilar HD204",
+      "Bevacizumab Biosimilar HLX04",
+      "Bevacizumab Biosimilar IBI305",
+      "Bevacizumab Biosimilar LY01008",
+      "Bevacizumab Biosimilar MB02",
+      "Bevacizumab Biosimilar MIL60",
+      "Bevacizumab Biosimilar MYL-1402O",
+      "Bevacizumab Biosimilar Mvasi",
+      "Bevacizumab Biosimilar QL 1101",
+      "Bevacizumab Biosimilar QL1101",
+      "Bevacizumab Biosimilar RPH-001",
+      "Bevacizumab Biosimilar SCT501",
+      "Bevacizumab Biosimilar Zirabev",
+      "Bevacizumab awwb",
+      "Bevacizumab-adcd",
+      "Bevacizumab-awwb",
+      "Bevacizumab-aybi",
+      "Bevacizumab-bvzr",
+      "Bevacizumab-equi",
+      "Bevacizumab-maly",
+      "Bevacizumab-onbe",
+      "Bevacizumab-tnjn",
+      "CT P16",
+      "CT-P16",
+      "CTP16",
+      "Equidacent",
+      "FKB 238",
+      "FKB-238",
+      "FKB238",
+      "HD204",
+      "MB 02",
+      "MB-02",
+      "MB02",
+      "MYL-1402O",
+      "Mvasi"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "VEGFA",
+     "id": "HGNC:12680",
+     "label": "vascular endothelial growth factor A",
+     "synonyms": [
+      "VEGF-A",
+      "VPF",
+      "VEGF"
+     ],
+     "uniprot": "P15692"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004992",
+     "label": "cancer",
+     "synonyms": [
+      "malignant neoplasm (disease)",
+      "CA",
+      "MT",
+      "cell type cancer",
+      "malignancy",
+      "malignant growth",
+      "malignant neoplasm",
+      "malignant neoplastic disease",
+      "malignant tumor",
+      "malignant tumour",
+      "neoplasm (disease), malignant",
+      "neoplasm, malignant"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": {
+      "label": "bevacizumab",
+      "id": "NCIT:C2039"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg"
+    },
+    "peripheral_mg": {
+     "analyte": {
+      "label": "bevacizumab",
+      "id": "NCIT:C2039"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "peripheral",
+     "ucum": "mg"
+    },
+    "auc_mg_h_l": {
+     "analyte": {
+      "label": "bevacizumab",
+      "id": "NCIT:C2039"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg.h/L"
+    }
+   }
+  },
+  "qspquest_ubi_2026_membrane_ternary_binding": {
+   "citations": [],
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical bispecific ligand",
+     "id": null,
+     "label": "hypothetical bispecific ligand",
+     "synonyms": [],
+     "modality": "bispecific_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "bispecific_antibody",
+     "id": "NCIT:C1454",
+     "label": "Bispecific Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": null,
+     "id": null,
+     "label": "hypothetical target",
+     "synonyms": [],
+     "uniprot": null,
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [],
+   "readouts": {
+    "ternary_bridge_nM": {
+     "analyte": {
+      "label": "ternary membrane bridge",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "nmol/L"
+    },
+    "left_site_ternary_percent": {
+     "analyte": {
+      "label": "left membrane site in ternary bridges",
+      "id": null
+     },
+     "quantity": "percent",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_ubi_2026_target_gated_cargo_qsp": {
+   "citations": [],
+   "context": "hypothetical",
+   "species": [],
+   "drugs": [
+    {
+     "name": "hypothetical target-gated cargo construct",
+     "id": null,
+     "label": "hypothetical target-gated cargo construct",
+     "synonyms": [],
+     "modality": null
+    }
+   ],
+   "modalities": [],
+   "targets": [
+    {
+     "symbol": null,
+     "id": null,
+     "label": "hypothetical target",
+     "synonyms": [],
+     "uniprot": null,
+     "hypothetical": true
+    }
+   ],
+   "indications": [],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "tumor_receptor_occupancy_percent": {
+     "analyte": {
+      "label": "tumor receptor",
+      "id": null
+     },
+     "quantity": "occupancy",
+     "matrix": null,
+     "compartment": "tumor",
+     "ucum": "%"
+    },
+    "central_receptor_occupancy_percent": {
+     "analyte": {
+      "label": "systemic receptor",
+      "id": null
+     },
+     "quantity": "occupancy",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "%"
+    },
+    "total_construct_nmol": {
+     "analyte": {
+      "label": "hypothetical target-gated cargo construct",
+      "id": null
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "whole body",
+     "ucum": "nmol"
+    }
+   }
+  },
+  "qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd": {
+   "citations": [
+    {
+     "doi": "10.1007/s11095-017-2183-6",
+     "pmid": "28593473",
+     "pmcid": "PMC5533838",
+     "title": "Pharmacokinetic-Pharmacodynamic Relationship of Erenumab (AMG 334) and Capsaicin-Induced Dermal Blood Flow in Healthy and Migraine Subjects",
+     "journal": "Pharmaceutical research",
+     "year": 2017,
+     "first_author": "Vu"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "erenumab",
+     "id": "NCIT:C169958",
+     "label": "Erenumab",
+     "synonyms": [
+      "AMG 334",
+      "AMG-334",
+      "AMG334",
+      "Aimovig"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CALCRL",
+     "id": "HGNC:16709",
+     "label": "calcitonin receptor like receptor",
+     "synonyms": [
+      "CGRPR",
+      "CRLR"
+     ],
+     "uniprot": "Q16602"
+    },
+    {
+     "symbol": "RAMP1",
+     "id": "HGNC:9843",
+     "label": "receptor activity modifying protein 1",
+     "synonyms": [],
+     "uniprot": "O60894"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005277",
+     "label": "migraine disorder",
+     "synonyms": [
+      "migraine headache",
+      "migraine"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    },
+    {
+     "key": "subcutaneous",
+     "id": "NCIT:C38299",
+     "label": "Subcutaneous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "total_concentration_ug_mL": {
+     "analyte": {
+      "label": "erenumab",
+      "id": "NCIT:C169958"
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001977",
+      "label": "blood serum"
+     },
+     "compartment": null,
+     "ucum": "ug/mL"
+    },
+    "cidbf_inhibition_pct": {
+     "analyte": {
+      "label": "capsaicin-induced dermal blood flow",
+      "id": null
+     },
+     "quantity": "percent",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    }
+   }
+  },
+  "qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk": {
+   "citations": [
+    {
+     "doi": "10.1002/prp2.1257",
+     "pmid": "39233318",
+     "pmcid": "PMC11374527",
+     "title": "Population pharmacokinetic modeling of vedolizumab for graft-versus-host disease prophylaxis in adults with allogeneic hematopoietic stem cell transplant",
+     "journal": "Pharmacology research & perspectives",
+     "year": 2024,
+     "first_author": "Waterhouse"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "vedolizumab",
+     "id": "NCIT:C95798",
+     "label": "Vedolizumab",
+     "synonyms": [
+      "Entyvio",
+      "LDP 02",
+      "LDP-02",
+      "LDP02",
+      "MLN0002",
+      "MLN02"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "ITGA4",
+     "id": "HGNC:6140",
+     "label": "integrin subunit alpha 4",
+     "synonyms": [
+      "CD49d",
+      "antigen CD49D",
+      "alpha 4 subunit of VLA-4 receptor"
+     ],
+     "uniprot": "P13612"
+    },
+    {
+     "symbol": "ITGB7",
+     "id": "HGNC:6162",
+     "label": "integrin subunit beta 7",
+     "synonyms": [],
+     "uniprot": "P26010"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0013730",
+     "label": "graft versus host disease",
+     "synonyms": [
+      "graft-versus-host disease, susceptibility to",
+      "GVH",
+      "GVHD",
+      "disease, graft-versus-host",
+      "disease, graft-vs-host",
+      "disease, homologous wasting",
+      "disease, runt",
+      "diseases, graft-versus-host",
+      "diseases, graft-vs-host",
+      "graft vs host disease",
+      "graft vs. host disease",
+      "graft-VS-host diseases",
+      "graft-versus-host disease",
+      "graft-versus-host diseases",
+      "graft-versus-host-disease",
+      "graft-vs-host disease",
+      "homologous wasting disease",
+      "runt disease"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_concentration_mg_per_L": {
+     "analyte": {
+      "label": "vedolizumab",
+      "id": "NCIT:C95798"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "cumulative_auc_mg_day_per_L": {
+     "analyte": {
+      "label": "vedolizumab",
+      "id": "NCIT:C95798"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg.d/L"
+    }
+   }
+  },
+  "qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk": {
+   "citations": [
+    {
+     "doi": "10.1016/j.jtocrr.2024.100683",
+     "pmid": "39091595",
+     "pmcid": "PMC11293501",
+     "title": "Real-World Pharmacokinetics, Effectiveness, and Safety of Atezolizumab in Patients With Unresectable Advanced or Recurrent NSCLC: An Exploratory Study of J-TAIL",
+     "journal": "JTO clinical and research reports",
+     "year": 2024,
+     "first_author": "Yagishita"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "atezolizumab",
+     "id": "NCIT:C106250",
+     "label": "Atezolizumab",
+     "synonyms": [
+      "MPDL 3280A",
+      "MPDL 328OA",
+      "MPDL-3280A",
+      "MPDL3280A",
+      "MPDL328OA",
+      "RG 7446",
+      "RG-7446",
+      "RG7446",
+      "RO 5541267",
+      "RO-5541267",
+      "RO5541267",
+      "Tecentriq"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD274",
+     "id": "HGNC:17635",
+     "label": "CD274 molecule",
+     "synonyms": [
+      "B7-H",
+      "B7H1",
+      "PD-L1",
+      "PDL1",
+      "B7-H1",
+      "PDCD1LG1",
+      "B7 homolog 1"
+     ],
+     "uniprot": "Q9NZQ7"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0005233",
+     "label": "non-small cell lung carcinoma",
+     "synonyms": [
+      "NSCLC - non-small cell lung cancer",
+      "NSCLC",
+      "non-small cell cancer of lung",
+      "non-small cell cancer of the lung",
+      "non-small cell carcinoma of lung",
+      "non-small cell carcinoma of the lung",
+      "non-small cell lung cancer",
+      "non-small cell lung carcinoma (disease)"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "concentration_ug_per_mL": {
+     "analyte": {
+      "label": "atezolizumab",
+      "id": "NCIT:C106250"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug/mL"
+    },
+    "AUC_ug_day_per_mL": {
+     "analyte": {
+      "label": "atezolizumab",
+      "id": "NCIT:C106250"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  },
+  "qspquest_yang_2021_cemiplimab_advanced_malignancies_poppk": {
+   "citations": [
+    {
+     "doi": "10.1007/s10928-021-09739-y",
+     "pmid": "33728546",
+     "pmcid": "PMC8225544",
+     "title": "Population pharmacokinetic characteristics of cemiplimab in patients with advanced malignancies",
+     "journal": "Journal of pharmacokinetics and pharmacodynamics",
+     "year": 2021,
+     "first_author": "Yang"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "cemiplimab",
+     "id": "NCIT:C121540",
+     "label": "Cemiplimab",
+     "synonyms": [
+      "Cemiplimab RWLC",
+      "Cemiplimab-rwlc",
+      "Libtayo",
+      "REGN 2810",
+      "REGN-2810",
+      "REGN2810"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "PDCD1",
+     "id": "HGNC:8760",
+     "label": "programmed cell death 1",
+     "synonyms": [
+      "CD279",
+      "PD1",
+      "hSLE1",
+      "PD-1",
+      "SLEB2"
+     ],
+     "uniprot": "Q15116"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004992",
+     "label": "cancer",
+     "synonyms": [
+      "malignant neoplasm (disease)",
+      "CA",
+      "MT",
+      "cell type cancer",
+      "malignancy",
+      "malignant growth",
+      "malignant neoplasm",
+      "malignant neoplastic disease",
+      "malignant tumor",
+      "malignant tumour",
+      "neoplasm (disease), malignant",
+      "neoplasm, malignant"
+     ]
+    },
+    {
+     "id": "MONDO:0002529",
+     "label": "skin squamous cell carcinoma",
+     "synonyms": [
+      "squamous cell carcinoma - skin",
+      "CSCC",
+      "cutaneous squamous cell carcinoma",
+      "epidermoid carcinoma of skin",
+      "epidermoid carcinoma of the skin",
+      "epidermoid skin carcinoma",
+      "skin squamous cell cancer",
+      "squamous cell carcinoma of skin",
+      "squamous cell carcinoma of the skin",
+      "squamous cell skin carcinoma",
+      "zone of skin squamous cell carcinoma"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_conc_mg_L": {
+     "analyte": {
+      "label": "cemiplimab",
+      "id": "NCIT:C121540"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg/L"
+    },
+    "CL_ind_L_day": {
+     "analyte": {
+      "label": "cemiplimab",
+      "id": "NCIT:C121540"
+     },
+     "quantity": "clearance",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "L/d"
+    }
+   }
+  },
+  "qspquest_yoshida_2020_crenezumab_abeta_tmdd_pkpd": {
+   "citations": [
+    {
+     "doi": "10.1186/s13195-020-0580-2",
+     "pmid": "31969177",
+     "pmcid": "PMC6977279",
+     "title": "Pharmacokinetics and pharmacodynamic effect of crenezumab on plasma and cerebrospinal fluid beta-amyloid in patients with mild-to-moderate Alzheimer's disease",
+     "journal": "Alzheimer's research & therapy",
+     "year": 2020,
+     "first_author": "Yoshida"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "crenezumab",
+     "id": "NCIT:C174789",
+     "label": "Crenezumab",
+     "synonyms": [],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "APP",
+     "id": "HGNC:620",
+     "label": "amyloid beta precursor protein",
+     "synonyms": [
+      "alpha-sAPP",
+      "AD1",
+      "peptidase nexin-II"
+     ],
+     "uniprot": "P05067"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004975",
+     "label": "Alzheimer disease",
+     "synonyms": [
+      "Alzheimer dementia",
+      "Alzheimers disease",
+      "presenile and senile dementia",
+      "AD",
+      "Alzheimer disease, familial",
+      "Alzheimer's dementia",
+      "Alzheimer's disease"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "Ccren_nM": {
+     "analyte": {
+      "label": "crenezumab",
+      "id": "NCIT:C174789"
+     },
+     "quantity": "concentration",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "nmol/L"
+    },
+    "free_abeta40_pM": {
+     "analyte": {
+      "label": "amyloid-beta 1-40",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "pmol/L"
+    },
+    "free_abeta42_pM": {
+     "analyte": {
+      "label": "amyloid-beta 1-42",
+      "id": null
+     },
+     "quantity": "concentration",
+     "matrix": {
+      "id": "UBERON:0001969",
+      "label": "blood plasma"
+     },
+     "compartment": null,
+     "ucum": "pmol/L"
+    }
+   }
+  },
+  "qspquest_yuan_2026_cd3x5t4_in_vitro_qsp": {
+   "citations": [
+    {
+     "doi": "10.1208/s12248-026-01259-2",
+     "pmid": "42521950",
+     "pmcid": null,
+     "title": "An In Vitro Quantitative Systems Pharmacology Platform for Characterizing CD3-Bispecific Antibody-Mediated T-Cell Activation and Tumor Cell Cytotoxicity",
+     "journal": "The AAPS journal",
+     "year": 2026,
+     "first_author": "Yuan"
+    }
+   ],
+   "context": "in_vitro",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "CD3x5T4 bispecific antibody",
+     "id": null,
+     "label": "CD3x5T4 bispecific antibody",
+     "synonyms": [],
+     "modality": "bispecific_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "bispecific_antibody",
+     "id": "NCIT:C1454",
+     "label": "Bispecific Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD3E",
+     "id": "HGNC:1674",
+     "label": "CD3 epsilon subunit of T-cell receptor complex",
+     "synonyms": [
+      "CD3epsilon",
+      "CD3-epsilon",
+      "T-cell surface glycoprotein CD3 epsilon chain"
+     ],
+     "uniprot": "P07766"
+    },
+    {
+     "symbol": "TPBG",
+     "id": "HGNC:12004",
+     "label": "trophoblast glycoprotein",
+     "synonyms": [
+      "5T4-AG",
+      "5T4"
+     ],
+     "uniprot": "Q13641"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004992",
+     "label": "cancer",
+     "synonyms": [
+      "malignant neoplasm (disease)",
+      "CA",
+      "MT",
+      "cell type cancer",
+      "malignancy",
+      "malignant growth",
+      "malignant neoplasm",
+      "malignant neoplastic disease",
+      "malignant tumor",
+      "malignant tumour",
+      "neoplasm (disease), malignant",
+      "neoplasm, malignant"
+     ]
+    }
+   ],
+   "routes": [],
+   "readouts": {
+    "tcell_activation_percent": {
+     "analyte": {
+      "label": "T cell",
+      "id": "CL:0000084"
+     },
+     "quantity": "percent",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    },
+    "tumor_killing_percent": {
+     "analyte": {
+      "label": "tumor cell killing",
+      "id": null
+     },
+     "quantity": "percent",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "%"
+    },
+    "viable_tumor_cells": {
+     "analyte": {
+      "label": "viable tumor cells",
+      "id": null
+     },
+     "quantity": "cell_count",
+     "matrix": null,
+     "compartment": null,
+     "ucum": "{cells}"
+    }
+   }
+  },
+  "qspquest_zeng_2026_atezolizumab_software_poppk_simulation": {
+   "citations": [
+    {
+     "doi": "10.1007/s00228-025-03974-9",
+     "pmid": "41553521",
+     "pmcid": "PMC12815976",
+     "title": "A comparison of pharmacometric software programs for atezolizumab population pharmacokinetic simulation",
+     "journal": "European journal of clinical pharmacology",
+     "year": 2026,
+     "first_author": "Zeng"
+    }
+   ],
+   "context": "clinical",
+   "species": [
+    {
+     "id": "NCBITaxon:9606",
+     "label": "Homo sapiens",
+     "synonyms": [
+      "human"
+     ]
+    }
+   ],
+   "drugs": [
+    {
+     "name": "atezolizumab",
+     "id": "NCIT:C106250",
+     "label": "Atezolizumab",
+     "synonyms": [
+      "MPDL 3280A",
+      "MPDL 328OA",
+      "MPDL-3280A",
+      "MPDL3280A",
+      "MPDL328OA",
+      "RG 7446",
+      "RG-7446",
+      "RG7446",
+      "RO 5541267",
+      "RO-5541267",
+      "RO5541267",
+      "Tecentriq"
+     ],
+     "modality": "monoclonal_antibody"
+    }
+   ],
+   "modalities": [
+    {
+     "key": "monoclonal_antibody",
+     "id": "NCIT:C20401",
+     "label": "Monoclonal Antibody"
+    }
+   ],
+   "targets": [
+    {
+     "symbol": "CD274",
+     "id": "HGNC:17635",
+     "label": "CD274 molecule",
+     "synonyms": [
+      "B7-H",
+      "B7H1",
+      "PD-L1",
+      "PDL1",
+      "B7-H1",
+      "PDCD1LG1",
+      "B7 homolog 1"
+     ],
+     "uniprot": "Q9NZQ7"
+    }
+   ],
+   "indications": [
+    {
+     "id": "MONDO:0004992",
+     "label": "cancer",
+     "synonyms": [
+      "malignant neoplasm (disease)",
+      "CA",
+      "MT",
+      "cell type cancer",
+      "malignancy",
+      "malignant growth",
+      "malignant neoplasm",
+      "malignant neoplastic disease",
+      "malignant tumor",
+      "malignant tumour",
+      "neoplasm (disease), malignant",
+      "neoplasm, malignant"
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "key": "intravenous",
+     "id": "NCIT:C38276",
+     "label": "Intravenous Route of Administration"
+    }
+   ],
+   "readouts": {
+    "central_mg": {
+     "analyte": {
+      "label": "atezolizumab",
+      "id": "NCIT:C106250"
+     },
+     "quantity": "amount",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "mg"
+    },
+    "auc_ug_day_ml": {
+     "analyte": {
+      "label": "atezolizumab",
+      "id": "NCIT:C106250"
+     },
+     "quantity": "exposure",
+     "matrix": null,
+     "compartment": "central",
+     "ucum": "ug.d/mL"
+    }
+   }
+  }
+ }
+}

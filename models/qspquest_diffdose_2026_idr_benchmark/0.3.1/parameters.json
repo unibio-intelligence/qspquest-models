@@ -1,0 +1,33 @@
+{
+ "schema": "qspquest.models.parameter-metadata/v1",
+ "model_id": "qspquest_diffdose_2026_idr_benchmark",
+ "model_version": "0.3.1",
+ "archive_sha256": "e8ecac8677fb6b4685483d9f1063df370869754688d849b30c27aa335d822922",
+ "sources": [],
+ "states": [
+ {"native_name": "source_symbol_0", "source_name": "A", "readable_name": "a", "unit": "1"},
+ {"native_name": "source_symbol_1", "source_name": "B", "readable_name": "b", "unit": "1"}
+ ],
+ "parameters": [
+ {"native_name": "source_symbol_2", "source_name": "EC50", "readable_name": "ec50", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_3", "source_name": "Emax", "readable_name": "emax", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_4", "source_name": "V", "readable_name": "v", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_5", "source_name": "kel", "readable_name": "kel", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_6", "source_name": "kin", "readable_name": "kin", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_7", "source_name": "kout", "readable_name": "kout", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_0", "source_name": null, "readable_name": "legacy_unit_basis_0", "unit": "(1)/(d)", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_1", "source_name": null, "readable_name": "legacy_unit_basis_1", "unit": "(1)/(1)", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"}
+ ],
+ "covariates": [],
+ "definitions": [
+ {"native_name": "source_symbol_8", "source_name": "C", "readable_name": "c", "unit": "1"}
+ ],
+ "switches": [],
+ "outputs": [
+ {"native_name": "source_output_0", "source_name": "C", "readable_name": "c", "unit": "1"},
+ {"native_name": "source_output_1", "source_name": "biomarker", "readable_name": "biomarker", "unit": "1"},
+ {"native_name": "source_output_2", "source_name": "drug_exposure", "readable_name": "drug_exposure", "unit": "1"},
+ {"native_name": "library_state_0", "source_name": "A", "readable_name": "a", "unit": "1"},
+ {"native_name": "library_state_1", "source_name": "B", "readable_name": "b", "unit": "1"}
+ ]
+}

@@ -1,0 +1,36 @@
+{
+  "definitions": {
+    "d__albumin_ratio": "albumin_g_dl / reference_albumin_g_dl",
+    "d__central_conc_ug_ml": "max(central_mg, 0.0) / max(d__vc_l, 1.0e-12)",
+    "d__cl_l_day": "cl_ref_l_day * d__wt_ratio**0.75 * d__albumin_ratio**albumin_on_cl",
+    "d__distribution_mg_day": "d__q_l_day * (d__central_conc_ug_ml - d__peripheral_conc_ug_ml)",
+    "d__dose_mg": "dose_mg_per_kg * weight_kg",
+    "d__elimination_mg_day": "d__cl_l_day * d__central_conc_ug_ml",
+    "d__peripheral_conc_ug_ml": "max(peripheral_mg, 0.0) / max(d__vp_l, 1.0e-12)",
+    "d__q_l_day": "q_ref_l_day * d__wt_ratio**0.75",
+    "d__vc_l": "vc_ref_l * d__wt_ratio * d__albumin_ratio**albumin_on_vc",
+    "d__vp_l": "vp_ref_l * d__wt_ratio * d__albumin_ratio**albumin_on_vp",
+    "d__wt_ratio": "weight_kg / reference_weight_kg"
+  },
+  "derived_outputs": {
+    "auc_ug_day_ml": "auc_ug_day_ml",
+    "central_volume_l": "d__vc_l",
+    "clearance_l_day": "d__cl_l_day",
+    "distribution_mg_day": "d__distribution_mg_day",
+    "dose_mg": "d__dose_mg",
+    "elapsed_day": "elapsed_day",
+    "elimination_mg_day": "d__elimination_mg_day",
+    "infliximab_concentration_ug_ml": "d__central_conc_ug_ml",
+    "intercompartmental_clearance_l_day": "d__q_l_day",
+    "peripheral_concentration_ug_ml": "d__peripheral_conc_ug_ml",
+    "peripheral_volume_l": "d__vp_l"
+  },
+  "equations": {
+    "auc_ug_day_ml": "d__central_conc_ug_ml",
+    "central_mg": "Dose_rate_ab - d__elimination_mg_day - d__distribution_mg_day",
+    "elapsed_day": "1.0",
+    "peripheral_mg": "d__distribution_mg_day"
+  },
+  "external_inputs": {},
+  "model_id": "qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er"
+}

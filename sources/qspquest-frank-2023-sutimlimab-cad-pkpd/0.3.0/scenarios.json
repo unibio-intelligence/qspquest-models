@@ -1,0 +1,1711 @@
+{
+  "description": "Exact source replay plus approved-regimen dynamic ODE overlays.",
+  "model_id": "qspquest-frank-2023-sutimlimab-cad-pkpd",
+  "name": "Frank 2023 sutimlimab CAD PK/PD scenarios",
+  "scenarios": [
+    {
+      "description": "No-dose exact replay of article/supplement model parameters, study counts, quality criteria, covariate settings, and reported simulation endpoints.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "article-supplement-source-anchor",
+      "initial_states": {
+        "auc_h_ug_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "hb_g_dl": 8.99,
+        "peripheral_mg": 0.0
+      },
+      "name": "Exact article and supplement source anchor",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_exact_anchor",
+      "time_span": {
+        "end": 0.001,
+        "start": 0.0,
+        "step": 0.001
+      }
+    },
+    {
+      "description": "Fixed-effect ODE for a 65 kg non-Japanese patient receiving 6.5 g on day 0/day 7 then q14d through week 149.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 168.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 504.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 840.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1176.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1512.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1848.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2184.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2520.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2856.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3192.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3528.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3864.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4200.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4536.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4872.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5208.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5544.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5880.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6216.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6552.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6888.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7224.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7560.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7896.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8232.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8568.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8904.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9240.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9576.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9912.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10248.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10584.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10920.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11256.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11592.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11928.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12264.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12600.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12936.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13272.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13608.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13944.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14280.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14616.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14952.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15288.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15624.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15960.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16296.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16632.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16968.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17304.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17640.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17976.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18312.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18648.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18984.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19320.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19656.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19992.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 20328.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 20664.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21000.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21336.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21672.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22008.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22344.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22680.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23016.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23352.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23688.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24024.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24360.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24696.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 25032.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "approved-65kg-6p5g-q2w",
+      "initial_states": {
+        "auc_h_ug_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "hb_g_dl": 8.99,
+        "peripheral_mg": 0.0
+      },
+      "name": "Approved 6.5 g regimen, 65 kg",
+      "parameters": {
+        "body_weight_kg": 65.0,
+        "dose_g": 6.5
+      },
+      "scenario_type": "dynamic_ode_source_limited_table_figure_overlay",
+      "time_span": {
+        "end": 25032.0,
+        "start": 0.0,
+        "step": 24.0
+      }
+    },
+    {
+      "description": "Fixed-effect ODE for an 80 kg non-Japanese patient receiving 7.5 g on day 0/day 7 then q14d through week 149.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 168.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 504.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 840.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1176.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1512.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1848.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2184.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2520.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2856.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3192.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3528.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3864.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4200.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4536.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4872.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5208.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5544.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5880.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6216.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6552.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6888.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7224.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7560.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7896.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8232.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8568.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8904.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9240.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9576.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9912.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10248.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10584.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10920.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11256.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11592.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11928.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12264.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12600.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12936.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13272.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13608.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13944.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14280.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14616.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14952.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15288.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15624.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15960.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16296.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16632.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16968.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17304.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17640.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17976.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18312.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18648.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18984.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19320.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19656.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19992.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 20328.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 20664.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21000.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21336.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21672.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22008.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22344.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22680.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23016.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23352.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23688.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24024.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24360.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24696.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 7500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 25032.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "approved-80kg-7p5g-q2w",
+      "initial_states": {
+        "auc_h_ug_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "hb_g_dl": 8.99,
+        "peripheral_mg": 0.0
+      },
+      "name": "Approved 7.5 g regimen, 80 kg",
+      "parameters": {
+        "body_weight_kg": 80.0,
+        "dose_g": 7.5
+      },
+      "scenario_type": "dynamic_ode_source_limited_table_figure_overlay",
+      "time_span": {
+        "end": 25032.0,
+        "start": 0.0,
+        "step": 24.0
+      }
+    },
+    {
+      "description": "Representative fixed-effect population-proxy ODE using 71.85 kg; paper comparators are stochastic population endpoints from Supp. Table 7 and abstract text.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 168.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 504.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 840.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1176.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1512.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 1848.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2184.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2520.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 2856.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3192.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3528.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 3864.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4200.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4536.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 4872.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5208.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5544.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 5880.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6216.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6552.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 6888.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7224.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7560.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 7896.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8232.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8568.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 8904.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9240.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9576.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 9912.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10248.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10584.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 10920.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11256.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11592.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 11928.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12264.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12600.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 12936.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13272.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13608.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 13944.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14280.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14616.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 14952.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15288.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15624.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 15960.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16296.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16632.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 16968.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17304.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17640.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 17976.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18312.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18648.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 18984.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19320.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19656.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 19992.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 20328.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 20664.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21000.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21336.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 21672.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22008.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22344.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 22680.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23016.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23352.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 23688.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24024.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24360.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 24696.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 6500.0,
+            "duration": 1.0,
+            "target": "central_mg",
+            "time": 25032.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "approved-all-source-limited-population",
+      "initial_states": {
+        "auc_h_ug_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "hb_g_dl": 8.99,
+        "peripheral_mg": 0.0
+      },
+      "name": "Approved regimen population endpoint proxy",
+      "parameters": {
+        "body_weight_kg": 71.85,
+        "dose_g": 6.5
+      },
+      "scenario_type": "dynamic_ode_source_limited_population_endpoint_overlay",
+      "time_span": {
+        "end": 25032.0,
+        "start": 0.0,
+        "step": 24.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 25032.0,
+      "start": 0.0,
+      "step": 24.0
+    }
+  },
+  "time_unit": "hour"
+}

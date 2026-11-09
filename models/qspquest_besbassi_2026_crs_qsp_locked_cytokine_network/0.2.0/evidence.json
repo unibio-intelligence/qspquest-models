@@ -1,0 +1,18 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_besbassi_2026_crs_qsp_locked_cytokine_network",
+  "model_version": "0.2.0",
+  "omex_sha256": "86db3e25d4a2e04808c9e1311d57ba18a22d8cb8a055f88e0c199ac572449e41",
+  "cases": [],
+  "source_scenarios": [
+    "blinatumomab-28ug-day-28day-full-ode-overlay",
+    "okt3-5mg-full-ode-overlay",
+    "source-tables-exact-anchor",
+    "tgn1412-0p1mgkg-full-ode-overlay",
+    "tgn1412-tocilizumab-6h-rescue-overlay"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false,
+  "archive_source_members_preserved": true
+}

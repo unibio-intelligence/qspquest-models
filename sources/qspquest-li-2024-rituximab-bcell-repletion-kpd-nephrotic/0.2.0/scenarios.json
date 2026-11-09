@@ -1,0 +1,1158 @@
+{
+  "description": "Exact source anchors plus full ODE Table 3 and Figure 4F/5 B-cell repletion scenarios.",
+  "model_id": "qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic",
+  "name": "Li 2024 rituximab pediatric INS K-PD scenarios",
+  "scenarios": [
+    {
+      "description": "No-dose replay of article Table 1, Table 2, Table 3, text, and Supplementary Table S2/S3 values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exact-source-table-anchor",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Exact source table/text anchor",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_exact_anchor",
+      "time_span": {
+        "end": 0.001,
+        "start": 0.0,
+        "step": 0.001
+      }
+    },
+    {
+      "description": "Full ODE simulation of 375 mg/m2 x4 weekly; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 14,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 4",
+            "target": "A1_mg",
+            "time": 21,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-375mgm2-x4",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "375 mg/m2 x4 weekly",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          14,
+          21,
+          160,
+          113,
+          219
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of 750 mg/m2 x2 weekly; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 615.0,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 615.0,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-750mgm2-x2",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "750 mg/m2 x2 weekly",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          155,
+          109,
+          210
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of 375 mg/m2 x2 weekly; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-375mgm2-x2",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "375 mg/m2 x2 weekly",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          139,
+          95,
+          196
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of 750 mg/m2 x1; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 615.0,
+            "label": "single dose",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-750mgm2-x1",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "750 mg/m2 x1",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          133,
+          89,
+          189
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of 375 mg/m2 x1; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "single dose",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-375mgm2-x1",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "375 mg/m2 x1",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          119,
+          75,
+          171
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of 100 mg x1; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 100,
+            "label": "single dose",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "single-100mg",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "100 mg x1",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          96,
+          55,
+          146
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of Six monthly 100 mg; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 100,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 30,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 60,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 4",
+            "target": "A1_mg",
+            "time": 90,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 5",
+            "target": "A1_mg",
+            "time": 120,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 6",
+            "target": "A1_mg",
+            "time": 150,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "mini-six-monthly-100mg",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Six monthly 100 mg",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          30,
+          60,
+          90,
+          120,
+          150,
+          251,
+          211,
+          302
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of Three 200 mg every 2 months; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 200,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 200,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 60,
+            "type": "bolus"
+          },
+          {
+            "amount": 200,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 120,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "mini-three-200mg-q2mo",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Three 200 mg every 2 months",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          60,
+          120,
+          230,
+          190,
+          281
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of Three 150 mg every 2 months; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 150,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 150,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 60,
+            "type": "bolus"
+          },
+          {
+            "amount": 150,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 120,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "mini-three-150mg-q2mo",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Three 150 mg every 2 months",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          60,
+          120,
+          225,
+          183,
+          275
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of Three 100 mg every 2 months; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 100,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 60,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 120,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "mini-three-100mg-q2mo",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Three 100 mg every 2 months",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_table3_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          60,
+          120,
+          217,
+          178,
+          267
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of Two weekly 375 mg/m2 at low IgA; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "iga-min-two-weekly-375mgm2-x2",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Two weekly 375 mg/m2 at low IgA",
+      "parameters": {
+        "iga_g_l": 0.11
+      },
+      "scenario_type": "paper_dynamic_ode_figure4f_source_limited_directional",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          139,
+          95,
+          196
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of Two weekly 375 mg/m2 at median IgA; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "iga-median-two-weekly-375mgm2-x2",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Two weekly 375 mg/m2 at median IgA",
+      "parameters": {
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "paper_dynamic_ode_figure4f_source_limited_directional",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          139,
+          95,
+          196
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation of Two weekly 375 mg/m2 at high IgA; paper comparator is Table 3 time to CD19+ B-cell repletion.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "iga-max-two-weekly-375mgm2-x2",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Two weekly 375 mg/m2 at high IgA",
+      "parameters": {
+        "iga_g_l": 2.26
+      },
+      "scenario_type": "paper_dynamic_ode_figure4f_source_limited_directional",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          139,
+          95,
+          196
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 14,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 4",
+            "target": "A1_mg",
+            "time": 21,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-375mgm2-x4-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "375 mg/m2 x4 weekly calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 0.9555828709082221,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          14,
+          21,
+          160,
+          113,
+          219
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 615.0,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 615.0,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-750mgm2-x2-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "750 mg/m2 x2 weekly calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 0.8177892609255452,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          155,
+          109,
+          210
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 307.5,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 7,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-375mgm2-x2-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "375 mg/m2 x2 weekly calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 0.8938474957384517,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          7,
+          139,
+          95,
+          196
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 615.0,
+            "label": "single dose",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-750mgm2-x1-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "750 mg/m2 x1 calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 0.9975739830207409,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          133,
+          89,
+          189
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 307.5,
+            "label": "single dose",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "standard-375mgm2-x1-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "375 mg/m2 x1 calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 0.9904494636312684,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          119,
+          75,
+          171
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 100,
+            "label": "single dose",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "single-100mg-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "100 mg x1 calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 0.9922304456712473,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          96,
+          55,
+          146
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 100,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 30,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 60,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 4",
+            "target": "A1_mg",
+            "time": 90,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 5",
+            "target": "A1_mg",
+            "time": 120,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 6",
+            "target": "A1_mg",
+            "time": 150,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "mini-six-monthly-100mg-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Six monthly 100 mg calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 1.0102719107220737,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          30,
+          60,
+          90,
+          120,
+          150,
+          251,
+          211,
+          302
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 200,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 200,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 60,
+            "type": "bolus"
+          },
+          {
+            "amount": 200,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 120,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "mini-three-200mg-q2mo-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Three 200 mg every 2 months calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 1.0549305684575918,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          60,
+          120,
+          230,
+          190,
+          281
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 150,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 150,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 60,
+            "type": "bolus"
+          },
+          {
+            "amount": 150,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 120,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "mini-three-150mg-q2mo-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Three 150 mg every 2 months calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 1.0128308263396075,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          60,
+          120,
+          225,
+          183,
+          275
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory/source-limited K-PD endpoint replay calibrated with an ED50 multiplier to match the public Table 3/Figure 5 CD19+ B-cell repletion endpoint. The original paper fixed-effect scenario is retained separately.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 100,
+            "label": "dose 1",
+            "target": "A1_mg",
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 2",
+            "target": "A1_mg",
+            "time": 60,
+            "type": "bolus"
+          },
+          {
+            "amount": 100,
+            "label": "dose 3",
+            "target": "A1_mg",
+            "time": 120,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "mini-three-100mg-q2mo-calibrated-endpoint-replay",
+      "initial_states": {
+        "A1_mg": 0.0,
+        "cd19_cells_ul": 591.4285714285713,
+        "elapsed_day": 0.0
+      },
+      "name": "Three 100 mg every 2 months calibrated endpoint replay",
+      "parameters": {
+        "ed50_calibration_factor": 0.9992577747500754,
+        "iga_g_l": 1.15
+      },
+      "scenario_type": "source_limited_calibrated_dynamic_endpoint_replay",
+      "time_span": {
+        "checkpoints": [
+          0,
+          60,
+          120,
+          217,
+          178,
+          267
+        ],
+        "end": 365.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-10,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-09
+    },
+    "time_span": {
+      "end": 365.0,
+      "start": 0.0,
+      "step": 1.0
+    }
+  },
+  "time_unit": "day"
+}

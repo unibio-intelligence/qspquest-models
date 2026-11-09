@@ -1,0 +1,29 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca",
+  "model_version": "0.3.0",
+  "omex_sha256": "0ce9f8a6882cebcf0679cbb3014692eadcf6ffa29355c076ac53496350fb52b4",
+  "cases": [],
+  "source_scenarios": [
+    "stathis-table-exact-anchor",
+    "stathis-dose-0p1-exponential-probe",
+    "stathis-dose-0p2-exponential-probe",
+    "stathis-dose-0p4-exponential-probe",
+    "stathis-dose-0p7-exponential-probe",
+    "stathis-dose-0p8-exponential-probe",
+    "stathis-dose-1p0-exponential-probe",
+    "stathis-dose-1p4-exponential-probe",
+    "stathis-dose-1p8-exponential-probe",
+    "stathis-exploratory-calibrated-dose-0p1-joint-table4",
+    "stathis-exploratory-calibrated-dose-0p2-joint-table4",
+    "stathis-exploratory-calibrated-dose-0p4-joint-table4",
+    "stathis-exploratory-calibrated-dose-0p7-joint-table4",
+    "stathis-exploratory-calibrated-dose-0p8-joint-table4",
+    "stathis-exploratory-calibrated-dose-1p0-joint-table4",
+    "stathis-exploratory-calibrated-dose-1p4-joint-table4",
+    "stathis-exploratory-calibrated-dose-1p8-joint-table4"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false
+}

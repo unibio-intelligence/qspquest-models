@@ -147,6 +147,87 @@ def library_sentence(cohort):
     return f'The library contains {n} models: {joined(parts)}.'
 
 
+DOSE_LIMIT = 50
+
+
+def native_scenario_inputs(archive, index, record):
+    """Summarize executable inputs in the archived request's units."""
+    readable = {r['native_name']: r['readable_name'] for r in (record or {}).get('states', [])}
+    inputs = {}
+    for sid, path in index['native_execution']['scenarios'].items():
+        regimen = json.loads(archive.read(path))['regimen']
+        doses = regimen.get('administrations', [])
+        summary = []
+        for dose in doses[:DOSE_LIMIT]:
+            delivery = dose['delivery']
+            item = {'time': dose['time']['value'], 'time_unit': dose['time']['unit'],
+                    'amount': dose['amount']['value'], 'unit': dose['amount']['unit'],
+                    'delivery': delivery['kind'], 'target': dose['target'],
+                    'target_readable_name': readable.get(dose['target'])}
+            if 'duration' in delivery:
+                item['duration'] = delivery['duration']
+            summary.append(item)
+        start, end = regimen['start'], regimen['end']
+        time_range = {'start': start['value'], 'end': end['value'], 'unit': end['unit']}
+        if start['unit'] != end['unit']:
+            time_range['start_unit'] = start['unit']
+        inputs[sid] = {'input_basis': 'native_request', 'time_range': time_range,
+                       'regimen': {'administrations': len(doses), 'doses': summary,
+                                   'truncated': len(doses) > DOSE_LIMIT}}
+    return inputs
+
+
+def source_scenario_inputs(scenario, time_unit, readable):
+    """Describe the reported inputs of a scenario without a runnable request."""
+    span = scenario.get('time_span') or {}
+    regimen = scenario.get('dosing_regimen') or {}
+    doses = regimen.get('doses', []) if isinstance(regimen, dict) else []
+    summary = [{'time': dose.get('time'), 'amount': dose.get('amount', dose.get('value')),
+                'unit': dose.get('unit', dose.get('value_unit')), 'delivery': dose.get('type'),
+                'target': dose.get('target'), 'target_readable_name': readable.get(dose.get('target'))}
+               for dose in doses[:DOSE_LIMIT]]
+    return {'input_basis': 'scientific_source',
+            'time_range': {'start': span.get('start'), 'end': span.get('end'), 'unit': time_unit} if span else None,
+            'regimen': {'administrations': len(doses), 'doses': summary, 'truncated': len(doses) > DOSE_LIMIT}}
+
+
+def scenario_metadata(row, record):
+    """Describe each selected scenario and distinguish runnable inputs from source descriptions."""
+    with zipfile.ZipFile(ROOT / row['archive']) as archive:
+        index = json.loads(archive.read('index.json'))
+        native = native_scenario_inputs(archive, index, record)
+        if 'scientific/scenarios.json' not in archive.namelist():
+            return [{'id': sid, 'name': None, 'purpose': None, 'kind': 'simulation',
+                     'source_type': None, **inputs, 'hold_reason': None} for sid, inputs in native.items()]
+        scenarios = json.loads(archive.read('scientific/scenarios.json'))
+        model = json.loads(archive.read('scientific/model.json'))
+    holds = read((ROOT / row['archive']).with_name('INTERCHANGE_AND_EXECUTION_HOLDS.json'))
+    reasons = {h['scenario_id']: h.get('error') for h in holds.get('parser_or_preparation_holds', [])}
+    unavailable = set(index.get('unavailable_scenario_ids') or []) | set(holds.get('unavailable_scenario_ids') or [])
+    time_unit = scenarios.get('time_unit') or model.get('time_unit')
+    source_names = {row['source_name']: row['readable_name']
+                    for row in (record or {}).get('states', []) if row['source_name']}
+    result = []
+    for scenario in scenarios['scenarios']:
+        sid = scenario['id']
+        if not index['native_execution'].get('model'):
+            kind = 'inspection_only'
+        elif sid in row['scenario_ids']:
+            kind = 'simulation'
+        else:
+            kind = 'held'
+        if kind == 'simulation':
+            inputs = native[sid]
+            hold = None
+        else:
+            inputs = source_scenario_inputs(scenario, time_unit, source_names)
+            hold = reasons.get(sid) or ('Not runnable in this version.' if sid in unavailable or kind == 'held'
+                                        else 'This version contains no native execution model.')
+        result.append({'id': sid, 'name': scenario.get('name'), 'purpose': scenario.get('description'),
+                       'kind': kind, 'source_type': scenario.get('scenario_type'), **inputs, 'hold_reason': hold})
+    return result
+
+
 def build():
     records = load_records(ROOT / 'qspquest_models/availability.json')
     catalog = project_catalog(read(ROOT / 'catalog.json'), records)
@@ -169,6 +250,19 @@ def build():
         if barrier:
             row["parameter_effects"] = barrier["parameters"]
             row["limitations"] = row.get("limitations", "") + " " + barrier["description"] + " " + barrier["limits"]
+    discovery = read(ROOT / 'qspquest_models/discovery.json')['models']
+    if set(discovery) != {row['id'] for row in catalog['models']}:
+        raise ValueError('Discovery records and catalog model identities differ')
+    # Preset metadata is kept beside the catalog: the engine bounds catalog.json at 1 MB.
+    presets = {'schema': 'qspquest.models.scenario-metadata/v1', 'models': {}}
+    for row in catalog['models']:
+        parameters = (ROOT / row['archive']).with_name('parameters.json')
+        record = read(parameters) if parameters.is_file() else None
+        row['discovery'] = discovery[row['id']]
+        row.pop('scenarios', None)
+        presets['models'][row['id']] = {'version': row['version'], 'archive_sha256': row['omex_sha256'],
+                                        'scenarios': scenario_metadata(row, record)}
+    (ROOT / 'qspquest_models/scenarios.json').write_text(json.dumps(presets, indent=1, ensure_ascii=False) + '\n')
     source_catalog = project_source_families(read(ROOT / 'source-catalog.json'), catalog)
     (ROOT / 'catalog.json').write_text(json.dumps(catalog, indent=2) + '\n')
     (ROOT / 'source-catalog.json').write_text(json.dumps(source_catalog, indent=2) + '\n')
@@ -207,11 +301,19 @@ def build():
         if not source and scientific and ident in source_by_id:
             alternate = source_by_id[ident]
             if all(name in alternate.get('files', {}) for name in scientific):
-                for name, value in scientific.items():
+                for name in scientific:
                     descriptor = alternate['files'][name]
-                    path = ROOT / descriptor['path']
-                    if hashlib.sha256(path.read_bytes()).hexdigest() != descriptor['sha256'] or read(path) != value:
+                    if hashlib.sha256((ROOT / descriptor['path']).read_bytes()).hexdigest() != descriptor['sha256']:
+                        raise ValueError('Selected source snapshot digest differs from the source catalog')
+                if any(read(ROOT / alternate['files'][name]['path']) != value for name, value in scientific.items()):
+                    # An earlier archive keeps the source snapshot it was built from.
+                    snapshot = next((d for d in sorted((ROOT / 'sources' / alternate['id']).iterdir())
+                                     if all((d / name).is_file() and read(d / name) == value
+                                            for name, value in scientific.items())), None)
+                    if snapshot is None:
                         raise ValueError('Alternate archive source context differs from its exact scientific documents')
+                    alternate = {**alternate, 'version': snapshot.name, 'files': {
+                        name: {'path': (snapshot / name).relative_to(ROOT).as_posix()} for name in scientific}}
                 source = alternate
         source_model = read(ROOT / source['files']['model.json']['path']) if source else {}
         experiments = read(ROOT / source['files']['scenarios.json']['path']).get('scenarios', []) if source else []

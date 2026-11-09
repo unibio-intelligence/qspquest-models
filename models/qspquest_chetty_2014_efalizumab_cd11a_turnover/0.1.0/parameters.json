@@ -1,0 +1,47 @@
+{
+ "schema": "qspquest.models.parameter-metadata/v1",
+ "model_id": "qspquest_chetty_2014_efalizumab_cd11a_turnover",
+ "model_version": "0.1.0",
+ "archive_sha256": "49fa100155413ebde2d65543c45351c07c7a5e8131042422e0d421fda83ffd3d",
+ "sources": ["10.3389/fimmu.2014.00670"],
+ "states": [
+ {"native_name": "source_symbol_0", "source_name": "target_total", "readable_name": "target_total", "unit": "1"},
+ {"native_name": "source_symbol_1", "source_name": "synthesis_total", "readable_name": "synthesis_total", "unit": "1"},
+ {"native_name": "source_symbol_2", "source_name": "free_loss_total", "readable_name": "free_loss_total", "unit": "1"},
+ {"native_name": "source_symbol_3", "source_name": "complex_loss_total", "readable_name": "complex_loss_total", "unit": "1"},
+ {"native_name": "source_symbol_4", "source_name": "elapsed_h", "readable_name": "elapsed_h", "unit": "1"}
+ ],
+ "parameters": [
+ {"native_name": "source_symbol_5", "source_name": "mw_drug", "readable_name": "mw_drug", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fimmu.2014.00670", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_6", "source_name": "target_baseline", "readable_name": "target_baseline", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fimmu.2014.00670", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_7", "source_name": "target_degradation", "readable_name": "target_degradation", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fimmu.2014.00670", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_8", "source_name": "complex_internalization", "readable_name": "complex_internalization", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fimmu.2014.00670", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_9", "source_name": "binding_half_concentration", "readable_name": "binding_half_concentration", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fimmu.2014.00670", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_10", "source_name": "driver_ug_ml", "readable_name": "driver_ug_ml", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fimmu.2014.00670", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_11", "source_name": "eta_target_degradation", "readable_name": "eta_target_degradation", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fimmu.2014.00670", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_0", "source_name": null, "readable_name": "legacy_unit_basis_0", "unit": "(1)/(h)", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fimmu.2014.00670", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"}
+ ],
+ "covariates": [],
+ "definitions": [
+ {"native_name": "source_symbol_12", "source_name": "degradation_rate", "readable_name": "degradation_rate", "unit": "1"},
+ {"native_name": "source_symbol_13", "source_name": "driver_uM", "readable_name": "driver_um", "unit": "1"},
+ {"native_name": "source_symbol_14", "source_name": "bound_fraction", "readable_name": "bound_fraction", "unit": "1"},
+ {"native_name": "source_symbol_15", "source_name": "target_bound", "readable_name": "target_bound", "unit": "1"},
+ {"native_name": "source_symbol_16", "source_name": "target_free", "readable_name": "target_free", "unit": "1"},
+ {"native_name": "source_symbol_17", "source_name": "synthesis_rate", "readable_name": "synthesis_rate", "unit": "1"}
+ ],
+ "switches": [],
+ "outputs": [
+ {"native_name": "source_output_0", "source_name": "free_cd11a", "readable_name": "free_cd11a", "unit": "1"},
+ {"native_name": "source_output_1", "source_name": "bound_cd11a", "readable_name": "bound_cd11a", "unit": "1"},
+ {"native_name": "source_output_2", "source_name": "total_cd11a_pct", "readable_name": "total_cd11a_pct", "unit": "1"},
+ {"native_name": "source_output_3", "source_name": "free_cd11a_pct", "readable_name": "free_cd11a_pct", "unit": "1"},
+ {"native_name": "source_output_4", "source_name": "occupancy_pct", "readable_name": "occupancy_pct", "unit": "1"},
+ {"native_name": "source_output_5", "source_name": "target_balance", "readable_name": "target_balance", "unit": "1"},
+ {"native_name": "library_state_0", "source_name": "target_total", "readable_name": "target_total", "unit": "1"},
+ {"native_name": "library_state_1", "source_name": "synthesis_total", "readable_name": "synthesis_total", "unit": "1"},
+ {"native_name": "library_state_2", "source_name": "free_loss_total", "readable_name": "free_loss_total", "unit": "1"},
+ {"native_name": "library_state_3", "source_name": "complex_loss_total", "readable_name": "complex_loss_total", "unit": "1"},
+ {"native_name": "library_state_4", "source_name": "elapsed_h", "readable_name": "elapsed_h", "unit": "1"}
+ ]
+}

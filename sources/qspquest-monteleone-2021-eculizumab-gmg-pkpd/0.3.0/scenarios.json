@@ -1,0 +1,388 @@
+{
+  "description": "Exact source checks, paper fixed-effect reduced PK/PD scenario, and separate exploratory median-clearance scenario for public Figure 1 concentration matching.",
+  "model_id": "qspquest-monteleone-2021-eculizumab-gmg-pkpd",
+  "name": "Monteleone 2021 eculizumab gMG PK/PD scenarios",
+  "scenarios": [
+    {
+      "description": "Exact checks for REGAIN treatment design, dosing schedule, infusion duration, sample timing, and bioanalytical thresholds.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "study-design-assay-checks",
+      "initial_states": {
+        "AUC_ug_h_mL": 0,
+        "central_mg": 0,
+        "elapsed_time_h": 0,
+        "peripheral_mg": 0
+      },
+      "name": "Study design and assay exact checks",
+      "parameters": {},
+      "scenario_type": "exact_scalar_paper_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact checks for analysis-set demographics, baseline labs, race/ethnicity, and PLEX events.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "baseline-checks",
+      "initial_states": {
+        "AUC_ug_h_mL": 0,
+        "central_mg": 0,
+        "elapsed_time_h": 0,
+        "peripheral_mg": 0
+      },
+      "name": "Baseline exact checks",
+      "parameters": {},
+      "scenario_type": "exact_scalar_paper_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact checks for all Table 1 Bayesian PK summary statistics.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table1-pk-summary-checks",
+      "initial_states": {
+        "AUC_ug_h_mL": 0,
+        "central_mg": 0,
+        "elapsed_time_h": 0,
+        "peripheral_mg": 0
+      },
+      "name": "Table 1 PK summary exact checks",
+      "parameters": {},
+      "scenario_type": "exact_scalar_paper_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact checks for serum concentration ranges, model flags, C5/hemolysis inhibition, IC50, threshold concentration, clinical deterioration, PLEX, half-life, and safety values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "pkpd-result-checks",
+      "initial_states": {
+        "AUC_ug_h_mL": 0,
+        "central_mg": 0,
+        "elapsed_time_h": 0,
+        "peripheral_mg": 0
+      },
+      "name": "PK/PD and exposure-response exact checks",
+      "parameters": {},
+      "scenario_type": "exact_scalar_paper_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Paper fixed-effect/source scenario using Table 1 Bayesian mean PK parameters. It is intentionally not tuned; Figure 1 overlays show it underpredicts steady troughs.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 900,
+            "duration": 0.5833333333333334,
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 900,
+            "duration": 0.5833333333333334,
+            "time": 168,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 900,
+            "duration": 0.5833333333333334,
+            "time": 336,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 900,
+            "duration": 0.5833333333333334,
+            "time": 504,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 672,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 1008,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 1344,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 1680,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 2016,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 2352,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 2688,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 3024,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 3360,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 3696,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 4032,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 4368,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "regain-900-1200mg-iv-pkpd-context",
+      "initial_states": {
+        "AUC_ug_h_mL": 0,
+        "central_mg": 0,
+        "elapsed_time_h": 0,
+        "peripheral_mg": 0
+      },
+      "name": "REGAIN approved 900/1200 mg IV regimen PK/PD context",
+      "parameters": {
+        "CL_L_h": 0.0106,
+        "Q_L_h": 0.251,
+        "V1_L": 2.54,
+        "V2_L": 2.73,
+        "free_c5_baseline_ug_mL": 20,
+        "free_c5_hill": 2.92,
+        "free_c5_ic50_ug_mL": 33.1
+      },
+      "scenario_type": "paper_fixed_effect_dynamic_source_limited",
+      "time_span": {
+        "end": 4368.583333333333,
+        "start": 0,
+        "step": 24
+      }
+    },
+    {
+      "description": "Exploratory calibrated scenario that uses the paper-reported Table 1 median clearance (0.00785 L/h) instead of the Table 1 mean clearance (0.0106 L/h). This improves public Figure 1 peak/trough agreement and is not the original population fixed-effect model.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 900,
+            "duration": 0.5833333333333334,
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 900,
+            "duration": 0.5833333333333334,
+            "time": 168,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 900,
+            "duration": 0.5833333333333334,
+            "time": 336,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 900,
+            "duration": 0.5833333333333334,
+            "time": 504,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 672,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 1008,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 1344,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 1680,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 2016,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 2352,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 2688,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 3024,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 3360,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 3696,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 4032,
+            "type": "infusion",
+            "unit": "mg"
+          },
+          {
+            "amount": 1200,
+            "duration": 0.5833333333333334,
+            "time": 4368,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "exploratory-calibrated-fig1-median-clearance-pkpd-context",
+      "initial_states": {
+        "AUC_ug_h_mL": 0,
+        "central_mg": 0,
+        "elapsed_time_h": 0,
+        "peripheral_mg": 0
+      },
+      "name": "Exploratory Figure 1 median-clearance PK/PD context",
+      "parameters": {
+        "CL_L_h": 0.00785,
+        "Q_L_h": 0.251,
+        "V1_L": 2.54,
+        "V2_L": 2.73,
+        "free_c5_baseline_ug_mL": 125,
+        "free_c5_hill": 4.399683027209326,
+        "free_c5_ic50_ug_mL": 33.1
+      },
+      "scenario_type": "exploratory_calibrated_public_figure_overlay",
+      "time_span": {
+        "end": 4368.583333333333,
+        "start": 0,
+        "step": 24
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-08,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-06
+    },
+    "time_span": {
+      "end": 4368.583333333333,
+      "start": 0,
+      "step": 24
+    }
+  },
+  "time_unit": "hour"
+}

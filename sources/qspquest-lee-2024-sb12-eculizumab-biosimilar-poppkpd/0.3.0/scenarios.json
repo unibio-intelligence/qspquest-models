@@ -1,0 +1,577 @@
+{
+  "description": "Separate table provenance and fixed-effect scenarios; no population-prediction claim.",
+  "model_id": "qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd",
+  "name": "Lee 2024 SB12/eculizumab scenarios",
+  "scenarios": [
+    {
+      "description": "No-dose replay exposing Article Tables 3-5, Supplement Tables A1-A2, cohort/dosing counts, and discussion threshold values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exact-source-table-anchor",
+      "initial_states": {
+        "auc_ug_h_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "interpretation_guardrails": [
+        "No original population fit or individual clinical predictions.",
+        "PNH infusion duration is unavailable: conditional bolus simulations cannot qualify Cmax.",
+        "Healthy-volunteer LDH is outside the patient-only efficacy relation.",
+        "Static source anchors are archival observations, not independent numerical simulation validation."
+      ],
+      "name": "Exact article and SI source table replay",
+      "scenario_type": "source_table_replay_not_dynamic_validation",
+      "scientific_questions": [
+        "How does exposure relate to terminal complement inhibition under this fixed-effect regimen?"
+      ],
+      "time_span": {
+        "end": 0.001,
+        "start": 0.0,
+        "step": 0.001
+      },
+      "parameters": {}
+    },
+    {
+      "description": "Typical-subject 35-minute infusion; 0.58 h in Table 1 is rounded. Healthy LDH is outside the patient-only efficacy model.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 300.0,
+            "duration": 0.5833333333333334,
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "healthy-300mg-iv-single-dose-dynamic-overlay",
+      "initial_states": {
+        "auc_ug_h_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "interpretation_guardrails": [
+        "No original population fit or individual clinical predictions.",
+        "PNH infusion duration is unavailable: conditional bolus simulations cannot qualify Cmax.",
+        "Healthy-volunteer LDH is outside the patient-only efficacy relation.",
+        "Static source anchors are archival observations, not independent numerical simulation validation."
+      ],
+      "name": "Pooled model: healthy 80.9 kg, 35-minute infusion",
+      "parameters": {
+        "body_weight_kg": 80.9,
+        "pnh_patient_flag": 0.0
+      },
+      "scenario_type": "source_typical_subject",
+      "scientific_questions": [
+        "How does exposure relate to terminal complement inhibition under this fixed-effect regimen?"
+      ],
+      "time_span": {
+        "checkpoints": [
+          0,
+          0.5833333333333334,
+          4,
+          8,
+          12,
+          24,
+          48,
+          96,
+          168,
+          240,
+          336,
+          504,
+          672,
+          840,
+          1008,
+          1176,
+          1344,
+          1512
+        ],
+        "end": 1512.0,
+        "start": 0.0,
+        "step": 12.0
+      }
+    },
+    {
+      "description": "Full regimen through week 50, observed through week 52. Bolus approximation: PNH infusion duration is not specified in this paper; do not qualify peak concentrations.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 600.0,
+            "time": 0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 600.0,
+            "time": 168,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 600.0,
+            "time": 336,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 600.0,
+            "time": 504,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 672,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 1008,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 1344,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 1680,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 2016,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 2352,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 2688,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 3024,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 3360,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 3696,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 4032,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 4368,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 4704,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 5040,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 5376,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 5712,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 6048,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 6384,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 6720,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 7056,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 7392,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 7728,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 8064,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 8400,
+            "type": "bolus",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "pnh-labeled-regimen-dynamic-overlay",
+      "initial_states": {
+        "auc_ug_h_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "interpretation_guardrails": [
+        "No original population fit or individual clinical predictions.",
+        "PNH infusion duration is unavailable: conditional bolus simulations cannot qualify Cmax.",
+        "Healthy-volunteer LDH is outside the patient-only efficacy relation.",
+        "Static source anchors are archival observations, not independent numerical simulation validation."
+      ],
+      "name": "Pooled model: PNH 80.9 kg, full 52-week observation",
+      "parameters": {
+        "body_weight_kg": 80.9,
+        "pnh_patient_flag": 1.0
+      },
+      "scenario_type": "source_typical_subject",
+      "scientific_questions": [
+        "How does exposure relate to terminal complement inhibition under this fixed-effect regimen?"
+      ],
+      "time_span": {
+        "end": 8736.0,
+        "start": 0.0,
+        "step": 12.0
+      }
+    },
+    {
+      "description": "Typical-subject 35-minute infusion; 0.58 h in Table 1 is rounded. Healthy LDH is outside the patient-only efficacy model.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 300.0,
+            "duration": 0.5833333333333334,
+            "time": 0,
+            "type": "infusion",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "healthy-82-4kg-phase1",
+      "initial_states": {
+        "auc_ug_h_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "interpretation_guardrails": [
+        "No original population fit or individual clinical predictions.",
+        "PNH infusion duration is unavailable: conditional bolus simulations cannot qualify Cmax.",
+        "Healthy-volunteer LDH is outside the patient-only efficacy relation.",
+        "Static source anchors are archival observations, not independent numerical simulation validation."
+      ],
+      "name": "Pooled model: phase I median weight 82.4 kg",
+      "parameters": {
+        "body_weight_kg": 82.4,
+        "pnh_patient_flag": 0.0
+      },
+      "scenario_type": "source_typical_subject",
+      "scientific_questions": [
+        "How does exposure relate to terminal complement inhibition under this fixed-effect regimen?"
+      ],
+      "time_span": {
+        "checkpoints": [
+          0,
+          0.5833333333333334,
+          4,
+          8,
+          12,
+          24,
+          48,
+          96,
+          168,
+          240,
+          336,
+          504,
+          672,
+          840,
+          1008,
+          1176,
+          1344,
+          1512
+        ],
+        "end": 1512.0,
+        "start": 0.0,
+        "step": 12.0
+      }
+    },
+    {
+      "description": "Full regimen through week 50, observed through week 52. Bolus approximation: PNH infusion duration is not specified in this paper; do not qualify peak concentrations.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 600.0,
+            "time": 0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 600.0,
+            "time": 168,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 600.0,
+            "time": 336,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 600.0,
+            "time": 504,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 672,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 1008,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 1344,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 1680,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 2016,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 2352,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 2688,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 3024,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 3360,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 3696,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 4032,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 4368,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 4704,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 5040,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 5376,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 5712,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 6048,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 6384,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 6720,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 7056,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 7392,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 7728,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 8064,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 900.0,
+            "time": 8400,
+            "type": "bolus",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "pnh-63kg-phase3",
+      "initial_states": {
+        "auc_ug_h_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_h": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "interpretation_guardrails": [
+        "No original population fit or individual clinical predictions.",
+        "PNH infusion duration is unavailable: conditional bolus simulations cannot qualify Cmax.",
+        "Healthy-volunteer LDH is outside the patient-only efficacy relation.",
+        "Static source anchors are archival observations, not independent numerical simulation validation."
+      ],
+      "name": "Pooled model: phase III median weight 63 kg",
+      "parameters": {
+        "body_weight_kg": 63.0,
+        "pnh_patient_flag": 1.0
+      },
+      "scenario_type": "source_typical_subject",
+      "scientific_questions": [
+        "How does exposure relate to terminal complement inhibition under this fixed-effect regimen?"
+      ],
+      "time_span": {
+        "end": 8736.0,
+        "start": 0.0,
+        "step": 12.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver_options": {
+      "abstol": 1e-10,
+      "maxiters": 1000000,
+      "method": "Tsit5",
+      "reltol": 1e-09
+    },
+    "time_span": {
+      "end": 672.0,
+      "start": 0.0,
+      "step": 6.0
+    }
+  },
+  "time_unit": "hour"
+}

@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:dccfcea4a13e181b58bee604a281e3de43a842bf9e4538518dfa8f377a0a7d21",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:be7ff749b6168b35be40159c11b521bc7b640b5e4031013d609802561ce2c60e",
+        "run_request_hash": "sha256:4e8f69a63895502d234b156f8648004056046cf19ff9dda2e62f0bde67d92add",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/atc161-pk-pd-anchor-exact-replay/qspquest.csv.gz",
+          "sha256": "4e8f269ad0b0663218d5a374e6014920dc15876563f7f369875c787ddc6d4bdf",
+          "uncompressed_sha256": "cb60471fe3ca2c44bca207b1ba09ab8dc1ea1669d952cc18f59a587398e3549d"
+        }
+      },
+      "scenario_id": "atc161-pk-pd-anchor-exact-replay",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:dccfcea4a13e181b58bee604a281e3de43a842bf9e4538518dfa8f377a0a7d21",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:8934bd768ab301c5f5e156c48198ef6824ead8625243796c850b882874dcf4cf",
+        "run_request_hash": "sha256:5c4d19ae296935a72d5e1b905096616b0ec10485eb3e9e636686dee0e7954bcc",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/po20mgkg-first-order-pk-degradation-probe/qspquest.csv.gz",
+          "sha256": "34aa81c5f79e7972fb8202e886815d033c321e5a9c37aabb1d21694951b3b6eb",
+          "uncompressed_sha256": "00341380dacdcc26e93227e0506df2106a23258fa569444301ffe8b81af1983a"
+        }
+      },
+      "scenario_id": "po20mgkg-first-order-pk-degradation-probe",
+      "status": "executed"
+    }
+  ],
+  "omex_sha256": "0afe02d755d5af807652f69088bc66d33ee7a401320fa3f358f13bb48e3f58e0",
+  "source_scenarios": [
+    "atc161-pk-pd-anchor-exact-replay",
+    "po20mgkg-first-order-pk-degradation-probe"
+  ],
+  "unavailable_scenarios": []
+}

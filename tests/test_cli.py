@@ -79,6 +79,37 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(Path(guide), ROOT / 'models' / model_id / row['version'] / 'MODEL_CARD.md')
 
 
+class NonDynamicVersionTests(unittest.TestCase):
+    """No selected version is non-dynamic, so these paths use a patched version."""
+
+    def scenarios_text(self, model):
+        import contextlib, io, types
+        from qspquest_models.cli import _scenarios
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            _scenarios(model, types.SimpleNamespace(format='text'), ROOT)
+        return out.getvalue()
+
+    def test_inspection_only_version_points_to_runnable_models(self):
+        from qspquest_models import Library
+        model = Library(ROOT).load('qspquest_serkland_2025_rituximab_ms_pkpd')
+        model.index['native_execution']['scenarios'] = {}
+        model.guide = dict(model.guide, availability='inspection_only')
+        model.availability = dict(model.availability, availability='inspection_only')
+        text = self.scenarios_text(model)
+        self.assertIn('simulation is unavailable', text)
+        self.assertIn('--runnable', text)
+
+    def test_source_replay_is_distinct_and_refuses_research_copies(self):
+        from qspquest_models import Library
+        model = Library(ROOT).load('qspquest_serkland_2025_rituximab_ms_pkpd')
+        model.guide = dict(model.guide, availability='source_replay')
+        model.availability = dict(model.availability, availability='source_replay')
+        self.assertIn('Source replay available; dynamic simulation unavailable', self.scenarios_text(model))
+        with self.assertRaisesRegex(ValueError, 'Choose a dynamic model'):
+            model.research_copy(model.scenario_ids[0])
+
+
 class ErrorContractTests(unittest.TestCase):
     def invoke(self, *args):
         import contextlib
@@ -111,9 +142,9 @@ class ErrorContractTests(unittest.TestCase):
         from unittest.mock import patch
         model_id = 'qspquest_serkland_2025_rituximab_ms_pkpd'
         row = next(r for r in json.loads((ROOT / 'catalog.json').read_text())['models'] if r['id'] == model_id)
-        # A distributed alternate remains distinct from a catalog selection.
+        # A retired version cannot silently select the current model.
         alternate = '0.1.0'
-        self.assertTrue((ROOT / 'models' / model_id / alternate / 'model.omex').is_file())
+        self.assertFalse((ROOT / 'models' / model_id / alternate / 'model.omex').exists())
         with tempfile.TemporaryDirectory() as directory, patch('qspquest_models.ModelArchive.run') as run:
             output = Path(directory) / 'trajectory.csv'
             status, error = self.invoke('--model', model_id, '--model-version', alternate,

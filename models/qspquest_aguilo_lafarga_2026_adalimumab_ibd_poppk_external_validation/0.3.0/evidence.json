@@ -1,0 +1,372 @@
+{
+  "cases": [
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:9da930a35142f2cde492081d8ffd750d682984fcfeef4cf7e932ef44794e1e4b",
+        "run_request_hash": "sha256:b2a9befbf24f4e4e847140c0a5f8d053dcf094a54a80f55d637fbbbfdf405dc5",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/cohort-and-sampling-replay/qspquest.csv.gz",
+          "sha256": "8cf53e2b4b7c97147d9778de5631fdbdbf67625d940bbc411ee2c136fd160b72",
+          "uncompressed_sha256": "14330233f9eb39ed59939748a99af49a34c875fc5bcc5fb7cfb93156c856e934"
+        }
+      },
+      "scenario_id": "cohort-and-sampling-replay",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:9da930a35142f2cde492081d8ffd750d682984fcfeef4cf7e932ef44794e1e4b",
+        "run_request_hash": "sha256:b2a9befbf24f4e4e847140c0a5f8d053dcf094a54a80f55d637fbbbfdf405dc5",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/supplement-model-parameter-replay/qspquest.csv.gz",
+          "sha256": "8cf53e2b4b7c97147d9778de5631fdbdbf67625d940bbc411ee2c136fd160b72",
+          "uncompressed_sha256": "14330233f9eb39ed59939748a99af49a34c875fc5bcc5fb7cfb93156c856e934"
+        }
+      },
+      "scenario_id": "supplement-model-parameter-replay",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:9da930a35142f2cde492081d8ffd750d682984fcfeef4cf7e932ef44794e1e4b",
+        "run_request_hash": "sha256:b2a9befbf24f4e4e847140c0a5f8d053dcf094a54a80f55d637fbbbfdf405dc5",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/table2-clearance-comparison-replay/qspquest.csv.gz",
+          "sha256": "8cf53e2b4b7c97147d9778de5631fdbdbf67625d940bbc411ee2c136fd160b72",
+          "uncompressed_sha256": "14330233f9eb39ed59939748a99af49a34c875fc5bcc5fb7cfb93156c856e934"
+        }
+      },
+      "scenario_id": "table2-clearance-comparison-replay",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:9da930a35142f2cde492081d8ffd750d682984fcfeef4cf7e932ef44794e1e4b",
+        "run_request_hash": "sha256:b2a9befbf24f4e4e847140c0a5f8d053dcf094a54a80f55d637fbbbfdf405dc5",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/table3-metric-replay/qspquest.csv.gz",
+          "sha256": "8cf53e2b4b7c97147d9778de5631fdbdbf67625d940bbc411ee2c136fd160b72",
+          "uncompressed_sha256": "14330233f9eb39ed59939748a99af49a34c875fc5bcc5fb7cfb93156c856e934"
+        }
+      },
+      "scenario_id": "table3-metric-replay",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:9da930a35142f2cde492081d8ffd750d682984fcfeef4cf7e932ef44794e1e4b",
+        "run_request_hash": "sha256:61ad2db874eafa33bda6f4417b47589d6da20649bc25bcc909b2ba21fd6de0ba",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/berends-adalimumab-induction-q2w-ode/qspquest.csv.gz",
+          "sha256": "c22f6475c5b65bcba0a7d09810ff44997ea713bfaa92473b558ac3ec0fa1804a",
+          "uncompressed_sha256": "1fbb98f05936d85fc6e6745b8fd9307eb1507ef8e3131559f0cc9a26b3d8324f"
+        }
+      },
+      "scenario_id": "berends-adalimumab-induction-q2w-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:78bad23ede1516c91fa844169aa3c659025ee3cd7d290870b4e907037c0f56ae",
+        "run_request_hash": "sha256:61ad2db874eafa33bda6f4417b47589d6da20649bc25bcc909b2ba21fd6de0ba",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/fda-adalimumab-induction-q2w-ode/qspquest.csv.gz",
+          "sha256": "31bd96abbe54278130ef946ff8defa42c9020150229f2aef851d4926b03ee0fc",
+          "uncompressed_sha256": "96644aa0d0ebaf62e5f762d21352d2cb47f92e5760e9f125566daf7f835b4426"
+        }
+      },
+      "scenario_id": "fda-adalimumab-induction-q2w-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:438bb43451cacd64fd44d7a40f83f547f863220321c3170a4ac4e563efc88131",
+        "run_request_hash": "sha256:61ad2db874eafa33bda6f4417b47589d6da20649bc25bcc909b2ba21fd6de0ba",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/marquez-adalimumab-induction-q2w-ode/qspquest.csv.gz",
+          "sha256": "9dbd68020ab6dbf04aec254b5ab6be2a927c79544e19c036013b00c34b51778f",
+          "uncompressed_sha256": "371ece9d79765d14efbf8a1965bf700e68852fd33502f48b9b143c0269b18b05"
+        }
+      },
+      "scenario_id": "marquez-adalimumab-induction-q2w-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:5ca6a18ba02fc73c0af0f395f380555c0d19dc8d7bb70bf64eda8a8e04c7f1a9",
+        "run_request_hash": "sha256:61ad2db874eafa33bda6f4417b47589d6da20649bc25bcc909b2ba21fd6de0ba",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/sanchez-adalimumab-induction-q2w-ode/qspquest.csv.gz",
+          "sha256": "7b8f3a495d3a3640077aa781a674f85f8c116cdd845234b4375b5f80434158cc",
+          "uncompressed_sha256": "86200e9c49b9540408d51a942e413d900ad1b5e6a752651e6051a80614389a30"
+        }
+      },
+      "scenario_id": "sanchez-adalimumab-induction-q2w-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:2052c1b7e1e6fae0751011c7a33f2e7a8c56f770c93bf5dbb6b477b469ff7bb1",
+        "run_request_hash": "sha256:61ad2db874eafa33bda6f4417b47589d6da20649bc25bcc909b2ba21fd6de0ba",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/ternant-adalimumab-induction-q2w-ode/qspquest.csv.gz",
+          "sha256": "8dd6a962c10ab3c652005f68a1c87ac8000718bdc9ffa2b7291b8f33d2ee4ee8",
+          "uncompressed_sha256": "f457137a5610d3af6afe68f684f3fbb828a85ca0d7d30cb3c4ef2ab8f05e3cd7"
+        }
+      },
+      "scenario_id": "ternant-adalimumab-induction-q2w-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:d93efd4c4546cab416f24edb6b283b2969df8c3a3cb6c8f9d29e67818202fd8d",
+        "run_request_hash": "sha256:61ad2db874eafa33bda6f4417b47589d6da20649bc25bcc909b2ba21fd6de0ba",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/vande-adalimumab-induction-q2w-ode/qspquest.csv.gz",
+          "sha256": "a5908bda4c4daed26974c186f49bc82c1f7ab0f2bcd0c5be11d65e4fdb19e1ef",
+          "uncompressed_sha256": "ecb94898a7766bd9b21e602c3b40ea01d309d8e86bf465932dd1674634105b31"
+        }
+      },
+      "scenario_id": "vande-adalimumab-induction-q2w-ode",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:9da930a35142f2cde492081d8ffd750d682984fcfeef4cf7e932ef44794e1e4b",
+        "run_request_hash": "sha256:b2a9befbf24f4e4e847140c0a5f8d053dcf094a54a80f55d637fbbbfdf405dc5",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/figure1-gof-digitized-scatter/qspquest.csv.gz",
+          "sha256": "8cf53e2b4b7c97147d9778de5631fdbdbf67625d940bbc411ee2c136fd160b72",
+          "uncompressed_sha256": "14330233f9eb39ed59939748a99af49a34c875fc5bcc5fb7cfb93156c856e934"
+        }
+      },
+      "scenario_id": "figure1-gof-digitized-scatter",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:9da930a35142f2cde492081d8ffd750d682984fcfeef4cf7e932ef44794e1e4b",
+        "run_request_hash": "sha256:2f603eda4a58b8eb79af825608c0e89bf5cc0a6a3cb531d0e14ba362518cb26c",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/figure2-pcvpc-digitized-observed-markers/qspquest.csv.gz",
+          "sha256": "c05184020ec318d06683da0136ce9934e0761150ee921525020bd9f2b4441e12",
+          "uncompressed_sha256": "07a802f8a805acba2557c1f9897c6997a00fde33b833ed657d6d557331e6f969"
+        }
+      },
+      "scenario_id": "figure2-pcvpc-digitized-observed-markers",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:00cadd5eaead94887337035cb211c1b7c77ff4d10bacd5219f8b3acb9b857d6b",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:9da930a35142f2cde492081d8ffd750d682984fcfeef4cf7e932ef44794e1e4b",
+        "run_request_hash": "sha256:b2a9befbf24f4e4e847140c0a5f8d053dcf094a54a80f55d637fbbbfdf405dc5",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/supplementary-figures-1-3-metric-distribution-anchors/qspquest.csv.gz",
+          "sha256": "8cf53e2b4b7c97147d9778de5631fdbdbf67625d940bbc411ee2c136fd160b72",
+          "uncompressed_sha256": "14330233f9eb39ed59939748a99af49a34c875fc5bcc5fb7cfb93156c856e934"
+        }
+      },
+      "scenario_id": "supplementary-figures-1-3-metric-distribution-anchors",
+      "status": "executed"
+    }
+  ],
+  "omex_sha256": "ab5fadc5920ca6d24d0b5b975de71cce806921d16c7908295b5d3f27f0502c60",
+  "source_scenarios": [
+    "cohort-and-sampling-replay",
+    "supplement-model-parameter-replay",
+    "table2-clearance-comparison-replay",
+    "table3-metric-replay",
+    "berends-adalimumab-induction-q2w-ode",
+    "fda-adalimumab-induction-q2w-ode",
+    "marquez-adalimumab-induction-q2w-ode",
+    "sanchez-adalimumab-induction-q2w-ode",
+    "ternant-adalimumab-induction-q2w-ode",
+    "vande-adalimumab-induction-q2w-ode",
+    "figure1-gof-digitized-scatter",
+    "figure2-pcvpc-digitized-observed-markers",
+    "supplementary-figures-1-3-metric-distribution-anchors"
+  ],
+  "unavailable_scenarios": []
+}

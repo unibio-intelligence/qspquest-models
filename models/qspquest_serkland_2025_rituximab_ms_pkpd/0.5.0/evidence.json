@@ -1,0 +1,16 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_serkland_2025_rituximab_ms_pkpd",
+  "model_version": "0.5.0",
+  "omex_sha256": "32e1a49053118490bc253b5154cdd7c9b6cfd7db76f8d5c75ea1091230050604",
+  "cases": [],
+  "source_scenarios": [
+    "exact-monolix-archive-anchor",
+    "population-typical-1000mg-full-ode",
+    "subject1-saem-full-ode-overlay"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false,
+  "archive_source_members_preserved": false
+}

@@ -6,7 +6,7 @@ from qspquest_models import Library
 ROOT=Path(__file__).resolve().parents[1]
 MID='qspquest_rajwade_2026_aav8_trastuzumab_nonlinear_pbpk'
 class ScientificAssessmentTests(unittest.TestCase):
-    def model(self):return Library(ROOT).load(MID,version='0.1.0')
+    def model(self):return Library(ROOT).load(MID,version='0.2.0')
     def test_conservation_discrepancy_does_not_grant_other_scientific_statuses(self):
         model=self.model();declaration=model.scientific_assessments
         self.assertEqual(declaration['manifest']['archive_sha256'],model.archive_sha256)

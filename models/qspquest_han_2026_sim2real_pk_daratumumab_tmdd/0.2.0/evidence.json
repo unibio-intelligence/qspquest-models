@@ -1,0 +1,120 @@
+{
+  "cases": [
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:f3e99822fc790080b051bead23e4f403b9dcabd0558e2d284545744039269c58",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:e2eb9c0b30de76d972978bd8d7ee7a175d66c4eaac37a4b5feedf0da0eb51289",
+        "run_request_hash": "sha256:b2a9befbf24f4e4e847140c0a5f8d053dcf094a54a80f55d637fbbbfdf405dc5",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/source-parameter-and-performance-exact-replay/qspquest.csv.gz",
+          "sha256": "2dab4a2cbc896a0ffb438ee960a4af9c7a413b5db2f750d92fc8bbdf5fa2f9ae",
+          "uncompressed_sha256": "bfc1f3fe7fe9c830e8b1e35d40aa1ef7fd71805535a765fbb355338592a15f3a"
+        }
+      },
+      "scenario_id": "source-parameter-and-performance-exact-replay",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:f3e99822fc790080b051bead23e4f403b9dcabd0558e2d284545744039269c58",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:e2eb9c0b30de76d972978bd8d7ee7a175d66c4eaac37a4b5feedf0da0eb51289",
+        "run_request_hash": "sha256:a2cb1e3ec66a01c37ace8aa0c8a2cdf6f49d33973bd87fed2201a521298b971e",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/single-dose-16mgkg-ode-dose-exposure-anchor/qspquest.csv.gz",
+          "sha256": "542f9ab84b36ef918bcdc0dc1f4b9d6834a88d545f3304a517e38f7a37fdb37a",
+          "uncompressed_sha256": "4cc8940469595393aa896a4d6a891e8634c29e798332d4a89c14f4ec48d8caba"
+        }
+      },
+      "scenario_id": "single-dose-16mgkg-ode-dose-exposure-anchor",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:f3e99822fc790080b051bead23e4f403b9dcabd0558e2d284545744039269c58",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:e2eb9c0b30de76d972978bd8d7ee7a175d66c4eaac37a4b5feedf0da0eb51289",
+        "run_request_hash": "sha256:d1e18b64afc0074aa9fc7bafbdf931e926a90a09c16054db1523730523058e27",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/label-like-16mgkg-window-ode-overlay/qspquest.csv.gz",
+          "sha256": "852e9a1ccaf945b0fa5ce684fe11b1736e105a6b41058b18040ebcf48f689aa7",
+          "uncompressed_sha256": "8102229692834e00770ebba8321c5e563650e46c446a18d92155f01a010b72fb"
+        }
+      },
+      "scenario_id": "label-like-16mgkg-window-ode-overlay",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:f3e99822fc790080b051bead23e4f403b9dcabd0558e2d284545744039269c58",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:aa5726a2278f6a64c670f227fa302de4922dafd85af835e04fd630083b543d01",
+        "run_request_hash": "sha256:d1e18b64afc0074aa9fc7bafbdf931e926a90a09c16054db1523730523058e27",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/low-albumin-16mgkg-covariate-ode-overlay/qspquest.csv.gz",
+          "sha256": "9795ddcd08a339066926938eb8e36756159ac396b64325b39da513d390fdb017",
+          "uncompressed_sha256": "afe6d7491cba0f3979283967ea14b35d24b6ef8d069674144456aa2cf31c5de2"
+        }
+      },
+      "scenario_id": "low-albumin-16mgkg-covariate-ode-overlay",
+      "status": "executed"
+    }
+  ],
+  "omex_sha256": "5296350a02243c19bb4def1ad54c866dd79c8502bc730e38054e66454c1ddfd7",
+  "source_scenarios": [
+    "source-parameter-and-performance-exact-replay",
+    "single-dose-16mgkg-ode-dose-exposure-anchor",
+    "label-like-16mgkg-window-ode-overlay",
+    "low-albumin-16mgkg-covariate-ode-overlay"
+  ],
+  "unavailable_scenarios": []
+}

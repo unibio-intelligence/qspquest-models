@@ -1,0 +1,55 @@
+{
+ "schema": "qspquest.models.parameter-metadata/v1",
+ "model_id": "qspquest_ubi_2026_membrane_ternary_binding",
+ "model_version": "0.1.2",
+ "archive_sha256": "c274521139e3ca5b12861f06f15cb45452485a7d39a06e0f448e8b4e2c4e5974",
+ "sources": [],
+ "states": [
+ {"native_name": "source_symbol_0", "source_name": "left_binary", "readable_name": "left_binary", "unit": "1"},
+ {"native_name": "source_symbol_1", "source_name": "left_site_free", "readable_name": "left_site_free", "unit": "1"},
+ {"native_name": "source_symbol_2", "source_name": "right_binary", "readable_name": "right_binary", "unit": "1"},
+ {"native_name": "source_symbol_3", "source_name": "right_site_free", "readable_name": "right_site_free", "unit": "1"},
+ {"native_name": "source_symbol_4", "source_name": "ternary_bridge", "readable_name": "ternary_bridge", "unit": "1"}
+ ],
+ "parameters": [
+ {"native_name": "source_symbol_5", "source_name": "copies_per_nM_contact", "readable_name": "copies_per_nm_contact", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_6", "source_name": "free_ligand_nM", "readable_name": "free_ligand_nm", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_7", "source_name": "koff_cross_left_h", "readable_name": "koff_cross_left_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_8", "source_name": "koff_cross_right_h", "readable_name": "koff_cross_right_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_9", "source_name": "koff_left_h", "readable_name": "koff_left_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_10", "source_name": "koff_right_h", "readable_name": "koff_right_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_11", "source_name": "kon_cross_right_per_nM_h", "readable_name": "kon_cross_right_per_nm_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_12", "source_name": "kon_left_per_nM_h", "readable_name": "kon_left_per_nm_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_13", "source_name": "kon_right_per_nM_h", "readable_name": "kon_right_per_nm_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_0", "source_name": null, "readable_name": "legacy_unit_basis_0", "unit": "(1)/(h)", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"}
+ ],
+ "covariates": [],
+ "definitions": [
+ {"native_name": "source_symbol_14", "source_name": "kon_cross_left_effective_per_nM_h", "readable_name": "kon_cross_left_effective_per_nm_h", "unit": "1"},
+ {"native_name": "source_symbol_15", "source_name": "v__bind_left", "readable_name": "v_bind_left", "unit": "1"},
+ {"native_name": "source_symbol_16", "source_name": "v__bind_right", "readable_name": "v_bind_right", "unit": "1"},
+ {"native_name": "source_symbol_17", "source_name": "v__cross_from_left", "readable_name": "v_cross_from_left", "unit": "1"},
+ {"native_name": "source_symbol_18", "source_name": "v__cross_from_right", "readable_name": "v_cross_from_right", "unit": "1"},
+ {"native_name": "source_symbol_19", "source_name": "v__unbind_left", "readable_name": "v_unbind_left", "unit": "1"},
+ {"native_name": "source_symbol_20", "source_name": "v__unbind_right", "readable_name": "v_unbind_right", "unit": "1"},
+ {"native_name": "source_symbol_21", "source_name": "v__uncross_to_left", "readable_name": "v_uncross_to_left", "unit": "1"},
+ {"native_name": "source_symbol_22", "source_name": "v__uncross_to_right", "readable_name": "v_uncross_to_right", "unit": "1"}
+ ],
+ "switches": [],
+ "outputs": [
+ {"native_name": "source_output_0", "source_name": "binary_complex_total_nM", "readable_name": "binary_complex_total_nm", "unit": "1"},
+ {"native_name": "source_output_1", "source_name": "left_binary_Kd_nM", "readable_name": "left_binary_kd_nm", "unit": "1"},
+ {"native_name": "source_output_2", "source_name": "left_site_ledger_nM", "readable_name": "left_site_ledger_nm", "unit": "1"},
+ {"native_name": "source_output_3", "source_name": "left_site_ternary_percent", "readable_name": "left_site_ternary_percent", "unit": "1"},
+ {"native_name": "source_output_4", "source_name": "right_binary_Kd_nM", "readable_name": "right_binary_kd_nm", "unit": "1"},
+ {"native_name": "source_output_5", "source_name": "right_site_ledger_nM", "readable_name": "right_site_ledger_nm", "unit": "1"},
+ {"native_name": "source_output_6", "source_name": "right_site_ternary_percent", "readable_name": "right_site_ternary_percent", "unit": "1"},
+ {"native_name": "source_output_7", "source_name": "ternary_bridge_copies", "readable_name": "ternary_bridge_copies", "unit": "1"},
+ {"native_name": "source_output_8", "source_name": "ternary_bridge_nM", "readable_name": "ternary_bridge_nm", "unit": "1"},
+ {"native_name": "library_state_0", "source_name": "left_binary", "readable_name": "left_binary", "unit": "1"},
+ {"native_name": "library_state_1", "source_name": "left_site_free", "readable_name": "left_site_free", "unit": "1"},
+ {"native_name": "library_state_2", "source_name": "right_binary", "readable_name": "right_binary", "unit": "1"},
+ {"native_name": "library_state_3", "source_name": "right_site_free", "readable_name": "right_site_free", "unit": "1"},
+ {"native_name": "library_state_4", "source_name": "ternary_bridge", "readable_name": "ternary_bridge", "unit": "1"}
+ ]
+}

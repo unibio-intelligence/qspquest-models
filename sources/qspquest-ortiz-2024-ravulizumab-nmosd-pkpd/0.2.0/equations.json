@@ -1,0 +1,14 @@
+{
+  "definitions": {
+    "d__elimination_mg_day": "kel_per_day * central_mg",
+    "d__ravulizumab_conc_ug_ml": "central_mg / apparent_volume_l"
+  },
+  "derived_outputs": {},
+  "equations": {
+    "auc_ug_day_ml": "d__ravulizumab_conc_ug_ml",
+    "central_mg": "-d__elimination_mg_day",
+    "free_c5_ug_ml": "-k_c5_suppression_per_day * free_c5_ug_ml"
+  },
+  "external_inputs": {},
+  "model_id": "qspquest-ortiz-2024-ravulizumab-nmosd-pkpd"
+}

@@ -17,7 +17,7 @@ from qspquest_models import Library
 
 library = Library()
 print(len(library.list_models()))  # 62 identities
-model = library.load('qspquest_serkland_2025_rituximab_ms_pkpd', version='0.3.2')
+model = library.load('qspquest_serkland_2025_rituximab_ms_pkpd', version='0.5.0')
 print(model.scenario_ids)
 result = model.run('population-typical-1000mg-full-ode')
 assert len(result['times']) == 201
@@ -27,7 +27,7 @@ print('Saved rituximab-python.csv and its .manifest.json with', len(result['time
 
 `result` contains `times`, event `sides`, and named `outputs` and `states` with
 their units. The CSV has 201 data rows from day 0 to day 200 with `time`, `side`,
-`rituximab_concentration_mg_l`, `cd19_cells_mm3` as the primary readouts. The [model guide](../models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.2/MODEL_CARD.md) explains the available experiments.
+`rituximab_concentration_mg_l`, `cd19_cells_mm3` as the primary readouts. The [model guide](../models/qspquest_serkland_2025_rituximab_ms_pkpd/0.5.0/MODEL_CARD.md) explains the available experiments.
 [Understand results](understand-results.md) explains the units.
 
 ## Plot CD19+ B cells (optional)
@@ -45,9 +45,9 @@ plt.ylabel('CD19+ B cells (source scale)')
 plt.show()
 ```
 
-![Stored rituximab B-cell trajectory](rituximab-bcells.svg)
+![Rituximab B-cell trajectory](rituximab-bcells.svg)
 
-This preview shows the stored result from version 0.1.0; it is not a check of version 0.3.2.
+This preview was generated with model version 0.5.0 using the experiment above.
 
 The simulated B-cell readout starts at 199.57 and ends near 8.70521 at day 200.
 This curve uses one typical parameter set. It does not show patient-to-patient
@@ -96,8 +96,8 @@ print('canonical:', canonical['model_id'], canonical['version'])
 FAMILY
 ```
 
-Expect the full model at version `2.1.2` with 13 presets and the reduced model at
-`0.1.0` with seven. Both list the full model as canonical, and both have unit
+Expect the full model at version `2.2.0` with 13 presets and the reduced model at
+`0.2.0` with seven. Both list the full model as canonical, and both have unit
 status `source_scale_unqualified`. Read each model guide before choosing an
 experiment.
 
