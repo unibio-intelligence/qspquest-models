@@ -8,7 +8,7 @@ description = "Curated OMEX models for standalone QSPQuest simulation"
 authors = [{name = "UniBio Intelligence"}]
 maintainers = [{name = "Vivek Kohar"}]
 requires-python = ">=3.10"
-dependencies = ["qspquest==0.1.0"]
+dependencies = ["qspquest==0.1.1"]
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE", "SOURCE_NOTICE.md"]
 readme = "PACKAGE_README.md"

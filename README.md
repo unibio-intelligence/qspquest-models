@@ -53,7 +53,7 @@ B-cell readouts. Simulated CD19+ B cells start at **199.57** and end near **8.70
 Choose a new filename when rerunning: exports never replace existing files.
 
 Outputs are in `mg/L` and `[cell]/mm3`; these units have not yet been independently
-checked. If you see `unknown_unit`, install the matching `qspquest==0.1.0` engine. Read the
+checked. If you see `unknown_unit`, install the matching `qspquest==0.1.1` engine. Read the
 [model guide](models/qspquest_serkland_2025_rituximab_ms_pkpd/0.5.0/MODEL_CARD.md)
 and [output interpretation](tutorials/understand-results.md) before using values
 quantitatively.
