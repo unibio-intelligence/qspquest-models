@@ -1,0 +1,120 @@
+{
+  "cases": [
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:ce6b5f6fcaad86df75d8f45bdd15fc53b2d88e39d6a1754f05e8d555e4624970",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:e37f045618561550a62b1d41649b4c93d77e2f39800a9eb4b73b783c06f68db1",
+        "run_request_hash": "sha256:4e8f69a63895502d234b156f8648004056046cf19ff9dda2e62f0bde67d92add",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/exact-si-model-anchor/qspquest.csv.gz",
+          "sha256": "ebc0653c529e65c1336815aed101fb6726b69559c38f3de751b8bcbe2d15e1f5",
+          "uncompressed_sha256": "ccf7142f4cc327f6a06be207b8098f6069e79450092edee5e72be40493fb537d"
+        }
+      },
+      "scenario_id": "exact-si-model-anchor",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:ce6b5f6fcaad86df75d8f45bdd15fc53b2d88e39d6a1754f05e8d555e4624970",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:e37f045618561550a62b1d41649b4c93d77e2f39800a9eb4b73b783c06f68db1",
+        "run_request_hash": "sha256:9f283d26182fad779c5b70249a8e92b1ae91975d1b3f460d8f96200ef02743cd",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/stage1-600mg-q4w-cdasi-tis/qspquest.csv.gz",
+          "sha256": "d7eb8e89ab9a3f0b15aa3b09908626e4fa4e4515e9c3dfbf39b592dc99a6d676",
+          "uncompressed_sha256": "8ced715ead930b18738227461a1e70ddbb439af2e62be687d1b5135d7878efd0"
+        }
+      },
+      "scenario_id": "stage1-600mg-q4w-cdasi-tis",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:ce6b5f6fcaad86df75d8f45bdd15fc53b2d88e39d6a1754f05e8d555e4624970",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:e37f045618561550a62b1d41649b4c93d77e2f39800a9eb4b73b783c06f68db1",
+        "run_request_hash": "sha256:feb9a8851d52d5c79f3a4c5b113aa9c897505f39027b60384c70e8a0234153bb",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/stage2-150mg-q4w-cdasi/qspquest.csv.gz",
+          "sha256": "d7eb8e89ab9a3f0b15aa3b09908626e4fa4e4515e9c3dfbf39b592dc99a6d676",
+          "uncompressed_sha256": "8ced715ead930b18738227461a1e70ddbb439af2e62be687d1b5135d7878efd0"
+        }
+      },
+      "scenario_id": "stage2-150mg-q4w-cdasi",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:ce6b5f6fcaad86df75d8f45bdd15fc53b2d88e39d6a1754f05e8d555e4624970",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:e37f045618561550a62b1d41649b4c93d77e2f39800a9eb4b73b783c06f68db1",
+        "run_request_hash": "sha256:ab843057d734a8ee79c65b894458f583568d7d2e496d56d84220eb18b23cda16",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/placebo-week12-endpoint-turnover/qspquest.csv.gz",
+          "sha256": "2467d4697f59d38d37e247fd47369aaf803c63db5a6b37c5c3e3fe9f2d53ea8a",
+          "uncompressed_sha256": "069b31a6d8e3c47acd6e198e704d480b55103f30718f48604f9461e1d8f02abb"
+        }
+      },
+      "scenario_id": "placebo-week12-endpoint-turnover",
+      "status": "executed"
+    }
+  ],
+  "omex_sha256": "49423ab896fe962a42d6fde6e23433cdcb53c4390179230959aa7bf8f01db1fc",
+  "source_scenarios": [
+    "exact-si-model-anchor",
+    "stage1-600mg-q4w-cdasi-tis",
+    "stage2-150mg-q4w-cdasi",
+    "placebo-week12-endpoint-turnover"
+  ],
+  "unavailable_scenarios": []
+}

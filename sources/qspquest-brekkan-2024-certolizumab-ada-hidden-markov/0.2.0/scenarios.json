@@ -1,0 +1,87 @@
+{
+  "description": "Exact source-value replay plus source-limited two-state ODE probability overlays for the final Model 6 HMM.",
+  "model_id": "qspquest-brekkan-2024-certolizumab-ada-hidden-markov",
+  "name": "Brekkan 2024 certolizumab ADA hidden-Markov scenarios",
+  "scenarios": [
+    {
+      "description": "Exact API replay of final bivariate Model 6 parameter estimates and data anchors.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "model6-table3-s1-exact-anchor",
+      "initial_states": {
+        "elapsed_day": 0,
+        "first_transition_survival": 1,
+        "p_ada": 0,
+        "p_noada": 1,
+        "summary_marker": 1
+      },
+      "name": "Model 6 Table 3/S1 exact anchor",
+      "parameters": {},
+      "scenario_type": "paper_exact_source_value_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Continuous-time two-state probability ODE calibrated to the paper-reported 63-day Model 6 mean first SADA transition.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "model6-transition-probability-ode",
+      "initial_states": {
+        "elapsed_day": 0,
+        "first_transition_survival": 1,
+        "p_ada": 0,
+        "p_noada": 1,
+        "summary_marker": 1
+      },
+      "name": "Model 6 ADA transition probability ODE",
+      "parameters": {},
+      "scenario_type": "source_limited_dynamic_ode_with_paper_endpoint_overlay",
+      "time_span": {
+        "checkpoints": [
+          28,
+          63,
+          81,
+          168
+        ],
+        "end": 168,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact replay of Table 4 hidden-transition estimates for Model 6 reduced to PKRES-only and ADAMES-only univariate models.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "univariate-model-comparison-exact-anchor",
+      "initial_states": {
+        "elapsed_day": 0,
+        "first_transition_survival": 1,
+        "p_ada": 0,
+        "p_noada": 1,
+        "summary_marker": 1
+      },
+      "name": "Univariate comparison exact anchor",
+      "parameters": {},
+      "scenario_type": "paper_exact_source_value_reproduction",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 168,
+      "start": 0,
+      "step": 1
+    }
+  },
+  "time_unit": "day"
+}

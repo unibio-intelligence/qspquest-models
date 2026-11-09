@@ -88,7 +88,7 @@ class ReadoutTests(unittest.TestCase):
                 replays += 1
                 self.assertEqual(model.guide['availability'], 'source_replay')
         self.assertEqual(observed, set(profiles))
-        self.assertEqual((dynamic, replays, candidates), (63, 0, 18))
+        self.assertEqual((dynamic, replays, candidates), (50, 0, 12))
 
     def test_primary_csv_includes_selected_states_and_excludes_provenance(self):
         result = {'times': [0, 1], 'sides': ['post', 'pre'],
@@ -128,15 +128,21 @@ class ReadoutTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 changed.save(folder)
 
-    def test_initial_concentration_edit_uses_biological_state_name(self):
+    def test_rituximab_dose_enters_the_concentration_state(self):
         model = Library(ROOT).load('qspquest_serkland_2025_rituximab_ms_pkpd')
         changed = model.research_copy(model.starter_scenario)
-        initial = changed.initial_states['C']['value']
-        changed.set_initial_state('C', initial / 2)
-        self.assertEqual(changed.initial_states['C']['value'], initial / 2)
-        self.assertEqual(model.research_copy(model.starter_scenario).initial_states['C']['value'], initial)
+        self.assertEqual(changed.initial_states['C']['value'], 0.0)
+        dose = changed.doses[0]
+        self.assertEqual((dose['amount'], dose['target'], dose['time']['value']),
+                         ({'unit': 'mg', 'value': 1000.0}, 'source_symbol_0', 0.0))
+        changed.set_dose(0, 500)
+        self.assertEqual(changed.doses[0]['amount'], {'unit': 'mg', 'value': 500.0})
+        self.assertEqual(model.research_copy(model.starter_scenario).doses[0]['amount']['value'], 1000.0)
+        native = json.loads(model.members[model.index['native_execution']['model']])
+        state = next(s for s in native['states'] if s['name'] == 'source_symbol_0')
+        self.assertEqual(state['dosing']['amount_unit'], 'mg')
         with self.assertRaises(ValueError):
-            changed.set_dose(0, 10)
+            changed.set_dose(1, 10)
         with self.assertRaises(ValueError):
             changed.set_initial_state('unknown', 10)
 

@@ -1,0 +1,56 @@
+{
+ "schema": "qspquest.models.parameter-metadata/v1",
+ "model_id": "qspquest_markovic_2024_vedolizumab_clearance_remission_poppk",
+ "model_version": "0.2.0",
+ "archive_sha256": "728032c1cff4d6712cf237fa1ea23665d6c8ffb603502609e83f081aed67d349",
+ "sources": ["10.3390/pharmaceutics16121629"],
+ "states": [
+ {"native_name": "source_symbol_0", "source_name": "A_central_mg", "readable_name": "a_central_mg", "unit": "1"},
+ {"native_name": "source_symbol_1", "source_name": "A_peripheral_mg", "readable_name": "a_peripheral_mg", "unit": "1"},
+ {"native_name": "source_symbol_2", "source_name": "AUC_central_mg_day_L", "readable_name": "auc_central_mg_day_l", "unit": "1"}
+ ],
+ "parameters": [
+ {"native_name": "source_symbol_3", "source_name": "CL_L_day", "readable_name": "cl_l_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_4", "source_name": "Vc_L", "readable_name": "vc_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_5", "source_name": "Q_L_day", "readable_name": "q_l_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_6", "source_name": "Vp_L", "readable_name": "vp_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_7", "source_name": "ATNF_effect", "readable_name": "atnf_effect", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_8", "source_name": "prior_anti_tnf", "readable_name": "prior_anti_tnf", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_10", "source_name": "table2_CL_L_day", "readable_name": "table2_cl_l_day", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_11", "source_name": "table2_Vc_L", "readable_name": "table2_vc_l", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_12", "source_name": "table2_Q_L_day", "readable_name": "table2_q_l_day", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_13", "source_name": "table2_Vp_L", "readable_name": "table2_vp_l", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_14", "source_name": "table2_IIV_CL_pct", "readable_name": "table2_iiv_cl_pct", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_15", "source_name": "table2_IIV_Vc_pct", "readable_name": "table2_iiv_vc_pct", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_16", "source_name": "table2_residual_error", "readable_name": "table2_residual_error", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_17", "source_name": "table4_cl_threshold_L_day", "readable_name": "table4_cl_threshold_l_day", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_18", "source_name": "table4_cl_clinical_auroc_pct", "readable_name": "table4_cl_clinical_auroc_pct", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_19", "source_name": "table4_cl_endoscopic_auroc_pct", "readable_name": "table4_cl_endoscopic_auroc_pct", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "legacy_unit_basis_0", "source_name": null, "readable_name": "legacy_unit_basis_0", "unit": "(1)/(d)", "role": "structural", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_1", "source_name": null, "readable_name": "legacy_unit_basis_1", "unit": "(1)/(1)", "role": "structural", "variability": null, "provenance": {"source": "10.3390/pharmaceutics16121629", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"}
+ ],
+ "covariates": [
+ {"native_name": "source_global_rate", "source_name": null, "readable_name": "source_global_rate", "unit": "(1)/(d)"}
+ ],
+ "definitions": [
+ {"native_name": "source_symbol_20", "source_name": "CL_effective_L_day", "readable_name": "cl_effective_l_day", "unit": "1"},
+ {"native_name": "source_symbol_21", "source_name": "C_central_mg_L", "readable_name": "c_central_mg_l", "unit": "1"},
+ {"native_name": "source_symbol_22", "source_name": "C_peripheral_mg_L", "readable_name": "c_peripheral_mg_l", "unit": "1"}
+ ],
+ "switches": [],
+ "outputs": [
+ {"native_name": "source_output_0", "source_name": "C_central_ug_mL", "readable_name": "c_central_ug_ml", "unit": "1"},
+ {"native_name": "source_output_1", "source_name": "AUC_central_ug_day_mL", "readable_name": "auc_central_ug_day_ml", "unit": "1"},
+ {"native_name": "source_output_2", "source_name": "CL_effective_L_day_out", "readable_name": "cl_effective_l_day_out", "unit": "1"},
+ {"native_name": "source_output_3", "source_name": "table2_CL_L_day_out", "readable_name": "table2_cl_l_day_out", "unit": "1"},
+ {"native_name": "source_output_4", "source_name": "table2_ATNF_effect_out", "readable_name": "table2_atnf_effect_out", "unit": "1"},
+ {"native_name": "source_output_5", "source_name": "table2_IIV_CL_pct_out", "readable_name": "table2_iiv_cl_pct_out", "unit": "1"},
+ {"native_name": "source_output_6", "source_name": "table2_residual_error_out", "readable_name": "table2_residual_error_out", "unit": "1"},
+ {"native_name": "source_output_7", "source_name": "table4_cl_threshold_L_day_out", "readable_name": "table4_cl_threshold_l_day_out", "unit": "1"},
+ {"native_name": "source_output_8", "source_name": "table4_cl_clinical_auroc_pct_out", "readable_name": "table4_cl_clinical_auroc_pct_out", "unit": "1"},
+ {"native_name": "source_output_9", "source_name": "table4_cl_endoscopic_auroc_pct_out", "readable_name": "table4_cl_endoscopic_auroc_pct_out", "unit": "1"},
+ {"native_name": "library_state_0", "source_name": "A_central_mg", "readable_name": "a_central_mg", "unit": "1"},
+ {"native_name": "library_state_1", "source_name": "A_peripheral_mg", "readable_name": "a_peripheral_mg", "unit": "1"},
+ {"native_name": "library_state_2", "source_name": "AUC_central_mg_day_L", "readable_name": "auc_central_mg_day_l", "unit": "1"}
+ ]
+}

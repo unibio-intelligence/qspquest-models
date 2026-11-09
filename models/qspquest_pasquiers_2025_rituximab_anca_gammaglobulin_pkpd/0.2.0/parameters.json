@@ -1,0 +1,71 @@
+{
+ "schema": "qspquest.models.parameter-metadata/v1",
+ "model_id": "qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd",
+ "model_version": "0.2.0",
+ "archive_sha256": "c6927d8af43f5136b7110326413ffa53353fe3fd43d34e05b779d6a52aefbb99",
+ "sources": ["10.1016/j.ebiom.2025.105989"],
+ "states": [
+ {"native_name": "source_symbol_0", "source_name": "rtx_central_mg", "readable_name": "rtx_central_mg", "unit": "1"},
+ {"native_name": "source_symbol_1", "source_name": "rtx_peripheral_mg", "readable_name": "rtx_peripheral_mg", "unit": "1"},
+ {"native_name": "source_symbol_2", "source_name": "gg_g_l", "readable_name": "gg_g_l", "unit": "1"},
+ {"native_name": "source_symbol_3", "source_name": "anca_prod_u_ml", "readable_name": "anca_prod_u_ml", "unit": "1"},
+ {"native_name": "source_symbol_4", "source_name": "anca_blood_u_ml", "readable_name": "anca_blood_u_ml", "unit": "1"},
+ {"native_name": "source_symbol_5", "source_name": "auc_rtx_mg_day_l", "readable_name": "auc_rtx_mg_day_l", "unit": "1"}
+ ],
+ "parameters": [
+ {"native_name": "source_symbol_7", "source_name": "cl_pop_l_day", "readable_name": "cl_pop_l_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_8", "source_name": "age_year", "readable_name": "age_year", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_9", "source_name": "age_ref_year", "readable_name": "age_ref_year", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_10", "source_name": "age_on_cl", "readable_name": "age_on_cl", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_11", "source_name": "female_flag", "readable_name": "female_flag", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_12", "source_name": "sex_on_cl", "readable_name": "sex_on_cl", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_13", "source_name": "v1_pop_l", "readable_name": "v1_pop_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_14", "source_name": "body_weight_kg", "readable_name": "body_weight_kg", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_15", "source_name": "body_weight_ref_kg", "readable_name": "body_weight_ref_kg", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_16", "source_name": "bw_on_v1", "readable_name": "bw_on_v1", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_17", "source_name": "v2_l", "readable_name": "v2_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_18", "source_name": "q_l_day", "readable_name": "q_l_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_19", "source_name": "basegg_g_l", "readable_name": "basegg_g_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_20", "source_name": "kout_gg_day", "readable_name": "kout_gg_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_21", "source_name": "ic50_gg_mg_l", "readable_name": "ic50_gg_mg_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_22", "source_name": "baseanca_pop_u_ml", "readable_name": "baseanca_pop_u_ml", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_23", "source_name": "crp_mg_l", "readable_name": "crp_mg_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_24", "source_name": "crp_ref_mg_l", "readable_name": "crp_ref_mg_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_25", "source_name": "crp_on_baseanca", "readable_name": "crp_on_baseanca", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_26", "source_name": "mtt_anca_day", "readable_name": "mtt_anca_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_27", "source_name": "gamma_anca", "readable_name": "gamma_anca", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_28", "source_name": "ic50_anca_mg_l", "readable_name": "ic50_anca_mg_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_29", "source_name": "pr3_flag", "readable_name": "pr3_flag", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_30", "source_name": "pr3_on_ic50_anca", "readable_name": "pr3_on_ic50_anca", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_31", "source_name": "bsa_m2", "readable_name": "bsa_m2", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "legacy_unit_basis_0", "source_name": null, "readable_name": "legacy_unit_basis_0", "unit": "(1)/(d)", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_1", "source_name": null, "readable_name": "legacy_unit_basis_1", "unit": "(1)/(1)", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ebiom.2025.105989", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"}
+ ],
+ "covariates": [
+ {"native_name": "source_global_rate", "source_name": null, "readable_name": "source_global_rate", "unit": "(1)/(d)"}
+ ],
+ "definitions": [
+ {"native_name": "source_symbol_32", "source_name": "d__cl_ind_l_day", "readable_name": "d_cl_ind_l_day", "unit": "1"},
+ {"native_name": "source_symbol_33", "source_name": "d__v1_ind_l", "readable_name": "d_v1_ind_l", "unit": "1"},
+ {"native_name": "source_symbol_34", "source_name": "d__rtx_central_mg_l", "readable_name": "d_rtx_central_mg_l", "unit": "1"},
+ {"native_name": "source_symbol_35", "source_name": "d__rtx_peripheral_mg_l", "readable_name": "d_rtx_peripheral_mg_l", "unit": "1"},
+ {"native_name": "source_symbol_36", "source_name": "d__rtx_elimination_mg_day", "readable_name": "d_rtx_elimination_mg_day", "unit": "1"},
+ {"native_name": "source_symbol_37", "source_name": "d__rtx_distribution_mg_day", "readable_name": "d_rtx_distribution_mg_day", "unit": "1"},
+ {"native_name": "source_symbol_38", "source_name": "d__edrug_gg", "readable_name": "d_edrug_gg", "unit": "1"},
+ {"native_name": "source_symbol_39", "source_name": "d__kin_gg_g_l_day", "readable_name": "d_kin_gg_g_l_day", "unit": "1"},
+ {"native_name": "source_symbol_40", "source_name": "d__baseanca_ind_u_ml", "readable_name": "d_baseanca_ind_u_ml", "unit": "1"},
+ {"native_name": "source_symbol_41", "source_name": "d__ic50_anca_ind_mg_l", "readable_name": "d_ic50_anca_ind_mg_l", "unit": "1"},
+ {"native_name": "source_symbol_42", "source_name": "d__k_anca_day", "readable_name": "d_k_anca_day", "unit": "1"},
+ {"native_name": "source_symbol_43", "source_name": "d__edrug_anca", "readable_name": "d_edrug_anca", "unit": "1"},
+ {"native_name": "source_symbol_44", "source_name": "d__anca_feedback", "readable_name": "d_anca_feedback", "unit": "1"}
+ ],
+ "switches": [],
+ "outputs": [
+ {"native_name": "library_state_0", "source_name": "rtx_central_mg", "readable_name": "rtx_central_mg", "unit": "1"},
+ {"native_name": "library_state_1", "source_name": "rtx_peripheral_mg", "readable_name": "rtx_peripheral_mg", "unit": "1"},
+ {"native_name": "library_state_2", "source_name": "gg_g_l", "readable_name": "gg_g_l", "unit": "1"},
+ {"native_name": "library_state_3", "source_name": "anca_prod_u_ml", "readable_name": "anca_prod_u_ml", "unit": "1"},
+ {"native_name": "library_state_4", "source_name": "anca_blood_u_ml", "readable_name": "anca_blood_u_ml", "unit": "1"},
+ {"native_name": "library_state_5", "source_name": "auc_rtx_mg_day_l", "readable_name": "auc_rtx_mg_day_l", "unit": "1"}
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_lobet_2026_panitumumab_body_composition_poppk",
+  "model_version": "0.2.0",
+  "omex_sha256": "4ab27c8e6352d76434fceb2e4435699e8b530db49532b5aad24e14e105a18e70",
+  "cases": [],
+  "source_scenarios": [
+    "exact-source-anchor",
+    "ffcd0904-typical-3mgkg-q2w-ode-overlay"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false,
+  "archive_source_members_preserved": true
+}

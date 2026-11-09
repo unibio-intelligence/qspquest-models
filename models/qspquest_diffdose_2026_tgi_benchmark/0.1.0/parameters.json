@@ -1,0 +1,43 @@
+{
+ "schema": "qspquest.models.parameter-metadata/v1",
+ "model_id": "qspquest_diffdose_2026_tgi_benchmark",
+ "model_version": "0.1.0",
+ "archive_sha256": "e4e040c93dbc5b3732e12a9e9c1f0c75a2ba03cc76a5b3034ae74367939e3818",
+ "sources": [],
+ "states": [
+ {"native_name": "source_symbol_0", "source_name": "Abs", "readable_name": "abs", "unit": "1"},
+ {"native_name": "source_symbol_1", "source_name": "C", "readable_name": "c", "unit": "1"},
+ {"native_name": "source_symbol_2", "source_name": "D1", "readable_name": "d1", "unit": "1"},
+ {"native_name": "source_symbol_3", "source_name": "D2", "readable_name": "d2", "unit": "1"},
+ {"native_name": "source_symbol_4", "source_name": "D3", "readable_name": "d3", "unit": "1"},
+ {"native_name": "source_symbol_5", "source_name": "P", "readable_name": "p", "unit": "1"}
+ ],
+ "parameters": [
+ {"native_name": "source_symbol_6", "source_name": "V", "readable_name": "v", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_7", "source_name": "growth_guard", "readable_name": "growth_guard", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_8", "source_name": "ka", "readable_name": "ka", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_9", "source_name": "kel", "readable_name": "kel", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_10", "source_name": "kpot", "readable_name": "kpot", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_11", "source_name": "kt", "readable_name": "kt", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_12", "source_name": "lam0", "readable_name": "lam0", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_13", "source_name": "lam1", "readable_name": "lam1", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_0", "source_name": null, "readable_name": "legacy_unit_basis_0", "unit": "(1)/(d)", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_1", "source_name": null, "readable_name": "legacy_unit_basis_1", "unit": "(1)/(1)", "role": "structural", "variability": null, "provenance": {"source": null, "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"}
+ ],
+ "covariates": [],
+ "definitions": [
+ {"native_name": "source_symbol_14", "source_name": "growth", "readable_name": "growth", "unit": "1"}
+ ],
+ "switches": [],
+ "outputs": [
+ {"native_name": "source_output_0", "source_name": "drug_exposure", "readable_name": "drug_exposure", "unit": "1"},
+ {"native_name": "source_output_1", "source_name": "proliferating_tumor", "readable_name": "proliferating_tumor", "unit": "1"},
+ {"native_name": "source_output_2", "source_name": "tumor_total", "readable_name": "tumor_total", "unit": "1"},
+ {"native_name": "library_state_0", "source_name": "Abs", "readable_name": "abs", "unit": "1"},
+ {"native_name": "library_state_1", "source_name": "C", "readable_name": "c", "unit": "1"},
+ {"native_name": "library_state_2", "source_name": "D1", "readable_name": "d1", "unit": "1"},
+ {"native_name": "library_state_3", "source_name": "D2", "readable_name": "d2", "unit": "1"},
+ {"native_name": "library_state_4", "source_name": "D3", "readable_name": "d3", "unit": "1"},
+ {"native_name": "library_state_5", "source_name": "P", "readable_name": "p", "unit": "1"}
+ ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_frank_2023_sutimlimab_cad_pkpd",
+  "model_version": "0.3.0",
+  "omex_sha256": "2f37b35445bf4d8f3b76d5a878cda82a36812f0b991741103072d7f275af89d3",
+  "cases": [],
+  "source_scenarios": [
+    "article-supplement-source-anchor",
+    "approved-65kg-6p5g-q2w",
+    "approved-80kg-7p5g-q2w",
+    "approved-all-source-limited-population"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false
+}

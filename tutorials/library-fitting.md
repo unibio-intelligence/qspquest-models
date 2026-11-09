@@ -3,30 +3,22 @@
 Use this workflow to check that a fit recovers known parameters from synthetic
 data stored with the model. Two archive versions declare fitting contracts: the
 turnover benchmark at version `0.3.1` and the rituximab PK/PD model at version
-`0.3.2`. Archived readiness is separate from compatibility with the installed
+`0.5.0`. Archived readiness is separate from compatibility with the installed
 engine.
 
-With the published `qspquest==0.1.0` engine, both workflows are compatible and
-the turnover workflow below passes its recovery checks. The superseded rituximab
-version `0.3.1` records a native-request fingerprint that differs from the
-engine's, so fitting that version is held; its preset simulations remain
-available. Version `0.3.2` reran the same synthetic fits with the engine's
-fingerprint. The integrity check is preserved; changing archived evidence is not
-a way to clear a hold.
+The fitting API verifies each workflow's model and request fingerprints against
+the installed engine. A mismatch blocks fitting and reports the incompatible
+identity. The turnover example below checks recovery of a known parameter from
+synthetic observations; it does not establish patient-level predictive accuracy.
 
 ## Prerequisites and discovery
 
 Complete the [library setup](../README.md#setup) and activate that environment.
-Installing `qspquest-models==0.1.0` installs the matching Python engine required
-for fitting. The Python API blocks below work from any working directory.
-
-The optional helper-script commands use the complete source distribution.
-Download and extract that same public package, then run from its root:
+The installation includes the matching Python engine required for fitting.
+The Python API blocks below work from any working directory. Run the
+helper-script commands from the root of the model-library checkout:
 
 ```sh
-python -m pip download --no-deps --no-binary=qspquest-models qspquest-models==0.1.0
-python -m tarfile -e qspquest_models-0.1.0.tar.gz .
-cd qspquest_models-0.1.0
 python tutorials/fitting_workflow.py --library .
 ```
 

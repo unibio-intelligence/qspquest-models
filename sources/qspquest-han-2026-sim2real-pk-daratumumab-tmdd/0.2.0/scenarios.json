@@ -1,0 +1,162 @@
+{
+  "description": "Exact source-code/result replay plus source-limited dynamic ODE scenarios for the public daratumumab synthetic generator.",
+  "model_id": "qspquest-han-2026-sim2real-pk-daratumumab-tmdd",
+  "name": "Han 2026 Sim2Real-PK daratumumab public ODE scenarios",
+  "scenarios": [
+    {
+      "description": "Zero-dose exact replay of the public daratumumab ODE parameters and reported Sim2Real-PK performance endpoints.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "source-parameter-and-performance-exact-replay",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "elapsed_day": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "name": "Source parameters and paper performance metrics exact replay",
+      "parameters": {
+        "dose_mg_per_kg_for_reporting": 16.0
+      },
+      "scenario_type": "paper_reproduction_summary",
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Public ODE short-horizon single-dose daratumumab trajectory used as one point in a dose-exposure scan. Paper Fig. 2E only reports the fitted exponent/R2, not extractable per-dose AUC points.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1257.6,
+            "duration": 0.2916666666666667,
+            "time": 0.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "single-dose-16mgkg-ode-dose-exposure-anchor",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "elapsed_day": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "name": "16 mg/kg single-dose public ODE exposure anchor",
+      "parameters": {
+        "dose_mg_per_kg_for_reporting": 16.0
+      },
+      "scenario_type": "paper_reproduction_dynamic_source_limited",
+      "time_span": {
+        "checkpoints": [
+          0.0,
+          0.2916666666666667
+        ],
+        "end": 2.0,
+        "start": 0.0,
+        "step": 0.05
+      }
+    },
+    {
+      "description": "Early label-like 16 mg/kg IV induction-window schedule using the public ODE and median infusion durations, overlaid with paper Fig. 5A trough/peak constraints.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1257.6,
+            "duration": 0.2916666666666667,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1257.6,
+            "duration": 0.14166666666666666,
+            "time": 7.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1257.6,
+            "duration": 0.14166666666666666,
+            "time": 14.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "label-like-16mgkg-window-ode-overlay",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "elapsed_day": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "name": "16 mg/kg label-like public ODE therapeutic-window overlay",
+      "parameters": {
+        "dose_mg_per_kg_for_reporting": 16.0
+      },
+      "scenario_type": "paper_reproduction_dynamic_source_limited",
+      "time_span": {
+        "end": 14.0,
+        "start": 0.0,
+        "step": 0.1
+      }
+    },
+    {
+      "description": "A covariate perturbation from the public ODE showing albumin-dependent clearance direction; paper/SI provides qualitative covariate sensitivity but not digitizable coordinates.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1257.6,
+            "duration": 0.2916666666666667,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1257.6,
+            "duration": 0.14166666666666666,
+            "time": 7.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1257.6,
+            "duration": 0.14166666666666666,
+            "time": 14.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "low-albumin-16mgkg-covariate-ode-overlay",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "elapsed_day": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "name": "Low-albumin 16 mg/kg public ODE covariate overlay",
+      "parameters": {
+        "albumin_g_l": 25.0,
+        "dose_mg_per_kg_for_reporting": 16.0
+      },
+      "scenario_type": "paper_reproduction_dynamic_source_limited",
+      "time_span": {
+        "end": 14.0,
+        "start": 0.0,
+        "step": 0.1
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-08,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-06
+    },
+    "time_span": {
+      "end": 224.0,
+      "start": 0.0,
+      "step": 1.0
+    }
+  },
+  "time_unit": "day"
+}

@@ -8,14 +8,14 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from qspquest_models import Library, load_archive
+from qspquest_models import Library
 from qspquest_models.protocol_initialization import validate
 
 
 class ProtocolInitializationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.model = Library(ROOT).load('qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp', version='2.1.2')
+        cls.model = Library(ROOT).load('qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp', version='2.2.0')
 
     def check(self, declaration):
         return validate(declaration, self.model.index, self.model.archive_sha256, self.model.members)
@@ -32,32 +32,16 @@ class ProtocolInitializationTests(unittest.TestCase):
         declaration['manifest']['scope'] = 'caller changes a returned copy'
         self.assertNotEqual(self.model.protocol_initialization['manifest']['scope'], declaration['manifest']['scope'])
 
-    def test_tolerance_patch_preserves_science_and_historical_evidence(self):
-        previous = load_archive(ROOT / 'models' / self.model.model_id / '2.1.1/model.omex',
-                                expected_sha256='fdd64ce17b2e6c3e69e2c0c0ca50e6c166a36e39857ac5acbba6aa13e11be5c5')
-        self.assertEqual(previous.archive_sha256, 'fdd64ce17b2e6c3e69e2c0c0ca50e6c166a36e39857ac5acbba6aa13e11be5c5')
-        self.assertEqual(self.model.index['model_version'], '2.1.2')
-        self.assertEqual(previous.members['native/model.json'], self.model.members['native/model.json'])
-        self.assertEqual(previous.scenario_ids, self.model.scenario_ids)
-        for name, raw in previous.members.items():
-            if name.endswith('model.xml') or name.startswith(('LICENSE', 'NOTICE')):
-                self.assertEqual(raw, self.model.members[name])
+    def test_current_solver_declarations_and_evidence_scope_agree(self):
+        self.assertEqual(self.model.index['model_version'], '2.2.0')
         for scenario in self.model.index['scenarios']:
             with self.subTest(scenario=scenario['scenario_id']):
                 native_path = self.model.index['native_execution']['scenarios'][scenario['scenario_id']]
-                old = json.loads(previous.members[native_path])
                 current = json.loads(self.model.members[native_path])
                 self.assertIsNone(current['regimen']['atol'])
-                self.assertEqual(current['regimen']['rtol'], old['regimen']['rtol'] * 0.1)
-                normalized = copy.deepcopy(current)
-                normalized['regimen']['rtol'] = old['regimen']['rtol']
-                self.assertEqual(set(current['regimen']['absolute_tolerances']), set(old['regimen']['absolute_tolerances']))
-                for state, quantity in current['regimen']['absolute_tolerances'].items():
-                    baseline = old['regimen']['absolute_tolerances'][state]
-                    self.assertEqual(quantity['value'], baseline['value'] * 0.1)
-                    self.assertEqual(quantity['unit'], baseline['unit'])
-                    normalized['regimen']['absolute_tolerances'][state]['value'] = baseline['value']
-                self.assertEqual(normalized, old, 'Only integration tolerances may differ')
+                self.assertEqual(current['regimen']['rtol'], 1e-12)
+                self.assertEqual(len(current['regimen']['absolute_tolerances']), 725)
+                self.assertTrue(all(q['value'] > 0 for q in current['regimen']['absolute_tolerances'].values()))
                 request = json.loads(self.model.members[scenario['request']])
                 policy = self.model.index['solver_policy']
                 self.assertEqual(request['solver_options']['reltol'], policy['relative_tolerance'])
@@ -67,7 +51,7 @@ class ProtocolInitializationTests(unittest.TestCase):
                               if e.tag.endswith('algorithmParameter')}
                 self.assertEqual(parameters['KISAO:0000209'], policy['relative_tolerance'])
                 self.assertEqual(parameters['KISAO:0000211'], policy['native_request_absolute_tolerance'])
-        folder = ROOT / 'models' / self.model.model_id / '2.1.2'
+        folder = ROOT / 'models' / self.model.model_id / '2.2.0'
         evidence = json.loads((folder / 'evidence.json').read_text())
         self.assertEqual(evidence['cases'], [], 'Previous trajectories cannot qualify changed requests')
         self.assertFalse(evidence['numerical_qualification_accepted'])

@@ -1,0 +1,41 @@
+{
+ "schema": "qspquest.models.parameter-metadata/v1",
+ "model_id": "qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic",
+ "model_version": "0.2.0",
+ "archive_sha256": "afc35667fbed05c2feee287dfcdbaa1033d50092f4f1c5e95e5bf3656ec59f0b",
+ "sources": ["10.3389/fphar.2024.1526936"],
+ "states": [
+ {"native_name": "source_symbol_0", "source_name": "A1_mg", "readable_name": "a1_mg", "unit": "1"},
+ {"native_name": "source_symbol_1", "source_name": "cd19_cells_ul", "readable_name": "cd19_cells_ul", "unit": "1"},
+ {"native_name": "source_symbol_2", "source_name": "elapsed_day", "readable_name": "elapsed_day", "unit": "1"}
+ ],
+ "parameters": [
+ {"native_name": "source_symbol_4", "source_name": "Ke_day", "readable_name": "ke_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_5", "source_name": "Kin_cells_ul_day", "readable_name": "kin_cells_ul_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_6", "source_name": "Kout_day", "readable_name": "kout_day", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_7", "source_name": "Emax", "readable_name": "emax", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_8", "source_name": "ED50_mg", "readable_name": "ed50_mg", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_9", "source_name": "hill_gamma", "readable_name": "hill_gamma", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_10", "source_name": "iga_on_ED50_power", "readable_name": "iga_on_ed50_power", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_11", "source_name": "iga_g_l", "readable_name": "iga_g_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_12", "source_name": "iga_ref_g_l", "readable_name": "iga_ref_g_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_13", "source_name": "bcell_repletion_threshold_cells_ul", "readable_name": "bcell_repletion_threshold_cells_ul", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_14", "source_name": "bsa_m2", "readable_name": "bsa_m2", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_15", "source_name": "ed50_calibration_factor", "readable_name": "ed50_calibration_factor", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_0", "source_name": null, "readable_name": "legacy_unit_basis_0", "unit": "(1)/(d)", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_1", "source_name": null, "readable_name": "legacy_unit_basis_1", "unit": "(1)/(1)", "role": "structural", "variability": null, "provenance": {"source": "10.3389/fphar.2024.1526936", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"}
+ ],
+ "covariates": [],
+ "definitions": [
+ {"native_name": "source_symbol_16", "source_name": "d__A1_pos_mg", "readable_name": "d_a1_pos_mg", "unit": "1"},
+ {"native_name": "source_symbol_17", "source_name": "d__iga_ratio", "readable_name": "d_iga_ratio", "unit": "1"},
+ {"native_name": "source_symbol_18", "source_name": "d__ed50_effective_mg", "readable_name": "d_ed50_effective_mg", "unit": "1"},
+ {"native_name": "source_symbol_19", "source_name": "d__rtx_effect", "readable_name": "d_rtx_effect", "unit": "1"}
+ ],
+ "switches": [],
+ "outputs": [
+ {"native_name": "library_state_0", "source_name": "A1_mg", "readable_name": "a1_mg", "unit": "1"},
+ {"native_name": "library_state_1", "source_name": "cd19_cells_ul", "readable_name": "cd19_cells_ul", "unit": "1"},
+ {"native_name": "library_state_2", "source_name": "elapsed_day", "readable_name": "elapsed_day", "unit": "1"}
+ ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "qspquest.models.source-preparation-evidence/v1",
+  "model_id": "qspquest_gu_2017_bay1093884_tfpi_qss_tmdd",
+  "model_version": "0.3.0",
+  "omex_sha256": "a9273f3566e13b86555f2766c2f76a37581fa6b9f477cb76a336058ce2ddf54f",
+  "cases": [],
+  "source_scenarios": [
+    "gu-2017-exact-table-parameter-anchor",
+    "gu-2017-cyno-iv5mgkg-qss-tmdd-probe",
+    "gu-2017-cyno-iv20mgkg-qss-tmdd-probe",
+    "gu-2017-human-0p4mgkg-iv-source-limited",
+    "gu-2017-exploratory-calibrated-cyno-sc5mgkg-joint-figures2-4-5-6-table2",
+    "gu-2017-exploratory-calibrated-human-0p4mgkg-endpoints"
+  ],
+  "unavailable_scenarios": [],
+  "current_engine_qualification": "not_assessed",
+  "numerical_qualification_accepted": false
+}

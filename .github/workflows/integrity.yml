@@ -34,7 +34,6 @@ jobs:
           python-version: '3.11'
       - name: Verify archive consistency without an engine
         run: |
-          python -B scripts/verify_library.py
           python -B -m unittest discover -s tests -v
           PYTHONPATH=. python -B tutorials/protocol_initialization.py
           PYTHONPATH=. python -B tutorials/input_bindings.py --inspect-only

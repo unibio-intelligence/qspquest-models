@@ -15,11 +15,11 @@ stopifnot(length(helper) == 1L, file.exists(helper))
 source(helper)
 models <- qspquest_library(python = python)
 model <- 'qspquest_serkland_2025_rituximab_ms_pkpd'
-models$scenarios(model, version = '0.3.2')
+models$scenarios(model, version = '0.4.0')
 ```
 
 ```{r simulate}
-result <- models$run(model, 'population-typical-1000mg-full-ode', csv = 'rituximab-rmarkdown.csv', version = '0.3.2')
+result <- models$run(model, 'population-typical-1000mg-full-ode', csv = 'rituximab-rmarkdown.csv', version = '0.4.0')
 data <- qspquest_data_frame(result)
 stopifnot(nrow(data) == 201L)
 head(data)

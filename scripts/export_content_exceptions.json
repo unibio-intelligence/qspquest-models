@@ -1,0 +1,10 @@
+{
+  "reviewed": "2026-11-07",
+  "exceptions": [
+    {
+      "model_id": "qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er",
+      "name": "fit_placeholder_observed_ctrough_ug_mL",
+      "reason": "Reported week-14 trough concentration (14.7 ug/mL), a study result; the name, not the value, uses the word placeholder."
+    }
+  ]
+}

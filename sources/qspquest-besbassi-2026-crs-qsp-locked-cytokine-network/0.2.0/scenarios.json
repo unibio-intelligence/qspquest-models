@@ -1,0 +1,220 @@
+{
+  "description": "Exact table anchors, full ODE cytokine scenarios with paper endpoint overlays, and display-only figure/table constraint overlays.",
+  "model_id": "qspquest-besbassi-2026-crs-qsp-locked-cytokine-network",
+  "name": "Besbassi 2026 CRS QSP scenarios",
+  "scenarios": [
+    {
+      "description": "No-dose exact replay of published Table 1/Table 2/Table 3/Table 8/Table 9/Table 10 scalar values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "source-tables-exact-anchor",
+      "initial_states": {
+        "AUC_IL6_pg_h_ml": 0,
+        "Cdrug_nM": 0,
+        "IFNg_pg_ml": 0,
+        "IL10_pg_ml": 0,
+        "IL1b_pg_ml": 0,
+        "IL6_pg_ml": 5,
+        "TNFa_pg_ml": 0,
+        "Tact_cells_ul": 0,
+        "Tcyt_cells_ul": 0,
+        "Texh_cells_ul": 0,
+        "Trest_cells_ul": 1000
+      },
+      "name": "Published source-table exact anchor",
+      "parameters": {
+        "CL_L_h": 2.1,
+        "EC50_act_nM": 1,
+        "Tact_max_cells_ul": 5000,
+        "Vcentral_L": 3.5,
+        "drug_mw_da": 54100,
+        "infusion_mg_h": 0,
+        "kact_h": 0.08,
+        "kdiff_h": 0.03,
+        "kexhaust_h": 0.005,
+        "kprolif_h": 0.03,
+        "nH": 1.5,
+        "tocilizumab_enabled": 0,
+        "tocilizumab_start_h": 1000000000
+      },
+      "time_span": {
+        "end": 0.1,
+        "start": 0,
+        "step": 0.1
+      }
+    },
+    {
+      "description": "Full ODE scenario for blinatumomab 28 ug/day continuous infusion through day 28; paper comparator status: source_limited_dynamic_peak_parity_pending_author_code.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "blinatumomab-28ug-day-28day-full-ode-overlay",
+      "initial_states": {
+        "AUC_IL6_pg_h_ml": 0,
+        "Cdrug_nM": 0,
+        "IFNg_pg_ml": 0,
+        "IL10_pg_ml": 0,
+        "IL1b_pg_ml": 0,
+        "IL6_pg_ml": 5,
+        "TNFa_pg_ml": 0,
+        "Tact_cells_ul": 0,
+        "Tcyt_cells_ul": 0,
+        "Texh_cells_ul": 0,
+        "Trest_cells_ul": 1000
+      },
+      "name": "blinatumomab 28 ug/day continuous infusion through day 28",
+      "parameters": {
+        "CL_L_h": 2.1,
+        "EC50_act_nM": 1,
+        "Tact_max_cells_ul": 5000,
+        "Vcentral_L": 3.5,
+        "drug_mw_da": 54100,
+        "infusion_mg_h": 0.0011666666666666668,
+        "kact_h": 0.08,
+        "kdiff_h": 0.03,
+        "kexhaust_h": 0.005,
+        "kprolif_h": 0.03,
+        "nH": 1.5,
+        "tocilizumab_enabled": 0,
+        "tocilizumab_start_h": 1000000000
+      },
+      "time_span": {
+        "end": 672,
+        "start": 0,
+        "step": 2
+      }
+    },
+    {
+      "description": "Full ODE scenario for TGN1412 0.1 mg/kg IV bolus in 70 kg subject; paper comparator status: source_limited_dynamic_peak_parity_pending_author_code.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "tgn1412-0p1mgkg-full-ode-overlay",
+      "initial_states": {
+        "AUC_IL6_pg_h_ml": 0,
+        "Cdrug_nM": 13.513513513513514,
+        "IFNg_pg_ml": 0,
+        "IL10_pg_ml": 0,
+        "IL1b_pg_ml": 0,
+        "IL6_pg_ml": 5,
+        "TNFa_pg_ml": 0,
+        "Tact_cells_ul": 0,
+        "Tcyt_cells_ul": 0,
+        "Texh_cells_ul": 0,
+        "Trest_cells_ul": 1000
+      },
+      "name": "TGN1412 0.1 mg/kg IV bolus in 70 kg subject",
+      "parameters": {
+        "CL_L_h": 0.005,
+        "EC50_act_nM": 1,
+        "Tact_max_cells_ul": 20000,
+        "Vcentral_L": 3.5,
+        "drug_mw_da": 148000,
+        "infusion_mg_h": 0,
+        "kact_h": 0.5,
+        "kdiff_h": 0.08,
+        "kexhaust_h": 0.012,
+        "kprolif_h": 0.1,
+        "nH": 3,
+        "tocilizumab_enabled": 0,
+        "tocilizumab_start_h": 1000000000
+      },
+      "time_span": {
+        "end": 72,
+        "start": 0,
+        "step": 0.25
+      }
+    },
+    {
+      "description": "Full ODE scenario for OKT3 5 mg IV bolus; paper comparator status: source_limited_dynamic_peak_parity_pending_author_code.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "okt3-5mg-full-ode-overlay",
+      "initial_states": {
+        "AUC_IL6_pg_h_ml": 0,
+        "Cdrug_nM": 9.523809523809524,
+        "IFNg_pg_ml": 0,
+        "IL10_pg_ml": 0,
+        "IL1b_pg_ml": 0,
+        "IL6_pg_ml": 5,
+        "TNFa_pg_ml": 0,
+        "Tact_cells_ul": 0,
+        "Tcyt_cells_ul": 0,
+        "Texh_cells_ul": 0,
+        "Trest_cells_ul": 1000
+      },
+      "name": "OKT3 5 mg IV bolus",
+      "parameters": {
+        "CL_L_h": 0.02,
+        "EC50_act_nM": 2,
+        "Tact_max_cells_ul": 5000,
+        "Vcentral_L": 3.5,
+        "drug_mw_da": 150000,
+        "infusion_mg_h": 0,
+        "kact_h": 0.3,
+        "kdiff_h": 0.06,
+        "kexhaust_h": 0.08,
+        "kprolif_h": 0.03,
+        "nH": 1.5,
+        "tocilizumab_enabled": 0,
+        "tocilizumab_start_h": 1000000000
+      },
+      "time_span": {
+        "end": 72,
+        "start": 0,
+        "step": 0.25
+      }
+    },
+    {
+      "description": "Full ODE scenario for TGN1412 with tocilizumab rescue at 6 h; paper comparator status: source_limited_qualitative_rescue_overlay.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "tgn1412-tocilizumab-6h-rescue-overlay",
+      "initial_states": {
+        "AUC_IL6_pg_h_ml": 0,
+        "Cdrug_nM": 13.513513513513514,
+        "IFNg_pg_ml": 0,
+        "IL10_pg_ml": 0,
+        "IL1b_pg_ml": 0,
+        "IL6_pg_ml": 5,
+        "TNFa_pg_ml": 0,
+        "Tact_cells_ul": 0,
+        "Tcyt_cells_ul": 0,
+        "Texh_cells_ul": 0,
+        "Trest_cells_ul": 1000
+      },
+      "name": "TGN1412 with tocilizumab rescue at 6 h",
+      "parameters": {
+        "CL_L_h": 0.005,
+        "EC50_act_nM": 1,
+        "Tact_max_cells_ul": 20000,
+        "Vcentral_L": 3.5,
+        "drug_mw_da": 148000,
+        "infusion_mg_h": 0,
+        "kact_h": 0.5,
+        "kdiff_h": 0.08,
+        "kexhaust_h": 0.012,
+        "kprolif_h": 0.1,
+        "nH": 3,
+        "tocilizumab_enabled": 1,
+        "tocilizumab_start_h": 6
+      },
+      "time_span": {
+        "end": 72,
+        "start": 0,
+        "step": 0.25
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 72,
+      "start": 0,
+      "step": 0.25
+    }
+  },
+  "time_unit": "hour"
+}

@@ -1,0 +1,272 @@
+{
+  "description": "Exact table replay plus full ODE induction and maintenance scenarios with paper endpoint overlays.",
+  "model_id": "qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd",
+  "name": "Pasquiers 2025 rituximab ANCA/gammaglobulin scenarios",
+  "scenarios": [
+    {
+      "description": "No-dose replay of Pasquiers 2025 Tables 1–4, Supplement Tables S1–S2, and model equations.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exact-article-supplement-table-anchor",
+      "initial_states": {
+        "anca_blood_u_ml": 75.6,
+        "anca_prod_u_ml": 75.6,
+        "auc_rtx_mg_day_l": 0.0,
+        "gg_g_l": 9.35,
+        "rtx_central_mg": 0.0,
+        "rtx_peripheral_mg": 0.0
+      },
+      "name": "Exact article and supplement table replay",
+      "parameters": {},
+      "scenario_type": "exact_scalar_paper_reproduction",
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE fixed-effect induction simulation with Table 3/S1 MPO paper endpoints overlaid.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 667.5,
+            "duration": 0.041666666666666664,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 667.5,
+            "duration": 0.041666666666666664,
+            "time": 7.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 667.5,
+            "duration": 0.041666666666666664,
+            "time": 14.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 667.5,
+            "duration": 0.041666666666666664,
+            "time": 21.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "induction-375mgm2-q1w-6mo-mpo",
+      "initial_states": {
+        "anca_blood_u_ml": 75.6,
+        "anca_prod_u_ml": 75.6,
+        "auc_rtx_mg_day_l": 0.0,
+        "gg_g_l": 9.35,
+        "rtx_central_mg": 0.0,
+        "rtx_peripheral_mg": 0.0
+      },
+      "name": "Induction 375 mg/m2 weekly x4 MPO",
+      "parameters": {
+        "pr3_flag": 0.0
+      },
+      "scenario_type": "full_ode_dynamic_with_paper_comparator",
+      "time_span": {
+        "checkpoints": [
+          120.0,
+          180.0
+        ],
+        "end": 180.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE fixed-effect induction simulation with Table 3/S1 PR3 paper endpoints overlaid.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 14.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "induction-1000mg-d0-d14-6mo-pr3",
+      "initial_states": {
+        "anca_blood_u_ml": 75.6,
+        "anca_prod_u_ml": 75.6,
+        "auc_rtx_mg_day_l": 0.0,
+        "gg_g_l": 9.35,
+        "rtx_central_mg": 0.0,
+        "rtx_peripheral_mg": 0.0
+      },
+      "name": "Induction 1000 mg D0/D14 PR3",
+      "parameters": {
+        "pr3_flag": 1.0
+      },
+      "scenario_type": "full_ode_dynamic_with_paper_comparator",
+      "time_span": {
+        "checkpoints": [
+          120.0,
+          180.0
+        ],
+        "end": 180.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE fixed-effect maintenance simulation with Table 4/S1 MPO paper endpoints overlaid.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 14.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 500.0,
+            "duration": 0.041666666666666664,
+            "time": 180.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 500.0,
+            "duration": 0.041666666666666664,
+            "time": 360.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 500.0,
+            "duration": 0.041666666666666664,
+            "time": 540.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 500.0,
+            "duration": 0.041666666666666664,
+            "time": 720.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "maintenance-500mg-q6m-24mo-mpo",
+      "initial_states": {
+        "anca_blood_u_ml": 75.6,
+        "anca_prod_u_ml": 75.6,
+        "auc_rtx_mg_day_l": 0.0,
+        "gg_g_l": 9.35,
+        "rtx_central_mg": 0.0,
+        "rtx_peripheral_mg": 0.0
+      },
+      "name": "Maintenance 500 mg Q6M after 1000 mg induction MPO",
+      "parameters": {
+        "pr3_flag": 0.0
+      },
+      "scenario_type": "full_ode_dynamic_with_paper_comparator",
+      "time_span": {
+        "checkpoints": [
+          360.0,
+          720.0
+        ],
+        "end": 720.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    },
+    {
+      "description": "Full ODE fixed-effect maintenance simulation with Table 4/S1 PR3 paper endpoints overlaid.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 14.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 120.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 240.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 360.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 480.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 1000.0,
+            "duration": 0.041666666666666664,
+            "time": 600.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "maintenance-1000mg-q4m-24mo-pr3",
+      "initial_states": {
+        "anca_blood_u_ml": 75.6,
+        "anca_prod_u_ml": 75.6,
+        "auc_rtx_mg_day_l": 0.0,
+        "gg_g_l": 9.35,
+        "rtx_central_mg": 0.0,
+        "rtx_peripheral_mg": 0.0
+      },
+      "name": "Maintenance 1000 mg Q4M after 1000 mg induction PR3",
+      "parameters": {
+        "pr3_flag": 1.0
+      },
+      "scenario_type": "full_ode_dynamic_with_paper_comparator",
+      "time_span": {
+        "checkpoints": [
+          360.0,
+          720.0
+        ],
+        "end": 720.0,
+        "start": 0.0,
+        "step": 2.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 720.0,
+      "start": 0.0,
+      "step": 2.0
+    }
+  },
+  "time_unit": "day"
+}

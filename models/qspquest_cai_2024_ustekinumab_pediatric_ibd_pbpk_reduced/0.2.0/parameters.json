@@ -1,0 +1,59 @@
+{
+ "schema": "qspquest.models.parameter-metadata/v1",
+ "model_id": "qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced",
+ "model_version": "0.2.0",
+ "archive_sha256": "03455c1480f8becb5e1125ffa1a2a41d0c07bc01ff61946dbe1dab27b40a44f9",
+ "sources": ["10.1016/j.ejps.2024.106807"],
+ "states": [
+ {"native_name": "source_symbol_0", "source_name": "A_sc_depot_mg", "readable_name": "a_sc_depot_mg", "unit": "1"},
+ {"native_name": "source_symbol_1", "source_name": "A_central_mg", "readable_name": "a_central_mg", "unit": "1"},
+ {"native_name": "source_symbol_2", "source_name": "A_peripheral_mg", "readable_name": "a_peripheral_mg", "unit": "1"},
+ {"native_name": "source_symbol_3", "source_name": "A_endosomal_mg", "readable_name": "a_endosomal_mg", "unit": "1"},
+ {"native_name": "source_symbol_4", "source_name": "A_fcrn_bound_mg", "readable_name": "a_fcrn_bound_mg", "unit": "1"},
+ {"native_name": "source_symbol_5", "source_name": "AUC_central_mg_h_L", "readable_name": "auc_central_mg_h_l", "unit": "1"},
+ {"native_name": "source_symbol_6", "source_name": "elapsed_time_h", "readable_name": "elapsed_time_h", "unit": "1"}
+ ],
+ "parameters": [
+ {"native_name": "source_symbol_7", "source_name": "Vc_L", "readable_name": "vc_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_8", "source_name": "Vp_L", "readable_name": "vp_l", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_9", "source_name": "CL_linear_L_h", "readable_name": "cl_linear_l_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_10", "source_name": "Q_L_h", "readable_name": "q_l_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_11", "source_name": "ka_sc_h", "readable_name": "ka_sc_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_12", "source_name": "F_sc", "readable_name": "f_sc", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_13", "source_name": "k_endosomal_uptake_h", "readable_name": "k_endosomal_uptake_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_14", "source_name": "k_fcrn_bind_h", "readable_name": "k_fcrn_bind_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_15", "source_name": "k_fcrn_unbind_h", "readable_name": "k_fcrn_unbind_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_16", "source_name": "k_fcrn_recycle_h", "readable_name": "k_fcrn_recycle_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_17", "source_name": "k_endosomal_catabolism_h", "readable_name": "k_endosomal_catabolism_h", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_18", "source_name": "fcrn_capacity_mg", "readable_name": "fcrn_capacity_mg", "unit": "1", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "dependency"},
+ {"native_name": "source_symbol_19", "source_name": "source_iv_dose_mg", "readable_name": "source_iv_dose_mg", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_20", "source_name": "source_predicted_cmax_ug_ml", "readable_name": "source_predicted_cmax_ug_ml", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "source_symbol_21", "source_name": "source_predicted_half_life_day", "readable_name": "source_predicted_half_life_day", "unit": "1", "role": "source_check", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "source_coordinates"}, "classification": "name_rule"},
+ {"native_name": "legacy_unit_basis_0", "source_name": null, "readable_name": "legacy_unit_basis_0", "unit": "(1)/(h)", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"},
+ {"native_name": "legacy_unit_basis_1", "source_name": null, "readable_name": "legacy_unit_basis_1", "unit": "(1)/(1)", "role": "structural", "variability": null, "provenance": {"source": "10.1016/j.ejps.2024.106807", "locator": null, "status": "not_curated", "unit_basis": "not_curated"}, "classification": "dependency"}
+ ],
+ "covariates": [],
+ "definitions": [
+ {"native_name": "source_symbol_23", "source_name": "d__C_central_ug_ml", "readable_name": "d_c_central_ug_ml", "unit": "1"},
+ {"native_name": "source_symbol_24", "source_name": "d__C_peripheral_ug_ml", "readable_name": "d_c_peripheral_ug_ml", "unit": "1"},
+ {"native_name": "source_symbol_25", "source_name": "d__absorption_mg_h", "readable_name": "d_absorption_mg_h", "unit": "1"},
+ {"native_name": "source_symbol_26", "source_name": "d__distribution_mg_h", "readable_name": "d_distribution_mg_h", "unit": "1"},
+ {"native_name": "source_symbol_27", "source_name": "d__linear_elimination_mg_h", "readable_name": "d_linear_elimination_mg_h", "unit": "1"},
+ {"native_name": "source_symbol_28", "source_name": "d__endosomal_uptake_mg_h", "readable_name": "d_endosomal_uptake_mg_h", "unit": "1"},
+ {"native_name": "source_symbol_29", "source_name": "d__fcrn_free_fraction", "readable_name": "d_fcrn_free_fraction", "unit": "1"},
+ {"native_name": "source_symbol_30", "source_name": "d__fcrn_binding_mg_h", "readable_name": "d_fcrn_binding_mg_h", "unit": "1"},
+ {"native_name": "source_symbol_31", "source_name": "d__fcrn_unbinding_mg_h", "readable_name": "d_fcrn_unbinding_mg_h", "unit": "1"},
+ {"native_name": "source_symbol_32", "source_name": "d__fcrn_recycling_mg_h", "readable_name": "d_fcrn_recycling_mg_h", "unit": "1"},
+ {"native_name": "source_symbol_33", "source_name": "d__endosomal_catabolism_mg_h", "readable_name": "d_endosomal_catabolism_mg_h", "unit": "1"}
+ ],
+ "switches": [],
+ "outputs": [
+ {"native_name": "library_state_0", "source_name": "A_sc_depot_mg", "readable_name": "a_sc_depot_mg", "unit": "1"},
+ {"native_name": "library_state_1", "source_name": "A_central_mg", "readable_name": "a_central_mg", "unit": "1"},
+ {"native_name": "library_state_2", "source_name": "A_peripheral_mg", "readable_name": "a_peripheral_mg", "unit": "1"},
+ {"native_name": "library_state_3", "source_name": "A_endosomal_mg", "readable_name": "a_endosomal_mg", "unit": "1"},
+ {"native_name": "library_state_4", "source_name": "A_fcrn_bound_mg", "readable_name": "a_fcrn_bound_mg", "unit": "1"},
+ {"native_name": "library_state_5", "source_name": "AUC_central_mg_h_L", "readable_name": "auc_central_mg_h_l", "unit": "1"},
+ {"native_name": "library_state_6", "source_name": "elapsed_time_h", "readable_name": "elapsed_time_h", "unit": "1"}
+ ]
+}

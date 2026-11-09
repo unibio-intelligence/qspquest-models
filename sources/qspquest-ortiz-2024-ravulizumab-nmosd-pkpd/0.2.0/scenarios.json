@@ -1,0 +1,253 @@
+{
+  "description": "Exact article/EMA replay plus full ODE scenarios for weight-tier ravulizumab dosing, week-50 PK endpoints, and free-C5 suppression.",
+  "model_id": "qspquest-ortiz-2024-ravulizumab-nmosd-pkpd",
+  "name": "Ortiz 2024 ravulizumab NMOSD scenarios",
+  "scenarios": [
+    {
+      "description": "No-dose scenario exposing article Table 1-3, assay, immunogenicity, free-C5, dosing, and EMA label constants for exact replay.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "article-ema-exact-anchor",
+      "initial_states": {
+        "auc_ug_day_ml": 0.0,
+        "central_mg": 0.0,
+        "free_c5_ug_ml": 120.1
+      },
+      "name": "Article and EMA exact scalar anchor",
+      "parameters": {},
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation for the Body weight 40 to <60 kg ravulizumab dosing tier, calibrated to Table 3 week-50 Cmax/Ctrough means and the reported free-C5 day-1 median.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 2400.0,
+            "target": "central_mg",
+            "time": 0.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3000.0,
+            "target": "central_mg",
+            "time": 15.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3000.0,
+            "target": "central_mg",
+            "time": 71.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3000.0,
+            "target": "central_mg",
+            "time": 127.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3000.0,
+            "target": "central_mg",
+            "time": 183.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3000.0,
+            "target": "central_mg",
+            "time": 239.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3000.0,
+            "target": "central_mg",
+            "time": 295.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3000.0,
+            "target": "central_mg",
+            "time": 351.0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "week50-40-60-pk-free-c5-ode",
+      "initial_states": {
+        "auc_ug_day_ml": 0.0,
+        "central_mg": 0.0,
+        "free_c5_ug_ml": 120.1
+      },
+      "name": "Body weight 40 to <60 kg week-50 PK/free-C5 ODE",
+      "parameters": {
+        "apparent_volume_l": 2.470820270772867,
+        "concentration_output_intercept_ug_ml": 1.188251198313992,
+        "concentration_output_slope": 0.9999847040865928,
+        "kel_per_day": 0.015754610182027534
+      },
+      "time_span": {
+        "end": 352.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation for the Body weight 60 to <100 kg ravulizumab dosing tier, calibrated to Table 3 week-50 Cmax/Ctrough means and the reported free-C5 day-1 median.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 2700.0,
+            "target": "central_mg",
+            "time": 0.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3300.0,
+            "target": "central_mg",
+            "time": 15.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3300.0,
+            "target": "central_mg",
+            "time": 71.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3300.0,
+            "target": "central_mg",
+            "time": 127.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3300.0,
+            "target": "central_mg",
+            "time": 183.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3300.0,
+            "target": "central_mg",
+            "time": 239.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3300.0,
+            "target": "central_mg",
+            "time": 295.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3300.0,
+            "target": "central_mg",
+            "time": 351.0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "week50-60-100-pk-free-c5-ode",
+      "initial_states": {
+        "auc_ug_day_ml": 0.0,
+        "central_mg": 0.0,
+        "free_c5_ug_ml": 120.1
+      },
+      "name": "Body weight 60 to <100 kg week-50 PK/free-C5 ODE",
+      "parameters": {
+        "apparent_volume_l": 2.875598785140861,
+        "concentration_output_intercept_ug_ml": 1.2028753850958083,
+        "concentration_output_slope": 0.9999826267611158,
+        "kel_per_day": 0.01670336642378556
+      },
+      "time_span": {
+        "end": 352.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Full ODE simulation for the Body weight >=100 kg ravulizumab dosing tier, calibrated to Table 3 week-50 Cmax/Ctrough means and the reported free-C5 day-1 median.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 3000.0,
+            "target": "central_mg",
+            "time": 0.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3600.0,
+            "target": "central_mg",
+            "time": 15.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3600.0,
+            "target": "central_mg",
+            "time": 71.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3600.0,
+            "target": "central_mg",
+            "time": 127.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3600.0,
+            "target": "central_mg",
+            "time": 183.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3600.0,
+            "target": "central_mg",
+            "time": 239.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3600.0,
+            "target": "central_mg",
+            "time": 295.0,
+            "type": "bolus"
+          },
+          {
+            "amount": 3600.0,
+            "target": "central_mg",
+            "time": 351.0,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "week50-ge100-pk-free-c5-ode",
+      "initial_states": {
+        "auc_ug_day_ml": 0.0,
+        "central_mg": 0.0,
+        "free_c5_ug_ml": 120.1
+      },
+      "name": "Body weight >=100 kg week-50 PK/free-C5 ODE",
+      "parameters": {
+        "apparent_volume_l": 3.857090080819546,
+        "concentration_output_intercept_ug_ml": 0.9340263045721713,
+        "concentration_output_slope": 0.999981316949249,
+        "kel_per_day": 0.018870753704951025
+      },
+      "time_span": {
+        "end": 352.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 352.0,
+      "start": 0.0,
+      "step": 1.0
+    }
+  },
+  "time_unit": "day"
+}

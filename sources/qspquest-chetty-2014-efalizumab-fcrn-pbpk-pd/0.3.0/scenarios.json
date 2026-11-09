@@ -1,0 +1,109 @@
+{
+  "description": "Source-parameter and historical calibrated PASI probes. Four source-table replay jobs are disabled; paper reproduction remains incomplete.",
+  "model_id": "qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd",
+  "name": "Efalizumab PASI time-course probes",
+  "scenarios": [
+    {
+      "description": "Reduced first-order progression from Gottlieb baseline PASI toward Chetty source Yss. This is not a Simcyp virtual-population reproduction.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "gottlieb-escalating-pasi-progression-probe",
+      "initial_states": {
+        "PASI_score": 24.8,
+        "elapsed_h": 0
+      },
+      "name": "Gottlieb escalating-dose PASI progression probe",
+      "parameters": {
+        "Tp_h": 397,
+        "Yss_current_PASI": 14.8
+      },
+      "scenario_type": "paper_fixed_effect_reduced_ode_overlay",
+      "time_span": {
+        "end": 1344,
+        "start": 0,
+        "step": 24
+      }
+    },
+    {
+      "description": "Reduced first-order progression from Gordon baseline PASI toward Chetty source Yss. This is not a Simcyp virtual-population reproduction.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "gordon-1mgkg-pasi-progression-probe",
+      "initial_states": {
+        "PASI_score": 19,
+        "elapsed_h": 0
+      },
+      "name": "Gordon 1 mg/kg PASI progression probe",
+      "parameters": {
+        "Tp_h": 397,
+        "Yss_current_PASI": 9.5
+      },
+      "scenario_type": "paper_fixed_effect_reduced_ode_overlay",
+      "time_span": {
+        "end": 2016,
+        "start": 0,
+        "step": 24
+      }
+    },
+    {
+      "description": "Exploratory calibrated reduced PASI ODE fit to digitized Chetty Figure 4 points. This is not the paper fixed-effect Simcyp/FcRn model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-gottlieb-digitized-pasi-probe",
+      "initial_states": {
+        "PASI_score": 24.8,
+        "elapsed_h": 0
+      },
+      "name": "Exploratory Calibrated Gottlieb Digitized Pasi Probe",
+      "parameters": {
+        "Tp_h": 646,
+        "Yss_current_PASI": 8.3
+      },
+      "scenario_type": "exploratory_calibrated_reduced_ode_overlay",
+      "time_span": {
+        "end": 1344,
+        "start": 0,
+        "step": 24
+      }
+    },
+    {
+      "description": "Exploratory calibrated reduced PASI ODE fit to digitized Chetty Figure 4 points. This is not the paper fixed-effect Simcyp/FcRn model.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-gordon-digitized-pasi-probe",
+      "initial_states": {
+        "PASI_score": 19,
+        "elapsed_h": 0
+      },
+      "name": "Exploratory Calibrated Gordon Digitized Pasi Probe",
+      "parameters": {
+        "Tp_h": 1388,
+        "Yss_current_PASI": 2.9
+      },
+      "scenario_type": "exploratory_calibrated_reduced_ode_overlay",
+      "time_span": {
+        "end": 2016,
+        "start": 0,
+        "step": 24
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver_options": {
+      "abstol": 1e-11,
+      "maxiters": 1000000,
+      "method": "Tsit5",
+      "reltol": 1e-10
+    },
+    "time_span": {
+      "end": 672,
+      "start": 0,
+      "step": 24
+    }
+  },
+  "time_unit": "hour"
+}

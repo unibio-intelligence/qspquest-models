@@ -5,7 +5,7 @@ body:
     id: model
     attributes:
       label: Model ID and version
-      placeholder: qspquest_serkland_2025_rituximab_ms_pkpd 0.3.2
+      placeholder: qspquest_serkland_2025_rituximab_ms_pkpd 0.4.0
     validations:
       required: true
   - type: textarea

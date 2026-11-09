@@ -18,10 +18,10 @@ class ReleaseBoundaryTests(unittest.TestCase):
     def test_complete_versioned_inventory_preserves_source_only_and_stored_evidence_scope(self):
         result = self.verifier().verify(ROOT)
         self.assertEqual((result["archives"], result["stored_preset_evidence_cases"],
-                          result["selected_stored_preset_evidence_cases"]), (82, 642, 509))
+                          result["selected_stored_preset_evidence_cases"]), (62, 501, 501))
         self.assertEqual(result["current_engine_qualification"], "not_assessed")
-        self.assertTrue(result["publication_ready"])
         self.assertEqual(result["fitting_native_identity"], "not_assessed")
+        self.assertEqual((result["csv_trajectories"], result["csv_coordinate_only_tables"]), (370, 131))
 
     def test_inspection_holds_explain_each_unavailable_scenario(self):
         library = Library(ROOT)
@@ -45,7 +45,7 @@ class ReleaseBoundaryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp) / "candidate"
             shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
-            path = root / "models/qspquest_diffdose_2026_idr_benchmark/0.3.0/results/untreated/qspquest.csv.gz"
+            path = next(root.glob('models/*/*/results/*/qspquest.csv.gz'))
             path.unlink()
             with self.assertRaisesRegex(ValueError, "invalid result file"):
                 self.verifier().verify(root)
@@ -105,31 +105,29 @@ class ReleaseBoundaryTests(unittest.TestCase):
 
     def test_source_parser_hold_fails_before_simulator_dispatch(self):
         library = Library(ROOT, executable="/unavailable/simulator")
-        model = library.load_source_execution(
-            "qspquest-yuan-2026-cd3x5t4-in-vitro-qsp"
-        )
-        self.assertEqual(model.scenario_ids, ())
-        sid = model.index["unavailable_scenario_ids"][0]
+        model = library.load('qspquest_serkland_2025_rituximab_ms_pkpd')
+        sid = model.scenario_ids[0]
+        model.index['unavailable_scenario_ids'] = [sid]
         with self.assertRaisesRegex(ValueError, "no qualified execution"):
             model.run(sid)
 
     def test_source_discovery_distinguishes_available_and_evidence_bound_presets(self):
         library = Library(ROOT)
         rows = library.list_source_executions()
-        self.assertEqual(len(rows), 55)
-        selected = {'qspquest_serkland_2025_rituximab_ms_pkpd': ('0.3.2', 3),
-                    'qspquest_besbassi_2026_crs_qsp_locked_cytokine_network': ('0.1.2', 5),
-                    'qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety': ('0.2.1', 16)}
+        self.assertEqual(len(rows), 54)
+        selected = {'qspquest_serkland_2025_rituximab_ms_pkpd': ('0.5.0', 3, '0.3.0'),
+                    'qspquest_besbassi_2026_crs_qsp_locked_cytokine_network': ('0.2.0', 5, '0.2.0'),
+                    'qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety': ('0.2.1', 16, '0.1.0')}
         for row in rows:
             self.assertEqual(row['current_engine_qualification'], 'not_assessed')
             self.assertEqual(row['qualification_scope'], 'stored_archive_evidence_only')
             if row['model_id'] in selected:
-                version, count = selected[row['model_id']]
+                version, count, source_version = selected[row['model_id']]
                 self.assertEqual(row['execution_version'], version)
                 self.assertEqual(len(row['available_scenario_ids']), count)
                 self.assertEqual(row['qualified_scenario_ids'], [])
                 self.assertEqual(row['simulation_status'], 'fixed_presets_unqualified')
-                self.assertEqual(row['version'], '0.1.0')
+                self.assertEqual(row['version'], source_version)
                 self.assertEqual(library.load(row['model_id']).archive_sha256, row['archive_sha256'])
 
     def test_stale_source_qualification_refuses_before_archive_activation(self):

@@ -1,0 +1,59 @@
+{
+  "scenario_id": "den-60mg-q6mo-three-doses-table5-overlay",
+  "archive_sha256": "5ec276efa03fa788336a0a52876212196d617910d9fda6b13f8af962d2a0bca9",
+  "engine_identity": {
+    "model_content_hash": "sha256:ee87645125af212d378d52284aec02e03e0d3266fa46f85dd4c9fcb96f6f1f0a",
+    "spec_version": "qspquest.spec/0.1",
+    "compiler_version": "qspquest/0.1.0",
+    "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+    "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+    "target": "aarch64-apple-darwin",
+    "build_profile": "release",
+    "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+    "bound_value_hash": "sha256:4130a72680b286eb4c424fe02aab86e3cd2ef9f837cf7fcad4e784488fdbb667",
+    "run_request_hash": "sha256:a9794b8318728f396c990c10f1e1b0c6e5c0e031f1af6ffca3be5af114d74cf7",
+    "backend": "diffsol",
+    "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+    "algorithm": "tsit45"
+  },
+  "rows": 551,
+  "time_unit": "h",
+  "columns": [
+    {
+      "name": "Ctot_nM",
+      "unit": "1",
+      "first": 0.0,
+      "last": 0.13007510090587648,
+      "minimum": 0.0,
+      "minimum_time": 0.0,
+      "minimum_side": "post",
+      "maximum": 40.217210644690574,
+      "maximum_time": 9048.0,
+      "maximum_side": "post"
+    },
+    {
+      "name": "Rfree_nM",
+      "unit": "1",
+      "first": 15.23,
+      "last": 3.2064366248200793,
+      "minimum": 0.017999147086426415,
+      "minimum_time": 9096.0,
+      "minimum_side": "post",
+      "maximum": 15.23,
+      "maximum_time": 0.0,
+      "maximum_side": "post"
+    },
+    {
+      "name": "bmd_change_percent",
+      "unit": "1",
+      "first": 0.0,
+      "last": 6.739369811475537,
+      "minimum": 0.0,
+      "minimum_time": 0.0,
+      "minimum_side": "post",
+      "maximum": 6.875631796988069,
+      "maximum_time": 12240.0,
+      "maximum_side": "post"
+    }
+  ]
+}

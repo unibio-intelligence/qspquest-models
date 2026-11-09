@@ -1,0 +1,733 @@
+{
+  "description": "Exact source replay scenarios, six source-limited one-compartment ODE probes, and display-only digitized/aggregate figure overlays.",
+  "model_id": "qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation",
+  "name": "Aguilo-Lafarga 2026 adalimumab external-validation scenarios",
+  "scenarios": [
+    {
+      "description": "Exact final-row replay of Aguilo-Lafarga 2026 source values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "cohort-and-sampling-replay",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Cohort And Sampling Replay",
+      "parameters": {},
+      "scenario_type": "exact_pkpd_table_scalar_replay",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact final-row replay of Aguilo-Lafarga 2026 source values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "supplement-model-parameter-replay",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Supplement Model Parameter Replay",
+      "parameters": {},
+      "scenario_type": "exact_pkpd_table_scalar_replay",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact final-row replay of Aguilo-Lafarga 2026 source values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table2-clearance-comparison-replay",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Table2 Clearance Comparison Replay",
+      "parameters": {},
+      "scenario_type": "exact_pkpd_table_scalar_replay",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Exact final-row replay of Aguilo-Lafarga 2026 source values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table3-metric-replay",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Table3 Metric Replay",
+      "parameters": {},
+      "scenario_type": "exact_pkpd_table_scalar_replay",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Deterministic full ODE probe using the Berends one-compartment SC adalimumab model from the preprint supplement.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 160,
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 80,
+            "time": 14,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 28,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 42,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 56,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 70,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 84,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 98,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 112,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 126,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 140,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 154,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 168,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 182,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "berends-adalimumab-induction-q2w-ode",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Berends adalimumab induction plus q2w ODE",
+      "parameters": {
+        "cl_l_day": 0.32,
+        "ka_day": 0.2,
+        "v_l": 4.07
+      },
+      "scenario_type": "dynamic_pk_ode_source_limited",
+      "time_span": {
+        "end": 182,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Deterministic full ODE probe using the FDA one-compartment SC adalimumab model from the preprint supplement.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 160,
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 80,
+            "time": 14,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 28,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 42,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 56,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 70,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 84,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 98,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 112,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 126,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 140,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 154,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 168,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 182,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "fda-adalimumab-induction-q2w-ode",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "FDA adalimumab induction plus q2w ODE",
+      "parameters": {
+        "cl_l_day": 0.3,
+        "ka_day": 0.648,
+        "v_l": 9.39
+      },
+      "scenario_type": "dynamic_pk_ode_source_limited",
+      "time_span": {
+        "end": 182,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Deterministic full ODE probe using the Marquez one-compartment SC adalimumab model from the preprint supplement.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 160,
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 80,
+            "time": 14,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 28,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 42,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 56,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 70,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 84,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 98,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 112,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 126,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 140,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 154,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 168,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 182,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "marquez-adalimumab-induction-q2w-ode",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Marquez adalimumab induction plus q2w ODE",
+      "parameters": {
+        "cl_l_day": 0.75,
+        "ka_day": 0.15,
+        "v_l": 7.76
+      },
+      "scenario_type": "dynamic_pk_ode_source_limited",
+      "time_span": {
+        "end": 182,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Deterministic full ODE probe using the Sanchez one-compartment SC adalimumab model from the preprint supplement.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 160,
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 80,
+            "time": 14,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 28,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 42,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 56,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 70,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 84,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 98,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 112,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 126,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 140,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 154,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 168,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 182,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "sanchez-adalimumab-induction-q2w-ode",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Sanchez adalimumab induction plus q2w ODE",
+      "parameters": {
+        "cl_l_day": 0.38,
+        "ka_day": 0.15,
+        "v_l": 11.2
+      },
+      "scenario_type": "dynamic_pk_ode_source_limited",
+      "time_span": {
+        "end": 182,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Deterministic full ODE probe using the Ternant one-compartment SC adalimumab model from the preprint supplement.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 160,
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 80,
+            "time": 14,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 28,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 42,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 56,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 70,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 84,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 98,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 112,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 126,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 140,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 154,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 168,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 182,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "ternant-adalimumab-induction-q2w-ode",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Ternant adalimumab induction plus q2w ODE",
+      "parameters": {
+        "cl_l_day": 0.42,
+        "ka_day": 0.15,
+        "v_l": 13.5
+      },
+      "scenario_type": "dynamic_pk_ode_source_limited",
+      "time_span": {
+        "end": 182,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Deterministic full ODE probe using the Vande one-compartment SC adalimumab model from the preprint supplement.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 160,
+            "time": 0,
+            "type": "bolus"
+          },
+          {
+            "amount": 80,
+            "time": 14,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 28,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 42,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 56,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 70,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 84,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 98,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 112,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 126,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 140,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 154,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 168,
+            "type": "bolus"
+          },
+          {
+            "amount": 40,
+            "time": 182,
+            "type": "bolus"
+          }
+        ]
+      },
+      "id": "vande-adalimumab-induction-q2w-ode",
+      "initial_states": {
+        "auc_mg_day_l": 0,
+        "central_mg": 0,
+        "depot_mg": 0,
+        "elapsed_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Vande adalimumab induction plus q2w ODE",
+      "parameters": {
+        "cl_l_day": 0.33,
+        "ka_day": 0.34,
+        "v_l": 7.8
+      },
+      "scenario_type": "dynamic_pk_ode_source_limited",
+      "time_span": {
+        "end": 182,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Display-only source-limited raster digitization of observed-vs-individual-predicted concentration components from Figure 1. This is not patient-level source data or a new fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "figure1-gof-digitized-scatter",
+      "initial_states": {},
+      "name": "Figure 1 GOF digitized scatter components",
+      "parameters": {},
+      "scenario_type": "paper_digitized_display_only_source_limited",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Display-only source-limited raster digitization of red observed-marker components from Figure 2 pcVPC panels plus coverage labels in paper_overlays.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "figure2-pcvpc-digitized-observed-markers",
+      "initial_states": {},
+      "name": "Figure 2 pcVPC digitized observed marker components",
+      "parameters": {},
+      "scenario_type": "paper_digitized_display_only_source_limited",
+      "time_span": {
+        "end": 26000,
+        "start": 0,
+        "step": 1000
+      }
+    },
+    {
+      "description": "Display-only source-derived anchors for the MPE, MAPE, and RMSE bootstrap-distribution plots. Means and confidence intervals come from Table 3 because bootstrap draws are unavailable.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "supplementary-figures-1-3-metric-distribution-anchors",
+      "initial_states": {},
+      "name": "Supplementary Figures 1-3 metric distribution aggregate anchors",
+      "parameters": {},
+      "scenario_type": "paper_aggregate_display_only_source_limited",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 182,
+      "start": 0,
+      "step": 1
+    }
+  },
+  "time_unit": "day"
+}

@@ -1,0 +1,120 @@
+{
+  "cases": [
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:67a42775fae55127df55a6a4733802a33d782ce4e0c0a1a4c233b1729692bcd5",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:180eab6f2b4f6380417461ff3c28ac91fc9233ec8d779a4b040aea5275508db6",
+        "run_request_hash": "sha256:a7037061193f081452e761d3c699c183e6e28e13a49aab9c922ec2c4abdb736c",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/gottlieb-escalating-pasi-progression-probe/qspquest.csv.gz",
+          "sha256": "6e24592cc956dc244615fe2c0c9edd2cf84096e697b2b3cddf2ad995f90c7ec7",
+          "uncompressed_sha256": "5c759792f82b818bd85c526cbc611ab3ffe2861fef06db3483a60786998e5588"
+        }
+      },
+      "scenario_id": "gottlieb-escalating-pasi-progression-probe",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:67a42775fae55127df55a6a4733802a33d782ce4e0c0a1a4c233b1729692bcd5",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:eec940317b1758aa90c0e7a3828d3ad7eff06f061de8e2f5b65702fd19e8f948",
+        "run_request_hash": "sha256:80e12e3c022ea60bbc5e7347baf1294643c0d011b82ba5f9459254c19e243954",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/gordon-1mgkg-pasi-progression-probe/qspquest.csv.gz",
+          "sha256": "63a6baab9af66bc045ffbd6b37b90e2490073c0916ab4576480d75d4766c3375",
+          "uncompressed_sha256": "79014690427adb406048f9c5a8f4587e3b98a86e2ba6ed42aa0770dec5eaa6bd"
+        }
+      },
+      "scenario_id": "gordon-1mgkg-pasi-progression-probe",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:67a42775fae55127df55a6a4733802a33d782ce4e0c0a1a4c233b1729692bcd5",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:e78267d5a6c73b359ef314f3d0584910fb0247177da591738f1bb14cbb89ac61",
+        "run_request_hash": "sha256:a7037061193f081452e761d3c699c183e6e28e13a49aab9c922ec2c4abdb736c",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/exploratory-calibrated-gottlieb-digitized-pasi-probe/qspquest.csv.gz",
+          "sha256": "b4375e7683ba4e38ae42b308fff46fcb15b9098b11e9a6235867abd3a0bcf9c5",
+          "uncompressed_sha256": "0246aa2bfc935e99ffa8b5b2b2730c8438a64092f4c63dafd2904383d2ee4ace"
+        }
+      },
+      "scenario_id": "exploratory-calibrated-gottlieb-digitized-pasi-probe",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:67a42775fae55127df55a6a4733802a33d782ce4e0c0a1a4c233b1729692bcd5",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.0",
+        "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "release",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:94c7ffb4a0b393eba813811d9c2fb3685c75fa036a266ae10df9095bcb25646b",
+        "run_request_hash": "sha256:80e12e3c022ea60bbc5e7347baf1294643c0d011b82ba5f9459254c19e243954",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/exploratory-calibrated-gordon-digitized-pasi-probe/qspquest.csv.gz",
+          "sha256": "8c242c0b467b655d58de92923de6580405f47cf79de45db6926e888cf1db15a8",
+          "uncompressed_sha256": "7ddd0aa58e39fbfd23d385d0ba260945038e355f92556fa82e106f7bebaa0b95"
+        }
+      },
+      "scenario_id": "exploratory-calibrated-gordon-digitized-pasi-probe",
+      "status": "executed"
+    }
+  ],
+  "omex_sha256": "97de739490044bfb34b43f72356cdfdba5a2f860c085b85a34b55047066d5a89",
+  "source_scenarios": [
+    "gottlieb-escalating-pasi-progression-probe",
+    "gordon-1mgkg-pasi-progression-probe",
+    "exploratory-calibrated-gottlieb-digitized-pasi-probe",
+    "exploratory-calibrated-gordon-digitized-pasi-probe"
+  ],
+  "unavailable_scenarios": []
+}

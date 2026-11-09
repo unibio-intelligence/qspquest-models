@@ -1,0 +1,47 @@
+{
+  "scenario_id": "bevacizumab-15mgkg-13y-growth-table4-smoke",
+  "archive_sha256": "6576583331c4fb133e0ab12eb7465ad5e997c5f5b510062cdad4f8d68556d26d",
+  "engine_identity": {
+    "model_content_hash": "sha256:e16024fee8450b947051c4ee472dbea1603d1eba917ab0ce599761f2f3fa51d2",
+    "spec_version": "qspquest.spec/0.1",
+    "compiler_version": "qspquest/0.1.0",
+    "compiler_source_sha256": "sha256:57429132534e1c2d95f2007b5fde61c912007447d83d89d036622b3383717cd0",
+    "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+    "target": "aarch64-apple-darwin",
+    "build_profile": "release",
+    "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+    "bound_value_hash": "sha256:9d318f4bf96875d4c3bf26d46e1b9d5f1dc947987a2525e4b5e5002f143371fc",
+    "run_request_hash": "sha256:db3c4f4268cf069866e68680c66027c99c311942261f2365fca87390a75cd4e5",
+    "backend": "diffsol",
+    "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+    "algorithm": "bdf"
+  },
+  "rows": 121,
+  "time_unit": "h",
+  "columns": [
+    {
+      "name": "central_concentration_ug_ml",
+      "unit": "1",
+      "first": 322.82760688918074,
+      "last": 1.1750254239612554,
+      "minimum": 1.1750254239612554,
+      "minimum_time": 120.0,
+      "minimum_side": "pre",
+      "maximum": 322.82760688918074,
+      "maximum_time": 0.0,
+      "maximum_side": "post"
+    },
+    {
+      "name": "AUC_ug_ml_day",
+      "unit": "1",
+      "first": 0.0,
+      "last": 3927.7960619212963,
+      "minimum": 0.0,
+      "minimum_time": 0.0,
+      "minimum_side": "post",
+      "maximum": 3927.7960619212963,
+      "maximum_time": 120.0,
+      "maximum_side": "pre"
+    }
+  ]
+}

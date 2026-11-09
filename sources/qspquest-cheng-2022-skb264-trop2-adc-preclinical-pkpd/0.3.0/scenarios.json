@@ -1,0 +1,1180 @@
+{
+  "description": "Exact source table/scalar replay plus exploratory calibrated Figure 4/5 tumor-growth ODE scenarios from digitized public curves.",
+  "model_id": "qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd",
+  "name": "Cheng 2022 SKB264/sac-TMT TROP2 ADC scenarios",
+  "scenarios": [
+    {
+      "description": "Exact design, affinity, and in vitro activity constants from text/Figures 1-3 and 7.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "design-affinity-cytotoxicity",
+      "initial_states": {
+        "summary_marker": 1.0
+      },
+      "name": "ADC design, affinity, and cytotoxicity",
+      "parameters": {
+        "hcc1806_cell_skb264_ec50_nm": 11.21,
+        "hcc1806_cell_skb264_mab_ec50_nm": 16.14,
+        "human_trop2_elisa_skb264_ec50_ng_ml": 2.787,
+        "human_trop2_elisa_skb264_mab_ec50_ng_ml": 2.731,
+        "immu132_human_trop2_spr_kd_nm": 0.2935,
+        "kl610023_cytotoxicity_ic50_max_nm": 5.996,
+        "kl610023_cytotoxicity_ic50_min_nm": 1.36,
+        "kl610023_hcc1806_ic50_nm": 1.816,
+        "monkey_trop2_skb264_ec50_ng_ml": 4.363,
+        "monkey_trop2_skb264_mab_ec50_ng_ml": 3.399,
+        "mouse_rat_trop2_low_affinity_threshold_ng_ml": 5000.0,
+        "nci_n87_cell_skb264_ec50_nm": 6.213,
+        "nci_n87_cell_skb264_mab_ec50_nm": 8.094,
+        "skb264_cytotoxicity_ic50_max_nm": 18.83,
+        "skb264_cytotoxicity_ic50_min_nm": 1.281,
+        "skb264_dar_max": 8.0,
+        "skb264_dar_mean": 7.4,
+        "skb264_dar_min": 7.0,
+        "skb264_human_trop2_spr_kd_nm": 0.3083,
+        "sn38_hcc1806_ic50_nm": 2.61
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Dose, sample size, timing, and TGI method constants from Methods.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "methods-design",
+      "initial_states": {
+        "summary_marker": 1.0
+      },
+      "name": "PK/PD and efficacy study design",
+      "parameters": {
+        "cdx_doses_per_week": 2.0,
+        "cdx_hcc1806_initial_tumor_volume_mm3": 120.0,
+        "cdx_nci_n87_initial_tumor_volume_mm3": 120.0,
+        "cdx_total_doses": 6.0,
+        "hcc1806_cdx_group_n": 8.0,
+        "hcc1806_cdx_high_dose_mg_kg": 10.0,
+        "hcc1806_cdx_low_dose_mg_kg": 1.0,
+        "hcc1806_cdx_mid_dose_mg_kg": 3.0,
+        "monkey_pk_group_n": 6.0,
+        "monkey_pk_sample_end_h": 672.0,
+        "mouse_pkpd_endpoint_day": 13.0,
+        "mouse_pkpd_endpoint_h": 336.0,
+        "mouse_pkpd_single_dose_mg_kg": 3.0,
+        "nci_n87_cdx_high_dose_mg_kg": 3.0,
+        "nci_n87_cdx_low_dose_mg_kg": 0.3,
+        "nci_n87_cdx_mid_dose_mg_kg": 1.0,
+        "single_injection_infusion_min": 15.0
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reported TGI, release-rate, PDX, and comparator scalars from Results.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "efficacy-pkpd-text",
+      "initial_states": {
+        "summary_marker": 1.0
+      },
+      "name": "Efficacy, stability, and PK/PD text scalars",
+      "parameters": {
+        "br1282_pdx_skb264_0p5mg_tgi_percent": 44.0,
+        "br1282_pdx_skb264_1p5mg_tgi_percent": 92.6,
+        "br1282_pdx_skb264_5mg_tgi_percent": 104.8,
+        "gastric_pdx_positive_models_with_tgi_gt100_n": 3.0,
+        "gastric_pdx_total_models_n": 4.0,
+        "hcc1806_compare_immu132_10mg_tgi_percent": 153.27,
+        "hcc1806_compare_immu132_1mg_tgi_percent": 48.12,
+        "hcc1806_compare_immu132_3mg_tgi_percent": 70.64,
+        "hcc1806_compare_skb264_10mg_tgi_percent": 188.86,
+        "hcc1806_compare_skb264_1mg_tgi_percent": 81.06,
+        "hcc1806_compare_skb264_3mg_tgi_percent": 189.46,
+        "invitro_immu132_payload_release_48h_percent": 100.0,
+        "invitro_skb264_payload_release_144h_percent": 70.0,
+        "mouse_pkpd_immu132_3mg_tgi_percent": 21.05,
+        "mouse_pkpd_skb264_3mg_tgi_percent": 123.47,
+        "trop2_ihc_activity_threshold_score": 1.0
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact design, morbidity/death count, and HNSTD from Table 1.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "tox-table1",
+      "initial_states": {
+        "summary_marker": 1.0
+      },
+      "name": "Repeated-dose monkey toxicology Table 1",
+      "parameters": {
+        "tox_animals_per_sex_per_group": 5.0,
+        "tox_control_dose_mg_kg": 0.0,
+        "tox_dosing_interval_week": 2.0,
+        "tox_high_dose_female_moribund_or_dead_n": 2.0,
+        "tox_high_dose_male_moribund_or_dead_n": 3.0,
+        "tox_high_dose_mg_kg": 75.0,
+        "tox_hnstd_mg_kg": 50.0,
+        "tox_low_dose_mg_kg": 25.0,
+        "tox_mid_dose_mg_kg": 50.0,
+        "tox_total_doses": 4.0
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact mean/SD NCA parameters for ADC and total antibody after SKB264.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "monkey-table2",
+      "initial_states": {
+        "summary_marker": 1.0
+      },
+      "name": "Monkey ADC and Tab NCA Table 2",
+      "parameters": {
+        "table2_10mg_adc_auc0inf_h_ug_ml": 8640.0,
+        "table2_10mg_adc_auc0inf_h_ug_ml_sd": 1070.0,
+        "table2_10mg_adc_auc0t_h_ug_ml": 8550.0,
+        "table2_10mg_adc_auc0t_h_ug_ml_sd": 1160.0,
+        "table2_10mg_adc_cmax_ug_ml": 214.0,
+        "table2_10mg_adc_cmax_ug_ml_sd": 24.4,
+        "table2_10mg_adc_half_life_h": 25.2,
+        "table2_10mg_adc_half_life_h_sd": 4.36,
+        "table2_10mg_adc_tmax_h": 0.425,
+        "table2_10mg_adc_tmax_h_sd": 0.483,
+        "table2_10mg_tab_auc0inf_h_ug_ml": 10800.0,
+        "table2_10mg_tab_auc0inf_h_ug_ml_sd": 2050.0,
+        "table2_10mg_tab_auc0t_h_ug_ml": 10200.0,
+        "table2_10mg_tab_auc0t_h_ug_ml_sd": 2210.0,
+        "table2_10mg_tab_cmax_ug_ml": 189.0,
+        "table2_10mg_tab_cmax_ug_ml_sd": 26.7,
+        "table2_10mg_tab_half_life_h": 56.5,
+        "table2_10mg_tab_half_life_h_sd": 17.5,
+        "table2_10mg_tab_tmax_h": 0.67,
+        "table2_10mg_tab_tmax_h_sd": 0.403,
+        "table2_1mg_adc_auc0inf_h_ug_ml": 792.0,
+        "table2_1mg_adc_auc0inf_h_ug_ml_sd": 214.0,
+        "table2_1mg_adc_auc0t_h_ug_ml": 787.0,
+        "table2_1mg_adc_auc0t_h_ug_ml_sd": 216.0,
+        "table2_1mg_adc_cmax_ug_ml": 25.2,
+        "table2_1mg_adc_cmax_ug_ml_sd": 6.03,
+        "table2_1mg_adc_half_life_h": 23.8,
+        "table2_1mg_adc_half_life_h_sd": 3.92,
+        "table2_1mg_adc_tmax_h": 0.178,
+        "table2_1mg_adc_tmax_h_sd": 0.249,
+        "table2_1mg_tab_auc0inf_h_ug_ml": 879.0,
+        "table2_1mg_tab_auc0inf_h_ug_ml_sd": 249.0,
+        "table2_1mg_tab_auc0t_h_ug_ml": 871.0,
+        "table2_1mg_tab_auc0t_h_ug_ml_sd": 252.0,
+        "table2_1mg_tab_cmax_ug_ml": 21.4,
+        "table2_1mg_tab_cmax_ug_ml_sd": 5.04,
+        "table2_1mg_tab_half_life_h": 35.3,
+        "table2_1mg_tab_half_life_h_sd": 12.6,
+        "table2_1mg_tab_tmax_h": 0.342,
+        "table2_1mg_tab_tmax_h_sd": 0.4,
+        "table2_3mg_adc_auc0inf_h_ug_ml": 2250.0,
+        "table2_3mg_adc_auc0inf_h_ug_ml_sd": 305.0,
+        "table2_3mg_adc_auc0t_h_ug_ml": 2170.0,
+        "table2_3mg_adc_auc0t_h_ug_ml_sd": 349.0,
+        "table2_3mg_adc_cmax_ug_ml": 77.4,
+        "table2_3mg_adc_cmax_ug_ml_sd": 12.0,
+        "table2_3mg_adc_half_life_h": 24.8,
+        "table2_3mg_adc_half_life_h_sd": 2.99,
+        "table2_3mg_adc_tmax_h": 0.261,
+        "table2_3mg_adc_tmax_h_sd": 0.41,
+        "table2_3mg_tab_auc0inf_h_ug_ml": 2570.0,
+        "table2_3mg_tab_auc0inf_h_ug_ml_sd": 401.0,
+        "table2_3mg_tab_auc0t_h_ug_ml": 2370.0,
+        "table2_3mg_tab_auc0t_h_ug_ml_sd": 404.0,
+        "table2_3mg_tab_cmax_ug_ml": 65.3,
+        "table2_3mg_tab_cmax_ug_ml_sd": 6.64,
+        "table2_3mg_tab_half_life_h": 41.0,
+        "table2_3mg_tab_half_life_h_sd": 8.4,
+        "table2_3mg_tab_tmax_h": 0.506,
+        "table2_3mg_tab_tmax_h_sd": 0.44
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact mean/SD payload parameters after SKB264 and free KL610023.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "payload-table3",
+      "initial_states": {
+        "summary_marker": 1.0
+      },
+      "name": "Payload NCA Table 3",
+      "parameters": {
+        "table3_free_kl610023_0p24mg_auc0inf_h_ng_ml": 230.0,
+        "table3_free_kl610023_0p24mg_auc0inf_h_ng_ml_sd": 43.9,
+        "table3_free_kl610023_0p24mg_auc0t_h_ng_ml": 228.0,
+        "table3_free_kl610023_0p24mg_auc0t_h_ng_ml_sd": 44.2,
+        "table3_free_kl610023_0p24mg_half_life_h": 5.65,
+        "table3_free_kl610023_0p24mg_half_life_h_sd": 2.53,
+        "table3_skb264_10mg_payload_auc0inf_h_ng_ml": 622.0,
+        "table3_skb264_10mg_payload_auc0inf_h_ng_ml_sd": 80.9,
+        "table3_skb264_10mg_payload_auc0t_h_ng_ml": 599.0,
+        "table3_skb264_10mg_payload_auc0t_h_ng_ml_sd": 90.2,
+        "table3_skb264_10mg_payload_cmax_ng_ml": 23.8,
+        "table3_skb264_10mg_payload_cmax_ng_ml_sd": 2.09,
+        "table3_skb264_10mg_payload_half_life_h": 37.8,
+        "table3_skb264_10mg_payload_half_life_h_sd": 10.8,
+        "table3_skb264_10mg_payload_tmax_h": 0.345,
+        "table3_skb264_10mg_payload_tmax_h_sd": 0.508,
+        "table3_skb264_1mg_payload_auc0inf_h_ng_ml": 66.0,
+        "table3_skb264_1mg_payload_auc0inf_h_ng_ml_sd": 17.4,
+        "table3_skb264_1mg_payload_auc0t_h_ng_ml": 57.9,
+        "table3_skb264_1mg_payload_auc0t_h_ng_ml_sd": 14.5,
+        "table3_skb264_1mg_payload_cmax_ng_ml": 2.29,
+        "table3_skb264_1mg_payload_cmax_ng_ml_sd": 0.365,
+        "table3_skb264_1mg_payload_half_life_h": 36.3,
+        "table3_skb264_1mg_payload_half_life_h_sd": 17.7,
+        "table3_skb264_1mg_payload_tmax_h": 1.5,
+        "table3_skb264_1mg_payload_tmax_h_sd": 1.22,
+        "table3_skb264_3mg_payload_auc0inf_h_ng_ml": 232.0,
+        "table3_skb264_3mg_payload_auc0inf_h_ng_ml_sd": 102.0,
+        "table3_skb264_3mg_payload_auc0t_h_ng_ml": 218.0,
+        "table3_skb264_3mg_payload_auc0t_h_ng_ml_sd": 106.0,
+        "table3_skb264_3mg_payload_cmax_ng_ml": 8.84,
+        "table3_skb264_3mg_payload_cmax_ng_ml_sd": 3.95,
+        "table3_skb264_3mg_payload_half_life_h": 43.8,
+        "table3_skb264_3mg_payload_half_life_h_sd": 15.0,
+        "table3_skb264_3mg_payload_tmax_h": 1.25,
+        "table3_skb264_3mg_payload_tmax_h_sd": 1.4
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact tumor/plasma payload PK for SKB264/KL610023 and IMMU-132/SN-38.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "mouse-tissue-table4",
+      "initial_states": {
+        "summary_marker": 1.0
+      },
+      "name": "Mouse tumor and plasma payload Table 4",
+      "parameters": {
+        "table4_plasma_kl610023_auc0inf_h_ng_g_or_ml": 32.68,
+        "table4_plasma_kl610023_auclast_h_ng_g_or_ml": 22.94,
+        "table4_plasma_kl610023_cmax_ng_g_or_ml": 0.53,
+        "table4_plasma_kl610023_half_life_h": 56.3,
+        "table4_plasma_kl610023_tmax_h": 1.0,
+        "table4_plasma_sn38_auc0inf_h_ng_g_or_ml": 22.17,
+        "table4_plasma_sn38_auclast_h_ng_g_or_ml": 19.26,
+        "table4_plasma_sn38_cmax_ng_g_or_ml": 1.32,
+        "table4_plasma_sn38_half_life_h": 15.5,
+        "table4_plasma_sn38_tmax_h": 1.0,
+        "table4_tumor_kl610023_auc0inf_h_ng_g_or_ml": 1949.0,
+        "table4_tumor_kl610023_auclast_h_ng_g_or_ml": 1903.0,
+        "table4_tumor_kl610023_cmax_ng_g_or_ml": 14.6,
+        "table4_tumor_kl610023_half_life_h": 52.8,
+        "table4_tumor_kl610023_tmax_h": 96.0,
+        "table4_tumor_sn38_auc0inf_h_ng_g_or_ml": 448.0,
+        "table4_tumor_sn38_auclast_h_ng_g_or_ml": 410.0,
+        "table4_tumor_sn38_cmax_ng_g_or_ml": 4.5,
+        "table4_tumor_sn38_half_life_h": 57.4,
+        "table4_tumor_sn38_tmax_h": 24.0
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Corrected payload KL610023 monkey plasma NCA table from the 2023 corrigendum.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "corrigendum-table5",
+      "initial_states": {
+        "summary_marker": 1.0
+      },
+      "name": "Corrected KL610023 payload Table 5",
+      "parameters": {
+        "corrigendum_table5_kl610023_auc0inf_h_ng_ml": 97.0,
+        "corrigendum_table5_kl610023_auc0inf_h_ng_ml_sd": 26.9,
+        "corrigendum_table5_kl610023_auclast_h_ng_ml": 97.0,
+        "corrigendum_table5_kl610023_auclast_h_ng_ml_sd": 26.7,
+        "corrigendum_table5_kl610023_cl_obs_ml_kg": 535.0,
+        "corrigendum_table5_kl610023_cl_obs_ml_kg_sd": 148.0,
+        "corrigendum_table5_kl610023_cmax_ng_ml": 273.0,
+        "corrigendum_table5_kl610023_cmax_ng_ml_sd": 54.4,
+        "corrigendum_table5_kl610023_half_life_h": 1.61,
+        "corrigendum_table5_kl610023_half_life_h_sd": 1.16,
+        "corrigendum_table5_kl610023_vz_obs_h_ng_ml": 1119.0,
+        "corrigendum_table5_kl610023_vz_obs_h_ng_ml_sd": 548.0
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-black-vehicle",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 163.79310344827587
+      },
+      "name": "Figure 4A NCI-N87 CDX black_vehicle tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.044766061616572095,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-blue",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 143.9655172413793
+      },
+      "name": "Figure 4A NCI-N87 CDX blue tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.06347214773624259
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 20.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-green",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 136.20689655172413
+      },
+      "name": "Figure 4A NCI-N87 CDX green tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.01937921332407817,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 23.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-orange",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 141.3793103448276
+      },
+      "name": "Figure 4A NCI-N87 CDX orange tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.017898444153634372,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-purple",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 139.6551724137931
+      },
+      "name": "Figure 4A NCI-N87 CDX purple tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.06787981785287925
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4a-nci-n87-cdx-red",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 151.72413793103448
+      },
+      "name": "Figure 4A NCI-N87 CDX red tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.043472900416377504
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4b-hcc1806-cdx-black-vehicle",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 1292.834890965732
+      },
+      "name": "Figure 4B HCC1806 CDX black_vehicle tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.013028620152108553,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4b-hcc1806-cdx-green",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 54.517133956386296
+      },
+      "name": "Figure 4B HCC1806 CDX green tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.1297273432703542,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 17.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4b-hcc1806-cdx-orange",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 62.30529595015577
+      },
+      "name": "Figure 4B HCC1806 CDX orange tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.09082254101026743,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4b-hcc1806-cdx-purple",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 109.03426791277259
+      },
+      "name": "Figure 4B HCC1806 CDX purple tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.017709065085326995
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 5.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4b-hcc1806-cdx-red",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 77.88161993769471
+      },
+      "name": "Figure 4B HCC1806 CDX red tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.08395429252259436,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4d-br1282-pdx-black-vehicle",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 1536.5853658536585
+      },
+      "name": "Figure 4D BR1282 PDX black_vehicle tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.010926714273082876,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4d-br1282-pdx-green",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 64.02439024390245
+      },
+      "name": "Figure 4D BR1282 PDX green tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.20404491713476045,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 18.0,
+        "start": 6.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4d-br1282-pdx-orange",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 1275.9146341463415
+      },
+      "name": "Figure 4D BR1282 PDX orange tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.006844220839971565
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4d-br1282-pdx-purple",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 77.7439024390244
+      },
+      "name": "Figure 4D BR1282 PDX purple tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.003566154224496168
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 7.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-4d-br1282-pdx-red",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 1307.9268292682927
+      },
+      "name": "Figure 4D BR1282 PDX red tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.007593367484689373
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 24.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5a-0406022-pdx-black-vehicle",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 44.95114006514658
+      },
+      "name": "Figure 5A 0406022 PDX black_vehicle tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": -0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5a-0406022-pdx-blue",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 162.21498371335505
+      },
+      "name": "Figure 5A 0406022 PDX blue tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.045956144004130124
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 4.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5a-0406022-pdx-green",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 134.85342019543975
+      },
+      "name": "Figure 5A 0406022 PDX green tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.03070954033431237,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5a-0406022-pdx-orange",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 137.78501628664498
+      },
+      "name": "Figure 5A 0406022 PDX orange tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.038125385501432615,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5a-0406022-pdx-red",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 142.67100977198697
+      },
+      "name": "Figure 5A 0406022 PDX red tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.05306993461638376,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5b-a11068-pdx-black-vehicle",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 254.071661237785
+      },
+      "name": "Figure 5B A11068 PDX black_vehicle tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.05689165009106956
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5b-a11068-pdx-blue",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 146.57980456026058
+      },
+      "name": "Figure 5B A11068 PDX blue tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.01632394359493893
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5b-a11068-pdx-green",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 146.57980456026058
+      },
+      "name": "Figure 5B A11068 PDX green tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.02372289897975579
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5b-a11068-pdx-orange",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 162.86644951140065
+      },
+      "name": "Figure 5B A11068 PDX orange tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.05675839901845212,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5b-a11068-pdx-purple",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 74.9185667752443
+      },
+      "name": "Figure 5B A11068 PDX purple tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": -0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 19.0,
+        "start": 12.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5b-a11068-pdx-red",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 166.12377850162866
+      },
+      "name": "Figure 5B A11068 PDX red tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.07373121897584438,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5c-0501116-pdx-black-vehicle",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 101.3986013986014
+      },
+      "name": "Figure 5C 0501116 PDX black_vehicle tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.050107601124027366,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5c-0501116-pdx-blue",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 136.36363636363637
+      },
+      "name": "Figure 5C 0501116 PDX blue tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.04548175813138128
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 4.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5c-0501116-pdx-green",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 83.91608391608392
+      },
+      "name": "Figure 5C 0501116 PDX green tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.05733203830123505,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5c-0501116-pdx-orange",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 103.14685314685315
+      },
+      "name": "Figure 5C 0501116 PDX orange tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.07775664635567382,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5c-0501116-pdx-red",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 111.8881118881119
+      },
+      "name": "Figure 5C 0501116 PDX red tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.09639458217763175,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5d-a19058-pdx-black-vehicle",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 215.034965034965
+      },
+      "name": "Figure 5D A19058 PDX black_vehicle tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0,
+        "tumor_kill_rate_day": 0.03673234557333489
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5d-a19058-pdx-blue",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 209.7902097902098
+      },
+      "name": "Figure 5D A19058 PDX blue tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.06903021157889573,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 4.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5d-a19058-pdx-green",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 143.35664335664336
+      },
+      "name": "Figure 5D A19058 PDX green tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.0588388530758723,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 1.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5d-a19058-pdx-orange",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 164.33566433566435
+      },
+      "name": "Figure 5D A19058 PDX orange tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.07351981423423302,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5d-a19058-pdx-purple",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 192.30769230769232
+      },
+      "name": "Figure 5D A19058 PDX purple tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.07182929728537642,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 20.0,
+        "start": 3.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory calibrated tumor-volume ODE fitted to the first and last digitized points from a Cheng 2022 Figure 4/5 raster trajectory. This is a display/exploration scenario, not a paper-reported mechanistic PK/PD fit.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exploratory-calibrated-tumor-figure-5d-a19058-pdx-red",
+      "initial_states": {
+        "summary_marker": 1.0,
+        "tumor_volume_mm3": 171.32867132867133
+      },
+      "name": "Figure 5D A19058 PDX red tumor curve",
+      "parameters": {
+        "tumor_growth_rate_day": 0.08228951669721446,
+        "tumor_kill_rate_day": 0.0
+      },
+      "scenario_type": "exploratory_calibrated_digitized_tumor_curve",
+      "time_span": {
+        "end": 21.0,
+        "start": 2.0,
+        "step": 1.0
+      }
+    }
+  ],
+  "simulation_defaults": {},
+  "time_unit": "day"
+}

@@ -1,0 +1,251 @@
+{
+  "description": "Coupled PK/PD model of circulating rituximab and CD19+ B-cell dynamics in multiple sclerosis. Rituximab declines through linear and B-cell-dependent loss, drives CD19+ cell depletion, and is linked to gradual B-cell repopulation through baseline production and turnover.",
+  "dosing_targets": {
+    "C": "1 / V_l"
+  },
+  "id": "qspquest-serkland-2025-rituximab-ms-pkpd",
+  "name": "Rituximab exposure–CD19+ B-cell dynamics",
+  "parameters": {
+    "L0_cells_mm3": {
+      "category": "B-cell dynamics",
+      "default": 199.57,
+      "description": "Baseline CD19+ B-cell set point that determines cell production together with kout.",
+      "name": "Baseline CD19+ lymphocytes",
+      "unit": "cell/millimeter^3"
+    },
+    "V_l": {
+      "category": "administration",
+      "default": 2.85049576986599,
+      "description": "Apparent distribution volume; a dose of A mg raises the circulating concentration by A/V_l.",
+      "name": "Volume",
+      "unit": "L"
+    },
+    "aic": {
+      "category": "source audit",
+      "default": 879.751558,
+      "description": "Akaike information criterion.",
+      "name": "AIC",
+      "unit": "1"
+    },
+    "bic": {
+      "category": "source audit",
+      "default": 888.225798,
+      "description": "Bayesian information criterion.",
+      "name": "BIC",
+      "unit": "1"
+    },
+    "bic_c": {
+      "category": "source audit",
+      "default": 909.154396,
+      "description": "Corrected Bayesian information criterion.",
+      "name": "BICc",
+      "unit": "1"
+    },
+    "kel_day": {
+      "category": "PK clearance",
+      "default": 0.030374367889469,
+      "description": "First-order rate constant for nonspecific loss of circulating rituximab (the source parameter cl, in 1/day).",
+      "name": "Linear elimination rate constant",
+      "unit": "1/day"
+    },
+    "kdeg1_mm3_cell_day": {
+      "category": "drug–cell coupling",
+      "default": 0.00302462114205076,
+      "description": "Strength of the CD19-cell-dependent rituximab loss term in dC/dt. The dimensional unit is inferred from the source ODE because the model export does not declare physical units.",
+      "name": "Target-mediated concentration clearance",
+      "unit": "millimeter^3/(cell*day)"
+    },
+    "kdeg2_l_mg_day": {
+      "category": "drug–cell coupling",
+      "default": 0.0031257285864225,
+      "description": "Strength of rituximab-driven CD19+ B-cell depletion.",
+      "name": "RTX-driven B-cell depletion",
+      "unit": "L/(mg*day)"
+    },
+    "kout_day": {
+      "category": "B-cell dynamics",
+      "default": 0.00041037001678172,
+      "description": "CD19+ B-cell turnover rate governing natural loss and return toward the baseline set point.",
+      "name": "B-cell turnover",
+      "unit": "1/day"
+    },
+    "ofv": {
+      "category": "source audit",
+      "default": 849.751558,
+      "description": "Importance-sampling -2 log-likelihood for final model 3.",
+      "name": "Objective function value",
+      "unit": "dimensionless"
+    },
+    "omega_L0": {
+      "category": "population variability",
+      "default": 7.8140233770138,
+      "description": "Random-effect standard deviation for normally distributed L0.",
+      "name": "IIV SD L0",
+      "unit": "cell/millimeter^3"
+    },
+    "omega_V": {
+      "category": "population variability",
+      "default": 0.2117301509717,
+      "description": "Random-effect standard deviation for V.",
+      "name": "IIV SD V",
+      "unit": "dimensionless"
+    },
+    "omega_cl": {
+      "category": "population variability",
+      "default": 0.515193736332513,
+      "description": "Random-effect standard deviation for cl.",
+      "name": "IIV SD cl",
+      "unit": "dimensionless"
+    },
+    "omega_kdeg1": {
+      "category": "population variability",
+      "default": 0.548684537519714,
+      "description": "Random-effect standard deviation for kdeg1.",
+      "name": "IIV SD kdeg1",
+      "unit": "dimensionless"
+    },
+    "omega_kdeg2": {
+      "category": "population variability",
+      "default": 0.25705562852537,
+      "description": "Random-effect standard deviation for kdeg2.",
+      "name": "IIV SD kdeg2",
+      "unit": "dimensionless"
+    },
+    "omega_kout": {
+      "category": "population variability",
+      "default": 1.22171599426665,
+      "description": "Random-effect standard deviation for kout.",
+      "name": "IIV SD kout",
+      "unit": "dimensionless"
+    },
+    "residual_a1": {
+      "category": "residual error",
+      "default": 0.75335090774173,
+      "description": "Combined residual error additive term for RTX concentration.",
+      "name": "RTX additive residual error",
+      "unit": "mg/L"
+    },
+    "residual_a2": {
+      "category": "residual error",
+      "default": 0.539090632610105,
+      "description": "Combined residual error additive term for CD19+ lymphocytes.",
+      "name": "CD19 additive residual error",
+      "unit": "cell/millimeter^3"
+    },
+    "residual_b1": {
+      "category": "residual error",
+      "default": 0.100365215427491,
+      "description": "Combined residual error proportional term for RTX concentration.",
+      "name": "RTX proportional residual error",
+      "unit": "dimensionless"
+    },
+    "residual_b2": {
+      "category": "residual error",
+      "default": 0.326650678971061,
+      "description": "Combined residual error proportional term for CD19+ lymphocytes.",
+      "name": "CD19 proportional residual error",
+      "unit": "dimensionless"
+    },
+    "subject1_L0_cells_mm3": {
+      "category": "source audit",
+      "default": 164.169,
+      "description": "Individual SAEM baseline CD19+ cells used for dynamic replay.",
+      "name": "Subject 1 SAEM L0",
+      "unit": "cell/millimeter^3"
+    },
+    "subject1_V_l": {
+      "category": "source audit",
+      "default": 3.68326,
+      "description": "Individual SAEM volume used for dynamic replay.",
+      "name": "Subject 1 SAEM V",
+      "unit": "L"
+    },
+    "subject1_cd19_day186_cells_mm3": {
+      "category": "source audit",
+      "default": 8.53022,
+      "description": "Individual SAEM prediction at day 186.05.",
+      "name": "Subject 1 Monolix CD19 day 186.05",
+      "unit": "cell/millimeter^3"
+    },
+    "subject1_kel_day": {
+      "category": "source audit",
+      "default": 0.0181792,
+      "description": "Individual SAEM linear elimination rate constant (source cl) used for dynamic replay.",
+      "name": "Subject 1 SAEM kel",
+      "unit": "1/day"
+    },
+    "subject1_final_time_day": {
+      "category": "source audit",
+      "default": 186.05,
+      "description": "Last time with both RTX and CD19 Monolix prediction in exact dynamic replay window.",
+      "name": "Subject 1 final overlay time",
+      "unit": "day"
+    },
+    "subject1_kdeg1": {
+      "category": "source audit",
+      "default": 0.00248073,
+      "description": "Individual SAEM kdeg1 used for dynamic replay; the dimensional unit is inferred from the published ODE because the Monolix export does not declare physical units.",
+      "name": "Subject 1 SAEM kdeg1",
+      "unit": "millimeter^3/(cell*day)"
+    },
+    "subject1_kdeg2": {
+      "category": "source audit",
+      "default": 0.00343609,
+      "description": "Individual SAEM kdeg2 used for dynamic replay.",
+      "name": "Subject 1 SAEM kdeg2",
+      "unit": "L/(mg*day)"
+    },
+    "subject1_kout_day": {
+      "category": "source audit",
+      "default": 0.00105767,
+      "description": "Individual SAEM kout used for dynamic replay.",
+      "name": "Subject 1 SAEM kout",
+      "unit": "1/day"
+    },
+    "subject1_rtx_day186_mg_l": {
+      "category": "source audit",
+      "default": 1.49937,
+      "description": "Individual SAEM prediction at day 186.05.",
+      "name": "Subject 1 Monolix RTX day 186.05",
+      "unit": "mg/L"
+    }
+  },
+  "solver": {
+    "abstol": 1e-10,
+    "maxiters": 200000,
+    "method": "Rosenbrock23",
+    "reltol": 1e-09
+  },
+  "source": {
+    "doi": "10.1002/bcp.70136",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "paper_title": "Rituximab exposure–CD19+ B-cell dynamics",
+    "url": "https://doi.org/10.1002/bcp.70136"
+  },
+  "states": {
+    "C": {
+      "default": 0.0,
+      "description": "Circulating rituximab concentration available for linear clearance and CD19-cell-dependent drug loss. Doses enter as amount divided by V_l.",
+      "name": "Rituximab concentration",
+      "unit": "mg/L"
+    },
+    "L": {
+      "default": 199.57,
+      "description": "Circulating CD19+ B-cell count governed by baseline production, natural turnover, and rituximab-driven depletion.",
+      "name": "CD19+ lymphocyte count",
+      "unit": "cell/millimeter^3"
+    },
+    "elapsed_day": {
+      "default": 0.0,
+      "description": "Time elapsed from the starting administration.",
+      "name": "Elapsed time",
+      "unit": "day"
+    }
+  },
+  "time_unit": "day",
+  "version": "0.3.0",
+  "dosing_policy": {
+    "targeted_infusion": "per_target_rate_symbols"
+  }
+}

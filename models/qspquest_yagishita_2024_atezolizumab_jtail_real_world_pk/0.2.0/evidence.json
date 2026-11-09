@@ -1,0 +1,120 @@
+{
+  "cases": [
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:fe0c072259fd30a54c3ba71b15ac33afe4bda23dd050ab0dfd3e9564cbb7eb0f",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:3f41ac113496e3aba3507762337f825a3ab78f1f6436482dcf651f3a5fafd675",
+        "run_request_hash": "sha256:25fac22831766981422e46174c5077b77b3f82f551f95e59d070f332c7dce13f",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/jtail-source-anchors/qspquest.csv.gz",
+          "sha256": "258daa3d34431d3a5f456afb38b2b73f30eafcf0235633f6c93835f2a93b07d6",
+          "uncompressed_sha256": "f5dfd8069364869881f5bdc706c6232dc20060aa7f87fd10ecadb4dc1945d75c"
+        }
+      },
+      "scenario_id": "jtail-source-anchors",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:fe0c072259fd30a54c3ba71b15ac33afe4bda23dd050ab0dfd3e9564cbb7eb0f",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:3f41ac113496e3aba3507762337f825a3ab78f1f6436482dcf651f3a5fafd675",
+        "run_request_hash": "sha256:253cb5613ed388ff2441f0bd9ae012986f224fc4414fc251ec5d0f238ae3148f",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/jtail-article-figure1-public-fixed-effect/qspquest.csv.gz",
+          "sha256": "9e2f8e34aaeb7d9f2a2284ce4446d17c93a1e510544e116622200d98d17511ee",
+          "uncompressed_sha256": "8ff538c179d4cd11e554d32be5beb8a0cdf7cfe775425a199515b3ee5bb5f467"
+        }
+      },
+      "scenario_id": "jtail-article-figure1-public-fixed-effect",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:fe0c072259fd30a54c3ba71b15ac33afe4bda23dd050ab0dfd3e9564cbb7eb0f",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:17ac9b218f2820198b73bac1dbd6afcb57b5c083298175b25609afebaf9da414",
+        "run_request_hash": "sha256:253cb5613ed388ff2441f0bd9ae012986f224fc4414fc251ec5d0f238ae3148f",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/jtail-article-figure1-exploratory-median-ebe/qspquest.csv.gz",
+          "sha256": "d29a04b9919b0dab6d21a446daee19cbee9b683e562541aa5724e61541a31303",
+          "uncompressed_sha256": "2eacf2f340237612c377d8ee63e7034804d56803a093600b2e32acc566244f02"
+        }
+      },
+      "scenario_id": "jtail-article-figure1-exploratory-median-ebe",
+      "status": "executed"
+    },
+    {
+      "engine_identity": {
+        "model_content_hash": "sha256:fe0c072259fd30a54c3ba71b15ac33afe4bda23dd050ab0dfd3e9564cbb7eb0f",
+        "spec_version": "qspquest.spec/0.1",
+        "compiler_version": "qspquest/0.1.1",
+        "compiler_source_sha256": "sha256:b6921ae338d830b25a7e4d4d6cc803a86a5bf6185745f2e878d13d4a434c1905",
+        "rustc_version": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+        "target": "aarch64-apple-darwin",
+        "build_profile": "debug",
+        "rustflags_sha256": "sha256:c413dbb143aa3e09845350d664f4abc382d6f94ce0f8c67a2f6c6aff8d68656b",
+        "bound_value_hash": "sha256:3f41ac113496e3aba3507762337f825a3ab78f1f6436482dcf651f3a5fafd675",
+        "run_request_hash": "sha256:1df4c9d2c6a7f65a2fb76108f9c8bff9299379eea4174472aafbde0a62b15289",
+        "backend": "diffsol",
+        "backend_version": "0.18.0+git:883d9a09238c2e0b465f0f1549c462b8c38ea1b2",
+        "algorithm": "bdf"
+      },
+      "files": {
+        "qspquest_csv": {
+          "compression": "gzip",
+          "path": "results/jtail-1200mg-q3w-median-covariate-exposure-overlay/qspquest.csv.gz",
+          "sha256": "9b87fc9310c4c9301b2f260e83a12596cb264442d24f3cfd50d38f2d5b25e750",
+          "uncompressed_sha256": "c806ecdd1abe0991116990e7c3b74cac934cadce53dc30edbcdf31111c3dc795"
+        }
+      },
+      "scenario_id": "jtail-1200mg-q3w-median-covariate-exposure-overlay",
+      "status": "executed"
+    }
+  ],
+  "omex_sha256": "518d3b3e1bf628510c10227cf08abe645635c211cbea362ba076066b85e8b586",
+  "source_scenarios": [
+    "jtail-source-anchors",
+    "jtail-article-figure1-public-fixed-effect",
+    "jtail-article-figure1-exploratory-median-ebe",
+    "jtail-1200mg-q3w-median-covariate-exposure-overlay"
+  ],
+  "unavailable_scenarios": []
+}

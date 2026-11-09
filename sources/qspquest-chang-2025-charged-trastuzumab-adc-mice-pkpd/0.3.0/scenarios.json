@@ -1,0 +1,1132 @@
+{
+  "description": "Exact table anchors and reduced empirical ODE endpoint overlays for the charged trastuzumab-vc-MMAE ADC mouse paper.",
+  "model_id": "qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd",
+  "name": "Chang 2025 charged ADC mouse PK/PD scenarios",
+  "scenarios": [
+    {
+      "description": "Exact paper anchors from the article methods and results text.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "source-identity-and-design",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 0.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Study design",
+      "parameters": {
+        "adc_flag": 1.0,
+        "charged_adc_dar": 3.0,
+        "charged_adc_tcep_equiv": 4.0,
+        "cytotoxicity_incubation_h": 96.0,
+        "cytotoxicity_max_conc_nM": 1000.0,
+        "cytotoxicity_min_conc_nM": 0.01,
+        "efficacy_charged_n": 5.0,
+        "efficacy_control_n": 3.0,
+        "efficacy_dose_mg_kg": 5.0,
+        "efficacy_total_n": 13.0,
+        "efficacy_wt_n": 5.0,
+        "mcf7_ic50_ratio_approx": 20.0,
+        "mda_mb_468_ic50_ratio_approx": 60.0,
+        "n87_ic50_ratio_approx_max": 3.0,
+        "pk_study_dose_mg_kg": 10.0,
+        "pk_study_mice_per_adc_per_xenograft_n": 15.0,
+        "pk_study_mice_per_xenograft_n": 30.0,
+        "pk_study_mice_total_n": 60.0,
+        "positive_charge_net": 5.0,
+        "trastuzumab_backbone_flag": 1.0,
+        "tumor_volume_stop_mm3": 2000.0,
+        "wt_adc_dar": 4.0,
+        "wt_adc_tcep_equiv": 3.0
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact paper anchors from Table 1, plasma PK of WT and positively charged (+5) ADCs in mice.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table-plasma-pk",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 0.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Table Plasma Pk",
+      "parameters": {
+        "charged_plasma_free_mmae_auc0t_h_nm": 23.3,
+        "charged_plasma_free_mmae_aucinf_h_nm": 23.9,
+        "charged_plasma_free_mmae_cmax_nm": 8.72,
+        "charged_plasma_free_mmae_half_life_h": 17.6,
+        "charged_plasma_total_mab_auc0t_h_nm": 34100.0,
+        "charged_plasma_total_mab_aucinf_h_nm": 44500.0,
+        "charged_plasma_total_mab_cl_ml_h": 0.0449,
+        "charged_plasma_total_mab_cmax_nm": 716.0,
+        "charged_plasma_total_mab_half_life_h": 77.8,
+        "charged_plasma_total_mab_vss_ml": 4.88,
+        "charged_plasma_total_mmae_auc0t_h_nm": 2200.0,
+        "charged_plasma_total_mmae_aucinf_h_nm": 2300.0,
+        "charged_plasma_total_mmae_cl_ml_h": 1.74,
+        "charged_plasma_total_mmae_cmax_nm": 172.0,
+        "charged_plasma_total_mmae_half_life_h": 41.7,
+        "charged_plasma_total_mmae_vss_ml": 65.2,
+        "wt_plasma_free_mmae_auc0t_h_nm": 278.0,
+        "wt_plasma_free_mmae_aucinf_h_nm": 331.0,
+        "wt_plasma_free_mmae_cmax_nm": 15.8,
+        "wt_plasma_free_mmae_half_life_h": 70.3,
+        "wt_plasma_total_mab_auc0t_h_nm": 113600.0,
+        "wt_plasma_total_mab_aucinf_h_nm": 386000.0,
+        "wt_plasma_total_mab_cl_ml_h": 0.00518,
+        "wt_plasma_total_mab_cmax_nm": 1600.0,
+        "wt_plasma_total_mab_half_life_h": 350.0,
+        "wt_plasma_total_mab_vss_ml": 2.57,
+        "wt_plasma_total_mmae_auc0t_h_nm": 157900.0,
+        "wt_plasma_total_mmae_aucinf_h_nm": 177000.0,
+        "wt_plasma_total_mmae_cl_ml_h": 0.0452,
+        "wt_plasma_total_mmae_cmax_nm": 5080.0,
+        "wt_plasma_total_mmae_half_life_h": 57.5,
+        "wt_plasma_total_mmae_vss_ml": 2.93
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact paper anchors from Table 2, PK parameters in NCI-N87 tumors.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table-n87-tumor-pk",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 0.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Table N87 Tumor Pk",
+      "parameters": {
+        "charged_n87_tumor_free_mmae_aucall_h_nm": 1843.0,
+        "charged_n87_tumor_free_mmae_cmax_nm": 20.1,
+        "charged_n87_tumor_free_mmae_tmax_h": 24.0,
+        "charged_n87_tumor_total_mab_aucall_h_nm": 22500.0,
+        "charged_n87_tumor_total_mab_cmax_nm": 146.0,
+        "charged_n87_tumor_total_mab_tmax_h": 24.0,
+        "charged_n87_tumor_total_mmae_aucall_h_nm": 2057.0,
+        "charged_n87_tumor_total_mmae_cmax_nm": 45.3,
+        "charged_n87_tumor_total_mmae_tmax_h": 24.0,
+        "wt_n87_tumor_free_mmae_aucall_h_nm": 53106.0,
+        "wt_n87_tumor_free_mmae_cmax_nm": 403.0,
+        "wt_n87_tumor_free_mmae_tmax_h": 72.0,
+        "wt_n87_tumor_total_mab_aucall_h_nm": 52600.0,
+        "wt_n87_tumor_total_mab_cmax_nm": 364.0,
+        "wt_n87_tumor_total_mab_tmax_h": 24.0,
+        "wt_n87_tumor_total_mmae_aucall_h_nm": 87300.0,
+        "wt_n87_tumor_total_mmae_cmax_nm": 610.0,
+        "wt_n87_tumor_total_mmae_tmax_h": 72.0
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact paper anchors from Table 3, PK parameters in MCF-7 tumors.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table-mcf7-tumor-pk",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 0.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Table Mcf7 Tumor Pk",
+      "parameters": {
+        "charged_mcf7_tumor_free_mmae_aucall_h_nm": 519.0,
+        "charged_mcf7_tumor_free_mmae_cmax_nm": 6.52,
+        "charged_mcf7_tumor_free_mmae_tmax_h": 6.0,
+        "charged_mcf7_tumor_total_mab_aucall_h_nm": 28500.0,
+        "charged_mcf7_tumor_total_mab_cmax_nm": 301.0,
+        "charged_mcf7_tumor_total_mab_tmax_h": 24.0,
+        "charged_mcf7_tumor_total_mmae_aucall_h_nm": 1184.0,
+        "charged_mcf7_tumor_total_mmae_cmax_nm": 28.1,
+        "charged_mcf7_tumor_total_mmae_tmax_h": 24.0,
+        "wt_mcf7_tumor_free_mmae_aucall_h_nm": 5148.0,
+        "wt_mcf7_tumor_free_mmae_cmax_nm": 36.7,
+        "wt_mcf7_tumor_free_mmae_tmax_h": 72.0,
+        "wt_mcf7_tumor_total_mab_aucall_h_nm": 24000.0,
+        "wt_mcf7_tumor_total_mab_cmax_nm": 181.0,
+        "wt_mcf7_tumor_total_mab_tmax_h": 24.0,
+        "wt_mcf7_tumor_total_mmae_aucall_h_nm": 33550.0,
+        "wt_mcf7_tumor_total_mmae_cmax_nm": 333.0,
+        "wt_mcf7_tumor_total_mmae_tmax_h": 72.0
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact paper anchors from Table 4, PK parameters in liver.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table-liver-pk",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 0.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Table Liver Pk",
+      "parameters": {
+        "charged_liver_free_mmae_aucall_h_nm": 1540.0,
+        "charged_liver_free_mmae_cmax_nm": 221.0,
+        "charged_liver_free_mmae_tmax_h": 0.167,
+        "charged_liver_total_mab_aucall_h_nm": 42100.0,
+        "charged_liver_total_mab_cmax_nm": 820.0,
+        "charged_liver_total_mab_tmax_h": 24.0,
+        "charged_liver_total_mmae_aucall_h_nm": 5370.0,
+        "charged_liver_total_mmae_cmax_nm": 1100.0,
+        "charged_liver_total_mmae_tmax_h": 0.167,
+        "wt_liver_free_mmae_aucall_h_nm": 3980.0,
+        "wt_liver_free_mmae_cmax_nm": 118.0,
+        "wt_liver_free_mmae_tmax_h": 0.167,
+        "wt_liver_total_mab_aucall_h_nm": 31300.0,
+        "wt_liver_total_mab_cmax_nm": 527.0,
+        "wt_liver_total_mab_tmax_h": 6.0,
+        "wt_liver_total_mmae_aucall_h_nm": 28700.0,
+        "wt_liver_total_mmae_cmax_nm": 502.0,
+        "wt_liver_total_mmae_tmax_h": 0.167
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact paper anchors from Table 5, PK parameters in spleen.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table-spleen-pk",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 0.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Table Spleen Pk",
+      "parameters": {
+        "charged_spleen_free_mmae_aucall_h_nm": 1970.0,
+        "charged_spleen_free_mmae_cmax_nm": 135.0,
+        "charged_spleen_free_mmae_tmax_h": 0.167,
+        "charged_spleen_total_mab_aucall_h_nm": 26700.0,
+        "charged_spleen_total_mab_cmax_nm": 387.0,
+        "charged_spleen_total_mab_tmax_h": 24.0,
+        "charged_spleen_total_mmae_aucall_h_nm": 4380.0,
+        "charged_spleen_total_mmae_cmax_nm": 750.0,
+        "charged_spleen_total_mmae_tmax_h": 0.167,
+        "wt_spleen_free_mmae_aucall_h_nm": 8520.0,
+        "wt_spleen_free_mmae_cmax_nm": 173.0,
+        "wt_spleen_free_mmae_tmax_h": 0.167,
+        "wt_spleen_total_mab_aucall_h_nm": 10800.0,
+        "wt_spleen_total_mab_cmax_nm": 182.0,
+        "wt_spleen_total_mab_tmax_h": 0.167,
+        "wt_spleen_total_mmae_aucall_h_nm": 16500.0,
+        "wt_spleen_total_mmae_cmax_nm": 412.0,
+        "wt_spleen_total_mmae_tmax_h": 0.167
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exact paper anchors from Table 6 and Results text fold-change checks",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table6-ratios-and-text-fold-changes",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 0.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Table6 Ratios And Text Fold Changes",
+      "parameters": {
+        "charged_liver_free_mmae_tissue_to_plasma_auc_ratio_percent": 6600.0,
+        "charged_liver_total_mab_tissue_to_plasma_auc_ratio_percent": 123.0,
+        "charged_liver_total_mmae_tissue_to_plasma_auc_ratio_percent": 244.0,
+        "charged_mcf7_tumor_free_mmae_tissue_to_plasma_auc_ratio_percent": 2230.0,
+        "charged_mcf7_tumor_total_mab_tissue_to_plasma_auc_ratio_percent": 83.6,
+        "charged_mcf7_tumor_total_mmae_tissue_to_plasma_auc_ratio_percent": 53.9,
+        "charged_n87_tumor_free_mmae_tissue_to_plasma_auc_ratio_percent": 7920.0,
+        "charged_n87_tumor_total_mab_tissue_to_plasma_auc_ratio_percent": 66.1,
+        "charged_n87_tumor_total_mmae_tissue_to_plasma_auc_ratio_percent": 93.6,
+        "charged_spleen_free_mmae_tissue_to_plasma_auc_ratio_percent": 8440.0,
+        "charged_spleen_total_mab_tissue_to_plasma_auc_ratio_percent": 78.3,
+        "charged_spleen_total_mmae_tissue_to_plasma_auc_ratio_percent": 199.0,
+        "mcf7_tumor_total_mmae_auc_fold_wt_vs_charged": 28.33614864864865,
+        "n87_tumor_total_mmae_auc_fold_wt_vs_charged": 42.44044725328148,
+        "plasma_total_mab_cl_fold_charged_vs_wt": 8.667953667953668,
+        "plasma_total_mab_half_life_fold_wt_vs_charged": 4.4987146529562985,
+        "wt_liver_free_mmae_tissue_to_plasma_auc_ratio_percent": 1430.0,
+        "wt_liver_total_mab_tissue_to_plasma_auc_ratio_percent": 27.5,
+        "wt_liver_total_mmae_tissue_to_plasma_auc_ratio_percent": 18.2,
+        "wt_mcf7_tumor_free_mmae_tissue_to_plasma_auc_ratio_percent": 1850.0,
+        "wt_mcf7_tumor_total_mab_tissue_to_plasma_auc_ratio_percent": 21.2,
+        "wt_mcf7_tumor_total_mmae_tissue_to_plasma_auc_ratio_percent": 21.3,
+        "wt_n87_tumor_free_mmae_tissue_to_plasma_auc_ratio_percent": 19100.0,
+        "wt_n87_tumor_total_mab_tissue_to_plasma_auc_ratio_percent": 46.3,
+        "wt_n87_tumor_total_mmae_tissue_to_plasma_auc_ratio_percent": 55.3,
+        "wt_spleen_free_mmae_tissue_to_plasma_auc_ratio_percent": 3070.0,
+        "wt_spleen_total_mab_tissue_to_plasma_auc_ratio_percent": 9.47,
+        "wt_spleen_total_mmae_tissue_to_plasma_auc_ratio_percent": 10.4
+      },
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-plasma-total-mab-aucinf-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 716.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Plasma Total Mab Aucinf H Nm",
+      "parameters": {
+        "C0_nM": 716.0,
+        "kel_1_h": 0.016089887640449437,
+        "target_auc_h_nM": 44500.0,
+        "target_cmax_nM": 716.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-plasma-total-mmae-aucinf-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 172.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Plasma Total Mmae Aucinf H Nm",
+      "parameters": {
+        "C0_nM": 172.0,
+        "kel_1_h": 0.07478260869565218,
+        "target_auc_h_nM": 2300.0,
+        "target_cmax_nM": 172.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-plasma-free-mmae-aucinf-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 8.72,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Plasma Free Mmae Aucinf H Nm",
+      "parameters": {
+        "C0_nM": 8.72,
+        "kel_1_h": 0.3648535564853557,
+        "target_auc_h_nM": 23.9,
+        "target_cmax_nM": 8.72,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-plasma-total-mab-aucinf-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 1600.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Plasma Total Mab Aucinf H Nm",
+      "parameters": {
+        "C0_nM": 1600.0,
+        "kel_1_h": 0.004145077720207254,
+        "target_auc_h_nM": 386000.0,
+        "target_cmax_nM": 1600.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-plasma-total-mmae-aucinf-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 5080.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Plasma Total Mmae Aucinf H Nm",
+      "parameters": {
+        "C0_nM": 5080.0,
+        "kel_1_h": 0.028700564971751413,
+        "target_auc_h_nM": 177000.0,
+        "target_cmax_nM": 5080.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-plasma-free-mmae-aucinf-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 15.8,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Plasma Free Mmae Aucinf H Nm",
+      "parameters": {
+        "C0_nM": 15.8,
+        "kel_1_h": 0.04773413897280967,
+        "target_auc_h_nM": 331.0,
+        "target_cmax_nM": 15.8,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-n87-tumor-total-mab-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 146.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged N87 Tumor Total Mab Aucall H Nm",
+      "parameters": {
+        "C0_nM": 146.0,
+        "kel_1_h": 0.006488888888888889,
+        "target_auc_h_nM": 22500.0,
+        "target_cmax_nM": 146.0,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-n87-tumor-total-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 45.3,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged N87 Tumor Total Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 45.3,
+        "kel_1_h": 0.022022362664073893,
+        "target_auc_h_nM": 2057.0,
+        "target_cmax_nM": 45.3,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-n87-tumor-free-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 20.1,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged N87 Tumor Free Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 20.1,
+        "kel_1_h": 0.010906131307650571,
+        "target_auc_h_nM": 1843.0,
+        "target_cmax_nM": 20.1,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-n87-tumor-total-mab-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 364.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt N87 Tumor Total Mab Aucall H Nm",
+      "parameters": {
+        "C0_nM": 364.0,
+        "kel_1_h": 0.006920152091254753,
+        "target_auc_h_nM": 52600.0,
+        "target_cmax_nM": 364.0,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-n87-tumor-total-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 610.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt N87 Tumor Total Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 610.0,
+        "kel_1_h": 0.006987399770904926,
+        "target_auc_h_nM": 87300.0,
+        "target_cmax_nM": 610.0,
+        "target_tmax_h": 72.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-n87-tumor-free-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 403.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt N87 Tumor Free Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 403.0,
+        "kel_1_h": 0.007588596392121417,
+        "target_auc_h_nM": 53106.0,
+        "target_cmax_nM": 403.0,
+        "target_tmax_h": 72.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-mcf7-tumor-total-mab-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 301.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Mcf7 Tumor Total Mab Aucall H Nm",
+      "parameters": {
+        "C0_nM": 301.0,
+        "kel_1_h": 0.01056140350877193,
+        "target_auc_h_nM": 28500.0,
+        "target_cmax_nM": 301.0,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-mcf7-tumor-total-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 28.1,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Mcf7 Tumor Total Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 28.1,
+        "kel_1_h": 0.02373310810810811,
+        "target_auc_h_nM": 1184.0,
+        "target_cmax_nM": 28.1,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-mcf7-tumor-free-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 6.52,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Mcf7 Tumor Free Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 6.52,
+        "kel_1_h": 0.012562620423892099,
+        "target_auc_h_nM": 519.0,
+        "target_cmax_nM": 6.52,
+        "target_tmax_h": 6.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-mcf7-tumor-total-mab-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 181.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Mcf7 Tumor Total Mab Aucall H Nm",
+      "parameters": {
+        "C0_nM": 181.0,
+        "kel_1_h": 0.007541666666666667,
+        "target_auc_h_nM": 24000.0,
+        "target_cmax_nM": 181.0,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-mcf7-tumor-total-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 333.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Mcf7 Tumor Total Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 333.0,
+        "kel_1_h": 0.00992548435171386,
+        "target_auc_h_nM": 33550.0,
+        "target_cmax_nM": 333.0,
+        "target_tmax_h": 72.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-mcf7-tumor-free-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 36.7,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Mcf7 Tumor Free Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 36.7,
+        "kel_1_h": 0.0071289821289821295,
+        "target_auc_h_nM": 5148.0,
+        "target_cmax_nM": 36.7,
+        "target_tmax_h": 72.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-liver-total-mab-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 820.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Liver Total Mab Aucall H Nm",
+      "parameters": {
+        "C0_nM": 820.0,
+        "kel_1_h": 0.019477434679334917,
+        "target_auc_h_nM": 42100.0,
+        "target_cmax_nM": 820.0,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-liver-total-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 1100.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Liver Total Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 1100.0,
+        "kel_1_h": 0.2048417132216015,
+        "target_auc_h_nM": 5370.0,
+        "target_cmax_nM": 1100.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-liver-free-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 221.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Liver Free Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 221.0,
+        "kel_1_h": 0.1435064935064935,
+        "target_auc_h_nM": 1540.0,
+        "target_cmax_nM": 221.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-liver-total-mab-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 527.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Liver Total Mab Aucall H Nm",
+      "parameters": {
+        "C0_nM": 527.0,
+        "kel_1_h": 0.016837060702875398,
+        "target_auc_h_nM": 31300.0,
+        "target_cmax_nM": 527.0,
+        "target_tmax_h": 6.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-liver-total-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 502.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Liver Total Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 502.0,
+        "kel_1_h": 0.01749128919860627,
+        "target_auc_h_nM": 28700.0,
+        "target_cmax_nM": 502.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-liver-free-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 118.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Liver Free Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 118.0,
+        "kel_1_h": 0.02964824120603015,
+        "target_auc_h_nM": 3980.0,
+        "target_cmax_nM": 118.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-spleen-total-mab-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 387.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Spleen Total Mab Aucall H Nm",
+      "parameters": {
+        "C0_nM": 387.0,
+        "kel_1_h": 0.01449438202247191,
+        "target_auc_h_nM": 26700.0,
+        "target_cmax_nM": 387.0,
+        "target_tmax_h": 24.0
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-spleen-total-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 750.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Spleen Total Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 750.0,
+        "kel_1_h": 0.17123287671232876,
+        "target_auc_h_nM": 4380.0,
+        "target_cmax_nM": 750.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-charged-spleen-free-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 135.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Charged Spleen Free Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 135.0,
+        "kel_1_h": 0.06852791878172589,
+        "target_auc_h_nM": 1970.0,
+        "target_cmax_nM": 135.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-spleen-total-mab-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 182.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Spleen Total Mab Aucall H Nm",
+      "parameters": {
+        "C0_nM": 182.0,
+        "kel_1_h": 0.01685185185185185,
+        "target_auc_h_nM": 10800.0,
+        "target_cmax_nM": 182.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-spleen-total-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 412.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Spleen Total Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 412.0,
+        "kel_1_h": 0.024969696969696968,
+        "target_auc_h_nM": 16500.0,
+        "target_cmax_nM": 412.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced first-order exposure ODE initialized at the reported Cmax and scaled so the invariant AUC endpoint equals the paper NCA AUC.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "ode-wt-spleen-free-mmae-aucall-h-nm",
+      "initial_states": {
+        "AUC_h_nM": 0.0,
+        "C_nM": 173.0,
+        "elapsed_h": 0.0,
+        "summary_marker": 1.0
+      },
+      "name": "Ode Wt Spleen Free Mmae Aucall H Nm",
+      "parameters": {
+        "C0_nM": 173.0,
+        "kel_1_h": 0.020305164319248826,
+        "target_auc_h_nM": 8520.0,
+        "target_cmax_nM": 173.0,
+        "target_tmax_h": 0.167
+      },
+      "scenario_type": "paper_reproduction_reduced_empirical_ode_endpoint_overlay",
+      "time_span": {
+        "end": 168.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-08,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-06
+    },
+    "time_span": {
+      "end": 168.0,
+      "start": 0.0,
+      "step": 1.0
+    }
+  },
+  "time_unit": "h"
+}

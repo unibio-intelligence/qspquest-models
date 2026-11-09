@@ -1,0 +1,276 @@
+{
+  "description": "Exact source anchors and source-limited full ODE simulations for the Pharmaceutics 2024 ustekinumab plaque-psoriasis MIPD PK/PD model.",
+  "model_id": "qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis",
+  "name": "Rodriguez-Fernandez 2024 ustekinumab MIPD psoriasis scenarios",
+  "scenarios": [
+    {
+      "description": "No-dose exact replay of main-text Table 2 PD estimates, cohort counts, MIPD category counts, and the Figure 6 trough/PASI target statement.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "table2-population-pd-anchor",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "depot_mg": 0.0,
+        "elapsed_day": 0.0,
+        "pasi": 13.722,
+        "peripheral_mg": 0.0
+      },
+      "name": "Table 2 population PD and cohort endpoint anchor",
+      "parameters": {
+        "bioavailability_pct": 93.0,
+        "cl_l_d": 0.2,
+        "ic50_mg_l": 0.07,
+        "imax": 0.97,
+        "ka_d": 0.4,
+        "kout_d": 0.016,
+        "pasi_baseline": 13.722,
+        "q_l_d": 0.2,
+        "v2_l": 3.52,
+        "v3_l": 2.1
+      },
+      "scenario_type": "paper_reproduction_exact_anchor",
+      "time_span": {
+        "end": 0.001,
+        "start": 0.0,
+        "step": 0.001
+      }
+    },
+    {
+      "description": "No-dose exact replay of one representative patient's individual parameter means. The validator checks all 23 SI patient rows via overrides.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "si-patient1-parameter-anchor",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "depot_mg": 0.0,
+        "elapsed_day": 0.0,
+        "pasi": 13.722,
+        "peripheral_mg": 0.0
+      },
+      "name": "Supplementary Table S1/S2 patient 1 anchor",
+      "parameters": {
+        "bioavailability_pct": 93.0,
+        "cl_l_d": 0.2,
+        "imax": 0.968,
+        "ka_d": 0.4,
+        "kout_d": 0.019,
+        "pasi_baseline": 13.722,
+        "q_l_d": 0.2,
+        "v2_l": 3.52,
+        "v3_l": 2.1
+      },
+      "scenario_type": "paper_reproduction_exact_anchor",
+      "time_span": {
+        "end": 0.001,
+        "start": 0.0,
+        "step": 0.001
+      }
+    },
+    {
+      "description": "Source-limited deterministic ODE probe using Supplementary Table S1 patient 1 individual parameters and a labeled 45 mg q12w maintenance schedule. Paper comparator endpoints are the reported target range, PASI threshold, and MIPD category counts rather than this patient's hidden observed curve.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 45.0,
+            "time": 0.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 28.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 112.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 196.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 280.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 364.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 448.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 532.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 616.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 45.0,
+            "time": 700.0,
+            "type": "bolus",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "patient1-45mg-q12w-10cycle-probe",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "depot_mg": 0.0,
+        "elapsed_day": 0.0,
+        "pasi": 13.722,
+        "peripheral_mg": 0.0
+      },
+      "name": "Patient 1, 45 mg q12w through 10 cycles",
+      "parameters": {
+        "bioavailability_pct": 93.0,
+        "cl_l_d": 0.2,
+        "imax": 0.968,
+        "ka_d": 0.4,
+        "kout_d": 0.019,
+        "pasi_baseline": 13.722,
+        "q_l_d": 0.2,
+        "v2_l": 3.52,
+        "v3_l": 2.1
+      },
+      "scenario_type": "paper_reproduction_dynamic_ode_source_limited",
+      "time_span": {
+        "end": 784.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Source-limited deterministic ODE probe using Supplementary Table S1 patient 18, a high-clearance/low-kout patient, under 90 mg q8w intensified dosing.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 90.0,
+            "time": 0.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 28.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 112.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 168.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 224.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 280.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 336.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 392.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 448.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 504.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 90.0,
+            "time": 560.0,
+            "type": "bolus",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "patient18-90mg-q8w-intensified-probe",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "depot_mg": 0.0,
+        "elapsed_day": 0.0,
+        "pasi": 18.845,
+        "peripheral_mg": 0.0
+      },
+      "name": "Patient 18, 90 mg q8w intensified probe",
+      "parameters": {
+        "bioavailability_pct": 65.0,
+        "cl_l_d": 0.3,
+        "imax": 0.968,
+        "ka_d": 0.14,
+        "kout_d": 0.007,
+        "pasi_baseline": 18.845,
+        "q_l_d": 0.25,
+        "v2_l": 4.3,
+        "v3_l": 2.85
+      },
+      "scenario_type": "paper_reproduction_dynamic_ode_source_limited",
+      "time_span": {
+        "end": 616.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 840.0,
+      "start": 0.0,
+      "step": 1.0
+    }
+  },
+  "time_unit": "day"
+}

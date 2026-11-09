@@ -1,0 +1,203 @@
+{
+  "description": "Exact source replay plus source-limited dynamic pertuzumab PK shells for NeoSphere.",
+  "model_id": "qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er",
+  "name": "Quartino 2017 pertuzumab neoadjuvant PK/ER scenarios",
+  "scenarios": [
+    {
+      "description": "Arm definitions, baseline covariates, serum samples, and pCR counts from Table 1.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "neosphere-design-baseline-checks",
+      "initial_states": {
+        "AUC_ug_day_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_day": 0,
+        "summary_marker": 1
+      },
+      "name": "NeoSphere design and baseline checks",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_summary",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Published PK structure, VPC/NPC setup, Ctrough ANOVA, and CL/Vc DDI p-values.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "poppk-model-ddi-checks",
+      "initial_states": {
+        "AUC_ug_day_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_day": 0,
+        "summary_marker": 1
+      },
+      "name": "PopPK and DDI exact checks",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_summary",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Cycle 2 Ctrough target attainment, logit ER analysis population, and pCR slope p-value.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exposure-response-checks",
+      "initial_states": {
+        "AUC_ug_day_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Exposure-response exact checks",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_summary",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Approved 840/420 mg q3w regimen, target trough threshold, and dose-selection context.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "dose-selection-checks",
+      "initial_states": {
+        "AUC_ug_day_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Dose-selection exact checks",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_summary",
+      "time_span": {
+        "end": 1,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Source-limited deterministic PK shell for the approved neoadjuvant regimen; not a patient-level VPC reproduction.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 840,
+            "duration": 0.0625,
+            "time": 0,
+            "type": "infusion"
+          },
+          {
+            "amount": 420,
+            "duration": 0.020833333333333332,
+            "time": 21,
+            "type": "infusion"
+          },
+          {
+            "amount": 420,
+            "duration": 0.020833333333333332,
+            "time": 42,
+            "type": "infusion"
+          },
+          {
+            "amount": 420,
+            "duration": 0.020833333333333332,
+            "time": 63,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "typical-neosphere-840-420-q3w-4cycles",
+      "initial_states": {
+        "AUC_ug_day_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Typical NeoSphere 840/420 mg q3w four-cycle PK shell",
+      "parameters": {
+        "albumin_g_dL": 4.4,
+        "lean_body_weight_kg": 44.6
+      },
+      "scenario_type": "paper_dynamic_overlay",
+      "time_span": {
+        "end": 84,
+        "start": 0,
+        "step": 1
+      }
+    },
+    {
+      "description": "Reference covariate dynamic shell using historical PopPK median LBW and albumin.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 840,
+            "duration": 0.0625,
+            "time": 0,
+            "type": "infusion"
+          },
+          {
+            "amount": 420,
+            "duration": 0.020833333333333332,
+            "time": 21,
+            "type": "infusion"
+          },
+          {
+            "amount": 420,
+            "duration": 0.020833333333333332,
+            "time": 42,
+            "type": "infusion"
+          },
+          {
+            "amount": 420,
+            "duration": 0.020833333333333332,
+            "time": 63,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "historical-reference-840-420-q3w-4cycles",
+      "initial_states": {
+        "AUC_ug_day_mL": 0,
+        "A_central_mg": 0,
+        "A_peripheral_mg": 0,
+        "elapsed_time_day": 0,
+        "summary_marker": 1
+      },
+      "name": "Historical reference covariates 840/420 mg q3w",
+      "parameters": {
+        "albumin_g_dL": 3.9,
+        "lean_body_weight_kg": 49.2
+      },
+      "scenario_type": "paper_dynamic_overlay",
+      "time_span": {
+        "end": 84,
+        "start": 0,
+        "step": 1
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 84,
+      "start": 0,
+      "step": 1
+    }
+  },
+  "time_unit": "day"
+}

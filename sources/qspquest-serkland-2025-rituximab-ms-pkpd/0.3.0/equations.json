@@ -1,0 +1,18 @@
+{
+  "definitions": {},
+  "derived_outputs": {
+    "bcell_production_cells_mm3_day": "L0_cells_mm3 * kout_day",
+    "cd19_cells_mm3": "L",
+    "elapsed_days": "elapsed_day",
+    "linear_clearance_component_mg_l_day": "kel_day * C",
+    "rituximab_concentration_mg_l": "C",
+    "tmdd_clearance_component_mg_l_day": "kdeg1_mm3_cell_day * C * L"
+  },
+  "equations": {
+    "C": "Dose_rate_C - kel_day * C - kdeg1_mm3_cell_day * C * L",
+    "L": "L0_cells_mm3 * kout_day - kdeg2_l_mg_day * C * L - kout_day * L",
+    "elapsed_day": "1.0"
+  },
+  "external_inputs": {},
+  "model_id": "qspquest-serkland-2025-rituximab-ms-pkpd"
+}

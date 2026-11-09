@@ -1,1 +1,383 @@
-{"models":[{"archive":"models/qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation/0.1.0/model.omex","model_id":"qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation","omex_sha256":"f600631bf87c08b2d533259a577d62c62ed421c9e4347b3bcdcccbd6d6a793da","source_model_id":"qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation","version":"0.1.0"},{"archive":"models/qspquest_asiimwe_2025_adc_mbma_cui_poppk/0.1.0/model.omex","model_id":"qspquest_asiimwe_2025_adc_mbma_cui_poppk","omex_sha256":"47d5bb9488fee3f2393eba91c3efd2848fe02dfa0a4f06f87d8e04097ef19f1d","source_model_id":"qspquest-asiimwe-2025-adc-mbma-cui-poppk","version":"0.1.0"},{"archive":"models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.1.2/model.omex","model_id":"qspquest_besbassi_2026_crs_qsp_locked_cytokine_network","omex_sha256":"2e536a1f97b143f6b4077d0c134ddfd02007dbfc5cac3471e2a97c19a3978292","source_model_id":"qspquest-besbassi-2026-crs-qsp-locked-cytokine-network","version":"0.1.2"},{"archive":"models/qspquest_brekkan_2024_certolizumab_ada_hidden_markov/0.1.0/model.omex","model_id":"qspquest_brekkan_2024_certolizumab_ada_hidden_markov","omex_sha256":"fb51cb38aca6458370b4b2ee237e408259ec190173609dd4d8d469b4b02826a5","source_model_id":"qspquest-brekkan-2024-certolizumab-ada-hidden-markov","version":"0.1.0"},{"archive":"models/qspquest_briggs_2023_dupilumab_ad_er_pkpd/0.1.0/model.omex","model_id":"qspquest_briggs_2023_dupilumab_ad_er_pkpd","omex_sha256":"77d4ad400aa2d37db95f9742d2f78ada6b5d501f2ed36d44657d2bd41c783a98","source_model_id":"qspquest-briggs-2023-dupilumab-ad-er-pkpd","version":"0.1.0"},{"archive":"models/qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced/0.1.0/model.omex","model_id":"qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced","omex_sha256":"10935554a9d4c32926dca72b3c56ce9ced4db4cbaf9d6f216fb24d204cceefbe","source_model_id":"qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced","version":"0.1.0"},{"archive":"models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.1.1/model.omex","model_id":"qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd","omex_sha256":"101fb33900c088f0e03392b3cb4a174236345121d961de6ee1484558839a7c4f","source_model_id":"qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd","version":"0.1.1"},{"archive":"models/qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd/0.1.0/model.omex","model_id":"qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd","omex_sha256":"8c2eb45bfcbc98c81fff3c84f789598c8524e692fdcf8a288ed7d30737c624dd","source_model_id":"qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd","version":"0.1.0"},{"archive":"models/qspquest_chetty_2014_efalizumab_cd11a_turnover/0.1.0/model.omex","model_id":"qspquest_chetty_2014_efalizumab_cd11a_turnover","omex_sha256":"49fa100155413ebde2d65543c45351c07c7a5e8131042422e0d421fda83ffd3d","source_model_id":"qspquest-chetty-2014-efalizumab-cd11a-turnover","version":"0.1.0"},{"archive":"models/qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd/0.1.0/model.omex","model_id":"qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd","omex_sha256":"9b4c24915bad3ca91375cb237c76554b17aeb0cb68cfd9425ad055e2a10d1784","source_model_id":"qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd","version":"0.1.0"},{"archive":"models/qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd/0.1.0/model.omex","model_id":"qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd","omex_sha256":"304097625e4e3f3c093e66f2cc8fa8e6164bf6eed3cefecc2f70f70c8b095784","source_model_id":"qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd","version":"0.1.0"},{"archive":"models/qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi/0.1.0/model.omex","model_id":"qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi","omex_sha256":"972ee8cdde109a414897cf7da56fb0e6553c50ed064a7c7f55441ff208becb59","source_model_id":"qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi","version":"0.1.0"},{"archive":"models/qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk/0.1.0/model.omex","model_id":"qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk","omex_sha256":"8da27259483ab245c92bf32736c67d55270db739642138d94c11fecb9012dcb5","source_model_id":"qspquest-clegg-2024-azd7442-tixagevimab-cilgavimab-poppk","version":"0.1.0"},{"archive":"models/qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp/0.1.0/model.omex","model_id":"qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp","omex_sha256":"cdd13040b94115714561f366d8f9f6149462448da33da1a0ee2e693961bf0783","source_model_id":"qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp","version":"0.1.0"},{"archive":"models/qspquest_cui_2024_envafolimab_sc_pdl1_midd/0.1.0/model.omex","model_id":"qspquest_cui_2024_envafolimab_sc_pdl1_midd","omex_sha256":"1ac27c73dcb7a015994d4d6ceb17aaf42f07dcafc28b39b6a6cdf072a8c9cd39","source_model_id":"qspquest-cui-2024-envafolimab-sc-pdl1-midd","version":"0.1.0"},{"archive":"models/qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd/0.1.0/model.omex","model_id":"qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd","omex_sha256":"afe6d5df848b6b94fc11b45003af2ac229114bd299491b117645ed66718cb004","source_model_id":"qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd","version":"0.1.0"},{"archive":"models/qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd/0.1.0/model.omex","model_id":"qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd","omex_sha256":"352021e3fa82957312bd6585aa2a715b4db428be35cfa184314e6ae6a6b259bc","source_model_id":"qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd","version":"0.1.0"},{"archive":"models/qspquest_eaton_2025_idarucizumab_dabigatran_sheep_pkpd/0.1.0/model.omex","model_id":"qspquest_eaton_2025_idarucizumab_dabigatran_sheep_pkpd","omex_sha256":"1a2f622693ae4d50dfca1c1b92dc29c17eafdc0dce8f0d995e1c5c3cc7af0689","source_model_id":"qspquest-eaton-2025-idarucizumab-dabigatran-sheep-pkpd","version":"0.1.0"},{"archive":"models/qspquest_frank_2023_sutimlimab_cad_pkpd/0.1.1/model.omex","model_id":"qspquest_frank_2023_sutimlimab_cad_pkpd","omex_sha256":"2dbbb0b650b549e693896d0fbadd703ec36b7a3abd9b979a268da79bf396f608","source_model_id":"qspquest-frank-2023-sutimlimab-cad-pkpd","version":"0.1.1"},{"archive":"models/qspquest_garrett_2019_inotuzumab_ozogamicin_poppk/0.1.0/model.omex","model_id":"qspquest_garrett_2019_inotuzumab_ozogamicin_poppk","omex_sha256":"ed2fe64f0a210b86b6416516e3dfb8a02b84ea10f535f4b8c310533c706afc25","source_model_id":"qspquest-garrett-2019-inotuzumab-ozogamicin-poppk","version":"0.1.0"},{"archive":"models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.1.1/model.omex","model_id":"qspquest_gu_2017_bay1093884_tfpi_qss_tmdd","omex_sha256":"34ad5e17d06c7da8f6c15640117e8accbcedce003ebda2a660a5ce5b695a2c10","source_model_id":"qspquest-gu-2017-bay1093884-tfpi-qss-tmdd","version":"0.1.1"},{"archive":"models/qspquest_haid_2023_protac_mechanistic_pd_framework/0.1.0/model.omex","model_id":"qspquest_haid_2023_protac_mechanistic_pd_framework","omex_sha256":"809aeb9f07c8df861d3d89776611f2096f8e3aa55f4dba395f3c0825aef61c8a","source_model_id":"qspquest-haid-2023-protac-mechanistic-pd-framework","version":"0.1.0"},{"archive":"models/qspquest_han_2026_sim2real_pk_daratumumab_tmdd/0.1.0/model.omex","model_id":"qspquest_han_2026_sim2real_pk_daratumumab_tmdd","omex_sha256":"737377cc24f6089a37878620f0d87f7dd690a704440aa8b2e3372a619604d3dc","source_model_id":"qspquest-han-2026-sim2real-pk-daratumumab-tmdd","version":"0.1.0"},{"archive":"models/qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er/0.1.0/model.omex","model_id":"qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er","omex_sha256":"c54687d484be12cd3a11c9202d333a0b89e808e34177fb6353e4975f67c6db2d","source_model_id":"qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er","version":"0.1.0"},{"archive":"models/qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response/0.1.0/model.omex","model_id":"qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response","omex_sha256":"d2ed4915547d14bd75577170e968adcc3c1d39d7aa917d1007dc1a9bf787069d","source_model_id":"qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response","version":"0.1.0"},{"archive":"models/qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er/0.1.0/model.omex","model_id":"qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er","omex_sha256":"e5e4ed5220722eb6082675e68a416ea7d4ebd31fdcb4ac3be155ddbeb81bdfff","source_model_id":"qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er","version":"0.1.0"},{"archive":"models/qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp/0.1.0/model.omex","model_id":"qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp","omex_sha256":"05e0aa26c8258428e7798fa1d06423fd39c2bef93f812a9a6113dec882f02ae2","source_model_id":"qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp","version":"0.1.0"},{"archive":"models/qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd/0.1.0/model.omex","model_id":"qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd","omex_sha256":"09b68221513bca59a828b8be63d773a3a950b2eb4839033fb6b74c600dec1724","source_model_id":"qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd","version":"0.1.0"},{"archive":"models/qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd/0.1.0/model.omex","model_id":"qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd","omex_sha256":"cb31b3e0e3a4750a1af56f925a0514334af1fcbb4899b626efd54f37db203a65","source_model_id":"qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd","version":"0.1.0"},{"archive":"models/qspquest_lee_2024_sb12_eculizumab_healthy_poppkpd/0.1.0/model.omex","model_id":"qspquest_lee_2024_sb12_eculizumab_healthy_poppkpd","omex_sha256":"8f03c1c8bda92b00e26ce7e5990abbe8b7c791585a08fcd6513fb3c04e44c773","source_model_id":"qspquest-lee-2024-sb12-eculizumab-healthy-poppkpd","version":"0.1.0"},{"archive":"models/qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic/0.1.0/model.omex","model_id":"qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic","omex_sha256":"792ac5c6bbbc199054eb8ede06281ad5fff839d7c3184a667a0e3ba732aa2544","source_model_id":"qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic","version":"0.1.0"},{"archive":"models/qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp/0.1.0/model.omex","model_id":"qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp","omex_sha256":"9a2219d39c02b1086f1d55e8258add7b29d3f0122a855e5a9d178f4168dea99c","source_model_id":"qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp","version":"0.1.0"},{"archive":"models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.1.1/model.omex","model_id":"qspquest_lobet_2026_panitumumab_body_composition_poppk","omex_sha256":"48e0781128729f725ab18b6252cf78c57d393dbbb8ee53957fa29d7fc09638a2","source_model_id":"qspquest-lobet-2026-panitumumab-body-composition-poppk","version":"0.1.1"},{"archive":"models/qspquest_markovic_2024_vedolizumab_clearance_remission_poppk/0.1.0/model.omex","model_id":"qspquest_markovic_2024_vedolizumab_clearance_remission_poppk","omex_sha256":"5dedafec629004ac128eda5b49991f27fb860e839432e8af5a03c5a77caa5282","source_model_id":"qspquest-markovic-2024-vedolizumab-clearance-remission-poppk","version":"0.1.0"},{"archive":"models/qspquest_monteleone_2021_eculizumab_gmg_pkpd/0.1.0/model.omex","model_id":"qspquest_monteleone_2021_eculizumab_gmg_pkpd","omex_sha256":"57aadac8bed8e07fb0fa69c64da724808de5913fb8a7a7461cd666c8ff1136d7","source_model_id":"qspquest-monteleone-2021-eculizumab-gmg-pkpd","version":"0.1.0"},{"archive":"models/qspquest_ortiz_2024_ravulizumab_nmosd_pkpd/0.1.0/model.omex","model_id":"qspquest_ortiz_2024_ravulizumab_nmosd_pkpd","omex_sha256":"06758e13e687fad68f1613b51a844223f3fe137178ddfb9351ac00757179bb42","source_model_id":"qspquest-ortiz-2024-ravulizumab-nmosd-pkpd","version":"0.1.0"},{"archive":"models/qspquest_pan_2020_pediatric_tp_pbpk_pk_sim/0.1.0/model.omex","model_id":"qspquest_pan_2020_pediatric_tp_pbpk_pk_sim","omex_sha256":"1fe0297c4ff6d5bc8f93646139df393862b0f16fbb473676d1f620165169b352","source_model_id":"qspquest-pan-2020-pediatric-tp-pbpk-pk-sim","version":"0.1.0"},{"archive":"models/qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd/0.1.0/model.omex","model_id":"qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd","omex_sha256":"4b133bc7ede1c288f6b655a45c7e0e65107caa1b3d26b6161510613c21d6fbf5","source_model_id":"qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd","version":"0.1.0"},{"archive":"models/qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd/0.1.0/model.omex","model_id":"qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd","omex_sha256":"9fd5d23a3d65eaf719325842e6a64ed4298f3ab24b988464b6808e89b3ba7e6a","source_model_id":"qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd","version":"0.1.0"},{"archive":"models/qspquest_prybylski_2026_dazukibart_ifnb_dm_er/0.1.0/model.omex","model_id":"qspquest_prybylski_2026_dazukibart_ifnb_dm_er","omex_sha256":"868bbbf24eee5a4d75f01b9a80208ec6ab6380ee36dedd269b7c48d698958ae8","source_model_id":"qspquest-prybylski-2026-dazukibart-ifnb-dm-er","version":"0.1.0"},{"archive":"models/qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er/0.1.0/model.omex","model_id":"qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er","omex_sha256":"f7b82cd59b31916abf1f0244d1e7808d125e045222089825700fee74fb6c2933","source_model_id":"qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er","version":"0.1.0"},{"archive":"models/qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd/0.1.0/model.omex","model_id":"qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd","omex_sha256":"d86a64bafb367e319aae6024be35316cfe7f98e151a3f87cc2ee33204a8942c8","source_model_id":"qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd","version":"0.1.0"},{"archive":"models/qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis/0.1.0/model.omex","model_id":"qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis","omex_sha256":"ae9fc2241ecefd2178a54e82862c67ec85e7c23a8212a08efd27c9cc3496a6ca","source_model_id":"qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis","version":"0.1.0"},{"archive":"models/qspquest_serkland_2025_rituximab_ms_pkpd/0.3.2/model.omex","model_id":"qspquest_serkland_2025_rituximab_ms_pkpd","omex_sha256":"a49076f7484f0753bdbfa5f19ce305ca3ce2e4adb961d777343efe92e8143366","source_model_id":"qspquest-serkland-2025-rituximab-ms-pkpd","version":"0.3.2"},{"archive":"models/qspquest_sexton_2024_lanadelumab_hae_kks_qsp/0.2.0/model.omex","model_id":"qspquest_sexton_2024_lanadelumab_hae_kks_qsp","omex_sha256":"22a5c1dfa3630a63ef983edeb57603dc31ebc32f369b79dd5ebdc191e44ffd8e","source_model_id":"qspquest-sexton-2024-lanadelumab-hae-kks-qsp","version":"0.2.0"},{"archive":"models/qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety/0.1.1/model.omex","model_id":"qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety","omex_sha256":"c32211635cafec31b6dd90bd20d16302925abc7aaa29b068e1d92febe697ad88","source_model_id":"qspquest-shemesh-2019-atezolizumab-pediatric-poppk-safety","version":"0.1.1"},{"archive":"models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.1.1/model.omex","model_id":"qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca","omex_sha256":"c38e8ab0a963070c7dcb61434a8adae2a43e570d01d3748308dbbfd0072ef787","source_model_id":"qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca","version":"0.1.1"},{"archive":"models/qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge/0.1.0/model.omex","model_id":"qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge","omex_sha256":"9fd61c0af2dcf33b89d7a4950625d041fca4616abf0129b3e682c019cf9e0c3b","source_model_id":"qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge","version":"0.1.0"},{"archive":"models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.1.1/model.omex","model_id":"qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd","omex_sha256":"2fb5323c725dc73b25022826afdd676c0dfbbb58fbb163b8897feb4d4a24be44","source_model_id":"qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd","version":"0.1.1"},{"archive":"models/qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk/0.1.0/model.omex","model_id":"qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk","omex_sha256":"11af93e2ce375aaadfb24b05279e069222831f303e8711699f023983ccaa490d","source_model_id":"qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk","version":"0.1.0"},{"archive":"models/qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk/0.1.0/model.omex","model_id":"qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk","omex_sha256":"452825656bbcf12158cc92858628e094a432b1773b9faf8844f3daeb298cb44e","source_model_id":"qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk","version":"0.1.0"},{"archive":"models/qspquest_yang_2021_cemiplimab_advanced_malignancies_poppk/0.1.0/model.omex","model_id":"qspquest_yang_2021_cemiplimab_advanced_malignancies_poppk","omex_sha256":"f0f1c06c2d435627b0f9a6b914103350f3fa2b4087a82f9c85fd194458fd40de","source_model_id":"qspquest-yang-2021-cemiplimab-advanced-malignancies-poppk","version":"0.1.0"},{"archive":"models/qspquest_yoshida_2020_crenezumab_abeta_tmdd_pkpd/0.1.0/model.omex","model_id":"qspquest_yoshida_2020_crenezumab_abeta_tmdd_pkpd","omex_sha256":"60f54387bf4b812a50f9006b5f2f83d3d52a35675f57691bc93f2ed189213e27","source_model_id":"qspquest-yoshida-2020-crenezumab-abeta-tmdd-pkpd","version":"0.1.0"},{"archive":"models/qspquest_yuan_2026_cd3x5t4_in_vitro_qsp/0.1.0/model.omex","model_id":"qspquest_yuan_2026_cd3x5t4_in_vitro_qsp","omex_sha256":"c4f21f3555aca5b2193e1a04196a7afbcbb3f298552e51c92f586f9af5c34fc1","source_model_id":"qspquest-yuan-2026-cd3x5t4-in-vitro-qsp","version":"0.1.0"},{"archive":"models/qspquest_zeng_2026_atezolizumab_software_poppk_simulation/0.1.0/model.omex","model_id":"qspquest_zeng_2026_atezolizumab_software_poppk_simulation","omex_sha256":"f038ad1c20c2b6ba05eef6f4a46565bfe9193ecadcfcc9235ce7124c89c7e8b5","source_model_id":"qspquest-zeng-2026-atezolizumab-software-poppk-simulation","version":"0.1.0"}],"scope":"All 55 rights-approved scientific source versions, including their explicitly held presets"}
+{
+  "models": [
+    {
+      "archive": "models/qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation/0.3.0/model.omex",
+      "model_id": "qspquest_aguilo_lafarga_2026_adalimumab_ibd_poppk_external_validation",
+      "omex_sha256": "ab5fadc5920ca6d24d0b5b975de71cce806921d16c7908295b5d3f27f0502c60",
+      "source_model_id": "qspquest-aguilo-lafarga-2026-adalimumab-ibd-poppk-external-validation",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_asiimwe_2025_adc_mbma_cui_poppk/0.2.0/model.omex",
+      "model_id": "qspquest_asiimwe_2025_adc_mbma_cui_poppk",
+      "omex_sha256": "25168c399bd697460c63261d1650809fb1a867e545b6d469458d250a382f62c0",
+      "source_model_id": "qspquest-asiimwe-2025-adc-mbma-cui-poppk",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_besbassi_2026_crs_qsp_locked_cytokine_network/0.2.0/model.omex",
+      "model_id": "qspquest_besbassi_2026_crs_qsp_locked_cytokine_network",
+      "omex_sha256": "86db3e25d4a2e04808c9e1311d57ba18a22d8cb8a055f88e0c199ac572449e41",
+      "source_model_id": "qspquest-besbassi-2026-crs-qsp-locked-cytokine-network",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_brekkan_2024_certolizumab_ada_hidden_markov/0.2.0/model.omex",
+      "model_id": "qspquest_brekkan_2024_certolizumab_ada_hidden_markov",
+      "omex_sha256": "85d0569dd1e7336ae40b60e3be290b182575f6d6a0a60b7025ad631a2ee26858",
+      "source_model_id": "qspquest-brekkan-2024-certolizumab-ada-hidden-markov",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_briggs_2023_dupilumab_ad_er_pkpd/0.3.0/model.omex",
+      "model_id": "qspquest_briggs_2023_dupilumab_ad_er_pkpd",
+      "omex_sha256": "06c2a129ecc75c588b2c38fb3fbcd066e33b0e030469da4578dff1135d1444fb",
+      "source_model_id": "qspquest-briggs-2023-dupilumab-ad-er-pkpd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced/0.2.0/model.omex",
+      "model_id": "qspquest_cai_2024_ustekinumab_pediatric_ibd_pbpk_reduced",
+      "omex_sha256": "03455c1480f8becb5e1125ffa1a2a41d0c07bc01ff61946dbe1dab27b40a44f9",
+      "source_model_id": "qspquest-cai-2024-ustekinumab-pediatric-ibd-pbpk-reduced",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd/0.3.0/model.omex",
+      "model_id": "qspquest_chang_2025_charged_trastuzumab_adc_mice_pkpd",
+      "omex_sha256": "e1f05badd7519d322664a374d4c77f29885072abaffaf2a124d44c7ad10059d9",
+      "source_model_id": "qspquest-chang-2025-charged-trastuzumab-adc-mice-pkpd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd/0.3.0/model.omex",
+      "model_id": "qspquest_cheng_2022_skb264_trop2_adc_preclinical_pkpd",
+      "omex_sha256": "98c0b91eb67cf1158fb0a143b5ba56e0a57f44583dfe5cee3de6413a41e8c0cf",
+      "source_model_id": "qspquest-cheng-2022-skb264-trop2-adc-preclinical-pkpd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_chetty_2014_efalizumab_cd11a_turnover/0.1.0/model.omex",
+      "model_id": "qspquest_chetty_2014_efalizumab_cd11a_turnover",
+      "omex_sha256": "49fa100155413ebde2d65543c45351c07c7a5e8131042422e0d421fda83ffd3d",
+      "source_model_id": "qspquest-chetty-2014-efalizumab-cd11a-turnover",
+      "version": "0.1.0"
+    },
+    {
+      "archive": "models/qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd/0.3.0/model.omex",
+      "model_id": "qspquest_chetty_2014_efalizumab_fcrn_pbpk_pd",
+      "omex_sha256": "97de739490044bfb34b43f72356cdfdba5a2f860c085b85a34b55047066d5a89",
+      "source_model_id": "qspquest-chetty-2014-efalizumab-fcrn-pbpk-pd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd/0.3.0/model.omex",
+      "model_id": "qspquest_choi_2025_denosumab_sb16_biosimilarity_poppkpd",
+      "omex_sha256": "5ec276efa03fa788336a0a52876212196d617910d9fda6b13f8af962d2a0bca9",
+      "source_model_id": "qspquest-choi-2025-denosumab-sb16-biosimilarity-poppkpd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi/0.3.0/model.omex",
+      "model_id": "qspquest_choules_2024_enfortumab_vedotin_adc_pbpk_ddi",
+      "omex_sha256": "d6dfcc0c17e737a7750bf55d5c105f96917208e63887b785fdef9e3c3920f70a",
+      "source_model_id": "qspquest-choules-2024-enfortumab-vedotin-adc-pbpk-ddi",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk/0.1.0/model.omex",
+      "model_id": "qspquest_clegg_2024_azd7442_tixagevimab_cilgavimab_poppk",
+      "omex_sha256": "8da27259483ab245c92bf32736c67d55270db739642138d94c11fecb9012dcb5",
+      "source_model_id": "qspquest-clegg-2024-azd7442-tixagevimab-cilgavimab-poppk",
+      "version": "0.1.0"
+    },
+    {
+      "archive": "models/qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp/0.2.0/model.omex",
+      "model_id": "qspquest_coto_segura_2023_certolizumab_pegol_psoriasis_qsp",
+      "omex_sha256": "558c14f7b0c93df67105a5ad15541a1aec934a4208978927070b03e60352a640",
+      "source_model_id": "qspquest-coto-segura-2023-certolizumab-pegol-psoriasis-qsp",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_cui_2024_envafolimab_sc_pdl1_midd/0.2.0/model.omex",
+      "model_id": "qspquest_cui_2024_envafolimab_sc_pdl1_midd",
+      "omex_sha256": "ce4e57b9cb9b598ff817c66fd5fab5222dcf8416d10d7597c038199071e078c9",
+      "source_model_id": "qspquest-cui-2024-envafolimab-sc-pdl1-midd",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd/0.4.0/model.omex",
+      "model_id": "qspquest_de_vries_2018_mcla128_zenocutuzumab_pkpd",
+      "omex_sha256": "ca4cd031b32629d50dcf22c7d863f0f59641f5339525e2b026ecfd7ef4fcad01",
+      "source_model_id": "qspquest-de-vries-2018-mcla128-zenocutuzumab-pkpd",
+      "version": "0.4.0"
+    },
+    {
+      "archive": "models/qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd/0.2.0/model.omex",
+      "model_id": "qspquest_eaton_2025_dabigatran_idarucizumab_sheep_cpb_pkpd",
+      "omex_sha256": "b7579bc9c1682ffe45c223c8f93d1762a20f0cc90ea469b9db5fd09a457767d7",
+      "source_model_id": "qspquest-eaton-2025-dabigatran-idarucizumab-sheep-cpb-pkpd",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_eaton_2025_idarucizumab_dabigatran_sheep_pkpd/0.1.0/model.omex",
+      "model_id": "qspquest_eaton_2025_idarucizumab_dabigatran_sheep_pkpd",
+      "omex_sha256": "1a2f622693ae4d50dfca1c1b92dc29c17eafdc0dce8f0d995e1c5c3cc7af0689",
+      "source_model_id": "qspquest-eaton-2025-idarucizumab-dabigatran-sheep-pkpd",
+      "version": "0.1.0"
+    },
+    {
+      "archive": "models/qspquest_frank_2023_sutimlimab_cad_pkpd/0.3.0/model.omex",
+      "model_id": "qspquest_frank_2023_sutimlimab_cad_pkpd",
+      "omex_sha256": "2f37b35445bf4d8f3b76d5a878cda82a36812f0b991741103072d7f275af89d3",
+      "source_model_id": "qspquest-frank-2023-sutimlimab-cad-pkpd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_garrett_2019_inotuzumab_ozogamicin_poppk/0.4.0/model.omex",
+      "model_id": "qspquest_garrett_2019_inotuzumab_ozogamicin_poppk",
+      "omex_sha256": "cb71d233e6472b6234b86a40882021cb1c0d2854023aea37b384cb72e39aa446",
+      "source_model_id": "qspquest-garrett-2019-inotuzumab-ozogamicin-poppk",
+      "version": "0.4.0"
+    },
+    {
+      "archive": "models/qspquest_gu_2017_bay1093884_tfpi_qss_tmdd/0.3.0/model.omex",
+      "model_id": "qspquest_gu_2017_bay1093884_tfpi_qss_tmdd",
+      "omex_sha256": "a9273f3566e13b86555f2766c2f76a37581fa6b9f477cb76a336058ce2ddf54f",
+      "source_model_id": "qspquest-gu-2017-bay1093884-tfpi-qss-tmdd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_haid_2023_protac_mechanistic_pd_framework/0.3.0/model.omex",
+      "model_id": "qspquest_haid_2023_protac_mechanistic_pd_framework",
+      "omex_sha256": "906cbecd7c508101fc5d0112b54b89e4786d67d7560cc7af26b106495bde70f9",
+      "source_model_id": "qspquest-haid-2023-protac-mechanistic-pd-framework",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_han_2026_sim2real_pk_daratumumab_tmdd/0.2.0/model.omex",
+      "model_id": "qspquest_han_2026_sim2real_pk_daratumumab_tmdd",
+      "omex_sha256": "5296350a02243c19bb4def1ad54c866dd79c8502bc730e38054e66454c1ddfd7",
+      "source_model_id": "qspquest-han-2026-sim2real-pk-daratumumab-tmdd",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er/0.3.0/model.omex",
+      "model_id": "qspquest_hemperly_2025_infliximab_pediatric_ibd_poc_pk_er",
+      "omex_sha256": "2c341379b14858f9337f1b081779b181e1781c3864d4d4f35debc7619ea37ab1",
+      "source_model_id": "qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response/0.3.0/model.omex",
+      "model_id": "qspquest_hurkmans_2019_nivolumab_real_world_poppk_cl_response",
+      "omex_sha256": "c29a0cffb25447b8036bdea3c6ab3002d5c3c503df381857a28f0ad914a5067e",
+      "source_model_id": "qspquest-hurkmans-2019-nivolumab-real-world-poppk-cl-response",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er/0.3.0/model.omex",
+      "model_id": "qspquest_hyams_2022_vedolizumab_pediatric_hubble_pk_nca_er",
+      "omex_sha256": "0df5eeb7475026eaba701fd0245ef9ebf031462fc436a12fe526bfa5c3fd8f55",
+      "source_model_id": "qspquest-hyams-2022-vedolizumab-pediatric-hubble-pk-nca-er",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp/0.2.0/model.omex",
+      "model_id": "qspquest_jafarnejad_2019_nivolumab_neoadjuvant_pd1_nsclc_qsp",
+      "omex_sha256": "ecdf69eae237c74183a38f21342ee47b9611fccc328647e5e15de2e9490dc313",
+      "source_model_id": "qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd/0.3.0/model.omex",
+      "model_id": "qspquest_lee_2023_atc161_autotac_alpha_syn_pkpd",
+      "omex_sha256": "0afe02d755d5af807652f69088bc66d33ee7a401320fa3f358f13bb48e3f58e0",
+      "source_model_id": "qspquest-lee-2023-atc161-autotac-alpha-syn-pkpd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd/0.3.0/model.omex",
+      "model_id": "qspquest_lee_2024_sb12_eculizumab_biosimilar_poppkpd",
+      "omex_sha256": "5edf01250c89db508d1a31ddfca51008e12717ba11482214de769a0433a592e8",
+      "source_model_id": "qspquest-lee-2024-sb12-eculizumab-biosimilar-poppkpd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_lee_2024_sb12_eculizumab_healthy_poppkpd/0.1.0/model.omex",
+      "model_id": "qspquest_lee_2024_sb12_eculizumab_healthy_poppkpd",
+      "omex_sha256": "8f03c1c8bda92b00e26ce7e5990abbe8b7c791585a08fcd6513fb3c04e44c773",
+      "source_model_id": "qspquest-lee-2024-sb12-eculizumab-healthy-poppkpd",
+      "version": "0.1.0"
+    },
+    {
+      "archive": "models/qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic/0.2.0/model.omex",
+      "model_id": "qspquest_li_2024_rituximab_bcell_repletion_kpd_nephrotic",
+      "omex_sha256": "afc35667fbed05c2feee287dfcdbaa1033d50092f4f1c5e95e5bf3656ec59f0b",
+      "source_model_id": "qspquest-li-2024-rituximab-bcell-repletion-kpd-nephrotic",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp/0.2.0/model.omex",
+      "model_id": "qspquest_liu_2026_aav_mab_targetx_rat_brain_reduced_qsp",
+      "omex_sha256": "384d67dcee6d8e0e152ae8e07008fe971643e35b39d48f11fba3c96b837b49c3",
+      "source_model_id": "qspquest-liu-2026-aav-mab-targetx-rat-brain-reduced-qsp",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_lobet_2026_panitumumab_body_composition_poppk/0.2.0/model.omex",
+      "model_id": "qspquest_lobet_2026_panitumumab_body_composition_poppk",
+      "omex_sha256": "4ab27c8e6352d76434fceb2e4435699e8b530db49532b5aad24e14e105a18e70",
+      "source_model_id": "qspquest-lobet-2026-panitumumab-body-composition-poppk",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_markovic_2024_vedolizumab_clearance_remission_poppk/0.2.0/model.omex",
+      "model_id": "qspquest_markovic_2024_vedolizumab_clearance_remission_poppk",
+      "omex_sha256": "728032c1cff4d6712cf237fa1ea23665d6c8ffb603502609e83f081aed67d349",
+      "source_model_id": "qspquest-markovic-2024-vedolizumab-clearance-remission-poppk",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_monteleone_2021_eculizumab_gmg_pkpd/0.3.0/model.omex",
+      "model_id": "qspquest_monteleone_2021_eculizumab_gmg_pkpd",
+      "omex_sha256": "4c72e9f3b2bb0be7b064b498a7e12ea9bcdbd6b7fc8477f21e4e69a24773e6f0",
+      "source_model_id": "qspquest-monteleone-2021-eculizumab-gmg-pkpd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_ortiz_2024_ravulizumab_nmosd_pkpd/0.2.0/model.omex",
+      "model_id": "qspquest_ortiz_2024_ravulizumab_nmosd_pkpd",
+      "omex_sha256": "a536b3a0597eecd4d5d933d0f59aa177acbe205d32425172553efbab4c6a8dcc",
+      "source_model_id": "qspquest-ortiz-2024-ravulizumab-nmosd-pkpd",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_pan_2020_pediatric_tp_pbpk_pk_sim/0.3.0/model.omex",
+      "model_id": "qspquest_pan_2020_pediatric_tp_pbpk_pk_sim",
+      "omex_sha256": "6576583331c4fb133e0ab12eb7465ad5e997c5f5b510062cdad4f8d68556d26d",
+      "source_model_id": "qspquest-pan-2020-pediatric-tp-pbpk-pk-sim",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd/0.3.0/model.omex",
+      "model_id": "qspquest_panoilia_2015_bevacizumab_vegf165_qss_tmdd",
+      "omex_sha256": "47dd99c449b061a0f9e90108c0267b7e9517ee72bd8c0ceef9677053bb7b8f04",
+      "source_model_id": "qspquest-panoilia-2015-bevacizumab-vegf165-qss-tmdd",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd/0.2.0/model.omex",
+      "model_id": "qspquest_pasquiers_2025_rituximab_anca_gammaglobulin_pkpd",
+      "omex_sha256": "c6927d8af43f5136b7110326413ffa53353fe3fd43d34e05b779d6a52aefbb99",
+      "source_model_id": "qspquest-pasquiers-2025-rituximab-anca-gammaglobulin-pkpd",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_prybylski_2026_dazukibart_ifnb_dm_er/0.2.0/model.omex",
+      "model_id": "qspquest_prybylski_2026_dazukibart_ifnb_dm_er",
+      "omex_sha256": "49423ab896fe962a42d6fde6e23433cdcb53c4390179230959aa7bf8f01db1fc",
+      "source_model_id": "qspquest-prybylski-2026-dazukibart-ifnb-dm-er",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er/0.3.0/model.omex",
+      "model_id": "qspquest_quartino_2017_pertuzumab_neoadjuvant_pk_er",
+      "omex_sha256": "3931d5b7b94cb57506bdfac2aaef7f3dd0d6b4b6ee1f7ceff1d93769bdba52b0",
+      "source_model_id": "qspquest-quartino-2017-pertuzumab-neoadjuvant-pk-er",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd/0.2.0/model.omex",
+      "model_id": "qspquest_rodriguez_fernandez_2024_secukinumab_psoriasis_mipd",
+      "omex_sha256": "d105af03ddf99e274d74cccf20c0ce3bb1697eeea6e032f259c9f72602866ad6",
+      "source_model_id": "qspquest-rodriguez-fernandez-2024-secukinumab-psoriasis-mipd",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis/0.2.0/model.omex",
+      "model_id": "qspquest_rodriguez_fernandez_2024_ustekinumab_mipd_psoriasis",
+      "omex_sha256": "1a3e6fd42cfad480df4d06a9741407dde9c6fa3c8928b015359b18031a08a889",
+      "source_model_id": "qspquest-rodriguez-fernandez-2024-ustekinumab-mipd-psoriasis",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_serkland_2025_rituximab_ms_pkpd/0.5.0/model.omex",
+      "model_id": "qspquest_serkland_2025_rituximab_ms_pkpd",
+      "omex_sha256": "32e1a49053118490bc253b5154cdd7c9b6cfd7db76f8d5c75ea1091230050604",
+      "source_model_id": "qspquest-serkland-2025-rituximab-ms-pkpd",
+      "version": "0.5.0"
+    },
+    {
+      "archive": "models/qspquest_sexton_2024_lanadelumab_hae_kks_qsp/0.3.0/model.omex",
+      "model_id": "qspquest_sexton_2024_lanadelumab_hae_kks_qsp",
+      "omex_sha256": "238bbc9fe1905dc402d08c7f26fa47608c6854c512f7d2e4f66ca03fc53a8f44",
+      "source_model_id": "qspquest-sexton-2024-lanadelumab-hae-kks-qsp",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety/0.2.1/model.omex",
+      "model_id": "qspquest_shemesh_2019_atezolizumab_pediatric_poppk_safety",
+      "omex_sha256": "b03ffd579bf5131ea620b8b298f416e7f1591a578ec3e976770b0fe00ba2efa2",
+      "source_model_id": "qspquest-shemesh-2019-atezolizumab-pediatric-poppk-safety",
+      "version": "0.2.1"
+    },
+    {
+      "archive": "models/qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca/0.3.0/model.omex",
+      "model_id": "qspquest_stathis_2018_imgn529_cd37_adc_phase1_nca",
+      "omex_sha256": "0ce9f8a6882cebcf0679cbb3014692eadcf6ffa29355c076ac53496350fb52b4",
+      "source_model_id": "qspquest-stathis-2018-imgn529-cd37-adc-phase1-nca",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge/0.3.0/model.omex",
+      "model_id": "qspquest_sule_2025_bevacizumab_minimal_pbpk_pediatric_bridge",
+      "omex_sha256": "f199a6e8dcbbc82abe87aa2b0f635fcc7ecdc6ef4cb03646460a9425f6c4f27c",
+      "source_model_id": "qspquest-sule-2025-bevacizumab-minimal-pbpk-pediatric-bridge",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd/0.2.0/model.omex",
+      "model_id": "qspquest_vu_2017_erenumab_cidbf_pkpd_tmdd",
+      "omex_sha256": "a96973576a27b71dde14ef5f6dea48a3efd9231d30d88b4e4e0c431c20a9924d",
+      "source_model_id": "qspquest-vu-2017-erenumab-cidbf-pkpd-tmdd",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk/0.3.0/model.omex",
+      "model_id": "qspquest_waterhouse_2024_vedolizumab_gvhd_allohsct_poppk",
+      "omex_sha256": "365ae02d977e4202b7c48558c16f96b2519746b80acc05c4f2b307a9a9ed2f5c",
+      "source_model_id": "qspquest-waterhouse-2024-vedolizumab-gvhd-allohsct-poppk",
+      "version": "0.3.0"
+    },
+    {
+      "archive": "models/qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk/0.2.0/model.omex",
+      "model_id": "qspquest_yagishita_2024_atezolizumab_jtail_real_world_pk",
+      "omex_sha256": "518d3b3e1bf628510c10227cf08abe645635c211cbea362ba076066b85e8b586",
+      "source_model_id": "qspquest-yagishita-2024-atezolizumab-jtail-real-world-pk",
+      "version": "0.2.0"
+    },
+    {
+      "archive": "models/qspquest_yang_2021_cemiplimab_advanced_malignancies_poppk/0.1.0/model.omex",
+      "model_id": "qspquest_yang_2021_cemiplimab_advanced_malignancies_poppk",
+      "omex_sha256": "f0f1c06c2d435627b0f9a6b914103350f3fa2b4087a82f9c85fd194458fd40de",
+      "source_model_id": "qspquest-yang-2021-cemiplimab-advanced-malignancies-poppk",
+      "version": "0.1.0"
+    },
+    {
+      "archive": "models/qspquest_yoshida_2020_crenezumab_abeta_tmdd_pkpd/0.1.0/model.omex",
+      "model_id": "qspquest_yoshida_2020_crenezumab_abeta_tmdd_pkpd",
+      "omex_sha256": "60f54387bf4b812a50f9006b5f2f83d3d52a35675f57691bc93f2ed189213e27",
+      "source_model_id": "qspquest-yoshida-2020-crenezumab-abeta-tmdd-pkpd",
+      "version": "0.1.0"
+    },
+    {
+      "archive": "models/qspquest_zeng_2026_atezolizumab_software_poppk_simulation/0.1.0/model.omex",
+      "model_id": "qspquest_zeng_2026_atezolizumab_software_poppk_simulation",
+      "omex_sha256": "f038ad1c20c2b6ba05eef6f4a46565bfe9193ecadcfcc9235ce7124c89c7e8b5",
+      "source_model_id": "qspquest-zeng-2026-atezolizumab-software-poppk-simulation",
+      "version": "0.1.0"
+    }
+  ],
+  "scope": "All 55 rights-approved scientific source versions, including their explicitly held presets"
+}

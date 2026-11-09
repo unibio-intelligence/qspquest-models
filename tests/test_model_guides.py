@@ -61,17 +61,13 @@ class OutputGuideTests(unittest.TestCase):
         self.assertIn('--model example --model-version current', current)
         self.assertNotIn('--library .', current)
 
-    def test_retained_version_examples_do_not_require_a_current_catalog_selection_or_run(self):
-        import json, re
+    def test_distributed_guides_contain_only_current_versions(self):
+        import json
         current = {row['id']: row['version'] for row in json.loads((ROOT / 'catalog.json').read_text())['models']}
-        for card in (ROOT / 'models').glob('*/*/MODEL_CARD.md'):
-            if card.parent.name == current[card.parent.parent.name]:
-                continue
-            for block in re.findall(r'```python\n(.*?)```', card.read_text(), flags=re.S):
-                self.assertNotIn('Library().load(', block, str(card))
-                self.assertNotIn('model.run(', block, str(card))
-                self.assertNotIn('model.write_csv(', block, str(card))
-                self.assertNotIn('fit_workflow(', block, str(card))
+        cards = list((ROOT / 'models').glob('*/*/MODEL_CARD.md'))
+        self.assertEqual(len(cards), len(current))
+        for card in cards:
+            self.assertEqual(card.parent.name, current[card.parent.parent.name])
 
     def test_catalog_and_default_links_select_current_versions(self):
         import json, re

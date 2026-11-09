@@ -3,7 +3,7 @@
 [Choose a model](../MODEL_CATALOG.md) · [Change an input](change-inputs.md) · [Technical reference](model-format.md)
 
 These examples use the full rat adeno-associated virus (AAV) brain model
-[`qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp`](../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.1.2/MODEL_CARD.md).
+[`qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp`](../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.2.0/MODEL_CARD.md).
 Complete [Python setup](../README.md#setup), including the engine, and run each
 example from the library checkout (the output-inspection example does not need
 the engine). Read [Change an input](change-inputs.md) first for the general
@@ -29,7 +29,7 @@ SEROTYPE
 ```
 
 Expect receptor values of `2e15` for AAV5 and `6.6e13` for AAV9, each with unit
-`1`. Both runs report version `2.1.2`, 101 rows and `False` for dimensional
+`1`. Both runs report version `2.2.0`, 101 rows and `False` for dimensional
 qualification (units not independently checked).
 
 The presets start at -1000 h and dose at 0 h. Receptor-total parameters only set
@@ -65,7 +65,7 @@ LYMPH
 
 Expected: printed coordinates `mab_plasma, target_plasma, complex_plasma`;
 adopted coordinates `mab_lymph, target_lymph, complex_lymph`; author-code status
-`not_assessed`; version `2.1.2`, `253 rows` and `lymph-binding-locality`.
+`not_assessed`; version `2.2.0`, `253 rows` and `lymph-binding-locality`.
 The CSV's `.manifest.json` records this choice. Use a new filename if that pair
 already exists; files are never overwritten.
 
@@ -144,7 +144,7 @@ model.write_csv(shared_result, 'shared-barrier.csv')
 BARRIERS
 ```
 
-Expect version `2.1.2`, 101 rows and `364 vector states preserved`. The final simulated
+Expect version `2.2.0`, 101 rows and `364 vector states preserved`. The final simulated
 brain interstitial fluid (ISF) mAb readout is about **8.5530** at baseline and **9.8047** with the protein-only
 override; the final cerebrospinal fluid (CSF) TargetX percentage readout is about **88.3685** and
 **121.3294**, respectively. Lowering reflection changes both antibody and target
@@ -203,7 +203,7 @@ print(model.index['model_version'], '24 biological output identities declared')
 SEMANTICS
 ```
 
-Expect version `2.1.2`, the four analyte/compartment pairs above and returned unit
+Expect version `2.2.0`, the four analyte/compartment pairs above and returned unit
 `1`. The `*_csf_*` readouts represent cisterna magna, rather than every CSF
 compartment. The `*_lv_*` readouts represent lateral-ventricle CSF. Tissue
 aggregates sum only the states named in their expressions; they are not
@@ -212,6 +212,6 @@ mAb–TargetX complex states.
 
 An analyte or compartment that is not declared is `None`; do not guess it from the
 column name. These labels do not change values or convert units: a suffix such as
-`nM` does not make unit `1` a concentration. The [model card](../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.1.2/MODEL_CARD.md)
+`nM` does not make unit `1` a concentration. The [model card](../models/qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp/2.2.0/MODEL_CARD.md)
 lists every readout and its limits.
 

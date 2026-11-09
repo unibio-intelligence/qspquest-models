@@ -2,7 +2,7 @@
 import json
 from qspquest_models import Library
 
-model = Library().load('qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp', version='2.1.2')
+model = Library().load('qspquest_liu_2026_aav_mab_targetx_rat_brain_full_qsp', version='2.2.0')
 declaration = model.protocol_initialization
 assert declaration is not None
 manifest = declaration['manifest']

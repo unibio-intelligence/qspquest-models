@@ -1,0 +1,92 @@
+{
+  "description": "Exact source checks plus reduced neoadjuvant nivolumab dynamic probe.",
+  "model_id": "qspquest-jafarnejad-2019-nivolumab-neoadjuvant-pd1-nsclc-qsp",
+  "name": "Jafarnejad 2019 neoadjuvant nivolumab QSP scenarios",
+  "scenarios": [
+    {
+      "description": "Exact replay of model inventory, supplement table values, dosing, and reported clinical/model endpoints.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exact-source-inventory-and-trial-design",
+      "initial_states": {
+        "checkpoint_complex_molecule": 14857.495125289903,
+        "nivolumab_central_mg": 0.0,
+        "summary_marker": 1.0,
+        "teff_cells": 41145836.050941475,
+        "treg_cells": 9303338.928787664,
+        "tumor_cells": 7810902573.531415,
+        "tumor_diameter_percent": 100.0,
+        "tumor_regression_percent": 0.0
+      },
+      "name": "Exact source inventory and trial design",
+      "parameters": {
+        "nivo_input_rate_mg_day": 0.0
+      },
+      "scenario_type": "exact_source_scalar_replay",
+      "time_span": {
+        "end": 1.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Reduced ODE probe for two 3 mg/kg nivolumab doses before day-40 surgery. Paper overlays expose the published clinical/model endpoint markers; figure-level trajectory validation remains pending digitized Fig. 6-7 patient data.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 3.0,
+            "duration_hour": 1.0,
+            "route": "IV",
+            "target": "nivolumab_central_mg",
+            "time": 0.0,
+            "unit": "mg/kg"
+          },
+          {
+            "amount": 3.0,
+            "duration_hour": 1.0,
+            "route": "IV",
+            "target": "nivolumab_central_mg",
+            "time": 14.0,
+            "unit": "mg/kg"
+          }
+        ],
+        "implementation_note": "Runtime uses a regimen-averaged input rate for numerical portability; exact dose, interval, and infusion duration are replayed as source values."
+      },
+      "id": "neoadjuvant-two-dose-resection-endpoint",
+      "initial_states": {
+        "checkpoint_complex_molecule": 14857.495125289903,
+        "nivolumab_central_mg": 0.0,
+        "summary_marker": 1.0,
+        "teff_cells": 41145836.050941475,
+        "treg_cells": 9303338.928787664,
+        "tumor_cells": 7810902573.531415,
+        "tumor_diameter_percent": 100.0,
+        "tumor_regression_percent": 0.0
+      },
+      "name": "Neoadjuvant nivolumab two-dose resection endpoint",
+      "parameters": {
+        "nivo_input_rate_mg_day": 17.142857142857142
+      },
+      "scenario_type": "reduced_dynamic_ode_with_paper_endpoint_overlay_source_limited",
+      "time_span": {
+        "end": 40.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-08,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-06
+    },
+    "time_span": {
+      "end": 40.0,
+      "start": 0.0,
+      "step": 1.0
+    }
+  },
+  "time_unit": "day"
+}

@@ -1,0 +1,191 @@
+{
+  "description": "Exact paper anchors and fixed-effect full ODE induction simulations with Figure 4 paper overlays.",
+  "model_id": "qspquest-hemperly-2025-infliximab-pediatric-ibd-poc-pk-er",
+  "name": "Hemperly 2025 infliximab pediatric IBD PK/ER scenarios",
+  "scenarios": [
+    {
+      "description": "No-dose exact replay of source scalars from the article tables, Results text, and Figure 4 labels.",
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exact-source-tables-and-figures-anchor",
+      "initial_states": {
+        "auc_ug_day_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_day": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "name": "Exact Tables 1-4/text/Figure 4 source anchor",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_summary",
+      "time_span": {
+        "end": 0.001,
+        "start": 0.0,
+        "step": 0.001
+      }
+    },
+    {
+      "description": "Fixed-effect two-compartment IV ODE using the reported pediatric reference weight and albumin with 5 mg/kg infusions at weeks 0, 2, and 6.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 256.0,
+            "duration": 0.08333333333333333,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 256.0,
+            "duration": 0.08333333333333333,
+            "time": 14.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 256.0,
+            "duration": 0.08333333333333333,
+            "time": 42.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "standard-5mgkg-induction-typical-full-ode",
+      "initial_states": {
+        "auc_ug_day_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_day": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "name": "Standard 5 mg/kg induction typical full ODE",
+      "parameters": {
+        "albumin_g_dl": 4.2,
+        "dose_mg_per_kg": 5.0,
+        "weight_kg": 51.2
+      },
+      "scenario_type": "paper_dynamic_fixed_effect_full_ode",
+      "time_span": {
+        "checkpoints": [
+          0.0,
+          14.0,
+          42.0,
+          98.0
+        ],
+        "end": 98.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Same nominal regimen with albumin set to the lower Table 1 IQR value to expose the paper's albumin clearance/volume covariate effect.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 256.0,
+            "duration": 0.08333333333333333,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 256.0,
+            "duration": 0.08333333333333333,
+            "time": 14.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 256.0,
+            "duration": 0.08333333333333333,
+            "time": 42.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "low-albumin-5mgkg-induction-full-ode",
+      "initial_states": {
+        "auc_ug_day_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_day": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "name": "Low albumin 5 mg/kg induction sensitivity full ODE",
+      "parameters": {
+        "albumin_g_dl": 3.05,
+        "dose_mg_per_kg": 5.0,
+        "weight_kg": 51.2
+      },
+      "scenario_type": "covariate_sensitivity_full_ode",
+      "time_span": {
+        "checkpoints": [
+          0.0,
+          14.0,
+          42.0,
+          98.0
+        ],
+        "end": 98.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    },
+    {
+      "description": "Exploratory 10 mg/kg induction regimen; the article notes physician-judgment dosing and accelerated regimens but does not publish a matching source curve.",
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 512.0,
+            "duration": 0.08333333333333333,
+            "time": 0.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 512.0,
+            "duration": 0.08333333333333333,
+            "time": 14.0,
+            "type": "infusion"
+          },
+          {
+            "amount": 512.0,
+            "duration": 0.08333333333333333,
+            "time": 42.0,
+            "type": "infusion"
+          }
+        ]
+      },
+      "id": "intensified-10mgkg-induction-exploratory-full-ode",
+      "initial_states": {
+        "auc_ug_day_ml": 0.0,
+        "central_mg": 0.0,
+        "elapsed_day": 0.0,
+        "peripheral_mg": 0.0
+      },
+      "name": "Intensified 10 mg/kg induction exploratory full ODE",
+      "parameters": {
+        "albumin_g_dl": 4.2,
+        "dose_mg_per_kg": 10.0,
+        "weight_kg": 51.2
+      },
+      "scenario_type": "exploratory_full_ode",
+      "time_span": {
+        "checkpoints": [
+          0.0,
+          14.0,
+          42.0,
+          98.0
+        ],
+        "end": 98.0,
+        "start": 0.0,
+        "step": 1.0
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "solver": {
+      "abstol": 1e-09,
+      "algorithm": "Rosenbrock23",
+      "reltol": 1e-08
+    },
+    "time_span": {
+      "end": 98.0,
+      "start": 0.0,
+      "step": 1.0
+    }
+  },
+  "time_unit": "day"
+}

@@ -1,0 +1,407 @@
+{
+  "description": "Exact source anchors and deterministic ODE paper-overlay scenarios for Cui 2024 envafolimab.",
+  "model_id": "qspquest-cui-2024-envafolimab-sc-pdl1-midd",
+  "name": "Cui 2024 envafolimab SC PD-L1 PopPK scenarios",
+  "scenarios": [
+    {
+      "dosing_regimen": {
+        "doses": []
+      },
+      "id": "exact-source-anchor",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "depot_mg": 0.0,
+        "elapsed_day": 0.0
+      },
+      "name": "Exact source table and supplement anchor",
+      "parameters": {},
+      "scenario_type": "paper_reproduction_exact_anchor",
+      "time_span": {
+        "end": 0.001,
+        "start": 0.0,
+        "step": 0.001
+      }
+    },
+    {
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 150.0,
+            "time": 0.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 7.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 14.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 21.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 28.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 35.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 42.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 49.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 56.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 63.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 70.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 77.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 84.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 91.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 98.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 105.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 112.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 119.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 126.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 150.0,
+            "time": 133.0,
+            "type": "bolus",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "final-model-150mg-qw-20wk-ode-overlay",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "depot_mg": 0.0,
+        "elapsed_day": 0.0
+      },
+      "name": "Final model 150 mg QW for 20 weeks",
+      "parameters": {
+        "body_weight_kg": 66.3,
+        "country_factor": 1.0
+      },
+      "scenario_type": "paper_reproduction_dynamic_ode_source_limited",
+      "time_span": {
+        "end": 140.0,
+        "start": 0.0,
+        "step": 0.25
+      }
+    },
+    {
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 300.0,
+            "time": 0.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 14.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 28.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 42.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 56.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 70.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 84.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 98.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 112.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 300.0,
+            "time": 126.0,
+            "type": "bolus",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "final-model-300mg-q2w-20wk-ode-overlay",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "depot_mg": 0.0,
+        "elapsed_day": 0.0
+      },
+      "name": "Final model 300 mg Q2W for 20 weeks",
+      "parameters": {
+        "body_weight_kg": 66.3,
+        "country_factor": 1.0
+      },
+      "scenario_type": "paper_reproduction_dynamic_ode_source_limited",
+      "time_span": {
+        "end": 140.0,
+        "start": 0.0,
+        "step": 0.25
+      }
+    },
+    {
+      "dosing_regimen": {
+        "doses": [
+          {
+            "amount": 165.75,
+            "time": 0.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 7.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 14.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 21.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 28.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 35.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 42.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 49.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 56.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 63.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 70.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 77.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 84.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 91.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 98.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 105.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 112.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 119.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 126.0,
+            "type": "bolus",
+            "unit": "mg"
+          },
+          {
+            "amount": 165.75,
+            "time": 133.0,
+            "type": "bolus",
+            "unit": "mg"
+          }
+        ]
+      },
+      "id": "final-model-2p5mgkg-qw-20wk-endpoint-overlay",
+      "initial_states": {
+        "auc_mg_day_l": 0.0,
+        "central_mg": 0.0,
+        "depot_mg": 0.0,
+        "elapsed_day": 0.0
+      },
+      "name": "Final model 2.5 mg/kg QW for 20 weeks using mean body weight",
+      "parameters": {
+        "body_weight_kg": 66.3,
+        "country_factor": 1.0
+      },
+      "scenario_type": "paper_reproduction_dynamic_ode_source_limited",
+      "time_span": {
+        "end": 140.0,
+        "start": 0.0,
+        "step": 0.25
+      }
+    }
+  ],
+  "simulation_defaults": {
+    "time_span": {
+      "end": 140.0,
+      "start": 0.0,
+      "step": 0.25
+    }
+  },
+  "time_unit": "day"
+}
